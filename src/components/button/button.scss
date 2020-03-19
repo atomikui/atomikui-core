@@ -1,18 +1,18 @@
 button.btn,
 a.btn {
+  background: $white;
   border: rem(1) solid $blue-400;
   border-radius: rem($base-border-radius);
-  background: $white;
   color: $blue-400;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
-  font-weight: 600;
   font-size: rem($root-font-size);
+  font-weight: 600;
   outline: 0;
   padding: rem(12 24);
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
   transition: background .3s linear;
   
   &:hover {
@@ -30,8 +30,8 @@ a.btn {
   &:disabled:focus,
   &:disabled:active {
     background: $gray-100;
-    color: $gray-300;
     box-shadow: 0;
+    color: $gray-300;
     cursor: default;
   }
 
@@ -46,17 +46,17 @@ a.btn {
 
   @each $name, $map in $button-sizes {
     &--#{$name} {
-      padding: rem(map-get($map, padding));
-      min-height: rem(map-get($map, min-height));
       font-size: rem(map-get($map, font-size));
+      min-height: rem(map-get($map, min-height));
+      padding: rem(map-get($map, padding));
     }
   }
   
   @each $name, $map in $btn-colors {
     &--#{$name} {
       background: map-get($map, background-color);
-      color: map-get($map, font-color);
       border: 0;
+      color: map-get($map, font-color);
       
       &:active,
       &:focus,
