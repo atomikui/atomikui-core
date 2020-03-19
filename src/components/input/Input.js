@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Input = ({ classes, placeholder, type, value, ...others }) => {
   return (
     <input 
-      className={classnames('.btn', classes, {})} 
+      className={classnames('input', classes, {})} 
       type={type} 
       placeholder={placeholder} 
       value={value} 

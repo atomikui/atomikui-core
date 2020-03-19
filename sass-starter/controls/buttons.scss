@@ -29,8 +29,8 @@ a.btn {
   &:disabled:hover,
   &:disabled:focus,
   &:disabled:active {
-    background: $gray-100;
-    color: $gray-300;
+    background: $gray-200;
+    color: $gray-400;
     box-shadow: 0;
     cursor: default;
   }

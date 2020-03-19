@@ -1,0 +1,21 @@
+@import '../../sass-starter/abstracts.scss';
+
+table[class^="rsg--table"] {
+  tbody > * + * {
+    border-top: rem(1) solid $gray-100;
+  }
+}
+
+[class^="rsg--tabButtons"],
+[class^="rsg--controls"] {
+  display: none !important;
+}
+
+[data-preview="Button"] > * {
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    margin: rem(0 8 8 0);
+  }
+}

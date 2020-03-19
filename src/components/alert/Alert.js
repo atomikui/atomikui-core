@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Alert = ({ classes, text, type, ...others }) => {
   return (
     <div 
-      className={classnames('.btn', classes, {})} 
+      className={classnames('alert', classes, {})} 
       type={type} 
       {...others}>
       {text}
