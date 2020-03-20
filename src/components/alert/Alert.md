@@ -1,4 +1,4 @@
-### States (Default, info, warning, error, success)
+### States (default, info, warning, error, success)
 
 ```jsx
 import { Alert } from 'react-component-library';
