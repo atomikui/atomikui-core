@@ -1,8 +1,0 @@
-.input {
-  @include input();
-}
-
-textarea.input {
-  padding: rem(16);
-  height: rem($text-area-height);
-}

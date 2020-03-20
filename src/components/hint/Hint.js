@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 
 const Hint = ({ classes, text, type, ...others }) => (
   <div className={classnames('hint', classes, {
-    'hint--error': type === 'error'
+    'hint--error': type === 'error',
+    'hint--warning': type === 'warning',
+    'hint--success': type === 'success'
   })} {...others}>{text}</div>
 );
 
