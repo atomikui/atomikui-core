@@ -2,6 +2,7 @@ const path = require('path');
 const sections = require('./styleguide/sections');
 
 module.exports = {
+  title: 'React Component Library',
   pagePerSection: true,
   sections: [
     ...sections
