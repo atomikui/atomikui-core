@@ -8,19 +8,24 @@
     background-color: $white;
     border: $input-border;
     border-radius: rem($base-border-radius);
-    font-family: $base-font-family;
-    font-size: rem($root-font-size);
+    font-family: inherit;
+    font-size: inherit;
     height: rem($input-height);
     outline: 0;
     padding: rem(0 8);
     width: 100%;
   
     &:focus {
-      @include focus-outline();
+      box-shadow: rem(0 0 0 3) $blue-100;
     }
-  
-    &--has-error {
-      border-color: $red-100;
+  }
+
+  &.has-error > &__input,
+  &.has-error > &__textarea {
+    border-color: $red-100;
+
+    &:focus {
+      box-shadow: rem(0 0 0 3) lighten($red-100, 25%);
     }
   }
 
@@ -31,6 +36,10 @@
 
   &__label {
     margin-bottom: rem(3);
+  }
+
+  &__hints {
+    margin-top: rem(3);
   }
 
   @each $name, $breakpoint in $breakpoints {

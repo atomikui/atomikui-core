@@ -1,11 +1,36 @@
-### Input
+### Text Field
 
 ```jsx
-<Input type="text" label="Search" placeholder="Enter search term" />
+import { FormField } from 'react-component-library';
+
+<FormField type="text" label="Search" />
 ```
 
 ### Textarea
 
 ```jsx
-<Input type="textarea" label="Comments" placeholder="Enter your comments" />
+import { FormField } from 'react-component-library';
+
+<FormField type="textarea" label="Enter Your Comments" />
+```
+
+### Help Text
+
+```jsx
+import { FormField } from 'react-component-library';
+
+<FormField type="text" label="Phone Number" helpText="Expected format: (000) 000-0000" />
+```
+
+### Error State
+
+```jsx
+import { FormField } from 'react-component-library';
+
+<FormField 
+  type="text" 
+  label="Full Name" 
+  errorText="Please enter your full name"
+  hasError={true}
+/>
 ```

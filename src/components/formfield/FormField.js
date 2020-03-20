@@ -1,14 +1,30 @@
 import React from 'react';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import PropTypes, { bool } from 'prop-types';
+import Hint from '../hint/Hint';
 import Label from '../label/Label';
 
-const Input = ({ classes, label, placeholder, type, value, ...others }) => {
+const FormField = ({
+  classes, 
+  errorText, 
+  hasError, 
+  helpText, 
+  label, 
+  labelless,
+  placeholder, 
+  type, 
+  value, 
+  ...others 
+}) => {
   return (
-    <div className={classnames('formfield', classes, {})} {...others}>
-      <div className="formfield__label">
-        <Label text={label} />
-      </div>
+    <div className={classnames('formfield', classes, {
+      'has-error': hasError
+    })} {...others}>
+      {!labelless && (
+        <div className="formfield__label">
+          <Label text={label} />
+        </div>
+      )}
       {type === 'textarea'
       ? (
         <textarea 
@@ -27,15 +43,29 @@ const Input = ({ classes, label, placeholder, type, value, ...others }) => {
           {...others} 
         />
       )}
+      {(helpText || errorText) && (
+        <div className="formfield__hints">
+          {helpText && <Hint text={helpText} />}
+          {hasError && <Hint text={errorText} type="error" />}
+        </div>
+      )}
     </div>
   );
 };
 
-Input.propTypes = {
+FormField.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
+  /** Text to be displayed when there is an error */
+  errorText: PropTypes.string,
+  /** Specifies the error state */
+  hasError: bool,
+  /** Assistive text to be displayed with form field */
+  helpText: PropTypes.string,
   /** Specifies label text */
   label: PropTypes.string,
+  /** Hides label */
+  labelless: PropTypes.bool,
   /** Specifies input placeholder text */
   placeholder: PropTypes.string,
   /** Specifies the type of input */
@@ -68,10 +98,16 @@ Input.propTypes = {
   value: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
 }
 
-Input.defaultProps = {
+FormField.defaultProps = {
   classes: '',
+  errorText: '',
+  hasError: false,
+  helpText: '',
+  label: '',
+  labelless: false,
   text: '',
-  type: 'text'
+  type: 'text',
+  value: ''
 };
 
-export default Input;
+export default FormField;

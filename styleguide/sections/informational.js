@@ -5,6 +5,8 @@ module.exports = {
   exampleMode: 'expand',
   sectionDepth: 6,
   components: () => [
-    'src/components/alert/Alert.js'
+    'src/components/alert/Alert.js',
+    'src/components/hint/Hint.js',
+    'src/components/label/Label.js'
   ],
 };

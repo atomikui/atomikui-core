@@ -6,8 +6,8 @@ a.btn {
   color: $blue-400;
   cursor: pointer;
   display: inline-block;
-  font-family: $base-font-family;
-  font-size: rem($root-font-size);
+  font-family: inherit;
+  font-size: inherit;
   font-weight: $font-medium;
   outline: 0;
   padding: rem(12 24);
