@@ -1,3 +1,4 @@
+const path = require('path');
 const sections = require('./styleguide/sections');
 
 module.exports = {
@@ -5,6 +6,9 @@ module.exports = {
   sections: [
     ...sections
   ],
+  moduleAliases: {
+    'react-component-library': path.resolve(__dirname, 'src')
+  },
   styleguideDir: './build',
   require: [
     './src/styles/main.scss',
