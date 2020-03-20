@@ -1,0 +1,5 @@
+table[class^="rsg--table"] {
+  tbody > * + * {
+    border-top: rem(1) solid $gray-100;
+  }
+}
