@@ -4,12 +4,12 @@
 import { Button } from '@alaneicker/react-component-library';
 
 <>
-  <Button text="Default" type="submit" />
-  <Button text="Primary" type="submit" variant="primary" />
-  <Button text="Secondary" type="submit" variant="secondary" />
-  <Button text="Tertiary" type="submit" variant="tertiary" />
-  <Button text="Hollow" type="submit" variant="hollow" />
-  <Button text="Link" type="submit" variant="link" />
+  <Button type="submit">Default</Button>
+  <Button type="submit" variant="primary">Primary</Button>
+  <Button type="submit" variant="secondary">Secondary</Button>
+  <Button type="submit" variant="tertiary">Tertiary</Button>
+  <Button type="submit" variant="hollow">Hollow</Button>
+  <Button type="submit" variant="link">Link</Button>
 </>
 ```
 
@@ -19,10 +19,10 @@ import { Button } from '@alaneicker/react-component-library';
 import { Button } from '@alaneicker/react-component-library';
 
 <>
-  <Button text="Default" type="submit" shape="pill" />
-  <Button text="Primary" type="submit" variant="primary" shape="pill" />
-  <Button text="Secondary" type="submit" variant="secondary" shape="pill" />
-  <Button text="Tertiary" type="submit" variant="tertiary" shape="pill" />
+  <Button type="submit" shape="pill">Default</Button>
+  <Button type="submit" variant="primary" shape="pill">Primary</Button>
+  <Button type="submit" variant="secondary" shape="pill">Secondary</Button>
+  <Button type="submit" variant="tertiary" shape="pill">Tertiary</Button>
 </>
 ```
 
@@ -31,7 +31,7 @@ import { Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
-<Button text="Disabled" type="submit" variant="primary" disabled />
+<Button type="submit" variant="primary" disabled>Disabled</Button>
 ```
 
 ### Responsive Button
@@ -39,7 +39,7 @@ import { Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
-<Button text="Block Button" type="submit" variant="primary" block />
+<Button type="submit" variant="primary" block>Block Button</Button>
 ```
 
 ### Button Sizes
@@ -48,9 +48,9 @@ import { Button } from '@alaneicker/react-component-library';
 import { Button } from '@alaneicker/react-component-library';
 
 <>
-  <Button text="Small" type="submit" size="sm" />
-  <Button text="Medium" type="submit" variant="primary" size="md" />
-  <Button text="Default" type="submit" variant="secondary" />
-  <Button text="Large" type="submit" variant="tertiary" size="lg" />
+  <Button type="submit" size="sm">Small</Button>
+  <Button type="submit" variant="primary" size="md">Medium</Button>
+  <Button type="submit" variant="secondary">Default</Button>
+  <Button type="submit" variant="tertiary" size="lg">Large</Button>
 </>
 ```

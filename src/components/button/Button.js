@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Button = ({ block, classes, disabled, shape, size, text, type, variant, ...others }) => (
+const Button = ({ block, classes, children, disabled, shape, size, type, variant, ...others }) => (
   <button 
     className={classnames('btn', classes, {
       [`btn--${variant}`]: variant,
@@ -13,7 +13,7 @@ const Button = ({ block, classes, disabled, shape, size, text, type, variant, ..
     type={type} 
     disabled={disabled}
     {...others}>
-    {text}
+    {children}
   </button>
 );
 
@@ -22,14 +22,14 @@ Button.propTypes = {
   block: PropTypes.bool,
   /** Specifies custom component classes */
   classes: PropTypes.string,
+  /** Specifies button content */
+  children: PropTypes.node,
   /** Specifies if button is diabled */
   disabled: PropTypes.bool,
   /** Specifies a buttons shape */
   shape: PropTypes.oneOf(['pill']),
   /** Specifies the size of a button */
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  /** Specifies a buttons text */
-  text: PropTypes.string,
   /** Specifies the type of button */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /** Specifies the button variation */
@@ -39,10 +39,10 @@ Button.propTypes = {
 Button.defaultProps = {
   block: false,
   classes: '',
+  children: '',
   disabled: false,
   shape: null,
   size: null,
-  text: '',
   type: 'button',
   variant: null,
 };
