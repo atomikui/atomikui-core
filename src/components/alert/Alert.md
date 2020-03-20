@@ -1,7 +1,7 @@
 ### States (default, info, warning, error, success)
 
 ```jsx
-import { Alert } from 'react-component-library';
+import { Alert } from '@alaneicker/react-component-library';
 
 <>
   <Alert text="This is a default alert" />
@@ -15,7 +15,7 @@ import { Alert } from 'react-component-library';
 ### Alignment
 
 ```jsx
-import { Alert } from 'react-component-library';
+import { Alert } from '@alaneicker/react-component-library';
 
 <>
   <Alert text="This alert is left aligned" type="info" />

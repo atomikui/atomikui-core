@@ -7,7 +7,9 @@ const Label = ({ classes, text, ...others }) => (
 );
 
 Label.propTypes = {
+  /** Custom classes to be added to Label component */
   classes: PropTypes.string,
+  /** Label text */
   text: PropTypes.string
 };
 

@@ -1,7 +1,7 @@
 ### Text Field
 
 ```jsx
-import { FormField } from 'react-component-library';
+import { FormField } from '@alaneicker/react-component-library';
 
 <FormField type="text" label="Search" />
 ```
@@ -9,7 +9,7 @@ import { FormField } from 'react-component-library';
 ### Textarea
 
 ```jsx
-import { FormField } from 'react-component-library';
+import { FormField } from '@alaneicker/react-component-library';
 
 <FormField type="textarea" label="Enter Your Comments" />
 ```
@@ -17,7 +17,7 @@ import { FormField } from 'react-component-library';
 ### Help Text
 
 ```jsx
-import { FormField } from 'react-component-library';
+import { FormField } from '@alaneicker/react-component-library';
 
 <FormField type="text" label="Phone Number" helpText="Expected format: (000) 000-0000" />
 ```
@@ -25,7 +25,7 @@ import { FormField } from 'react-component-library';
 ### Error State
 
 ```jsx
-import { FormField } from 'react-component-library';
+import { FormField } from '@alaneicker/react-component-library';
 
 <FormField 
   type="text" 

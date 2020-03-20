@@ -1,7 +1,7 @@
 ### Button Variants
 
 ```jsx
-import { Button } from 'react-component-library';
+import { Button } from '@alaneicker/react-component-library';
 
 <>
   <Button text="Default" type="submit" />
@@ -16,7 +16,7 @@ import { Button } from 'react-component-library';
 ### Pill Button
 
 ```jsx
-import { Button } from 'react-component-library';
+import { Button } from '@alaneicker/react-component-library';
 
 <>
   <Button text="Default" type="submit" shape="pill" />
@@ -29,7 +29,7 @@ import { Button } from 'react-component-library';
 ### Disabled Button
 
 ```jsx
-import { Button } from 'react-component-library';
+import { Button } from '@alaneicker/react-component-library';
 
 <Button text="Disabled" type="submit" variant="primary" disabled />
 ```
@@ -37,7 +37,7 @@ import { Button } from 'react-component-library';
 ### Responsive Button
 
 ```jsx
-import { Button } from 'react-component-library';
+import { Button } from '@alaneicker/react-component-library';
 
 <Button text="Block Button" type="submit" variant="primary" block />
 ```
@@ -45,7 +45,7 @@ import { Button } from 'react-component-library';
 ### Button Sizes
 
 ```jsx
-import { Button } from 'react-component-library';
+import { Button } from '@alaneicker/react-component-library';
 
 <>
   <Button text="Small" type="submit" size="sm" />

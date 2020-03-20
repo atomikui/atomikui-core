@@ -8,7 +8,7 @@ module.exports = {
     ...sections
   ],
   moduleAliases: {
-    'react-component-library': path.resolve(__dirname, 'src')
+    '@alaneicker/react-component-library': path.resolve(__dirname, 'src')
   },
   styleguideDir: './build',
   require: [

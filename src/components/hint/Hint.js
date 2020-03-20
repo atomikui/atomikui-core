@@ -9,8 +9,11 @@ const Hint = ({ classes, text, type, ...others }) => (
 );
 
 Hint.propTypes = {
+  /** Custom classes to be added to Label component */
   classes: PropTypes.string,
+  /** Hint text */
   text: PropTypes.string,
+  /** Specifies the typr of hint */
   type: PropTypes.oneOf(['', 'error', 'warning', 'success'])
 };
 

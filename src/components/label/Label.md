@@ -1,5 +1,5 @@
 ```jsx
-import { Label } from 'react-component-library';
+import { Label } from '@alaneicker/react-component-library';
 
 <Label text="Form Field Label" />
 ```

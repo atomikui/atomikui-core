@@ -1,7 +1,7 @@
 Default
 
 ```jsx
-import { Hint } from 'react-component-library';
+import { Hint } from '@alaneicker/react-component-library';
 
 <Hint text="This is a default hint" />
 ```
@@ -9,7 +9,7 @@ import { Hint } from 'react-component-library';
 States (Error, Warning)
 
 ```jsx
-import { Hint } from 'react-component-library';
+import { Hint } from '@alaneicker/react-component-library';
 
 <>
   <Hint text="This is an error hint" type="error" />
