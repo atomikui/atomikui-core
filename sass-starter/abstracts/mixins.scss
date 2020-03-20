@@ -46,7 +46,7 @@
     border-color: $red-100;
   }
 
-  @each $name, $size in $input-sizes {
+  @each $name, $size in $formfield-sizes {
     &--#{$name} {
       width: rem($size);
     }
@@ -54,7 +54,7 @@
 
   @each $name, $breakpoint in $breakpoints {
     @media(min-width: $breakpoint) {
-      @each $size in $input-sizes {
+      @each $size in $formfield-sizes {
         &--#{$size}\@#{$name} {
           width: rem($size);
         }

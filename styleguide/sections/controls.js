@@ -6,6 +6,6 @@ module.exports = {
   sectionDepth: 6,
   components: () => [
     'src/components/button/Button.js',
-    'src/components/input/Input.js'
+    'src/components/formfield/FormField.js'
   ],
 };

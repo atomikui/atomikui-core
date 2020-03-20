@@ -1,0 +1,51 @@
+.formfield {
+
+  &__input,
+  &__textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: $white;
+    border: $input-border;
+    border-radius: rem($base-border-radius);
+    font-family: $base-font-family;
+    font-size: rem($root-font-size);
+    height: rem($input-height);
+    outline: 0;
+    padding: rem(0 8);
+    width: 100%;
+  
+    &:focus {
+      @include focus-outline();
+    }
+  
+    &--has-error {
+      border-color: $red-100;
+    }
+  }
+
+  &__textarea {
+    height: rem($text-area-height);
+    padding: rem(8);
+  }
+
+  &__label {
+    margin-bottom: rem(3);
+  }
+
+  @each $name, $breakpoint in $breakpoints {
+    @media(min-width: $breakpoint) {
+      @each $size in $formfield-sizes {
+        &--#{$size}\@#{$name} {
+          width: rem($size);
+        }
+      }
+    }
+  }
+
+  @each $name, $size in $formfield-sizes {
+    &--#{$name} {
+      width: rem($size);
+    }
+  }
+}
