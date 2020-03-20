@@ -1,0 +1,5 @@
+div[class^="rsg--sidebar"] {
+  & nav > ul > li > a {
+    font-weight: 700 !important;
+  }
+}
