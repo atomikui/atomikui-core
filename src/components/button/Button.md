@@ -8,6 +8,8 @@ import { Button } from 'react-component-library';
   <Button text="Primary" type="submit" variant="primary" />
   <Button text="Secondary" type="submit" variant="secondary" />
   <Button text="Tertiary" type="submit" variant="tertiary" />
+  <Button text="Hollow" type="submit" variant="hollow" />
+  <Button text="Link" type="submit" variant="link" />
 </>
 ```
 

@@ -35,7 +35,7 @@ Button.propTypes = {
   /** Specifies the type of button */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /** Specifies the button variation */
-  variant: PropTypes.oneOf('primary', 'secondary', 'tertiary', 'pill', 'block')
+  variant: PropTypes.oneOf('primary', 'secondary', 'tertiary', 'hollow', 'link', 'block')
 }
 
 Button.defaultProps = {

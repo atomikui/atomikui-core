@@ -52,11 +52,12 @@ a.btn {
     }
   }
   
-  @each $name, $map in $btn-colors {
-    &--#{$name} {
+  @each $variant, $map in $btn-variants {
+    &--#{$variant} {
       background: map-get($map, background-color);
       border: 0;
       color: map-get($map, font-color);
+      padding: map-get($map, padding);
       
       &:active,
       &:focus,

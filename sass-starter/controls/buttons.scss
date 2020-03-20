@@ -52,7 +52,7 @@ a.btn {
     }
   }
   
-  @each $name, $map in $btn-colors {
+  @each $name, $map in $btn-variants {
     &--#{$name} {
       background: map-get($map, background-color);
       color: map-get($map, font-color);
