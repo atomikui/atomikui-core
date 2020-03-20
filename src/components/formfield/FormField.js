@@ -15,43 +15,41 @@ const FormField = ({
   type, 
   value, 
   ...others 
-}) => {
-  return (
-    <div className={classnames('formfield', classes, {
-      'has-error': hasError
-    })} {...others}>
-      {!labelless && (
-        <div className="formfield__label">
-          <Label text={label} />
-        </div>
-      )}
-      {type === 'textarea'
-      ? (
-        <textarea 
-          className={classnames('formfield__textarea', classes, {})} 
-          placeholder={placeholder} 
-          value={value} 
-          {...others} 
-        />
-      )
-      : (
-        <input 
-          className={classnames('formfield__input', classes, {})} 
-          type={type} 
-          placeholder={placeholder} 
-          value={value} 
-          {...others} 
-        />
-      )}
-      {(helpText || errorText) && (
-        <div className="formfield__hints">
-          {helpText && <Hint text={helpText} />}
-          {hasError && <Hint text={errorText} type="error" />}
-        </div>
-      )}
-    </div>
-  );
-};
+}) => (
+  <div className={classnames('formfield', classes, {
+    'has-error': hasError
+  })} {...others}>
+    {!labelless && (
+      <div className="formfield__label">
+        <Label text={label} />
+      </div>
+    )}
+    {type === 'textarea'
+    ? (
+      <textarea 
+        className={classnames('formfield__textarea', classes, {})} 
+        placeholder={placeholder} 
+        value={value} 
+        {...others} 
+      />
+    )
+    : (
+      <input 
+        className={classnames('formfield__input', classes, {})} 
+        type={type} 
+        placeholder={placeholder} 
+        value={value} 
+        {...others} 
+      />
+    )}
+    {(helpText || errorText) && (
+      <div className="formfield__hints">
+        {helpText && <Hint text={helpText} />}
+        {hasError && <Hint text={errorText} type="error" />}
+      </div>
+    )}
+  </div>
+);
 
 FormField.propTypes = {
   /** Specifies custom component classes */

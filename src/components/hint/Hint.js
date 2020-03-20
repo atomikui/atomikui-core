@@ -4,21 +4,19 @@ import PropTypes from 'prop-types';
 
 const Hint = ({ classes, text, type, ...others }) => (
   <div className={classnames('hint', classes, {
-    'hint--error': type === 'error',
-    'hint--warning': type === 'warning',
-    'hint--success': type === 'success'
+    [`hint--${type}`]: type
   })} {...others}>{text}</div>
 );
 
 Hint.propTypes = {
   classes: PropTypes.string,
   text: PropTypes.string,
-  type: PropTypes.oneOf(['error', 'warning'])
+  type: PropTypes.oneOf(['', 'error', 'warning', 'success'])
 };
 
 Hint.defaultProps = {
   classes: '',
-  type: false,
+  type: '',
   text: '',
 }
 
