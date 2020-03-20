@@ -3,15 +3,24 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Input = ({ classes, placeholder, type, value, ...others }) => {
-  return (
-    <input 
-      className={classnames('input', classes, {})} 
-      type={type} 
-      placeholder={placeholder} 
-      value={value} 
-      {...others} 
-    />
-  );
+  return type === 'textarea'
+    ? (
+      <textarea 
+        className={classnames('input', classes, {})} 
+        placeholder={placeholder} 
+        value={value} 
+        {...others} 
+      />
+    )
+    : (
+      <input 
+        className={classnames('input', classes, {})} 
+        type={type} 
+        placeholder={placeholder} 
+        value={value} 
+        {...others} 
+      />
+    );
 };
 
 Input.propTypes = {
@@ -40,6 +49,7 @@ Input.propTypes = {
     'submit',
     'tel',
     'text',
+    'textarea',
     'time',
     'url',
     'week'
