@@ -2,10 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Alert = ({ classes, text, type, ...others }) => (
+const Alert = ({ align, classes, text, type, ...others }) => (
   <div 
     className={classnames('alert', classes, {
-      [`alert--${type}`]: type
+      [`alert--${type}`]: type,
+      [`alert--${align}`]: align,
     })} 
     type={type} 
     {...others}>
@@ -14,6 +15,8 @@ const Alert = ({ classes, text, type, ...others }) => (
 );
 
 Alert.propTypes = {
+  /** Aligns the text inside of the alert */
+  align: PropTypes.oneOf(['', 'right', 'center']),
   /** Specifies custom component classes */
   classes: PropTypes.string,
   /** Specifies text to be displayed in the alert */
@@ -23,6 +26,7 @@ Alert.propTypes = {
 }
 
 Alert.defaultProps = {
+  align: '',
   classes: '',
   type: '',
   text: ''

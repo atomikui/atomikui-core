@@ -3,6 +3,14 @@
   font-size: rem($root-font-size);
   font-weight: $font-medium;
   padding: rem(8 16);
+  
+  &--right {
+    text-align: right;
+  }
+
+  &--center {
+    text-align: center;
+  }
 
   @each $name, $color in $alert-colors {
     &--#{$name} {

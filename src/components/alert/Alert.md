@@ -11,3 +11,15 @@ import { Alert } from 'react-component-library';
   <Alert text="This is a success alert" type="success" />
 </>
 ```
+
+### Alignment
+
+```jsx
+import { Alert } from 'react-component-library';
+
+<>
+  <Alert text="This alert is left aligned" type="info" />
+  <Alert text="This alert is center aligned" type="success" align="center" />
+  <Alert text="This alert is right aligned" type="error" align="right" />
+</>
+```
