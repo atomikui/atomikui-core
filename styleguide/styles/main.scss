@@ -1,16 +1,22 @@
 @import '../../sass-starter/abstracts.scss';
 
+// RSG - Table
 table[class^="rsg--table"] {
   tbody > * + * {
     border-top: rem(1) solid $gray-100;
   }
 }
 
+// RSG - Controls
 [class^="rsg--tabButtons"],
 [class^="rsg--controls"] {
   display: none !important;
 }
 
+// Code Examples
+// -------------------------------------------------
+
+// RSG - Button
 [data-preview="Button"] > * {
   align-items: center;
   display: flex;
