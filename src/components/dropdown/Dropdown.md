@@ -1,3 +1,5 @@
+### Default State
+
 ```jsx
 import { Dropdown } from '@alaneicker/react-component-library';
 
