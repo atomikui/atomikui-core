@@ -6,6 +6,7 @@ module.exports = {
   sectionDepth: 6,
   components: () => [
     'src/components/button/Button.js',
+    'src/components/dropdown/Dropdown.js',
     'src/components/formfield/FormField.js'
   ],
 };
