@@ -19,8 +19,11 @@ const Dropdown = ({
   ...others
 }) => {
   const uid = id || generateId();
+
   return (
-    <div className={classnames('dropdown', classes, {})} {...others}>
+    <div className={classnames('dropdown', classes, {
+      'has-error': hasError
+    })} {...others}>
       {!labelless && (
         <div className="dropdown__label">
           <Label text={label} htmlFor={uid} />
@@ -39,7 +42,6 @@ const Dropdown = ({
               .map(({ text, value }) => <option key={Math.random()} value={value}>{text}</option>)
           }
         </select>
-        <div className="dropdown__select__icon"></div>
       </div>
       {(helpText || errorText) && (
         <div className="dropdown__hints">
