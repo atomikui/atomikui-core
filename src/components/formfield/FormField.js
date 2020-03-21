@@ -1,12 +1,13 @@
 import React from 'react';
 import classnames from 'classnames';
-import PropTypes, { bool } from 'prop-types';
+import PropTypes from 'prop-types';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
 import { generateId } from '../../utilities/generateId';
 
 const FormField = ({
   classes, 
+  defaultValue,
   errorText, 
   hasError, 
   helpText, 
@@ -14,15 +15,15 @@ const FormField = ({
   label, 
   labelless,
   placeholder, 
+  required,
   type, 
-  value, 
   ...others 
 }) => {
   const uid = id || generateId();
   return (
     <div className={classnames('formfield', classes, {
       'has-error': hasError
-    })} {...others}>
+    })}>
       {!labelless && (
         <div className="formfield__label">
           <Label text={label} htmlFor={uid} />
@@ -34,7 +35,8 @@ const FormField = ({
           id={uid}
           className={classnames('formfield__textarea', classes, {})} 
           placeholder={placeholder} 
-          value={value} 
+          defaultValue={defaultValue} 
+          required
           {...others} 
         />
       )
@@ -44,7 +46,8 @@ const FormField = ({
           className={classnames('formfield__input', classes, {})} 
           type={type} 
           placeholder={placeholder} 
-          value={value} 
+          defaultValue={defaultValue} 
+          required
           {...others} 
         />
       )}
@@ -61,10 +64,12 @@ const FormField = ({
 FormField.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
+  /** Specifies and inputs default default value */
+  defaultValue: PropTypes.string,
   /** Text to be displayed when there is an error */
   errorText: PropTypes.string,
   /** Specifies the error state */
-  hasError: bool,
+  hasError: PropTypes.bool,
   /** Assistive text to be displayed with form field */
   helpText: PropTypes.string,
   /** A unique id */
@@ -75,6 +80,8 @@ FormField.propTypes = {
   labelless: PropTypes.bool,
   /** Specifies input placeholder text */
   placeholder: PropTypes.string,
+  /** Specifies if a field is required */
+  required: PropTypes.bool,
   /** Specifies the type of input */
   type: PropTypes.oneOf([
     'button',
@@ -100,22 +107,21 @@ FormField.propTypes = {
     'time',
     'url',
     'week'
-  ]),
-  /** Specifies and inputs value */
-  value: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  ])
 }
 
 FormField.defaultProps = {
   classes: '',
+  defaultValue: '',
   errorText: '',
   hasError: false,
   helpText: '',
   id: null,
   label: '',
   labelless: false,
-  text: '',
-  type: 'text',
-  value: ''
+  placeholder: '',
+  required: false,
+  type: 'text'
 };
 
 export default FormField;
