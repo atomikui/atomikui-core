@@ -12,4 +12,4 @@ export {
   Hint,
   Label,
   Modal
-}
+};

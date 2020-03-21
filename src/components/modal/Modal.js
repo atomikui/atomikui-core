@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const propTypes = {
   classes: PropTypes.string,
   children: PropTypes.node,
+  footer: PropTypes.node,
   isOpen: PropTypes.bool,
   onClose: PropTypes.func
 };
@@ -12,11 +13,12 @@ const propTypes = {
 const defaultProps = {
   classes: '',
   children: null,
+  footer: null,
   isOpen: false,
   onClose() {}
 };
 
-const Modal = ({ classes, children, isOpen, onClose, ...others }) => {
+const Modal = ({ classes, children, footer, isOpen, onClose, ...others }) => {
   const handleClose = e => {
     const isOverlayClick = e.target.classList.contains('modal');
     
@@ -41,9 +43,7 @@ const Modal = ({ classes, children, isOpen, onClose, ...others }) => {
         <div className="modal__body">
           {children}
         </div>
-        <div className="modal__footer">
-
-        </div>
+        {footer && <div className="modal__footer">{footer}</div>}
       </div>
     </div>
   );
