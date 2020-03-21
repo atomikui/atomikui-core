@@ -9,7 +9,7 @@
   position: fixed;
   right: 0;
   top: 0;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
   visibility: hidden;
   z-index: 200;
 
@@ -22,14 +22,31 @@
     background-color: transparent;
   }
 
+  &--drawer {
+    .modal__dialog {
+      bottom: 0;
+      max-height: inherit;
+      max-width: inherit;
+      left: auto;
+      right: -100%;
+      position: absolute;
+      top: 0;
+      transition: all .2s ease-in-out !important;
+      width: 100%;
+    }
+
+    &.is-open > .modal__dialog {
+      right: 0;
+    }
+  }
+
   &__dialog {
     background-color: $white;
     box-shadow: rem(0 4 16) rgba(0,0,0,0.25);
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin: rem(16);
-    max-height: 95%;
+    height: 100%;
   }
 
   &__header {
@@ -88,9 +105,12 @@
 
   @media (min-width: $breakpoint-medium) {
     &__dialog {
-      margin: 0;
       max-height: 80%;
       max-width: 70%;
+    }
+
+    &--drawer > .modal__dialog {
+      width: rem(480);
     }
   }
 }

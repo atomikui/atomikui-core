@@ -13,6 +13,8 @@ const propTypes = {
   footer: PropTypes.node,
   /** Specifies if modal has an overlay */
   hasOverlay: PropTypes.bool,
+  /** Displays the modal as a drawer that slides out from the left or right */
+  isDrawer: PropTypes.bool,
   /** Toggles modal visibility state */
   isOpen: PropTypes.bool,
   /** Callback triggered on close */
@@ -25,6 +27,7 @@ const defaultProps = {
   disableOverlayclick: false,
   footer: null,
   hasOverlay: true,
+  isDrawer: false,
   isOpen: false,
   onClose() {}
 };
@@ -35,6 +38,7 @@ const Modal = ({
   disableOverlayclick, 
   footer, 
   hasOverlay, 
+  isDrawer,
   isOpen, 
   onClose, 
   ...others 
@@ -53,7 +57,8 @@ const Modal = ({
     <div 
       className={classnames('modal', classes, {
         'is-open': isOpen,
-        'modal--no-overlay': !hasOverlay
+        'modal--no-overlay': !hasOverlay,
+        'modal--drawer': isDrawer
       })} 
       {...others}
       onClick={e => handleClose(e)}
