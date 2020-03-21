@@ -45,4 +45,15 @@
       box-shadow: rem(0 0 0 3) $blue-100;
     }
   }
+
+  &.has-error &__select__menu,
+  &.has-error &__select__menu {
+    &:focus {
+      box-shadow: rem(0 0 0 3) lighten($red-100, 25%);
+    }
+  }
+
+  &.has-error &__select::after {
+    background-color: $red-100;
+  }
 }

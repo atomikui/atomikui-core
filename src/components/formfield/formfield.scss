@@ -20,13 +20,9 @@
     }
   }
 
-  &.has-error > &__input,
-  &.has-error > &__textarea {
-    border-color: $red-100;
-
-    &:focus {
-      box-shadow: rem(0 0 0 3) lighten($red-100, 25%);
-    }
+  &.has-error > &__input:focus,
+  &.has-error > &:focus {
+    box-shadow: rem(0 0 0 3) lighten($red-100, 25%);
   }
 
   &__textarea {
