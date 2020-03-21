@@ -1,49 +1,54 @@
 .modal {
+  align-items: center;
   background-color: rgba(0,0,0,0.75);
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
   bottom: 0;
   display: flex;
-  opacity: 0;
-  visibility: hidden;
   justify-content: center;
-  align-items: center;
-  z-index: 200;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
   transition: all 0.1s ease-in-out;
+  visibility: hidden;
+  z-index: 200;
 
   &.is-open {
     opacity: 1;
     visibility: visible;
   }
 
+  &--no-overlay {
+    background-color: transparent;
+  }
+
   &__dialog {
     background-color: $white;
+    box-shadow: rem(0 4 16) rgba(0,0,0,0.25);
     display: flex;
-    flex-direction: column;
     flex: 1;
+    flex-direction: column;
     margin: rem(16);
     max-height: 95%;
   }
 
   &__header {
-    padding: rem(16);
+    align-items: center;
     border-bottom: rem(1) solid $gray-100;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: rem(16);
   }
 
   &__footer {
-    padding: rem(16);
     border-top: rem(1) solid $gray-100;
+    padding: rem(16);
   }
 
   &__title {
-    text-transform: uppercase;
     font-size: rem(22);
     font-weight: $font-medium;
+    text-transform: uppercase;
   }
 
   &__close-button {
@@ -51,10 +56,10 @@
     border: 0;
     cursor: pointer;
     height: rem(32);
-    width: rem(32);
-    padding: 0;
     outline: 0;
+    padding: 0;
     text-indent: rem(-10000);
+    width: rem(32);
 
     &:focus {
       @include focus-outline();
@@ -63,8 +68,8 @@
 
   &__body {
     flex: 1;
-    padding: rem(16);
     overflow: auto;
+    padding: rem(16);
   }
   
   @each $theme-name, $map in $modal-themes {
@@ -83,9 +88,9 @@
 
   @media (min-width: $breakpoint-medium) {
     &__dialog {
-      max-width: 70%;
-      max-height: 80%;
       margin: 0;
+      max-height: 80%;
+      max-width: 70%;
     }
   }
 }

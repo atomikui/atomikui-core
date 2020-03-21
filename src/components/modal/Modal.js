@@ -3,23 +3,45 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const propTypes = {
+  /** Specifies custom component classes */
   classes: PropTypes.string,
+  /** Child elements that will be rendered inside of the modal body */
   children: PropTypes.node,
+  /** Disables the overlay's clock event */
+  disableOverlayclick: PropTypes.bool,
+  /** Content to bre rendered inside of the modal footer */
   footer: PropTypes.node,
+  /** Specifies if modal has an overlay */
+  hasOverlay: PropTypes.bool,
+  /** Toggles modal visibility state */
   isOpen: PropTypes.bool,
+  /** Callback triggered on close */
   onClose: PropTypes.func
 };
 
 const defaultProps = {
   classes: '',
   children: null,
+  disableOverlayclick: false,
   footer: null,
+  hasOverlay: true,
   isOpen: false,
   onClose() {}
 };
 
-const Modal = ({ classes, children, footer, isOpen, onClose, ...others }) => {
+const Modal = ({ 
+  classes, 
+  children,
+  disableOverlayclick, 
+  footer, 
+  hasOverlay, 
+  isOpen, 
+  onClose, 
+  ...others 
+}) => {
   const handleClose = e => {
+    if (disableOverlayclick || !hasOverlay) return;
+
     const isOverlayClick = e.target.classList.contains('modal');
     
     if (isOverlayClick) {
@@ -30,7 +52,8 @@ const Modal = ({ classes, children, footer, isOpen, onClose, ...others }) => {
   return(
     <div 
       className={classnames('modal', classes, {
-        'is-open': isOpen
+        'is-open': isOpen,
+        'modal--no-overlay': !hasOverlay
       })} 
       {...others}
       onClick={e => handleClose(e)}
