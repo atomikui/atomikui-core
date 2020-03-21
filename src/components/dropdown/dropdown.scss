@@ -40,5 +40,9 @@
     outline: 0;
     padding: rem(0 $input-height 0 8);
     width: 100%;
+
+    &:focus {
+      box-shadow: rem(0 0 0 3) $blue-100;
+    }
   }
 }
