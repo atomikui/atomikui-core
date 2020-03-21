@@ -3,53 +3,60 @@ import classnames from 'classnames';
 import PropTypes, { bool } from 'prop-types';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
+import { generateId } from '../../utilities/generateId';
 
 const FormField = ({
   classes, 
   errorText, 
   hasError, 
   helpText, 
+  id,
   label, 
   labelless,
   placeholder, 
   type, 
   value, 
   ...others 
-}) => (
-  <div className={classnames('formfield', classes, {
-    'has-error': hasError
-  })} {...others}>
-    {!labelless && (
-      <div className="formfield__label">
-        <Label text={label} />
-      </div>
-    )}
-    {type === 'textarea'
-    ? (
-      <textarea 
-        className={classnames('formfield__textarea', classes, {})} 
-        placeholder={placeholder} 
-        value={value} 
-        {...others} 
-      />
-    )
-    : (
-      <input 
-        className={classnames('formfield__input', classes, {})} 
-        type={type} 
-        placeholder={placeholder} 
-        value={value} 
-        {...others} 
-      />
-    )}
-    {(helpText || errorText) && (
-      <div className="formfield__hints">
-        {helpText && <Hint text={helpText} />}
-        {hasError && <Hint text={errorText} type="error" />}
-      </div>
-    )}
-  </div>
-);
+}) => {
+  const uid = id || generateId();
+  return (
+    <div className={classnames('formfield', classes, {
+      'has-error': hasError
+    })} {...others}>
+      {!labelless && (
+        <div className="formfield__label">
+          <Label text={label} htmlFor={uid} />
+        </div>
+      )}
+      {type === 'textarea'
+      ? (
+        <textarea 
+          id={uid}
+          className={classnames('formfield__textarea', classes, {})} 
+          placeholder={placeholder} 
+          value={value} 
+          {...others} 
+        />
+      )
+      : (
+        <input 
+          id={uid}
+          className={classnames('formfield__input', classes, {})} 
+          type={type} 
+          placeholder={placeholder} 
+          value={value} 
+          {...others} 
+        />
+      )}
+      {(helpText || errorText) && (
+        <div className="formfield__hints">
+          {helpText && <Hint text={helpText} />}
+          {hasError && <Hint text={errorText} type="error" />}
+        </div>
+      )}
+    </div>
+  );
+};
 
 FormField.propTypes = {
   /** Specifies custom component classes */
@@ -60,6 +67,8 @@ FormField.propTypes = {
   hasError: bool,
   /** Assistive text to be displayed with form field */
   helpText: PropTypes.string,
+  /** A unique id */
+  id: PropTypes.string,
   /** Specifies label text */
   label: PropTypes.string,
   /** Hides label */
@@ -101,6 +110,7 @@ FormField.defaultProps = {
   errorText: '',
   hasError: false,
   helpText: '',
+  id: null,
   label: '',
   labelless: false,
   text: '',
