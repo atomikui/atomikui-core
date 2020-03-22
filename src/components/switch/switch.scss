@@ -53,4 +53,10 @@
       }
     }
   }
+
+  &.has-error {
+    .switch__toggle {
+      background: $red-100;
+    }
+  }
 }

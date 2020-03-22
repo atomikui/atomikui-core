@@ -31,6 +31,6 @@ import { FormField } from '@alaneicker/react-component-library';
   type="text" 
   label="Full Name" 
   errorText="Please enter your full name"
-  hasError={true}
+  hasError
 />
 ```

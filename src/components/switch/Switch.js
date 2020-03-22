@@ -23,7 +23,8 @@ const Switch = ({
     <>
       <div htmlFor={uid} className={classnames('switch', classes, {
         'is-checked': defaultChecked,
-        'is-stacked': layout === 'stacked'
+        'is-stacked': layout === 'stacked',
+        'has-error': hasError
       })}>
         <input 
           className="switch__input" 
