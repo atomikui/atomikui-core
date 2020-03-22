@@ -21,7 +21,7 @@ const Switch = ({
 
   return (
     <>
-      <Label htmlFor={uid} classes={classnames('switch', classes, {
+      <div htmlFor={uid} className={classnames('switch', classes, {
         'is-checked': defaultChecked,
         'is-stacked': layout === 'stacked'
       })}>
@@ -32,9 +32,11 @@ const Switch = ({
           defaultChecked={defaultChecked} 
           required={required}
           onChange={() => onChange()} />
-        <span className="switch__label">{label}</span>
-        <span className="switch__toggle"></span>
-      </Label>
+        <div className="switch__label">
+          <Label htmlFor={uid}>{label}</Label>
+        </div>
+        <div className="switch__toggle" onClick={() => onChange()}></div>
+      </div>
       {(helpText || errorText) && (
         <div className="formfield__hints">
           {helpText && <Hint text={helpText} />}

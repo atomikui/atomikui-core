@@ -1,6 +1,5 @@
 .switch {
   align-items: center;
-  cursor: pointer;
   display: flex;
 
   &__input {
@@ -14,11 +13,12 @@
   &__toggle {
     background: $gray-100;
     border-radius: rem($input-height);
+    cursor: pointer;
     display: block;
     height: rem($input-height);
     position: relative;
-    width: rem(80);
     transition: all .1s ease-in-out;
+    width: rem(80);
     
     &:after {
       background: $white;
@@ -28,11 +28,11 @@
       display: block;
       height: rem($input-height - 10);
       left: rem(5);
-      width: rem($input-height - 10);
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
       transition: all .2s ease-in-out;
+      width: rem($input-height - 10);
     }
   }
 
@@ -44,7 +44,7 @@
     }
   }
 
-  &.is-checked  {
+  &.is-checked {
     .switch__toggle {
       background: $blue-200;
 
