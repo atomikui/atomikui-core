@@ -6,7 +6,7 @@ const Alert = ({ align, classes, text, type, ...others }) => (
   <div 
     className={classnames('alert', classes, {
       [`alert--${type}`]: type,
-      [`alert--${align}`]: align,
+      [`alert--${align}`]: align
     })} 
     type={type} 
     {...others}>
@@ -23,7 +23,7 @@ Alert.propTypes = {
   text: PropTypes.string,
   /** Specifies the type of alert */
   type: PropTypes.oneOf(['', 'info', 'warning', 'error', 'success'])
-}
+};
 
 Alert.defaultProps = {
   align: '',
