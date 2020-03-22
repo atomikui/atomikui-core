@@ -38,7 +38,7 @@ const FormField = ({
   ...others 
 }) => {
   const uid = id || generateId();
-  const fieldType = !types.includes(type) ? 'text' : type
+  const fieldType = !types.includes(type) ? 'text' : type;
 
   return (
     <div className={classnames('formfield', classes, {
@@ -56,7 +56,7 @@ const FormField = ({
           className={classnames('formfield__textarea', classes, {})} 
           placeholder={placeholder} 
           defaultValue={defaultValue} 
-          required
+          required={required}
           {...others} 
         />
       )
@@ -104,7 +104,7 @@ FormField.propTypes = {
   required: PropTypes.bool,
   /** Specifies the type of input */
   type: PropTypes.oneOf(types)
-}
+};
 
 FormField.defaultProps = {
   classes: '',

@@ -15,7 +15,7 @@ Label.propTypes = {
 
 Label.defaultProps = {
   classes: '',
-  children: null,
-}
+  children: null
+};
 
 export default Label;

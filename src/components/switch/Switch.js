@@ -68,7 +68,7 @@ Switch.propTypes = {
   /** Callback triggered onChange */
   onChange: PropTypes.func,
   /** Specifies if a field is required */
-  required: PropTypes.bool,
+  required: PropTypes.bool
 };
 
 Switch.defaultProps = {

@@ -34,7 +34,7 @@ const Dropdown = ({
           id={uid}
           className={classnames('dropdown__select__menu', classes, {})}
           defaultValue={defaultValue} 
-          required
+          required={required}
           {...others}
         >
           {

@@ -34,7 +34,7 @@ Button.propTypes = {
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /** Specifies the button variation */
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'hollow', 'link', 'block'])
-}
+};
 
 Button.defaultProps = {
   block: false,
@@ -44,7 +44,7 @@ Button.defaultProps = {
   shape: null,
   size: null,
   type: 'button',
-  variant: null,
+  variant: null
 };
 
 export default Button;

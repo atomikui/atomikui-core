@@ -9,7 +9,7 @@ const SwitchPanel = ({ children }) => (
 
 SwitchPanel.propTypes = {
   children: PropTypes.node
-}
+};
 
 SwitchPanel.defaultProps = {
   children: null

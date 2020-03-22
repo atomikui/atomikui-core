@@ -43,7 +43,7 @@ const Modal = ({
   onClose, 
   ...others 
 }) => {
-  const handleClose = e => {
+  const handleClose = (e) => {
     if (disableOverlayclick || !hasOverlay) return;
 
     const isOverlayClick = e.target.classList.contains('modal');
@@ -53,7 +53,7 @@ const Modal = ({
     }
   };
 
-  return(
+  return (
     <div 
       className={classnames('modal', classes, {
         'is-open': isOpen,
@@ -61,7 +61,7 @@ const Modal = ({
         'modal--drawer': isDrawer
       })} 
       {...others}
-      onClick={e => handleClose(e)}
+      onClick={(e) => handleClose(e)}
     >
       <div className="modal__dialog">
         <div className="modal__header">
