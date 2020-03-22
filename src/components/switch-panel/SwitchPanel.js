@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SwitchPanel = ({ children }) => (
-  <ul className="switch-panel">
+  <div className="switch-panel">
     {children}
-  </ul>
+  </div>
 );
 
 SwitchPanel.propTypes = {
