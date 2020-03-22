@@ -26,7 +26,7 @@ const Dropdown = ({
     })} {...others}>
       {!labelless && (
         <div className="dropdown__label">
-          <Label text={label} htmlFor={uid} />
+          <Label htmlFor={uid}>{label}</Label>
         </div>
       )}
       <div className="dropdown__select">

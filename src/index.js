@@ -5,6 +5,7 @@ import FormField from './components/formfield/FormField';
 import Hint from './components/hint/Hint';
 import Label from './components/label/Label';
 import Modal from './components/modal/Modal';
+import Switch from './components/switch/Switch';
 
 export {
   Alert,
@@ -13,5 +14,6 @@ export {
   FormField,
   Hint,
   Label,
-  Modal
+  Modal,
+  Switch
 };

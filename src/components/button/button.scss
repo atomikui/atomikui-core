@@ -9,8 +9,9 @@ a.btn {
   font-family: inherit;
   font-size: inherit;
   font-weight: $font-medium;
+  min-height: rem($input-height);
   outline: 0;
-  padding: rem(12 24);
+  padding: rem(10 24);
   text-decoration: none;
   text-transform: uppercase;
   transition: background .3s linear;

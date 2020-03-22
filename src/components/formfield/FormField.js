@@ -26,7 +26,7 @@ const FormField = ({
     })}>
       {!labelless && (
         <div className="formfield__label">
-          <Label text={label} htmlFor={uid} />
+          <Label htmlFor={uid}>{label}</Label>
         </div>
       )}
       {type === 'textarea'
