@@ -6,6 +6,7 @@ import Hint from './components/hint/Hint';
 import Label from './components/label/Label';
 import Modal from './components/modal/Modal';
 import Switch from './components/switch/Switch';
+import SwitchPanel from './components/switch-panel/SwitchPanel';
 
 export {
   Alert,
@@ -15,5 +16,6 @@ export {
   Hint,
   Label,
   Modal,
-  Switch
+  Switch,
+  SwitchPanel
 };

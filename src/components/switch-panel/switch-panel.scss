@@ -1,0 +1,10 @@
+.switch-panel {
+
+  & > * {
+    padding: rem(16 0);
+  }
+
+  & > * + * {
+    border-top: rem(1) solid $gray-100;
+  }
+}

@@ -81,7 +81,7 @@ Switch.defaultProps = {
   label: '', 
   layout: '',
   onChange() {},
-  required: false,
+  required: false
 };
 
 export default Switch;
