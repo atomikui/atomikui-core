@@ -5,6 +5,24 @@ import Hint from '../hint/Hint';
 import Label from '../label/Label';
 import { generateId } from '../../utilities/generateId';
 
+const types = [
+  'date',
+  'datetime-local',
+  'email',
+  'hidden',
+  'image',
+  'month',
+  'number',
+  'password',
+  'search',
+  'tel',
+  'text',
+  'textarea',
+  'time',
+  'url',
+  'week'
+];
+
 const FormField = ({
   classes, 
   defaultValue,
@@ -20,6 +38,8 @@ const FormField = ({
   ...others 
 }) => {
   const uid = id || generateId();
+  const fieldType = !types.includes(type) ? 'text' : type
+
   return (
     <div className={classnames('formfield', classes, {
       'has-error': hasError
@@ -44,7 +64,7 @@ const FormField = ({
         <input 
           id={uid}
           className={classnames('formfield__input', classes, {})} 
-          type={type} 
+          type={fieldType} 
           placeholder={placeholder} 
           defaultValue={defaultValue} 
           required
@@ -83,31 +103,7 @@ FormField.propTypes = {
   /** Specifies if a field is required */
   required: PropTypes.bool,
   /** Specifies the type of input */
-  type: PropTypes.oneOf([
-    'button',
-    'checkbox',
-    'color',
-    'date',
-    'datetime-local',
-    'email',
-    'file',
-    'hidden',
-    'image',
-    'month',
-    'number',
-    'password',
-    'radio',
-    'range',
-    'reset',
-    'search',
-    'submit',
-    'tel',
-    'text',
-    'textarea',
-    'time',
-    'url',
-    'week'
-  ])
+  type: PropTypes.oneOf(types)
 }
 
 FormField.defaultProps = {
