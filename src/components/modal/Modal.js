@@ -71,7 +71,7 @@ const Modal = ({
         focusTrap[isOpen ? 'activate' : 'deactivate']();
       }, 200);
     }
-  }, [isOpen]);
+  }, [focusTrap, isOpen]);
 
   return (
     <div
