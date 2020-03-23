@@ -70,11 +70,12 @@ const Modal = ({
 
   useEffect(() => {
     setFocusTrap(createFocusTrap(modal.current, {
-      allowOutsideClick: !disableOverlayclick || !hasOverlay,
+      allowOutsideClick: () => !disableOverlayclick || !hasOverlay,
+      clickOutsideDeactivates: isDrawer && !hasOverlay,
       escapeDeactivates: false,
       fallbackFocus: modal,
     }));
-  }, [disableOverlayclick, hasOverlay]);
+  }, [disableOverlayclick, hasOverlay, isDrawer]);
 
   useEffect(() => {
     if (focusTrap) {
