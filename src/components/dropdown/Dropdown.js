@@ -44,7 +44,10 @@ const Dropdown = ({
           {...others}
         >
           {
-            [{ text: 'Select One', value: '' }, ...options]
+            [{
+              text: 'Select One',
+              value: '',
+            }, ...options]
               .map(({ text, value }) => <option key={Math.random()} value={value}>{text}</option>)
           }
         </select>

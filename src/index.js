@@ -17,5 +17,5 @@ export {
   Label,
   Modal,
   Switch,
-  SwitchPanel
+  SwitchPanel,
 };

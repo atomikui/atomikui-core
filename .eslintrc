@@ -23,6 +23,12 @@
     "react"
   ],
   "rules": {
-    "no-unused-vars": 0
+    "no-unused-vars": 0,
+    "object-property-newline": [
+      "error",
+      {
+        "allowMultiplePropertiesPerLine": false
+      }
+    ]
   }
 }
