@@ -40,7 +40,7 @@ const Dropdown = ({
           className={classnames('dropdown__select__menu', classes, {})}
           defaultValue={defaultValue}
           required={required}
-          aria-describedby={`${inputErrorId} ${inputErrorId}`}
+          aria-describedby={`${inputHintId} ${inputErrorId}`}
           {...others}
         >
           {
@@ -51,7 +51,7 @@ const Dropdown = ({
       </div>
       {(helpText || errorText) && (
         <div className="dropdown__hints">
-          {helpText && <Hint id={inputErrorId} text={helpText} />}
+          {helpText && <Hint id={inputHintId} text={helpText} />}
           {hasError && <Hint id={inputErrorId} text={errorText} type="error" />}
         </div>
       )}
