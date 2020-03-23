@@ -2,9 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Hint = ({ classes, text, type, ...others }) => (
+const Hint = ({
+  classes, text, type, ...others
+}) => (
   <div className={classnames('hint', classes, {
-    [`hint--${type}`]: type
+    [`hint--${type}`]: type,
   })} {...others}>{text}</div>
 );
 
@@ -14,13 +16,13 @@ Hint.propTypes = {
   /** Hint text */
   text: PropTypes.string,
   /** Specifies the typr of hint */
-  type: PropTypes.oneOf(['', 'error', 'warning', 'success'])
+  type: PropTypes.oneOf(['', 'error', 'warning', 'success']),
 };
 
 Hint.defaultProps = {
   classes: '',
   type: '',
-  text: ''
+  text: '',
 };
 
 export default Hint;

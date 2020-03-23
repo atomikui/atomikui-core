@@ -20,29 +20,29 @@ const types = [
   'textarea',
   'time',
   'url',
-  'week'
+  'week',
 ];
 
 const FormField = ({
-  classes, 
+  classes,
   defaultValue,
-  errorText, 
-  hasError, 
-  helpText, 
+  errorText,
+  hasError,
+  helpText,
   id,
-  label, 
+  label,
   labelless,
-  placeholder, 
+  placeholder,
   required,
-  type, 
-  ...others 
+  type,
+  ...others
 }) => {
   const uid = id || generateId();
   const fieldType = !types.includes(type) ? 'text' : type;
 
   return (
     <div className={classnames('formfield', classes, {
-      'has-error': hasError
+      'has-error': hasError,
     })}>
       {!labelless && (
         <div className="formfield__label">
@@ -50,27 +50,27 @@ const FormField = ({
         </div>
       )}
       {type === 'textarea'
-      ? (
-        <textarea 
+        ? (
+        <textarea
           id={uid}
-          className={classnames('formfield__textarea', classes, {})} 
-          placeholder={placeholder} 
-          defaultValue={defaultValue} 
+          className={classnames('formfield__textarea', classes, {})}
+          placeholder={placeholder}
+          defaultValue={defaultValue}
           required={required}
-          {...others} 
+          {...others}
         />
-      )
-      : (
-        <input 
+        )
+        : (
+        <input
           id={uid}
-          className={classnames('formfield__input', classes, {})} 
-          type={fieldType} 
-          placeholder={placeholder} 
-          defaultValue={defaultValue} 
+          className={classnames('formfield__input', classes, {})}
+          type={fieldType}
+          placeholder={placeholder}
+          defaultValue={defaultValue}
           required
-          {...others} 
+          {...others}
         />
-      )}
+        )}
       {(helpText || errorText) && (
         <div className="formfield__hints">
           {helpText && <Hint text={helpText} />}
@@ -103,7 +103,7 @@ FormField.propTypes = {
   /** Specifies if a field is required */
   required: PropTypes.bool,
   /** Specifies the type of input */
-  type: PropTypes.oneOf(types)
+  type: PropTypes.oneOf(types),
 };
 
 FormField.defaultProps = {
@@ -117,7 +117,7 @@ FormField.defaultProps = {
   labelless: false,
   placeholder: '',
   required: false,
-  type: 'text'
+  type: 'text',
 };
 
 export default FormField;

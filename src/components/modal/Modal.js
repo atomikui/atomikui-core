@@ -18,7 +18,7 @@ const propTypes = {
   /** Toggles modal visibility state */
   isOpen: PropTypes.bool,
   /** Callback triggered on close */
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
 };
 
 const defaultProps = {
@@ -29,37 +29,37 @@ const defaultProps = {
   hasOverlay: true,
   isDrawer: false,
   isOpen: false,
-  onClose() {}
+  onClose() {},
 };
 
-const Modal = ({ 
-  classes, 
+const Modal = ({
+  classes,
   children,
-  disableOverlayclick, 
-  footer, 
-  hasOverlay, 
+  disableOverlayclick,
+  footer,
+  hasOverlay,
   isDrawer,
-  isOpen, 
-  onClose, 
-  ...others 
+  isOpen,
+  onClose,
+  ...others
 }) => {
   const handleClose = (e) => {
     if (disableOverlayclick || !hasOverlay) return;
 
     const isOverlayClick = e.target.classList.contains('modal');
-    
+
     if (isOverlayClick) {
       onClose();
     }
   };
 
   return (
-    <div 
+    <div
       className={classnames('modal', classes, {
         'is-open': isOpen,
         'modal--no-overlay': !hasOverlay,
-        'modal--drawer': isDrawer
-      })} 
+        'modal--drawer': isDrawer,
+      })}
       {...others}
       onClick={(e) => handleClose(e)}
     >

@@ -6,16 +6,16 @@ import Label from '../label/Label';
 import { generateId } from '../../utilities/generateId';
 
 const Switch = ({
-  classes, 
+  classes,
   defaultChecked,
-  errorText, 
-  hasError, 
-  helpText, 
+  errorText,
+  hasError,
+  helpText,
   id,
-  label, 
+  label,
   layout,
   onChange,
-  required
+  required,
 }) => {
   const uid = id || generateId();
 
@@ -24,13 +24,13 @@ const Switch = ({
       <div htmlFor={uid} className={classnames('switch', classes, {
         'is-checked': defaultChecked,
         'is-stacked': layout === 'stacked',
-        'has-error': hasError
+        'has-error': hasError,
       })}>
-        <input 
-          className="switch__input" 
-          id={uid} 
-          type="checkbox" 
-          defaultChecked={defaultChecked} 
+        <input
+          className="switch__input"
+          id={uid}
+          type="checkbox"
+          defaultChecked={defaultChecked}
           required={required}
           onChange={() => onChange()} />
         <div className="switch__label">
@@ -50,7 +50,7 @@ const Switch = ({
 
 Switch.propTypes = {
   /** Specifies custom component classes */
-  classes: PropTypes.string, 
+  classes: PropTypes.string,
   /** Specifies and inputs default default checked state */
   defaultChecked: PropTypes.bool,
   /** Text to be displayed when there is an error */
@@ -62,26 +62,26 @@ Switch.propTypes = {
   /** A unique id */
   id: PropTypes.string,
   /** Specifies label text */
-  label: PropTypes.string, 
+  label: PropTypes.string,
   /** Specifies if layout is inline or stacked */
   layout: PropTypes.oneOf(['', 'stacked']),
   /** Callback triggered onChange */
   onChange: PropTypes.func,
   /** Specifies if a field is required */
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
 
 Switch.defaultProps = {
-  classes: '', 
+  classes: '',
   defaultChecked: false,
-  errorText: '', 
-  hasError: false, 
-  helpText: '', 
+  errorText: '',
+  hasError: false,
+  helpText: '',
   id: null,
-  label: '', 
+  label: '',
   layout: '',
   onChange() {},
-  required: false
+  required: false,
 };
 
 export default Switch;

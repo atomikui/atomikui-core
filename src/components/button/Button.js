@@ -2,15 +2,17 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Button = ({ block, classes, children, disabled, shape, size, type, variant, ...others }) => (
-  <button 
+const Button = ({
+  block, classes, children, disabled, shape, size, type, variant, ...others
+}) => (
+  <button
     className={classnames('btn', classes, {
       [`btn--${variant}`]: variant,
       [`btn--${shape}`]: shape,
       [`btn--${size}`]: size,
-      'btn--block': block
-    })} 
-    type={type} 
+      'btn--block': block,
+    })}
+    type={type}
     disabled={disabled}
     {...others}>
     {children}
@@ -33,7 +35,7 @@ Button.propTypes = {
   /** Specifies the type of button */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /** Specifies the button variation */
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'hollow', 'link', 'block'])
+  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'hollow', 'link', 'block']),
 };
 
 Button.defaultProps = {
@@ -44,7 +46,7 @@ Button.defaultProps = {
   shape: null,
   size: null,
   type: 'button',
-  variant: null
+  variant: null,
 };
 
 export default Button;

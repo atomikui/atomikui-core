@@ -10,12 +10,12 @@ Label.propTypes = {
   /** Custom classes to be added to Label component */
   classes: PropTypes.string,
   /** Label text */
-  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node])
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
 
 Label.defaultProps = {
   classes: '',
-  children: null
+  children: null,
 };
 
 export default Label;

@@ -8,11 +8,11 @@ const SwitchPanel = ({ children }) => (
 );
 
 SwitchPanel.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 SwitchPanel.defaultProps = {
-  children: null
+  children: null,
 };
 
 export default SwitchPanel;

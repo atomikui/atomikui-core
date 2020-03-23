@@ -6,13 +6,13 @@ import Label from '../label/Label';
 import { generateId } from '../../utilities/generateId';
 
 const Dropdown = ({
-  classes, 
+  classes,
   defaultValue,
-  errorText, 
-  hasError, 
-  helpText, 
+  errorText,
+  hasError,
+  helpText,
   id,
-  label, 
+  label,
   labelless,
   options,
   required,
@@ -22,7 +22,7 @@ const Dropdown = ({
 
   return (
     <div className={classnames('dropdown', classes, {
-      'has-error': hasError
+      'has-error': hasError,
     })} {...others}>
       {!labelless && (
         <div className="dropdown__label">
@@ -30,15 +30,15 @@ const Dropdown = ({
         </div>
       )}
       <div className="dropdown__select">
-        <select 
+        <select
           id={uid}
           className={classnames('dropdown__select__menu', classes, {})}
-          defaultValue={defaultValue} 
+          defaultValue={defaultValue}
           required={required}
           {...others}
         >
           {
-            [{ text: 'Select One', value: ''}, ...options]
+            [{ text: 'Select One', value: '' }, ...options]
               .map(({ text, value }) => <option key={Math.random()} value={value}>{text}</option>)
           }
         </select>
@@ -73,10 +73,10 @@ Dropdown.propTypes = {
   /** Selectable options in the dropdown */
   options: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.string,
   })),
   /** Specifies if a field is required */
-  required: PropTypes.bool
+  required: PropTypes.bool,
 };
 
 Dropdown.defaultProps = {
@@ -89,7 +89,7 @@ Dropdown.defaultProps = {
   label: '',
   labelless: false,
   options: [],
-  required: false
+  required: false,
 };
 
 export default Dropdown;

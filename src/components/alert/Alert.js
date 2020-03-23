@@ -2,11 +2,13 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Alert = ({ align, classes, text, type, ...others }) => (
+const Alert = ({
+ align, classes, text, type, ...others 
+}) => (
   <div 
     className={classnames('alert', classes, {
       [`alert--${type}`]: type,
-      [`alert--${align}`]: align
+      [`alert--${align}`]: align,
     })} 
     type={type} 
     {...others}>
@@ -22,14 +24,14 @@ Alert.propTypes = {
   /** Specifies text to be displayed in the alert */
   text: PropTypes.string,
   /** Specifies the type of alert */
-  type: PropTypes.oneOf(['', 'info', 'warning', 'error', 'success'])
+  type: PropTypes.oneOf(['', 'info', 'warning', 'error', 'success']),
 };
 
 Alert.defaultProps = {
   align: '',
   classes: '',
   type: '',
-  text: ''
+  text: '',
 };
 
 export default Alert;
