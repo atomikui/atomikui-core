@@ -32,12 +32,16 @@ const FormField = ({
   id,
   label,
   labelless,
+  name,
   placeholder,
   required,
   type,
   ...others
 }) => {
   const uid = id || generateId();
+  const inputName = name || uid;
+  const inputHint = `${inputName}_hint`;
+  const inputError = `${inputName}_error`;
   const fieldType = !types.includes(type) ? 'text' : type;
 
   return (
@@ -67,14 +71,15 @@ const FormField = ({
           type={fieldType}
           placeholder={placeholder}
           defaultValue={defaultValue}
+          aria-describedby={`${inputHint} ${inputError}`}
           required
           {...others}
         />
         )}
       {(helpText || errorText) && (
         <div className="formfield__hints">
-          {helpText && <Hint text={helpText} />}
-          {hasError && <Hint text={errorText} type="error" />}
+          {helpText && <Hint id={inputHint} text={helpText} />}
+          {hasError && <Hint id={inputError} text={errorText} type="error" />}
         </div>
       )}
     </div>
@@ -100,6 +105,8 @@ FormField.propTypes = {
   labelless: PropTypes.bool,
   /** Specifies input placeholder text */
   placeholder: PropTypes.string,
+  /** Specifies input name attribute */
+  name: PropTypes.string,
   /** Specifies if a field is required */
   required: PropTypes.bool,
   /** Specifies the type of input */
@@ -115,6 +122,7 @@ FormField.defaultProps = {
   id: null,
   label: '',
   labelless: false,
+  name: '',
   placeholder: '',
   required: false,
   type: 'text',
