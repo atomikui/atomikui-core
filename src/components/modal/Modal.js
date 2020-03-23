@@ -8,6 +8,8 @@ const propTypes = {
   classes: PropTypes.string,
   /** Child elements that will be rendered inside of the modal body */
   children: PropTypes.node,
+  /** Closes the modal when the escape key is pressed */
+  closeOnEscape: PropTypes.bool,
   /** Disables the overlay's clock event */
   disableOverlayclick: PropTypes.bool,
   /** Content to bre rendered inside of the modal footer */
@@ -24,6 +26,7 @@ const propTypes = {
 
 const defaultProps = {
   classes: '',
+  closeOnEscape: true,
   children: null,
   disableOverlayclick: false,
   footer: null,
@@ -36,6 +39,7 @@ const defaultProps = {
 const Modal = ({
   classes,
   children,
+  closeOnEscape,
   disableOverlayclick,
   footer,
   hasOverlay,
@@ -58,12 +62,19 @@ const Modal = ({
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.keyCode === 27) {
+      onClose();
+    }
+  };
+
   useEffect(() => {
     setFocusTrap(createFocusTrap(modal.current, {
+      allowOutsideClick: !disableOverlayclick || !hasOverlay,
       escapeDeactivates: false,
       fallbackFocus: modal,
     }));
-  }, []);
+  }, [disableOverlayclick, hasOverlay]);
 
   useEffect(() => {
     if (focusTrap) {
@@ -80,8 +91,9 @@ const Modal = ({
         'modal--no-overlay': !hasOverlay,
         'modal--drawer': isDrawer,
       })}
-      {...others}
       onClick={(e) => handleClose(e)}
+      {...(closeOnEscape && { onKeyDown: (e) => handleKeyDown(e) })}
+      {...others}
     >
       <div className="modal__dialog" ref={modal}>
         <div className="modal__header">
