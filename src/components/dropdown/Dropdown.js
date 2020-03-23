@@ -14,11 +14,15 @@ const Dropdown = ({
   id,
   label,
   labelless,
+  name,
   options,
   required,
   ...others
 }) => {
   const uid = id || generateId();
+  const inputName = name || uid;
+  const inputHintId = `${inputName}_hint`;
+  const inputErrorId = `${inputName}_error`;
 
   return (
     <div className={classnames('dropdown', classes, {
@@ -32,9 +36,11 @@ const Dropdown = ({
       <div className="dropdown__select">
         <select
           id={uid}
+          name={inputName}
           className={classnames('dropdown__select__menu', classes, {})}
           defaultValue={defaultValue}
           required={required}
+          aria-describedby={`${inputErrorId} ${inputErrorId}`}
           {...others}
         >
           {
@@ -45,8 +51,8 @@ const Dropdown = ({
       </div>
       {(helpText || errorText) && (
         <div className="dropdown__hints">
-          {helpText && <Hint text={helpText} />}
-          {hasError && <Hint text={errorText} type="error" />}
+          {helpText && <Hint id={inputErrorId} text={helpText} />}
+          {hasError && <Hint id={inputErrorId} text={errorText} type="error" />}
         </div>
       )}
     </div>
@@ -70,6 +76,8 @@ Dropdown.propTypes = {
   label: PropTypes.string,
   /** Hides label */
   labelless: PropTypes.bool,
+  /** Specifies input name attribute */
+  name: PropTypes.string,
   /** Selectable options in the dropdown */
   options: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string,
@@ -88,6 +96,7 @@ Dropdown.defaultProps = {
   id: null,
   label: '',
   labelless: false,
+  name: '',
   options: [],
   required: false,
 };
