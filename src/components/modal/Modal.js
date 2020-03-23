@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import createFocusTrap from 'focus-trap';
 
 const propTypes = {
   /** Specifies custom component classes */
@@ -43,6 +44,10 @@ const Modal = ({
   onClose,
   ...others
 }) => {
+  const [focusTrap, setFocusTrap] = useState(null);
+
+  const modal = useRef();
+
   const handleClose = (e) => {
     if (disableOverlayclick || !hasOverlay) return;
 
@@ -52,6 +57,21 @@ const Modal = ({
       onClose();
     }
   };
+
+  useEffect(() => {
+    setFocusTrap(createFocusTrap(modal.current, {
+      escapeDeactivates: false,
+      fallbackFocus: modal,
+    }));
+  }, []);
+
+  useEffect(() => {
+    if (focusTrap) {
+      setTimeout(() => {
+        focusTrap[isOpen ? 'activate' : 'deactivate']();
+      }, 200);
+    }
+  }, [isOpen]);
 
   return (
     <div
@@ -63,7 +83,7 @@ const Modal = ({
       {...others}
       onClick={(e) => handleClose(e)}
     >
-      <div className="modal__dialog">
+      <div className="modal__dialog" ref={modal}>
         <div className="modal__header">
           <div className="modal__title">title</div>
           <button className="modal__close-button" onClick={() => onClose()}>close</button>

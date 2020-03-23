@@ -25,11 +25,11 @@
   &--drawer {
     .modal__dialog {
       bottom: 0;
+      left: auto;
       max-height: inherit;
       max-width: inherit;
-      left: auto;
-      right: -100%;
       position: absolute;
+      right: -100%;
       top: 0;
       transition: all .2s ease-in-out !important;
       width: 100%;
@@ -105,9 +105,9 @@
 
   @media (min-width: $breakpoint-medium) {
     &__dialog {
+      height: auto;
       max-height: 80%;
       max-width: 70%;
-      height: auto;
     }
 
     &--drawer > .modal__dialog {
