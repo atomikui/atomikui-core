@@ -14,10 +14,14 @@ const Switch = ({
   id,
   label,
   layout,
+  name,
   onChange,
   required,
 }) => {
   const uid = id || generateId();
+  const inputName = name || uid;
+  const inputHintId = `${inputName}_hint`;
+  const inputErrorId = `${inputName}_error`;
 
   return (
     <>
@@ -27,11 +31,13 @@ const Switch = ({
         'has-error': hasError,
       })}>
         <input
-          className="switch__input"
           id={uid}
+          name={inputName}
+          className="switch__input"
           type="checkbox"
           defaultChecked={defaultChecked}
           required={required}
+          aria-describedby={`${inputHintId} ${inputErrorId}`}
           onChange={() => onChange()} />
         <div className="switch__label">
           <Label htmlFor={uid}>{label}</Label>
@@ -40,8 +46,8 @@ const Switch = ({
       </div>
       {(helpText || errorText) && (
         <div className="formfield__hints">
-          {helpText && <Hint text={helpText} />}
-          {hasError && <Hint text={errorText} type="error" />}
+          {helpText && <Hint id={inputHintId} text={helpText} />}
+          {hasError && <Hint id={inputErrorId} text={errorText} type="error" />}
         </div>
       )}
     </>
@@ -65,6 +71,8 @@ Switch.propTypes = {
   label: PropTypes.string,
   /** Specifies if layout is inline or stacked */
   layout: PropTypes.oneOf(['', 'stacked']),
+  /** Specifies input name attribute */
+  name: PropTypes.string,
   /** Callback triggered onChange */
   onChange: PropTypes.func,
   /** Specifies if a field is required */
@@ -80,6 +88,7 @@ Switch.defaultProps = {
   id: null,
   label: '',
   layout: '',
+  name: '',
   onChange() {},
   required: false,
 };
