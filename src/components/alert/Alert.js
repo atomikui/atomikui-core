@@ -3,14 +3,14 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Alert = ({
- align, classes, text, type, ...others 
+  align, classes, text, type, ...others
 }) => (
-  <div 
+  <div
     className={classnames('alert', classes, {
       [`alert--${type}`]: type,
       [`alert--${align}`]: align,
-    })} 
-    type={type} 
+    })}
+    type={type}
     {...others}>
     {text}
   </div>
