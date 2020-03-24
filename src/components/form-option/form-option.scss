@@ -1,0 +1,41 @@
+.form-option {
+ align-items: center;
+ display: flex;
+
+  &__icon {
+    align-items: center;
+    border: rem(1) solid $gray-400;
+    border-radius: rem(3);
+    display: flex;
+    height: rem(20);
+    justify-content: center;
+    margin-right: rem(7);
+    width: rem(20);
+  }
+
+  &--radio > .form-option__icon,
+  &--radio > .form-option__icon:after {
+    border-radius: 50%;
+  }
+
+  & > input {
+    left: rem(-10000);
+    position: absolute;
+  }
+
+  & > input:checked + .form-option__icon:after {
+   background: $blue-200; 
+   content: '';
+   display: block;
+   height: rem(12);
+   width: rem(12);
+  }
+
+  & > input:focus + .form-option__icon {
+    box-shadow: rem(0 0 0 3) $blue-100;
+  }
+
+  &.has-error > input:focus + .form-option__icon {
+    box-shadow: rem(0 0 0 3) lighten($red-100, 25%);
+  }
+}

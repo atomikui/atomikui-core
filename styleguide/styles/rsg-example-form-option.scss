@@ -1,0 +1,5 @@
+[data-preview="FormOption"] > * {
+  & > * + * {
+    margin-top: rem(8);
+  }
+}

@@ -9,7 +9,7 @@ const types = ['checkbox', 'radio'];
 
 const FormOption = ({
   classes,
-  defaultChecked,
+  checked,
   errorText,
   hasError,
   helpText,
@@ -28,16 +28,21 @@ const FormOption = ({
 
   return (
     <>
-      <Label htmlFor={uid} classes={classnames('fomr-option', classes, {})}>
+      <Label htmlFor={uid} classes={classnames('form-option', classes, {
+        'has-error': hasError,
+        'form-option--radio': type === 'radio',
+      })}>
         <input
           id={uid}
           type={fieldType}
           name={inputName}
-          defaultChecked={defaultChecked}
+          checked={checked}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           required
           {...others}
-        /> {label}
+        />
+        <span className="form-option__icon"></span>
+        {label}
       </Label>
       {(helpText || errorText) && (
         <div className="formfield__hints">
@@ -52,8 +57,8 @@ const FormOption = ({
 FormOption.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
-  /** Specifies and inputs default checked state */
-  defaultChecked: PropTypes.string,
+  /** Specifies and form option checked state */
+  checked: PropTypes.bool,
   /** Text to be displayed when there is an error */
   errorText: PropTypes.string,
   /** Specifies the error state */
@@ -74,7 +79,7 @@ FormOption.propTypes = {
 
 FormOption.defaultProps = {
   classes: '',
-  defaultChecked: '',
+  checked: false,
   errorText: '',
   hasError: false,
   helpText: '',
