@@ -21,7 +21,7 @@ Alert.propTypes = {
   align: PropTypes.oneOf(['', 'right', 'center']),
   /** Specifies custom component classes */
   classes: PropTypes.string,
-  /** Children to be displayed inside of the alert */
+  /** Alert content */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the type of alert */
   type: PropTypes.oneOf(['', 'info', 'warning', 'error', 'success']),
