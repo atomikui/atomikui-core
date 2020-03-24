@@ -4,15 +4,31 @@ import PropTypes from 'prop-types';
 
 const Stepper = ({ classes, steps, ...others }) => (
   <div className={classnames('stepper', classes, {})} {...others}>
-    {steps.map(({ label, isComplete, isActive }, i) => (
-      <div key={Math.random()} className={classnames('stepper__step', {
-        'is-complete': isComplete,
-        'is-active': isActive,
-      })}>
-        <div className="stepper__step__number" aria-label={`step ${i}`}>{!isComplete && i + 1}</div>
-        <div className="stepper__step__label">{label}</div>
-      </div>
-    ))}
+    {steps.map(({ label, isComplete, isActive }, i) => {
+      let status = '';
+
+      const step = i + 1;
+
+      if (isComplete) {
+        status = 'complete';
+      }
+
+      if (isActive) {
+        status = 'in progress';
+      }
+
+      return (
+        <div key={Math.random()} className={classnames('stepper__step', {
+          'is-complete': isComplete,
+          'is-active': isActive,
+        })}>
+          <div className="stepper__step__number" aria-label={`step ${step} ${status}`}>
+            {!isComplete && <span aria-hidden="true">{step}</span>}
+          </div>
+          <div className="stepper__step__label">{label}</div>
+        </div>
+      );
+    })}
   </div>
 );
 
