@@ -1,7 +1,8 @@
 import Alert from './components/alert';
 import Button from './components/button';
 import Dropdown from './components/dropdown';
-import FormField from './components/formfield';
+import FormField from './components/form-field';
+import FormOption from './components/form-option';
 import Hint from './components/hint';
 import Label from './components/label';
 import Modal from './components/modal';
@@ -14,6 +15,7 @@ export {
   Button,
   Dropdown,
   FormField,
+  FormOption,
   Hint,
   Label,
   Modal,

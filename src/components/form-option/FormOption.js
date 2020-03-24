@@ -5,35 +5,17 @@ import Hint from '../hint/Hint';
 import Label from '../label/Label';
 import { generateId } from '../../utilities/generateId';
 
-const types = [
-  'date',
-  'datetime-local',
-  'email',
-  'hidden',
-  'image',
-  'month',
-  'number',
-  'password',
-  'search',
-  'tel',
-  'text',
-  'textarea',
-  'time',
-  'url',
-  'week',
-];
+const types = ['checkbox', 'radio'];
 
-const FormField = ({
+const FormOption = ({
   classes,
-  defaultValue,
+  defaultChecked,
   errorText,
   hasError,
   helpText,
   id,
   label,
-  labelless,
   name,
-  placeholder,
   required,
   type,
   ...others
@@ -45,55 +27,33 @@ const FormField = ({
   const fieldType = !types.includes(type) ? 'text' : type;
 
   return (
-    <div className={classnames('formfield', classes, {
-      'has-error': hasError,
-    })}>
-      {!labelless && (
-        <div className="formfield__label">
-          <Label htmlFor={uid}>{label}</Label>
-        </div>
-      )}
-      {type === 'textarea'
-        ? (
-        <textarea
-          id={uid}
-          name={inputName}
-          className={classnames('formfield__textarea', classes, {})}
-          placeholder={placeholder}
-          defaultValue={defaultValue}
-          aria-describedby={`${inputHintId} ${inputErrorId}`}
-          required={required}
-          {...others}
-        />
-        )
-        : (
+    <>
+      <Label htmlFor={uid} classes={classnames('fomr-option', classes, {})}>
         <input
           id={uid}
-          name={inputName}
-          className={classnames('formfield__input', classes, {})}
           type={fieldType}
-          placeholder={placeholder}
-          defaultValue={defaultValue}
+          name={inputName}
+          defaultChecked={defaultChecked}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           required
           {...others}
-        />
-        )}
+        /> {label}
+      </Label>
       {(helpText || errorText) && (
         <div className="formfield__hints">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
           {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
         </div>
       )}
-    </div>
+    </>
   );
 };
 
-FormField.propTypes = {
+FormOption.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
-  /** Specifies and inputs default default value */
-  defaultValue: PropTypes.string,
+  /** Specifies and inputs default checked state */
+  defaultChecked: PropTypes.string,
   /** Text to be displayed when there is an error */
   errorText: PropTypes.string,
   /** Specifies the error state */
@@ -104,10 +64,6 @@ FormField.propTypes = {
   id: PropTypes.string,
   /** Specifies label text */
   label: PropTypes.string,
-  /** Hides label */
-  labelless: PropTypes.bool,
-  /** Specifies input placeholder text */
-  placeholder: PropTypes.string,
   /** Specifies input name attribute */
   name: PropTypes.string,
   /** Specifies if a field is required */
@@ -116,19 +72,17 @@ FormField.propTypes = {
   type: PropTypes.oneOf(types),
 };
 
-FormField.defaultProps = {
+FormOption.defaultProps = {
   classes: '',
-  defaultValue: '',
+  defaultChecked: '',
   errorText: '',
   hasError: false,
   helpText: '',
   id: null,
   label: '',
-  labelless: false,
   name: '',
-  placeholder: '',
   required: false,
-  type: 'text',
+  type: 'checkbox',
 };
 
-export default FormField;
+export default FormOption;
