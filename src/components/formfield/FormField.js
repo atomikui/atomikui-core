@@ -81,8 +81,8 @@ const FormField = ({
         )}
       {(helpText || errorText) && (
         <div className="formfield__hints">
-          {helpText && <Hint id={inputHintIdId} text={helpText} />}
-          {hasError && <Hint id={inputErrorId} text={errorText} type="error" />}
+          {helpText && <Hint id={inputHintIdId}>{helpText}</Hint>}
+      {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
         </div>
       )}
     </div>
