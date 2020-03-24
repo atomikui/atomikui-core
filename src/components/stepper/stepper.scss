@@ -46,6 +46,7 @@
     }
   
     .stepper__step__label {
+      display: none;
       font-size: rem(14);
     }
 
@@ -55,6 +56,12 @@
 
     &.is-active > .stepper__step__number {
       background: $blue-200;
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    .stepper__step__label {
+      display: block;
     }
   }
 }
