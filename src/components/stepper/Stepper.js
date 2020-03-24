@@ -9,10 +9,8 @@ const Stepper = ({ classes, steps, ...others }) => (
         'is-complete': isComplete,
         'is-active': isActive,
       })}>
-        <div className="stepper__step__number">{i + 1}</div>
-        <div className="stepper__step__label">
-          {label}
-        </div>
+        <div className="stepper__step__number" aria-label={`step ${i}`}>{!isComplete && i + 1}</div>
+        <div className="stepper__step__label">{label}</div>
       </div>
     ))}
   </div>
