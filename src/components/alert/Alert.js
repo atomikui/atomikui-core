@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Alert = ({
-  align, classes, text, type, ...others
+  align, classes, children, type, ...others
 }) => (
   <div
     className={classnames('alert', classes, {
@@ -12,7 +12,7 @@ const Alert = ({
     })}
     type={type}
     {...others}>
-    {text}
+    {children}
   </div>
 );
 
@@ -21,8 +21,8 @@ Alert.propTypes = {
   align: PropTypes.oneOf(['', 'right', 'center']),
   /** Specifies custom component classes */
   classes: PropTypes.string,
-  /** Specifies text to be displayed in the alert */
-  text: PropTypes.string,
+  /** Children to be displayed inside of the alert */
+  children: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
   /** Specifies the type of alert */
   type: PropTypes.oneOf(['', 'info', 'warning', 'error', 'success']),
 };
@@ -30,7 +30,7 @@ Alert.propTypes = {
 Alert.defaultProps = {
   align: '',
   classes: '',
-  type: '',
+  children: null,
   text: '',
 };
 
