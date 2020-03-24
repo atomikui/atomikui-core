@@ -22,7 +22,7 @@ Alert.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
   /** Children to be displayed inside of the alert */
-  children: PropTypes.oneOf([PropTypes.string, PropTypes.node]),
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the type of alert */
   type: PropTypes.oneOf(['', 'info', 'warning', 'error', 'success']),
 };
