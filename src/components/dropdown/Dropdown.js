@@ -83,7 +83,9 @@ Dropdown.propTypes = {
   name: PropTypes.string,
   /** Selectable options in the dropdown */
   options: PropTypes.arrayOf(PropTypes.shape({
+    /** Option text */
     text: PropTypes.string,
+    /** Option value */
     value: PropTypes.string,
   })),
   /** Specifies if a field is required */

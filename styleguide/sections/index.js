@@ -5,5 +5,5 @@ const informational = require('./informational');
 module.exports = [
   gettingStarted,
   controls,
-  informational
+  informational,
 ];

@@ -1,0 +1,46 @@
+.stepper {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::before {
+    background: $gray-200;
+    border-radius: rem(8);
+    content: '';
+    display: block;
+    height: rem(4);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: rem(14);
+  }
+
+  &__step {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+
+    .stepper__step__number {
+      align-items: center;
+      background: $blue-200;
+      border-radius: 50%;
+      color: $white;
+      display: flex;
+      height: rem(32);
+      justify-content: center;
+      margin-bottom: rem(4);
+      width: rem(32);
+    }
+  
+    .stepper__step__label {
+      font-size: rem(14);
+    }
+
+    &.is-complete > .stepper__step__number {
+      background: $green-100;
+    }
+  }
+}

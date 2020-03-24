@@ -5,7 +5,7 @@ module.exports = {
   sections: [
     {
       name: 'Installation',
-      content: './styleguide/docs/Installation.md'
-    }
-  ]
+      content: './styleguide/docs/Installation.md',
+    },
+  ],
 };

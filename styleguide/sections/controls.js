@@ -9,6 +9,6 @@ module.exports = {
     'src/components/dropdown/Dropdown.js',
     'src/components/formfield/FormField.js',
     'src/components/switch/Switch.js',
-    'src/components/switch-panel/SwitchPanel.js'
+    'src/components/switch-panel/SwitchPanel.js',
   ],
 };

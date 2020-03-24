@@ -20,16 +20,7 @@
     "sourceType": "module"
   },
   "plugins": [
-    "markdown",
     "react"
-  ],
-  "overrides": [
-    {
-      "files": [
-        "*.md"
-      ],
-      "processor": "markdown/markdown"
-    }
   ],
   "rules": {
     "no-unused-vars": 0,

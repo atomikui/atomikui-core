@@ -3,39 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
 
-const propTypes = {
-  /** Specifies custom component classes */
-  classes: PropTypes.string,
-  /** Child elements that will be rendered inside of the modal body */
-  children: PropTypes.node,
-  /** Closes the modal when the escape key is pressed */
-  closeOnEscape: PropTypes.bool,
-  /** Disables the overlay's clock event */
-  disableOverlayclick: PropTypes.bool,
-  /** Content to bre rendered inside of the modal footer */
-  footer: PropTypes.node,
-  /** Specifies if modal has an overlay */
-  hasOverlay: PropTypes.bool,
-  /** Displays the modal as a drawer that slides out from the left or right */
-  isDrawer: PropTypes.bool,
-  /** Toggles modal visibility state */
-  isOpen: PropTypes.bool,
-  /** Callback triggered on close */
-  onClose: PropTypes.func,
-};
-
-const defaultProps = {
-  classes: '',
-  closeOnEscape: true,
-  children: null,
-  disableOverlayclick: false,
-  footer: null,
-  hasOverlay: true,
-  isDrawer: false,
-  isOpen: false,
-  onClose() {},
-};
-
 const Modal = ({
   classes,
   children,
@@ -110,7 +77,37 @@ const Modal = ({
   );
 };
 
-Modal.propTypes = propTypes;
-Modal.defaultProps = defaultProps;
+Modal.propTypes = {
+  /** Specifies custom component classes */
+  classes: PropTypes.string,
+  /** Child elements that will be rendered inside of the modal body */
+  children: PropTypes.node,
+  /** Closes the modal when the escape key is pressed */
+  closeOnEscape: PropTypes.bool,
+  /** Disables the overlay's clock event */
+  disableOverlayclick: PropTypes.bool,
+  /** Content to bre rendered inside of the modal footer */
+  footer: PropTypes.node,
+  /** Specifies if modal has an overlay */
+  hasOverlay: PropTypes.bool,
+  /** Displays the modal as a drawer that slides out from the left or right */
+  isDrawer: PropTypes.bool,
+  /** Toggles modal visibility state */
+  isOpen: PropTypes.bool,
+  /** Callback triggered on close */
+  onClose: PropTypes.func,
+};
+
+Modal.defaultProps = {
+  classes: '',
+  closeOnEscape: true,
+  children: null,
+  disableOverlayclick: false,
+  footer: null,
+  hasOverlay: true,
+  isDrawer: false,
+  isOpen: false,
+  onClose() {},
+};
 
 export default Modal;

@@ -8,6 +8,7 @@ module.exports = {
     'src/components/alert/Alert.js',
     'src/components/hint/Hint.js',
     'src/components/label/Label.js',
-    'src/components/modal/Modal.js'
+    'src/components/modal/Modal.js',
+    'src/components/stepper/Stepper.js',
   ],
 };

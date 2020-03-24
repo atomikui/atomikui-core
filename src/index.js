@@ -1,12 +1,13 @@
-import Alert from './components/alert/Alert';
-import Button from './components/button/Button';
-import Dropdown from './components/dropdown/Dropdown';
-import FormField from './components/formfield/FormField';
-import Hint from './components/hint/Hint';
-import Label from './components/label/Label';
-import Modal from './components/modal/Modal';
-import Switch from './components/switch/Switch';
-import SwitchPanel from './components/switch-panel/SwitchPanel';
+import Alert from './components/alert';
+import Button from './components/button';
+import Dropdown from './components/dropdown';
+import FormField from './components/formfield';
+import Hint from './components/hint';
+import Label from './components/label';
+import Modal from './components/modal';
+import Stepper from './components/stepper';
+import Switch from './components/switch';
+import SwitchPanel from './components/switch-panel';
 
 export {
   Alert,
@@ -16,6 +17,7 @@ export {
   Hint,
   Label,
   Modal,
+  Stepper,
   Switch,
   SwitchPanel,
 };
