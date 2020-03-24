@@ -53,9 +53,9 @@ const Dropdown = ({
         </select>
       </div>
       {(helpText || errorText) && (
-        <div className="dropdown__hints">
-          {helpText && <Hint id={inputHintId} text={helpText} />}
-          {hasError && <Hint id={inputErrorId} text={errorText} type="error" />}
+        <div className="formfield__hints">
+          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+          {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
         </div>
       )}
     </div>

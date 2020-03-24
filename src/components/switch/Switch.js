@@ -46,8 +46,8 @@ const Switch = ({
       </div>
       {(helpText || errorText) && (
         <div className="formfield__hints">
-          {helpText && <Hint id={inputHintId} text={helpText} />}
-          {hasError && <Hint id={inputErrorId} text={errorText} type="error" />}
+          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+          {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
         </div>
       )}
     </>

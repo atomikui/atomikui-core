@@ -40,7 +40,7 @@ const FormField = ({
 }) => {
   const uid = id || generateId();
   const inputName = name || uid;
-  const inputHintIdId = `${inputName}_hint`;
+  const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;
   const fieldType = !types.includes(type) ? 'text' : type;
 
@@ -61,7 +61,7 @@ const FormField = ({
           className={classnames('formfield__textarea', classes, {})}
           placeholder={placeholder}
           defaultValue={defaultValue}
-          aria-describedby={`${inputHintIdId} ${inputErrorId}`}
+          aria-describedby={`${inputHintId} ${inputErrorId}`}
           required={required}
           {...others}
         />
@@ -74,15 +74,15 @@ const FormField = ({
           type={fieldType}
           placeholder={placeholder}
           defaultValue={defaultValue}
-          aria-describedby={`${inputHintIdId} ${inputErrorId}`}
+          aria-describedby={`${inputHintId} ${inputErrorId}`}
           required
           {...others}
         />
         )}
       {(helpText || errorText) && (
         <div className="formfield__hints">
-          {helpText && <Hint id={inputHintIdId}>{helpText}</Hint>}
-      {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
+          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+          {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
         </div>
       )}
     </div>
