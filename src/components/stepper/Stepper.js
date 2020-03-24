@@ -22,10 +22,12 @@ const Stepper = ({ classes, steps, ...others }) => (
           'is-complete': isComplete,
           'is-active': isActive,
         })}>
-          <div className="stepper__step__number" aria-label={`step ${step} ${status}`}>
-            {!isComplete && <span aria-hidden="true">{step}</span>}
+          <div className="stepper__step__number" aria-hidden="true">
+            {!isComplete && step}
           </div>
-          <div className="stepper__step__label">{label}</div>
+          <div className="stepper__step__label" aria-label={`step ${step} ${status} ${label}`}>
+            <span aria-hidden="true">{label}</span>
+          </div>
         </div>
       );
     })}
