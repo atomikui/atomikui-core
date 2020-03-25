@@ -1,36 +1,65 @@
 ### Text Field
 
 ```jsx
+import { useState } from 'react';
 import { FormField } from '@alaneicker/react-component-library';
 
-<FormField type="text" label="Search" />
+const [value, setValue] = useState('');
+
+<FormField
+  type="text" 
+  label="Search" 
+  value={value}
+  onChange={(e) => setValue(e.target.value)}
+/>
 ```
 
 ### Textarea
 
 ```jsx
+import { useState } from 'react';
 import { FormField } from '@alaneicker/react-component-library';
 
-<FormField type="textarea" label="Enter Your Comments" />
+const [value, setValue] = useState('');
+
+<FormField
+  type="textarea" 
+  label="Enter your comments" 
+  value={value}
+  onChange={(e) => setValue(e.target.value)}
+/>
 ```
 
 ### Help Text
 
 ```jsx
+import { useState } from 'react';
 import { FormField } from '@alaneicker/react-component-library';
 
-<FormField type="text" label="Phone Number" helpText="Expected format: (000) 000-0000" />
+const [value, setValue] = useState('');
+
+<FormField
+  type="text" 
+  label="Phone Number" 
+  value={value}
+  helpText="Expected format: (000) 000-0000"
+  onChange={(e) => setValue(e.target.value)}
+/>
 ```
 
 ### Error State
 
 ```jsx
+import { useState } from 'react';
 import { FormField } from '@alaneicker/react-component-library';
 
-<FormField 
+const [value, setValue] = useState('');
+
+<FormField
   type="text" 
-  label="Full Name" 
-  errorText="Please enter your full name"
-  hasError
+  label="Search" 
+  value={value}
+  hasError={!value}
+  errorText="This fields is required"
+  onChange={(e) => setValue(e.target.value)}
 />
-```

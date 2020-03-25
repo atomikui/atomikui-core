@@ -25,7 +25,6 @@ const types = [
 
 const FormField = ({
   classes,
-  defaultValue,
   errorText,
   hasError,
   helpText,
@@ -36,6 +35,7 @@ const FormField = ({
   placeholder,
   required,
   type,
+  value,
   ...others
 }) => {
   const uid = id || generateId();
@@ -60,7 +60,7 @@ const FormField = ({
           name={inputName}
           className={classnames('formfield__textarea', classes, {})}
           placeholder={placeholder}
-          defaultValue={defaultValue}
+          value={value}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           required={required}
           {...others}
@@ -73,7 +73,7 @@ const FormField = ({
           className={classnames('formfield__input', classes, {})}
           type={fieldType}
           placeholder={placeholder}
-          defaultValue={defaultValue}
+          value={value}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           required
           {...others}
@@ -92,8 +92,6 @@ const FormField = ({
 FormField.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
-  /** Specifies the inputs default default value */
-  defaultValue: PropTypes.string,
   /** Text to be displayed when there is an error */
   errorText: PropTypes.string,
   /** Specifies the error state */
@@ -114,11 +112,12 @@ FormField.propTypes = {
   required: PropTypes.bool,
   /** Specifies the type of input */
   type: PropTypes.oneOf(types),
+  /** Specifies the inputs value */
+  value: PropTypes.string,
 };
 
 FormField.defaultProps = {
   classes: '',
-  defaultValue: '',
   errorText: '',
   hasError: false,
   helpText: '',
@@ -129,6 +128,7 @@ FormField.defaultProps = {
   placeholder: '',
   required: false,
   type: 'text',
+  value: '',
 };
 
 export default FormField;

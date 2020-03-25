@@ -1,7 +1,7 @@
 import Alert from './components/alert';
 import Button from './components/button';
 import Dropdown from './components/dropdown';
-import FieldSet from './components/fieldset';
+import Fieldset from './components/fieldset';
 import FormField from './components/form-field';
 import FormOption from './components/form-option';
 import Hint from './components/hint';
@@ -15,7 +15,7 @@ export {
   Alert,
   Button,
   Dropdown,
-  FieldSet,
+  Fieldset,
   FormField,
   FormOption,
   Hint,
