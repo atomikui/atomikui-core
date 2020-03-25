@@ -5,8 +5,8 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: $gray-100;
-    border: 0;
+    background-color: $white;
+    border: rem(1) solid $gray-200;
     border-radius: rem($base-border-radius);
     font-family: inherit;
     font-size: inherit;
@@ -16,13 +16,17 @@
     width: 100%;
   
     &:focus {
-      box-shadow: rem(0 0 0 3) $blue-100;
+      box-shadow: $formfield-focus;
     }
+  }
+
+  &.has-error > &__input {
+    border-color: $red-100;
   }
 
   &.has-error > &__input:focus,
   &.has-error > &:focus {
-    box-shadow: rem(0 0 0 3) lighten($red-100, 25%);
+    box-shadow: $formfield-error-focus;
   }
 
   &__textarea {

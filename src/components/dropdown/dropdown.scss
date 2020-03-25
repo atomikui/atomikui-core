@@ -9,7 +9,8 @@
   }
 
   &__select {
-    background-color: $gray-100;
+    background-color: $white;
+    border: rem(1) solid $gray-200;
     border-radius: rem($base-border-radius);
     position: relative;
 
@@ -42,14 +43,17 @@
     width: 100%;
 
     &:focus {
-      box-shadow: rem(0 0 0 3) $blue-100;
+      box-shadow: $formfield-focus;
     }
   }
 
-  &.has-error &__select__menu,
+  &.has-error &__select {
+    border-color: $red-100;
+  }
+
   &.has-error &__select__menu {
     &:focus {
-      box-shadow: rem(0 0 0 3) lighten($red-100, 25%);
+      box-shadow: $formfield-error-focus;
     }
   }
 

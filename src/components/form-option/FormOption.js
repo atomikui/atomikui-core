@@ -16,6 +16,7 @@ const FormOption = ({
   id,
   label,
   name,
+  onChange,
   required,
   type,
   ...others
@@ -38,6 +39,7 @@ const FormOption = ({
           name={inputName}
           checked={checked}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
+          onChange={onChange}
           required
           {...others}
         />
@@ -71,6 +73,8 @@ FormOption.propTypes = {
   label: PropTypes.string,
   /** Specifies input name attribute */
   name: PropTypes.string,
+  /** OnChange callback */
+  onChange: PropTypes.func,
   /** Specifies if a field is required */
   required: PropTypes.bool,
   /** Specifies the type of input */
@@ -86,6 +90,7 @@ FormOption.defaultProps = {
   id: null,
   label: '',
   name: '',
+  onChange() {},
   required: false,
   type: 'checkbox',
 };

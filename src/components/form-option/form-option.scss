@@ -4,7 +4,8 @@
 
   &__icon {
     align-items: center;
-    border: rem(1) solid $gray-400;
+    background-color: $white;
+    border: rem(1) solid $gray-200;
     border-radius: rem(3);
     display: flex;
     height: rem(20);
@@ -32,10 +33,14 @@
   }
 
   & > input:focus + .form-option__icon {
-    box-shadow: rem(0 0 0 3) $blue-100;
+    box-shadow: $formfield-focus;
+  }
+
+  &.has-error > .form-option__icon {
+    border-color: $formfield-error-focus;
   }
 
   &.has-error > input:focus + .form-option__icon {
-    box-shadow: rem(0 0 0 3) lighten($red-100, 25%);
+    box-shadow: rem(0 0 0 3) lighten($red-100, 20%);
   }
 }

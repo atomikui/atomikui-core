@@ -4,7 +4,13 @@
 import { useState } from 'react';
 import { FormOption } from '@alaneicker/react-component-library';
 
-<FormOption label="I agree to the terms & conditions" />
+const [checked, setChecked] = useState(false);
+
+<FormOption 
+  label="I agree to the terms & conditions" 
+  checked={checked}
+  onChange={() => setChecked(!checked)}
+/>
 ```
 
 ### Radio Button
