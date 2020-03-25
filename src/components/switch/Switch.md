@@ -10,7 +10,7 @@ const handleChange = checked => {
   setIsChecked(!isChecked);
 };
 
-<Switch label="Send me notifications" onChange={handleChange} defaultChecked={isChecked} />
+<Switch label="Send me notifications" onChange={handleChange} checked={isChecked} />
 ```
 
 ### Stacked Layout
@@ -25,7 +25,7 @@ const handleChange = checked => {
   setIsChecked(!isChecked);
 };
 
-<Switch layout="stacked" label="Send me notifications" onChange={handleChange} defaultChecked={isChecked} />
+<Switch layout="stacked" label="Send me notifications" onChange={handleChange} checked={isChecked} />
 ```
 
 ### Error State
@@ -43,8 +43,8 @@ const handleChange = checked => {
 <Switch 
   label="Send me notifications" 
   onChange={handleChange} 
-  defaultChecked={isChecked}
+  checked={isChecked}
   errorText="This field is required"
-  hasError
+  hasError={!isChecked}
   required />
 ```

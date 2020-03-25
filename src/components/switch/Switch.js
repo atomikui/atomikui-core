@@ -7,7 +7,7 @@ import { generateId } from '../../utilities/generateId';
 
 const Switch = ({
   classes,
-  defaultChecked,
+  checked,
   errorText,
   hasError,
   helpText,
@@ -26,7 +26,7 @@ const Switch = ({
   return (
     <>
       <div htmlFor={uid} className={classnames('switch', classes, {
-        'is-checked': defaultChecked,
+        'is-checked': checked,
         'is-stacked': layout === 'stacked',
         'has-error': hasError,
       })}>
@@ -35,7 +35,7 @@ const Switch = ({
           name={inputName}
           className="switch__input"
           type="checkbox"
-          defaultChecked={defaultChecked}
+          checked={checked}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           onChange={() => onChange()} />
@@ -57,8 +57,8 @@ const Switch = ({
 Switch.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
-  /** Specifies and inputs default default checked state */
-  defaultChecked: PropTypes.bool,
+  /** Specifies and inputs default checked state */
+  checked: PropTypes.bool,
   /** Text to be displayed when there is an error */
   errorText: PropTypes.string,
   /** Specifies the error state */
@@ -81,7 +81,7 @@ Switch.propTypes = {
 
 Switch.defaultProps = {
   classes: '',
-  defaultChecked: false,
+  checked: false,
   errorText: '',
   hasError: false,
   helpText: '',
