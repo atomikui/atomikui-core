@@ -17,6 +17,7 @@ const Dropdown = ({
   name,
   options,
   required,
+  value,
   ...others
 }) => {
   const uid = id || generateId();
@@ -41,6 +42,7 @@ const Dropdown = ({
           defaultValue={defaultValue}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
+          value={value}
           {...others}
         >
           {
@@ -48,6 +50,7 @@ const Dropdown = ({
               text: 'Select One',
               value: '',
             }, ...options]
+              // eslint-disable-next-line no-shadow
               .map(({ text, value }) => <option key={Math.random()} value={value}>{text}</option>)
           }
         </select>
@@ -90,6 +93,8 @@ Dropdown.propTypes = {
   })),
   /** Specifies if a field is required */
   required: PropTypes.bool,
+  /** Dropdown value */
+  value: PropTypes.string,
 };
 
 Dropdown.defaultProps = {
@@ -104,6 +109,7 @@ Dropdown.defaultProps = {
   name: '',
   options: [],
   required: false,
+  value: '',
 };
 
 export default Dropdown;

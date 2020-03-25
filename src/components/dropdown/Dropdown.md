@@ -1,11 +1,16 @@
 ### Default State
 
 ```jsx
+import { useState } from 'react';
 import { Dropdown } from '@alaneicker/react-component-library';
+
+const [value, setValue] = useState('');
 
 <Dropdown 
   label="Select a Color"
   errorText="Please select a color"
+  onChange={(e) => setValue(e.target.value)}
+  value={value}
   options={[
     { text: 'red', value: 'red' },
     { text: 'orange', value: 'orange' },
@@ -20,13 +25,18 @@ import { Dropdown } from '@alaneicker/react-component-library';
 ### Error State
 
 ```jsx
+import { useState } from 'react';
 import { Dropdown } from '@alaneicker/react-component-library';
+
+const [value, setValue] = useState('');
 
 <Dropdown 
   label="Select a Color"
   errorText="Please select a color"
-  hasError={true}
+  hasError={!value}
   required
+  onChange={(e) => setValue(e.target.value)}
+  value={value}
   options={[
     { text: 'red', value: 'red' },
     { text: 'orange', value: 'orange' },
