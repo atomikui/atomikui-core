@@ -25,7 +25,7 @@ const FormOption = ({
   const inputName = name || uid;
   const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;
-  const fieldType = !types.includes(type) ? 'text' : type;
+  const fieldType = !types.includes(type) ? 'checkbox' : type;
 
   return (
     <>
