@@ -3,7 +3,8 @@
   display: flex;
 
   &__input {
-    display: none;
+    left: rem(-10000);
+    position: absolute;
   }
 
   &__label {
@@ -36,6 +37,10 @@
     }
   }
 
+  &__input:focus ~ &__toggle {
+    box-shadow: $formfield-focus;
+  }
+
   &.is-stacked {
     display: block;
 
@@ -54,9 +59,11 @@
     }
   }
 
-  &.has-error {
-    .switch__toggle {
-      background: $red-100;
-    }
+  &.has-error > .switch__toggle {
+    background: $red-100;
+  }
+
+  &.has-error > &__input:focus ~ &__toggle {
+    box-shadow: $formfield-error-focus;
   }
 }
