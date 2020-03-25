@@ -19,10 +19,30 @@ const [checked, setChecked] = useState(false);
 import { useState } from 'react';
 import { FormOption } from '@alaneicker/react-component-library';
 
+const [formOptions, setFormOptions] = useState([
+  { label: 'Option 1', name: 'option', checked: true },
+  { label: 'Option 2', name: 'option', checked: false },
+  { label: 'Option 3', name: 'option', checked: false }
+]);
+
+const onChange = (index) => {
+  const updatesFormOprions = formOptions.map((formOption, i) => {
+    return { ...formOption, checked: i === index ? true : false }
+  });
+
+  setFormOptions(updatesFormOprions);
+};
+
 <>
-  <FormOption type="radio" label="Option 1" name="option" checked={true} />
-  <FormOption type="radio" label="Option 2" name="option" />
-  <FormOption type="radio" label="Option 3" name="option" />
+  {formOptions.map(({ label, name, checked }, i) => (
+    <FormOption 
+      type="radio" 
+      label={label} 
+      name={name} 
+      checked={checked} 
+      onChange={() => onChange(i)}
+    />
+  ))}
 </>
 ```
 

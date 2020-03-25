@@ -37,10 +37,10 @@
   }
 
   &.has-error > .form-option__icon {
-    border-color: $formfield-error-focus;
+    border-color: $red-100;
   }
 
   &.has-error > input:focus + .form-option__icon {
-    box-shadow: rem(0 0 0 3) lighten($red-100, 20%);
+    box-shadow: $formfield-error-focus;
   }
 }
