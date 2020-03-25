@@ -1,9 +1,9 @@
 const gettingStarted = require('./getting-started');
-const controls = require('./controls');
+const form = require('./form');
 const informational = require('./informational');
 
 module.exports = [
   gettingStarted,
-  controls,
+  form,
   informational,
 ];
