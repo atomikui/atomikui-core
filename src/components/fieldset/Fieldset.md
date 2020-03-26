@@ -5,16 +5,13 @@ import { Fieldset } from '@alaneicker/react-component-library';
 const [fields, setFields] = useState([
   {
     component: 'formfield',
-    colSpan: '2',
     props: {
-      errorText: 'first name is required',
+      errorText: 'First name is required',
       label: 'First Name',
-      hasError: true,
     }
   },
   {
     component: 'formfield',
-    colSpan: '2',
     props: {
       errorText: 'Last name is required',
       label: 'Last Name',
@@ -23,37 +20,51 @@ const [fields, setFields] = useState([
   },
   {
     component: 'formfield',
-    colSpan: '2',
     props: {
-      errorText: 'Comments is required',
-      label: 'Comments',
-      type: 'textarea',
+      errorText: 'Middle initial is required',
+      label: 'Middle Initial',
       hasError: false,
     }
   },
   {
     component: 'dropdown',
-    colSpan: '3',
     props: {
-      errorText: 'State is required',
-      label: 'State',
+      errorText: 'Gender is required',
+      label: 'Gender',
       hasError: false,
       options: [
-        { text: 'IL', value: 'IL' }
+        { text: 'Male', value: 'male' },
+        { text: 'Female', value: 'female' }
       ]
     }
   },
   {
-    component: 'formoption',
-    colSpan: '12',
+    component: 'formfield',
     props: {
-      errorText: 'Please agree with the terms',
-      label: 'I agree with the terms and conditions',
-      type: 'checkbox',
-      hasError: true,
+      errorText: 'Email address is required',
+      label: 'Email Address',
+      type: 'text',
+      hasError: false,
     }
-  }
+  },
+  {
+    component: 'formfield',
+    props: {
+      errorText: 'Phone number is required',
+      label: 'Phone Number',
+      type: 'text',
+      hasError: false,
+    }
+  },
+  {
+    component: 'button',
+    props: {
+      children: 'Next',
+      type: 'button',
+      variant: 'primary',
+    }
+  },
 ]);
 
-<Fieldset fields={fields} />
+<Fieldset legend="Personal Information" fields={fields} />
 ```
