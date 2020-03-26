@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { generateId } from '../../utilities/generateId';
+import Hint from '../hint';
 
 const RangeSlider = ({
   classes,
@@ -17,36 +19,58 @@ const RangeSlider = ({
   required,
   step,
   type,
+  ticks,
   value,
-  values,
   ...others
 }) => {
   const [rangeValue, setRangeValue] = useState(value);
 
-  const handleChange = (e) => {
-    setRangeValue(e.target.value);
+  const uid = id || generateId();
+  const inputName = name || uid;
+  const inputHintId = `${inputName}_hint`;
+  const inputErrorId = `${inputName}_error`;
+
+  const handleChange = (val) => {
+    setRangeValue(val);
   };
 
-  const numTicks = max / min;
-
   return (
-    <div className={classnames('range-slider', classes, {
-      'has-error': hasError,
-    })}>
-      <input
-        id={id}
-        aria-valuemin={min}
-        aria-valuemax={max}
-        aria-valuetext={`$${rangeValue}`}
-        min={min}
-        max={max}
-        step={step}
-        value={rangeValue}
-        type="range"
-        onChange={(e) => handleChange(e)}
-        {...others}
-      />
-    </div>
+    <>
+      <div className={classnames('range-slider', classes, {
+        'has-error': hasError,
+      })}>
+        <input
+          id={uid}
+          aria-valuemin={min}
+          aria-valuemax={max}
+          aria-valuetext={`$${rangeValue}`}
+          min={min}
+          max={max}
+          step={step}
+          value={rangeValue}
+          type="range"
+          onChange={(e) => handleChange(e.target.value)}
+          {...others}
+        />
+        <div className="range-slider__ticks">
+          {ticks.map(({ text, val }) => (
+            <div className="range-slider__ticks__tick" onClick={(e) => handleChange(val)}>
+              <div className={classnames('range-slider__ticks__label', {
+                'is-selected': val === rangeValue,
+              })}>
+                {text}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      {(helpText || errorText) && (
+        <div className="formfield__hints">
+          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+          {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
+        </div>
+      )}
+    </>
   );
 };
 
@@ -75,10 +99,13 @@ RangeSlider.propTypes = {
   required: PropTypes.bool,
   /** Step numerical increment */
   step: PropTypes.string,
+  /** Ticks for each step */
+  ticks: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string,
+    val: PropTypes.string,
+  })),
   /** Specifies the inputs value */
   value: PropTypes.string,
-  /** Values for each step */
-  values: PropTypes.arrayOf(PropTypes.string),
 };
 
 RangeSlider.defaultProps = {
@@ -94,8 +121,8 @@ RangeSlider.defaultProps = {
   name: '',
   required: false,
   step: '',
-  value: '',
   values: [],
+  value: '',
 };
 
 export default RangeSlider;

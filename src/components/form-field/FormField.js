@@ -14,6 +14,7 @@ const types = [
   'month',
   'number',
   'password',
+  'range',
   'search',
   'tel',
   'text',
