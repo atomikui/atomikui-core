@@ -4,7 +4,7 @@ import { RangeSlider } from '@alaneicker/react-component-library';
 <RangeSlider 
   label="Select Amount"
   errorText="This field is required"
-  hasError={true}
+  hasError={false}
   min="100"
   max="1000"
   step="100" 

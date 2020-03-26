@@ -30,10 +30,6 @@ const RangeSlider = ({
   const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;
 
-  const handleChange = (val) => {
-    setRangeValue(val);
-  };
-
   return (
     <>
       <div className={classnames('range-slider', classes, {
@@ -49,12 +45,12 @@ const RangeSlider = ({
           step={step}
           value={rangeValue}
           type="range"
-          onChange={(e) => handleChange(e.target.value)}
+          onChange={(e) => setRangeValue(e.target.value)}
           {...others}
         />
-        <div className="range-slider__ticks">
+        <div className="range-slider__ticks" aria-hidden="true">
           {ticks.map(({ text, val }) => (
-            <div className="range-slider__ticks__tick" onClick={(e) => handleChange(val)}>
+            <div className="range-slider__ticks__tick" onClick={(e) => setRangeValue(val)}>
               <div className={classnames('range-slider__ticks__label', {
                 'is-selected': val === rangeValue,
               })}>
