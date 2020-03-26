@@ -7,7 +7,7 @@ const Stepper = ({ classes, steps, ...others }) => (
     {steps.map(({
       label, isComplete, href, isActive,
     }, i) => {
-      const StepNumber = isComplete ? 'a' : 'div';
+      const StepNumber = isComplete && href ? 'a' : 'div';
       return (
         <div key={Math.random()} className={classnames('stepper__step', {
           'is-complete': isComplete,
