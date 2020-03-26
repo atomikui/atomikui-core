@@ -1,0 +1,132 @@
+.range-slider {
+  display: flex;
+  height: rem(55);
+  position: relative;
+  width: 100%;
+  
+  input[type='range'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: $blue-000;
+    border: 0;
+    border-radius: rem(5);
+    height: rem(5);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: calc(100% - 1px);
+    z-index: 3;
+
+    &:focus {
+      border-color: lighten($blue-200, 35%);
+      outline: 0;
+      
+      &::-webkit-slider-thumb {
+        background-color: darken($blue-200, 10%);
+      }
+      
+      &::-moz-range-thumb {
+        background-color: darken($blue-200, 10%);
+      }
+      
+      &::-ms-thumb {
+        background-color: darken($blue-200, 10%);
+      }
+    }
+  }
+
+  ::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: $white;
+    border: rem(13) solid $blue-200;
+    border-radius: 50%;
+    box-shadow: rem(0 0 0 2) $white;
+    cursor: pointer;
+    height: rem(36);
+    width: rem(36);
+  }
+
+  ::-moz-range-thumb {
+    appearance: none;
+    -moz-appearance: none;
+    background-color: $white;
+    border: rem(13) solid $blue-200;
+    border-radius: 50%;
+    box-shadow: rem(0 0 0 2) $white;
+    cursor: pointer;
+    height: rem(16);
+    width: rem(16);
+  }
+
+  ::-ms-thumb {
+    background-color: $white;
+    border: rem(2) solid $blue-200;
+    border-radius: 50%;
+    cursor: pointer;
+    height: rem(8);
+    width: rem(8);
+  }
+
+  ::-webkit-runnable-track {
+    -webkit-appearance: none;
+    width: 0;
+  }
+
+  ::-moz-range-track {
+    -moz-appearance: none;
+    width: 0;
+  }
+
+  ::-ms-track {
+    background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  ::-ms-fill-upper {
+    background: transparent;
+  }
+
+  ::-ms-fill-lower {
+    background: $blue-200;
+    border-color: $blue-200;
+    border-width: rem(20 0);
+    height: rem(20);
+    margin-left: rem(-2);
+  }
+
+  ::-ms-tooltip {
+    display: none;
+  }
+}
+
+.range-slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  margin: 0 9px;
+  position: absolute;
+  right: 0;
+  top: rem(-5); 
+  z-index: 2;
+  
+  &__tick {
+    background: $blue-000;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-flex;
+    height: rem(15);
+    justify-content: center;
+    position: relative;
+    width: rem(15);
+  }
+  
+  &__label {
+    font-size: rem(14);
+    padding-top: rem(28);
+    
+    &.is-selected {
+      font-weight: 800;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import FormOption from './components/form-option';
 import Hint from './components/hint';
 import Label from './components/label';
 import Modal from './components/modal';
+import RangeSlider from './components/range-slider';
 import Stepper from './components/stepper';
 import Switch from './components/switch';
 import SwitchPanel from './components/switch-panel';
@@ -19,6 +20,7 @@ export {
   Hint,
   Label,
   Modal,
+  RangeSlider,
   Stepper,
   Switch,
   SwitchPanel,
