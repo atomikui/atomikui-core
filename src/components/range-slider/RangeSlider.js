@@ -9,6 +9,7 @@ const RangeSlider = ({
   errorText,
   hasError,
   helpText,
+  hideLabelsOnMobile,
   id,
   label,
   labelless,
@@ -48,17 +49,20 @@ const RangeSlider = ({
           onChange={(e) => setRangeValue(e.target.value)}
           {...others}
         />
-        <div className="range-slider__ticks" aria-hidden="true">
-          {ticks.map(({ text, val }) => (
-            <div className="range-slider__ticks__tick" onClick={(e) => setRangeValue(val)}>
-              <div className={classnames('range-slider__ticks__label', {
-                'is-selected': val === rangeValue,
-              })}>
-                {text}
+        {ticks && (
+          <div className="range-slider__ticks" aria-hidden="true">
+            {ticks.map(({ text, val }) => (
+              <div className="range-slider__ticks__tick" onClick={(e) => setRangeValue(val)}>
+                <div className={classnames('range-slider__ticks__label', {
+                  'is-selected': val === rangeValue,
+                  'is-hidden-on-mobile': hideLabelsOnMobile,
+                })}>
+                  {text}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
       {(helpText || errorText) && (
         <div className="formfield__hints">
@@ -79,6 +83,8 @@ RangeSlider.propTypes = {
   hasError: PropTypes.bool,
   /** Assistive text to be displayed with form field */
   helpText: PropTypes.string,
+  /** hides slider tick labels on mobile */
+  hideLabelsOnMobile: PropTypes.bool,
   /** A unique id */
   id: PropTypes.string,
   /** Specifies label text */
@@ -109,6 +115,7 @@ RangeSlider.defaultProps = {
   errorText: '',
   hasError: false,
   helpText: '',
+  hideLabelsOnMobile: false,
   id: null,
   label: '',
   labelless: false,

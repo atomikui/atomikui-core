@@ -1,3 +1,5 @@
+### Basic Slider
+
 ```jsx
 import { RangeSlider } from '@alaneicker/react-component-library';
 
@@ -5,6 +7,23 @@ import { RangeSlider } from '@alaneicker/react-component-library';
   label="Select Amount"
   errorText="This field is required"
   hasError={false}
+  min="100"
+  max="1000"
+  step="100" 
+  value="400"
+/>
+```
+
+### Slider with ticks and labels
+
+```jsx
+import { RangeSlider } from '@alaneicker/react-component-library';
+
+<RangeSlider 
+  label="Select Amount"
+  errorText="This field is required"
+  hasError={false}
+  hideLabelsOnMobile={true}
   min="100"
   max="1000"
   step="100" 
