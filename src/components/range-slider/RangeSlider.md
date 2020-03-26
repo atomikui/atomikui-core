@@ -1,4 +1,4 @@
-### Basic Slider
+### Basic Range Slider
 
 ```jsx
 import { RangeSlider } from '@alaneicker/react-component-library';
@@ -14,7 +14,7 @@ import { RangeSlider } from '@alaneicker/react-component-library';
 />
 ```
 
-### Slider with ticks and labels
+### Range Slider With Ticks and Labels
 
 ```jsx
 import { RangeSlider } from '@alaneicker/react-component-library';
