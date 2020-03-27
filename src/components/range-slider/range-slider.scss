@@ -137,8 +137,10 @@
 
   &.is-disabled {
     input[type='range'],
+    
     .range-slider__ticks__tick {
       background: $gray-100;
+      cursor: default;
     }
 
     .range-slider__ticks__label {

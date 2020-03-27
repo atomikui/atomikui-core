@@ -17,6 +17,7 @@ const RangeSlider = ({
   max,
   min,
   name,
+  onChange,
   required,
   step,
   type,
@@ -30,6 +31,11 @@ const RangeSlider = ({
   const inputName = name || uid;
   const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;
+
+  const handleChange = (updateValue) => {
+    setRangeValue(updateValue);
+    onChange(updateValue);
+  };
 
   return (
     <>
@@ -49,7 +55,7 @@ const RangeSlider = ({
           step={step}
           value={rangeValue}
           type="range"
-          onChange={(e) => setRangeValue(e.target.value)}
+          onChange={(e) => handleChange(e.target.value)}
           required={required}
           disabled={disabled}
           {...others}
@@ -57,7 +63,11 @@ const RangeSlider = ({
         {ticks && (
           <div className="range-slider__ticks" aria-hidden="true">
             {ticks.map(({ text, val }) => (
-              <div className="range-slider__ticks__tick" onClick={(e) => setRangeValue(val)}>
+              <div
+                key={Math.random()}
+                className="range-slider__ticks__tick"
+                {...(!disabled && { onClick: () => handleChange(val) })}
+              >
                 <div className={classnames('range-slider__ticks__label', {
                   'is-selected': val === rangeValue,
                   'is-hidden-on-mobile': hideLabelsOnMobile,
@@ -102,6 +112,8 @@ RangeSlider.propTypes = {
   min: PropTypes.string,
   /** Specifies input name attribute */
   name: PropTypes.string,
+  /** onChange callback */
+  onChange: PropTypes.func,
   /** Specifies if a field is required */
   required: PropTypes.bool,
   /** Step numerical increment */
@@ -117,7 +129,7 @@ RangeSlider.propTypes = {
 
 RangeSlider.defaultProps = {
   classes: '',
-  disabled: '',
+  disabled: false,
   errorText: '',
   hasError: false,
   helpText: '',
@@ -127,6 +139,7 @@ RangeSlider.defaultProps = {
   max: '',
   min: '',
   name: '',
+  onChange() {},
   required: false,
   step: '',
   value: '',
