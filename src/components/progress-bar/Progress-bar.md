@@ -54,7 +54,6 @@ const variants = [
       key={Math.random()} 
       variant={variant} 
       now={now} 
-      label={`${now}%`} 
       animated={animated}
     />
   ))}
