@@ -1,0 +1,19 @@
+.progress {
+  background: $gray-100;
+  border-radius: rem(3);
+  display: flex;
+  height: rem(20);
+  overflow: hidden;
+
+  &__bar {
+    align-items: center;
+    background: $blue-200;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__label {
+    color: $white;
+    font-size: rem(12);
+  }
+}

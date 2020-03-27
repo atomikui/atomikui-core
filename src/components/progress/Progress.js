@@ -12,8 +12,9 @@ const Progress = ({
       aria-valuenow={now}
       aria-valuemin="0"
       aria-valuemax="100"
+      style={{ width: `${now}%` }}
     >
-      {label}
+      <span className="progress__label">{label}</span>
     </div>
   </div>
 );
