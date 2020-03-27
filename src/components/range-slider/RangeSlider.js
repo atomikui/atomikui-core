@@ -13,11 +13,9 @@ const RangeSlider = ({
   hideLabelsOnMobile,
   id,
   label,
-  labelless,
   max,
   min,
   name,
-  placeholder,
   required,
   step,
   type,
@@ -43,12 +41,14 @@ const RangeSlider = ({
           aria-valuemin={min}
           aria-valuemax={max}
           aria-valuetext={`$${rangeValue}`}
+          aria-describedby={`${inputErrorId} ${inputHintId}`}
           min={min}
           max={max}
           step={step}
           value={rangeValue}
           type="range"
           onChange={(e) => setRangeValue(e.target.value)}
+          required={required}
           {...others}
         />
         {ticks && (
@@ -91,8 +91,6 @@ RangeSlider.propTypes = {
   id: PropTypes.string,
   /** Specifies label text */
   label: PropTypes.string,
-  /** Hides label */
-  labelless: PropTypes.bool,
   /** Maximum range value */
   max: PropTypes.string,
   /** Minimum range value */
@@ -120,13 +118,11 @@ RangeSlider.defaultProps = {
   hideLabelsOnMobile: false,
   id: null,
   label: '',
-  labelless: false,
   max: '',
   min: '',
   name: '',
   required: false,
   step: '',
-  values: [],
   value: '',
 };
 
