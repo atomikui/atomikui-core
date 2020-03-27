@@ -66,4 +66,15 @@
   &.has-error > &__input:focus ~ &__toggle {
     box-shadow: $formfield-error-focus;
   }
+
+  &.is-disabled > &__toggle,
+  &.is-checked.is-disabled > &__toggle {
+    background: $gray-100;
+    cursor: default;
+
+    &:after {
+      background: $gray-200;
+      box-shadow: none;
+    }
+  }
 }

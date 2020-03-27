@@ -8,6 +8,7 @@ import { generateId } from '../../utilities/generateId';
 const Switch = ({
   classes,
   checked,
+  disabled,
   errorText,
   hasError,
   helpText,
@@ -27,6 +28,7 @@ const Switch = ({
     <>
       <div htmlFor={uid} className={classnames('switch', classes, {
         'is-checked': checked,
+        'is-disabled': disabled,
         'is-stacked': layout === 'stacked',
         'has-error': hasError,
       })}>
@@ -38,11 +40,11 @@ const Switch = ({
           checked={checked}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
-          onChange={() => onChange()} />
+          onChange={onChange} />
         <div className="switch__label">
           <Label htmlFor={uid}>{label}</Label>
         </div>
-        <div className="switch__toggle" onClick={() => onChange()}></div>
+        <div className="switch__toggle" {...(!disabled && { onClick: onChange })}></div>
       </div>
       {(helpText || errorText) && (
         <div className="formfield__hints">
@@ -59,6 +61,8 @@ Switch.propTypes = {
   classes: PropTypes.string,
   /** Specifies and inputs default checked state */
   checked: PropTypes.bool,
+  /** Specifies the switch disabled state */
+  disabled: PropTypes.bool,
   /** Text to be displayed when there is an error */
   errorText: PropTypes.string,
   /** Specifies the error state */
@@ -82,6 +86,7 @@ Switch.propTypes = {
 Switch.defaultProps = {
   classes: '',
   checked: false,
+  disabled: false,
   errorText: '',
   hasError: false,
   helpText: '',

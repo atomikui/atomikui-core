@@ -48,3 +48,15 @@ const handleChange = checked => {
   hasError={!isChecked}
   required />
 ```
+
+### Disabled State
+
+```jsx
+import { Switch } from '@alaneicker/react-component-library';
+
+<Switch 
+  label="Send me notifications" 
+  checked={false}
+  disabled={true}
+  required />
+```

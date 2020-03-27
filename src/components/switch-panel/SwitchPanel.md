@@ -5,33 +5,35 @@ import { SwitchPanel, Switch } from '@alaneicker/react-component-library';
 const [switches, setSwitches] = useState([
   {
     label: 'Send me notifications',
-    defaultChecked: true,
+    checked: false,
   },
   {
     label: 'Subscribe me to the newsletter',
-    defaultChecked: false,
+    checked: true,
+    disabled: true,
   },
   {
     label: 'Set as default account',
-    defaultChecked: false,
+    checked: false,
   }
 ]);
 
 const handleChange = index => {
   setSwitches(
     switches.map((item, i) => {
-      return i === index ? { ...item, defaultChecked: !item.defaultChecked } : item;
+      return i === index ? { ...item, checked: !item.checked } : item;
     })
   );
 };
 
 <SwitchPanel>
-  {switches.map(({ label, defaultChecked }, i) => (
+  {switches.map(({ label, checked, disabled }, i) => (
     <Switch 
       key={Math.random()}
       label={label} 
       onChange={() => handleChange(i)} 
-      defaultChecked={defaultChecked}
+      checked={checked}
+      disabled={disabled}
     />
   ))}
 </SwitchPanel>
