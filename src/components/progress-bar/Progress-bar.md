@@ -1,3 +1,5 @@
+### Basic Progress Bar
+
 ```jsx
 import { ProgressBar } from '@alaneicker/react-component-library';
 
@@ -8,7 +10,7 @@ const now = 60;
 </>
 ```
 
-### Variants
+### Theme Variants
 
 ```jsx
 import { ProgressBar } from '@alaneicker/react-component-library';
