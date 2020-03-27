@@ -9,6 +9,7 @@ const [checked, setChecked] = useState(false);
 <FormOption 
   label="I agree to the terms & conditions" 
   checked={checked}
+  name="checkbox1"
   onChange={() => setChecked(!checked)}
 />
 ```
@@ -20,9 +21,9 @@ import { useState } from 'react';
 import { FormOption } from '@alaneicker/react-component-library';
 
 const [formOptions, setFormOptions] = useState([
-  { label: 'Option 1', name: 'option', checked: true },
-  { label: 'Option 2', name: 'option', checked: false },
-  { label: 'Option 3', name: 'option', checked: false }
+  { label: 'Option 1', name: 'radio1', checked: true },
+  { label: 'Option 2', name: 'radio1', checked: false },
+  { label: 'Option 3', name: 'radio1', checked: false }
 ]);
 
 const onChange = (index) => {
@@ -52,8 +53,63 @@ const onChange = (index) => {
 import { useState } from 'react';
 import { FormOption } from '@alaneicker/react-component-library';
 
+const [checkBoxChecked, setCheckboxChecked] = useState(true);
+const [radioChecked, setRadioChecked] = useState(true);
+
 <>
-  <FormOption label="I agree to the terms & conditions" errorText="Please agree to the terms" hasError />
-  <FormOption type="radio" label="Option 1" name="option" errorText="Select an option" hasError />
+  <FormOption 
+    label="I agree to the terms & conditions" 
+    name="checkbox2" 
+    errorText="Please agree to the terms" 
+    hasError={checkBoxChecked}
+    checked={!checkBoxChecked}
+    onChange={() => setCheckboxChecked(!checkBoxChecked)}
+  />
+  <FormOption 
+    type="radio" 
+    label="Option 1" 
+    name="radio2" 
+    errorText="Select an option" 
+    hasError={radioChecked}
+    checked={!radioChecked}
+    onChange={() => setRadioChecked(false)}
+  />
+</>
+```
+
+### Disabled State
+
+```jsx
+import { FormOption } from '@alaneicker/react-component-library';
+
+<>
+  <FormOption 
+    label="I agree to the terms & conditions" 
+    errorText="Please agree to the terms" 
+    name="checkbox3"
+    disabled 
+  />
+  <FormOption 
+    type="radio" 
+    label="Option 1" 
+    name="radio3" 
+    errorText="Select an option" 
+    disabled
+  />
+  <FormOption 
+    label="I agree to the terms & conditions" 
+    errorText="Please agree to the terms" 
+    name="checkbox4"
+    disabled 
+    checked 
+  />
+  <FormOption 
+    type="radio" 
+    label="Option 1" 
+    name="radio4" 
+    errorText="Select an option" 
+    disabled 
+    checked 
+  />
 </>
 ```

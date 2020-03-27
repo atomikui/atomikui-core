@@ -1,46 +1,55 @@
 .form-option {
- align-items: center;
- display: flex;
+  align-items: center;
+  display: flex;
+ 
+   &__icon {
+     align-items: center;
+     background-color: $white;
+     border: rem(1) solid $gray-200;
+     border-radius: rem(3);
+     display: flex;
+     height: rem(20);
+     justify-content: center;
+     margin-right: rem(7);
+     width: rem(20);
+   }
+ 
+   &--radio > .form-option__icon,
+   &--radio > .form-option__icon:after {
+     border-radius: 50%;
+   }
+ 
+   & > input {
+     left: rem(-10000);
+     position: absolute;
+   }
+ 
+   & > input:checked + .form-option__icon:after {
+    background: $blue-200; 
+    content: '';
+    display: block;
+    height: rem(12);
+    width: rem(12);
+   }
+ 
+   & > input:focus + .form-option__icon {
+     box-shadow: $formfield-focus;
+   }
+ 
+   &.has-error > .form-option__icon {
+     border-color: $red-100;
+   }
+ 
+   &.has-error > input:focus + .form-option__icon {
+     box-shadow: $formfield-error-focus;
+   }
+ 
+   &.is-disabled > input + .form-option__icon {
+    background: $gray-100;
+    border: 0;
+   }
 
-  &__icon {
-    align-items: center;
-    background-color: $white;
-    border: rem(1) solid $gray-200;
-    border-radius: rem(3);
-    display: flex;
-    height: rem(20);
-    justify-content: center;
-    margin-right: rem(7);
-    width: rem(20);
-  }
-
-  &--radio > .form-option__icon,
-  &--radio > .form-option__icon:after {
-    border-radius: 50%;
-  }
-
-  & > input {
-    left: rem(-10000);
-    position: absolute;
-  }
-
-  & > input:checked + .form-option__icon:after {
-   background: $blue-200; 
-   content: '';
-   display: block;
-   height: rem(12);
-   width: rem(12);
-  }
-
-  & > input:focus + .form-option__icon {
-    box-shadow: $formfield-focus;
-  }
-
-  &.has-error > .form-option__icon {
-    border-color: $red-100;
-  }
-
-  &.has-error > input:focus + .form-option__icon {
-    box-shadow: $formfield-error-focus;
-  }
-}
+   &.is-disabled > input:checked + .form-option__icon:after {
+    background: $gray-200;
+   }
+ }
