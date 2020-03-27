@@ -27,3 +27,21 @@ const now4 = 80;
   <ProgressBar variant="error" now={now4} label={`${now4}%`} />
 </>
 ```
+
+### animated Progress Bar
+
+```jsx
+import { ProgressBar } from '@alaneicker/react-component-library';
+
+const now = 60;
+const now2 = 40;
+const now3 = 50;
+const now4 = 80;
+
+<>
+  <ProgressBar variant="success" now={now} label={`${now}%`} animated />
+  <ProgressBar variant="warning" now={now2} label={`${now2}%`} animated />
+  <ProgressBar variant="info" now={now3} label={`${now3}%`} animated />
+  <ProgressBar variant="error" now={now4} label={`${now4}%`} animated />
+</>
+```

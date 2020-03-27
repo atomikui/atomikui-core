@@ -3,10 +3,16 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const ProgressBar = ({
-  classes, label, now, variant, ...others
+  animated,
+  classes,
+  label,
+  now,
+  variant,
+  ...others
 }) => (
   <div className={classnames('progress-bar', classes, {
     [`progress-bar--${variant}`]: variant,
+    'progress-bar--animated': animated,
   })} {...others}>
     <div
       className="progress-bar__bar"
@@ -22,6 +28,8 @@ const ProgressBar = ({
 );
 
 ProgressBar.propTypes = {
+  /** Animages the progress bar */
+  animated: PropTypes.bool,
   /** Specifies custom component classes */
   classes: PropTypes.string,
   /** Label to be displayed with progress */
@@ -33,6 +41,7 @@ ProgressBar.propTypes = {
 };
 
 ProgressBar.defaultProps = {
+  animated: false,
   classes: '',
   label: '',
   now: 0,

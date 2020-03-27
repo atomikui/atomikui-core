@@ -7,7 +7,7 @@
 
   &__bar {
     align-items: center;
-    background: $blue-300;
+    background-color: $blue-300;
     display: flex;
     justify-content: center;
   }
@@ -31,5 +31,29 @@
 
   &--info > &__bar {
     background: $blue-200;
+  }
+
+  &--animated > &__bar {
+    animation: move 2s linear infinite;
+    background-image: linear-gradient(
+      -45deg, 
+      rgba(255, 255, 255, .2) 25%, 
+      transparent 25%, 
+      transparent 50%, 
+      rgba(255, 255, 255, .2) 50%, 
+      rgba(255, 255, 255, .2) 75%, 
+      transparent 75%, 
+      transparent
+    );
+    background-size: 25px 25px;
+  }
+
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 25px 25px;
+    }
   }
 }
