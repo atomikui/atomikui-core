@@ -3,5 +3,25 @@ import { ProgressBar } from '@alaneicker/react-component-library';
 
 const now = 60;
 
-<ProgressBar now={now} label={`${now}%`} />
+<>
+  <ProgressBar now={now} label={`${now}%`} />
+</>
+```
+
+### Variants
+
+```jsx
+import { ProgressBar } from '@alaneicker/react-component-library';
+
+const now = 60;
+const now2 = 40;
+const now3 = 50;
+const now4 = 80;
+
+<>
+  <ProgressBar variant="success" now={now} label={`${now}%`} />
+  <ProgressBar variant="warning" now={now2} label={`${now2}%`} />
+  <ProgressBar variant="info" now={now3} label={`${now3}%`} />
+  <ProgressBar variant="error" now={now4} label={`${now4}%`} />
+</>
 ```

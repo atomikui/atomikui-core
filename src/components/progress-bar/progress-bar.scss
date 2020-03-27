@@ -7,7 +7,7 @@
 
   &__bar {
     align-items: center;
-    background: $blue-200;
+    background: $blue-300;
     display: flex;
     justify-content: center;
   }
@@ -15,5 +15,21 @@
   &__label {
     color: $white;
     font-size: rem(12);
+  }
+
+  &--error > &__bar {
+    background: $red-100;
+  }
+
+  &--warning > &__bar {
+    background: $orange-100;
+  }
+
+  &--success > &__bar {
+    background: $green-100;
+  }
+
+  &--info > &__bar {
+    background: $blue-200;
   }
 }
