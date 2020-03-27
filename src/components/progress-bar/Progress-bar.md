@@ -15,16 +15,23 @@ const now = 60;
 ```jsx
 import { ProgressBar } from '@alaneicker/react-component-library';
 
-const now = 60;
-const now2 = 40;
-const now3 = 50;
-const now4 = 80;
+const variants = [
+  { now: 60, variant: 'success' },
+  { now: 40, variant: 'warning' },
+  { now: 50, variant: 'info' },
+  { now: 80, variant: 'error' },
+];
 
 <>
-  <ProgressBar variant="success" now={now} label={`${now}%`} />
-  <ProgressBar variant="warning" now={now2} label={`${now2}%`} />
-  <ProgressBar variant="info" now={now3} label={`${now3}%`} />
-  <ProgressBar variant="error" now={now4} label={`${now4}%`} />
+  {variants.map(({ now, variant, animated }) => (
+    <ProgressBar 
+      key={Math.random()} 
+      variant={variant} 
+      now={now} 
+      label={`${now}%`} 
+      animated={animated}
+    />
+  ))}
 </>
 ```
 
@@ -33,15 +40,23 @@ const now4 = 80;
 ```jsx
 import { ProgressBar } from '@alaneicker/react-component-library';
 
-const now = 60;
-const now2 = 40;
-const now3 = 50;
-const now4 = 80;
+const variants = [
+  { now: 70, variant: '', animated: true },
+  { now: 60, variant: 'success', animated: true },
+  { now: 40, variant: 'warning', animated: true },
+  { now: 50, variant: 'info', animated: true },
+  { now: 80, variant: 'error', animated: true },
+];
 
 <>
-  <ProgressBar variant="success" now={now} label={`${now}%`} animated />
-  <ProgressBar variant="warning" now={now2} label={`${now2}%`} animated />
-  <ProgressBar variant="info" now={now3} label={`${now3}%`} animated />
-  <ProgressBar variant="error" now={now4} label={`${now4}%`} animated />
+  {variants.map(({ now, variant, animated }) => (
+    <ProgressBar 
+      key={Math.random()} 
+      variant={variant} 
+      now={now} 
+      label={`${now}%`} 
+      animated={animated}
+    />
+  ))}
 </>
 ```
