@@ -7,6 +7,7 @@ import Label from '../label';
 
 const RangeSlider = ({
   classes,
+  disabled,
   errorText,
   hasError,
   helpText,
@@ -35,6 +36,7 @@ const RangeSlider = ({
       {label && <Label>{label}</Label>}
       <div className={classnames('range-slider', classes, {
         'has-error': hasError,
+        'is-disabled': disabled,
       })}>
         <input
           id={uid}
@@ -49,6 +51,7 @@ const RangeSlider = ({
           type="range"
           onChange={(e) => setRangeValue(e.target.value)}
           required={required}
+          disabled={disabled}
           {...others}
         />
         {ticks && (
@@ -79,6 +82,8 @@ const RangeSlider = ({
 RangeSlider.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
+  /** Specifies range slider disabled state */
+  disabled: PropTypes.bool,
   /** Text to be displayed when there is an error */
   errorText: PropTypes.string,
   /** Specifies the error state */
@@ -112,6 +117,7 @@ RangeSlider.propTypes = {
 
 RangeSlider.defaultProps = {
   classes: '',
+  disabled: '',
   errorText: '',
   hasError: false,
   helpText: '',

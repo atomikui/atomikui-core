@@ -48,7 +48,7 @@ const [value, setValue] = useState('');
 />
 ```
 
-### Disabled
+### Disabled State
 
 ```jsx
 import { useState } from 'react';

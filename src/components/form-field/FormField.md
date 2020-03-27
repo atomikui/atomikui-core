@@ -65,7 +65,7 @@ const [value, setValue] = useState('');
 />
 ```
 
-### Read Only
+### Read Only State
 
 ```jsx
 import { useState } from 'react';
@@ -79,7 +79,7 @@ import { FormField } from '@alaneicker/react-component-library';
 />
 ```
 
-### Disabled
+### Disabled State
 
 ```jsx
 import { useState } from 'react';

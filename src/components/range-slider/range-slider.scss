@@ -135,6 +135,29 @@
     }
   }
 
+  &.is-disabled {
+    input[type='range'],
+    .range-slider__ticks__tick {
+      background: $gray-100;
+    }
+
+    .range-slider__ticks__label {
+      color: $gray-200;
+    }
+
+    ::-webkit-slider-thumb {
+      border-color: $gray-200;
+    }
+
+    ::-moz-range-thumb {
+      border-color: $gray-200;
+    }
+
+    ::-ms-thumb {
+      border-color: $gray-200;
+    }
+  }
+
   @media(min-width: $breakpoint-small) {
     &__ticks {
       .range-slider__ticks__label {
