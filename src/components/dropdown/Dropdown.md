@@ -38,12 +38,12 @@ const [value, setValue] = useState('');
   onChange={(e) => setValue(e.target.value)}
   value={value}
   options={[
-    { text: 'red', value: 'Red' },
-    { text: 'orange', value: 'Orange' },
-    { text: 'yellow', value: 'Yellow' },
-    { text: 'green', value: 'Green' },
-    { text: 'blue', value: 'Blue' },
-    { text: 'purple', value: 'Purple' }
+    { text: 'Red', value: 'Red' },
+    { text: 'Orange', value: 'Orange' },
+    { text: 'Yellow', value: 'Yellow' },
+    { text: 'Green', value: 'Green' },
+    { text: 'Blue', value: 'Blue' },
+    { text: 'Purple', value: 'Purple' }
   ]}
 />
 ```
@@ -61,12 +61,12 @@ import { Dropdown } from '@alaneicker/react-component-library';
   value="orange"
   disabled
   options={[
-    { text: 'red', value: 'Red' },
-    { text: 'orange', value: 'Orange' },
-    { text: 'yellow', value: 'Yellow' },
-    { text: 'green', value: 'Green' },
-    { text: 'blue', value: 'Blue' },
-    { text: 'purple', value: 'Purple' }
+    { text: 'Red', value: 'Red' },
+    { text: 'Orange', value: 'Orange' },
+    { text: 'Yellow', value: 'Yellow' },
+    { text: 'Green', value: 'Green' },
+    { text: 'Blue', value: 'Blue' },
+    { text: 'Purple', value: 'Purple' }
   ]}
 />
 ```

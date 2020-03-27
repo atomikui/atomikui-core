@@ -15,6 +15,7 @@ const Dropdown = ({
   label,
   labelless,
   name,
+  onChange,
   options,
   required,
   value,
@@ -44,6 +45,7 @@ const Dropdown = ({
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           value={value}
           disabled={disabled}
+          onChange={onChange}
           {...others}
         >
           {
@@ -85,6 +87,8 @@ Dropdown.propTypes = {
   labelless: PropTypes.bool,
   /** Specifies input name attribute */
   name: PropTypes.string,
+  /** onChange callback */
+  onChange: PropTypes.func,
   /** Selectable options in the dropdown */
   options: PropTypes.arrayOf(PropTypes.shape({
     /** Option text */
@@ -108,6 +112,7 @@ Dropdown.defaultProps = {
   label: '',
   labelless: false,
   name: '',
+  onChange() {},
   options: [],
   required: false,
   value: '',
