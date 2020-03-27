@@ -78,6 +78,7 @@ $input-border: 1px solid $gray-400;
 
 $formfield-focus: rem(0 0 0 3) $blue-100;
 $formfield-error-focus: rem(0 0 0 3) lighten($red-100, 20%);
+$formfield-warning-focus: rem(0 0 0 3) lighten($orange-100, 20%);
 
 $formfield-sizes: (
   sm: 50,
