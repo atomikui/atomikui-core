@@ -3,29 +3,31 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Stepper = ({ classes, steps, ...others }) => (
-  <div className={classnames('stepper', classes, {})} {...others}>
-    {steps.map(({
-      label, isComplete, href, isActive,
-    }, i) => {
-      const StepNumber = isComplete && href ? 'a' : 'div';
-      return (
-        <div key={Math.random()} className={classnames('stepper__step', {
-          'is-complete': isComplete,
-          'is-active': isActive,
-        })}>
-          <StepNumber
-            className="stepper__step__number"
-            {...(isComplete && href && { href })}
-          >
-            {!isComplete && i + 1}
-          </StepNumber>
-          <div className="stepper__step__label">
-            <span aria-hidden="true">{label}</span>
-          </div>
-        </div>
-      );
-    })}
-  </div>
+  <nav>
+    <ul className={classnames('stepper', classes, {})} {...others}>
+      {steps.map(({
+        label, isComplete, href, isActive,
+      }, i) => {
+        const StepNumber = isComplete && href ? 'a' : 'div';
+        return (
+          <li key={Math.random()} className={classnames('stepper__step', {
+            'is-complete': isComplete,
+            'is-active': isActive,
+          })}>
+            <StepNumber
+              className="stepper__step__number"
+              {...(isComplete && href && { href })}
+            >
+              {!isComplete && i + 1}
+            </StepNumber>
+            <div className="stepper__step__label">
+              <span aria-hidden="true">{label}</span>
+            </div>
+          </li>
+        );
+      })}
+    </ul>
+  </nav>
 );
 
 Stepper.propTypes = {
