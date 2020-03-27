@@ -1,0 +1,5 @@
+[data-preview="ProgressBar"] > * {
+  & > * + * {
+    margin-top: rem(8);
+  }
+}
