@@ -28,7 +28,7 @@ const now4 = 80;
 </>
 ```
 
-### animated Progress Bar
+### Animated Progress Bar
 
 ```jsx
 import { ProgressBar } from '@alaneicker/react-component-library';
