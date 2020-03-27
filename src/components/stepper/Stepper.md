@@ -1,3 +1,5 @@
+Steppers convey progress through numbered steps.
+
 ```jsx
 import { Stepper } from '@alaneicker/react-component-library';
 
