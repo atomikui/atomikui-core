@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { generateId } from '../../utilities/generateId';
 import Hint from '../hint';
+import Label from '../label';
 
 const RangeSlider = ({
   classes,
@@ -33,6 +34,7 @@ const RangeSlider = ({
 
   return (
     <>
+      {label && <Label>{label}</Label>}
       <div className={classnames('range-slider', classes, {
         'has-error': hasError,
       })}>
