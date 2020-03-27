@@ -7,7 +7,7 @@ a.btn {
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  font-size: inherit;
+  font-size: rem(14);
   font-weight: $font-medium;
   min-height: rem($input-height);
   outline: 0;
