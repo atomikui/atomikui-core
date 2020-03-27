@@ -26,6 +26,7 @@ const types = [
 
 const FormField = ({
   classes,
+  disabled,
   errorText,
   hasError,
   helpText,
@@ -34,6 +35,7 @@ const FormField = ({
   labelless,
   name,
   placeholder,
+  readOnly,
   required,
   type,
   value,
@@ -64,6 +66,8 @@ const FormField = ({
           value={value}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           required={required}
+          readOnly={readOnly}
+          disabled={disabled}
           {...others}
         />
         )
@@ -76,6 +80,8 @@ const FormField = ({
           placeholder={placeholder}
           value={value}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
+          readOnly={readOnly}
+          disabled={disabled}
           required
           {...others}
         />
@@ -93,6 +99,8 @@ const FormField = ({
 FormField.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
+  /** Disables a form field */
+  disabled: PropTypes.bool,
   /** Text to be displayed when there is an error */
   errorText: PropTypes.string,
   /** Specifies the error state */
@@ -109,6 +117,8 @@ FormField.propTypes = {
   placeholder: PropTypes.string,
   /** Specifies input name attribute */
   name: PropTypes.string,
+  /** Makes a form field read only */
+  readOnly: PropTypes.bool,
   /** Specifies if a field is required */
   required: PropTypes.bool,
   /** Specifies the type of input */
@@ -119,6 +129,7 @@ FormField.propTypes = {
 
 FormField.defaultProps = {
   classes: '',
+  disabled: false,
   errorText: '',
   hasError: false,
   helpText: '',
@@ -127,6 +138,7 @@ FormField.defaultProps = {
   labelless: false,
   name: '',
   placeholder: '',
+  readOnly: false,
   required: false,
   type: 'text',
   value: '',

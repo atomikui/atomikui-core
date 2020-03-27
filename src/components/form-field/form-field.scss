@@ -18,6 +18,17 @@
     &:focus {
       box-shadow: $formfield-focus;
     }
+
+    &:disabled {
+      background: $gray-000;
+      border: 0;
+      color: $gray-300;
+    }
+
+    &:read-only {
+      border: 0;
+      padding: 0;
+    }
   }
 
   &.has-error > &__input {

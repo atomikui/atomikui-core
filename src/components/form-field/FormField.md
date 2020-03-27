@@ -63,3 +63,32 @@ const [value, setValue] = useState('');
   errorText="This fields is required"
   onChange={(e) => setValue(e.target.value)}
 />
+```
+
+### Read Only
+
+```jsx
+import { useState } from 'react';
+import { FormField } from '@alaneicker/react-component-library';
+
+<FormField
+  type="text" 
+  label="Search" 
+  value="This field is read only"
+  readOnly
+/>
+```
+
+### Disabled
+
+```jsx
+import { useState } from 'react';
+import { FormField } from '@alaneicker/react-component-library';
+
+<FormField
+  type="text" 
+  label="Search" 
+  value="This field is disabled"
+  disabled
+/>
+```
