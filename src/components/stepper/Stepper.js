@@ -10,10 +10,13 @@ const Stepper = ({ classes, steps, ...others }) => (
       }, i) => {
         const StepNumber = isComplete && href ? 'a' : 'div';
         return (
-          <li key={Math.random()} className={classnames('stepper__step', {
-            'is-complete': isComplete,
-            'is-active': isActive,
-          })}>
+          <li
+            key={Math.random()}
+            aria-current={isActive}
+            className={classnames('stepper__step', {
+              'is-complete': isComplete,
+              'is-active': isActive,
+            })}>
             <StepNumber
               className="stepper__step__number"
               {...(isComplete && href && { href })}
