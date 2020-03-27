@@ -6,7 +6,7 @@ import FormOption from './components/form-option';
 import Hint from './components/hint';
 import Label from './components/label';
 import Modal from './components/modal';
-import ProgressBar from './components/progress-bar';
+import Progress from './components/progress';
 import RangeSlider from './components/range-slider';
 import Stepper from './components/stepper';
 import Switch from './components/switch';
@@ -21,7 +21,7 @@ export {
   Hint,
   Label,
   Modal,
-  ProgressBar,
+  Progress,
   RangeSlider,
   Stepper,
   Switch,
