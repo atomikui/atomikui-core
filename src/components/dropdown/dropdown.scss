@@ -8,6 +8,18 @@
     margin-top: rem(3);
   }
 
+  &.is-disabled {
+
+    .dropdown__select {
+      background: $gray-000;
+      border: 0;
+    }
+
+    .dropdown__select:after {
+      background-color: $gray-200;
+    }
+  }
+
   &__select {
     background-color: $white;
     border: rem(1) solid $gray-200;
@@ -44,6 +56,10 @@
 
     &:focus {
       box-shadow: $formfield-focus;
+    }
+
+    &:disabled {
+      color: $gray-300;
     }
   }
 

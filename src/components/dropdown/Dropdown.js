@@ -7,7 +7,7 @@ import { generateId } from '../../utilities/generateId';
 
 const Dropdown = ({
   classes,
-  defaultValue,
+  disabled,
   errorText,
   hasError,
   helpText,
@@ -28,6 +28,7 @@ const Dropdown = ({
   return (
     <div className={classnames('dropdown', classes, {
       'has-error': hasError,
+      'is-disabled': disabled,
     })} {...others}>
       {!labelless && (
         <div className="dropdown__label">
@@ -39,10 +40,10 @@ const Dropdown = ({
           id={uid}
           name={inputName}
           className={classnames('dropdown__select__menu', classes, {})}
-          defaultValue={defaultValue}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           value={value}
+          disabled={disabled}
           {...others}
         >
           {
@@ -68,8 +69,8 @@ const Dropdown = ({
 Dropdown.propTypes = {
   /** Specifies custom component classes */
   classes: PropTypes.string,
-  /** Specifies and inputs default value */
-  defaultValue: PropTypes.string,
+  /** Disables a form field */
+  disabled: PropTypes.bool,
   /** Text to be displayed when there is an error */
   errorText: PropTypes.string,
   /** Specifies the error state */
@@ -99,7 +100,7 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   classes: '',
-  defaultValue: '',
+  disabled: false,
   errorText: '',
   hasError: false,
   helpText: '',

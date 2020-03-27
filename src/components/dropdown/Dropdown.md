@@ -12,12 +12,12 @@ const [value, setValue] = useState('');
   onChange={(e) => setValue(e.target.value)}
   value={value}
   options={[
-    { text: 'red', value: 'red' },
-    { text: 'orange', value: 'orange' },
-    { text: 'yellow', value: 'yellow' },
-    { text: 'green', value: 'green' },
-    { text: 'blue', value: 'blue' },
-    { text: 'purple', value: 'purple' }
+    { text: 'red', value: 'Red' },
+    { text: 'orange', value: 'Orange' },
+    { text: 'yellow', value: 'Yellow' },
+    { text: 'green', value: 'Green' },
+    { text: 'blue', value: 'Blue' },
+    { text: 'purple', value: 'Purple' }
   ]}
 />
 ```
@@ -38,12 +38,35 @@ const [value, setValue] = useState('');
   onChange={(e) => setValue(e.target.value)}
   value={value}
   options={[
-    { text: 'red', value: 'red' },
-    { text: 'orange', value: 'orange' },
-    { text: 'yellow', value: 'yellow' },
-    { text: 'green', value: 'green' },
-    { text: 'blue', value: 'blue' },
-    { text: 'purple', value: 'purple' }
+    { text: 'red', value: 'Red' },
+    { text: 'orange', value: 'Orange' },
+    { text: 'yellow', value: 'Yellow' },
+    { text: 'green', value: 'Green' },
+    { text: 'blue', value: 'Blue' },
+    { text: 'purple', value: 'Purple' }
+  ]}
+/>
+```
+
+### Disabled
+
+```jsx
+import { useState } from 'react';
+import { Dropdown } from '@alaneicker/react-component-library';
+
+<Dropdown 
+  label="Select a Color"
+  errorText="Please select a color"
+  required
+  value="orange"
+  disabled
+  options={[
+    { text: 'red', value: 'Red' },
+    { text: 'orange', value: 'Orange' },
+    { text: 'yellow', value: 'Yellow' },
+    { text: 'green', value: 'Green' },
+    { text: 'blue', value: 'Blue' },
+    { text: 'purple', value: 'Purple' }
   ]}
 />
 ```
