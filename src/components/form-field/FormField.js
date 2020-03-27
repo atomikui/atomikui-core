@@ -34,6 +34,7 @@ const FormField = ({
   label,
   labelless,
   name,
+  onChange,
   placeholder,
   readOnly,
   required,
@@ -68,6 +69,7 @@ const FormField = ({
           required={required}
           readOnly={readOnly}
           disabled={disabled}
+          onChange={onChange}
           {...others}
         />
         )
@@ -82,6 +84,7 @@ const FormField = ({
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           readOnly={readOnly}
           disabled={disabled}
+          onChange={onChange}
           required
           {...others}
         />
@@ -113,6 +116,8 @@ FormField.propTypes = {
   label: PropTypes.string,
   /** Hides label */
   labelless: PropTypes.bool,
+  /** onChange callback */
+  onChange: PropTypes.func,
   /** Specifies input placeholder text */
   placeholder: PropTypes.string,
   /** Specifies input name attribute */
@@ -137,6 +142,7 @@ FormField.defaultProps = {
   label: '',
   labelless: false,
   name: '',
+  onChange() {},
   placeholder: '',
   readOnly: false,
   required: false,
