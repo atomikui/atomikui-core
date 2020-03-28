@@ -10,7 +10,11 @@ describe('<Alert />', () => {
   let alert;
 
   beforeEach(() => {
-    alert = shallow(<Alert><span>This is an alert</span></Alert>);
+    alert = shallow(
+      <Alert>
+        <span>This is an alert</span>
+      </Alert>,
+    );
   });
 
   it('Should render without errors', () => {
