@@ -3,9 +3,14 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Link from '../link';
 
-const Stepper = ({ classes, steps, ...others }) => (
+const Stepper = ({ classes, inline, steps, ...others }) => (
   <nav>
-    <ul className={classnames('stepper', classes, {})} {...others}>
+    <ul
+      className={classnames('stepper', classes, {
+        'stepper--inline': inline,
+      })}
+      {...others}
+    >
       {steps.map(({ label, isComplete, href, isActive }, i) => {
         const StepNumber = isComplete && href ? Link : 'div';
         return (
