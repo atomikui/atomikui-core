@@ -53,6 +53,7 @@ import { RangeSlider } from '@alaneicker/react-component-library';
 <RangeSlider 
   label="Select Amount"
   disabled={true}
+  hideLabelsOnMobile={true}
   min="100"
   max="1000"
   step="100" 
