@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import Link from '../link';
 
 const Stepper = ({ classes, steps, ...others }) => (
   <nav>
@@ -8,7 +9,7 @@ const Stepper = ({ classes, steps, ...others }) => (
       {steps.map(({
         label, isComplete, href, isActive,
       }, i) => {
-        const StepNumber = isComplete && href ? 'a' : 'div';
+        const StepNumber = isComplete && href ? Link : 'div';
         return (
           <li
             key={Math.random()}
