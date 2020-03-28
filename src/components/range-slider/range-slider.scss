@@ -3,7 +3,7 @@
   margin: rem(18 0 42);
   position: relative;
   width: 100%;
-  
+
   input[type='range'] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -20,15 +20,15 @@
     &:focus {
       border-color: lighten($blue-200, 35%);
       outline: 0;
-      
+
       &::-webkit-slider-thumb {
         background-color: darken($blue-200, 10%);
       }
-      
+
       &::-moz-range-thumb {
         background-color: darken($blue-200, 10%);
       }
-      
+
       &::-ms-thumb {
         background-color: darken($blue-200, 10%);
       }
@@ -106,9 +106,9 @@
     margin: 0 9px;
     position: absolute;
     right: 0;
-    top: rem(-5); 
+    top: rem(-5);
     z-index: 2;
-    
+
     .range-slider__ticks__tick {
       background: $blue-000;
       border-radius: 50%;
@@ -119,11 +119,11 @@
       position: relative;
       width: rem(15);
     }
-    
+
     .range-slider__ticks__label {
       font-size: rem(14);
       padding-top: rem(30);
-      
+
       &.is-selected {
         color: $blue-200;
         font-weight: $font-semibold;
@@ -137,7 +137,6 @@
 
   &.is-disabled {
     input[type='range'],
-    
     .range-slider__ticks__tick {
       background: $gray-100;
       cursor: default;
@@ -160,7 +159,7 @@
     }
   }
 
-  @media(min-width: $breakpoint-small) {
+  @media (min-width: $breakpoint-small) {
     &__ticks {
       .range-slider__ticks__label {
         &.is-hidden-on-mobile {

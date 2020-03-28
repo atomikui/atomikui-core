@@ -1,5 +1,4 @@
 .formfield {
-
   &__input,
   &__textarea {
     -webkit-appearance: none;
@@ -14,7 +13,7 @@
     outline: 0;
     padding: rem(0 8);
     width: 100%;
-  
+
     &:focus {
       box-shadow: $formfield-focus;
     }
@@ -54,7 +53,7 @@
   }
 
   @each $name, $breakpoint in $breakpoints {
-    @media(min-width: $breakpoint) {
+    @media (min-width: $breakpoint) {
       @each $size in $formfield-sizes {
         &--#{$size}\@#{$name} {
           width: rem($size);

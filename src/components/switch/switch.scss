@@ -18,13 +18,13 @@
     display: block;
     height: rem($switch-height);
     position: relative;
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
     width: rem(60);
-    
+
     &:after {
       background: $white;
       border-radius: 50%;
-      box-shadow: rem(-1 1 3) rgba(0,0,0,0.35);
+      box-shadow: rem(-1 1 3) rgba(0, 0, 0, 0.35);
       content: '';
       display: block;
       height: rem($switch-height - 10);
@@ -32,7 +32,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       width: rem($switch-height - 10);
     }
   }
