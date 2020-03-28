@@ -33,7 +33,7 @@ describe('<Button />', () => {
     expect(button.find('span').text()).toBe('Submit');
   });
 
-  it('Should render theme based on `varian prop`', () => {
+  it('Should render theme based on `variant prop`', () => {
     expect(button.find('.btn').hasClass('btn--primary')).toBe(true);
   });
 
