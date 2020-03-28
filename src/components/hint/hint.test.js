@@ -11,7 +11,7 @@ describe('<Hint />', () => {
 
   beforeEach(() => {
     hint = shallow(
-      <Hint type="error">
+      <Hint type="error" classes="hint--custon-class">
         <span>This is a hint</span>
       </Hint>,
     );
@@ -28,5 +28,9 @@ describe('<Hint />', () => {
 
   it('Should render theme based on `type` prop', () => {
     expect(hint.find('.hint').hasClass('hint--error')).toBe(true);
+  });
+
+  it('Should render with a custom class', () => {
+    expect(hint.find('.hint').hasClass('hint--custon-class')).toBe(true);
   });
 });
