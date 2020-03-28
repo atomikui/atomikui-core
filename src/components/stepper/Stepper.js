@@ -41,6 +41,8 @@ const Stepper = ({ classes, inline, steps, ...others }) => (
 Stepper.propTypes = {
   /** Specifies custom component classes. */
   classes: PropTypes.string,
+  /** Makes a stepper and its labels inline */
+  inline: PropTypes.bool,
   /** Progress bar steps. */
   steps: PropTypes.arrayOf(
     PropTypes.shape({
@@ -56,6 +58,7 @@ Stepper.propTypes = {
 
 Stepper.defaultProps = {
   classes: '',
+  inline: false,
   steps: [],
 };
 
