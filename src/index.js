@@ -5,6 +5,7 @@ import FormField from './components/form-field';
 import FormOption from './components/form-option';
 import Hint from './components/hint';
 import Label from './components/label';
+import Link from './components/link';
 import Modal from './components/modal';
 import ProgressBar from './components/progress-bar';
 import RangeSlider from './components/range-slider';
@@ -20,6 +21,7 @@ export {
   FormOption,
   Hint,
   Label,
+  Link,
   Modal,
   ProgressBar,
   RangeSlider,

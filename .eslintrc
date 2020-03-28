@@ -24,6 +24,12 @@
   ],
   "rules": {
     "no-unused-vars": 0,
+    "max-len": [
+      "warn",
+      {
+        "ignoreComments": true
+      }
+    ],
     "object-property-newline": [
       "error",
       {
