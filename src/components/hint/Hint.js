@@ -25,7 +25,7 @@ Hint.propTypes = {
 Hint.defaultProps = {
   classes: '',
   children: null,
-  text: '',
+  type: '',
 };
 
 export default Hint;
