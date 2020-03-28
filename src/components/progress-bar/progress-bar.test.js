@@ -17,6 +17,7 @@ describe('<ProgressBar />', () => {
         variant="info"
         now={now}
         label={`${now}%`}
+        animated
       />,
     );
   });
@@ -27,6 +28,10 @@ describe('<ProgressBar />', () => {
 
   it('Should set the theme based on the `variant prop`', () => {
     expect(progressBar.hasClass('progress-bar--info')).toBe(true);
+  });
+
+  it('Should render as animated based on `animated prop`', () => {
+    expect(progressBar.hasClass('progress-bar--animated')).toBe(true);
   });
 
   it('Should set a custom class', () => {
