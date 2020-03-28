@@ -6,10 +6,10 @@ import { Dropdown } from '@alaneicker/react-component-library';
 
 const [value, setValue] = useState('');
 
-<Dropdown 
+<Dropdown
   label="Select a Color"
   errorText="Please select a color"
-  onChange={(e) => setValue(e.target.value)}
+  onChange={e => setValue(e.target.value)}
   value={value}
   options={[
     { text: 'Red', value: 'Red' },
@@ -17,9 +17,9 @@ const [value, setValue] = useState('');
     { text: 'Yellow', value: 'Yellow' },
     { text: 'Green', value: 'Green' },
     { text: 'Blue', value: 'Blue' },
-    { text: 'Purple', value: 'Purple' }
+    { text: 'Purple', value: 'Purple' },
   ]}
-/>
+/>;
 ```
 
 ### Error State
@@ -30,12 +30,12 @@ import { Dropdown } from '@alaneicker/react-component-library';
 
 const [value, setValue] = useState('');
 
-<Dropdown 
+<Dropdown
   label="Select a Color"
   errorText="Please select a color"
   hasError={!value}
   required
-  onChange={(e) => setValue(e.target.value)}
+  onChange={e => setValue(e.target.value)}
   value={value}
   options={[
     { text: 'Red', value: 'Red' },
@@ -43,9 +43,9 @@ const [value, setValue] = useState('');
     { text: 'Yellow', value: 'Yellow' },
     { text: 'Green', value: 'Green' },
     { text: 'Blue', value: 'Blue' },
-    { text: 'Purple', value: 'Purple' }
+    { text: 'Purple', value: 'Purple' },
   ]}
-/>
+/>;
 ```
 
 ### Disabled State
@@ -54,7 +54,7 @@ const [value, setValue] = useState('');
 import { useState } from 'react';
 import { Dropdown } from '@alaneicker/react-component-library';
 
-<Dropdown 
+<Dropdown
   label="Select a Color"
   errorText="Please select a color"
   required
@@ -66,7 +66,7 @@ import { Dropdown } from '@alaneicker/react-component-library';
     { text: 'Yellow', value: 'Yellow' },
     { text: 'Green', value: 'Green' },
     { text: 'Blue', value: 'Blue' },
-    { text: 'Purple', value: 'Purple' }
+    { text: 'Purple', value: 'Purple' },
   ]}
-/>
+/>;
 ```

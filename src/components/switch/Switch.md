@@ -10,7 +10,11 @@ const handleChange = checked => {
   setIsChecked(!isChecked);
 };
 
-<Switch label="Send me notifications" onChange={handleChange} checked={isChecked} />
+<Switch
+  label="Send me notifications"
+  onChange={handleChange}
+  checked={isChecked}
+/>;
 ```
 
 ### Stacked Layout
@@ -25,7 +29,12 @@ const handleChange = checked => {
   setIsChecked(!isChecked);
 };
 
-<Switch layout="stacked" label="Send me notifications" onChange={handleChange} checked={isChecked} />
+<Switch
+  layout="stacked"
+  label="Send me notifications"
+  onChange={handleChange}
+  checked={isChecked}
+/>;
 ```
 
 ### Error State
@@ -40,13 +49,14 @@ const handleChange = checked => {
   setIsChecked(!isChecked);
 };
 
-<Switch 
-  label="Send me notifications" 
-  onChange={handleChange} 
+<Switch
+  label="Send me notifications"
+  onChange={handleChange}
   checked={isChecked}
   errorText="This field is required"
   hasError={!isChecked}
-  required />
+  required
+/>;
 ```
 
 ### Disabled State
@@ -54,9 +64,10 @@ const handleChange = checked => {
 ```jsx
 import { Switch } from '@alaneicker/react-component-library';
 
-<Switch 
-  label="Send me notifications" 
+<Switch
+  label="Send me notifications"
   checked={false}
   disabled={true}
-  required />
+  required
+/>;
 ```

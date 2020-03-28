@@ -7,7 +7,7 @@ const now = 60;
 
 <>
   <ProgressBar now={now} label={`${now}%`} />
-</>
+</>;
 ```
 
 ### Theme Variants
@@ -24,15 +24,15 @@ const variants = [
 
 <>
   {variants.map(({ now, variant, animated }) => (
-    <ProgressBar 
-      key={Math.random()} 
-      variant={variant} 
-      now={now} 
-      label={`${now}%`} 
+    <ProgressBar
+      key={Math.random()}
+      variant={variant}
+      now={now}
+      label={`${now}%`}
       animated={animated}
     />
   ))}
-</>
+</>;
 ```
 
 ### Animated Progress Bar
@@ -50,12 +50,12 @@ const variants = [
 
 <>
   {variants.map(({ now, variant, animated }) => (
-    <ProgressBar 
-      key={Math.random()} 
-      variant={variant} 
-      now={now} 
+    <ProgressBar
+      key={Math.random()}
+      variant={variant}
+      now={now}
       animated={animated}
     />
   ))}
-</>
+</>;
 ```

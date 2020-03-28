@@ -3,16 +3,16 @@
 ```jsx
 import { RangeSlider } from '@alaneicker/react-component-library';
 
-<RangeSlider 
+<RangeSlider
   label="Select Amount"
   errorText="This field is required"
   hasError={false}
   min="100"
   max="1000"
-  step="100" 
+  step="100"
   value="400"
-  onChange={(value) => console.log(value)}
-/>
+  onChange={value => console.log(value)}
+/>;
 ```
 
 ### Range Slider With Ticks and Labels
@@ -20,14 +20,14 @@ import { RangeSlider } from '@alaneicker/react-component-library';
 ```jsx
 import { RangeSlider } from '@alaneicker/react-component-library';
 
-<RangeSlider 
+<RangeSlider
   label="Select Amount"
   errorText="This field is required"
   hasError={false}
   hideLabelsOnMobile={true}
   min="100"
   max="1000"
-  step="100" 
+  step="100"
   value="400"
   ticks={[
     { text: '$100', val: '100' },
@@ -41,8 +41,8 @@ import { RangeSlider } from '@alaneicker/react-component-library';
     { text: '$900', val: '900' },
     { text: '$1000', val: '1000' },
   ]}
-  onChange={(value) => console.log(value)}
-/>
+  onChange={value => console.log(value)}
+/>;
 ```
 
 ### Disabled State
@@ -50,13 +50,13 @@ import { RangeSlider } from '@alaneicker/react-component-library';
 ```jsx
 import { RangeSlider } from '@alaneicker/react-component-library';
 
-<RangeSlider 
+<RangeSlider
   label="Select Amount"
   disabled={true}
   hideLabelsOnMobile={true}
   min="100"
   max="1000"
-  step="100" 
+  step="100"
   value="400"
   ticks={[
     { text: '$100', val: '100' },
@@ -69,5 +69,6 @@ import { RangeSlider } from '@alaneicker/react-component-library';
     { text: '$800', val: '800' },
     { text: '$900', val: '900' },
     { text: '$1000', val: '1000' },
-  ]} />
+  ]}
+/>;
 ```
