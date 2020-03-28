@@ -11,11 +11,11 @@ const Hint = ({
 );
 
 Hint.propTypes = {
-  /** Custom classes to be added to Label component */
+  /** Custom classes to be added to Label component. */
   classes: PropTypes.string,
-  /** Hint content */
+  /** Hint content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  /** Specifies the typr of hint */
+  /** Specifies the typr of hint. */
   type: PropTypes.oneOf(['', 'error', 'warning', 'success']),
 };
 

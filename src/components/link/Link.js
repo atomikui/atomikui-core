@@ -16,13 +16,13 @@ const Link = ({
 );
 
 Link.propTypes = {
-  /** Custom classes to be added to Label component. */
+  /** Custom classes to be added to Label component.. */
   classes: PropTypes.string,
-  /** Specifies the URL of the page the link goes to. */
+  /** Specifies the URL of the page the link goes to.. */
   href: PropTypes.string,
-  /** Hint content. */
+  /** Hint content.. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  /** Specifies where to open the linked document. Taget `__blank` will automatically add `rel="noopener noreferrer"` to the link. */
+  /** Specifies where to open the linked document. Taget `__blank` will automatically add `rel="noopener noreferrer"` to the link.. */
   target: PropTypes.string,
 };
 

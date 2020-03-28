@@ -69,36 +69,36 @@ const Dropdown = ({
 };
 
 Dropdown.propTypes = {
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Disables a form field */
+  /** Disables a form field. */
   disabled: PropTypes.bool,
-  /** Text to be displayed when there is an error */
+  /** Text to be displayed when there is an error. */
   errorText: PropTypes.string,
-  /** Specifies the error state */
+  /** Specifies the error state. */
   hasError: PropTypes.bool,
-  /** Assistive text to be displayed with form field */
+  /** Assistive text to be displayed with form field. */
   helpText: PropTypes.string,
-  /** A unique id */
+  /** A unique id. */
   id: PropTypes.string,
-  /** Specifies label text */
+  /** Specifies label text. */
   label: PropTypes.string,
-  /** Hides label */
+  /** Hides label. */
   labelless: PropTypes.bool,
-  /** Specifies input name attribute */
+  /** Specifies input name attribute. */
   name: PropTypes.string,
-  /** onChange callback */
+  /** onChange callback. */
   onChange: PropTypes.func,
-  /** Selectable options in the dropdown */
+  /** Selectable options in the dropdown. */
   options: PropTypes.arrayOf(PropTypes.shape({
-    /** Option text */
+    /** Option text. */
     text: PropTypes.string,
-    /** Option value */
+    /** Option value. */
     value: PropTypes.string,
   })),
-  /** Specifies if a field is required */
+  /** Specifies if a field is required. */
   required: PropTypes.bool,
-  /** Dropdown value */
+  /** Dropdown value. */
   value: PropTypes.string,
 };
 

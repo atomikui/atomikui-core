@@ -100,35 +100,35 @@ const FormField = ({
 };
 
 FormField.propTypes = {
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Disables a form field */
+  /** Disables a form field. */
   disabled: PropTypes.bool,
-  /** Text to be displayed when there is an error */
+  /** Text to be displayed when there is an error. */
   errorText: PropTypes.string,
-  /** Specifies the error state */
+  /** Specifies the error state. */
   hasError: PropTypes.bool,
-  /** Assistive text to be displayed with form field */
+  /** Assistive text to be displayed with form field. */
   helpText: PropTypes.string,
-  /** A unique id */
+  /** A unique id. */
   id: PropTypes.string,
-  /** Specifies label text */
+  /** Specifies label text. */
   label: PropTypes.string,
-  /** Hides label */
+  /** Hides label. */
   labelless: PropTypes.bool,
-  /** onChange callback */
+  /** onChange callback. */
   onChange: PropTypes.func,
-  /** Specifies input placeholder text */
+  /** Specifies input placeholder text. */
   placeholder: PropTypes.string,
-  /** Specifies input name attribute */
+  /** Specifies input name attribute. */
   name: PropTypes.string,
-  /** Makes a form field read only */
+  /** Makes a form field read only. */
   readOnly: PropTypes.bool,
-  /** Specifies if a field is required */
+  /** Specifies if a field is required. */
   required: PropTypes.bool,
-  /** Specifies the type of input */
+  /** Specifies the type of input. */
   type: PropTypes.oneOf(types),
-  /** Specifies the inputs value */
+  /** Specifies the inputs value. */
   value: PropTypes.string,
 };
 

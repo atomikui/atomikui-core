@@ -60,29 +60,29 @@ const FormOption = ({
 };
 
 FormOption.propTypes = {
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Specifies the form option checked state */
+  /** Specifies the form option checked state. */
   checked: PropTypes.bool,
-  /** Specifies form option disabled state */
+  /** Specifies form option disabled state. */
   disabled: PropTypes.bool,
-  /** Text to be displayed when there is an error */
+  /** Text to be displayed when there is an error. */
   errorText: PropTypes.string,
-  /** Specifies the error state */
+  /** Specifies the error state. */
   hasError: PropTypes.bool,
-  /** Assistive text to be displayed with form field */
+  /** Assistive text to be displayed with form field. */
   helpText: PropTypes.string,
-  /** A unique id */
+  /** A unique id. */
   id: PropTypes.string,
-  /** Specifies label text */
+  /** Specifies label text. */
   label: PropTypes.string,
-  /** Specifies input name attribute */
+  /** Specifies input name attribute. */
   name: PropTypes.string,
-  /** OnChange callback */
+  /** OnChange callback. */
   onChange: PropTypes.func,
-  /** Specifies if a field is required */
+  /** Specifies if a field is required. */
   required: PropTypes.bool,
-  /** Specifies the type of input */
+  /** Specifies the type of input. */
   type: PropTypes.oneOf(types),
 };
 

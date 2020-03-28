@@ -57,29 +57,29 @@ const Switch = ({
 };
 
 Switch.propTypes = {
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Specifies and inputs default checked state */
+  /** Specifies and inputs default checked state. */
   checked: PropTypes.bool,
-  /** Specifies the switch disabled state */
+  /** Specifies the switch disabled state. */
   disabled: PropTypes.bool,
-  /** Text to be displayed when there is an error */
+  /** Text to be displayed when there is an error. */
   errorText: PropTypes.string,
-  /** Specifies the error state */
+  /** Specifies the error state. */
   hasError: PropTypes.bool,
-  /** Assistive text to be displayed with form field */
+  /** Assistive text to be displayed with form field. */
   helpText: PropTypes.string,
-  /** A unique id */
+  /** A unique id. */
   id: PropTypes.string,
-  /** Specifies label text */
+  /** Specifies label text. */
   label: PropTypes.string,
-  /** Specifies if layout is inline or stacked */
+  /** Specifies if layout is inline or stacked. */
   layout: PropTypes.oneOf(['', 'stacked']),
-  /** Specifies input name attribute */
+  /** Specifies input name attribute. */
   name: PropTypes.string,
-  /** Callback triggered onChange */
+  /** Callback triggered onChange. */
   onChange: PropTypes.func,
-  /** Specifies if a field is required */
+  /** Specifies if a field is required. */
   required: PropTypes.bool,
 };
 

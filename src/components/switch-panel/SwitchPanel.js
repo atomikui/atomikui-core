@@ -8,6 +8,7 @@ const SwitchPanel = ({ children }) => (
 );
 
 SwitchPanel.propTypes = {
+  /** Switch panel content. */
   children: PropTypes.node,
 };
 

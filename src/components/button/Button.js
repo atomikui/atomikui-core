@@ -20,21 +20,21 @@ const Button = ({
 );
 
 Button.propTypes = {
-  /** Displays button as a block elment */
+  /** Displays button as a block elment. */
   block: PropTypes.bool,
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Specifies button content */
+  /** Specifies button content. */
   children: PropTypes.node,
-  /** Specifies if button is diabled */
+  /** Specifies if button is diabled. */
   disabled: PropTypes.bool,
-  /** Specifies a buttons shape */
+  /** Specifies a buttons shape. */
   shape: PropTypes.oneOf(['pill']),
-  /** Specifies the size of a button */
+  /** Specifies the size of a button. */
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  /** Specifies the type of button */
+  /** Specifies the type of button. */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  /** Specifies the button variation */
+  /** Specifies the button variation. */
   variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'hollow', 'link', 'block']),
 };
 

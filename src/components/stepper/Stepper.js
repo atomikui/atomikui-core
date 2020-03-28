@@ -34,15 +34,15 @@ const Stepper = ({ classes, steps, ...others }) => (
 );
 
 Stepper.propTypes = {
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Progress bar steps */
+  /** Progress bar steps. */
   steps: PropTypes.arrayOf(PropTypes.shape({
-    /** Label to be displayed with each step */
+    /** Label to be displayed with each step. */
     label: PropTypes.string,
-    /** Sprcifies if step is complete */
+    /** Sprcifies if step is complete. */
     isComplete: PropTypes.bool,
-    /** Sprcifies if step is active */
+    /** Sprcifies if step is active. */
     isActive: PropTypes.bool,
   })),
 };

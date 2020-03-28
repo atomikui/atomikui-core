@@ -28,15 +28,15 @@ const ProgressBar = ({
 );
 
 ProgressBar.propTypes = {
-  /** Animages the progress bar */
+  /** Animages the progress bar. */
   animated: PropTypes.bool,
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Label to be displayed with progress */
+  /** Label to be displayed with progress. */
   label: PropTypes.string,
-  /** Specifies the percentage complete */
+  /** Specifies the percentage complete. */
   now: PropTypes.number,
-  /** Specifies the theme variant */
+  /** Specifies the theme variant. */
   variant: PropTypes.string,
 };
 

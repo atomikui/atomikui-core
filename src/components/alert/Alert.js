@@ -17,13 +17,13 @@ const Alert = ({
 );
 
 Alert.propTypes = {
-  /** Aligns the text inside of the alert */
+  /** Aligns the text inside of the alert. */
   align: PropTypes.oneOf(['', 'right', 'center']),
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Alert content */
+  /** Alert content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  /** Specifies the type of alert */
+  /** Specifies the type of alert. */
   type: PropTypes.oneOf(['', 'info', 'warning', 'error', 'success']),
 };
 

@@ -90,40 +90,40 @@ const RangeSlider = ({
 };
 
 RangeSlider.propTypes = {
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Specifies range slider disabled state */
+  /** Specifies range slider disabled state. */
   disabled: PropTypes.bool,
-  /** Text to be displayed when there is an error */
+  /** Text to be displayed when there is an error. */
   errorText: PropTypes.string,
-  /** Specifies the error state */
+  /** Specifies the error state. */
   hasError: PropTypes.bool,
-  /** Assistive text to be displayed with form field */
+  /** Assistive text to be displayed with form field. */
   helpText: PropTypes.string,
-  /** hides slider tick labels on mobile */
+  /** hides slider tick labels on mobile. */
   hideLabelsOnMobile: PropTypes.bool,
-  /** A unique id */
+  /** A unique id. */
   id: PropTypes.string,
-  /** Specifies label text */
+  /** Specifies label text. */
   label: PropTypes.string,
-  /** Maximum range value */
+  /** Maximum range value. */
   max: PropTypes.string,
-  /** Minimum range value */
+  /** Minimum range value. */
   min: PropTypes.string,
-  /** Specifies input name attribute */
+  /** Specifies input name attribute. */
   name: PropTypes.string,
-  /** onChange callback */
+  /** onChange callback. */
   onChange: PropTypes.func,
-  /** Specifies if a field is required */
+  /** Specifies if a field is required. */
   required: PropTypes.bool,
-  /** Step numerical increment */
+  /** Step numerical increment. */
   step: PropTypes.string,
-  /** Ticks for each step */
+  /** Ticks for each step. */
   ticks: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string,
     val: PropTypes.string,
   })),
-  /** Specifies the inputs value */
+  /** Specifies the inputs value. */
   value: PropTypes.string,
 };
 

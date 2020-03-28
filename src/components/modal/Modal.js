@@ -78,23 +78,23 @@ const Modal = ({
 };
 
 Modal.propTypes = {
-  /** Specifies custom component classes */
+  /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Child elements that will be rendered inside of the modal body */
+  /** Child elements that will be rendered inside of the modal body. */
   children: PropTypes.node,
-  /** Closes the modal when the escape key is pressed */
+  /** Closes the modal when the escape key is pressed. */
   closeOnEscape: PropTypes.bool,
-  /** Disables the overlay's clock event */
+  /** Disables the overlay's clock event. */
   disableOverlayclick: PropTypes.bool,
-  /** Content to bre rendered inside of the modal footer */
+  /** Content to bre rendered inside of the modal footer. */
   footer: PropTypes.node,
-  /** Specifies if modal has an overlay */
+  /** Specifies if modal has an overlay. */
   hasOverlay: PropTypes.bool,
-  /** Displays the modal as a drawer that slides out from the left or right */
+  /** Displays the modal as a drawer that slides out from the left or right. */
   isDrawer: PropTypes.bool,
-  /** Toggles modal visibility state */
+  /** Toggles modal visibility state. */
   isOpen: PropTypes.bool,
-  /** Callback triggered on close */
+  /** Callback triggered on close. */
   onClose: PropTypes.func,
 };
 
