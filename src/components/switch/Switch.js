@@ -26,12 +26,15 @@ const Switch = ({
 
   return (
     <>
-      <div htmlFor={uid} className={classnames('switch', classes, {
-        'is-checked': checked,
-        'is-disabled': disabled,
-        'is-stacked': layout === 'stacked',
-        'has-error': hasError,
-      })}>
+      <div
+        htmlFor={uid}
+        className={classnames('switch', classes, {
+          'is-checked': checked,
+          'is-disabled': disabled,
+          'is-stacked': layout === 'stacked',
+          'has-error': hasError,
+        })}
+      >
         <input
           id={uid}
           name={inputName}
@@ -40,16 +43,24 @@ const Switch = ({
           checked={checked}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
-          onChange={onChange} />
+          onChange={onChange}
+        />
         <div className="switch__label">
           <Label htmlFor={uid}>{label}</Label>
         </div>
-        <div className="switch__toggle" {...(!disabled && { onClick: onChange })}></div>
+        <div
+          className="switch__toggle"
+          {...(!disabled && { onClick: onChange })}
+        ></div>
       </div>
       {(helpText || errorText) && (
         <div className="formfield__hints">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-          {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
+          {hasError && (
+            <Hint id={inputErrorId} type="error">
+              {errorText}
+            </Hint>
+          )}
         </div>
       )}
     </>

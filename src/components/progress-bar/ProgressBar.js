@@ -2,18 +2,14 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const ProgressBar = ({
-  animated,
-  classes,
-  label,
-  now,
-  variant,
-  ...others
-}) => (
-  <div className={classnames('progress-bar', classes, {
-    [`progress-bar--${variant}`]: variant,
-    'progress-bar--animated': animated,
-  })} {...others}>
+const ProgressBar = ({ animated, classes, label, now, variant, ...others }) => (
+  <div
+    className={classnames('progress-bar', classes, {
+      [`progress-bar--${variant}`]: variant,
+      'progress-bar--animated': animated,
+    })}
+    {...others}
+  >
     <div
       className="progress-bar__bar"
       role="progressbar"

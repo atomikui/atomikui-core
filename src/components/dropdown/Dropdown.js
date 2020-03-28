@@ -27,10 +27,13 @@ const Dropdown = ({
   const inputErrorId = `${inputName}_error`;
 
   return (
-    <div className={classnames('dropdown', classes, {
-      'has-error': hasError,
-      'is-disabled': disabled,
-    })} {...others}>
+    <div
+      className={classnames('dropdown', classes, {
+        'has-error': hasError,
+        'is-disabled': disabled,
+      })}
+      {...others}
+    >
       {!labelless && (
         <div className="dropdown__label">
           <Label htmlFor={uid}>{label}</Label>
@@ -48,20 +51,29 @@ const Dropdown = ({
           onChange={onChange}
           {...others}
         >
-          {
-            [{
+          {[
+            {
               text: 'Select One',
               value: '',
-            }, ...options]
-              // eslint-disable-next-line no-shadow
-              .map(({ text, value }) => <option key={Math.random()} value={value}>{text}</option>)
-          }
+            },
+            ...options,
+          ]
+            // eslint-disable-next-line no-shadow
+            .map(({ text, value }) => (
+              <option key={Math.random()} value={value}>
+                {text}
+              </option>
+            ))}
         </select>
       </div>
       {(helpText || errorText) && (
         <div className="formfield__hints">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-          {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
+          {hasError && (
+            <Hint id={inputErrorId} type="error">
+              {errorText}
+            </Hint>
+          )}
         </div>
       )}
     </div>
@@ -90,12 +102,14 @@ Dropdown.propTypes = {
   /** onChange callback. */
   onChange: PropTypes.func,
   /** Selectable options in the dropdown. */
-  options: PropTypes.arrayOf(PropTypes.shape({
-    /** Option text. */
-    text: PropTypes.string,
-    /** Option value. */
-    value: PropTypes.string,
-  })),
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      /** Option text. */
+      text: PropTypes.string,
+      /** Option value. */
+      value: PropTypes.string,
+    }),
+  ),
   /** Specifies if a field is required. */
   required: PropTypes.bool,
   /** Dropdown value. */

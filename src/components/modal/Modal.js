@@ -19,7 +19,7 @@ const Modal = ({
 
   const modal = useRef();
 
-  const handleClose = (e) => {
+  const handleClose = e => {
     if (disableOverlayclick || !hasOverlay) return;
 
     const isOverlayClick = e.target.classList.contains('modal');
@@ -29,19 +29,21 @@ const Modal = ({
     }
   };
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = e => {
     if (e.keyCode === 27) {
       onClose();
     }
   };
 
   useEffect(() => {
-    setFocusTrap(createFocusTrap(modal.current, {
-      allowOutsideClick: () => !disableOverlayclick || !hasOverlay,
-      clickOutsideDeactivates: isDrawer && !hasOverlay,
-      escapeDeactivates: false,
-      fallbackFocus: modal,
-    }));
+    setFocusTrap(
+      createFocusTrap(modal.current, {
+        allowOutsideClick: () => !disableOverlayclick || !hasOverlay,
+        clickOutsideDeactivates: isDrawer && !hasOverlay,
+        escapeDeactivates: false,
+        fallbackFocus: modal,
+      }),
+    );
   }, [disableOverlayclick, hasOverlay, isDrawer]);
 
   useEffect(() => {
@@ -59,18 +61,18 @@ const Modal = ({
         'modal--no-overlay': !hasOverlay,
         'modal--drawer': isDrawer,
       })}
-      onClick={(e) => handleClose(e)}
-      {...(closeOnEscape && { onKeyDown: (e) => handleKeyDown(e) })}
+      onClick={e => handleClose(e)}
+      {...(closeOnEscape && { onKeyDown: e => handleKeyDown(e) })}
       {...others}
     >
       <div className="modal__dialog" ref={modal}>
         <div className="modal__header">
           <div className="modal__title">title</div>
-          <button className="modal__close-button" onClick={() => onClose()}>close</button>
+          <button className="modal__close-button" onClick={() => onClose()}>
+            close
+          </button>
         </div>
-        <div className="modal__body">
-          {children}
-        </div>
+        <div className="modal__body">{children}</div>
         {footer && <div className="modal__footer">{footer}</div>}
       </div>
     </div>

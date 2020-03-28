@@ -2,16 +2,15 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Alert = ({
-  align, classes, children, type, ...others
-}) => (
+const Alert = ({ align, classes, children, type, ...others }) => (
   <div
     className={classnames('alert', classes, {
       [`alert--${type}`]: type,
       [`alert--${align}`]: align,
     })}
     type={type}
-    {...others}>
+    {...others}
+  >
     {children}
   </div>
 );

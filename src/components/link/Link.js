@@ -2,15 +2,14 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Link = ({
-  classes, children, href, target, ...others
-}) => (
+const Link = ({ classes, children, href, target, ...others }) => (
   <a
     className={classnames('link', classes)}
     href={href}
     target={target}
     {...(target === '_blank' && { rel: 'noopener noreferrer' })}
-    {...others}>
+    {...others}
+  >
     {children}
   </a>
 );

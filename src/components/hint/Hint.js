@@ -2,12 +2,15 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Hint = ({
-  classes, children, type, ...others
-}) => (
-  <div className={classnames('hint', classes, {
-    [`hint--${type}`]: type,
-  })} {...others}>{children}</div>
+const Hint = ({ classes, children, type, ...others }) => (
+  <div
+    className={classnames('hint', classes, {
+      [`hint--${type}`]: type,
+    })}
+    {...others}
+  >
+    {children}
+  </div>
 );
 
 Hint.propTypes = {

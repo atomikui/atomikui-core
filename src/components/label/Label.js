@@ -3,7 +3,9 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Label = ({ classes, children, ...others }) => (
-  <label className={classnames('label', classes)} {...others}>{children}</label>
+  <label className={classnames('label', classes)} {...others}>
+    {children}
+  </label>
 );
 
 Label.propTypes = {

@@ -49,16 +49,17 @@ const FormField = ({
   const fieldType = !types.includes(type) ? 'text' : type;
 
   return (
-    <div className={classnames('formfield', classes, {
-      'has-error': hasError,
-    })}>
+    <div
+      className={classnames('formfield', classes, {
+        'has-error': hasError,
+      })}
+    >
       {!labelless && (
         <div className="formfield__label">
           <Label htmlFor={uid}>{label}</Label>
         </div>
       )}
-      {type === 'textarea'
-        ? (
+      {type === 'textarea' ? (
         <textarea
           id={uid}
           name={inputName}
@@ -72,8 +73,7 @@ const FormField = ({
           onChange={onChange}
           {...others}
         />
-        )
-        : (
+      ) : (
         <input
           id={uid}
           name={inputName}
@@ -88,11 +88,15 @@ const FormField = ({
           required
           {...others}
         />
-        )}
+      )}
       {(helpText || errorText) && (
         <div className="formfield__hints">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-          {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
+          {hasError && (
+            <Hint id={inputErrorId} type="error">
+              {errorText}
+            </Hint>
+          )}
         </div>
       )}
     </div>

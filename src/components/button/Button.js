@@ -3,7 +3,15 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Button = ({
-  block, classes, children, disabled, shape, size, type, variant, ...others
+  block,
+  classes,
+  children,
+  disabled,
+  shape,
+  size,
+  type,
+  variant,
+  ...others
 }) => (
   <button
     className={classnames('btn', classes, {
@@ -14,7 +22,8 @@ const Button = ({
     })}
     type={type}
     disabled={disabled}
-    {...others}>
+    {...others}
+  >
     {children}
   </button>
 );
@@ -35,7 +44,14 @@ Button.propTypes = {
   /** Specifies the type of button. */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /** Specifies the button variation. */
-  variant: PropTypes.oneOf(['primary', 'secondary', 'tertiary', 'hollow', 'link', 'block']),
+  variant: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'hollow',
+    'link',
+    'block',
+  ]),
 };
 
 Button.defaultProps = {

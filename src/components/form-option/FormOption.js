@@ -30,11 +30,14 @@ const FormOption = ({
 
   return (
     <>
-      <Label htmlFor={uid} classes={classnames('form-option', classes, {
-        'has-error': hasError,
-        'is-disabled': disabled,
-        'form-option--radio': type === 'radio',
-      })}>
+      <Label
+        htmlFor={uid}
+        classes={classnames('form-option', classes, {
+          'has-error': hasError,
+          'is-disabled': disabled,
+          'form-option--radio': type === 'radio',
+        })}
+      >
         <input
           id={uid}
           type={fieldType}
@@ -52,7 +55,11 @@ const FormOption = ({
       {(helpText || errorText) && (
         <div className="formfield__hints">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-          {hasError && <Hint id={inputErrorId} type="error">{errorText}</Hint>}
+          {hasError && (
+            <Hint id={inputErrorId} type="error">
+              {errorText}
+            </Hint>
+          )}
         </div>
       )}
     </>

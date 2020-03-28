@@ -5,9 +5,7 @@
     "es6": true,
     "node": true
   },
-  "extends": [
-    "airbnb-base"
-  ],
+  "extends": ["airbnb-base"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -19,9 +17,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "rules": {
     "no-unused-vars": 0,
     "max-len": [
@@ -30,11 +26,7 @@
         "ignoreComments": true
       }
     ],
-    "object-property-newline": [
-      "error",
-      {
-        "allowMultiplePropertiesPerLine": false
-      }
-    ]
+    "object-curly-newline": 0,
+    "object-property-newline": 2
   }
 }
