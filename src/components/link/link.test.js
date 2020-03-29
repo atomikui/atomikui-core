@@ -6,7 +6,7 @@ import Link from './Link';
 
 configure({ adapter: new Adapter() });
 
-describe('<Hint />', () => {
+describe('<Link />', () => {
   let link;
 
   beforeEach(() => {
