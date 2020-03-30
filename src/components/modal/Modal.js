@@ -21,8 +21,6 @@ const Modal = ({
   const modal = useRef();
 
   const handleClose = (e) => {
-    if (disableOverlayclick || !hasOverlay) return;
-
     const isOverlayClick = e.target.classList.contains('modal');
 
     if (isOverlayClick) {
@@ -62,7 +60,9 @@ const Modal = ({
         'modal--no-overlay': !hasOverlay,
         'modal--drawer': isDrawer,
       })}
-      onClick={(e) => handleClose(e)}
+      {...((!disableOverlayclick || hasOverlay) && {
+        onClick: (e) => handleClose(e),
+      })}
       {...(closeOnEscape && { onKeyDown: (e) => handleKeyDown(e) })}
       {...others}
     >

@@ -4,7 +4,6 @@ import React from 'react';
 import sinon from 'sinon';
 import { mount, configure } from 'enzyme';
 import Modal from './Modal';
-import Button from '../button';
 
 configure({ adapter: new Adapter() });
 
@@ -53,5 +52,13 @@ describe('<Modal />', () => {
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
     expect(onCloseSpy.called).toBe(true);
+  });
+
+  it('Should not call onClose callback if overlay click event is disabled', () => {
+    modal.setProps({ disableOverlayclick: true, hasOverlay: false });
+
+    modal.find('.modal').simulate('click');
+
+    expect(onCloseSpy.called).toBe(false);
   });
 });
