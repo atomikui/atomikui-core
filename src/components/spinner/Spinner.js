@@ -13,7 +13,7 @@ const Spinner = ({ classes, color, size, ...others }) => {
 
   return (
     <div
-      className={classnames('spinner', {
+      className={classnames('spinner', classes, {
         [`spinner--${size}`]: size,
       })}
       {...others}
