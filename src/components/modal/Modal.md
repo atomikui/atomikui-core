@@ -17,6 +17,7 @@ const toggleModal = () => {
   <Modal
     isOpen={isOpen}
     onClose={toggleModal}
+    title="Modal Title"
     footer={
       <div className="text-align-right">
         <Button variant="primary" size="md" onClick={() => toggleModal()}>
@@ -59,6 +60,7 @@ const toggleModal = () => {
     isDrawer
     isOpen={isOpen}
     onClose={toggleModal}
+    title="Modal Title"
     footer={
       <div className="text-align-right">
         <Button variant="primary" size="md" onClick={() => toggleModal()}>

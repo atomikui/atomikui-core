@@ -13,6 +13,7 @@ const Modal = ({
   isDrawer,
   isOpen,
   onClose,
+  title,
   ...others
 }) => {
   const [focusTrap, setFocusTrap] = useState(null);
@@ -67,7 +68,7 @@ const Modal = ({
     >
       <div className="modal__dialog" ref={modal}>
         <div className="modal__header">
-          <div className="modal__title">title</div>
+          <div className="modal__title">{title}</div>
           <button className="modal__close-button" onClick={() => onClose()}>
             close
           </button>
@@ -98,6 +99,8 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   /** Callback triggered on close. */
   onClose: PropTypes.func,
+  /** title to be displayed in modal header */
+  title: PropTypes.string,
 };
 
 Modal.defaultProps = {
@@ -110,6 +113,7 @@ Modal.defaultProps = {
   isDrawer: false,
   isOpen: false,
   onClose() {},
+  title: '',
 };
 
 export default Modal;
