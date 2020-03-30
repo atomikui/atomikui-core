@@ -18,8 +18,11 @@ describe('<Spinner />', () => {
     expect(spinner.length).toBe(1);
   });
 
-  test.each(themes)('Should set the theme modifier class to %p', (color) => {
-    spinner.setProps({ color });
-    expect(spinner.find('.spinner').hasClass(`spinner--${color}`)).toBe(true);
-  });
+  test.each(themes)(
+    'Should set the theme modifier class to .spinner--%p',
+    (color) => {
+      spinner.setProps({ color });
+      expect(spinner.find('.spinner').hasClass(`spinner--${color}`)).toBe(true);
+    },
+  );
 });
