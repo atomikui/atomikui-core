@@ -32,7 +32,7 @@ const RangeSlider = ({
   const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;
 
-  const handleChange = updateValue => {
+  const handleChange = (updateValue) => {
     setRangeValue(updateValue);
     onChange(updateValue);
   };
@@ -57,7 +57,7 @@ const RangeSlider = ({
           step={step}
           value={rangeValue}
           type="range"
-          onChange={e => handleChange(e.target.value)}
+          onChange={(e) => handleChange(e.target.value)}
           required={required}
           disabled={disabled}
           {...others}

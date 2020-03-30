@@ -11,7 +11,7 @@ import { RangeSlider } from '@alaneicker/react-component-library';
   max="1000"
   step="100"
   value="400"
-  onChange={value => console.log(value)}
+  onChange={(value) => console.log(value)}
 />;
 ```
 
@@ -41,7 +41,7 @@ import { RangeSlider } from '@alaneicker/react-component-library';
     { text: '$900', val: '900' },
     { text: '$1000', val: '1000' },
   ]}
-  onChange={value => console.log(value)}
+  onChange={(value) => console.log(value)}
 />;
 ```
 
@@ -58,6 +58,7 @@ import { RangeSlider } from '@alaneicker/react-component-library';
   max="1000"
   step="100"
   value="400"
+  onChange={(value) => console.log(value)}
   ticks={[
     { text: '$100', val: '100' },
     { text: '$200', val: '200' },

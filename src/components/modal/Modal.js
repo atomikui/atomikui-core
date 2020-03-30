@@ -19,7 +19,7 @@ const Modal = ({
 
   const modal = useRef();
 
-  const handleClose = e => {
+  const handleClose = (e) => {
     if (disableOverlayclick || !hasOverlay) return;
 
     const isOverlayClick = e.target.classList.contains('modal');
@@ -29,7 +29,7 @@ const Modal = ({
     }
   };
 
-  const handleKeyDown = e => {
+  const handleKeyDown = (e) => {
     if (e.keyCode === 27) {
       onClose();
     }
@@ -61,8 +61,8 @@ const Modal = ({
         'modal--no-overlay': !hasOverlay,
         'modal--drawer': isDrawer,
       })}
-      onClick={e => handleClose(e)}
-      {...(closeOnEscape && { onKeyDown: e => handleKeyDown(e) })}
+      onClick={(e) => handleClose(e)}
+      {...(closeOnEscape && { onKeyDown: (e) => handleKeyDown(e) })}
       {...others}
     >
       <div className="modal__dialog" ref={modal}>
