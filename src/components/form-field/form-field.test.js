@@ -9,9 +9,11 @@ configure({ adapter: new Adapter() });
 
 describe('<FormField />', () => {
   let formField;
-  const onChangeSpy = sinon.spy();
+  let onChangeSpy;
 
   beforeEach(() => {
+    onChangeSpy = sinon.spy();
+
     formField = mount(
       <FormField label="Phone Number" onChange={onChangeSpy} />,
     );

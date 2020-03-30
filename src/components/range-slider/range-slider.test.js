@@ -9,9 +9,11 @@ configure({ adapter: new Adapter() });
 
 describe('<RangeSlider />', () => {
   let rangeSlider;
-  const onChangeSpy = sinon.spy();
+  let onChangeSpy;
 
   beforeEach(() => {
+    onChangeSpy = sinon.spy();
+
     rangeSlider = mount(
       <RangeSlider
         label="Select Amount"

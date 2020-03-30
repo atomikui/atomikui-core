@@ -9,9 +9,11 @@ configure({ adapter: new Adapter() });
 
 describe('<FormOption />', () => {
   let formOption;
-  const formOptionSpy = sinon.spy();
+  let formOptionSpy;
 
   beforeEach(() => {
+    formOptionSpy = sinon.spy();
+
     formOption = mount(
       <FormOption
         label="I agree to the terms and conditions"

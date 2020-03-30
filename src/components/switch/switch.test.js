@@ -9,9 +9,11 @@ configure({ adapter: new Adapter() });
 
 describe('<Switch />', () => {
   let component;
-  const onChangeSpy = sinon.spy();
+  let onChangeSpy;
 
   beforeEach(() => {
+    onChangeSpy = sinon.spy();
+
     component = mount(
       <Switch
         label="Send me notifications"

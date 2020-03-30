@@ -10,9 +10,11 @@ configure({ adapter: new Adapter() });
 
 describe('<SwitchPanel />', () => {
   let switchPanel;
-  const onChangeSpy = sinon.spy();
+  let onChangeSpy;
 
   beforeEach(() => {
+    onChangeSpy = sinon.spy();
+
     switchPanel = mount(
       <SwitchPanel>
         <Switch label="Label" onChange={onChangeSpy} />
