@@ -8,7 +8,6 @@ configure({ adapter: new Adapter() });
 
 describe('<Spinner />', () => {
   let spinner;
-  const themes = ['red', 'orange', 'green', 'blue'];
 
   beforeEach(() => {
     spinner = mount(<Spinner />);
@@ -17,12 +16,4 @@ describe('<Spinner />', () => {
   it('Should render without errors', () => {
     expect(spinner.length).toBe(1);
   });
-
-  test.each(themes)(
-    'Should set the theme modifier class to .spinner--%p',
-    (color) => {
-      spinner.setProps({ color });
-      expect(spinner.find('.spinner').hasClass(`spinner--${color}`)).toBe(true);
-    },
-  );
 });

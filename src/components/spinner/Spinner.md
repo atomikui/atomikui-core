@@ -1,3 +1,5 @@
+### Themes
+
 ```jsx
 import { Spinner } from '@alaneicker/react-component-library';
 
@@ -8,4 +10,16 @@ import { Spinner } from '@alaneicker/react-component-library';
   <Spinner color="green" />
   <Spinner color="blue" />
 </>;
+```
+
+### Sizes
+
+```jsx
+<>
+  <Spinner size="sm" />
+  <Spinner size="md" />
+  <Spinner />
+  <Spinner size="lg" />
+  <Spinner size="xlg" />
+</>
 ```

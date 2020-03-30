@@ -7,9 +7,9 @@ $gray-300: #999 !default;
 $gray-400: #666 !default;
 $gray-500: #323232 !default;
 $red-100: #fd4445 !default;
-$red-200: #D0191F !default;
+$red-200: #d0191f !default;
 $orange-100: #ff8400 !default;
-$yellow-100: #FFEBAF;
+$yellow-100: #ffebaf;
 $green-100: #4fa009 !default;
 $green-200: #307c01 !default;
 $blue-000: #dbeefc;
@@ -17,7 +17,7 @@ $blue-100: #88ccfc !default;
 $blue-200: #027abf !default;
 $blue-300: #01547f !default;
 $blue-400: #2c607f !default;
-$blue-500: #002D4A !default;
+$blue-500: #002d4a !default;
 
 $light-gray: #dedede;
 
@@ -35,31 +35,31 @@ $text-colors: (
   red: $red-100,
   green: $green-100,
   blue: $blue-200,
-  navy: $blue-400
+  navy: $blue-400,
 ) !default;
 
 $btn-variants: (
   primary: (
-    background-color: $blue-200, 
-    font-color: $white
+    background-color: $blue-200,
+    font-color: $white,
   ),
   secondary: (
     background-color: $green-100,
-    font-color: $white
+    font-color: $white,
   ),
   tertiary: (
     background-color: $red-100,
-    font-color: $white
+    font-color: $white,
   ),
   hollow: (
     background-color: transparent,
-    font-color: $blue-400
+    font-color: $blue-400,
   ),
   link: (
     background-color: transparent,
     font-color: $blue-400,
-    padding: 0
-  )
+    padding: 0,
+  ),
 ) !default;
 
 $background-colors: (
@@ -73,24 +73,24 @@ $background-colors: (
   medium-gray: $gray-300,
   dark-gray: $gray-500,
   black: $black,
-  white: $white
+  white: $white,
 ) !default;
 
 $modal-themes: (
   info: (
     background-color: $blue-200,
-    font-color: $white
+    font-color: $white,
   ),
   confirmation: (
     background-color: $green-100,
-    font-color: $white
+    font-color: $white,
   ),
   error: (
     background-color: $red-100,
-    font-color: $white
+    font-color: $white,
   ),
   warning: (
     background-color: $orange-100,
-    font-color: $white
+    font-color: $white,
   ),
 ) !default;
