@@ -4,7 +4,12 @@ h3,
 h4,
 h5,
 h6 {
-  &[class^="rsg--"] {
+  &[class^='rsg--'] {
     font-family: 'Bree Serif', serif;
   }
+}
+
+code[class^='rsg--code'] {
+  background: $gray-100;
+  padding: rem(1 4);
 }

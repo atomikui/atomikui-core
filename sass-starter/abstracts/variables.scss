@@ -1,5 +1,5 @@
 // Default font
-$base-font-family:  'Montserrat', Arial, Helvetica, sans-serif !default;
+$base-font-family: 'Montserrat', Arial, Helvetica, sans-serif !default;
 
 // Root font size
 $root-font-size: 16 !default;
@@ -39,11 +39,12 @@ $font-weights: (
   extra-bold: $font-extra-bold,
   extra-bold-italic: $font-extra-bold-italic,
   black: $font-black,
-  black-italic: $font-black-italic
+  black-italic: $font-black-italic,
 );
 
 // Spacing increments
-$spacing-increments: 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 !default;
+$spacing-increments: 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42
+  44 46 48 50 !default;
 
 // Display options
 $display-options: block, inline-block, none, flex, inline-flex !default;
@@ -56,18 +57,18 @@ $button-sizes: (
   sm: (
     min-height: 16,
     padding: 4 8,
-    font-size: 11
+    font-size: 11,
   ),
   md: (
-    min-height: 36,
-    padding: 4 16,
-    font-size: 13
+    min-height: 32,
+    padding: 8 16,
+    font-size: 13,
   ),
   lg: (
     min-height: 50,
     padding: 12 32,
-    font-size: 20
-  )
+    font-size: 20,
+  ),
 );
 
 // Inputs
@@ -106,7 +107,7 @@ $breakpoint-large: 1024px !default;
 $breakpoints: (
   small: $breakpoint-small,
   medium: $breakpoint-medium,
-  large: $breakpoint-large
+  large: $breakpoint-large,
 ) !default;
 
 $site-width: 1224;

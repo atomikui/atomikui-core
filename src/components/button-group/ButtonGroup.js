@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { generateId } from '../../utilities/generateId';
 
 const ButtonGroup = ({ classes, options, size, variant, ...others }) => {
-  const [checked, setChecked] = useState(null);
   const name = generateId('button-group');
 
   return (
@@ -14,7 +13,7 @@ const ButtonGroup = ({ classes, options, size, variant, ...others }) => {
       })}
       {...others}
     >
-      {options.map(({ text, disabled, onChange, value }, index) => {
+      {options.map(({ checked, text, disabled, onChange, value }, index) => {
         const id = generateId();
 
         return (
@@ -27,16 +26,14 @@ const ButtonGroup = ({ classes, options, size, variant, ...others }) => {
               id={id}
               type="radio"
               name={name}
-              checked={checked === index}
+              checked={checked}
               value={value}
-              onChange={(e) => {
-                setChecked(index);
-                onChange({ value: e.target.value, index });
-              }}
+              onChange={(e) => onChange({ value: e.target.value, index })}
             />
             <span
               className={classnames('btn', {
                 [`btn--${variant}`]: variant,
+                [`btn--${size}`]: size,
               })}
               disabled={disabled}
             >
@@ -55,12 +52,12 @@ ButtonGroup.propTypes = {
   /** buttons to be rendered as buttons */
   options: PropTypes.arrayOf(
     PropTypes.shape({
+      /** Specifies if button is checked */
+      checked: PropTypes.bool,
       /** Specifies button content. */
       text: PropTypes.node,
       /** Specifies if button is diabled. */
       disabled: PropTypes.bool,
-      /** Specifies if button is selected */
-      selected: PropTypes.bool,
       /** Triggers onChange callback */
       onChange: PropTypes.func,
       /** Button group item value */
