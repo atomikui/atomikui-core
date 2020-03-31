@@ -29,6 +29,7 @@ const options = [
 ];
 
 <ButtonGroup
+  label="Favorite Car Brand"
   options={options.map((option, i) => {
     const onChange = ({ value, index }) => {
       setAsChecked(index);
@@ -55,6 +56,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
 
 <>
   <ButtonGroup
+    label="Default Button Group"
     options={[
       {
         text: 'Option',
@@ -80,6 +82,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     ]}
   />
   <ButtonGroup
+    label="Primary Button Group"
     variant="primary"
     options={[
       {
@@ -106,6 +109,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     ]}
   />
   <ButtonGroup
+    label="Secondary Button Group"
     variant="secondary"
     options={[
       {
@@ -132,6 +136,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     ]}
   />
   <ButtonGroup
+    label="Tertiary Button Group"
     variant="tertiary"
     options={[
       {
@@ -169,6 +174,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
 
 <>
   <ButtonGroup
+    label="Small Button Group"
     size="sm"
     variant="primary"
     options={[
@@ -203,6 +209,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     ]}
   />
   <ButtonGroup
+    label="Medium Button Group"
     size="md"
     variant="primary"
     options={[
@@ -237,6 +244,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     ]}
   />
   <ButtonGroup
+    label="Default Button Group"
     variant="primary"
     options={[
       {
@@ -270,6 +278,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     ]}
   />
   <ButtonGroup
+    label="Large Button Group"
     size="lg"
     variant="primary"
     options={[
@@ -314,6 +323,7 @@ A `ButtonGroup` with many options do not work well on smaller devices. In this c
 import { ButtonGroup } from '@alaneicker/react-component-library';
 
 <ButtonGroup
+  label="Favorite Car Brand"
   options={[
     {
       text: 'Acura',

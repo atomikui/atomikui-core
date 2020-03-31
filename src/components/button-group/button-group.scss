@@ -1,6 +1,10 @@
 .button-group {
   display: flex;
 
+  &__label {
+    @include label();
+  }
+
   &__item {
     input {
       position: absolute;
@@ -27,37 +31,38 @@
         border-right: 0;
       }
 
+      &:focus,
       &:active {
         z-index: 900;
       }
     }
 
-    &:not(:last-child) > .btn {
+    &:not(:last-child) > * {
       border-right: 0;
     }
 
-    &:first-of-type > .btn {
+    &:first-of-type > * {
       border-radius: rem($base-border-radius 0 0 $base-border-radius);
     }
 
-    &:last-of-type > .btn {
+    &:last-of-type > * {
       border-radius: rem(0 $base-border-radius $base-border-radius 0);
     }
   }
 
-  & > * + * > .btn {
+  & > * + * > * {
     border-left: rem(1) solid lighten($blue-500, 10%);
   }
 
-  &--primary > * + * > .btn {
+  &--primary > * + * > * {
     border-left: rem(1) solid lighten($blue-200, 10%);
   }
 
-  &--secondary > * + * > .btn {
+  &--secondary > * + * > * {
     border-left: rem(1) solid lighten($green-100, 10%);
   }
 
-  &--tertiary > * + * > .btn {
+  &--tertiary > * + * > * {
     border-left: rem(1) solid lighten($red-100, 10%);
   }
 

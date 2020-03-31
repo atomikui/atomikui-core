@@ -4,6 +4,13 @@
   appearance: none;
 }
 
+@mixin label {
+  font-family: inherit;
+  font-size: rem(12);
+  font-weight: $font-bold;
+  text-transform: uppercase;
+}
+
 @mixin focus-outline {
   box-shadow: rem(0 0 0 3) $blue-100;
 }
@@ -53,7 +60,7 @@
   }
 
   @each $name, $breakpoint in $breakpoints {
-    @media(min-width: $breakpoint) {
+    @media (min-width: $breakpoint) {
       @each $size in $formfield-sizes {
         &--#{$size}\@#{$name} {
           width: rem($size);

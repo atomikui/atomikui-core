@@ -5,6 +5,7 @@ import { generateId } from '../../utilities/generateId';
 
 const ButtonGroup = ({
   classes,
+  label,
   options,
   size,
   stretch,
@@ -14,43 +15,46 @@ const ButtonGroup = ({
   const name = generateId('button-group');
 
   return (
-    <div
-      className={classnames('button-group', classes, {
-        [`button-group--${variant}`]: variant,
-        'button-group--stretch': stretch,
-      })}
-      {...others}
-    >
-      {options.map(({ checked, text, disabled, onChange, value }, index) => {
-        const id = generateId();
+    <>
+      {label && <div className="button-group__label">{label}</div>}
+      <div
+        className={classnames('button-group', classes, {
+          [`button-group--${variant}`]: variant,
+          'button-group--stretch': stretch,
+        })}
+        {...others}
+      >
+        {options.map(({ checked, text, disabled, onChange, value }, index) => {
+          const id = generateId();
 
-        return (
-          <label
-            htmlFor={id}
-            className="button-group__item"
-            key={Math.random()}
-          >
-            <input
-              id={id}
-              type="radio"
-              name={name}
-              checked={checked}
-              value={value}
-              onChange={(e) => onChange({ value: e.target.value, index })}
-            />
-            <span
-              className={classnames('btn', {
-                [`btn--${variant}`]: variant,
-                [`btn--${size}`]: size,
-              })}
-              disabled={disabled}
+          return (
+            <label
+              htmlFor={id}
+              className="button-group__item"
+              key={Math.random()}
             >
-              {text}
-            </span>
-          </label>
-        );
-      })}
-    </div>
+              <input
+                id={id}
+                type="radio"
+                name={name}
+                checked={checked}
+                value={value}
+                onChange={(e) => onChange({ value: e.target.value, index })}
+              />
+              <span
+                className={classnames('btn', {
+                  [`btn--${variant}`]: variant,
+                  [`btn--${size}`]: size,
+                })}
+                disabled={disabled}
+              >
+                {text}
+              </span>
+            </label>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
@@ -72,6 +76,8 @@ ButtonGroup.propTypes = {
       value: PropTypes.string,
     }),
   ),
+  /** Button group label */
+  label: PropTypes.string,
   /** Controls button group size */
   size: PropTypes.oneOf(['', 'sm', 'md', 'lg']),
   /** Makes button group fill width of parent */
@@ -82,6 +88,7 @@ ButtonGroup.propTypes = {
 
 ButtonGroup.defaultProps = {
   classes: '',
+  label: '',
   options: [],
   stretch: false,
   size: '',
