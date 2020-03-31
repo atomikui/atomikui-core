@@ -1,4 +1,4 @@
-button.btn,
+.btn,
 a.btn {
   background: $white;
   border: rem(1) solid $blue-400;
@@ -36,6 +36,10 @@ a.btn {
     cursor: default;
   }
 
+  &--link {
+    min-height: auto;
+  }
+
   &--pill {
     border-radius: rem($input-height);
   }
@@ -63,7 +67,12 @@ a.btn {
       &:active,
       &:focus,
       &:hover {
-        background: darken(map-get($map, background-color), 15%);
+        background: darken(map-get($map, background-color), 10%);
+      }
+
+      &:focus,
+      &:active {
+        box-shadow: rem(0 0 0 3) lighten(map-get($map, background-color), 15%);
       }
     }
   }

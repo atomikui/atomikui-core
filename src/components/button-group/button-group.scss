@@ -1,0 +1,35 @@
+.button-group {
+  & > * {
+    border-radius: 0;
+    position: relative;
+    z-index: 100;
+
+    &:not(:last-child) {
+      border-right: 0;
+    }
+
+    &:focus {
+      z-index: 900;
+    }
+  }
+
+  & > :first-child {
+    border-radius: rem($base-border-radius 0 0 $base-border-radius);
+  }
+
+  & > :last-child {
+    border-radius: rem(0 $base-border-radius $base-border-radius 0);
+  }
+
+  &--primary > * + * {
+    border-left: rem(1) solid lighten($blue-200, 10%);
+  }
+
+  &--secondary > * + * {
+    border-left: rem(1) solid lighten($green-100, 10%);
+  }
+
+  &--tertiary > * + * {
+    border-left: rem(1) solid lighten($red-100, 10%);
+  }
+}

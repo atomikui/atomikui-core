@@ -1,5 +1,6 @@
 import Alert from './components/alert';
 import Button from './components/button';
+import ButtonGroup from './components/button-group';
 import Dropdown from './components/dropdown';
 import FormField from './components/form-field';
 import FormOption from './components/form-option';
@@ -17,6 +18,7 @@ import SwitchPanel from './components/switch-panel';
 export {
   Alert,
   Button,
+  ButtonGroup,
   Dropdown,
   FormField,
   FormOption,
