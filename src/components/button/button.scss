@@ -36,19 +36,6 @@ a.btn {
     cursor: default;
   }
 
-  &--link {
-    min-height: auto;
-  }
-
-  &--pill {
-    border-radius: rem($input-height);
-  }
-
-  &--block {
-    display: block;
-    width: 100%;
-  }
-
   @each $name, $map in $button-sizes {
     &--#{$name} {
       font-size: rem(map-get($map, font-size));
@@ -75,5 +62,35 @@ a.btn {
         box-shadow: rem(0 0 0 3) lighten(map-get($map, background-color), 15%);
       }
     }
+  }
+
+  &--hollow {
+    &:hover {
+      background: $blue-000;
+    }
+
+    &:focus,
+    &:active {
+      background: $blue-000;
+      @include focus-outline();
+    }
+  }
+
+  &--link {
+    min-height: auto;
+    text-decoration: underline;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  &--pill {
+    border-radius: rem($input-height);
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
   }
 }
