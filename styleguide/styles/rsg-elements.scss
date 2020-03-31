@@ -9,7 +9,7 @@ h6 {
   }
 }
 
-code[class^='rsg--code'] {
+code[class^='rsg--code']:not(:empty) {
   background: $gray-100;
   padding: rem(1 4);
 }
