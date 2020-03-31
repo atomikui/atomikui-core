@@ -7,24 +7,24 @@ import { useState } from 'react';
 import { ButtonGroup } from '@alaneicker/react-component-library';
 
 const [checked, setAsChecked] = useState(1);
-const [checkedValue, setCheckedValue] = useState('orange');
+const [checkedValue, setCheckedValue] = useState('Option');
 
 const options = [
   {
-    text: 'Red',
-    value: 'red',
+    text: 'Acura',
+    value: 'Acura',
   },
   {
-    text: 'Orange',
-    value: 'orange',
+    text: 'Chevrolet',
+    value: 'Chevrolet',
   },
   {
-    text: 'Green',
-    value: 'green',
+    text: 'Ford',
+    value: 'Ford',
   },
   {
-    text: 'Blue',
-    value: 'blue',
+    text: 'Volkswagen',
+    value: 'Volkswagen',
   },
 ];
 
@@ -55,29 +55,22 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
   <ButtonGroup
     options={[
       {
-        text: 'Red',
-        value: 'red',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Orange',
-        value: 'orange',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Green',
-        value: 'green',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Blue',
-        value: 'blue',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
@@ -88,29 +81,22 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     variant="primary"
     options={[
       {
-        text: 'Red',
-        value: 'red',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Orange',
-        value: 'orange',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Green',
-        value: 'green',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Blue',
-        value: 'blue',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
@@ -121,29 +107,22 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     variant="secondary"
     options={[
       {
-        text: 'Red',
-        value: 'red',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Orange',
-        value: 'orange',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Green',
-        value: 'green',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Blue',
-        value: 'blue',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
@@ -154,29 +133,22 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     variant="tertiary"
     options={[
       {
-        text: 'Red',
-        value: 'red',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Orange',
-        value: 'orange',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Green',
-        value: 'green',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Blue',
-        value: 'blue',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
@@ -197,29 +169,29 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     variant="primary"
     options={[
       {
-        text: 'Red',
-        value: 'red',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Orange',
-        value: 'orange',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Green',
-        value: 'green',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Blue',
-        value: 'blue',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
@@ -231,29 +203,29 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     variant="primary"
     options={[
       {
-        text: 'Red',
-        value: 'red',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Orange',
-        value: 'orange',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Green',
-        value: 'green',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Blue',
-        value: 'blue',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
@@ -264,29 +236,29 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     variant="primary"
     options={[
       {
-        text: 'Red',
-        value: 'red',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Orange',
-        value: 'orange',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Green',
-        value: 'green',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Blue',
-        value: 'blue',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
@@ -298,29 +270,29 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     variant="primary"
     options={[
       {
-        text: 'Red',
-        value: 'red',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Orange',
-        value: 'orange',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Green',
-        value: 'green',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
       },
       {
-        text: 'Blue',
-        value: 'blue',
+        text: 'Option',
+        value: 'Option',
         onChange: (details) => {
           console.log(details);
         },
