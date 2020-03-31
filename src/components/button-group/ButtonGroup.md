@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { ButtonGroup } from '@alaneicker/react-component-library';
 
 const [checked, setAsChecked] = useState(1);
-const [checkedValue, setCheckedValue] = useState('');
+const [checkedValue, setCheckedValue] = useState('orange');
 
 const options = [
   {
