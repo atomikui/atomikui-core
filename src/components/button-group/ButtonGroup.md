@@ -3,43 +3,47 @@
 ```jsx
 import { ButtonGroup } from '@alaneicker/react-component-library';
 
+const onChange = (details) => {
+  console.log(details);
+};
+
 <>
   <ButtonGroup
-    buttons={[
-      { text: 'Red' },
-      { text: 'Orange' },
-      { text: 'Green' },
-      { text: 'Blue' },
+    options={[
+      { text: 'Red', value: 'red', onChange },
+      { text: 'Orange', value: 'orange', onChange },
+      { text: 'Green', value: 'green', onChange },
+      { text: 'Blue', value: 'blue', onChange },
     ]}
   />
 
   <ButtonGroup
     variant="primary"
-    buttons={[
-      { text: 'Red' },
-      { text: 'Orange' },
-      { text: 'Green' },
-      { text: 'Blue' },
+    options={[
+      { text: 'Red', value: 'red', onChange },
+      { text: 'Orange', value: 'orange', onChange },
+      { text: 'Green', value: 'green', onChange },
+      { text: 'Blue', value: 'blue', onChange },
     ]}
   />
 
   <ButtonGroup
     variant="secondary"
-    buttons={[
-      { text: 'Red' },
-      { text: 'Orange' },
-      { text: 'Green' },
-      { text: 'Blue' },
+    options={[
+      { text: 'Red', value: 'red', onChange },
+      { text: 'Orange', value: 'orange', onChange },
+      { text: 'Green', value: 'green', onChange },
+      { text: 'Blue', value: 'blue', onChange },
     ]}
   />
 
   <ButtonGroup
     variant="tertiary"
-    buttons={[
-      { text: 'Red' },
-      { text: 'Orange' },
-      { text: 'Green' },
-      { text: 'Blue' },
+    options={[
+      { text: 'Red', value: 'red', onChange },
+      { text: 'Orange', value: 'orange', onChange },
+      { text: 'Green', value: 'green', onChange },
+      { text: 'Blue', value: 'blue', onChange },
     ]}
   />
 </>;

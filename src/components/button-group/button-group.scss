@@ -1,35 +1,60 @@
 .button-group {
-  & > * {
-    border-radius: 0;
-    position: relative;
-    z-index: 100;
+  &__item {
+    input {
+      position: absolute;
+      left: rem(-10000);
+    }
 
-    &:not(:last-child) {
+    input:checked + .btn {
+      background: $blue-000;
+
+      @each $variant, $map in $btn-variants {
+        &--#{$variant} {
+          background: darken(map-get($map, background-color), 10%);
+        }
+      }
+    }
+
+    .btn {
+      border-radius: 0;
+      position: relative;
+      z-index: 100;
+
+      &:not(:last-child) {
+        border-right: 0;
+      }
+
+      &:focus {
+        z-index: 900;
+      }
+    }
+
+    &:not(:last-child) > .btn {
       border-right: 0;
     }
 
-    &:focus {
-      z-index: 900;
+    &:first-of-type > .btn {
+      border-radius: rem($base-border-radius 0 0 $base-border-radius);
+    }
+
+    &:last-of-type > .btn {
+      border-radius: rem(0 $base-border-radius $base-border-radius 0);
     }
   }
 
-  & > :first-child {
-    border-radius: rem($base-border-radius 0 0 $base-border-radius);
+  & > * + * > .btn {
+    border-left: rem(1) solid lighten($blue-500, 10%);
   }
 
-  & > :last-child {
-    border-radius: rem(0 $base-border-radius $base-border-radius 0);
-  }
-
-  &--primary > * + * {
+  &--primary > * + * > .btn {
     border-left: rem(1) solid lighten($blue-200, 10%);
   }
 
-  &--secondary > * + * {
+  &--secondary > * + * > .btn {
     border-left: rem(1) solid lighten($green-100, 10%);
   }
 
-  &--tertiary > * + * {
+  &--tertiary > * + * > .btn {
     border-left: rem(1) solid lighten($red-100, 10%);
   }
 }
