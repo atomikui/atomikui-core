@@ -46,7 +46,9 @@ const options = [
 />;
 ```
 
-### Button Group Variations
+### Button Group Variants
+
+Variants include `Primary`, `Secondary`, and `Tertiary`.
 
 ```jsx
 import { ButtonGroup } from '@alaneicker/react-component-library';
@@ -159,6 +161,8 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
 ```
 
 ### button Group Sizes
+
+Sizes include `sm`, `md`, and `lg`.
 
 ```jsx
 import { ButtonGroup } from '@alaneicker/react-component-library';
@@ -300,4 +304,34 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     ]}
   />
 </>;
+```
+
+### Flexible Button Group
+
+A `ButtonGroup` with many options do not work well on smaller devices. In this case, it is recommended to use a `DropDown` menu to convey the list of options.
+
+```jsx
+import { ButtonGroup } from '@alaneicker/react-component-library';
+
+<ButtonGroup
+  options={[
+    {
+      text: 'Acura',
+      value: 'Acura',
+    },
+    {
+      text: 'Chevrolet',
+      value: 'Chevrolet',
+    },
+    {
+      text: 'Ford',
+      value: 'Ford',
+    },
+    {
+      text: 'Volkswagen',
+      value: 'Volkswagen',
+    },
+  ]}
+  stretch
+/>;
 ```

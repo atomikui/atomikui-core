@@ -3,13 +3,21 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { generateId } from '../../utilities/generateId';
 
-const ButtonGroup = ({ classes, options, size, variant, ...others }) => {
+const ButtonGroup = ({
+  classes,
+  options,
+  size,
+  stretch,
+  variant,
+  ...others
+}) => {
   const name = generateId('button-group');
 
   return (
     <div
       className={classnames('button-group', classes, {
         [`button-group--${variant}`]: variant,
+        'button-group--stretch': stretch,
       })}
       {...others}
     >
@@ -66,6 +74,8 @@ ButtonGroup.propTypes = {
   ),
   /** Controls button group size */
   size: PropTypes.oneOf(['', 'sm', 'md', 'lg']),
+  /** Makes button group fill width of parent */
+  stretch: PropTypes.bool,
   /** Specifies the button variation. */
   variant: PropTypes.oneOf(['', 'primary', 'secondary', 'tertiary']),
 };
@@ -73,6 +83,7 @@ ButtonGroup.propTypes = {
 ButtonGroup.defaultProps = {
   classes: '',
   options: [],
+  stretch: false,
   size: '',
 };
 
