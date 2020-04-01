@@ -1,5 +1,5 @@
 .button-group {
-  align-items: stretch;
+  align-items: center;
   background: $gray-100;
   border-radius: rem(3);
   display: inline-flex;
@@ -17,16 +17,19 @@
       color: $white;
     }
 
+    input:focus + &__btn {
+      box-shadow: $formfield-focus;
+    }
+
     &__btn {
       align-items: center;
       border-radius: rem($base-border-radius);
       color: $blue-400;
       cursor: pointer;
       display: inline-flex;
-      font-size: rem(14);
+      font-size: rem(13);
       font-weight: $font-medium;
-      height: 100%;
-      padding: rem(0 16);
+      padding: rem(6 16);
       text-transform: uppercase;
 
       &:hover {
@@ -45,14 +48,26 @@
 
   &--sm {
     height: rem($input-height - 12);
+
+    .button-group__item__btn {
+      padding: rem(2 16);
+    }
   }
 
   &--md {
     height: rem($input-height - 6);
+
+    .button-group__item__btn {
+      padding: rem(4 16);
+    }
   }
 
   &--lg {
     height: rem($input-height + 12);
+
+    .button-group__item__btn {
+      padding: rem(12 16);
+    }
   }
 
   &--stretch {

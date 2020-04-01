@@ -2,6 +2,8 @@
 
 The `ButtonGroup` component offers an `onChange` callback that can be attached to each item to return the selected index and value. The eample below shows how state can be managed externally.
 
+### Radio Button Group
+
 ```jsx
 import { useState } from 'react';
 import { ButtonGroup } from '@alaneicker/react-component-library';
@@ -30,19 +32,12 @@ const options = [
 
 <ButtonGroup
   label="Favorite Car Brand"
+  onChange={({ value, index }) => {
+    setAsChecked(index);
+    setCheckedValue(value);
+  }}
   options={options.map((option, i) => {
-    const onChange = ({ value, index }) => {
-      setAsChecked(index);
-      setCheckedValue(value);
-    };
-
-    return i === checked
-      ? {
-          ...option,
-          checked: true,
-          onchange,
-        }
-      : { ...option, onChange };
+    return i === checked ? { ...option, checked: true } : option;
   })}
 />;
 ```
