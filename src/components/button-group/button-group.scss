@@ -4,10 +4,9 @@
   border-radius: rem(3);
   display: inline-flex;
   height: rem($input-height);
+  padding: rem(4);
 
   &__item {
-    margin: rem(4);
-
     input {
       left: rem(-10000);
       position: absolute;
@@ -16,7 +15,6 @@
     input:checked + &__btn {
       background: $blue-500;
       color: $white;
-      font-weight: $font-semibold;
     }
 
     &__btn {
@@ -30,6 +28,18 @@
       height: 100%;
       padding: rem(0 16);
       text-transform: uppercase;
+
+      &:hover {
+        background: darken($gray-100, 8%);
+      }
+    }
+
+    &:not(:first-of-type):before {
+      border: rem(1) solid $gray-200;
+      content: '';
+      height: 100%;
+      margin: rem(0 8);
+      width: rem(1);
     }
   }
 
