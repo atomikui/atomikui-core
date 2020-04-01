@@ -5,40 +5,32 @@ The `ButtonGroup` component offers an `onChange` callback that can be attached t
 ### Radio Button Group
 
 ```jsx
-import { useState } from 'react';
 import { ButtonGroup } from '@alaneicker/react-component-library';
-
-const [checked, setAsChecked] = useState(1);
-const [checkedValue, setCheckedValue] = useState('Option');
-
-const options = [
-  {
-    text: 'Acura',
-    value: 'Acura',
-  },
-  {
-    text: 'Chevrolet',
-    value: 'Chevrolet',
-  },
-  {
-    text: 'Ford',
-    value: 'Ford',
-  },
-  {
-    text: 'Volkswagen',
-    value: 'Volkswagen',
-  },
-];
 
 <ButtonGroup
   label="Favorite Car Brand"
-  onChange={({ value, index }) => {
-    setAsChecked(index);
-    setCheckedValue(value);
+  onChange={(payload) => {
+    console.log(payload);
   }}
-  options={options.map((option, i) => {
-    return i === checked ? { ...option, checked: true } : option;
-  })}
+  options={[
+    {
+      text: 'Acura',
+      value: 'Acura',
+    },
+    {
+      text: 'Chevrolet',
+      value: 'Chevrolet',
+      defaultChecked: true,
+    },
+    {
+      text: 'Ford',
+      value: 'Ford',
+    },
+    {
+      text: 'Volkswagen',
+      value: 'Volkswagen',
+    },
+  ]}
 />;
 ```
 

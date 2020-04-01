@@ -9,6 +9,7 @@ const ButtonGroup = ({
   label,
   onChange,
   options,
+  required,
   size,
   stretch,
   type,
@@ -30,33 +31,30 @@ const ButtonGroup = ({
         })}
         {...others}
       >
-        {options.map(
-          ({ checked, text, disabled, value, required, ...props }, index) => {
-            const id = generateId();
+        {options.map(({ checked, text, disabled, value, ...props }, index) => {
+          const id = generateId();
 
-            return (
-              <label
-                htmlFor={id}
-                className="button-group__item"
-                key={Math.random()}
-              >
-                <input
-                  id={id}
-                  type={type}
-                  name={name}
-                  value={value}
-                  defaultChecked={checked}
-                  required={required}
-                  onChange={() => onChange({ value, index })}
-                  {...props}
-                />
-                <span className="button-group__item__btn">
-                  <span>{text}</span>
-                </span>
-              </label>
-            );
-          },
-        )}
+          return (
+            <label
+              htmlFor={id}
+              className="button-group__item"
+              key={Math.random()}
+            >
+              <input
+                id={id}
+                type={type}
+                name={name}
+                value={value}
+                required={required}
+                onChange={() => onChange({ value, index })}
+                {...props}
+              />
+              <span className="button-group__item__btn">
+                <span>{text}</span>
+              </span>
+            </label>
+          );
+        })}
       </div>
     </>
   );
@@ -76,14 +74,14 @@ ButtonGroup.propTypes = {
       text: PropTypes.node,
       /** Specifies if button is diabled. */
       disabled: PropTypes.bool,
-      /** Specifies field as required */
-      required: PropTypes.bool,
       /** Button group item value */
       value: PropTypes.string,
     }),
   ),
   /** Button group label */
   label: PropTypes.string,
+  /** Specifies field as required */
+  required: PropTypes.bool,
   /** Controls button group size */
   size: PropTypes.oneOf(['', 'sm', 'md', 'lg']),
   /** Makes button group fill width of parent */
