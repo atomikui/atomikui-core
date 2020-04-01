@@ -47,124 +47,6 @@ const options = [
 />;
 ```
 
-### Button Group Variants
-
-Variants include `Primary`, `Secondary`, and `Tertiary`.
-
-```jsx
-import { ButtonGroup } from '@alaneicker/react-component-library';
-
-<>
-  <ButtonGroup
-    label="Default Button Group"
-    options={[
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-    ]}
-  />
-  <ButtonGroup
-    label="Primary Button Group"
-    variant="primary"
-    options={[
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-    ]}
-  />
-  <ButtonGroup
-    label="Secondary Button Group"
-    variant="secondary"
-    options={[
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-    ]}
-  />
-  <ButtonGroup
-    label="Tertiary Button Group"
-    variant="tertiary"
-    options={[
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-    ]}
-  />
-</>;
-```
-
 ### button Group Sizes
 
 Sizes include `sm`, `md`, and `lg`.
@@ -176,11 +58,11 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
   <ButtonGroup
     label="Small Button Group"
     size="sm"
-    variant="primary"
     options={[
       {
         text: 'Option',
         value: 'Option',
+        checked: true,
         onChange: (details) => {
           console.log(details);
         },
@@ -211,7 +93,6 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
   <ButtonGroup
     label="Medium Button Group"
     size="md"
-    variant="primary"
     options={[
       {
         text: 'Option',
@@ -223,6 +104,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
       {
         text: 'Option',
         value: 'Option',
+        checked: true,
         onChange: (details) => {
           console.log(details);
         },
@@ -245,7 +127,6 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
   />
   <ButtonGroup
     label="Default Button Group"
-    variant="primary"
     options={[
       {
         text: 'Option',
@@ -264,6 +145,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
       {
         text: 'Option',
         value: 'Option',
+        checked: true,
         onChange: (details) => {
           console.log(details);
         },
@@ -280,7 +162,6 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
   <ButtonGroup
     label="Large Button Group"
     size="lg"
-    variant="primary"
     options={[
       {
         text: 'Option',
@@ -306,6 +187,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
       {
         text: 'Option',
         value: 'Option',
+        checked: true,
         onChange: (details) => {
           console.log(details);
         },
@@ -332,6 +214,7 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
     {
       text: 'Chevrolet',
       value: 'Chevrolet',
+      checked: true,
     },
     {
       text: 'Ford',

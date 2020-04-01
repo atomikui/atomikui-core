@@ -1,80 +1,52 @@
 .button-group {
-  display: flex;
-
-  &__label {
-    @include label();
-  }
+  align-items: stretch;
+  background: $gray-100;
+  border-radius: rem(3);
+  display: inline-flex;
+  height: rem($input-height);
 
   &__item {
+    margin: rem(4);
+
     input {
-      position: absolute;
       left: rem(-10000);
+      position: absolute;
     }
 
-    input:checked + .btn {
+    input:checked + &__btn {
       background: $blue-500;
       color: $white;
-
-      @each $variant, $map in $btn-variants {
-        &--#{$variant} {
-          background: darken(map-get($map, background-color), 10%);
-        }
-      }
+      font-weight: $font-semibold;
     }
 
-    .btn {
-      border-radius: 0;
-      position: relative;
-      z-index: 100;
-
-      &:not(:last-child) {
-        border-right: 0;
-      }
-
-      &:focus,
-      &:active {
-        z-index: 900;
-      }
-    }
-
-    &:not(:last-child) > * {
-      border-right: 0;
-    }
-
-    &:first-of-type > * {
-      border-radius: rem($base-border-radius 0 0 $base-border-radius);
-    }
-
-    &:last-of-type > * {
-      border-radius: rem(0 $base-border-radius $base-border-radius 0);
+    &__btn {
+      align-items: center;
+      border-radius: rem($base-border-radius);
+      color: $blue-400;
+      cursor: pointer;
+      display: inline-flex;
+      font-size: rem(14);
+      font-weight: $font-medium;
+      height: 100%;
+      padding: rem(0 16);
+      text-transform: uppercase;
     }
   }
 
-  & > * + * > * {
-    border-left: rem(1) solid lighten($blue-500, 10%);
+  &--sm {
+    height: rem($input-height - 12);
   }
 
-  &--primary > * + * > * {
-    border-left: rem(1) solid lighten($blue-200, 10%);
+  &--md {
+    height: rem($input-height - 6);
   }
 
-  &--secondary > * + * > * {
-    border-left: rem(1) solid lighten($green-100, 10%);
-  }
-
-  &--tertiary > * + * > * {
-    border-left: rem(1) solid lighten($red-100, 10%);
+  &--lg {
+    height: rem($input-height + 12);
   }
 
   &--stretch {
-    display: flex;
-
-    & > * {
-      flex: 1;
-    }
-
-    & > * > * {
-      text-align: center;
+    &__options {
       width: 100%;
     }
   }

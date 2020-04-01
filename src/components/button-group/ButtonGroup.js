@@ -2,24 +2,21 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { generateId } from '../../utilities/generateId';
+import Label from '../label';
 
-const ButtonGroup = ({
-  classes,
-  label,
-  options,
-  size,
-  stretch,
-  variant,
-  ...others
-}) => {
+const ButtonGroup = ({ classes, label, options, size, stretch, ...others }) => {
   const name = generateId('button-group');
 
   return (
     <>
-      {label && <div className="button-group__label">{label}</div>}
+      {label && (
+        <div className="flex">
+          <Label>{label}</Label>
+        </div>
+      )}
       <div
         className={classnames('button-group', classes, {
-          [`button-group--${variant}`]: variant,
+          [`button-group--${size}`]: size,
           'button-group--stretch': stretch,
         })}
         {...others}
@@ -39,16 +36,10 @@ const ButtonGroup = ({
                 name={name}
                 checked={checked}
                 value={value}
-                onChange={(e) => onChange({ value: e.target.value, index })}
+                onChange={() => onChange({ value, index })}
               />
-              <span
-                className={classnames('btn', {
-                  [`btn--${variant}`]: variant,
-                  [`btn--${size}`]: size,
-                })}
-                disabled={disabled}
-              >
-                {text}
+              <span className="button-group__item__btn">
+                <span>{text}</span>
               </span>
             </label>
           );
@@ -82,8 +73,6 @@ ButtonGroup.propTypes = {
   size: PropTypes.oneOf(['', 'sm', 'md', 'lg']),
   /** Makes button group fill width of parent */
   stretch: PropTypes.bool,
-  /** Specifies the button variation. */
-  variant: PropTypes.oneOf(['', 'primary', 'secondary', 'tertiary']),
 };
 
 ButtonGroup.defaultProps = {
