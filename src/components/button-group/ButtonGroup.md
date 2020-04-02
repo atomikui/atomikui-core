@@ -2,8 +2,6 @@ The `ButtonGroup` is a series of buttons together on a single line, representing
 
 It is a stateless component, therefore the selected state must be managed externally.
 
-### Radio Button Group
-
 ```jsx
 import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 
@@ -14,7 +12,7 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 </ButtonGroup>;
 ```
 
-### button Group Sizes
+### Button Group Sizes
 
 Sizes include `sm`, `md`, and `lg`.
 
