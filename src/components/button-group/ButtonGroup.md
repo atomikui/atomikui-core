@@ -5,33 +5,13 @@ The `ButtonGroup` component offers an `onChange` callback that can be attached t
 ### Radio Button Group
 
 ```jsx
-import { ButtonGroup } from '@alaneicker/react-component-library';
+import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 
-<ButtonGroup
-  label="Favorite Car Brand"
-  onChange={(payload) => {
-    console.log(payload);
-  }}
-  options={[
-    {
-      text: 'Acura',
-      value: 'Acura',
-    },
-    {
-      text: 'Chevrolet',
-      value: 'Chevrolet',
-      defaultChecked: true,
-    },
-    {
-      text: 'Ford',
-      value: 'Ford',
-    },
-    {
-      text: 'Volkswagen',
-      value: 'Volkswagen',
-    },
-  ]}
-/>;
+<ButtonGroup label="Favorite Car Brand">
+  <Button>Chevrolet</Button>
+  <Button classes="is-selected">Ford</Button>
+  <Button>GMC</Button>
+</ButtonGroup>;
 ```
 
 ### button Group Sizes
@@ -39,148 +19,29 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
 Sizes include `sm`, `md`, and `lg`.
 
 ```jsx
-import { ButtonGroup } from '@alaneicker/react-component-library';
+import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 
 <>
-  <ButtonGroup
-    label="Small Button Group"
-    size="sm"
-    options={[
-      {
-        text: 'Option',
-        value: 'Option',
-        checked: true,
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-    ]}
-  />
-  <ButtonGroup
-    label="Medium Button Group"
-    size="md"
-    options={[
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        checked: true,
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-    ]}
-  />
-  <ButtonGroup
-    label="Default Button Group"
-    options={[
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        checked: true,
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-    ]}
-  />
-  <ButtonGroup
-    label="Large Button Group"
-    size="lg"
-    options={[
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-      {
-        text: 'Option',
-        value: 'Option',
-        checked: true,
-        onChange: (details) => {
-          console.log(details);
-        },
-      },
-    ]}
-  />
+  <ButtonGroup label="Button Group (Small)" size="sm">
+    <Button>Chevrolet</Button>
+    <Button classes="is-selected">Ford</Button>
+    <Button>GMC</Button>
+  </ButtonGroup>
+  <ButtonGroup label="Button Group (Medium)" size="md">
+    <Button>Chevrolet</Button>
+    <Button classes="is-selected">Ford</Button>
+    <Button>GMC</Button>
+  </ButtonGroup>
+  <ButtonGroup label="Button Group (Default)">
+    <Button>Chevrolet</Button>
+    <Button classes="is-selected">Ford</Button>
+    <Button>GMC</Button>
+  </ButtonGroup>
+  <ButtonGroup label="Button Group (Large)" size="lg">
+    <Button>Chevrolet</Button>
+    <Button classes="is-selected">Ford</Button>
+    <Button>GMC</Button>
+  </ButtonGroup>
 </>;
 ```
 
@@ -189,29 +50,12 @@ import { ButtonGroup } from '@alaneicker/react-component-library';
 A `ButtonGroup` with many options do not work well on smaller devices. In this case, it is recommended to use a `DropDown` menu to convey the list of options.
 
 ```jsx
-import { ButtonGroup } from '@alaneicker/react-component-library';
+import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 
-<ButtonGroup
-  label="Favorite Car Brand"
-  options={[
-    {
-      text: 'Acura',
-      value: 'Acura',
-    },
-    {
-      text: 'Chevrolet',
-      value: 'Chevrolet',
-      checked: true,
-    },
-    {
-      text: 'Ford',
-      value: 'Ford',
-    },
-    {
-      text: 'Volkswagen',
-      value: 'Volkswagen',
-    },
-  ]}
-  stretch
-/>;
+<ButtonGroup label="Button Group (Medium)" stretch>
+  <Button>Chevrolet</Button>
+  <Button classes="is-selected">Ford</Button>
+  <Button>GMC</Button>
+  <Button>Honda</Button>
+</ButtonGroup>;
 ```
