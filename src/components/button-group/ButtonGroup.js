@@ -23,6 +23,7 @@ const ButtonGroup = ({
         [`button-group--${size}`]: size,
         'button-group--stretch': stretch,
       })}
+      role="group"
       {...others}
     >
       {children}
@@ -49,8 +50,8 @@ ButtonGroup.defaultProps = {
   classes: '',
   children: null,
   label: '',
-  options: [],
   required: false,
+  size: '',
   stretch: false,
 };
 

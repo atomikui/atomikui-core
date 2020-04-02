@@ -1,6 +1,6 @@
-### Managing Button Group State
+The `ButtonGroup` is a series of buttons together on a single line, representing selectable options.
 
-The `ButtonGroup` component offers an `onChange` callback that can be attached to each item to return the selected index and value. The eample below shows how state can be managed externally.
+It is a stateless component, therefore the selected state must be managed externally.
 
 ### Radio Button Group
 

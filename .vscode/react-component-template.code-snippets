@@ -15,7 +15,7 @@
       "",
       "Component.propTypes = {",
       "  /** Adds custom component CSS classes */",
-      "  classes: PropType.string,",
+      "  classes: PropTypes.string,",
       "};",
       "",
       "Component.defaultProps = {",
