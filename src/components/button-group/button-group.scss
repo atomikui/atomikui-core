@@ -1,11 +1,13 @@
 .button-group {
   align-items: stretch;
+  border: rem(1) solid $gray-200;
+  border-radius: rem(3);
   display: inline-flex;
   height: rem($input-height);
 
   & > * {
     align-items: center;
-    background: $gray-100;
+    background: $white;
     border: 0;
     border-radius: 0;
     color: $blue-400;
@@ -20,16 +22,11 @@
 
     &:hover,
     &:focus {
-      background: darken($gray-100, 7%);
+      background: $gray-100;
     }
 
     &:focus {
       z-index: 900;
-    }
-
-    &.is-selected {
-      background: $blue-500;
-      color: $white;
     }
 
     &:first-of-type {
@@ -38,6 +35,11 @@
 
     &:last-of-type {
       border-radius: rem(0 3 3 0);
+    }
+
+    &.is-selected {
+      background: $blue-500;
+      color: $white;
     }
   }
 
