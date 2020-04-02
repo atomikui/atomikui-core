@@ -7,7 +7,7 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 
 <ButtonGroup
   label="Favorite Car Brand"
-  helpText="Select any car but a Chevrolet"
+  helpText="Select any car but a Chevrolet."
 >
   <Button>Chevrolet</Button>
   <Button classes="is-selected">Ford</Button>
@@ -23,11 +23,11 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 
 <ButtonGroup
   label="Favorite Car Brand"
-  errorText="Please select a car"
+  errorText="Chevrolet is not a good car. Pick another."
   hasError
 >
-  <Button>Chevrolet</Button>
-  <Button classes="is-selected">Ford</Button>
+  <Button classes="is-selected">Chevrolet</Button>
+  <Button>Ford</Button>
   <Button>GMC</Button>
   <Button>Honda</Button>
 </ButtonGroup>;
