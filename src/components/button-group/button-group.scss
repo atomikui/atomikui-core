@@ -41,6 +41,10 @@
     }
   }
 
+  & > * + * {
+    border-left: rem(1) solid darken($gray-100, 10%);
+  }
+
   &--sm {
     height: rem($input-height - 14);
 

@@ -9,6 +9,7 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
   <Button>Chevrolet</Button>
   <Button classes="is-selected">Ford</Button>
   <Button>GMC</Button>
+  <Button>Honda</Button>
 </ButtonGroup>;
 ```
 
@@ -24,21 +25,25 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
     <Button>Chevrolet</Button>
     <Button classes="is-selected">Ford</Button>
     <Button>GMC</Button>
+    <Button>Honda</Button>
   </ButtonGroup>
   <ButtonGroup label="Button Group (Medium)" size="md">
     <Button>Chevrolet</Button>
     <Button classes="is-selected">Ford</Button>
     <Button>GMC</Button>
+    <Button>Honda</Button>
   </ButtonGroup>
   <ButtonGroup label="Button Group (Default)">
     <Button>Chevrolet</Button>
     <Button classes="is-selected">Ford</Button>
     <Button>GMC</Button>
+    <Button>Honda</Button>
   </ButtonGroup>
   <ButtonGroup label="Button Group (Large)" size="lg">
     <Button>Chevrolet</Button>
     <Button classes="is-selected">Ford</Button>
     <Button>GMC</Button>
+    <Button>Honda</Button>
   </ButtonGroup>
 </>;
 ```
