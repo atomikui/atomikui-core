@@ -13,6 +13,23 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 </ButtonGroup>;
 ```
 
+### Error state
+
+```jsx
+import { ButtonGroup, Button } from '@alaneicker/react-component-library';
+
+<ButtonGroup
+  label="Favorite Car Brand"
+  errorText="Please select a car"
+  hasError
+>
+  <Button>Chevrolet</Button>
+  <Button classes="is-selected">Ford</Button>
+  <Button>GMC</Button>
+  <Button>Honda</Button>
+</ButtonGroup>;
+```
+
 ### Button Group Sizes
 
 Sizes include `sm`, `md`, and `lg`.
@@ -27,18 +44,21 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
     <Button>GMC</Button>
     <Button>Honda</Button>
   </ButtonGroup>
+  <div className="margin-bottom-8" />
   <ButtonGroup label="Button Group (Medium)" size="md">
     <Button>Chevrolet</Button>
     <Button classes="is-selected">Ford</Button>
     <Button>GMC</Button>
     <Button>Honda</Button>
   </ButtonGroup>
+  <div className="margin-bottom-8" />
   <ButtonGroup label="Button Group (Default)">
     <Button>Chevrolet</Button>
     <Button classes="is-selected">Ford</Button>
     <Button>GMC</Button>
     <Button>Honda</Button>
   </ButtonGroup>
+  <div className="margin-bottom-8" />
   <ButtonGroup label="Button Group (Large)" size="lg">
     <Button>Chevrolet</Button>
     <Button classes="is-selected">Ford</Button>
