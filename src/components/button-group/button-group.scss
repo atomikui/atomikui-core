@@ -18,7 +18,8 @@
     text-align: center;
     text-transform: uppercase;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: darken($gray-100, 7%);
     }
 
