@@ -5,7 +5,10 @@ It is a stateless component, therefore the selected state must be managed extern
 ```jsx
 import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 
-<ButtonGroup label="Favorite Car Brand">
+<ButtonGroup
+  label="Favorite Car Brand"
+  helpText="Select any car but a Chevrolet"
+>
   <Button>Chevrolet</Button>
   <Button classes="is-selected">Ford</Button>
   <Button>GMC</Button>
