@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
 import moment from 'moment';
+import createFocusTrap from 'focus-trap';
 import FormField from '../form-field';
 import Button from '../button';
 import 'react-calendar/dist/Calendar.css';
-
-// TODO: Creat a Calendar component utilizing the react-calendar module
 
 const DatePicker = ({
   classes,
@@ -17,6 +16,8 @@ const DatePicker = ({
   value,
   ...props
 }) => {
+  const calendar = useRef();
+  const [focusTrap, setFocusTrap] = useState(null);
   const [originalValue, setOriginalValue] = useState(value);
   const [theValue, setTheValue] = useState(value);
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,25 @@ const DatePicker = ({
     setTheValue(originalValue);
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    setFocusTrap(
+      createFocusTrap(calendar.current, {
+        allowOutsideClick: false,
+        clickOutsideDeactivates: false,
+        escapeDeactivates: false,
+        fallbackFocus: calendar,
+      }),
+    );
+  }, [calendar]);
+
+  useEffect(() => {
+    if (focusTrap) {
+      setTimeout(() => {
+        focusTrap[isOpen ? 'activate' : 'deactivate']();
+      }, 200);
+    }
+  }, [focusTrap, isOpen]);
 
   return (
     <div className={classnames('date-picker', classes, {})}>
@@ -57,6 +77,7 @@ const DatePicker = ({
         </Button>
       </div>
       <div
+        ref={calendar}
         className={classnames('date-picker__calendar', {
           'is-open': isOpen,
         })}
@@ -73,6 +94,7 @@ const DatePicker = ({
             variant="primary"
             size="md"
             onClick={() => handleCalendarSubmit()}
+            disabled={theValue === originalValue}
           >
             OK
           </Button>

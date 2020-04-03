@@ -49,7 +49,7 @@ const Modal = ({
     if (focusTrap) {
       setTimeout(() => {
         focusTrap[isOpen ? 'activate' : 'deactivate']();
-      }, 200);
+      }, 300);
     }
   }, [focusTrap, isOpen]);
 
