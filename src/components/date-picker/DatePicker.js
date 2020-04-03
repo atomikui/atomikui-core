@@ -37,10 +37,6 @@ const DatePicker = ({
     setIsOpen(false);
   };
 
-  const handleCalendarCancel = () => {
-    cancel();
-  };
-
   const handleKeyDown = (e) => {
     if (e.keyCode === 27) {
       cancel();
@@ -97,13 +93,13 @@ const DatePicker = ({
             value={theValue ? new Date(theValue) : ''}
           />
           <div className="date-picker__calendar__ui__btns">
-            <Button size="md" onClick={() => handleCalendarCancel()}>
+            <Button size="md" onClick={cancel}>
               Cancel
             </Button>
             <Button
               variant="primary"
               size="md"
-              onClick={() => handleCalendarSubmit()}
+              onClick={handleCalendarSubmit}
               disabled={theValue === originalValue}
             >
               OK
