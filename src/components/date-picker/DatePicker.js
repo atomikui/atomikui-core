@@ -6,10 +6,12 @@ import moment from 'moment';
 import createFocusTrap from 'focus-trap';
 import FormField from '../form-field';
 import Button from '../button';
+import Label from '../label';
 
 const DatePicker = ({
   classes,
   disabled,
+  label,
   onChange,
   onDateChange,
   value,
@@ -64,11 +66,13 @@ const DatePicker = ({
 
   return (
     <div className={classnames('date-picker', classes)}>
+      <Label>{label}</Label>
       <div className="date-picker__input">
         <FormField
           onChange={onChange}
           value={theValue}
           disabled={disabled}
+          labelless
           {...props}
         />
         <Button
@@ -116,6 +120,8 @@ DatePicker.propTypes = {
   classes: PropTypes.string,
   /** Disables a date picker form field and calandar. */
   disabled: PropTypes.bool,
+  /** Specifies label text. */
+  label: PropTypes.string,
   /** Triggers callback when date picker input value changes */
   onChange: PropTypes.func,
   /** Triggers callback when calendar date changes */
@@ -127,6 +133,7 @@ DatePicker.propTypes = {
 DatePicker.defaultProps = {
   classes: '',
   disabled: false,
+  label: '',
   onChange() {},
   onDateChange() {},
   value: '',
