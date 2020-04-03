@@ -34,10 +34,13 @@
     background: darken($blue-200, 10%);
   }
 
-  .react-calendar__tile--now,
-  .react-calendar__tile--now:hover {
+  .react-calendar__tile--now {
     background: $blue-000;
     color: $black;
+  }
+
+  .react-calendar__tile--now:hover {
+    background: darken($blue-000, 5%) !important;
   }
 
   @media (min-width: $breakpoint-small) {
