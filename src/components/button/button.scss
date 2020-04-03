@@ -1,6 +1,6 @@
 .btn,
 a.btn {
-  background: $white;
+  background-color: $white;
   border: rem(1) solid $blue-400;
   border-radius: rem($base-border-radius);
   color: $blue-400;
@@ -15,15 +15,15 @@ a.btn {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background 0.3s linear;
+  transition: background-color 0.3s linear;
 
   &:hover {
-    background: $blue-000;
+    background-color: $blue-000;
   }
 
   &:focus,
   &:active {
-    background: $blue-000;
+    background-color: $blue-000;
     @include focus-outline();
   }
 
@@ -31,7 +31,7 @@ a.btn {
   &:disabled:hover,
   &:disabled:focus,
   &:disabled:active {
-    background: $gray-100;
+    background-color: $gray-100;
     box-shadow: 0;
     color: $gray-300;
     cursor: default;
@@ -47,7 +47,7 @@ a.btn {
 
   @each $variant, $map in $btn-variants {
     &--#{$variant} {
-      background: map-get($map, background-color);
+      background-color: map-get($map, background-color);
       border: 0;
       color: map-get($map, font-color);
       padding: map-get($map, padding);
@@ -55,7 +55,7 @@ a.btn {
       &:active,
       &:focus,
       &:hover {
-        background: darken(map-get($map, background-color), 10%);
+        background-color: darken(map-get($map, background-color), 10%);
       }
 
       &:focus,
@@ -67,12 +67,12 @@ a.btn {
 
   &--hollow {
     &:hover {
-      background: $blue-000;
+      background-color: $blue-000;
     }
 
     &:focus,
     &:active {
-      background: $blue-000;
+      background-color: $blue-000;
       @include focus-outline();
     }
   }

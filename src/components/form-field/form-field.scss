@@ -14,7 +14,7 @@
     padding: rem(0 8);
     width: 100%;
 
-    &:focus {
+    &:not(:read-only):focus {
       box-shadow: $formfield-focus;
     }
 
