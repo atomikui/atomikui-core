@@ -6,7 +6,6 @@ import moment from 'moment';
 import createFocusTrap from 'focus-trap';
 import FormField from '../form-field';
 import Button from '../button';
-import 'react-calendar/dist/Calendar.css';
 
 const DatePicker = ({
   classes,
