@@ -66,7 +66,11 @@ const DatePicker = ({
 
   return (
     <div className={classnames('date-picker', classes)}>
-      <Label>{label}</Label>
+      {label && (
+        <div className="date-picker__label">
+          <Label>{label}</Label>
+        </div>
+      )}
       <div className="date-picker__input">
         <FormField
           onChange={onChange}

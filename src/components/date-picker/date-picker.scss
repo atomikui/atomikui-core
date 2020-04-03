@@ -1,4 +1,8 @@
 .date-picker {
+  &__label {
+    margin-bottom: rem(3);
+  }
+
   &__input {
     position: relative;
 
