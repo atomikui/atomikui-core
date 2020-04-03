@@ -7,8 +7,6 @@ import createFocusTrap from 'focus-trap';
 import FormField from '../form-field';
 import Button from '../button';
 
-// TODO: Compoenntize calendar
-
 const DatePicker = ({
   classes,
   disabled,
@@ -86,17 +84,17 @@ const DatePicker = ({
         </Button>
       </div>
       <div
-        className={classnames('calendar', {
+        className={classnames('date-picker__calendar', {
           'is-open': isOpen,
         })}
         onKeyDown={(e) => handleKeyDown(e)}
       >
-        <div className="calendar__ui" ref={calendar}>
+        <div className="date-picker__calendar__ui" ref={calendar}>
           <Calendar
             onChange={(details) => handleDateChange(details)}
             value={theValue ? new Date(theValue) : ''}
           />
-          <div className="calendar__ui__btns">
+          <div className="date-picker__calendar__ui__btns">
             <Button size="md" onClick={() => handleCalendarCancel()}>
               Cancel
             </Button>

@@ -24,41 +24,39 @@
       background-color: transparent;
     }
   }
-}
 
-// TODO: Compoenntize calendar
+  &__calendar {
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    padding: rem(4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 900;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
 
-.calendar {
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 0;
-  padding: rem(4);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 900;
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
-  visibility: hidden;
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
 
-  &.is-open {
-    opacity: 1;
-    visibility: visible;
-  }
+    &__ui {
+      background: $white;
+      box-shadow: rem(0 0 70) rgba(0, 0, 0, 0.25);
 
-  &__ui {
-    background: $white;
-    box-shadow: rem(0 0 70) rgba(0, 0, 0, 0.25);
+      &__btns {
+        padding: rem(8 16 16);
+        text-align: right;
 
-    &__btns {
-      padding: rem(8 16 16);
-      text-align: right;
-
-      & > * + * {
-        margin-left: rem(8);
+        & > * + * {
+          margin-left: rem(8);
+        }
       }
     }
   }
