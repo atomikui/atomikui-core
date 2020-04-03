@@ -34,6 +34,14 @@ const DatePicker = ({
   };
 
   const handleCalendarCancel = () => {
+    cancel();
+  };
+
+  const handleKeyDown = (e) => {
+    e.keyCode === 27 && cancel();
+  };
+
+  const cancel = () => {
     setTheValue(originalValue);
     setIsOpen(false);
   };
@@ -43,7 +51,7 @@ const DatePicker = ({
       createFocusTrap(calendar.current, {
         allowOutsideClick: false,
         clickOutsideDeactivates: false,
-        escapeDeactivates: false,
+        escapeDeactivates: true,
         fallbackFocus: calendar,
       }),
     );
@@ -58,7 +66,7 @@ const DatePicker = ({
   }, [focusTrap, isOpen]);
 
   return (
-    <div className={classnames('date-picker', classes, {})}>
+    <div className={classnames('date-picker', classes)}>
       <div className="date-picker__input">
         <FormField
           onChange={onChange}
@@ -73,7 +81,7 @@ const DatePicker = ({
           onClick={() => setIsOpen(!isOpen)}
           disabled={disabled}
         >
-          Cancel
+          Select a Date
         </Button>
       </div>
       <div
@@ -81,6 +89,7 @@ const DatePicker = ({
         className={classnames('date-picker__calendar', {
           'is-open': isOpen,
         })}
+        onKeyDown={(e) => handleKeyDown(e)}
       >
         <Calendar
           onChange={(details) => handleDateChange(details)}
