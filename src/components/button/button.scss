@@ -31,7 +31,7 @@ a.btn {
   &:disabled:hover,
   &:disabled:focus,
   &:disabled:active {
-    background-color: $gray-100;
+    background-color: $gray-000;
     box-shadow: 0;
     color: $gray-300;
     cursor: default;
