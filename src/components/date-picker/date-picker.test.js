@@ -7,7 +7,20 @@ import DatePicker from './DatePicker';
 configure({ adapter: new Adapter() });
 
 describe('<DatePicker />', () => {
-  beforeEach(() => {});
+  let datepicker;
 
-  it('Test label', () => {});
+  beforeEach(() => {
+    datepicker = mount(
+      <DatePicker
+        label="Select a Date"
+        helpText="Expected Format: MM/DD/YYYY"
+        onChange={(date) => console.log(date)}
+        value="04/08/2020"
+      />,
+    );
+  });
+
+  it('Should render without errors', () => {
+    expect(datepicker.length).toBe(1);
+  });
 });
