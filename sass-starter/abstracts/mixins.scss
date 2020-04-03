@@ -27,8 +27,8 @@
   background-color: $white;
   border: $input-border;
   height: rem(22);
-  width: rem(22);
   outline: 0;
+  width: rem(22);
 }
 
 @mixin input {
@@ -38,11 +38,11 @@
   background-color: $white;
   border: $input-border;
   border-radius: rem($base-border-radius);
-  height: rem($input-height);
-  font-size: inherit;
   font-family: inherit;
-  padding: rem(8);
+  font-size: inherit;
+  height: rem($input-height);
   outline: 0;
+  padding: rem(8);
   width: 100%;
 
   &:focus {
