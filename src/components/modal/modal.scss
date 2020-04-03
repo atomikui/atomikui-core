@@ -1,6 +1,6 @@
 .modal {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.4);
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -42,7 +42,7 @@
 
   &__dialog {
     background-color: $white;
-    box-shadow: rem(0 4 16) rgba(0, 0, 0, 0.25);
+    box-shadow: rem(0 0 70) rgba(0, 0, 0, 0.25);
     display: flex;
     flex: 1;
     flex-direction: column;
