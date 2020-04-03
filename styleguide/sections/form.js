@@ -7,6 +7,7 @@ module.exports = {
   components: () => [
     'src/components/button/Button.js',
     'src/components/button-group/ButtonGroup.js',
+    'src/components/date-picker/DatePicker.js',
     'src/components/dropdown/Dropdown.js',
     'src/components/form-field/FormField.js',
     'src/components/form-option/FormOption.js',
