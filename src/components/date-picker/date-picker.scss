@@ -1,2 +1,22 @@
 .date-picker {
+  &__calendar {
+    background: $white;
+    box-shadow: rem(0 0 30) rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    flex-direction: column;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 900;
+  }
+
+  &__calendar__btns {
+    padding: rem(8 16 16);
+    text-align: right;
+
+    & > * + * {
+      margin-left: rem(8);
+    }
+  }
 }

@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
 import moment from 'moment';
 import FormField from '../form-field';
+import Button from '../button';
 import 'react-calendar/dist/Calendar.css';
+
+// TODO: Creat a Calendar component utilizing the react-calendar module
 
 const DatePicker = ({ classes, onChange, onDateChange, value, ...props }) => {
   const [theValue, setTheValue] = useState(value);
@@ -16,9 +19,17 @@ const DatePicker = ({ classes, onChange, onDateChange, value, ...props }) => {
   };
 
   return (
-    <div className={classnames('component-class', classes, {})}>
+    <div className={classnames('date-picker', classes, {})}>
       <FormField onChange={onChange} value={theValue} {...props} />
-      <Calendar onChange={(details) => handleDateChange(details)} />
+      <div className="date-picker__calendar">
+        <Calendar onChange={(details) => handleDateChange(details)} />
+        <div className="date-picker__calendar__btns">
+          <Button size="md">Cancel</Button>
+          <Button variant="primary" size="md">
+            OK
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };
