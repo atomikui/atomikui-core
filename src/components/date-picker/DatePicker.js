@@ -21,6 +21,11 @@ const DatePicker = ({
   const [theValue, setTheValue] = useState(value);
   const [isOpen, setIsOpen] = useState(false);
 
+  const cancel = () => {
+    setTheValue(originalValue);
+    setIsOpen(false);
+  };
+
   const handleDateChange = (details) => {
     const date = moment(details).format('MM/DD/YYYY');
     setTheValue(date);
@@ -37,12 +42,9 @@ const DatePicker = ({
   };
 
   const handleKeyDown = (e) => {
-    e.keyCode === 27 && cancel();
-  };
-
-  const cancel = () => {
-    setTheValue(originalValue);
-    setIsOpen(false);
+    if (e.keyCode === 27) {
+      cancel();
+    }
   };
 
   useEffect(() => {
