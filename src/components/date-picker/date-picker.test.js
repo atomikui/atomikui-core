@@ -54,7 +54,7 @@ describe('<DatePicker />', () => {
       .find('.date-picker__calendar__ui__btns > :first-child')
       .simulate('click');
 
-    expect(datepicker.find('input.formfield__input').prop('defaultValue')).toBe(
+    expect(datepicker.find('input.formfield__input').prop('value')).toBe(
       originalValue,
     );
   });
