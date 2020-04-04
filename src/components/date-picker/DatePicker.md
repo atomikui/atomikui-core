@@ -1,7 +1,7 @@
+The `DatePicker` allows the user to either enter a date manually via input or select a date from the calendar widget.
+
 ```jsx
 import { DatePicker } from '@alaneicker/react-component-library';
-
-The `DatePicker` allows the user to either enter a date manually via input or select a date from the calendar widget.
 
 <>
   <DatePicker
