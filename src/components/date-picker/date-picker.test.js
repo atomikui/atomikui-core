@@ -44,7 +44,7 @@ describe('<DatePicker />', () => {
     );
   });
 
-  it('Should reset DatePicker input value on cancel', () => {
+  it('Should reset DatePicker input value on `cancel`', () => {
     datepicker
       .find('.react-calendar__tile')
       .first()
@@ -55,6 +55,21 @@ describe('<DatePicker />', () => {
       .simulate('click');
 
     expect(datepicker.find('.formfield__input').prop('value')).toBe(
+      originalValue,
+    );
+  });
+
+  it('Should set DatePicker input value on `OK`', () => {
+    datepicker
+      .find('.react-calendar__tile')
+      .first()
+      .simulate('click');
+
+    datepicker
+      .find('.date-picker__calendar__ui__btns > :last-child')
+      .simulate('click');
+
+    expect(datepicker.find('.formfield__input').prop('value')).not.toBe(
       originalValue,
     );
   });
