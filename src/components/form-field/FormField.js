@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import MaskedInput from 'react-text-mask';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
 import { generateId } from '../../utilities/generateId';
@@ -32,7 +33,7 @@ const FormField = ({
   helpText,
   id,
   label,
-  labelless,
+  mask,
   name,
   onChange,
   placeholder,
@@ -48,13 +49,15 @@ const FormField = ({
   const inputErrorId = `${inputName}_error`;
   const fieldType = !types.includes(type) ? 'text' : type;
 
+  const Input = mask ? MaskedInput : 'input';
+
   return (
     <div
       className={classnames('formfield', classes, {
         'has-error': hasError,
       })}
     >
-      {!labelless && (
+      {label && (
         <div className="formfield__label">
           <Label htmlFor={uid}>{label}</Label>
         </div>
@@ -74,11 +77,12 @@ const FormField = ({
           {...others}
         />
       ) : (
-        <input
+        <Input
           id={uid}
           name={inputName}
           className={classnames('formfield__input', classes, {})}
           type={fieldType}
+          mask={mask}
           placeholder={placeholder}
           value={value}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
@@ -118,8 +122,8 @@ FormField.propTypes = {
   id: PropTypes.string,
   /** Specifies label text. */
   label: PropTypes.string,
-  /** Hides label. */
-  labelless: PropTypes.bool,
+  /** Optional form field mask */
+  mask: PropTypes.array,
   /** onChange callback. */
   onChange: PropTypes.func,
   /** Specifies input placeholder text. */
@@ -144,7 +148,7 @@ FormField.defaultProps = {
   helpText: '',
   id: null,
   label: '',
-  labelless: false,
+  mask: '',
   name: '',
   onChange() {},
   placeholder: '',

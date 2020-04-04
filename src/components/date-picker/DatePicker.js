@@ -30,7 +30,17 @@ const DatePicker = ({
 
   const handleDateChange = (details) => {
     const date = moment(details).format('MM/DD/YYYY');
+    const invalid = date === 'Invalid date';
+
+    if (invalid) {
+      return;
+    }
+
     setTheValue(date);
+
+    if (typeof details === 'string') {
+      setOriginalValue(date);
+    }
   };
 
   const handleCalendarSubmit = () => {
@@ -73,10 +83,21 @@ const DatePicker = ({
       )}
       <div className="date-picker__input">
         <FormField
-          onChange={onChange}
+          mask={[
+            /[0-1]/,
+            /[0-9]/,
+            '/',
+            /[0-3]/,
+            /[1-9]/,
+            '/',
+            /[1-2]/,
+            /[0-9]/,
+            /[0-9]/,
+            /[0-9]/,
+          ]}
+          onBlur={(e) => handleDateChange(e.target.value)}
           value={theValue}
           disabled={disabled}
-          labelless
           {...props}
         />
         <Button

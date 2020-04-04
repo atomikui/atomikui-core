@@ -10,7 +10,7 @@ const [value, setValue] = useState('');
   type="text"
   label="Search"
   value={value}
-  onChange={e => setValue(e.target.value)}
+  onChange={(e) => setValue(e.target.value)}
 />;
 ```
 
@@ -26,7 +26,7 @@ const [value, setValue] = useState('');
   type="textarea"
   label="Enter your comments"
   value={value}
-  onChange={e => setValue(e.target.value)}
+  onChange={(e) => setValue(e.target.value)}
 />;
 ```
 
@@ -43,7 +43,35 @@ const [value, setValue] = useState('');
   label="Phone Number"
   value={value}
   helpText="Expected format: (000) 000-0000"
-  onChange={e => setValue(e.target.value)}
+  onChange={(e) => setValue(e.target.value)}
+/>;
+```
+
+### Masked Form Field
+
+```jsx
+import { useState } from 'react';
+import { FormField } from '@alaneicker/react-component-library';
+
+const [value, setValue] = useState('');
+
+<FormField
+  type="text"
+  label="Today's Date"
+  mask={[
+    /[0-9]/,
+    /[1-9]/,
+    '/',
+    /[0-9]/,
+    /[1-9]/,
+    '/',
+    /[1-9]/,
+    /[0-9]/,
+    /[0-9]/,
+    /[0-9]/,
+  ]}
+  value={value}
+  onChange={(e) => setValue(e.target.value)}
 />;
 ```
 
@@ -61,7 +89,7 @@ const [value, setValue] = useState('');
   value={value}
   hasError={!value}
   errorText="This fields is required"
-  onChange={e => setValue(e.target.value)}
+  onChange={(e) => setValue(e.target.value)}
 />;
 ```
 
