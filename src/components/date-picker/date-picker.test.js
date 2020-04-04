@@ -73,4 +73,16 @@ describe('<DatePicker />', () => {
       originalValue,
     );
   });
+
+  it('Should close calendar when on escape press', () => {
+    datepicker.find('.date-picker__input__btn').simulate('click');
+
+    datepicker
+      .find('.date-picker__calendar__ui__btns > :last-child')
+      .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
+
+    expect(datepicker.find('.date-picker__calendar').hasClass('is-open')).toBe(
+      false,
+    );
+  });
 });
