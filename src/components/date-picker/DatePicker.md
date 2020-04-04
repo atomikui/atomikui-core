@@ -1,4 +1,4 @@
-The `DatePicker` allows the user to either enter a date manually via input or select a date from the calendar widget.
+The DatePicker allows the user to either enter a date manually via input or select a date from the calendar widget.
 
 ```jsx
 import { DatePicker } from '@alaneicker/react-component-library';
@@ -15,7 +15,7 @@ import { DatePicker } from '@alaneicker/react-component-library';
 
 ### Disabled
 
-The `disabled` prop prevents any user input on the `DatePicker` input and disables calendar date selection.
+The `disabled` prop prevents any user input on the DatePicker input and disables calendar date selection.
 
 ```jsx
 import { DatePicker } from '@alaneicker/react-component-library';
@@ -32,7 +32,7 @@ import { DatePicker } from '@alaneicker/react-component-library';
 
 ### Read Only
 
-The `readOnly` prop prevents user input on the `DatePicker` input, but still allows calendar date selection.
+The `readOnly` prop prevents user input on the DatePicker input, but still allows calendar date selection.
 
 ```jsx
 import { DatePicker } from '@alaneicker/react-component-library';
