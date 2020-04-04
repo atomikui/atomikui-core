@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { generateId } from '../../utilities/generateId';
+import generateId from '../../utilities/generateId';
 import Hint from '../hint';
 import Label from '../label';
 

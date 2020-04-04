@@ -12,9 +12,9 @@
     "react": "^16.13.0",
     "react-calendar": "^3.0.1",
     "react-dom": "^16.13.0",
+    "react-masked-field": "^2.0.3",
     "react-scripts": "3.4.0",
     "react-styleguidist": "^11.0.3",
-    "react-text-mask": "^5.4.3",
     "yup": "^0.28.3"
   },
   "scripts": {

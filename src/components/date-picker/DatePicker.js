@@ -30,11 +30,6 @@ const DatePicker = ({
 
   const handleDateChange = (details) => {
     const date = moment(details).format('MM/DD/YYYY');
-    const invalid = date === 'Invalid date';
-
-    if (invalid) {
-      return;
-    }
 
     setTheValue(date);
 
@@ -83,18 +78,7 @@ const DatePicker = ({
       )}
       <div className="date-picker__input">
         <FormField
-          mask={[
-            /[0-1]/,
-            /[0-9]/,
-            '/',
-            /[0-3]/,
-            /[1-9]/,
-            '/',
-            /[1-2]/,
-            /[0-9]/,
-            /[0-9]/,
-            /[0-9]/,
-          ]}
+          mask="99/99/9999"
           onBlur={(e) => handleDateChange(e.target.value)}
           value={theValue}
           disabled={disabled}

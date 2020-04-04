@@ -1,10 +1,10 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import MaskedInput from 'react-text-mask';
+import MaskedField from 'react-masked-field';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
-import { generateId } from '../../utilities/generateId';
+import generateId from '../../utilities/generateId';
 
 const types = [
   'date',
@@ -49,7 +49,7 @@ const FormField = ({
   const inputErrorId = `${inputName}_error`;
   const fieldType = !types.includes(type) ? 'text' : type;
 
-  const Input = mask ? MaskedInput : 'input';
+  const Input = mask ? MaskedField : 'input';
 
   return (
     <div

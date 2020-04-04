@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
-import { generateId } from '../../utilities/generateId';
+import generateId from '../../utilities/generateId';
 
 const Dropdown = ({
   classes,

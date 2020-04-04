@@ -58,18 +58,7 @@ const [value, setValue] = useState('');
 <FormField
   type="text"
   label="Today's Date"
-  mask={[
-    /[0-9]/,
-    /[1-9]/,
-    '/',
-    /[0-9]/,
-    /[1-9]/,
-    '/',
-    /[1-9]/,
-    /[0-9]/,
-    /[0-9]/,
-    /[0-9]/,
-  ]}
+  mask="(999) 999-9999"
   value={value}
   onChange={(e) => setValue(e.target.value)}
 />;

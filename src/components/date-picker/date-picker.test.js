@@ -69,9 +69,9 @@ describe('<DatePicker />', () => {
       .find('.date-picker__calendar__ui__btns > :last-child')
       .simulate('click');
 
-    expect(datepicker.find('input.formfield__input').prop('value')).not.toBe(
-      originalValue,
-    );
+    expect(
+      datepicker.find('input.formfield__input').prop('defaultValue'),
+    ).not.toBe(originalValue);
   });
 
   it('Should close calendar when on escape press', () => {
