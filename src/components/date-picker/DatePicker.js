@@ -32,6 +32,7 @@ const DatePicker = ({
     const date = moment(details).format('MM/DD/YYYY');
 
     setTheValue(date);
+    onChange(theValue);
 
     if (typeof details === 'string') {
       setOriginalValue(date);
