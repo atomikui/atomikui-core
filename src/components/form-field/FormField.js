@@ -123,7 +123,7 @@ FormField.propTypes = {
   /** Specifies label text. */
   label: PropTypes.string,
   /** Optional form field mask */
-  mask: PropTypes.array,
+  mask: PropTypes.string,
   /** onChange callback. */
   onChange: PropTypes.func,
   /** Specifies input placeholder text. */
