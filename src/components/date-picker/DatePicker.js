@@ -35,8 +35,9 @@ const DatePicker = ({
     } else {
       setTheValue(date);
       onChange(theValue);
-      setIsOpen(false);
     }
+
+    setIsOpen(false);
   };
 
   const handleKeyDown = (e) => {
