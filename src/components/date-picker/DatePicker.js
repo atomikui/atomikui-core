@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
-import moment from 'moment';
 import createFocusTrap from 'focus-trap';
+import moment from 'moment';
 import FormField from '../form-field';
 import Button from '../button';
 import Label from '../label';
@@ -19,12 +19,10 @@ const DatePicker = ({
 }) => {
   const calendar = useRef();
   const [focusTrap, setFocusTrap] = useState(null);
-  const [originalValue, setOriginalValue] = useState(value);
   const [theValue, setTheValue] = useState(value);
   const [isOpen, setIsOpen] = useState(false);
 
   const cancel = () => {
-    setTheValue(originalValue);
     setIsOpen(false);
   };
 
@@ -32,15 +30,6 @@ const DatePicker = ({
     const date = moment(details).format('MM/DD/YYYY');
 
     setTheValue(date);
-    onChange(theValue);
-
-    if (typeof details === 'string') {
-      setOriginalValue(date);
-    }
-  };
-
-  const handleCalendarSubmit = () => {
-    setOriginalValue(theValue);
     onChange(theValue);
     setIsOpen(false);
   };
@@ -54,7 +43,7 @@ const DatePicker = ({
   useEffect(() => {
     setFocusTrap(
       createFocusTrap(calendar.current, {
-        allowOutsideClick: false,
+        allowOutsideClick: true,
         clickOutsideDeactivates: false,
         escapeDeactivates: true,
         fallbackFocus: calendar,
@@ -100,25 +89,13 @@ const DatePicker = ({
           'is-open': isOpen,
         })}
         onKeyDown={(e) => handleKeyDown(e)}
+        onClick={() => cancel()}
       >
         <div className="date-picker__calendar__ui" ref={calendar}>
           <Calendar
             onChange={(details) => handleDateChange(details)}
             value={theValue ? new Date(theValue) : ''}
           />
-          <div className="date-picker__calendar__ui__btns">
-            <Button size="md" onClick={cancel}>
-              Cancel
-            </Button>
-            <Button
-              variant="primary"
-              size="md"
-              onClick={handleCalendarSubmit}
-              disabled={theValue === originalValue}
-            >
-              OK
-            </Button>
-          </div>
         </div>
       </div>
     </div>

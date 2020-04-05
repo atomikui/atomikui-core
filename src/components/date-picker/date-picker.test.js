@@ -33,52 +33,12 @@ describe('<DatePicker />', () => {
     );
   });
 
-  it('Should close calendar on cancel', () => {
-    datepicker.find('.date-picker__input__btn').simulate('click');
-    datepicker
-      .find('.date-picker__calendar__ui__btns > :first-child')
-      .simulate('click');
-
-    expect(datepicker.find('.date-picker__calendar').hasClass('is-open')).toBe(
-      false,
-    );
-  });
-
-  it('Should reset DatePicker input value on `cancel`', () => {
-    datepicker
-      .find('.react-calendar__tile')
-      .first()
-      .simulate('click');
-
-    datepicker
-      .find('.date-picker__calendar__ui__btns > :first-child')
-      .simulate('click');
-
-    expect(datepicker.find('input.formfield__input').prop('value')).toBe(
-      originalValue,
-    );
-  });
-
-  it('Should set DatePicker input value on `OK`', () => {
-    datepicker
-      .find('.react-calendar__tile')
-      .first()
-      .simulate('click');
-
-    datepicker
-      .find('.date-picker__calendar__ui__btns > :last-child')
-      .simulate('click');
-
-    expect(
-      datepicker.find('input.formfield__input').prop('defaultValue'),
-    ).not.toBe(originalValue);
-  });
-
   it('Should close calendar when on escape press', () => {
     datepicker.find('.date-picker__input__btn').simulate('click');
 
     datepicker
-      .find('.date-picker__calendar__ui__btns > :last-child')
+      .find('.react-calendar__tile')
+      .first()
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
     expect(datepicker.find('.date-picker__calendar').hasClass('is-open')).toBe(
