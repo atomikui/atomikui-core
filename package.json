@@ -15,6 +15,7 @@
     "react-masked-field": "^2.0.3",
     "react-scripts": "3.4.0",
     "react-styleguidist": "^11.0.3",
+    "validate-date": "^1.1.1",
     "yup": "^0.28.3"
   },
   "scripts": {

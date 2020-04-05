@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
 import createFocusTrap from 'focus-trap';
 import moment from 'moment';
+import validateDate from 'validate-date';
 import FormField from '../form-field';
 import Button from '../button';
 import Label from '../label';
@@ -28,6 +29,11 @@ const DatePicker = ({
 
   const handleDateChange = (details) => {
     const date = moment(details).format('MM/DD/YYYY');
+
+    if (validateDate(date) === 'Invalid Format') {
+      setTheValue('');
+      return;
+    }
 
     setTheValue(date);
     onChange(theValue);

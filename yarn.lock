@@ -12566,6 +12566,11 @@ v8-to-istanbul@^4.0.1:
     convert-source-map "^1.6.0"
     source-map "^0.7.3"
 
+validate-date@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/validate-date/-/validate-date-1.1.1.tgz#af8303650d56255926db42696ae3fcc07118467d"
+  integrity sha512-elJRl16ubpvRrdkl6Zwm4gxW3FW2jA6A9wQk2sW8rHfmNsv3XAHb2EOLQ53NIY1nc0Tvxb84/8673zJDR0us4w==
+
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"
