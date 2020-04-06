@@ -16,14 +16,15 @@ const DatePicker = ({
   value,
   ...props
 }) => {
-  const validateDate = (date) => {
-    const theDate = new Date(date);
-    return theDate.toString() === 'Invalid Date' ? new Date() : theDate;
-  };
-
   const calendar = useRef();
   const [focusTrap, setFocusTrap] = useState(null);
-  const [theValue, setTheValue] = useState(value);
+  const [theValue, setTheValue] = useState(() => {
+    if (new Date(value).toString() === 'Invalid Date') {
+      return null;
+    }
+
+    return value;
+  });
   const [isOpen, setIsOpen] = useState(false);
 
   const cancel = () => {
@@ -31,11 +32,18 @@ const DatePicker = ({
   };
 
   const handleDateChange = (details) => {
-    const date = new Date(details).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit',
-    });
+    const date = new Date(details)
+      .toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      })
+      .toString();
+
+    if (date === 'Invalid Date') {
+      onChange(date);
+      return;
+    }
 
     setTheValue(date);
     onChange(date);
@@ -76,6 +84,7 @@ const DatePicker = ({
       )}
       <div className="date-picker__input">
         <FormField
+          pattern="\d{1,2}/\d{1,2}/\d{4}"
           mask="99/99/9999"
           onBlur={(e) => handleDateChange(e.target.value)}
           value={theValue}
@@ -102,7 +111,7 @@ const DatePicker = ({
         <div className="date-picker__calendar__ui" ref={calendar}>
           <Calendar
             onChange={(details) => handleDateChange(details)}
-            value={validateDate(theValue)}
+            value={new Date(theValue)}
           />
         </div>
       </div>
