@@ -4,5 +4,10 @@ import { FileUpload } from '@alaneicker/react-component-library';
 
 const [value, setValue] = useState('');
 
-<FileUpload onChange={(e) => setValue(e.target.value)} />;
+<FileUpload
+  label="Upload file"
+  uploadBtnVariant="primary"
+  onChange={(file) => setValue(file)}
+  dragAndDrop
+/>;
 ```

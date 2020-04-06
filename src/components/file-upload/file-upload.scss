@@ -1,0 +1,20 @@
+.file-upload {
+  align-items: center;
+  display: flex;
+
+  & > :first-child {
+    margin-right: rem(16);
+  }
+
+  &--drag-and-drop {
+    border: rem(2) dashed $gray-200;
+    border-radius: rem(3);
+    flex-direction: column;
+    padding: rem(16);
+    text-align: center;
+
+    & > :first-child {
+      margin: rem(0 0 16);
+    }
+  }
+}

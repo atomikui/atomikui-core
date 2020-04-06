@@ -52,6 +52,23 @@
     margin-top: rem(3);
   }
 
+  &--file-upload {
+    display: inline-flex;
+
+    & > .formfield__input {
+      left: rem(-10000);
+      position: absolute;
+    }
+
+    & > .formfield__label,
+    & > .formfield__label > * {
+      cursor: pointer;
+    }
+
+    &.formfield--drag-and-drop {
+    }
+  }
+
   @each $name, $breakpoint in $breakpoints {
     @media (min-width: $breakpoint) {
       @each $size in $formfield-sizes {

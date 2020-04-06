@@ -41,6 +41,7 @@ const FormField = ({
   readOnly,
   required,
   type,
+  uploadBtnVariant,
   value,
   ...others
 }) => {
@@ -59,7 +60,12 @@ const FormField = ({
       })}
     >
       {label && (
-        <div className="formfield__label">
+        <div
+          className={classnames('formfield__label', {
+            btn: type === 'file',
+            [`btn--${uploadBtnVariant}`]: uploadBtnVariant,
+          })}
+        >
           <Label htmlFor={uid}>{label}</Label>
         </div>
       )}
@@ -137,6 +143,15 @@ FormField.propTypes = {
   required: PropTypes.bool,
   /** Specifies the type of input. */
   type: PropTypes.oneOf(types),
+  /** Specifies the upload button variant */
+  uploadBtnVariant: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'hollow',
+    'link',
+    'block',
+  ]),
   /** Specifies the inputs value. */
   value: PropTypes.string,
 };
@@ -156,6 +171,7 @@ FormField.defaultProps = {
   readOnly: false,
   required: false,
   type: 'text',
+  uploadBtnVariant: '',
   value: '',
 };
 
