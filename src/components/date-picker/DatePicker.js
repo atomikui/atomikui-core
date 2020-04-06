@@ -6,6 +6,7 @@ import createFocusTrap from 'focus-trap';
 import FormField from '../form-field';
 import Button from '../button';
 import Label from '../label';
+import validateDate from '../../utilities/validate-date';
 
 const DatePicker = ({
   classes,
@@ -18,13 +19,7 @@ const DatePicker = ({
 }) => {
   const calendar = useRef();
   const [focusTrap, setFocusTrap] = useState(null);
-  const [theValue, setTheValue] = useState(() => {
-    if (new Date(value).toString() === 'Invalid Date') {
-      return null;
-    }
-
-    return value;
-  });
+  const [theValue, setTheValue] = useState(validateDate(value));
   const [isOpen, setIsOpen] = useState(false);
 
   const cancel = () => {
@@ -84,7 +79,6 @@ const DatePicker = ({
       )}
       <div className="date-picker__input">
         <FormField
-          pattern="\d{1,2}/\d{1,2}/\d{4}"
           mask="99/99/9999"
           onBlur={(e) => handleDateChange(e.target.value)}
           value={theValue}
