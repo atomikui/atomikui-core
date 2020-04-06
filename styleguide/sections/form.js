@@ -9,6 +9,7 @@ module.exports = {
     'src/components/button-group/ButtonGroup.js',
     'src/components/date-picker/DatePicker.js',
     'src/components/dropdown/Dropdown.js',
+    'src/components/file-upload/FileUpload.js',
     'src/components/form-field/FormField.js',
     'src/components/form-option/FormOption.js',
     'src/components/range-slider/RangeSlider.js',

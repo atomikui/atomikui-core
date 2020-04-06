@@ -3,6 +3,7 @@ import Button from './components/button';
 import ButtonGroup from './components/button-group';
 import DatePicker from './components/date-picker';
 import Dropdown from './components/dropdown';
+import FileUpload from './components/file-upload';
 import FormField from './components/form-field';
 import FormOption from './components/form-option';
 import Hint from './components/hint';
@@ -22,6 +23,7 @@ export {
   ButtonGroup,
   DatePicker,
   Dropdown,
+  FileUpload,
   FormField,
   FormOption,
   Hint,

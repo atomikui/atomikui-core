@@ -10,6 +10,7 @@ const types = [
   'date',
   'datetime-local',
   'email',
+  'file',
   'hidden',
   'image',
   'month',
