@@ -1,20 +1,31 @@
 .file-upload {
   align-items: center;
+  border: rem(1) solid $gray-200;
+  border-radius: rem(3);
   display: flex;
+  overflow: hidden;
 
-  & > :first-child {
-    margin-right: rem(16);
+  & > * + * {
+    margin-left: rem(16);
   }
 
   &--drag-and-drop {
     border: rem(2) dashed $gray-200;
     border-radius: rem(3);
+    display: flex;
     flex-direction: column;
-    padding: rem(16);
+    padding: rem(50 0);
     text-align: center;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
 
-    & > :first-child {
-      margin: rem(0 0 16);
+    & > * + * {
+      margin: rem(16 0 0);
+    }
+
+    &:hover {
+      background: lighten($blue-000, 5%);
+      box-shadow: $formfield-focus;
     }
   }
 }

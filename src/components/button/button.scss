@@ -94,4 +94,12 @@ a.btn {
     display: block;
     width: 100%;
   }
+
+  &--no-radius {
+    border-radius: 0;
+  }
+
+  &--condensed {
+    padding: rem(10 16);
+  }
 }
