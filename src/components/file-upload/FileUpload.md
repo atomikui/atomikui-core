@@ -1,4 +1,4 @@
-The `FileUpload` component allows for the selection of a single file via file browser or drag and drop
+The `FileUpload` component allows for the selection of one or more files via file browser or drag and drop
 
 ### File Upload - File Browser
 

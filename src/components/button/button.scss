@@ -102,4 +102,8 @@ a.btn {
   &--condensed {
     padding: rem(10 16);
   }
+
+  &--nowrap {
+    white-space: nowrap;
+  }
 }

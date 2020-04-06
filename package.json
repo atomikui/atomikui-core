@@ -5,7 +5,6 @@
   "main": "./src/index.js",
   "dependencies": {
     "classnames": "^2.2.6",
-    "filesize": "^6.1.0",
     "focus-trap": "^5.1.0",
     "formik": "^2.1.4",
     "prop-types": "^15.7.2",

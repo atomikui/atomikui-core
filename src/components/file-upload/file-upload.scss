@@ -9,6 +9,12 @@
     margin-left: rem(16);
   }
 
+  & > :last-child {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
   &--drag-and-drop {
     border: rem(2) dashed $gray-200;
     border-radius: rem(3);
@@ -21,6 +27,11 @@
 
     & > * + * {
       margin: rem(16 0 0);
+    }
+
+    & > :last-child {
+      white-space: normal;
+      overflow: visible;
     }
 
     &:hover {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import filesize from 'filesize';
 import FormField from '../form-field';
 
 const FileUpload = ({
@@ -12,12 +11,25 @@ const FileUpload = ({
   uploadBtnVariant,
   ...others
 }) => {
-  const [files, setFiles] = useState('');
+  const [files, setFiles] = useState([]);
+
+  const id = `file-upload-${Math.round(Math.random() * 10000000)}`;
+
+  const getFileNames = (fileList) => {
+    const fileArray = [];
+
+    for (let i = 0; i < fileList.length; i++) {
+      fileArray.push(fileList.item(i).name);
+    }
+
+    return fileArray;
+  };
 
   const handleChange = (e) => {
-    const selectedFile = e.target.files[0];
-    setFiles(selectedFile);
-    onChange(selectedFile);
+    const selectedFiles = e.target.files;
+
+    setFiles(getFileNames(selectedFiles));
+    onChange(selectedFiles);
   };
 
   const onDragOver = (e) => {
@@ -27,49 +39,50 @@ const FileUpload = ({
 
   const handleDrop = (e) => {
     e.preventDefault();
-    const selectedFile = e.dataTransfer.files[0];
-    setFiles(selectedFile);
-    onChange(selectedFile);
+
+    const selectedFiles = e.dataTransfer.files;
+    setFiles(getFileNames(selectedFiles));
+    onChange(selectedFiles);
   };
 
   return (
     <>
       <FormField
-        id="file-upload"
+        id={id}
         name="fileUpload"
         classes="formfield--file-upload"
         type="file"
         onChange={handleChange}
+        multiple
         {...others}
       />
       <label
         onDragOver={onDragOver}
         onDrop={(e) => handleDrop(e)}
-        htmlFor="file-upload"
+        htmlFor={id}
         className={classnames('file-upload', {
           'file-upload--drag-and-drop': dragAndDrop,
         })}
       >
         {dragAndDrop && (
-          <div className="text-weight-bold">
+          <span className="text-weight-bold">
             Select a file to upload or drag and drop in the box
-          </div>
+          </span>
         )}
-        <div
-          className={classnames('btn btn--no-radius btn--condensed', {
-            [`btn--${uploadBtnVariant}`]: uploadBtnVariant,
-          })}
+        <span
+          className={classnames(
+            'btn btn--no-radius btn--condensed btn--nowrap',
+            {
+              [`btn--${uploadBtnVariant}`]: uploadBtnVariant,
+            },
+          )}
         >
           {label}
-        </div>
-        {!files ? (
+        </span>
+        {!files.length ? (
           <span>No files selected</span>
         ) : (
-          <div>
-            {files.name}
-            <br />
-            <span className="text-size-12">{filesize(files.size)}</span>
-          </div>
+          <span>{files.join(', ')}</span>
         )}
       </label>
     </>
