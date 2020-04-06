@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
 import createFocusTrap from 'focus-trap';
-import moment from 'moment';
 import FormField from '../form-field';
 import Button from '../button';
 import Label from '../label';
@@ -17,6 +16,11 @@ const DatePicker = ({
   value,
   ...props
 }) => {
+  const validateDate = (date) => {
+    const theDate = new Date(date);
+    return theDate.toString() === 'Invalid Date' ? new Date() : theDate;
+  };
+
   const calendar = useRef();
   const [focusTrap, setFocusTrap] = useState(null);
   const [theValue, setTheValue] = useState(value);
@@ -27,16 +31,14 @@ const DatePicker = ({
   };
 
   const handleDateChange = (details) => {
-    const date = moment(details).format('MM/DD/YYYY');
+    const date = new Date(details).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    });
 
-    if (date === 'Invalid date') {
-      setTheValue('');
-      onChange(date);
-    } else {
-      setTheValue(date);
-      onChange(theValue);
-    }
-
+    setTheValue(date);
+    onChange(date);
     setIsOpen(false);
   };
 
@@ -100,7 +102,7 @@ const DatePicker = ({
         <div className="date-picker__calendar__ui" ref={calendar}>
           <Calendar
             onChange={(details) => handleDateChange(details)}
-            value={theValue ? new Date(theValue) : ''}
+            value={validateDate(theValue)}
           />
         </div>
       </div>

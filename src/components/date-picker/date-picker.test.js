@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
+import sinon from 'sinon';
 import { mount, configure } from 'enzyme';
 import DatePicker from './DatePicker';
 
@@ -45,4 +46,6 @@ describe('<DatePicker />', () => {
       false,
     );
   });
+
+  it('Should handle an invalid date', () => {});
 });
