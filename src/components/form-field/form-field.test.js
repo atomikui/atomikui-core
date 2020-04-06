@@ -63,10 +63,4 @@ describe('<FormField />', () => {
     expect(formField.find('.formfield__label').length).toBe(1);
     expect(formField.find('.formfield__label').text()).toBe('Phone Number');
   });
-
-  it('Should not render lable if `labelless prop is set to true`', () => {
-    formField.setProps({ labelless: true });
-
-    expect(formField.find('.formfield__label').length).toBe(0);
-  });
 });

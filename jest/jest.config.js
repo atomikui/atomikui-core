@@ -1,17 +1,14 @@
 module.exports = {
   verbose: true,
   rootDir: '../',
-  roots: [
-    '<rootDir>',
-  ],
-  modulePaths: [
-    '<rootDir>/node_modules',
-  ],
+  roots: ['<rootDir>'],
+  modulePaths: ['<rootDir>/node_modules'],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/index.js',
+    '!src/utilities/**/*.js',
   ],
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
