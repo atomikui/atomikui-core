@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import FormField from '../form-field';
 
-const AutoComplete = ({ classes, items, onChange, ...others }) => {
+const AutoComplete = ({ classes, items, onChange, value, ...others }) => {
   const [itemList] = useState(items);
 
   return (
@@ -15,6 +15,8 @@ const AutoComplete = ({ classes, items, onChange, ...others }) => {
       itemToString={(item) => {
         return item ? item.value : '';
       }}
+      initialInputValue={value}
+      initialSelectedItem={{ value }}
     >
       {({
         getInputProps,
@@ -27,12 +29,11 @@ const AutoComplete = ({ classes, items, onChange, ...others }) => {
         getRootProps,
       }) => {
         return (
-          <div className={classnames('auto-complete', classes)}>
-            <FormField
-              {...getRootProps({}, { suppressRefError: true })}
-              {...getInputProps()}
-              {...others}
-            />
+          <div
+            className={classnames('auto-complete', classes)}
+            {...getRootProps({}, { suppressRefError: true })}
+          >
+            <FormField {...getInputProps()} {...others} />
             <ul className="auto-complete__list" {...getMenuProps()}>
               {isOpen
                 ? itemList
@@ -48,7 +49,7 @@ const AutoComplete = ({ classes, items, onChange, ...others }) => {
                       return (
                         <li
                           className={classnames({
-                            'is-selected': selectedItem === item,
+                            'is-selected': item.value === selectedItem.value,
                             'is-highlighted': highlightedIndex === index,
                           })}
                           {...getItemProps({
@@ -81,12 +82,14 @@ AutoComplete.propTypes = {
   ),
   /** onChange callback triggered when the value changes */
   onChange: PropTypes.func,
+  /** The form field value */
 };
 
 AutoComplete.defaultProps = {
   classes: '',
   items: [],
   onChange() {},
+  value: '',
 };
 
 export default AutoComplete;
