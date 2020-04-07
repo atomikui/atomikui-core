@@ -12,7 +12,8 @@ const Button = ({
   type,
   variant,
   ...others
-}) => (
+}) => {
+  return (
   <button
     className={classnames('btn', classes, {
       [`btn--${variant}`]: variant,
@@ -26,7 +27,8 @@ const Button = ({
   >
     {children}
   </button>
-);
+  );
+};
 
 Button.propTypes = {
   /** Displays button as a block elment. */

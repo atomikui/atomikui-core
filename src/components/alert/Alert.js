@@ -2,7 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Alert = ({ align, classes, children, type, ...others }) => (
+const Alert = ({ align, classes, children, type, ...others }) => {
+  return (
   <div
     className={classnames('alert', classes, {
       [`alert--${type}`]: type,
@@ -13,7 +14,8 @@ const Alert = ({ align, classes, children, type, ...others }) => (
   >
     {children}
   </div>
-);
+  );
+};
 
 Alert.propTypes = {
   /** Aligns the text inside of the alert. */

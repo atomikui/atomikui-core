@@ -2,7 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Hint = ({ classes, children, type, ...others }) => (
+const Hint = ({ classes, children, type, ...others }) => {
+  return (
   <div
     className={classnames('hint', classes, {
       [`hint--${type}`]: type,
@@ -11,7 +12,8 @@ const Hint = ({ classes, children, type, ...others }) => (
   >
     {children}
   </div>
-);
+  );
+};
 
 Hint.propTypes = {
   /** Custom classes to be added to Label component. */

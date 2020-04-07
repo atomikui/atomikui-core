@@ -50,7 +50,7 @@ const FileUpload = ({
       />
       <label
         onDragOver={onDragOver}
-        onDrop={(e) => handleChange(e)}
+        onDrop={(e) => { return handleChange(e); }}
         htmlFor={id}
         className={classnames('file-upload__wrapper', {
           'file-upload__wrapper--drag-and-drop': dragAndDrop,
@@ -74,9 +74,11 @@ const FileUpload = ({
         )}
         {dragAndDrop ? (
           <ul className="file-upload__file-list">
-            {files.map((file) => (
+            {files.map((file) => {
+              return (
               <li key={Math.random()}>{file}</li>
-            ))}
+              );
+            })}
           </ul>
         ) : (
           <span>{files.join(', ')}</span>

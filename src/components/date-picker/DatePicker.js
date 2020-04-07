@@ -80,7 +80,7 @@ const DatePicker = ({
       <div className="date-picker__input">
         <FormField
           mask="99/99/9999"
-          onBlur={(e) => handleDateChange(e.target.value)}
+          onBlur={(e) => { return handleDateChange(e.target.value); }}
           value={theValue}
           disabled={disabled}
           {...props}
@@ -89,7 +89,7 @@ const DatePicker = ({
           classes="date-picker__input__btn"
           variant="hollow"
           size="md"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => { return setIsOpen(!isOpen); }}
           disabled={disabled}
         >
           Select a Date
@@ -99,12 +99,12 @@ const DatePicker = ({
         className={classnames('date-picker__calendar', {
           'is-open': isOpen,
         })}
-        onKeyDown={(e) => handleKeyDown(e)}
-        onClick={() => cancel()}
+        onKeyDown={(e) => { return handleKeyDown(e); }}
+        onClick={() => { return cancel(); }}
       >
         <div className="date-picker__calendar__ui" ref={calendar}>
           <Calendar
-            onChange={(details) => handleDateChange(details)}
+            onChange={(details) => { return handleDateChange(details); }}
             value={new Date(theValue)}
           />
         </div>

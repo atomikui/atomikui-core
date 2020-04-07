@@ -37,7 +37,7 @@ const Modal = ({
   useEffect(() => {
     setFocusTrap(
       createFocusTrap(modal.current, {
-        allowOutsideClick: () => !disableOverlayclick || !hasOverlay,
+        allowOutsideClick: () => { return !disableOverlayclick || !hasOverlay; },
         clickOutsideDeactivates: isDrawer && !hasOverlay,
         escapeDeactivates: false,
         fallbackFocus: modal,
@@ -61,15 +61,15 @@ const Modal = ({
         'modal--drawer': isDrawer,
       })}
       {...((!disableOverlayclick || hasOverlay) && {
-        onClick: (e) => handleClose(e),
+        onClick: (e) => { return handleClose(e); },
       })}
-      {...(closeOnEscape && { onKeyDown: (e) => handleKeyDown(e) })}
+      {...(closeOnEscape && { onKeyDown: (e) => { return handleKeyDown(e); } })}
       {...others}
     >
       <div className="modal__dialog" ref={modal}>
         <div className="modal__header">
           <div className="modal__title">{title}</div>
-          <button className="modal__close-button" onClick={() => onClose()}>
+          <button className="modal__close-button" onClick={() => { return onClose(); }}>
             close
           </button>
         </div>

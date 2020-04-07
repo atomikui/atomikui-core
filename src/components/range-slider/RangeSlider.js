@@ -57,29 +57,37 @@ const RangeSlider = ({
           step={step}
           value={rangeValue}
           type="range"
-          onChange={(e) => handleChange(e.target.value)}
+          onChange={(e) => {
+            return handleChange(e.target.value);
+          }}
           required={required}
           disabled={disabled}
           {...others}
         />
         {ticks && (
           <div className="range-slider__ticks" aria-hidden="true">
-            {ticks.map(({ text, val }) => (
-              <div
-                key={Math.random()}
-                className="range-slider__ticks__tick"
-                {...(!disabled && { onClick: () => handleChange(val) })}
-              >
+            {ticks.map(({ text, val }) => {
+              return (
                 <div
-                  className={classnames('range-slider__ticks__label', {
-                    'is-selected': val === rangeValue,
-                    'is-hidden-on-mobile': hideLabelsOnMobile,
+                  key={Math.random()}
+                  className="range-slider__ticks__tick"
+                  {...(!disabled && {
+                    onClick: () => {
+                      return handleChange(val);
+                    },
                   })}
                 >
-                  {text}
+                  <div
+                    className={classnames('range-slider__ticks__label', {
+                      'is-selected': val === rangeValue,
+                      'is-hidden-on-mobile': hideLabelsOnMobile,
+                    })}
+                  >
+                    {text}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>

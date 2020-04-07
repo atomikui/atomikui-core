@@ -57,13 +57,14 @@ const Dropdown = ({
               value: '',
             },
             ...options,
-          ]
             // eslint-disable-next-line no-shadow
-            .map(({ text, value }) => (
+          ].map(({ text, value }) => {
+            return (
               <option key={Math.random()} value={value}>
                 {text}
               </option>
-            ))}
+            );
+          })}
         </select>
       </div>
       {(helpText || errorText) && (

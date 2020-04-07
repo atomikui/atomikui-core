@@ -2,7 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Link = ({ classes, children, href, target, ...others }) => (
+const Link = ({ classes, children, href, target, ...others }) => {
+  return (
   <a
     className={classnames('link', classes)}
     href={href}
@@ -12,7 +13,8 @@ const Link = ({ classes, children, href, target, ...others }) => (
   >
     {children}
   </a>
-);
+  );
+};
 
 Link.propTypes = {
   /** Custom classes to be added to Label component.. */

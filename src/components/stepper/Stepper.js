@@ -3,7 +3,8 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Link from '../link';
 
-const Stepper = ({ classes, inline, steps, ...others }) => (
+const Stepper = ({ classes, inline, steps, ...others }) => {
+  return (
   <nav>
     <ul
       className={classnames('stepper', classes, {
@@ -36,7 +37,8 @@ const Stepper = ({ classes, inline, steps, ...others }) => (
       })}
     </ul>
   </nav>
-);
+  );
+};
 
 Stepper.propTypes = {
   /** Specifies custom component classes. */

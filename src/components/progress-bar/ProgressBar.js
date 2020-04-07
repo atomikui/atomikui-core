@@ -2,7 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const ProgressBar = ({ animated, classes, label, now, variant, ...others }) => (
+const ProgressBar = ({ animated, classes, label, now, variant, ...others }) => {
+  return (
   <div
     className={classnames('progress-bar', classes, {
       [`progress-bar--${variant}`]: variant,
@@ -21,7 +22,8 @@ const ProgressBar = ({ animated, classes, label, now, variant, ...others }) => (
       <span className="progress-bar__label">{label}</span>
     </div>
   </div>
-);
+  );
+};
 
 ProgressBar.propTypes = {
   /** Animages the progress bar. */
