@@ -11,17 +11,17 @@ const [selected, setSelected] = useState('');
     label="Select Your Favorite Fruit"
     onChange={(value) => setSelected(value)}
     items={[
-      { value: 'apple' },
-      { value: 'banana' },
-      { value: 'cantaloupe' },
-      { value: 'grape' },
-      { value: 'mango' },
-      { value: 'nectarine' },
-      { value: 'orange' },
-      { value: 'pear' },
-      { value: 'peach' },
-      { value: 'strawberry' },
-      { value: 'tangerine' },
+      { value: 'Apple' },
+      { value: 'Banana' },
+      { value: 'Cantaloupe' },
+      { value: 'Grape' },
+      { value: 'Mango' },
+      { value: 'Nectarine' },
+      { value: 'Orange' },
+      { value: 'Pear' },
+      { value: 'Peach' },
+      { value: 'Strawberry' },
+      { value: 'Tangerine' },
     ]}
   />
   <p>Your favorite fruit is: {selected}</p>

@@ -24,7 +24,8 @@
       cursor: pointer;
       text-transform: capitalize;
 
-      &:hover {
+      &:hover,
+      &.is-highlighted {
         background: $gray-000;
       }
 

@@ -20,6 +20,7 @@ const AutoComplete = ({ classes, items, onChange, ...others }) => {
         getInputProps,
         getItemProps,
         getMenuProps,
+        highlightedIndex,
         isOpen,
         inputValue,
         selectedItem,
@@ -46,8 +47,9 @@ const AutoComplete = ({ classes, items, onChange, ...others }) => {
                     .map((item, index) => {
                       return (
                         <li
-                          {...(selectedItem === item && {
-                            className: 'is-selected',
+                          className={classnames({
+                            'is-selected': selectedItem === item,
+                            'is-highlighted': highlightedIndex === index,
                           })}
                           {...getItemProps({
                             key: item.value,
