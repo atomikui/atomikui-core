@@ -1,4 +1,5 @@
 import Alert from './components/alert';
+import AutoComplete from './components/auto-complete';
 import Button from './components/button';
 import ButtonGroup from './components/button-group';
 import DatePicker from './components/date-picker';
@@ -20,6 +21,7 @@ import Truncate from './components/truncate';
 
 export {
   Alert,
+  AutoComplete,
   Button,
   ButtonGroup,
   DatePicker,
