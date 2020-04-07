@@ -1,3 +1,5 @@
+The autocomplete is a `FormField` enhanced by a panel of suggested options.
+
 ```jsx
 import { useState } from 'react';
 import { AutoComplete } from '@alaneicker/react-component-library';
