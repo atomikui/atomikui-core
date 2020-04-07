@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -37,7 +36,12 @@ const AutoComplete = ({ classes, items, onChange, ...others }) => {
               {isOpen
                 ? itemList
                     .filter((item) => {
-                      return !inputValue || item.value.includes(inputValue);
+                      return (
+                        !inputValue ||
+                        item.value
+                          .toLowerCase()
+                          .includes(inputValue.toLowerCase())
+                      );
                     })
                     .map((item, index) => {
                       return (
