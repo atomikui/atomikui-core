@@ -1,0 +1,37 @@
+.auto-complete {
+  position: relative;
+
+  &__list {
+    background: $white;
+    box-shadow: rem(0 0 8) rgba(0, 0, 0, 0.2);
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: rem($input-height + 25);
+    z-index: 900;
+    max-height: rem(190);
+    overflow: auto;
+
+    & > * + * {
+      border-top: rem(1) $gray-100;
+    }
+
+    & > * {
+      padding: rem(8);
+      cursor: pointer;
+      text-transform: capitalize;
+
+      &:hover {
+        background: $gray-000;
+      }
+
+      &.is-selected {
+        background: $blue-200;
+        color: $white;
+      }
+    }
+  }
+}
