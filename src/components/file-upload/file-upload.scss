@@ -8,7 +8,7 @@
     box-shadow: $formfield-focus;
   }
 
-  &__input {
+  &__wrapper {
     align-items: center;
     border: rem(1) solid $gray-200;
     border-radius: rem(3);

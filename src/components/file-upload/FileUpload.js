@@ -53,8 +53,8 @@ const FileUpload = ({
         onDragOver={onDragOver}
         onDrop={(e) => handleChange(e)}
         htmlFor={id}
-        className={classnames('file-upload__input', {
-          'file-upload__input--drag-and-drop': dragAndDrop,
+        className={classnames('file-upload__wrapper', {
+          'file-upload__wrapper--drag-and-drop': dragAndDrop,
         })}
       >
         {dragAndDrop && (
