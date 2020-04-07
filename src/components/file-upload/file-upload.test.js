@@ -22,7 +22,7 @@ describe('<FileUpload />', () => {
 
   const onDropEvent = {
     dataTransfer: {
-      files: [],
+      files: [{ name: fileName }],
     },
   };
 
@@ -82,12 +82,17 @@ describe('<FileUpload />', () => {
   it('Should show addition text if `dragAndDrop` prop is `true`', () => {
     fileUpload.setProps({ dragAndDrop: true });
 
-    expect(
-      fileUpload
-        .find('.file-upload__input')
-        .children()
-        .first()
-        .text(),
-    ).toBe('Select a file to upload or drag and drop in the box');
+    expect(fileUpload.find('.file-upload__drag-drop-label').text()).toBe(
+      'Select a file to upload or drag and drop in the box',
+    );
+  });
+
+  it('Should render a list of files if `dragAndDrop` prop is `true`', () => {
+    fileUpload.setProps({ dragAndDrop: true });
+    fileUpload.find('.file-upload__input').simulate('drop', onDropEvent);
+
+    expect(fileUpload.find('.file-upload__file-list').children().length).toBe(
+      1,
+    );
   });
 });

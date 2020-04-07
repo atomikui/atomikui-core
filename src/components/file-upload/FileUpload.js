@@ -58,7 +58,7 @@ const FileUpload = ({
         })}
       >
         {dragAndDrop && (
-          <span className="text-weight-bold">
+          <span className="file-upload__drag-drop-label">
             Select a file to upload or drag and drop in the box
           </span>
         )}
@@ -70,7 +70,9 @@ const FileUpload = ({
         >
           {label}
         </span>
-        {!files.length && <span>No files selected</span>}
+        {!files.length && (
+          <span className="file-upload__no-files">No files selected</span>
+        )}
         {dragAndDrop ? (
           <ul className="file-upload__file-list">
             {files.map((file) => (

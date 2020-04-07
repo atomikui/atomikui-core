@@ -51,6 +51,10 @@
     }
   }
 
+  &__drag-drop-label {
+    font-weight: $font-bold;
+  }
+
   &__file-list {
     list-style-type: none;
     margin: rem(16 0 0);
