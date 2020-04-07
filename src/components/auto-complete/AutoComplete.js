@@ -79,7 +79,7 @@ AutoComplete.propTypes = {
       value: PropTypes.string,
     }),
   ),
-  /** onChange callback triggered when value changes */
+  /** onChange callback triggered when the value changes */
   onChange: PropTypes.func,
 };
 
