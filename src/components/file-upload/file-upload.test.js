@@ -55,13 +55,15 @@ describe('<FileUpload />', () => {
   });
 
   it('Should trigger onChange callback on file drop', () => {
-    fileUpload.find('.file-upload__input').simulate('drop', onDropEvent);
+    fileUpload.find('.file-upload__wrapper').simulate('drop', onDropEvent);
 
     expect(onChangeSpy.called).toBe(true);
   });
 
   it('Should prevent call `preventDefault` and `stopPropagation` onDragOver', () => {
-    fileUpload.find('.file-upload__input').simulate('dragOver', dragOverEvent);
+    fileUpload
+      .find('.file-upload__wrapper')
+      .simulate('dragOver', dragOverEvent);
 
     expect(preventDefaultSpy.called).toBe(true);
     expect(stopPropagationSpy.called).toBe(true);
@@ -72,7 +74,7 @@ describe('<FileUpload />', () => {
 
     expect(
       fileUpload
-        .find('.file-upload__input')
+        .find('.file-upload__wrapper')
         .children()
         .last()
         .text(),
@@ -89,7 +91,7 @@ describe('<FileUpload />', () => {
 
   it('Should render a list of files if `dragAndDrop` prop is `true`', () => {
     fileUpload.setProps({ dragAndDrop: true });
-    fileUpload.find('.file-upload__input').simulate('drop', onDropEvent);
+    fileUpload.find('.file-upload__wrapper').simulate('drop', onDropEvent);
 
     expect(fileUpload.find('.file-upload__file-list').children().length).toBe(
       1,
