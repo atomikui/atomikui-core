@@ -16,6 +16,7 @@ import Spinner from './components/spinner';
 import Stepper from './components/stepper';
 import Switch from './components/switch';
 import SwitchPanel from './components/switch-panel';
+import Truncate from './components/truncate';
 
 export {
   Alert,
@@ -36,4 +37,5 @@ export {
   Stepper,
   Switch,
   SwitchPanel,
+  Truncate,
 };
