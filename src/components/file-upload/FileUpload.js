@@ -17,8 +17,8 @@ const FileUpload = ({
   const getFileNames = (fileList) => {
     const fileArray = [];
 
-    for (let i = 0; i < fileList.length; i++) {
-      fileArray.push(fileList.item(i).name);
+    for (let i = 0; i < fileList.length; i += 1) {
+      fileArray.push(fileList[i].name);
     }
 
     return fileArray;

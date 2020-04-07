@@ -1,26 +1,93 @@
 /* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
+import sinon from 'sinon';
 import { mount, configure } from 'enzyme';
-import expectExport from 'expect';
 import FileUpload from './FileUpload';
 
 configure({ adapter: new Adapter() });
 
 describe('<FileUpload />', () => {
   let fileUpload;
+  let onChangeSpy;
+  const preventDefaultSpy = sinon.spy();
+  const stopPropagationSpy = sinon.spy();
+
+  const fileName = 'image.png';
+
+  const dragOverEvent = {
+    preventDefault: preventDefaultSpy,
+    stopPropagation: stopPropagationSpy,
+  };
+
+  const onDropEvent = {
+    dataTransfer: {
+      files: [],
+    },
+  };
+
+  const onChangeEvent = {
+    target: {
+      files: [{ name: fileName }],
+    },
+  };
 
   beforeEach(() => {
+    onChangeSpy = sinon.spy();
+
     fileUpload = mount(
       <FileUpload
         label="Upload file"
         uploadBtnVariant="primary"
-        onChange={(file) => console.log(file)}
+        onChange={onChangeSpy}
       />,
     );
   });
 
   it('Should render without errors', () => {
-    expectExport(fileUpload.length).toBe(1);
+    expect(fileUpload.length).toBe(1);
+  });
+
+  it('Should trigger onChange callback when file input value changes', () => {
+    fileUpload.find('input').simulate('change');
+
+    expect(onChangeSpy.called).toBe(true);
+  });
+
+  it('Should trigger onChange callback on file drop', () => {
+    fileUpload.find('.file-upload__input').simulate('drop', onDropEvent);
+
+    expect(onChangeSpy.called).toBe(true);
+  });
+
+  it('Should prevent call `preventDefault` and `stopPropagation` onDragOver', () => {
+    fileUpload.find('.file-upload__input').simulate('dragOver', dragOverEvent);
+
+    expect(preventDefaultSpy.called).toBe(true);
+    expect(stopPropagationSpy.called).toBe(true);
+  });
+
+  it('Should display the filename', () => {
+    fileUpload.find('input').simulate('change', onChangeEvent);
+
+    expect(
+      fileUpload
+        .find('.file-upload__input')
+        .children()
+        .last()
+        .text(),
+    ).toBe(fileName);
+  });
+
+  it('Should show addition text if `dragAndDrop` prop is `true`', () => {
+    fileUpload.setProps({ dragAndDrop: true });
+
+    expect(
+      fileUpload
+        .find('.file-upload__input')
+        .children()
+        .first()
+        .text(),
+    ).toBe('Select a file to upload or drag and drop in the box');
   });
 });
