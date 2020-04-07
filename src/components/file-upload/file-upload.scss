@@ -1,7 +1,7 @@
 .file-upload {
   & > input {
-    position: absolute;
     left: rem(-10000);
+    position: absolute;
   }
 
   & > input:focus + &__input {
@@ -48,6 +48,25 @@
         background: lighten($blue-000, 5%);
         border-color: $blue-100;
       }
+    }
+  }
+
+  &__file-list {
+    list-style-type: none;
+    margin: rem(16 0 0);
+    padding: 0;
+
+    & > * {
+      background: $white;
+      border: rem(1) solid darken($blue-100, 7%);
+      border-radius: rem(4);
+      display: inline-block;
+      margin-bottom: rem(8);
+      padding: rem(3 8);
+    }
+
+    & > * + * {
+      margin-left: rem(8);
     }
   }
 }

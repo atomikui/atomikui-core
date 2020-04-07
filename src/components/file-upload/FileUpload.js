@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { file } from 'babel-types';
 
 const FileUpload = ({
   classes,
@@ -12,7 +13,7 @@ const FileUpload = ({
 }) => {
   const [files, setFiles] = useState([]);
 
-  const id = `file-upload-${Math.round(Math.random() * 10000000)}`;
+  const id = `file-input-${Math.round(Math.random() * 10000000)}`;
 
   const getFileNames = (fileList) => {
     const fileArray = [];
@@ -69,8 +70,13 @@ const FileUpload = ({
         >
           {label}
         </span>
-        {!files.length ? (
-          <span>No files selected</span>
+        {!files.length && <span>No files selected</span>}
+        {dragAndDrop ? (
+          <ul className="file-upload__file-list">
+            {files.map((file) => (
+              <li key={Math.random()}>{file}</li>
+            ))}
+          </ul>
         ) : (
           <span>{files.join(', ')}</span>
         )}
