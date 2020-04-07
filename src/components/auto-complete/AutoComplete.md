@@ -6,12 +6,13 @@ The AutoComplete component is a FormField enhanced by a panel of suggested optio
 import { useState } from 'react';
 import { AutoComplete } from '@alaneicker/react-component-library';
 
-const [selected, setSelected] = useState('Cantaloupe');
+const [selected, setSelected] = useState('');
 
 <>
   <AutoComplete
     label="Select Your Favorite Fruit"
     onChange={(value) => setSelected(value)}
+    value={selected}
     items={[
       { value: 'Apple' },
       { value: 'Banana' },

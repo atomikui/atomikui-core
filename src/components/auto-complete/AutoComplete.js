@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import FormField from '../form-field';
 
+// TODO: handle value reset on escape key press
+
 const AutoComplete = ({ classes, items, onChange, value, ...others }) => {
   const [itemList] = useState(items);
 
