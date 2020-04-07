@@ -71,7 +71,7 @@ const FileUpload = ({
           {label}
         </span>
         {!files.length && (
-          <span className="file-upload__no-files">No files selected</span>
+          <span className="file-upload__no-files-label">No files selected</span>
         )}
         {dragAndDrop ? (
           <ul className="file-upload__file-list">
