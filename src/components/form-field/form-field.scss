@@ -52,14 +52,6 @@
     margin-top: rem(3);
   }
 
-  &--file-upload {
-    display: inline-flex;
-
-    & > .formfield__input {
-      display: none;
-    }
-  }
-
   @each $name, $breakpoint in $breakpoints {
     @media (min-width: $breakpoint) {
       @each $size in $formfield-sizes {

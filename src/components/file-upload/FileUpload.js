@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import FormField from '../form-field';
 
 const FileUpload = ({
   classes,
@@ -26,7 +25,9 @@ const FileUpload = ({
   };
 
   const handleChange = (e) => {
-    const selectedFiles = e.target.files;
+    e.preventDefault();
+
+    const selectedFiles = e.target.files || e.dataTransfer.files;
 
     setFiles(getFileNames(selectedFiles));
     onChange(selectedFiles);
@@ -37,20 +38,11 @@ const FileUpload = ({
     e.preventDefault();
   };
 
-  const handleDrop = (e) => {
-    e.preventDefault();
-
-    const selectedFiles = e.dataTransfer.files;
-    setFiles(getFileNames(selectedFiles));
-    onChange(selectedFiles);
-  };
-
   return (
-    <>
-      <FormField
+    <div className="file-upload">
+      <input
         id={id}
         name="fileUpload"
-        classes="formfield--file-upload"
         type="file"
         onChange={handleChange}
         multiple
@@ -58,10 +50,10 @@ const FileUpload = ({
       />
       <label
         onDragOver={onDragOver}
-        onDrop={(e) => handleDrop(e)}
+        onDrop={(e) => handleChange(e)}
         htmlFor={id}
-        className={classnames('file-upload', {
-          'file-upload--drag-and-drop': dragAndDrop,
+        className={classnames('file-upload__input', {
+          'file-upload__input--drag-and-drop': dragAndDrop,
         })}
       >
         {dragAndDrop && (
@@ -70,12 +62,10 @@ const FileUpload = ({
           </span>
         )}
         <span
-          className={classnames(
-            'btn btn--no-radius btn--condensed btn--nowrap',
-            {
-              [`btn--${uploadBtnVariant}`]: uploadBtnVariant,
-            },
-          )}
+          className={classnames('btn btn--condensed btn--nowrap', {
+            [`btn--${uploadBtnVariant}`]: uploadBtnVariant,
+            'btn--no-radius': !dragAndDrop,
+          })}
         >
           {label}
         </span>
@@ -85,7 +75,7 @@ const FileUpload = ({
           <span>{files.join(', ')}</span>
         )}
       </label>
-    </>
+    </div>
   );
 };
 
