@@ -4,15 +4,13 @@ import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import FormField from '../form-field';
 
-// TODO: handle value reset on escape key press
-
 const AutoComplete = ({ classes, items, onChange, value, ...others }) => {
   const [itemList] = useState(items);
 
   return (
     <Downshift
       onChange={(selection) => {
-        return onChange(selection.value);
+        // return onChange(selection ? selection.value : '');
       }}
       itemToString={(item) => {
         return item ? item.value : '';
@@ -27,8 +25,8 @@ const AutoComplete = ({ classes, items, onChange, value, ...others }) => {
         highlightedIndex,
         isOpen,
         inputValue,
-        selectedItem,
         getRootProps,
+        selectedItem,
       }) => {
         return (
           <div
@@ -51,7 +49,9 @@ const AutoComplete = ({ classes, items, onChange, value, ...others }) => {
                       return (
                         <li
                           className={classnames({
-                            'is-selected': item.value === selectedItem.value,
+                            'is-selected': selectedItem
+                              ? selectedItem.value === item.value
+                              : false,
                             'is-highlighted': highlightedIndex === index,
                           })}
                           {...getItemProps({
