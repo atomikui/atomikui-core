@@ -53,4 +53,16 @@ describe('<AutoComplete />', () => {
 
     expect(onChangeSpy.withArgs('').called).toBe(true);
   });
+
+  it('Should set the class of the selected item to `.is-selected`', () => {
+    autocomplete.find('input').simulate('change');
+    autocomplete.find('.auto-complete__list > :first-child').simulate('click');
+    autocomplete.find('input').simulate('change');
+
+    expect(
+      autocomplete
+        .find('.auto-complete__list > :first-child')
+        .hasClass('is-selected'),
+    ).toBe(true);
+  });
 });
