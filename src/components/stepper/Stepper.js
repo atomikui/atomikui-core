@@ -5,38 +5,38 @@ import Link from '../link';
 
 const Stepper = ({ classes, inline, steps, ...others }) => {
   return (
-  <nav>
-    <ul
-      className={classnames('stepper', classes, {
-        'stepper--inline': inline,
-      })}
-      {...others}
-    >
-      {steps.map(({ label, isComplete, href, isActive }, i) => {
-        const StepNumber = isComplete && href ? Link : 'div';
-        return (
-          <li
-            key={Math.random()}
-            aria-current={isActive}
-            className={classnames('stepper__step', {
-              'is-complete': isComplete,
-              'is-active': isActive,
-            })}
-          >
-            <StepNumber
-              className="stepper__step__number"
-              {...(isComplete && href && { href })}
+    <nav>
+      <ul
+        className={classnames('stepper', classes, {
+          'stepper--inline': inline,
+        })}
+        {...others}
+      >
+        {steps.map(({ label, isComplete, href, isActive }, index) => {
+          const StepNumber = isComplete && href ? Link : 'div';
+          return (
+            <li
+              key={`step-${index}`}
+              aria-current={isActive}
+              className={classnames('stepper__step', {
+                'is-complete': isComplete,
+                'is-active': isActive,
+              })}
             >
-              {!isComplete && i + 1}
-            </StepNumber>
-            <div className="stepper__step__label">
-              <span aria-hidden="true">{label}</span>
-            </div>
-          </li>
-        );
-      })}
-    </ul>
-  </nav>
+              <StepNumber
+                className="stepper__step__number"
+                {...(isComplete && href && { href })}
+              >
+                {!isComplete && index + 1}
+              </StepNumber>
+              <div className="stepper__step__label">
+                <span aria-hidden="true">{label}</span>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
   );
 };
 

@@ -58,9 +58,9 @@ const Dropdown = ({
             },
             ...options,
             // eslint-disable-next-line no-shadow
-          ].map(({ text, value }) => {
+          ].map(({ text, value }, index) => {
             return (
-              <option key={Math.random()} value={value}>
+              <option key={`option-${index}`} value={value}>
                 {text}
               </option>
             );

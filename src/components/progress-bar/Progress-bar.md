@@ -23,9 +23,9 @@ const variants = [
 ];
 
 <>
-  {variants.map(({ now, variant, animated }) => (
+  {variants.map(({ now, variant, animated }, index) => (
     <ProgressBar
-      key={Math.random()}
+      key={`progress-bar-${index}`}
       variant={variant}
       now={now}
       label={`${now}%`}
@@ -49,9 +49,9 @@ const variants = [
 ];
 
 <>
-  {variants.map(({ now, variant, animated }) => (
+  {variants.map(({ now, variant, animated }, index) => (
     <ProgressBar
-      key={Math.random()}
+      key={`progress-bar-${index}`}
       variant={variant}
       now={now}
       animated={animated}

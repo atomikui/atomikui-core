@@ -26,7 +26,7 @@ const [formOptions, setFormOptions] = useState([
   { label: 'Option 3', name: 'radio1', checked: false },
 ]);
 
-const onChange = index => {
+const onChange = (index) => {
   const updatesFormOprions = formOptions.map((formOption, i) => {
     return { ...formOption, checked: i === index ? true : false };
   });
@@ -35,13 +35,14 @@ const onChange = index => {
 };
 
 <>
-  {formOptions.map(({ label, name, checked }, i) => (
+  {formOptions.map(({ label, name, checked }, index) => (
     <FormOption
+      key={`form-option-${index}`}
       type="radio"
       label={label}
       name={name}
       checked={checked}
-      onChange={() => onChange(i)}
+      onChange={() => onChange(index)}
     />
   ))}
 </>;

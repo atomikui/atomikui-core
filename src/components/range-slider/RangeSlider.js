@@ -66,10 +66,10 @@ const RangeSlider = ({
         />
         {ticks && (
           <div className="range-slider__ticks" aria-hidden="true">
-            {ticks.map(({ text, val }) => {
+            {ticks.map(({ text, val }, index) => {
               return (
                 <div
-                  key={Math.random()}
+                  key={`tick-${index}`}
                   className="range-slider__ticks__tick"
                   {...(!disabled && {
                     onClick: () => {

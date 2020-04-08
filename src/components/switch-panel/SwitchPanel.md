@@ -18,7 +18,7 @@ const [switches, setSwitches] = useState([
   },
 ]);
 
-const handleChange = index => {
+const handleChange = (index) => {
   setSwitches(
     switches.map((item, i) => {
       return i === index ? { ...item, checked: !item.checked } : item;
@@ -27,11 +27,11 @@ const handleChange = index => {
 };
 
 <SwitchPanel>
-  {switches.map(({ label, checked, disabled }, i) => (
+  {switches.map(({ label, checked, disabled }, index) => (
     <Switch
-      key={Math.random()}
+      key={`switch-${index}`}
       label={label}
-      onChange={() => handleChange(i)}
+      onChange={() => handleChange(index)}
       checked={checked}
       disabled={disabled}
     />
