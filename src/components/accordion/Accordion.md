@@ -7,9 +7,9 @@ import { Accordion } from '@alaneicker/react-component-library';
 
 <Accordion
   items={[
-    { title: 'Item 1', content: 'Panel 1 content...' },
-    { title: 'Item 2', content: 'Panel 2 content...' },
-    { title: 'Item 3', content: 'Panel 3 content...' },
+    { label: 'Item 1', content: 'Panel 1 content...' },
+    { label: 'Item 2', content: 'Panel 2 content...' },
+    { label: 'Item 3', content: 'Panel 3 content...' },
   ]}
 />;
 ```
@@ -22,9 +22,9 @@ import { Accordion } from '@alaneicker/react-component-library';
 <Accordion
   multipleOpen
   items={[
-    { title: 'Item 1', content: 'Panel 1 content...' },
-    { title: 'Item 2', content: 'Panel 2 content...' },
-    { title: 'Item 3', content: 'Panel 3 content...' },
+    { label: 'Item 1', content: 'Panel 1 content...' },
+    { label: 'Item 2', content: 'Panel 2 content...' },
+    { label: 'Item 3', content: 'Panel 3 content...' },
   ]}
 />;
 ```

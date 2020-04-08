@@ -3,6 +3,8 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Accordion = ({ classes, items, multipleOpen, ...others }) => {
+  const type = multipleOpen ? 'checkbox' : 'radio';
+
   const [expanded, setExpanded] = useState(() => {
     let state = {};
 
@@ -13,7 +15,7 @@ const Accordion = ({ classes, items, multipleOpen, ...others }) => {
     return state;
   });
 
-  const updateAriaExpanded = (type, index, isChecked) => {
+  const updateAriaExpanded = (index, isChecked) => {
     if (type === 'radio') {
       const state = {};
 
@@ -28,32 +30,49 @@ const Accordion = ({ classes, items, multipleOpen, ...others }) => {
   };
 
   return (
-    <div className={classnames('accordion', classes, {})} {...others}>
-      {items.map(({ title, content }, i) => {
-        const type = multipleOpen ? 'checkbox' : 'radio';
-        const id = `panel-${type}-control-${i}`;
+    <div className="accordion" {...others}>
+      {items.map(({ label, content }, index) => {
+        const id = `panel-${type}-control-${index}`;
         const name = multipleOpen
-          ? `accordion_ ${type}_control_${i}`
+          ? `accordion_ ${type}_control_${index}`
           : `accordion_ ${type}_control`;
 
         return (
-          <div className="accordion__item" key={Math.random()}>
+          <div
+            className={classnames('accordion__item', {
+              'is-open': expanded[index],
+            })}
+            key={Math.random()}
+          >
             <input
               id={id}
               type={type}
               name={name}
-              checked={expanded[i]}
+              checked={expanded[index]}
               onChange={(e) => {
-                updateAriaExpanded(type, i, e.target.checked);
+                updateAriaExpanded(index, e.target.checked);
               }}
             />
             <label
-              className="accordion__item__title"
+              className="accordion__item__label"
               htmlFor={id}
-              aria-expanded={expanded[i]}
+              aria-expanded={expanded[index]}
               role="button"
             >
-              {title}
+              <span>{label}</span>
+              <svg
+                className="accordion__item__label__icon"
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 256 256"
+                xmlSpace="preserve"
+              >
+                <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093" />
+              </svg>
             </label>
             <div className="accordion__item__panel" aria-labelledby={id}>
               {content}
@@ -71,8 +90,9 @@ Accordion.propTypes = {
   /** Array representing accordion items */
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      title: PropTypes.string,
+      label: PropTypes.string,
       content: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+      expanded: PropTypes.bool,
     }),
   ),
   /** allow multiple panels to be open */
