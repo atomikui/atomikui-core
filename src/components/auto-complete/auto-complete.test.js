@@ -39,10 +39,18 @@ describe('<AutoComplete />', () => {
     expect(autocomplete.length).toBe(1);
   });
 
-  it('Should trigger onChange callback', () => {
+  it('Should trigger onChange callback with selected item', () => {
     autocomplete.find('input').simulate('change');
     autocomplete.find('.auto-complete__list > :last-child').simulate('click');
 
     expect(onChangeSpy.withArgs('Tangerine').called).toBe(true);
+  });
+
+  it('Should trigger onChange callback with empty value', () => {
+    autocomplete
+      .find('input')
+      .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
+
+    expect(onChangeSpy.withArgs('').called).toBe(true);
   });
 });
