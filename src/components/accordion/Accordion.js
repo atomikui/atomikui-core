@@ -6,11 +6,11 @@ const Accordion = ({ classes, items, multipleOpen, ...others }) => {
   return (
     <div className={classnames('accordion', classes, {})} {...others}>
       {items.map(({ title, content }, i) => {
-        const id = `panel-control-${i}`;
         const type = multipleOpen ? 'checkbox' : 'radio';
+        const id = `panel-${type}-control-${i}`;
         const name = multipleOpen
-          ? `accordion_control_${i}`
-          : 'accordion_control';
+          ? `accordion_ ${type}_control_${i}`
+          : `accordion_ ${type}_control`;
 
         return (
           <div key={Math.random()} className="accordion__item">
