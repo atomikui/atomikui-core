@@ -1,0 +1,33 @@
+$border: rem(1) solid lighten($gray-200, 15%);
+
+.accordion {
+  border: $border;
+  border-radius: rem(3);
+
+  & > * + * {
+    border-top: $border;
+  }
+
+  &__item {
+    & > input {
+      display: none;
+      border-top: 0;
+    }
+
+    & > input:checked ~ &__panel {
+      display: block;
+    }
+
+    &__title {
+      display: block;
+      cursor: pointer;
+      padding: rem(8 16);
+    }
+
+    &__panel {
+      display: none;
+      padding: rem(16);
+      border-top: $border;
+    }
+  }
+}

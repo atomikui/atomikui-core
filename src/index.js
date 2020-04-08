@@ -1,3 +1,4 @@
+import Accordion from './components/accordion';
 import Alert from './components/alert';
 import AutoComplete from './components/auto-complete';
 import Button from './components/button';
@@ -20,6 +21,7 @@ import SwitchPanel from './components/switch-panel';
 import Truncate from './components/truncate';
 
 export {
+  Accordion,
   Alert,
   AutoComplete,
   Button,

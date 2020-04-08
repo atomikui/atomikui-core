@@ -4,5 +4,10 @@ module.exports = {
   usageMode: 'expand',
   exampleMode: 'expand',
   sectionDepth: 6,
-  components: () => ['src/components/truncate/Truncate.js'],
+  components: () => {
+    return [
+      'src/components/accordion/Accordion.js',
+      'src/components/truncate/Truncate.js',
+    ];
+  },
 };
