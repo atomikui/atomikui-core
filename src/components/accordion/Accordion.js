@@ -42,7 +42,7 @@ const Accordion = ({ classes, items, multipleOpen, ...others }) => {
             className={classnames('accordion__item', {
               'is-open': expanded[index],
             })}
-            key={Math.random()}
+            key={`accordion-item-${index}`}
           >
             <input
               id={id}
