@@ -6,10 +6,10 @@ The `Accordion` component organizes content within collapsable items. It allows 
 import { Accordion } from '@alaneicker/react-component-library';
 
 <Accordion
-  items={[
-    { label: 'Item 1', content: 'Panel 1 content...' },
-    { label: 'Item 2', content: 'Panel 2 content...' },
-    { label: 'Item 3', content: 'Panel 3 content...' },
+  panels={[
+    { label: 'Panel Heading 1', content: 'Panel 1 content...' },
+    { label: 'Panel Heading 2', content: 'Panel 2 content...' },
+    { label: 'Panel Heading 3', content: 'Panel 3 content...' },
   ]}
 />;
 ```
@@ -21,10 +21,25 @@ import { Accordion } from '@alaneicker/react-component-library';
 
 <Accordion
   multipleOpen
-  items={[
-    { label: 'Item 1', content: 'Panel 1 content...' },
-    { label: 'Item 2', content: 'Panel 2 content...' },
-    { label: 'Item 3', content: 'Panel 3 content...' },
+  panels={[
+    { label: 'Panel Heading 1', content: 'Panel 1 content...' },
+    { label: 'Panel Heading 2', content: 'Panel 2 content...' },
+    { label: 'Panel Heading 3', content: 'Panel 3 content...' },
+  ]}
+/>;
+```
+
+### Accordion With Default Expanded Panel
+
+```jsx
+import { Accordion } from '@alaneicker/react-component-library';
+
+<Accordion
+  multipleOpen
+  panels={[
+    { label: 'Panel Heading 1', content: 'Panel 1 content...', expanded: true },
+    { label: 'Panel Heading 2', content: 'Panel 2 content...' },
+    { label: 'Panel Heading 3', content: 'Panel 3 content...' },
   ]}
 />;
 ```

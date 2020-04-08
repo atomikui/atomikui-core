@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Accordion = ({ classes, items, multipleOpen, ...others }) => {
+const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
   const type = multipleOpen ? 'checkbox' : 'radio';
 
   const [expanded, setExpanded] = useState(() => {
     let state = {};
 
-    items.forEach((item, i) => {
+    panels.forEach((item, i) => {
       state = { ...state, [i]: item.expanded || false };
     });
 
@@ -31,7 +31,7 @@ const Accordion = ({ classes, items, multipleOpen, ...others }) => {
 
   return (
     <div className="accordion" {...others}>
-      {items.map(({ label, content }, index) => {
+      {panels.map(({ label, content }, index) => {
         const id = `panel-${type}-control-${index}`;
         const name = multipleOpen
           ? `accordion_ ${type}_control_${index}`
@@ -39,7 +39,7 @@ const Accordion = ({ classes, items, multipleOpen, ...others }) => {
 
         return (
           <div
-            className={classnames('accordion__item', {
+            className={classnames('accordion__panel', {
               'is-open': expanded[index],
             })}
             key={`accordion-item-${index}`}
@@ -54,14 +54,14 @@ const Accordion = ({ classes, items, multipleOpen, ...others }) => {
               }}
             />
             <label
-              className="accordion__item__label"
+              className="accordion__panel__label"
               htmlFor={id}
               aria-expanded={expanded[index]}
               role="button"
             >
               <span>{label}</span>
               <svg
-                className="accordion__item__label__icon"
+                className="accordion__panel__label__icon"
                 version="1.1"
                 id="Capa_1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const Accordion = ({ classes, items, multipleOpen, ...others }) => {
                 <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093" />
               </svg>
             </label>
-            <div className="accordion__item__panel" aria-labelledby={id}>
+            <div className="accordion__panel__panel" aria-labelledby={id}>
               {content}
             </div>
           </div>
@@ -88,10 +88,13 @@ Accordion.propTypes = {
   /** Adds custom component CSS classes */
   classes: PropTypes.string,
   /** Array representing accordion items */
-  items: PropTypes.arrayOf(
+  panels: PropTypes.arrayOf(
     PropTypes.shape({
+      /** Label to be displayed in panel heading */
       label: PropTypes.string,
+      /** Panel content */
       content: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+      /** If set to true, the panel will be expanded by default */
       expanded: PropTypes.bool,
     }),
   ),
@@ -101,7 +104,7 @@ Accordion.propTypes = {
 
 Accordion.defaultProps = {
   classes: '',
-  content: [],
+  panels: [],
   multipleOpen: false,
 };
 
