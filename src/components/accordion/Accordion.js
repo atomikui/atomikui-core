@@ -51,10 +51,13 @@ const Accordion = ({ classes, items, multipleOpen, ...others }) => {
               className="accordion__item__title"
               htmlFor={id}
               aria-expanded={expanded[i]}
+              role="button"
             >
               {title}
             </label>
-            <div className="accordion__item__panel">{content}</div>
+            <div className="accordion__item__panel" aria-labelledby={id}>
+              {content}
+            </div>
           </div>
         );
       })}
