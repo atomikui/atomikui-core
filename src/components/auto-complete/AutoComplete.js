@@ -10,7 +10,7 @@ const AutoComplete = ({ classes, items, onChange, value, ...others }) => {
   return (
     <Downshift
       onChange={(selection) => {
-        // return onChange(selection ? selection.value : '');
+        return onChange(selection ? selection.value : '');
       }}
       itemToString={(item) => {
         return item ? item.value : '';
