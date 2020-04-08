@@ -2,7 +2,7 @@ $border: rem(1) solid lighten($gray-200, 15%);
 
 .accordion {
   background: $white;
-  border: $border;
+  border: rem(1) solid $gray-200;
   border-radius: rem(3);
 
   & > * + * {
@@ -12,8 +12,8 @@ $border: rem(1) solid lighten($gray-200, 15%);
   &__item {
     & > input {
       border-top: 0;
-      position: absolute;
       left: rem(-10000);
+      position: absolute;
     }
 
     & > input:checked ~ &__panel {
@@ -27,6 +27,7 @@ $border: rem(1) solid lighten($gray-200, 15%);
     &__title {
       cursor: pointer;
       display: block;
+      font-weight: $font-semibold;
       padding: rem(8 16);
 
       &:hover {
