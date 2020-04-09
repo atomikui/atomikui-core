@@ -10,19 +10,6 @@ $border: rem(1) solid lighten($gray-200, 15%);
   }
 
   &__panel {
-    & > input {
-      left: rem(-10000);
-      position: absolute;
-    }
-
-    & > input:checked ~ &__content {
-      display: block;
-    }
-
-    & > input:focus ~ &__label {
-      box-shadow: inset rem(0 0 0 2) $blue-100;
-    }
-
     &__label {
       align-items: center;
       cursor: pointer;
@@ -49,7 +36,20 @@ $border: rem(1) solid lighten($gray-200, 15%);
       padding: rem(16);
     }
 
-    &.is-open &__label__icon {
+    & > input {
+      left: rem(-10000);
+      position: absolute;
+    }
+
+    & > input:checked ~ &__content {
+      display: block;
+    }
+
+    & > input:focus ~ &__label {
+      box-shadow: inset rem(0 0 0 2) $blue-100;
+    }
+
+    & > input:checked ~ &__label > &__label__icon {
       transform: rotate(180deg);
     }
   }

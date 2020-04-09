@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import generateId from '../../utilities/generateId';
 
 const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
   const type = multipleOpen ? 'checkbox' : 'radio';
@@ -32,10 +33,9 @@ const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
   return (
     <div className="accordion" {...others}>
       {panels.map(({ label, content }, index) => {
-        const id = `panel-${type}-control-${index}`;
-        const name = multipleOpen
-          ? `accordion_ ${type}_control_${index}`
-          : `accordion_ ${type}_control`;
+        const id = generateId('control');
+
+        const name = multipleOpen ? `control_${index}` : `control`;
 
         return (
           <div
