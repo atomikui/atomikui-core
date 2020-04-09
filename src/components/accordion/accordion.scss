@@ -15,7 +15,7 @@ $border: rem(1) solid lighten($gray-200, 15%);
       position: absolute;
     }
 
-    & > input:checked ~ &__panel {
+    & > input:checked ~ &__content {
       display: block;
     }
 
@@ -43,14 +43,14 @@ $border: rem(1) solid lighten($gray-200, 15%);
       width: rem(18);
     }
 
-    &.is-open &__label__icon {
-      transform: rotate(180deg);
-    }
-
-    &__panel {
+    &__content {
       border-top: $border;
       display: none;
       padding: rem(16);
+    }
+
+    &.is-open &__label__icon {
+      transform: rotate(180deg);
     }
   }
 }

@@ -74,7 +74,7 @@ const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
                 <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093" />
               </svg>
             </label>
-            <div className="accordion__panel__panel" aria-labelledby={id}>
+            <div className="accordion__panel__content" aria-labelledby={id}>
               {content}
             </div>
           </div>
