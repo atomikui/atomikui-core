@@ -17,7 +17,7 @@ import { Media, Button } from '@alaneicker/react-component-library';
       <h3>Red Delicious Apples</h3>
       <p>
         The Red Delicious is a clone of apple cultigen, now comprising more than
-        50 cultivars, first recognized in Madison County, Iowa, in 1880
+        50 cultivars, first recognized in Madison County, Iowa, in 1880.
       </p>
     </>
   }
@@ -52,7 +52,7 @@ import { Media, Button } from '@alaneicker/react-component-library';
       <h3>Red Delicious Apples</h3>
       <p>
         The Red Delicious is a clone of apple cultigen, now comprising more than
-        50 cultivars, first recognized in Madison County, Iowa, in 1880
+        50 cultivars, first recognized in Madison County, Iowa, in 1880.
       </p>
     </>
   }
