@@ -23,7 +23,7 @@ const Media = ({
     >
       <div className="media__hd">{header}</div>
       <div className="media__bd">{body}</div>
-      <div className="media__ft">{footer}</div>
+      {footer && <div className="media__ft">{footer}</div>}
     </div>
   );
 };
@@ -48,8 +48,8 @@ Media.propTypes = {
 Media.defaultProps = {
   align: '',
   classes: '',
-  body: '',
-  header: '',
+  body: 'Insert media body',
+  header: 'Insert media header',
   footer: '',
   inline: false,
   reverse: false,
