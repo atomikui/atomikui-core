@@ -1,2 +1,23 @@
 .media {
+  display: flex;
+
+  & > * + * {
+    margin-left: rem(16);
+  }
+
+  &__bd {
+    flex: 1;
+  }
+
+  &--inline {
+    display: inline-flex;
+  }
+
+  &--align-bottom {
+    align-items: flex-end;
+  }
+
+  &--align-middle {
+    align-items: center;
+  }
 }
