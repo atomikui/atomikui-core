@@ -28,7 +28,7 @@ Media.propTypes = {
   /** Media footer content */
   footer: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Media header content */
-  head: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  header: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Displays media content as inline-flex */
   inline: PropTypes.bool,
 };
