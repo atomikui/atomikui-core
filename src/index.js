@@ -11,6 +11,7 @@ import FormOption from './components/form-option';
 import Hint from './components/hint';
 import Label from './components/label';
 import Link from './components/link';
+import Media from './components/media';
 import Modal from './components/modal';
 import ProgressBar from './components/progress-bar';
 import RangeSlider from './components/range-slider';
@@ -34,6 +35,7 @@ export {
   Hint,
   Label,
   Link,
+  Media,
   Modal,
   ProgressBar,
   RangeSlider,
