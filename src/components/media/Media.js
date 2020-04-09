@@ -2,12 +2,22 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Media = ({ align, body, classes, header, inline, footer, ...others }) => {
+const Media = ({
+  align,
+  body,
+  classes,
+  header,
+  inline,
+  footer,
+  reverse,
+  ...others
+}) => {
   return (
     <div
       className={classnames('media', classes, {
         'media--inline': inline,
-        [`media--align-${align}`]: align,
+        'media--reverse': reverse,
+        [`media--${align}`]: align,
       })}
       {...others}
     >
@@ -31,6 +41,8 @@ Media.propTypes = {
   header: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Displays media content as inline-flex */
   inline: PropTypes.bool,
+  /** Reversed the order of the media component children */
+  reverse: PropTypes.bool,
 };
 
 Media.defaultProps = {
@@ -40,6 +52,7 @@ Media.defaultProps = {
   header: '',
   footer: '',
   inline: false,
+  reverse: false,
 };
 
 export default Media;

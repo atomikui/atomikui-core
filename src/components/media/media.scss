@@ -2,22 +2,30 @@
   display: flex;
 
   & > * + * {
-    margin-left: rem(16);
+    margin: rem(0 0 0 16);
   }
 
   &__bd {
     flex: 1;
   }
 
+  &--reverse {
+    flex-direction: row-reverse;
+
+    & > * + * {
+      margin: rem(0 16 0 0);
+    }
+  }
+
   &--inline {
     display: inline-flex;
   }
 
-  &--align-bottom {
+  &--bottom {
     align-items: flex-end;
   }
 
-  &--align-middle {
+  &--middle {
     align-items: center;
   }
 }
