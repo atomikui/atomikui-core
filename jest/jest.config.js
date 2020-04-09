@@ -9,6 +9,7 @@ module.exports = {
     '!src/**/*.d.ts',
     '!src/index.js',
     '!src/utilities/**/*.js',
+    '!src/components/test-coverage/**/*.js',
   ],
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
@@ -36,5 +37,14 @@ module.exports = {
     'web.jsx',
     'jsx',
     'node',
+  ],
+  reporters: [
+    'default',
+    [
+      './node_modules/jest-html-reporter',
+      {
+        pageTitle: 'Test Coverage Report',
+      },
+    ],
   ],
 };
