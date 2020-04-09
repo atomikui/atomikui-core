@@ -34,7 +34,6 @@ const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
     <div className="accordion" {...others}>
       {panels.map(({ label, content }, index) => {
         const id = generateId('control');
-
         const name = multipleOpen ? `control_${index}` : `control`;
 
         return (
