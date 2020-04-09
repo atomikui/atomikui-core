@@ -19,16 +19,18 @@
   },
   "plugins": ["react"],
   "rules": {
-    "no-unused-vars": 0,
+    "arrow-body-style": ["error", "always"],
+    "implicit-arrow-linebreak": 0,
     "max-len": [
       "warn",
       {
         "ignoreComments": true
       }
     ],
+    "no-alert": 0,
+    "no-console": 0,
+    "no-unused-vars": 0,
     "object-curly-newline": 0,
-    "object-property-newline": 2,
-    "implicit-arrow-linebreak": 0,
-    "arrow-body-style": ["error", "always"]
+    "object-property-newline": 2
   }
 }
