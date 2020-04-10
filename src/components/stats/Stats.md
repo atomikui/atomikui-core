@@ -3,11 +3,9 @@
   style={{
     position: 'absolute',
     top: '0',
-    left: '0',
-    width: '100%',
+    left: '200px',
+    right: '0',
     height: '100vh',
-    borderLeft: '1px solid #f0f2f5',
-    borderRight: '1px solid #f0f2f5',
   }}
 >
   <Stats />
