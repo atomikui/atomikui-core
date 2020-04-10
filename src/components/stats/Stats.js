@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import Spinner from '../spinner';
 import './stats.scss';
 
 const Stats = () => {
@@ -38,7 +37,6 @@ const Stats = () => {
     <div className="stats-container">
       {loading && (
         <div className="stats-container__loading">
-          <Spinner size="xlg" color="blue" />
           <div>LOADING REPORT...</div>
         </div>
       )}
