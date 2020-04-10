@@ -43,7 +43,7 @@ module.exports = {
     [
       './node_modules/jest-html-reporter',
       {
-        pageTitle: 'Test Coverage Report',
+        pageTitle: 'Jest Coverage Report',
       },
     ],
   ],
