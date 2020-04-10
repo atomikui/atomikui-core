@@ -19,7 +19,6 @@ import Spinner from './components/spinner';
 import Stepper from './components/stepper';
 import Switch from './components/switch';
 import SwitchPanel from './components/switch-panel';
-import TestCoverage from './components/test-coverage';
 import Truncate from './components/truncate';
 
 export {
@@ -44,6 +43,5 @@ export {
   Stepper,
   Switch,
   SwitchPanel,
-  TestCoverage,
   Truncate,
 };
