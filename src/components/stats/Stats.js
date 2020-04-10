@@ -1,6 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import Spinner from '../spinner';
+import './stats.scss';
 
 const Stats = () => {
+  const [loading, setLoading] = useState(true);
   const iframeRef = useRef();
 
   const setIframeContentStyles = () => {
@@ -29,18 +32,29 @@ const Stats = () => {
     );
 
     iframeDoc.head.appendChild(styleTag);
+
+    setLoading(false);
   };
 
   return (
-    <iframe
-      ref={iframeRef}
-      width="100%"
-      height="100%"
-      frameBorder="no"
-      title="jest coverage report"
-      src="http://localhost:6060/src/components/stats/coverage-report.html"
-      onLoad={setIframeContentStyles}
-    />
+    <div className="stats-container">
+      {loading && (
+        <div className="stats-container__loading">
+          <Spinner size="xlg" color="blue" />
+          <div>LOADING REPORT...</div>
+        </div>
+      )}
+      <iframe
+        style={{ display: loading ? 'none' : 'block' }}
+        ref={iframeRef}
+        width="100%"
+        height="100%"
+        frameBorder="no"
+        title="jest coverage report"
+        src="http://localhost:6060/src/components/stats/coverage-report.html"
+        onLoad={setIframeContentStyles}
+      />
+    </div>
   );
 };
 
