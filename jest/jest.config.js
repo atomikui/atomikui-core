@@ -39,13 +39,4 @@ module.exports = {
     'node',
   ],
   reporters: ['default', 'jest-html-reporters'],
-  // reporters: [
-  //   'default',
-  //   [
-  //     './node_modules/jest-html-reporter',
-  //     {
-  //       pageTitle: 'Jest Coverage Report',
-  //     },
-  //   ],
-  // ],
 };
