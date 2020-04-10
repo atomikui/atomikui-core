@@ -8,4 +8,7 @@ module.exports = {
       content: './styleguide/docs/Installation.md',
     },
   ],
+  components: () => {
+    return ['src/components/test-coverage/TestCoverage.js'];
+  },
 };
