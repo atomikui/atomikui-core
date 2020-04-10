@@ -16,6 +16,7 @@ import Modal from './components/modal';
 import ProgressBar from './components/progress-bar';
 import RangeSlider from './components/range-slider';
 import Spinner from './components/spinner';
+import Stats from './components/stats';
 import Stepper from './components/stepper';
 import Switch from './components/switch';
 import SwitchPanel from './components/switch-panel';
@@ -40,6 +41,7 @@ export {
   ProgressBar,
   RangeSlider,
   Spinner,
+  Stats,
   Stepper,
   Switch,
   SwitchPanel,

@@ -43,7 +43,7 @@ module.exports = {
     [
       'jest-html-reporters',
       {
-        filename: 'jest-coverage-report.html',
+        filename: 'coverage-report.html',
         pageTitle: 'React Component Library Test Coverage',
         expand: true,
       },

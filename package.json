@@ -21,7 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
-    "test": "jest --coverage --config=./jest/jest.config.js",
+    "test": "jest --coverage --config=./jest/jest.config.js && mv ./coverage-report.html ./src/components/stats/coverage-report.html",
     "eject": "react-scripts eject",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build"
