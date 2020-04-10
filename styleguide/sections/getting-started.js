@@ -10,7 +10,7 @@ module.exports = {
     {
       name: 'Test Coverage',
       external: true,
-      href: './jest_html_reporters.html',
+      href: './jest-coverage-report.html',
     },
   ],
 };

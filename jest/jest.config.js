@@ -38,5 +38,15 @@ module.exports = {
     'jsx',
     'node',
   ],
-  reporters: ['default', 'jest-html-reporters'],
+  reporters: [
+    'default',
+    [
+      'jest-html-reporters',
+      {
+        filename: 'jest-coverage-report.html',
+        pageTitle: 'React Component Library Test Coverage',
+        expand: true,
+      },
+    ],
+  ],
 };
