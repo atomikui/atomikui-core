@@ -38,13 +38,14 @@ module.exports = {
     'jsx',
     'node',
   ],
-  reporters: [
-    'default',
-    [
-      './node_modules/jest-html-reporter',
-      {
-        pageTitle: 'Jest Coverage Report',
-      },
-    ],
-  ],
+  reporters: ['default', 'jest-html-reporters'],
+  // reporters: [
+  //   'default',
+  //   [
+  //     './node_modules/jest-html-reporter',
+  //     {
+  //       pageTitle: 'Jest Coverage Report',
+  //     },
+  //   ],
+  // ],
 };
