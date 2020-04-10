@@ -3,8 +3,8 @@
 import React from 'react';
 import html from 'html-loader!./test-report.html';
 
-const TestCoverage = () => {
+const Coverage = () => {
   return <div dangerouslySetInnerHTML={{ __html: html }}></div>;
 };
 
-export default TestCoverage;
+export default Coverage;

@@ -9,6 +9,6 @@ module.exports = {
     },
   ],
   components: () => {
-    return ['src/components/test-coverage/TestCoverage.js'];
+    return ['src/components/coverage/Coverage.js'];
   },
 };
