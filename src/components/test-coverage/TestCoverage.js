@@ -1,8 +1,10 @@
+/* eslint-disable import/no-webpack-loader-syntax */
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import html from '../../test-report.html';
+import html from 'html-loader!./test-report.html';
 
 const TestCoverage = () => {
-  return <></>;
+  return <div dangerouslySetInnerHTML={{ __html: html }}></div>;
 };
 
 export default TestCoverage;

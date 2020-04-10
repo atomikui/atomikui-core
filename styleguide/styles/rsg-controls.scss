@@ -1,4 +1,8 @@
-[class^="rsg--tabButtons"],
-[class^="rsg--controls"] {
+[class^='rsg--tabButtons'],
+[class^='rsg--controls'] {
   display: none !important;
+}
+
+[data-testid='section-section-test-coverage'] [class^='rsg--pathline'] {
+  display: none;
 }
