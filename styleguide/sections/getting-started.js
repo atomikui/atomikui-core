@@ -7,11 +7,6 @@ module.exports = {
       name: 'Installation',
       content: './styleguide/docs/Installation.md',
     },
-    // {
-    //   name: 'Test Coverage',
-    //   external: true,
-    //   href: './jest-coverage-report.html',
-    // },
   ],
   components: () => {
     return ['src/components/stats/Stats.js'];
