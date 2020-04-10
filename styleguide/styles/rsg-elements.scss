@@ -13,3 +13,7 @@ code[class^='rsg--code']:not(:empty) {
   background: $gray-100;
   padding: rem(1 4);
 }
+
+main {
+  position: relative !important;
+}
