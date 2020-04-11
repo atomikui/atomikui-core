@@ -11,7 +11,7 @@
     "build:styleguide": "NODE_ENV=production rm -rf build && yarn test && styleguidist build",
     "build:styles": "webpack --config webpack.config.js"
   },
-  "browserslist": {yarn
+  "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
