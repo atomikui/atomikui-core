@@ -11,8 +11,8 @@
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "test": "jest --coverage --config=./jest/jest.config.js",
     "start": "NODE_ENV=development styleguidist server",
-    "build-component-library": "NODE_ENV=production rm -rf dist && babel -d ./dist ./src -s && npm run build-styles",
-    "build-styles": "webpack --config webpack.config.js",
+    "build:component-library": "NODE_ENV=production rm -rf dist && babel -d ./dist ./src -s && npm run build-styles",
+    "build:styles": "webpack --config webpack.config.js",
     "build": "NODE_ENV=production rm -rf build && npm run test && styleguidist build"
   },
   "browserslist": {
