@@ -5,8 +5,8 @@
 .eslintrc
 .babelrc
 
-assets/
 build/
+public/
 coverage/
 jest/
 sass-starter/
