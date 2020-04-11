@@ -1,49 +1,23 @@
-import Accordion from './components/accordion';
-import Alert from './components/alert';
-import AutoComplete from './components/auto-complete';
-import Button from './components/button';
-import ButtonGroup from './components/button-group';
-import DatePicker from './components/date-picker';
-import Dropdown from './components/dropdown';
-import FileUpload from './components/file-upload';
-import FormField from './components/form-field';
-import FormOption from './components/form-option';
-import Hint from './components/hint';
-import Label from './components/label';
-import Link from './components/link';
-import Media from './components/media';
-import Modal from './components/modal';
-import ProgressBar from './components/progress-bar';
-import RangeSlider from './components/range-slider';
-import Spinner from './components/spinner';
-import Stats from './components/stats';
-import Stepper from './components/stepper';
-import Switch from './components/switch';
-import SwitchPanel from './components/switch-panel';
-import Truncate from './components/truncate';
-
-export {
-  Accordion,
-  Alert,
-  AutoComplete,
-  Button,
-  ButtonGroup,
-  DatePicker,
-  Dropdown,
-  FileUpload,
-  FormField,
-  FormOption,
-  Hint,
-  Label,
-  Link,
-  Media,
-  Modal,
-  ProgressBar,
-  RangeSlider,
-  Spinner,
-  Stats,
-  Stepper,
-  Switch,
-  SwitchPanel,
-  Truncate,
-};
+export { default as Accordion } from './components/accordion';
+export { default as Alert } from './components/alert';
+export { default as AutoComplete } from './components/auto-complete';
+export { default as Button } from './components/button';
+export { default as ButtonGroup } from './components/button-group';
+export { default as DatePicker } from './components/date-picker';
+export { default as Dropdown } from './components/dropdown';
+export { default as FileUpload } from './components/file-upload';
+export { default as FormField } from './components/form-field';
+export { default as FormOption } from './components/form-option';
+export { default as Hint } from './components/hint';
+export { default as Label } from './components/label';
+export { default as Link } from './components/link';
+export { default as Media } from './components/media';
+export { default as Modal } from './components/modal';
+export { default as ProgressBar } from './components/progress-bar';
+export { default as RangeSlider } from './components/range-slider';
+export { default as Spinner } from './components/spinner';
+export { default as Stats } from './components/stats';
+export { default as Stepper } from './components/stepper';
+export { default as Switch } from './components/switch';
+export { default as SwitchPanel } from './components/switch-panel';
+export { default as Truncate } from './components/truncate';
