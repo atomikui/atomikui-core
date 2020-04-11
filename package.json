@@ -3,28 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "main": "./src/index.js",
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "downshift": "^5.0.6",
-    "focus-trap": "^5.1.0",
-    "formik": "^2.1.4",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.0",
-    "react-calendar": "^3.0.1",
-    "react-dom": "^16.13.0",
-    "react-masked-field": "^2.0.3",
-    "react-scripts": "3.4.0",
-    "react-styleguidist": "^11.0.3",
-    "yup": "^0.28.3"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "test": "jest --coverage --config=./jest/jest.config.js && mv ./coverage-report.html ./src/components/stats/coverage-report.html",
-    "eject": "react-scripts eject",
-    "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "start": "NODE_ENV=development styleguidist server",
+    "build": "NODE_ENV=production styleguidist build"
   },
   "browserslist": {
     "production": [
@@ -38,17 +21,54 @@
       "last 1 safari version"
     ]
   },
+  "peerDependencies": {
+    "classnames": "^2.2.6",
+    "downshift": "^5.0.6",
+    "focus-trap": "^5.1.0",
+    "formik": "^2.1.4",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-calendar": "^3.0.1",
+    "react-dom": "^16.13.0",
+    "react-masked-field": "^2.0.3",
+    "react-styleguidist": "^11.0.3",
+    "webpack": "^4.42.1",
+    "yup": "^0.28.3"
+  },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "classnames": "^2.2.6",
+    "css-loader": "^3.5.2",
+    "downshift": "^5.0.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.1",
-    "html-loader": "^1.1.0",
-    "jest-html-reporters": "^1.2.1",
-    "sinon": "^9.0.1"
+    "focus-trap": "^5.1.0",
+    "formik": "^2.1.4",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.0",
+    "react-calendar": "^3.0.1",
+    "react-dom": "^16.13.0",
+    "react-masked-field": "^2.0.3",
+    "react-styleguidist": "^11.0.3",
+    "sass-loader": "^8.0.2",
+    "sinon": "^9.0.1",
+    "webpack": "^4.42.1",
+    "yup": "^0.28.3"
   }
 }
