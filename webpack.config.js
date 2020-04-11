@@ -8,14 +8,14 @@ const buildEvent = process.env.npm_lifecycle_event;
 let buildDir;
 let cssBuildPath;
 
-if (buildEvent === 'build') {
-  buildDir = './styles';
-  cssBuildPath = 'styles/react-component-library.css';
-}
-
-if (buildEvent === 'build:styles') {
-  buildDir = './dist/styles';
-  cssBuildPath = 'react-component-library.css';
+switch (buildEvent) {
+  case 'build:styles':
+    buildDir = './dist/styles';
+    cssBuildPath = 'react-component-library.css';
+    break;
+  default:
+    buildDir = './styles';
+    cssBuildPath = 'styles/react-component-library.css';
 }
 
 module.exports = {
