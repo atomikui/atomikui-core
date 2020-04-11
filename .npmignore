@@ -5,6 +5,7 @@
 .eslintrc
 .babelrc
 
+assets/
 build/
 coverage/
 jest/
@@ -12,4 +13,6 @@ sass-starter/
 styleguide/
 
 styleguide.config.js
+index.php
+
 yarn.lock

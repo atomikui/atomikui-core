@@ -3,8 +3,7 @@ const AutoPrefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const distDir = 'dist';
-const scriptsBuildDir = 'static/scripts';
-const stylesBuildDir = 'static/styles';
+const assetsDir = 'assets/';
 
 const prod = process.env.NODE_ENV === 'production';
 
@@ -13,8 +12,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, distDir),
     libraryTarget: 'umd',
-    filename: path.join(scriptsBuildDir, '[name].[hash].min.js'),
-    chunkFilename: path.join(scriptsBuildDir, '[name].[hash].chunk.min.js'),
+    filename: path.join(assetsDir, '[name].[hash].min.js'),
+    chunkFilename: path.join(assetsDir, '[name].[hash].chunk.min.js'),
     publicPath: '/',
   },
   resolve: {
@@ -68,8 +67,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: path.join(stylesBuildDir, '[name].[hash].css'),
-      chunkFilename: path.join(stylesBuildDir, '[name].[hash].css'),
+      filename: path.join(assetsDir, '[name].[hash].css'),
+      chunkFilename: path.join(assetsDir, '[name].[hash].css'),
     }),
   ],
 };

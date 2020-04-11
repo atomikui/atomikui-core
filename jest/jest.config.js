@@ -43,7 +43,7 @@ module.exports = {
     [
       'jest-html-reporters',
       {
-        filename: 'coverage-report.html',
+        filename: 'public/coverage-report.html',
         pageTitle: 'Test Coverage Report',
         expand: true,
       },

@@ -10,6 +10,7 @@ module.exports = {
   moduleAliases: {
     '@alaneicker/react-component-library': path.resolve(__dirname, 'src'),
   },
+  assetsDir: './public',
   styleguideDir: './build',
   require: ['./src/styles/main.scss', './styleguide/styles/main.scss'],
   template: {

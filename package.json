@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
-    "test": "jest --coverage --config=./jest/jest.config.js && mv ./coverage-report.html ./src/components/stats/coverage-report.html",
+    "test": "jest --coverage --config=./jest/jest.config.js",
     "start": "NODE_ENV=development styleguidist server",
     "build": "NODE_ENV=production styleguidist build"
   },
