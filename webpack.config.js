@@ -1,5 +1,6 @@
 const path = require('path');
 const AutoPrefixer = require('autoprefixer');
+const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const prod = process.env.NODE_ENV === 'production';
@@ -64,6 +65,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
       filename: cssBuildPath,
     }),
