@@ -1,0 +1,15 @@
+.vscode
+.prettierrc
+.eslintrc
+.gitignore
+.eslintrc
+.babelrc
+
+build/
+coverage/
+jest/
+sass-starter/
+styleguide/
+
+styleguide.config.js
+yarn.lock
