@@ -47,7 +47,7 @@ const Stats = () => {
         height="100%"
         frameBorder="no"
         title="jest coverage report"
-        src="http://localhost:6060/src/components/stats/coverage-report.html"
+        src="./src/components/stats/coverage-report.html"
         onLoad={setIframeContentStyles}
       />
     </div>
