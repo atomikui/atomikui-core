@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import sinon from 'sinon';
@@ -45,10 +44,7 @@ describe('<DatePicker />', () => {
   });
 
   it('Should change input value when calendar date is clicked', () => {
-    datepicker
-      .find('.react-calendar__tile')
-      .first()
-      .simulate('click');
+    datepicker.find('.react-calendar__tile').first().simulate('click');
 
     expect(datepicker.find('input.formfield__input').prop('value')).not.toBe(
       originalValue,

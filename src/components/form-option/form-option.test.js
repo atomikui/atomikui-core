@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import sinon from 'sinon';
@@ -39,12 +38,7 @@ describe('<FormOption />', () => {
   });
 
   it('Should set name attribute based of ID if no name prop is not set', () => {
-    expect(
-      formOption
-        .find('input')
-        .prop('name')
-        .match(/uid-/),
-    ).not.toBeNull();
+    expect(formOption.find('input').prop('name').match(/uid-/)).not.toBeNull();
   });
 
   it('Should trigger onChange callback', () => {

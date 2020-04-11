@@ -7,7 +7,8 @@
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "test": "jest --coverage --config=./jest/jest.config.js",
     "start": "NODE_ENV=development styleguidist server",
-    "build": "NODE_ENV=production yarn test && styleguidist build"
+    "build": "NODE_ENV=production yarn test && styleguidist build",
+    "build:component-library": "NODE_ENV=production babel -d ./dist ./src -s"
   },
   "browserslist": {
     "production": [
@@ -72,5 +73,8 @@
     "sinon": "^9.0.1",
     "webpack": "^4.42.1",
     "yup": "^0.28.3"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4"
   }
 }

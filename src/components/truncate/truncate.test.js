@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import sinon from 'sinon';
@@ -56,10 +55,8 @@ describe('<Truncate />', () => {
   });
 
   it('Should truncate content', () => {
-    const wordCount = truncate
-      .text()
-      .replace(' ... Show more', '')
-      .split(' ').length;
+    const wordCount = truncate.text().replace(' ... Show more', '').split(' ')
+      .length;
 
     expect(wordCount).toBe(50);
   });

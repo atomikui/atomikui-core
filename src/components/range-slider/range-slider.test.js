@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import sinon from 'sinon';
@@ -48,10 +47,7 @@ describe('<RangeSlider />', () => {
 
   it('If range slider `is not disabled` ticks should have onClick event', () => {
     expect(
-      rangeSlider
-        .find('.range-slider__ticks__tick')
-        .first()
-        .prop('onClick'),
+      rangeSlider.find('.range-slider__ticks__tick').first().prop('onClick'),
     ).toBeDefined();
   });
 
@@ -59,10 +55,7 @@ describe('<RangeSlider />', () => {
     rangeSlider.setProps({ disabled: true });
 
     expect(
-      rangeSlider
-        .find('.range-slider__ticks__tick')
-        .first()
-        .prop('onClick'),
+      rangeSlider.find('.range-slider__ticks__tick').first().prop('onClick'),
     ).toBeUndefined();
   });
 
@@ -81,10 +74,7 @@ describe('<RangeSlider />', () => {
   });
 
   it('Should trigger onChange callback when tick label is clicked', () => {
-    rangeSlider
-      .find('.range-slider__ticks__label')
-      .first()
-      .simulate('click');
+    rangeSlider.find('.range-slider__ticks__label').first().simulate('click');
 
     expect(onChangeSpy.withArgs('100').called).toBe(true);
   });

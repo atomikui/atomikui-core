@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { mount, configure } from 'enzyme';

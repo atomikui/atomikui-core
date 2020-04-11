@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import sinon from 'sinon';
@@ -73,11 +72,7 @@ describe('<FileUpload />', () => {
     fileUpload.find('input').simulate('change', onChangeEvent);
 
     expect(
-      fileUpload
-        .find('.file-upload__wrapper')
-        .children()
-        .last()
-        .text(),
+      fileUpload.find('.file-upload__wrapper').children().last().text(),
     ).toBe(fileName);
   });
 

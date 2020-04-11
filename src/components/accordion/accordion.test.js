@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { mount, configure } from 'enzyme';
@@ -26,16 +25,10 @@ describe('<Accordion />', () => {
   });
 
   it('Should expand a panel', () => {
-    accordion
-      .find('input')
-      .first()
-      .simulate('change');
+    accordion.find('input').first().simulate('change');
 
     expect(
-      accordion
-        .find('.accordion__panel__label')
-        .first()
-        .prop('aria-expanded'),
+      accordion.find('.accordion__panel__label').first().prop('aria-expanded'),
     ).toBe(true);
   });
 
@@ -53,17 +46,11 @@ describe('<Accordion />', () => {
       .simulate('change', { target: { checked: true } });
 
     expect(
-      accordion
-        .find('.accordion__panel__label')
-        .first()
-        .prop('aria-expanded'),
+      accordion.find('.accordion__panel__label').first().prop('aria-expanded'),
     ).toBe(true);
 
     expect(
-      accordion
-        .find('.accordion__panel__label')
-        .last()
-        .prop('aria-expanded'),
+      accordion.find('.accordion__panel__label').last().prop('aria-expanded'),
     ).toBe(true);
   });
 });
