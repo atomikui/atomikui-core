@@ -4,24 +4,24 @@ import PropTypes from 'prop-types';
 
 const ProgressBar = ({ animated, classes, label, now, variant, ...others }) => {
   return (
-  <div
-    className={classnames('progress-bar', classes, {
-      [`progress-bar--${variant}`]: variant,
-      'progress-bar--animated': animated,
-    })}
-    {...others}
-  >
     <div
-      className="progress-bar__bar"
-      role="progressbar"
-      aria-valuenow={now}
-      aria-valuemin="0"
-      aria-valuemax="100"
-      style={{ width: `${now}%` }}
+      className={classnames('progress-bar', classes, {
+        [`progress-bar--${variant}`]: variant,
+        'progress-bar--animated': animated,
+      })}
+      {...others}
     >
-      <span className="progress-bar__label">{label}</span>
+      <div
+        className="progress-bar__bar"
+        role="progressbar"
+        aria-valuenow={now}
+        aria-valuemin="0"
+        aria-valuemax="100"
+        style={{ width: `${now}%` }}
+      >
+        <span className="progress-bar__label">{label}</span>
+      </div>
     </div>
-  </div>
   );
 };
 

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const Label = ({ classes, children, ...others }) => {
   return (
-  <label className={classnames('label', classes)} {...others}>
-    {children}
-  </label>
+    <label className={classnames('label', classes)} {...others}>
+      {children}
+    </label>
   );
 };
 

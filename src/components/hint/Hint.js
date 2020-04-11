@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 
 const Hint = ({ classes, children, type, ...others }) => {
   return (
-  <div
-    className={classnames('hint', classes, {
-      [`hint--${type}`]: type,
-    })}
-    {...others}
-  >
-    {children}
-  </div>
+    <div
+      className={classnames('hint', classes, {
+        [`hint--${type}`]: type,
+      })}
+      {...others}
+    >
+      {children}
+    </div>
   );
 };
 

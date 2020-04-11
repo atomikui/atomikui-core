@@ -5,10 +5,7 @@ import Link from '../link';
 const Truncate = ({ children, expanded, afterEllipses, maxWords }) => {
   const [originalText] = useState(children);
   const [truncatedText] = useState(() => {
-    return children
-      .split(' ')
-      .splice(0, maxWords)
-      .join(' ');
+    return children.split(' ').splice(0, maxWords).join(' ');
   });
 
   const [isTruncated, setIsTruncated] = useState(!expanded);

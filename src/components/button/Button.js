@@ -14,19 +14,19 @@ const Button = ({
   ...others
 }) => {
   return (
-  <button
-    className={classnames('btn', classes, {
-      [`btn--${variant}`]: variant,
-      [`btn--${shape}`]: shape,
-      [`btn--${size}`]: size,
-      'btn--block': block,
-    })}
-    type={type}
-    disabled={disabled}
-    {...others}
-  >
-    {children}
-  </button>
+    <button
+      className={classnames('btn', classes, {
+        [`btn--${variant}`]: variant,
+        [`btn--${shape}`]: shape,
+        [`btn--${size}`]: size,
+        'btn--block': block,
+      })}
+      type={type}
+      disabled={disabled}
+      {...others}
+    >
+      {children}
+    </button>
   );
 };
 

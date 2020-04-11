@@ -4,15 +4,15 @@ import PropTypes from 'prop-types';
 
 const Link = ({ classes, children, href, target, ...others }) => {
   return (
-  <a
-    className={classnames('link', classes)}
-    href={href}
-    target={target}
-    {...(target === '_blank' && { rel: 'noopener noreferrer' })}
-    {...others}
-  >
-    {children}
-  </a>
+    <a
+      className={classnames('link', classes)}
+      href={href}
+      target={target}
+      {...(target === '_blank' && { rel: 'noopener noreferrer' })}
+      {...others}
+    >
+      {children}
+    </a>
   );
 };
 

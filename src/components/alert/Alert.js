@@ -4,16 +4,16 @@ import PropTypes from 'prop-types';
 
 const Alert = ({ align, classes, children, type, ...others }) => {
   return (
-  <div
-    className={classnames('alert', classes, {
-      [`alert--${type}`]: type,
-      [`alert--${align}`]: align,
-    })}
-    type={type}
-    {...others}
-  >
-    {children}
-  </div>
+    <div
+      className={classnames('alert', classes, {
+        [`alert--${type}`]: type,
+        [`alert--${align}`]: align,
+      })}
+      type={type}
+      {...others}
+    >
+      {children}
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "test": "jest --coverage --config=./jest/jest.config.js",
     "start": "NODE_ENV=development styleguidist server",
-    "build": "NODE_ENV=production styleguidist build"
+    "build": "NODE_ENV=production yarn test && styleguidist build"
   },
   "browserslist": {
     "production": [
