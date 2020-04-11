@@ -11,10 +11,10 @@
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "test": "jest --coverage --config=./jest/jest.config.js",
     "start": "NODE_ENV=development styleguidist server",
-    "build": "NODE_ENV=production rm -rf dist && babel -d ./dist ./src -s && npm run build:styles",
-    "build:styleguide": "NODE_ENV=production rm -rf build && yarn test && styleguidist build",
+    "build": "NODE_ENV=production rm -rf build && yarn test && styleguidist build",
+    "build:component-library": "NODE_ENV=production rm -rf dist && babel -d ./dist ./src -s && npm run build:styles",
     "build:styles": "webpack --config webpack.config.js",
-    "postinstall": "npm run build:styleguide"
+    "postinstall": "npm run build"
   },
   "browserslist": {
     "production": [
