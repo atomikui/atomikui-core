@@ -8,7 +8,7 @@ module.exports = {
   mode: 'production',
   entry: [path.resolve(__dirname, 'src/styles/main.scss')],
   output: {
-    path: path.resolve(__dirname, './styles'),
+    path: path.resolve(__dirname, './dist/styles'),
   },
   devtool: 'none',
   module: {
@@ -51,7 +51,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/react-component-library.css',
+      filename: 'react-component-library.css',
     }),
   ],
 };
