@@ -8,7 +8,7 @@
     "test": "jest --coverage --config=./jest/jest.config.js",
     "start": "NODE_ENV=development styleguidist server",
     "build": "NODE_ENV=production yarn test && styleguidist build",
-    "build:styles": "webpack --config webpack.config.styles.js",
+    "build:styles": "webpack --config webpack.config.js",
     "build:component-library": "NODE_ENV=production babel -d ./dist ./src -s && npm run build:styles"
   },
   "browserslist": {

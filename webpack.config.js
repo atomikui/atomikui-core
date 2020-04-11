@@ -3,12 +3,26 @@ const AutoPrefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const prod = process.env.NODE_ENV === 'production';
+const buildEvent = process.env.npm_lifecycle_event;
+
+let buildDir;
+let cssBuildPath;
+
+if (buildEvent === 'build') {
+  buildDir = './styles';
+  cssBuildPath = 'styles/react-component-library.css';
+}
+
+if (buildEvent === 'build:styles') {
+  buildDir = './dist/styles';
+  cssBuildPath = 'react-component-library.css';
+}
 
 module.exports = {
   mode: 'production',
   entry: [path.resolve(__dirname, 'src/styles/main.scss')],
   output: {
-    path: path.resolve(__dirname, './styles'),
+    path: path.resolve(__dirname, buildDir),
   },
   devtool: 'none',
   module: {
@@ -51,7 +65,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/react-component-library.css',
+      filename: cssBuildPath,
     }),
   ],
 };
