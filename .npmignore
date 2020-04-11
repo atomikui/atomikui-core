@@ -1,11 +1,11 @@
 .vscode
 .prettierrc
 .eslintrc
+.eslintignore
 .gitignore
 .eslintrc
 .babelrc
 
-build/
 public/
 coverage/
 jest/
@@ -13,6 +13,7 @@ sass-starter/
 styleguide/
 
 styleguide.config.js
+webpack.config.js
 index.php
 
 yarn.lock
