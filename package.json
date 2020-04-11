@@ -13,8 +13,7 @@
     "start": "NODE_ENV=development styleguidist server",
     "build-component-library": "NODE_ENV=production rm -rf dist && babel -d ./dist ./src -s && npm run build-styles",
     "build-styles": "webpack --config webpack.config.js",
-    "build-styleguide": "NODE_ENV=production rm -rf build && yarn test && styleguidist build",
-    "build": "NODE_ENV=production rm -rf build && styleguidist build"
+    "build": "NODE_ENV=production rm -rf build && npm run test && styleguidist build"
   },
   "browserslist": {
     "production": [
