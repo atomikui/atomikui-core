@@ -47,7 +47,7 @@ const Stats = () => {
         height="100%"
         frameBorder="no"
         title="jest coverage report"
-        src="/coverage-report.html"
+        src="https://alaneicker1975.github.io/react-component-library/coverage-report.html"
         onLoad={setIframeContentStyles}
       />
     </div>
