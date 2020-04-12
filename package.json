@@ -11,9 +11,9 @@
   "scripts": {
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "test": "jest --coverage --config=./jest/jest.config.js",
-    "start": "NODE_ENV=development styleguidist server",
+    "start": "NODE_ENV=development BASE_URL=/ styleguidist server",
     "build:component-library": "NODE_ENV=production rm -rf dist && babel -d ./dist ./src -s && npm run build:styles",
-    "build:styles": "webpack --config webpack.config.js",
+    "build:styles": "cross-env webpack --config webpack.config.js",
     "build": "NODE_ENV=production npm run test && styleguidist build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
@@ -42,7 +42,6 @@
     "react-dom": "^16.13.0",
     "react-masked-field": "^2.0.3",
     "react-styleguidist": "^11.0.3",
-    "webpack": "^4.42.1",
     "yup": "^0.28.3"
   },
   "devDependencies": {
@@ -59,6 +58,7 @@
     "babel-jest": "^25.3.0",
     "babel-loader": "^8.1.0",
     "classnames": "^2.2.6",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.2",
     "downshift": "^5.0.6",
     "enzyme": "^3.11.0",
@@ -88,5 +88,6 @@
     "webpack-cli": "^3.3.11",
     "webpack-fix-style-only-entries": "^0.4.0",
     "yup": "^0.28.3"
-  }
+  },
+  "dependencies": {}
 }
