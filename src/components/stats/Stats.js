@@ -47,7 +47,11 @@ const Stats = () => {
         height="100%"
         frameBorder="no"
         title="jest coverage report"
-        src="https://alaneicker1975.github.io/react-component-library/coverage-report.html"
+        src={
+          process.env.NODE_ENV === 'production'
+            ? 'https://alaneicker1975.github.io/react-component-library/coverage-report.html'
+            : '/coverage-report.html'
+        }
         onLoad={setIframeContentStyles}
       />
     </div>
