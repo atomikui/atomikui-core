@@ -2,4 +2,4 @@ A library of React components.
 
 ### Documentation Site
 
-[https://alaneicker1975.github.io/react-component-library](https://alaneicker1975.github.io/react-component-library)
+<a href="https://alaneicker1975.github.io/react-component-library" target="_blank" rel="noopener noreferrer">https://alaneicker1975.github.io/react-component-library</a>
