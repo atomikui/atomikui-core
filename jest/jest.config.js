@@ -46,6 +46,7 @@ module.exports = {
         filename: 'public/coverage-report.html',
         pageTitle: 'Test Coverage Report',
         expand: true,
+        hideIcon: true,
       },
     ],
   ],
