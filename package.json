@@ -35,7 +35,6 @@
     "downshift": "^5.0.6",
     "focus-trap": "^5.1.0",
     "formik": "^2.1.4",
-    "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-calendar": "^3.0.1",
