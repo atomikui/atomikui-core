@@ -1,6 +1,7 @@
 export { default as Accordion } from './components/accordion';
 export { default as Alert } from './components/alert';
 export { default as AutoComplete } from './components/auto-complete';
+export { default as Badge } from './components/badge';
 export { default as Button } from './components/button';
 export { default as ButtonGroup } from './components/button-group';
 export { default as DatePicker } from './components/date-picker';
