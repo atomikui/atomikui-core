@@ -1,4 +1,9 @@
-div[class^="rsg--sidebar"] {
+div[class^='rsg--sidebar'] {
+  [class^='rsg--logo'] > h1 {
+    font-family: 'Bree Serif', serif;
+    font-size: rem(20);
+  }
+
   & nav > ul > li > a {
     font-weight: $font-bold !important;
   }
