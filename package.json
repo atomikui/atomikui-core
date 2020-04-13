@@ -1,5 +1,5 @@
 {
-  "name": "react-component-library",
+  "name": "@alaneicker/react-component-library",
   "version": "0.1.0",
   "private": true,
   "main": "./dist/index.js",
@@ -15,10 +15,11 @@
   },
   "license": "MIT",
   "scripts": {
+    "prepublish": "npm run build:component-library",
+    "postpublish": "git push && git push --tags && rm -rf dist",
     "publish:major": "npm version major -m \"Upgrade to %s\" && npm publish --access public",
     "publish:minor": "npm version minor -m \"Upgrade to %s\" && npm publish --access public",
     "publish:patch": "npm version patch -m \"Upgrade to %s\" && npm publish --access public",
-    "postpublish": "git push && git push --tags && rm -rf dist",
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "test": "jest --coverage --config=./jest/jest.config.js",
     "start": "NODE_ENV=development BASE_URL=/ styleguidist server",
