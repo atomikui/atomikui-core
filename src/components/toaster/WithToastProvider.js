@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import generateId from '../../utilities/generateId';
 import ToastContext from './toast-context';
+import Toaster from './Toaster';
 import Toast from './Toast';
 
 const withToastProvider = (Component) => {
@@ -33,11 +34,7 @@ const withToastProvider = (Component) => {
       <ToastContext.Provider value={providerValue}>
         <Component {...props} />
         {createPortal(
-          <ul
-            className={classnames('toaster', {
-              [`toaster--${position}`]: position,
-            })}
-          >
+          <Toaster position={position}>
             {toasts.map(({ id, content, type }, i) => {
               const isNew = i + 1 === toasts.length;
 
@@ -54,7 +51,7 @@ const withToastProvider = (Component) => {
                 </Toast>
               );
             })}
-          </ul>,
+          </Toaster>,
           document.body,
         )}
       </ToastContext.Provider>
