@@ -2,14 +2,14 @@ import React, { useRef, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Toast = ({ isNew, children, remove, type }) => {
+const Toast = ({ isNew, children, duration, remove, type }) => {
   const toastRef = useRef();
   toastRef.current = remove;
 
   useEffect(() => {
     const timer = setTimeout(() => {
       return toastRef.current();
-    }, 5000);
+    }, duration);
 
     return () => {
       return clearTimeout(timer);
@@ -33,6 +33,8 @@ Toast.propTypes = {
   isNew: PropTypes.bool,
   /** Toast content */
   children: PropTypes.string,
+  /** Speciifies how long a toast is visible */
+  duration: PropTypes.number,
   /** Removes a toast */
   remove: PropTypes.func,
   /** Type of toast - oneOf: info, warning, error, success */
@@ -42,6 +44,7 @@ Toast.propTypes = {
 Toast.defaultProps = {
   isNew: false,
   children: null,
+  duration: 5000,
   remove() {},
   type: null,
 };
