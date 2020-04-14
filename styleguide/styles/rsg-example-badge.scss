@@ -1,0 +1,21 @@
+[data-preview='Badge'] > * {
+  & > * {
+    margin: rem(0 8 16 0);
+  }
+
+  h1 {
+    font-size: rem(32);
+  }
+
+  h2 {
+    font-size: rem(24);
+  }
+
+  h3 {
+    font-size: rem(16);
+  }
+
+  h4 {
+    font-size: rem(12);
+  }
+}

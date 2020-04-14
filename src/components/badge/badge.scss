@@ -1,0 +1,24 @@
+.badge {
+  background-color: $gray-100;
+  border-radius: rem(3);
+  display: inline-block;
+  line-height: 1;
+  padding: rem(4 8);
+  text-align: center;
+  font-size: 75%;
+
+  &--pill {
+    border-radius: rem(100);
+  }
+
+  &--square {
+    border-radius: 0;
+  }
+
+  @each $name, $color in $alert-colors {
+    &--#{$name} {
+      background-color: $color;
+      color: $white;
+    }
+  }
+}

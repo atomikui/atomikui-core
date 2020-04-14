@@ -90,6 +90,10 @@ a.btn {
     border-radius: rem($input-height);
   }
 
+  &--square {
+    border-radius: 0;
+  }
+
   &--block {
     display: block;
     width: 100%;

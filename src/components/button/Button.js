@@ -39,8 +39,8 @@ Button.propTypes = {
   children: PropTypes.node,
   /** Specifies if button is diabled. */
   disabled: PropTypes.bool,
-  /** Specifies a buttons shape. */
-  shape: PropTypes.oneOf(['pill']),
+  /** Specifies a button's shape. */
+  shape: PropTypes.oneOf(['pill', 'square']),
   /** Specifies the size of a button. */
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   /** Specifies the type of button. */

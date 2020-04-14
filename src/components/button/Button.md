@@ -23,23 +23,20 @@ import { Button } from '@alaneicker/react-component-library';
 </>;
 ```
 
-### Pill Button
+### Button Shapes
 
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
 <>
-  <Button type="submit" shape="pill">
+  <Button type="submit" variant="primary">
     Default
   </Button>
+  <Button type="submit" variant="primary" shape="square">
+    Square
+  </Button>
   <Button type="submit" variant="primary" shape="pill">
-    Primary
-  </Button>
-  <Button type="submit" variant="secondary" shape="pill">
-    Secondary
-  </Button>
-  <Button type="submit" variant="tertiary" shape="pill">
-    Tertiary
+    Pill
   </Button>
 </>;
 ```
