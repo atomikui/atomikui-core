@@ -4,6 +4,7 @@ const form = require('./form');
 const informational = require('./informational');
 const layout = require('./layout');
 const navigation = require('./navigation');
+const providers = require('./providers');
 
 module.exports = [
   gettingStarted,
@@ -12,4 +13,5 @@ module.exports = [
   informational,
   layout,
   navigation,
+  providers,
 ];

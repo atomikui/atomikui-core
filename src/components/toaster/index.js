@@ -1,3 +1,4 @@
-import Toaster from './Toaster';
+import withToastProvider from './WithToastProvider';
+import useToast from './use-toast';
 
-export default Toaster;
+export { withToastProvider, useToast };
