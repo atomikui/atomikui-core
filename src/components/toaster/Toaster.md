@@ -11,7 +11,10 @@ const [toasts, setToasts] = useState([]);
     variant="primary"
     size="md"
     onClick={() =>
-      setToasts([...toasts, { message: 'This is a toast message.' }])
+      setToasts([
+        ...toasts,
+        { type: 'success', message: 'This is a toast message.' },
+      ])
     }
   >
     Make Toast
@@ -23,6 +26,7 @@ const [toasts, setToasts] = useState([]);
 import { Toaster } from '@alaneicker/react-component-library';
 
 <Toaster
+  style={{ position: 'static', width: '100%' }}
   toasts={[
     { message: 'This is a default message.' },
     { type: 'info', message: 'This is a information message.' },
