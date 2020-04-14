@@ -50,7 +50,6 @@
     "react-calendar": "^3.0.1",
     "react-dom": "^16.13.0",
     "react-masked-field": "^2.0.3",
-    "react-styleguidist": "^11.0.3",
     "yup": "^0.28.3"
   },
   "devDependencies": {
@@ -90,7 +89,7 @@
     "react-calendar": "^3.0.1",
     "react-dom": "^16.13.0",
     "react-masked-field": "^2.0.3",
-    "react-styleguidist": "^11.0.3",
+    "react-styleguidist": "^11.0.5",
     "sass-loader": "^8.0.2",
     "sinon": "^9.0.1",
     "webpack": "^4.42.1",
