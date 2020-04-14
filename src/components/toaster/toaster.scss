@@ -1,0 +1,24 @@
+.toaster {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  & > * + * {
+    margin-top: rem(8);
+  }
+
+  &__toast {
+    background: $gray-500;
+    border-radius: rem(3);
+    color: $white;
+    font-size: rem(14);
+    padding: rem(15);
+
+    @each $name, $color in $alert-colors {
+      &--#{$name} {
+        background-color: $color;
+        color: $white;
+      }
+    }
+  }
+}

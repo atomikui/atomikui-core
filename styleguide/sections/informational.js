@@ -13,6 +13,7 @@ module.exports = {
       'src/components/modal/Modal.js',
       'src/components/progress-bar/ProgressBar.js',
       'src/components/spinner/Spinner.js',
+      'src/components/toaster/Toaster.js',
     ];
   },
 };

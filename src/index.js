@@ -20,4 +20,5 @@ export { default as Spinner } from './components/spinner';
 export { default as Stepper } from './components/stepper';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
+export { default as Toaster } from './components/toaster';
 export { default as Truncate } from './components/truncate';
