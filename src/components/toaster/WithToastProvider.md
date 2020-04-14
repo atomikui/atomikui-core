@@ -41,6 +41,6 @@ const RandomToastGenerator = withToastProvider(() => {
 
 ### Toast Positioning
 
-To position where the toast messages will appear, simply pass a `position` prop to the component wrapped with the withToastProvider HOC and give it a value of `top-left`, `bottom-left`, or `bottom-right`. The default position is top right.
+To position where the toast messages will appear, simply pass a `position` prop to the component wrapped with the withToastProvider HOC and give it a value of `top-left`, `top-center`, `bottom-left`, `bottom-center`, or `bottom-right`. The default position is top right.
 
 E.g. `<RandomToastGenerator position="bottom-right" />`

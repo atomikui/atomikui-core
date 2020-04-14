@@ -54,14 +54,39 @@
     top: auto;
   }
 
+  &--bottom-center {
+    bottom: 0;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--top-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &--top-left > &__toast.is-new,
   &--bottom-left > &__toast.is-new {
     left: -100%;
   }
 
+  &--top-center > &__toast.is-new,
+  &--bottom-center > &__toast.is-new {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.1s;
+    position: static;
+  }
+
   @keyframes slide {
     100% {
       left: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    100% {
       opacity: 1;
     }
   }
