@@ -29,6 +29,7 @@ $alert-colors: (
 ) !default;
 
 $badge-colors: (
+  'light-gray': $light-gray,
   info: $blue-200,
   success: $green-100,
   error: $red-100,

@@ -7,7 +7,13 @@ import Badge from './Badge';
 configure({ adapter: new Adapter() });
 
 describe('<Badge />', () => {
-  beforeEach(() => {});
+  let badge;
 
-  it('Should render withput errors', () => {});
+  beforeEach(() => {
+    badge = shallow(<Badge>New</Badge>);
+  });
+
+  it('Should render withput errors', () => {
+    expect(badge.length).toBe(1);
+  });
 });

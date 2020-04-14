@@ -5,16 +5,16 @@ import { Badge } from '@alaneicker/react-component-library';
 
 <>
   <h1>
-    Example Heading <Badge type="info">Info</Badge>
+    Example Heading <Badge>Info</Badge>
   </h1>
   <h2>
-    Example Heading <Badge type="info">Info</Badge>
+    Example Heading <Badge>Info</Badge>
   </h2>
   <h3>
-    Example Heading <Badge type="info">Info</Badge>
+    Example Heading <Badge>Info</Badge>
   </h3>
   <h4>
-    Example Heading <Badge type="info">Info</Badge>
+    Example Heading <Badge>Info</Badge>
   </h4>
 </>;
 ```
@@ -26,10 +26,12 @@ import { Badge } from '@alaneicker/react-component-library';
 
 <>
   <Badge>Default</Badge>
-  <Badge type="info">Info</Badge>
-  <Badge type="warning">Warning</Badge>
-  <Badge type="error">Error</Badge>
-  <Badge type="success">Success</Badge>
+  <Badge variant="light-gray">Light Gray</Badge>
+  <Badge variant="info">Info</Badge>
+  <Badge variant="warning">Warning</Badge>
+  <Badge variant="error">Error</Badge>
+  <Badge variant="success">Success</Badge>
+  <Badge variant="outline">Outline</Badge>
 </>;
 ```
 
@@ -39,11 +41,11 @@ import { Badge } from '@alaneicker/react-component-library';
 import { Badge } from '@alaneicker/react-component-library';
 
 <>
-  <Badge type="info">Default</Badge>
-  <Badge shape="square" type="info">
+  <Badge variant="info">Default</Badge>
+  <Badge shape="square" variant="info">
     Square
   </Badge>
-  <Badge shape="pill" type="info">
+  <Badge shape="pill" variant="info">
     Pill
   </Badge>
 </>;

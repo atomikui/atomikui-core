@@ -5,10 +5,10 @@ import { Alert } from '@alaneicker/react-component-library';
 
 <>
   <Alert>This is a default alert</Alert>
-  <Alert type="info">This is an informational alert</Alert>
-  <Alert type="warning">This is a warning alert</Alert>
-  <Alert type="error">This is a error alert</Alert>
-  <Alert type="success">This is a success alert</Alert>
+  <Alert variant="info">This is an informational alert</Alert>
+  <Alert variant="warning">This is a warning alert</Alert>
+  <Alert variant="error">This is a error alert</Alert>
+  <Alert variant="success">This is a success alert</Alert>
 </>;
 ```
 
@@ -18,11 +18,11 @@ import { Alert } from '@alaneicker/react-component-library';
 import { Alert } from '@alaneicker/react-component-library';
 
 <>
-  <Alert type="info">This alert is left aligned</Alert>
-  <Alert type="success" align="center">
+  <Alert variant="info">This alert is left aligned</Alert>
+  <Alert variant="success" align="center">
     This alert is center aligned
   </Alert>
-  <Alert type="error" align="right">
+  <Alert variant="error" align="right">
     This alert is right aligned
   </Alert>
 </>;

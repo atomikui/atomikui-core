@@ -2,14 +2,13 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Alert = ({ align, classes, children, type, ...others }) => {
+const Alert = ({ align, classes, children, variant, ...others }) => {
   return (
     <div
       className={classnames('alert', classes, {
-        [`alert--${type}`]: type,
+        [`alert--${variant}`]: variant,
         [`alert--${align}`]: align,
       })}
-      type={type}
       {...others}
     >
       {children}
@@ -24,8 +23,8 @@ Alert.propTypes = {
   classes: PropTypes.string,
   /** Alert content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  /** Specifies the type of alert. */
-  type: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+  /** Specifies the alert theme variation. */
+  variant: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
 };
 
 Alert.defaultProps = {
@@ -33,7 +32,7 @@ Alert.defaultProps = {
   classes: '',
   children: null,
   text: '',
-  type: null,
+  variant: null,
 };
 
 export default Alert;
