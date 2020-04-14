@@ -7,12 +7,12 @@ const Toast = ({ isNew, children, remove, type }) => {
   toastRef.current = remove;
 
   useEffect(() => {
-    const id = setTimeout(() => {
+    const timer = setTimeout(() => {
       return toastRef.current();
     }, 5000);
 
     return () => {
-      return clearTimeout(id);
+      return clearTimeout(timer);
     };
   }, []);
 

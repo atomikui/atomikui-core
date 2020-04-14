@@ -1,3 +1,9 @@
+The `withToastProvider` is a HOC that can be used to wrap a component, giving it access to the `useToast` hook.
+
+### Use Case
+
+Below is an example of how we can use the withToastProvider and useToast hook to generate random toast messages.
+
 ```jsx
 import {
   withToastProvider,
@@ -7,6 +13,7 @@ import {
 
 const RandomToastGenerator = withToastProvider(() => {
   const toast = useToast();
+
   const toastMessages = [
     { type: null, content: 'This is a default toast message!' },
     { type: 'info', content: 'This is an informational toast message!' },
@@ -24,7 +31,7 @@ const RandomToastGenerator = withToastProvider(() => {
 
   return (
     <Button variant="primary" size="md" onClick={() => setRandomToast()}>
-      Add Toast
+      Add Random Toast
     </Button>
   );
 });
