@@ -2,6 +2,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 
   & > * + * {
     margin-top: rem(8);
@@ -19,6 +20,19 @@
         background-color: $color;
         color: $white;
       }
+    }
+
+    &.is-new {
+      animation: slide 0.5s forwards;
+      animation-delay: 0.1s;
+      left: 100%;
+      position: relative;
+    }
+  }
+
+  @keyframes slide {
+    100% {
+      left: 0;
     }
   }
 }

@@ -11,10 +11,7 @@ const [toasts, setToasts] = useState([]);
     variant="primary"
     size="md"
     onClick={() =>
-      setToasts([
-        ...toasts,
-        { type: 'info', message: 'This is a toast message.' },
-      ])
+      setToasts([...toasts, { message: 'This is a toast message.' }])
     }
   >
     Make Toast
