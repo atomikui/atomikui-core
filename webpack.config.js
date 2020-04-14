@@ -20,7 +20,7 @@ switch (buildEvent) {
 }
 
 module.exports = {
-  mode: 'production',
+  mode: !prod ? 'development' : 'production',
   entry: [path.resolve(__dirname, 'src/styles/main.scss')],
   output: {
     path: path.resolve(__dirname, buildDir),
