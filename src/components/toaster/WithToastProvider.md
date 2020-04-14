@@ -19,7 +19,7 @@ const RandomToastGenerator = withToastProvider(() => {
   const toast = useToast();
 
   const toastMessages = [
-    { type: null, content: 'This is a default toast message!' },
+    { content: 'This is a default toast message!' },
     { type: 'info', content: 'This is an informational toast message!' },
     { type: 'warning', content: 'This is a warning toast message!' },
     { type: 'error', content: 'This is an error toast message!' },
