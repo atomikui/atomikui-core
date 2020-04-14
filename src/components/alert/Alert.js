@@ -19,20 +19,21 @@ const Alert = ({ align, classes, children, type, ...others }) => {
 
 Alert.propTypes = {
   /** Aligns the text inside of the alert. */
-  align: PropTypes.oneOf(['', 'right', 'center']),
+  align: PropTypes.oneOf(['right', 'center']),
   /** Specifies custom component classes. */
   classes: PropTypes.string,
   /** Alert content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the type of alert. */
-  type: PropTypes.oneOf(['', 'info', 'warning', 'error', 'success']),
+  type: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
 };
 
 Alert.defaultProps = {
-  align: '',
+  align: null,
   classes: '',
   children: null,
   text: '',
+  type: null,
 };
 
 export default Alert;

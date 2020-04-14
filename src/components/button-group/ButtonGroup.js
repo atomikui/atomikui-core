@@ -68,7 +68,7 @@ ButtonGroup.propTypes = {
   /** Specifies field as required */
   required: PropTypes.bool,
   /** Controls button group size */
-  size: PropTypes.oneOf(['', 'sm', 'md', 'lg']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   /** Makes button group fill width of parent */
   stretch: PropTypes.bool,
 };
@@ -81,7 +81,7 @@ ButtonGroup.defaultProps = {
   helpText: '',
   label: '',
   required: false,
-  size: '',
+  size: null,
   stretch: false,
 };
 

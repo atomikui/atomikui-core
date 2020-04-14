@@ -85,7 +85,7 @@ Switch.propTypes = {
   /** Specifies label text. */
   label: PropTypes.string,
   /** Specifies if layout is inline or stacked. */
-  layout: PropTypes.oneOf(['', 'stacked']),
+  layout: PropTypes.oneOf(['stacked']),
   /** Specifies input name attribute. */
   name: PropTypes.string,
   /** Callback triggered onChange. */
@@ -103,7 +103,7 @@ Switch.defaultProps = {
   helpText: '',
   id: null,
   label: '',
-  layout: '',
+  layout: null,
   name: '',
   onChange() {},
   required: false,

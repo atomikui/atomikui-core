@@ -30,7 +30,7 @@ const Media = ({
 
 Media.propTypes = {
   /** Specifies media content alignment */
-  align: PropTypes.oneOf(['', 'middle', 'bottom']),
+  align: PropTypes.oneOf(['middle', 'bottom']),
   /** Adds custom component CSS classes */
   classes: PropTypes.string,
   /** Media body content */
@@ -46,7 +46,7 @@ Media.propTypes = {
 };
 
 Media.defaultProps = {
-  align: '',
+  align: null,
   classes: '',
   body: 'Insert media body',
   header: 'Insert media header',

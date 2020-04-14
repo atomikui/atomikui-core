@@ -54,13 +54,13 @@ Spinner.propTypes = {
   /** Spinner color */
   color: PropTypes.oneOf(['default', 'red', 'orange', 'green', 'blue']),
   /** Spinner size */
-  size: PropTypes.oneOf(['', 'sm', 'md', 'lg', 'xlg']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg', 'xlg']),
 };
 
 Spinner.defaultProps = {
   classes: '',
   color: 'default',
-  size: '',
+  size: null,
 };
 
 export default Spinner;

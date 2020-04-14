@@ -113,7 +113,7 @@ FileUpload.defaultProps = {
   dragAndDrop: false,
   label: 'Select a File',
   onChange() {},
-  uploadBtnVariant: '',
+  uploadBtnVariant: null,
 };
 
 export default FileUpload;
