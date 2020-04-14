@@ -6,14 +6,21 @@ import generateId from '../../utilities/generateId';
 const Toaster = ({ classes, toasts, ...others }) => {
   const [toastMessages, setToastMessages] = useState(toasts);
 
+  useEffect(() => {
+    setToastMessages(toasts);
+  }, [toasts]);
+
   return (
     <ul className={classnames('toaster', classes, {})} {...others}>
-      {toastMessages.map(({ type, message }) => {
+      {toastMessages.map(({ type, message }, i) => {
+        const isNew = i + 1 === toasts.length;
+
         return (
           <li
             key={generateId()}
             className={classnames('toaster__toast', {
               [`toaster__toast--${type}`]: type,
+              'is-new': isNew,
             })}
           >
             {message}
@@ -31,7 +38,7 @@ Toaster.propTypes = {
   toasts: PropTypes.arrayOf(
     PropTypes.shape({
       /** Type of toast - oneOf: info, warning, error, success */
-      type: PropTypes.oneOf(['info', 'earning', 'error', 'success']),
+      type: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
       /** Toast message text */
       message: PropTypes.string,
     }),

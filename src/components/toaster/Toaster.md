@@ -1,4 +1,28 @@
 ```jsx
+import { useState } from 'react';
+import { Toaster, Button } from '@alaneicker/react-component-library';
+
+const [toasts, setToasts] = useState([]);
+
+<>
+  <Toaster toasts={toasts} />
+
+  <Button
+    variant="primary"
+    size="md"
+    onClick={() =>
+      setToasts([
+        ...toasts,
+        { type: 'info', message: 'This is a toast message.' },
+      ])
+    }
+  >
+    Make Toast
+  </Button>
+</>;
+```
+
+```jsx
 import { Toaster } from '@alaneicker/react-component-library';
 
 <Toaster
