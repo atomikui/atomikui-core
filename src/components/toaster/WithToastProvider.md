@@ -1,9 +1,5 @@
 The `withToastProvider` is a HOC that can be used to wrap a component, giving it access to the `useToast` hook.
 
-To position where the toast messages will appear, simply pass a `position` prop to the component wrapped with the withToastProvider HOC and give it a value of `top-left`, `bottom-left`, or `bottom-right`. The default position is top right.
-
-E.g. `<MyToaster position="bottom-right" />`
-
 ### Use Case
 
 Below is an example of how we can use the withToastProvider and useToast hook to generate random toast messages.
@@ -42,3 +38,9 @@ const RandomToastGenerator = withToastProvider(() => {
 
 <RandomToastGenerator />;
 ```
+
+### Toast Positioning
+
+To position where the toast messages will appear, simply pass a `position` prop to the component wrapped with the withToastProvider HOC and give it a value of `top-left`, `bottom-left`, or `bottom-right`. The default position is top right.
+
+E.g. `<RandomToastGenerator position="bottom-right" />`
