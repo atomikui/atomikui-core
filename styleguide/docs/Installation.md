@@ -7,6 +7,10 @@ npm install --save @alaneicker/react-component-library
 ### Importing Components
 
 ```html
-import { FormField } from '@alaneicker/react-component-library'; import
+import { FormField } from '@alaneicker/react-component-library';
+```
+
+```html
+import
 '@alaneicker/react-component-library/dist/styles/react-component-library.css';
 ```
