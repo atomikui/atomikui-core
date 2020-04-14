@@ -7,6 +7,7 @@
   line-height: 1;
   padding: rem(4 8);
   text-align: center;
+  white-space: nowrap;
 
   @each $name, $color in $badge-colors {
     &--#{$name} {
