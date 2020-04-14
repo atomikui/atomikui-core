@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { createPortal } from 'react-dom';
+import classnames from 'classnames';
 import generateId from '../../utilities/generateId';
 import ToastContext from './toast-context';
 import Toast from './Toast';
@@ -26,11 +27,17 @@ const withToastProvider = (Component) => {
       return { add, remove };
     }, [toasts]);
 
+    const { position } = props;
+
     return (
       <ToastContext.Provider value={providerValue}>
         <Component {...props} />
         {createPortal(
-          <ul className="toaster">
+          <ul
+            className={classnames('toaster', {
+              [`toaster--${position}`]: position,
+            })}
+          >
             {toasts.map(({ id, content, type }, i) => {
               const isNew = i + 1 === toasts.length;
 

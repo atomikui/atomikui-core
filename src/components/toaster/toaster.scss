@@ -37,6 +37,28 @@
     }
   }
 
+  &--top-left {
+    left: 0;
+    right: auto;
+    top: 0;
+  }
+
+  &--bottom-right {
+    bottom: 0;
+    top: auto;
+  }
+
+  &--bottom-left {
+    bottom: 0;
+    left: 0;
+    top: auto;
+  }
+
+  &--top-left > &__toast.is-new,
+  &--bottom-left > &__toast.is-new {
+    left: -100%;
+  }
+
   @keyframes slide {
     100% {
       left: 0;
