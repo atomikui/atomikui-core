@@ -1,11 +1,3 @@
-```jsx
-import { Toast } from '@alaneicker/react-component-library';
-
-<ul>
-  <Toast type="error">This is a toast message</Toast>
-</ul>;
-```
-
 The `withToastProvider` is a HOC that can be used to wrap a component, giving it access to the `useToast` hook.
 
 ### Use Case

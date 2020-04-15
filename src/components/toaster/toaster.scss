@@ -1,11 +1,14 @@
 .toaster {
   list-style-type: none;
   margin: 0;
+  max-height: 100vh;
   overflow: hidden;
+  overflow: auto;
   padding: 0;
   padding: rem(16);
   position: fixed;
   right: rem(0);
+  scroll-behavior: smooth;
   top: rem(0);
   width: 100%;
   z-index: 900;
@@ -36,8 +39,8 @@
       margin-left: rem(16);
       min-height: auto;
       padding: 0;
-      width: rem(24);
       text-indent: rem(-10000);
+      width: rem(24);
 
       &:hover,
       &:focus {
@@ -61,12 +64,10 @@
       background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZWNrLWNpcmNsZSI+PHBhdGggc3Ryb2tlPSJ3aGl0ZSIgZD0iTTIyIDExLjA4VjEyYTEwIDEwIDAgMSAxLTUuOTMtOS4xNCI+PC9wYXRoPjxwb2x5bGluZSBzdHJva2U9IndoaXRlIiBwb2ludHM9IjIyIDQgMTIgMTQuMDEgOSAxMS4wMSI+PC9wb2x5bGluZT48L3N2Zz4=');
     }
 
-    &.is-new {
-      animation: slide 0.5s forwards;
+    &:last-of-type {
+      animation: fadeIn 0.5s forwards;
       animation-delay: 0.1s;
-      left: 100%;
       opacity: 0;
-      position: relative;
     }
   }
 
@@ -97,25 +98,6 @@
   &--top-center {
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  &--top-left > &__toast.is-new,
-  &--bottom-left > &__toast.is-new {
-    left: -100%;
-  }
-
-  &--top-center > &__toast.is-new,
-  &--bottom-center > &__toast.is-new {
-    animation: fadeIn 0.5s forwards;
-    animation-delay: 0.1s;
-    position: static;
-  }
-
-  @keyframes slide {
-    100% {
-      left: 0;
-      opacity: 1;
-    }
   }
 
   @keyframes fadeIn {

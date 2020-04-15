@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../button';
 
-const Toast = ({ isNew, children, duration, remove, type }) => {
+const Toast = ({ children, duration, remove, type }) => {
   const toastRef = useRef();
   toastRef.current = remove;
 
@@ -21,11 +21,14 @@ const Toast = ({ isNew, children, duration, remove, type }) => {
     <li
       className={classnames('toaster__toast', {
         [`toaster__toast--${type}`]: type,
-        'is-new': isNew,
       })}
     >
       <div className="toaster__toast__content">{children}</div>
-      <Button classes="toaster__toast__close-btn" variant="hollow">
+      <Button
+        classes="toaster__toast__close-btn"
+        variant="hollow"
+        onClick={remove}
+      >
         Close
       </Button>
     </li>
@@ -33,8 +36,6 @@ const Toast = ({ isNew, children, duration, remove, type }) => {
 };
 
 Toast.propTypes = {
-  /** Is a new toast */
-  isNew: PropTypes.bool,
   /** Toast content */
   children: PropTypes.string,
   /** Speciifies how long a toast is visible */
@@ -46,9 +47,8 @@ Toast.propTypes = {
 };
 
 Toast.defaultProps = {
-  isNew: false,
   children: null,
-  duration: 5000,
+  duration: 7000,
   remove() {},
   type: null,
 };

@@ -36,12 +36,9 @@ const withToastProvider = (Component) => {
         {createPortal(
           <Toaster position={position}>
             {toasts.map(({ id, content, type }, i) => {
-              const isNew = i + 1 === toasts.length;
-
               return (
                 <Toast
                   key={id}
-                  isNew={isNew}
                   type={type}
                   remove={() => {
                     return remove(id);
