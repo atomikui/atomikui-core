@@ -1,4 +1,4 @@
-### Pagination as links
+### Pagination as Links
 
 ```jsx
 import { Pagination, PageItem } from '@alaneicker/react-component-library';
