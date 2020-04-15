@@ -1,4 +1,4 @@
-The `withToastProvider` is a HOC that can be used to wrap a component, giving it access to the `useToast` hook.
+The `withToastProvider` is a HOC (Higher Order Component) that can be used to wrap a component, giving it access to the `useToast` hook.
 
 ### Use Case
 
