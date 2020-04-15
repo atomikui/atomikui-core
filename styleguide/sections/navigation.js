@@ -4,8 +4,11 @@ module.exports = {
   usageMode: 'expand',
   exampleMode: 'expand',
   sectionDepth: 6,
-  components: () => [
-    'src/components/link/Link.js',
-    'src/components/stepper/Stepper.js',
-  ],
+  components: () => {
+    return [
+      'src/components/link/Link.js',
+      'src/components/pagination/Pagination.js',
+      'src/components/stepper/Stepper.js',
+    ];
+  },
 };
