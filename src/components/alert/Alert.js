@@ -10,6 +10,9 @@ const Alert = ({ align, classes, children, variant, onClose, ...others }) => {
         [`alert--${variant}`]: variant,
         [`alert--${align}`]: align,
       })}
+      role="alert"
+      aria-live="polite"
+      aria-atomic="true"
       {...others}
     >
       <div className="alert__body">{children}</div>
