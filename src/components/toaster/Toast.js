@@ -1,15 +1,23 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useSpring, animated } from 'react-spring';
+import * as easings from 'd3-ease';
 import PropTypes from 'prop-types';
 import Alert from '../alert';
 
 const Toast = ({ children, duration, remove, type }) => {
-  const toastRef = useRef();
-  const props = useSpring({
+  const [transition, setTransition] = useState({
     transform: 'scale(1)',
     opacity: 1,
     from: { transform: 'scale(0)', opacity: 0 },
+    config: {
+      duration: 500,
+      easing: easings.easeBackOut.overshoot(1),
+    },
   });
+
+  const toastRef = useRef();
+
+  const props = useSpring(transition);
 
   toastRef.current = remove;
 
