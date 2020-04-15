@@ -11,6 +11,7 @@
   }
 
   &__item > a {
+    cursor: pointer;
     display: block;
     outline: 0;
     padding: rem(8 16);

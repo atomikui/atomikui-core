@@ -49,7 +49,7 @@ PageItem.propTypes = {
 PageItem.defaultProps = {
   children: null,
   classes: '',
-  href: '',
+  href: null,
   isActive: false,
   onClick: null,
 };

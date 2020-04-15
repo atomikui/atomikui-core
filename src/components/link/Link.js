@@ -6,8 +6,8 @@ const Link = ({ classes, children, href, target, ...others }) => {
   return (
     <a
       className={classnames('link', classes)}
-      href={href}
-      target={target}
+      {...(href && { href })}
+      {...(target && { target })}
       {...(target === '_blank' && { rel: 'noopener noreferrer' })}
       {...others}
     >
