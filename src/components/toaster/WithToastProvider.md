@@ -1,3 +1,5 @@
+Toasts are lightweight notifications that mimic the push notifications of mobile and desktop operating systems.
+
 The `withToastProvider` is a HOC (Higher Order Component) that can be used to wrap a component, giving it access to the `useToast` hook.
 
 ### Use Case
