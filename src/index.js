@@ -1,6 +1,6 @@
-import { withToastProvider, useToast } from './components/toaster';
+export { withToastProvider, useToast } from './components/toaster';
 
-export { withToastProvider, useToast };
+export { default as Toast } from './components/toaster/Toast';
 
 export { default as Accordion } from './components/accordion';
 export { default as Alert } from './components/alert';

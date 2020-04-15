@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import Button from '../button';
 
 const Toast = ({ isNew, children, duration, remove, type }) => {
   const toastRef = useRef();
@@ -23,7 +24,10 @@ const Toast = ({ isNew, children, duration, remove, type }) => {
         'is-new': isNew,
       })}
     >
-      {children}
+      <div className="toaster__toast__content">{children}</div>
+      <Button classes="toaster__toast__close-btn" variant="hollow">
+        Close
+      </Button>
     </li>
   );
 };
