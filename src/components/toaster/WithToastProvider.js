@@ -28,7 +28,7 @@ const withToastProvider = (Component) => {
       return { add, remove };
     }, [toasts]);
 
-    const { position } = props;
+    const { position, duration } = props;
 
     return (
       <ToastContext.Provider value={providerValue}>
@@ -40,6 +40,7 @@ const withToastProvider = (Component) => {
                 <Toast
                   key={id}
                   type={type}
+                  duration={duration}
                   remove={() => {
                     return remove(id);
                   }}
