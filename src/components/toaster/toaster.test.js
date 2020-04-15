@@ -7,7 +7,25 @@ import Toaster from './Toaster';
 configure({ adapter: new Adapter() });
 
 describe('<Toaster />', () => {
-  beforeEach(() => {});
+  let toaster;
 
-  it('Should render without errors', () => {});
+  beforeEach(() => {
+    toaster = shallow(
+      <Toaster position="top-center">
+        <div>Child</div>
+      </Toaster>,
+    );
+  });
+
+  it('Should render without errors', () => {
+    expect(toaster.length).toBe(1);
+  });
+
+  it('Should render children', () => {
+    expect(toaster.children().length).toBe(1);
+  });
+
+  it('Should set a position modifier class', () => {
+    expect(toaster.find('.toaster').hasClass('toaster--top-center')).toBe(true);
+  });
 });
