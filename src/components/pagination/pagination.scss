@@ -26,4 +26,9 @@
       background-color: $blue-000;
     }
   }
+
+  &__item.is-active > a {
+    background: $blue-200;
+    color: $white;
+  }
 }
