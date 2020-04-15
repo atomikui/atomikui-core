@@ -20,7 +20,7 @@ describe('<Accordion />', () => {
     );
   });
 
-  it('Should render withput errors', () => {
+  it('Should render without errors', () => {
     expect(accordion.length).toBe(1);
   });
 

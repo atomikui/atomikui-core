@@ -13,7 +13,7 @@ describe('<Badge />', () => {
     badge = shallow(<Badge>New</Badge>);
   });
 
-  it('Should render withput errors', () => {
+  it('Should render without errors', () => {
     expect(badge.length).toBe(1);
   });
 });

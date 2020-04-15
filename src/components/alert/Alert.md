@@ -11,3 +11,17 @@ import { Alert } from '@alaneicker/react-component-library';
   <Alert variant="success">This is a success alert</Alert>
 </>;
 ```
+
+### Alert with close button
+
+Simply add an `onClose` prop with a callback and a close button will be added to the alert.
+
+```jsx
+import { Alert } from '@alaneicker/react-component-library';
+
+<>
+  <Alert variant="info" onClose={() => console.log('closed')}>
+    This is an alert
+  </Alert>
+</>;
+```

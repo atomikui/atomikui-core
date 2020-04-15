@@ -9,5 +9,5 @@ configure({ adapter: new Adapter() });
 describe('<Toaster />', () => {
   beforeEach(() => {});
 
-  it('Should render withput errors', () => {});
+  it('Should render without errors', () => {});
 });

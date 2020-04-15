@@ -18,7 +18,7 @@ describe('<Component />', () => {
     );
   });
 
-  it('Should render withput errors', () => {
+  it('Should render without errors', () => {
     expect(media.length).toBe(1);
   });
 });

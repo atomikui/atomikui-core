@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import Alert from '../alert';
 
 const Toast = ({ children, duration, remove, type }) => {
-  const [transition, setTransition] = useState({
+  const toastRef = useRef();
+
+  const props = useSpring({
     transform: 'scale(1)',
     opacity: 1,
     from: { transform: 'scale(0)', opacity: 0 },
@@ -14,10 +16,6 @@ const Toast = ({ children, duration, remove, type }) => {
       easing: easings.easeBackOut.overshoot(1),
     },
   });
-
-  const toastRef = useRef();
-
-  const props = useSpring(transition);
 
   toastRef.current = remove;
 
@@ -42,7 +40,7 @@ const Toast = ({ children, duration, remove, type }) => {
 
 Toast.propTypes = {
   /** Toast content */
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Speciifies how long a toast is visible */
   duration: PropTypes.number,
   /** Removes a toast */

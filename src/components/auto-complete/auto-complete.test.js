@@ -34,7 +34,7 @@ describe('<AutoComplete />', () => {
     );
   });
 
-  it('Should render withput errors', () => {
+  it('Should render without errors', () => {
     expect(autocomplete.length).toBe(1);
   });
 
