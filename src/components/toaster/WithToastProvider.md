@@ -7,6 +7,7 @@ The `withToastProvider` is a HOC (Higher Order Component) that can be used to wr
 Below is an example of how we can use the withToastProvider and useToast hook to generate random toast messages.
 
 ```jsx
+import { useEffect } from 'react';
 import {
   withToastProvider,
   useToast,
@@ -30,6 +31,11 @@ const RandomToastGenerator = withToastProvider(() => {
 
     toast.add(newToast.type, newToast.content);
   };
+
+  // Show random toast on initial mount
+  useEffect(() => {
+    setRandomToast();
+  }, []);
 
   return (
     <Button variant="primary" size="md" onClick={setRandomToast}>
