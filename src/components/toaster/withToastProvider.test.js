@@ -10,15 +10,11 @@ describe('withToastProvider', () => {
   const App = withToastProvider(() => {
     const toast = useToast();
 
-    const createToast = () => {
-      toast.add('info', 'This is a toast message.');
-    };
-
     useEffect(() => {
-      createToast();
+      toast.add('info', 'This is a toast message.');
     }, []);
 
-    return <button onClick={createToast}>Add Toast</button>;
+    return <div />;
   });
 
   let app;
@@ -27,5 +23,8 @@ describe('withToastProvider', () => {
     app = mount(<App />);
   });
 
-  it('Should create a toaster', () => {});
+  it('Should remove a toast', () => {
+    app.find('.alert__btn').simulate('click');
+    expect(app.find('.toaster').children().length).toBe(0);
+  });
 });

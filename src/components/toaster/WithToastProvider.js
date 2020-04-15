@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { createPortal } from 'react-dom';
-import classnames from 'classnames';
 import generateId from '../../utilities/generateId';
 import ToastContext from './toast-context';
 import Toaster from './Toaster';
