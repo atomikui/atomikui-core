@@ -40,7 +40,7 @@ Alert.propTypes = {
 Alert.defaultProps = {
   align: null,
   classes: '',
-  onClose() {},
+  onClose: null,
   children: null,
   text: '',
   variant: null,
