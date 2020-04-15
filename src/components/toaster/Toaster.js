@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 const Toaster = ({ children, position }) => {
   return (
-    <ul
+    <div
       className={classnames('toaster', {
         [`toaster--${position}`]: position,
       })}
     >
       {children}
-    </ul>
+    </div>
   );
 };
 

@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import Button from '../button';
+import Alert from '../alert';
 
 const Toast = ({ children, duration, remove, type }) => {
   const toastRef = useRef();
@@ -18,20 +17,9 @@ const Toast = ({ children, duration, remove, type }) => {
   }, []);
 
   return (
-    <li
-      className={classnames('toaster__toast', {
-        [`toaster__toast--${type}`]: type,
-      })}
-    >
-      <div className="toaster__toast__content">{children}</div>
-      <Button
-        classes="toaster__toast__close-btn"
-        variant="hollow"
-        onClick={remove}
-      >
-        Close
-      </Button>
-    </li>
+    <Alert classes="toaster__toast" variant={type} onClose={remove}>
+      {children}
+    </Alert>
   );
 };
 
