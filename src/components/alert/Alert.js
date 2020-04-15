@@ -1,8 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import Button from '../button';
 
-const Alert = ({ align, classes, children, variant, ...others }) => {
+const Alert = ({ align, classes, children, variant, onClose, ...others }) => {
   return (
     <div
       className={classnames('alert', classes, {
@@ -11,7 +12,14 @@ const Alert = ({ align, classes, children, variant, ...others }) => {
       })}
       {...others}
     >
-      {children}
+      <div className="alert__body">{children}</div>
+      {onClose && (
+        <div className="alert__footer">
+          <Button classes="alert__btn" variant="hollow" onClick={onClose}>
+            Close
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
@@ -21,6 +29,8 @@ Alert.propTypes = {
   align: PropTypes.oneOf(['right', 'center']),
   /** Specifies custom component classes. */
   classes: PropTypes.string,
+  /** onClose Callback */
+  onClose: PropTypes.func,
   /** Alert content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the alert theme variation. */
@@ -30,6 +40,7 @@ Alert.propTypes = {
 Alert.defaultProps = {
   align: null,
   classes: '',
+  onClose() {},
   children: null,
   text: '',
   variant: null,

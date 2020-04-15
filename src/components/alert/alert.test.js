@@ -1,5 +1,6 @@
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
+import sinon from 'sinon';
 import { shallow, configure } from 'enzyme';
 import Alert from './Alert';
 
@@ -7,10 +8,11 @@ configure({ adapter: new Adapter() });
 
 describe('<Alert />', () => {
   let alert;
+  const onCloseSpy = sinon.spy();
 
   beforeEach(() => {
     alert = shallow(
-      <Alert>
+      <Alert onClose={onCloseSpy}>
         <span>This is an alert</span>
       </Alert>,
     );
@@ -23,5 +25,10 @@ describe('<Alert />', () => {
   it('Should render children', () => {
     expect(alert.find('span').length).toBe(1);
     expect(alert.find('span').text()).toBe('This is an alert');
+  });
+
+  it('Should trigger onClose callabck', () => {
+    alert.find('Button').simulate('click');
+    expect(onCloseSpy.called).toBe(true);
   });
 });
