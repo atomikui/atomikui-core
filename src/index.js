@@ -1,7 +1,3 @@
-export { withToastProvider, useToast } from './components/toaster';
-
-export { default as Toast } from './components/toaster/Toast';
-
 export { default as Accordion } from './components/accordion';
 export { default as Alert } from './components/alert';
 export { default as AutoComplete } from './components/auto-complete';
@@ -24,4 +20,5 @@ export { default as Spinner } from './components/spinner';
 export { default as Stepper } from './components/stepper';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
+export { withToastProvider, useToast } from './components/toaster';
 export { default as Truncate } from './components/truncate';

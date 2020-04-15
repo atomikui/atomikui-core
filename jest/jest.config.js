@@ -10,6 +10,7 @@ module.exports = {
     '!src/index.js',
     '!src/utilities/**/*.js',
     '!src/components/stats/**/*.js',
+    '!src/components/toaster/toast-context.js',
   ],
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
