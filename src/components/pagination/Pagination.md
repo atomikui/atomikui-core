@@ -1,5 +1,12 @@
 ```jsx
-import { Pagination } from '@alaneicker/react-component-library';
+import { Pagination, PageItem } from '@alaneicker/react-component-library';
 
-<Pagination />;
+<Pagination>
+  <PageItem href="#">Previous</PageItem>
+  <PageItem href="#">1</PageItem>
+  <PageItem href="#">2</PageItem>
+  <PageItem href="#">3</PageItem>
+  <PageItem href="#">4</PageItem>
+  <PageItem href="#">Next</PageItem>
+</Pagination>;
 ```

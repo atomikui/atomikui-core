@@ -15,6 +15,7 @@ export { default as Link } from './components/link';
 export { default as Media } from './components/media';
 export { default as Modal } from './components/modal';
 export { default as Pagination } from './components/pagination';
+export { default as PageItem } from './components/pagination/PageItem';
 export { default as ProgressBar } from './components/progress-bar';
 export { default as RangeSlider } from './components/range-slider';
 export { default as Spinner } from './components/spinner';
