@@ -11,14 +11,19 @@ const Alert = ({ align, classes, children, variant, onClose, ...others }) => {
         [`alert--${align}`]: align,
       })}
       role="alert"
-      aria-live="polite"
+      aria-live={variant === 'error' ? 'assertive' : 'polite'}
       aria-atomic="true"
       {...others}
     >
       <div className="alert__body">{children}</div>
       {onClose && (
         <div className="alert__footer">
-          <Button classes="alert__btn" variant="hollow" onClick={onClose}>
+          <Button
+            classes="alert__btn"
+            variant="hollow"
+            onClick={onClose}
+            aria-hidden="true"
+          >
             Close
           </Button>
         </div>
