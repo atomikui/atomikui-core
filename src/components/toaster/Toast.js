@@ -1,9 +1,16 @@
 import React, { useRef, useEffect } from 'react';
+import { useSpring, animated } from 'react-spring';
 import PropTypes from 'prop-types';
 import Alert from '../alert';
 
 const Toast = ({ children, duration, remove, type }) => {
   const toastRef = useRef();
+  const props = useSpring({
+    transform: 'scale(1)',
+    opacity: 1,
+    from: { transform: 'scale(0)', opacity: 0 },
+  });
+
   toastRef.current = remove;
 
   useEffect(() => {
@@ -17,9 +24,11 @@ const Toast = ({ children, duration, remove, type }) => {
   }, []);
 
   return (
-    <Alert classes="toaster__toast" variant={type} onClose={remove}>
-      {children}
-    </Alert>
+    <animated.div style={props}>
+      <Alert classes="toaster__toast" variant={type} onClose={remove}>
+        {children}
+      </Alert>
+    </animated.div>
   );
 };
 

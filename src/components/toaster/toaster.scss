@@ -16,12 +16,6 @@
 
   &__toast {
     font-size: rem(14);
-
-    &:last-of-type {
-      animation: fadeIn 0.5s forwards;
-      animation-delay: 0.1s;
-      opacity: 0;
-    }
   }
 
   &--top-left {
