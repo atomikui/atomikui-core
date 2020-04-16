@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 describe('<Spinner />', () => {
   let spinner;
   const sizes = ['sm', 'md', 'lg', 'xlg'];
-  const colors = [
+  const variants = [
     ['default', '#333'],
     ['red', '#D0191F'],
     ['orange', '#ff8400'],
@@ -29,10 +29,10 @@ describe('<Spinner />', () => {
     expect(spinner.find('.spinner').hasClass(`spinner--${size}`)).toBe(true);
   });
 
-  test.each(colors)(
+  test.each(variants)(
     'If color prop is %p it should set spinner svg stroke to %p',
-    (color, stroke) => {
-      spinner.setProps({ color });
+    (variant, stroke) => {
+      spinner.setProps({ variant });
       expect(spinner.find('svg > circle').prop('stroke')).toBe(stroke);
     },
   );

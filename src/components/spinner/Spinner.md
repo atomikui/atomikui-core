@@ -5,10 +5,10 @@ import { Spinner } from '@alaneicker/react-component-library';
 
 <>
   <Spinner />
-  <Spinner color="red" />
-  <Spinner color="orange" />
-  <Spinner color="green" />
-  <Spinner color="blue" />
+  <Spinner variant="red" />
+  <Spinner variant="orange" />
+  <Spinner variant="green" />
+  <Spinner variant="blue" />
 </>;
 ```
 

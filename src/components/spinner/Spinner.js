@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Spinner = ({ classes, color, size, ...others }) => {
+const Spinner = ({ classes, variant, size, ...others }) => {
   const themes = {
     default: '#333',
     red: '#D0191F',
@@ -28,7 +28,7 @@ const Spinner = ({ classes, color, size, ...others }) => {
           cx="50"
           cy="50"
           fill="none"
-          stroke={themes[color]}
+          stroke={themes[variant]}
           strokeWidth="10"
           r="35"
           strokeDasharray="164.93361431346415 56.97787143782138"
@@ -51,15 +51,15 @@ const Spinner = ({ classes, color, size, ...others }) => {
 Spinner.propTypes = {
   /** Specifies custom component classes. */
   classes: PropTypes.string,
-  /** Spinner color */
-  color: PropTypes.oneOf(['default', 'red', 'orange', 'green', 'blue']),
+  /** Spinner color variant */
+  variant: PropTypes.oneOf(['default', 'red', 'orange', 'green', 'blue']),
   /** Spinner size */
   size: PropTypes.oneOf(['sm', 'md', 'lg', 'xlg']),
 };
 
 Spinner.defaultProps = {
   classes: '',
-  color: 'default',
+  variant: 'default',
   size: null,
 };
 
