@@ -1,3 +1,4 @@
+const containers = require('./containers');
 const content = require('./content');
 const gettingStarted = require('./getting-started');
 const form = require('./form');
@@ -8,6 +9,7 @@ const providers = require('./providers');
 
 module.exports = [
   gettingStarted,
+  containers,
   content,
   form,
   informational,
