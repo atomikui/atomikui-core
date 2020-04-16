@@ -13,5 +13,12 @@ describe('<Overlay />', () => {
     overlay = shallow(<Overlay />);
   });
 
-  it('Should render without errors', () => {});
+  it('Should render without errors', () => {
+    expect(overlay.length).toBe(1);
+  });
+
+  it('Should set a color variant', () => {
+    overlay.setProps({ variant: 'blue' });
+    expect(overlay.hasClass('overlay--blue')).toBe(true);
+  });
 });
