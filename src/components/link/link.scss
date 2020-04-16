@@ -4,4 +4,9 @@
   &:hover {
     color: $black;
   }
+
+  &.is-disabled {
+    pointer-events: none;
+    color: $gray-300;
+  }
 }

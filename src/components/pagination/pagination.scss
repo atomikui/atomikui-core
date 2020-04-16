@@ -14,7 +14,8 @@
     cursor: pointer;
     display: block;
     outline: 0;
-    padding: rem(8 16);
+    padding: rem(8);
+    line-height: 1;
     text-decoration: none;
 
     &:focus,

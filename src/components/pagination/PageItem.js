@@ -6,6 +6,7 @@ import Link from '../link';
 const PageItem = ({
   children,
   classes,
+  disabled,
   isActive,
   href,
   onClick,
@@ -21,6 +22,7 @@ const PageItem = ({
       {Children.map(children, (child, i) => {
         return (
           <Link
+            classes={classnames({ 'is-disabled': disabled })}
             key={`page-item-${i}`}
             {...(href && { href })}
             {...(onClick && { onClick, role: 'button' })}
@@ -38,6 +40,8 @@ PageItem.propTypes = {
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   classes: PropTypes.string,
+  /** Specifies a page item as disabled */
+  disabled: PropTypes.bool,
   /** Page item url */
   href: PropTypes.string,
   /** Specifies an active page item */
@@ -49,6 +53,7 @@ PageItem.propTypes = {
 PageItem.defaultProps = {
   children: null,
   classes: '',
+  disabled: false,
   href: null,
   isActive: false,
   onClick: null,
