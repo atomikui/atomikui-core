@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Link from '../link';
 
 const Step = ({ children, label, isComplete, href, isActive }) => {
-  const StepNumber = isComplete && href ? Link : 'div';
+  const StepNumber = isComplete && href ? Link : 'span';
 
   return (
     <li
