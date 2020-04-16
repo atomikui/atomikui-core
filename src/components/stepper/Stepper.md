@@ -3,30 +3,41 @@ Steppers convey progress through numbered steps.
 ### Default
 
 ```jsx
-import { Stepper } from '@alaneicker/react-component-library';
+import { Stepper, Step } from '@alaneicker/react-component-library';
 
-<Stepper
-  steps={[
-    { label: 'Personal Info', href: '/personal-info', isComplete: true },
-    { label: 'Contact Info', href: '/contact-info', isActive: true },
-    { label: 'Billing Info', href: '/billing-info', isComplete: false },
-    { label: 'Summary', href: '/summary', isComplete: false },
-  ]}
-/>;
+<Stepper>
+  <Step label="Personal Info" href="/personal-info" isComplete={true}>
+    1
+  </Step>
+  <Step label="Contact Info" href="/contact-info" isActive={true}>
+    2
+  </Step>
+  <Step label="Billing Info" href="/billing-info">
+    3
+  </Step>
+  <Step label="Summary" href="/summary">
+    4
+  </Step>
+</Stepper>;
 ```
 
 ### Inline
 
 ```jsx
-import { Stepper } from '@alaneicker/react-component-library';
+import { Stepper, Step } from '@alaneicker/react-component-library';
 
-<Stepper
-  inline
-  steps={[
-    { label: 'Personal Info', href: '/personal-info', isComplete: true },
-    { label: 'Contact Info', href: '/contact-info', isActive: true },
-    { label: 'Billing Info', href: '/billing-info', isComplete: false },
-    { label: 'Summary', href: '/summary', isComplete: false },
-  ]}
-/>;
+<Stepper inline>
+  <Step label="Personal Info" href="/personal-info" isComplete={true}>
+    1
+  </Step>
+  <Step label="Contact Info" href="/contact-info" isActive={true}>
+    2
+  </Step>
+  <Step label="Billing Info" href="/billing-info">
+    3
+  </Step>
+  <Step label="Summary" href="/summary">
+    4
+  </Step>
+</Stepper>;
 ```

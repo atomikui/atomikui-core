@@ -20,6 +20,7 @@ export { default as PageItem } from './components/pagination/PageItem';
 export { default as ProgressBar } from './components/progress-bar';
 export { default as RangeSlider } from './components/range-slider';
 export { default as Spinner } from './components/spinner';
+export { default as Step } from './components/stepper/Step';
 export { default as Stepper } from './components/stepper';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';

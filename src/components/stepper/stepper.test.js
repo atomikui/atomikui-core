@@ -2,6 +2,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Stepper from './Stepper';
+import Step from './Step';
 
 configure({ adapter: new Adapter() });
 
@@ -10,15 +11,20 @@ describe('<Stepper />', () => {
 
   beforeEach(() => {
     stepper = shallow(
-      <Stepper
-        inline
-        steps={[
-          { label: 'Personal Info', href: '/personal-info', isComplete: true },
-          { label: 'Contact Info', href: '/contact-info', isActive: true },
-          { label: 'Billing Info', href: '/billing-info', isComplete: false },
-          { label: 'Summary', href: '/summary', isComplete: false },
-        ]}
-      />,
+      <Stepper inline>
+        <Step label="Personal Info" href="/personal-info" isComplete={true}>
+          1
+        </Step>
+        <Step label="Contact Info" href="/contact-info" isActive={true}>
+          2
+        </Step>
+        <Step label="Billing Info" href="/billing-info">
+          3
+        </Step>
+        <Step label="Summary" href="/summary">
+          4
+        </Step>
+      </Stepper>,
     );
   });
 
@@ -27,11 +33,12 @@ describe('<Stepper />', () => {
   });
 
   it('Should render 4 children', () => {
-    expect(stepper.find('.stepper').children().length).toBe(4);
+    expect(stepper.find('Step').length).toBe(4);
   });
 
   it('Should render first child with an anchor tag', () => {
-    expect(stepper.find('.stepper > :first-child').find('Link').length).toBe(1);
+    const link = stepper.find('Step').first().dive().find('Link');
+    expect(link.length).toBe(1);
   });
 
   it('Should render as inline', () => {
