@@ -1,0 +1,10 @@
+[data-preview='Step'] > * {
+  & > * {
+    margin-bottom: rem(16);
+
+    &:before,
+    &:after {
+      display: none !important;
+    }
+  }
+}
