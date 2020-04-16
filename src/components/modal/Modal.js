@@ -36,15 +36,6 @@ const Modal = ({
   });
 
   const close = () => {
-    set({
-      opacity: 0,
-      transform: 'scale(0)',
-      config: {
-        duration: 500,
-        easing: easings.easeBackInOut.overshoot(1),
-      },
-    });
-
     onClose();
   };
 
@@ -79,6 +70,10 @@ const Modal = ({
     set({
       opacity: isOpen ? 1 : 0,
       transform: isOpen ? 'scale(1)' : 'scale(0)',
+      config: {
+        duration: 500,
+        easing: easings.easeBackInOut.overshoot(1),
+      },
     });
 
     if (isOpen) {
