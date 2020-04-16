@@ -2,6 +2,9 @@ const path = require('path');
 const AutoPrefixer = require('autoprefixer');
 const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserJSPlugin = require('terser-webpack-plugin');
 
 const prod = process.env.NODE_ENV === 'production';
 const buildEvent = process.env.npm_lifecycle_event;
@@ -64,10 +67,15 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
+  },
   plugins: [
     new FixStyleOnlyEntriesPlugin(),
+    new CompressionPlugin(),
     new MiniCssExtractPlugin({
       filename: cssBuildPath,
+      chunkFilename: '[id].css',
     }),
   ],
 };
