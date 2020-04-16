@@ -15,7 +15,7 @@ const Breadcrumb = ({ children, classes, ...others }) => {
 Breadcrumb.propTypes = {
   /** Adds custom component CSS classes */
   classes: PropTypes.string,
-  /** Breadcrumb link content */
+  /** Breadcrumb content. A list of BreadcrumbItems */
   children: PropTypes.node,
 };
 
