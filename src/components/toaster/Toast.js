@@ -29,6 +29,8 @@ const Toast = ({ children, duration, remove, type }) => {
         return clearTimeout(timer);
       };
     }
+
+    return undefined;
   }, []);
 
   return (
