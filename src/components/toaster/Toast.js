@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import * as easings from 'd3-ease';
 import PropTypes from 'prop-types';
@@ -20,13 +20,15 @@ const Toast = ({ children, duration, remove, type }) => {
   toastRef.current = remove;
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      return toastRef.current();
-    }, duration);
+    if (duration !== -1) {
+      const timer = setTimeout(() => {
+        return toastRef.current();
+      }, duration);
 
-    return () => {
-      return clearTimeout(timer);
-    };
+      return () => {
+        return clearTimeout(timer);
+      };
+    }
   }, []);
 
   return (
@@ -41,7 +43,7 @@ const Toast = ({ children, duration, remove, type }) => {
 Toast.propTypes = {
   /** Toast content */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  /** Speciifies how long a toast is visible */
+  /** Speciifies how long a toast is visible. Setting the duration to -1 will make the toast duration infinite. */
   duration: PropTypes.number,
   /** Removes a toast */
   remove: PropTypes.func,

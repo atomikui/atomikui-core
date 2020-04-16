@@ -52,3 +52,13 @@ const RandomToastGenerator = withToastProvider(() => {
 To position where the toast messages will appear, simply pass a `position` prop to the component wrapped with the withToastProvider HOC and give it a value of `top-left`, `top-center`, `bottom-left`, `bottom-center`, or `bottom-right`. The default position is top right.
 
 E.g. `<RandomToastGenerator position="bottom-right" />`
+
+### Toast Duration
+
+By default, the toast will remain visible for 7 seconds before being closed. The `duration` prop can be used to set a custom duration. The example below sets the toast duration to 10 seconds.
+
+`<RandomToastGenerator duration={10000} />`
+
+If you'd like the toast to remain visible until manually closed, simply set the duration to -1. This will make the duration infinite.
+
+`<RandomToastGenerator duration={-1} />`
