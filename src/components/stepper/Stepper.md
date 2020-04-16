@@ -1,5 +1,7 @@
 The `Stepper` is used to represent a series of steps that have been or need to be completed.
 
+See the [Step](/#/Navigation/Step) component API documentation for more information.
+
 ### Default Stepper
 
 ```jsx

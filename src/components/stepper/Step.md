@@ -1,6 +1,6 @@
 The `Step` component accompanies the `Stepper` to represent a series of steps that have been or need to be completed.
 
-See the [Stepper](/#/Navigation/Stepper) component for more information.
+See the [Stepper](/#/Navigation/Stepper) component API documentation for more information.
 
 ```jsx
 import { Step } from '@alaneicker/react-component-library';
