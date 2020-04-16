@@ -9,7 +9,7 @@
       flex-direction: row;
       justify-content: space-between;
 
-      &:not(:first-child):before,
+      &:not(:first-child)::before,
       &:not(:last-child)::after {
         position: static;
         width: auto;

@@ -2,8 +2,8 @@
   & > * {
     margin-bottom: rem(16);
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: none !important;
     }
   }

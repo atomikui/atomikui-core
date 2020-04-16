@@ -6,7 +6,7 @@
   position: relative;
   z-index: 2;
 
-  &:not(:first-child):before,
+  &:not(:first-child)::before,
   &:not(:last-child)::after {
     background: $gray-100;
     border-radius: rem(4);

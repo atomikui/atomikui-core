@@ -1,0 +1,13 @@
+.breadcrumb {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  & > * + *::before {
+    content: '/';
+    display: inline-block;
+    padding: rem(0 8);
+    color: $gray-300;
+  }
+}
