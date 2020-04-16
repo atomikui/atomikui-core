@@ -81,7 +81,7 @@ const Modal = ({
     } else {
       setTimeout(() => {
         setVisibility('hidden');
-      }, 300);
+      }, 400);
     }
 
     if (focusTrap) {
