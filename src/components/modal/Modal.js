@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
 import { useSpring, animated } from 'react-spring';
-import * as easings from 'd3-ease';
 import Overlay from '../overlay';
 
 const Modal = ({
@@ -27,11 +26,8 @@ const Modal = ({
   const [styleProps, set] = useSpring(() => {
     return {
       opacity: 1,
-      transform: 'scale(0)',
-      config: {
-        duration: 500,
-        easing: easings.easeBackOut.overshoot(1),
-      },
+      ...(!isDrawer && { transform: 'scale(0)' }),
+      ...(isDrawer && { left: '100%' }),
     };
   });
 
@@ -66,20 +62,22 @@ const Modal = ({
 
   useEffect(() => {
     set({
-      opacity: isOpen ? 1 : 0,
-      transform: isOpen ? 'scale(1)' : 'scale(0)',
-      config: {
-        duration: 500,
-        easing: easings.easeBackInOut.overshoot(1),
-      },
+      ...(!isDrawer && {
+        opacity: isOpen ? 1 : 0,
+        transform: isOpen ? 'scale(1)' : 'scale(0)',
+      }),
+      ...(isDrawer && { left: isOpen ? '0' : '100%' }),
     });
 
     if (isOpen) {
       setVisibility('visible');
     } else {
-      setTimeout(() => {
-        setVisibility('hidden');
-      }, 400);
+      setTimeout(
+        () => {
+          setVisibility('hidden');
+        },
+        isDrawer ? 250 : 300,
+      );
     }
 
     if (focusTrap) {
@@ -163,7 +161,7 @@ Modal.defaultProps = {
   disableOverlayclick: false,
   footer: null,
   noOverlay: false,
-  isDrawer: true,
+  isDrawer: false,
   isOpen: false,
   onClose() {},
   title: '',
