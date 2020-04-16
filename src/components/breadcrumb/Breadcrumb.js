@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 const Breadcrumb = ({ children, classes, ...others }) => {
   return (
     <nav>
-      <ul className={classnames('breadcrumb', classes, {})} {...others}>
+      <ol className={classnames('breadcrumb', classes, {})} {...others}>
         {children}
-      </ul>
+      </ol>
     </nav>
   );
 };
