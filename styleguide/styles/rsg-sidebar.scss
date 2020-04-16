@@ -1,7 +1,8 @@
 div[class^='rsg--sidebar'] {
   [class^='rsg--logo'] > h1 {
-    font-family: 'Bree Serif', serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: rem(20);
+    font-weight: 500;
   }
 
   & nav > ul > li > a {
