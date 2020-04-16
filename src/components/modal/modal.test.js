@@ -16,7 +16,7 @@ describe('<Modal />', () => {
     modal = mount(
       <Modal
         title="Modal Title"
-        isOpen={false}
+        isOpen={true}
         onClose={onCloseSpy}
         footer={
           <div className="text-align-right">
@@ -40,9 +40,24 @@ describe('<Modal />', () => {
   });
 
   it('Should call onClose when modal overlay is clicked', () => {
-    modal.find('.modal').simulate('click');
+    modal.find('.overlay').simulate('click');
 
     expect(onCloseSpy.called).toBe(true);
+  });
+
+  it('Should not call onClose when modal overlay is clicked if `disableOverlayclick` is true', () => {
+    modal.setProps({ disableOverlayclick: true });
+    modal.find('.overlay').simulate('click');
+
+    expect(onCloseSpy.called).toBe(false);
+  });
+
+  it('Modal should not be visible if isOpen is false', () => {
+    const theModal = mount(<Modal isOpen={false} />);
+
+    expect(theModal.find('div.overlay').prop('style').visibility).toBe(
+      'hidden',
+    );
   });
 
   it('Should call onClose when escape key is pressed', () => {
@@ -56,7 +71,7 @@ describe('<Modal />', () => {
   it('Should not call onClose callback if overlay click event is disabled', () => {
     modal.setProps({ disableOverlayclick: true, noOverlay: false });
 
-    modal.find('.modal').simulate('click');
+    modal.find('.overlay').simulate('click');
 
     expect(onCloseSpy.called).toBe(false);
   });
