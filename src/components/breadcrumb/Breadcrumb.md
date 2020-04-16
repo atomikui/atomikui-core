@@ -14,3 +14,5 @@ import {
   </BreadcrumbItem>
 </Breadcrumb>;
 ```
+
+The `BreadcrumbItem` accepts all of the [Link](/#/Navigation/Link) component's props.
