@@ -47,6 +47,10 @@
     padding: rem(16);
   }
 
+  &.is-drawer {
+    min-height: 100%;
+  }
+
   @each $theme-name, $map in $modal-themes {
     &--#{theme-name} {
       &__dialog {
@@ -66,8 +70,8 @@
     max-height: 80%;
     max-width: 70%;
 
-    &--drawer {
-      width: rem(480);
+    &.is-drawer {
+      max-width: rem(480);
     }
   }
 }

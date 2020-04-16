@@ -21,4 +21,12 @@
   &--white {
     background-color: rgba(255, 255, 255, 0.4);
   }
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &.has-drawer {
+    justify-content: flex-end;
+  }
 }

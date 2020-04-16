@@ -12,7 +12,7 @@ const Modal = ({
   closeOnEscape,
   disableOverlayclick,
   footer,
-  hasOverlay,
+  noOverlay,
   isDrawer,
   isOpen,
   onClose,
@@ -35,12 +35,10 @@ const Modal = ({
     };
   });
 
-  const close = () => {
+  const close = (e) => {
     onClose();
-  };
 
-  const handleClose = (e) => {
-    const isOverlayClick = e.target.classList.contains('modal');
+    const isOverlayClick = e.target.classList.contains('overlay');
 
     if (isOverlayClick) {
       onClose();
@@ -57,14 +55,14 @@ const Modal = ({
     setFocusTrap(
       createFocusTrap(modal.current, {
         allowOutsideClick: () => {
-          return !disableOverlayclick || !hasOverlay;
+          return !disableOverlayclick || noOverlay;
         },
-        clickOutsideDeactivates: isDrawer && !hasOverlay,
+        clickOutsideDeactivates: isDrawer && noOverlay,
         escapeDeactivates: false,
         fallbackFocus: modal,
       }),
     );
-  }, [disableOverlayclick, hasOverlay, isDrawer]);
+  }, [disableOverlayclick, noOverlay, isDrawer]);
 
   useEffect(() => {
     set({
@@ -91,18 +89,16 @@ const Modal = ({
     }
   }, [focusTrap, isOpen]);
 
-  // className={classnames('modal', classes, {
-  //   'is-open': isOpen,
-  //   'modal--no-overlay': !hasOverlay,
-  //   'modal--drawer': isDrawer,
-  // })}
-
   return (
     <Overlay
+      classes={classnames({
+        'overlay--transparent': noOverlay,
+        'has-drawer': isDrawer,
+      })}
       style={{ visibility }}
-      {...((!disableOverlayclick || hasOverlay) && {
+      {...(!disableOverlayclick && {
         onClick: (e) => {
-          return handleClose(e);
+          return close(e);
         },
       })}
       {...(closeOnEscape && {
@@ -112,10 +108,21 @@ const Modal = ({
       })}
       {...others}
     >
-      <animated.div className="modal" ref={modal} style={styleProps}>
+      <animated.div
+        className={classnames('modal', {
+          'is-drawer': isDrawer,
+        })}
+        ref={modal}
+        style={styleProps}
+      >
         <div className="modal__header">
           <div className="modal__title">{title}</div>
-          <button className="modal__close-button" onClick={close}>
+          <button
+            className="modal__close-button"
+            onClick={(e) => {
+              return close(e);
+            }}
+          >
             close
           </button>
         </div>
@@ -138,7 +145,7 @@ Modal.propTypes = {
   /** Content to bre rendered inside of the modal footer. */
   footer: PropTypes.node,
   /** Specifies if modal has an overlay. */
-  hasOverlay: PropTypes.bool,
+  noOverlay: PropTypes.bool,
   /** Displays the modal as a drawer that slides out from the left or right. */
   isDrawer: PropTypes.bool,
   /** Toggles modal visibility state. */
@@ -155,8 +162,8 @@ Modal.defaultProps = {
   children: null,
   disableOverlayclick: false,
   footer: null,
-  hasOverlay: true,
-  isDrawer: false,
+  noOverlay: false,
+  isDrawer: true,
   isOpen: false,
   onClose() {},
   title: '',

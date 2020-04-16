@@ -54,7 +54,7 @@ describe('<Modal />', () => {
   });
 
   it('Should not call onClose callback if overlay click event is disabled', () => {
-    modal.setProps({ disableOverlayclick: true, hasOverlay: false });
+    modal.setProps({ disableOverlayclick: true, noOverlay: false });
 
     modal.find('.modal').simulate('click');
 
