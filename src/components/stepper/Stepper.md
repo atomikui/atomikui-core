@@ -1,4 +1,4 @@
-Steppers convey progress through numbered steps.
+The `Stepper` is used to represent a series of steps that have been or need to be completed.
 
 ### Default
 
