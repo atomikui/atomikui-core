@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Link from '../link';
 
-const Step = ({ children, isActive, isComplete, href, label }) => {
+const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
   const StepNumber = isComplete && href ? Link : 'span';
 
   return (
@@ -13,6 +13,7 @@ const Step = ({ children, isActive, isComplete, href, label }) => {
       className={classnames('step', {
         'is-complete': isComplete,
         'is-active': isActive,
+        'step--top-label': topLabel,
       })}
     >
       <StepNumber
@@ -41,6 +42,8 @@ Step.propTypes = {
   href: PropTypes.string,
   /** Accompanying step label text */
   label: PropTypes.string,
+  /** Postions label on top */
+  topLabel: PropTypes.bool,
 };
 
 Step.defaultProps = {
@@ -49,6 +52,7 @@ Step.defaultProps = {
   isComplete: false,
   href: null,
   label: '',
+  topLabel: false,
 };
 
 export default Step;

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Stepper = ({ children, classes, inline, ...others }) => {
+const Stepper = ({ children, classes, inline, topLabels, ...others }) => {
   return (
     <nav>
       <ul
@@ -11,7 +11,11 @@ const Stepper = ({ children, classes, inline, ...others }) => {
         })}
         {...others}
       >
-        {children}
+        {topLabels
+          ? Children.map(children, (child) => {
+              return cloneElement(child, { topLabel: true });
+            })
+          : children}
       </ul>
     </nav>
   );
@@ -22,12 +26,15 @@ Stepper.propTypes = {
   classes: PropTypes.string,
   /** Makes a stepper and its labels inline */
   inline: PropTypes.bool,
+  /** Specifies stepper to have labels above step number */
+  topLabels: PropTypes.bool,
 };
 
 Stepper.defaultProps = {
   children: null,
   classes: '',
   inline: false,
+  topLabels: false,
 };
 
 export default Stepper;
