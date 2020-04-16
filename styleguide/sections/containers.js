@@ -5,6 +5,9 @@ module.exports = {
   exampleMode: 'expand',
   sectionDepth: 6,
   components: () => {
-    return ['src/components/overlay/Overlay.js'];
+    return [
+      'src/components/modal/Modal.js',
+      'src/components/overlay/Overlay.js',
+    ];
   },
 };

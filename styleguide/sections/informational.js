@@ -10,7 +10,6 @@ module.exports = {
       'src/components/badge/Badge.js',
       'src/components/hint/Hint.js',
       'src/components/label/Label.js',
-      'src/components/modal/Modal.js',
       'src/components/progress-bar/ProgressBar.js',
       'src/components/spinner/Spinner.js',
     ];
