@@ -10,18 +10,18 @@ const Step = ({ children, label, isComplete, href, isActive }) => {
     <li
       key={Math.random()}
       aria-current={isActive}
-      className={classnames('stepper__step', {
+      className={classnames('step', {
         'is-complete': isComplete,
         'is-active': isActive,
       })}
     >
       <StepNumber
-        className="stepper__step__number"
+        className="step__number"
         {...(isComplete && href && { href })}
       >
         {!isComplete && children}
       </StepNumber>
-      <div className="stepper__step__label">
+      <div className="step__label">
         <span aria-hidden="true">{label}</span>
       </div>
     </li>

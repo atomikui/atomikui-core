@@ -8,6 +8,7 @@ module.exports = {
     return [
       'src/components/link/Link.js',
       'src/components/pagination/Pagination.js',
+      'src/components/stepper/Step.js',
       'src/components/stepper/Stepper.js',
     ];
   },

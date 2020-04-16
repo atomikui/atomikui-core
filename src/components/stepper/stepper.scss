@@ -4,76 +4,8 @@
   margin: 0;
   padding: 0;
 
-  &__step {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    position: relative;
-    z-index: 2;
-
-    &:not(:first-child):before,
-    &:not(:last-child)::after {
-      background: $gray-100;
-      border-radius: rem(4);
-      content: '';
-      display: block;
-      height: rem(2);
-      position: absolute;
-      width: 50%;
-      z-index: 1;
-    }
-
-    &:not(:first-child)::before {
-      left: 0;
-      top: rem(14);
-    }
-
-    &:not(:last-child)::after {
-      right: 0;
-      top: rem(14);
-    }
-
-    .stepper__step__number {
-      align-items: center;
-      background: $gray-400;
-      border-radius: 50%;
-      color: $white;
-      display: flex;
-      height: rem(32);
-      justify-content: center;
-      margin-bottom: rem(4);
-      text-decoration: none;
-      width: rem(32);
-      z-index: 2;
-    }
-
-    .stepper__step__label {
-      display: none;
-      font-size: rem(14);
-    }
-
-    &.is-complete > .stepper__step__number {
-      background: $green-100 no-repeat center/52%
-        url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNiAyNiI+PHBhdGggZD0iTSAyMi41NjY0MDYgNC43MzA0NjkgTCAyMC43NzM0MzggMy41MTE3MTkgQyAyMC4yNzczNDQgMy4xNzU3ODEgMTkuNTk3NjU2IDMuMzA0Njg4IDE5LjI2NTYyNSAzLjc5Njg3NSBMIDEwLjQ3NjU2MyAxNi43NTc4MTMgTCA2LjQzNzUgMTIuNzE4NzUgQyA2LjAxNTYyNSAxMi4yOTY4NzUgNS4zMjgxMjUgMTIuMjk2ODc1IDQuOTA2MjUgMTIuNzE4NzUgTCAzLjM3MTA5NCAxNC4yNTM5MDYgQyAyLjk0OTIxOSAxNC42NzU3ODEgMi45NDkyMTkgMTUuMzYzMjgxIDMuMzcxMDk0IDE1Ljc4OTA2MyBMIDkuNTgyMDMxIDIyIEMgOS45Mjk2ODggMjIuMzQ3NjU2IDEwLjQ3NjU2MyAyMi42MTMyODEgMTAuOTY4NzUgMjIuNjEzMjgxIEMgMTEuNDYwOTM4IDIyLjYxMzI4MSAxMS45NTcwMzEgMjIuMzA0Njg4IDEyLjI3NzM0NCAyMS44Mzk4NDQgTCAyMi44NTU0NjkgNi4yMzQzNzUgQyAyMy4xOTE0MDYgNS43NDIxODggMjMuMDYyNSA1LjA2NjQwNiAyMi41NjY0MDYgNC43MzA0NjkgWiIvPjwvc3ZnPg==');
-
-      &:focus,
-      &:hover {
-        box-shadow: rem(0 0 0 4) darken($gray-100, 3%);
-      }
-    }
-
-    &.is-active > .stepper__step__number {
-      background: $blue-200;
-    }
-  }
-
   @media (min-width: $breakpoint-medium) {
-    .stepper__step__label {
-      display: block;
-    }
-
-    &--inline > &__step {
+    &--inline > * {
       flex-direction: row;
       justify-content: space-between;
 
@@ -84,15 +16,7 @@
         flex: 1;
       }
 
-      &:after {
-        margin-left: rem(8);
-      }
-
       &:before {
-        margin-right: rem(8);
-      }
-
-      .stepper__step__number {
         margin-right: rem(8);
       }
     }

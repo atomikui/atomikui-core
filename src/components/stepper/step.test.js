@@ -27,6 +27,6 @@ describe('<Step />', () => {
 
   it('Should render a span if isComplete is false', () => {
     step.setProps({ isComplete: false });
-    expect(step.find('span.stepper__step__number').length).toBe(1);
+    expect(step.find('span.step__number').length).toBe(1);
   });
 });
