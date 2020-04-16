@@ -2,6 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
+import { useSpring, animated } from 'react-spring';
+import * as easings from 'd3-ease';
+import Overlay from '../overlay';
 
 const Modal = ({
   classes,
@@ -17,8 +20,33 @@ const Modal = ({
   ...others
 }) => {
   const [focusTrap, setFocusTrap] = useState(null);
+  const [visibility, setVisibility] = useState('hidden');
 
   const modal = useRef();
+
+  const [styleProps, set] = useSpring(() => {
+    return {
+      opacity: 1,
+      transform: 'scale(0)',
+      config: {
+        duration: 500,
+        easing: easings.easeBackOut.overshoot(1),
+      },
+    };
+  });
+
+  const close = () => {
+    set({
+      opacity: 0,
+      transform: 'scale(0)',
+      config: {
+        duration: 500,
+        easing: easings.easeBackInOut.overshoot(1),
+      },
+    });
+
+    onClose();
+  };
 
   const handleClose = (e) => {
     const isOverlayClick = e.target.classList.contains('modal');
@@ -48,6 +76,19 @@ const Modal = ({
   }, [disableOverlayclick, hasOverlay, isDrawer]);
 
   useEffect(() => {
+    set({
+      opacity: isOpen ? 1 : 0,
+      transform: isOpen ? 'scale(1)' : 'scale(0)',
+    });
+
+    if (isOpen) {
+      setVisibility('visible');
+    } else {
+      setTimeout(() => {
+        setVisibility('hidden');
+      }, 300);
+    }
+
     if (focusTrap) {
       setTimeout(() => {
         focusTrap[isOpen ? 'activate' : 'deactivate']();
@@ -55,13 +96,15 @@ const Modal = ({
     }
   }, [focusTrap, isOpen]);
 
+  // className={classnames('modal', classes, {
+  //   'is-open': isOpen,
+  //   'modal--no-overlay': !hasOverlay,
+  //   'modal--drawer': isDrawer,
+  // })}
+
   return (
-    <div
-      className={classnames('modal', classes, {
-        'is-open': isOpen,
-        'modal--no-overlay': !hasOverlay,
-        'modal--drawer': isDrawer,
-      })}
+    <Overlay
+      style={{ visibility }}
       {...((!disableOverlayclick || hasOverlay) && {
         onClick: (e) => {
           return handleClose(e);
@@ -74,22 +117,17 @@ const Modal = ({
       })}
       {...others}
     >
-      <div className="modal__dialog" ref={modal}>
+      <animated.div className="modal" ref={modal} style={styleProps}>
         <div className="modal__header">
           <div className="modal__title">{title}</div>
-          <button
-            className="modal__close-button"
-            onClick={() => {
-              return onClose();
-            }}
-          >
+          <button className="modal__close-button" onClick={close}>
             close
           </button>
         </div>
         <div className="modal__body">{children}</div>
         {footer && <div className="modal__footer">{footer}</div>}
-      </div>
-    </div>
+      </animated.div>
+    </Overlay>
   );
 };
 

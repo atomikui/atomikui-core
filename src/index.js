@@ -14,6 +14,7 @@ export { default as Label } from './components/label';
 export { default as Link } from './components/link';
 export { default as Media } from './components/media';
 export { default as Modal } from './components/modal';
+export { default as Overlay } from './components/overlay';
 export { default as Pagination } from './components/pagination';
 export { default as PageItem } from './components/pagination/PageItem';
 export { default as ProgressBar } from './components/progress-bar';

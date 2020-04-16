@@ -1,0 +1,24 @@
+.overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 900;
+
+  & > * {
+    z-index: 1000;
+  }
+
+  &--blue {
+    background-color: rgba(2, 122, 191, 0.4);
+  }
+
+  &--white {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}

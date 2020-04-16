@@ -7,7 +7,7 @@ import Alert from '../alert';
 const Toast = ({ children, duration, remove, type }) => {
   const toastRef = useRef();
 
-  const props = useSpring({
+  const styleProps = useSpring({
     transform: 'scale(1)',
     opacity: 1,
     from: { transform: 'scale(0)', opacity: 0 },
@@ -30,7 +30,7 @@ const Toast = ({ children, duration, remove, type }) => {
   }, []);
 
   return (
-    <animated.div style={props}>
+    <animated.div style={styleProps}>
       <Alert classes="toaster__toast" variant={type} onClose={remove}>
         {children}
       </Alert>
