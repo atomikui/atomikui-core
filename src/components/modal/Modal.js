@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
-import { useSpring, animated } from 'react-spring';
 import Overlay from '../overlay';
 
 const Modal = ({
@@ -19,16 +18,8 @@ const Modal = ({
   ...others
 }) => {
   const [focusTrap, setFocusTrap] = useState(null);
-  const [visibility, setVisibility] = useState('hidden');
 
   const modal = useRef();
-
-  const [styleProps, set] = useSpring(() => {
-    return {
-      opacity: 1,
-      ...(isDrawer && { left: '100%' }),
-    };
-  });
 
   const close = (e) => {
     onClose();
@@ -60,24 +51,6 @@ const Modal = ({
   }, [disableOverlayclick, noOverlay, isDrawer]);
 
   useEffect(() => {
-    set({
-      ...(!isDrawer && {
-        opacity: isOpen ? 1 : 0,
-      }),
-      ...(isDrawer && { left: isOpen ? '0' : '100%' }),
-    });
-
-    if (isOpen) {
-      setVisibility('visible');
-    } else {
-      setTimeout(
-        () => {
-          setVisibility('hidden');
-        },
-        isDrawer ? 250 : 300,
-      );
-    }
-
     if (focusTrap) {
       setTimeout(() => {
         focusTrap[isOpen ? 'activate' : 'deactivate']();
@@ -87,11 +60,12 @@ const Modal = ({
 
   return (
     <Overlay
+      isActive={isOpen}
+      hasDrawer={isDrawer}
       classes={classnames({
         'overlay--transparent': noOverlay,
         'has-drawer': isDrawer,
       })}
-      style={{ visibility }}
       {...(!disableOverlayclick && {
         onClick: (e) => {
           return close(e);
@@ -104,12 +78,11 @@ const Modal = ({
       })}
       {...others}
     >
-      <animated.div
+      <div
         className={classnames('modal', {
           'is-drawer': isDrawer,
         })}
         ref={modal}
-        style={styleProps}
       >
         <div className="modal__header">
           <div className="modal__title">{title}</div>
@@ -124,7 +97,7 @@ const Modal = ({
         </div>
         <div className="modal__body">{children}</div>
         {footer && <div className="modal__footer">{footer}</div>}
-      </animated.div>
+      </div>
     </Overlay>
   );
 };

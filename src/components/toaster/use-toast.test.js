@@ -28,7 +28,6 @@ describe('useToast', () => {
   });
 
   it('Should create a toaster', () => {
-    console.log(app.debug());
     expect(app.find('.toaster').length).toBe(1);
   });
 

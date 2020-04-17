@@ -52,14 +52,6 @@ describe('<Modal />', () => {
     expect(onCloseSpy.called).toBe(false);
   });
 
-  it('Modal should not be visible if isOpen is false', () => {
-    const theModal = mount(<Modal isOpen={false} />);
-
-    expect(theModal.find('div.overlay').prop('style').visibility).toBe(
-      'hidden',
-    );
-  });
-
   it('Should call onClose when escape key is pressed', () => {
     modal
       .find('.modal__close-button')

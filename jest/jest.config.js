@@ -8,6 +8,7 @@ module.exports = {
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
     '!src/index.js',
+    '!**/index.js',
     '!src/utilities/**/*.js',
     '!src/components/stats/**/*.js',
     '!src/components/toaster/toast-context.js',

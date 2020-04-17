@@ -29,6 +29,15 @@
     transition-delay: 0.1s;
   }
 
+  &.has-drawer > * {
+    position: relative;
+    left: 100%;
+  }
+
+  &.is-active.has-drawer > * {
+    left: 0;
+  }
+
   &--blue {
     background-color: rgba(2, 122, 191, 0.5);
   }
