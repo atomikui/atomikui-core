@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import generateId from '../../utilities/generateId';
 
 const Pagination = ({ children, classes, ...others }) => {
   return (
     <ul className={classnames('pagination', classes, {})} {...others}>
-      {children}
+      {Children.map(children, (child) => {
+        return (
+          <li
+            className={classnames('pagination__item', {
+              'is-active': child.props.active,
+            })}
+            key={generateId()}
+          >
+            {child}
+          </li>
+        );
+      })}
     </ul>
   );
 };

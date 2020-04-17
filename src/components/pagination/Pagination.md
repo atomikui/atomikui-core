@@ -3,54 +3,54 @@ The `Pagination` component is used to indicate a series of related content exist
 ### Pagination as Links
 
 ```jsx
-import { Pagination, PageItem } from '@alaneicker/react-component-library';
+import { Pagination, Link } from '@alaneicker/react-component-library';
 
 <Pagination>
-  <PageItem href="#">Previous</PageItem>
-  <PageItem href="#">1</PageItem>
-  <PageItem href="#" isActive>
+  <Link href="#">Previous</Link>
+  <Link href="#">1</Link>
+  <Link href="#" isActive>
     2
-  </PageItem>
-  <PageItem href="#">3</PageItem>
-  <PageItem href="#">4</PageItem>
-  <PageItem href="#">Next</PageItem>
+  </Link>
+  <Link href="#">3</Link>
+  <Link href="#">4</Link>
+  <Link href="#">Next</Link>
 </Pagination>;
 ```
 
 ### Pagination as Buttons
 
 ```jsx
-import { Pagination, PageItem } from '@alaneicker/react-component-library';
+import { Pagination, Link } from '@alaneicker/react-component-library';
 
 <Pagination>
-  <PageItem onClick={() => {}}>Previous</PageItem>
-  <PageItem onClick={() => {}}>1</PageItem>
-  <PageItem onClick={() => {}} isActive>
+  <Link onClick={() => {}}>Previous</Link>
+  <Link onClick={() => {}}>1</Link>
+  <Link onClick={() => {}} isActive>
     2
-  </PageItem>
-  <PageItem onClick={() => {}}>3</PageItem>
-  <PageItem onClick={() => {}}>4</PageItem>
-  <PageItem onClick={() => {}}>Next</PageItem>
+  </Link>
+  <Link onClick={() => {}}>3</Link>
+  <Link onClick={() => {}}>4</Link>
+  <Link onClick={() => {}}>Next</Link>
 </Pagination>;
 ```
 
-### Disabling a PageItem
+### Disabling a Link
 
-Simply pass the `disabled` prop to the PageItem to disable it.
+Simply pass the `disabled` prop to the Link to disable it.
 
 ```jsx
-import { Pagination, PageItem } from '@alaneicker/react-component-library';
+import { Pagination, Link } from '@alaneicker/react-component-library';
 
 <Pagination>
-  <PageItem href="#">Previous</PageItem>
-  <PageItem href="#">1</PageItem>
-  <PageItem href="#">2</PageItem>
-  <PageItem href="#">3</PageItem>
-  <PageItem href="#" isActive>
+  <Link href="#">Previous</Link>
+  <Link href="#">1</Link>
+  <Link href="#">2</Link>
+  <Link href="#">3</Link>
+  <Link href="#" active>
     4
-  </PageItem>
-  <PageItem href="#" disabled>
+  </Link>
+  <Link href="#" disabled>
     Next
-  </PageItem>
+  </Link>
 </Pagination>;
 ```

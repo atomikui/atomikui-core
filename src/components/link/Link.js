@@ -2,10 +2,12 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Link = ({ classes, children, href, target, ...others }) => {
+const Link = ({ classes, children, disabled, href, target, ...others }) => {
   return (
     <a
-      className={classnames('link', classes)}
+      className={classnames('link', classes, {
+        'is-disabled': disabled,
+      })}
       {...(href && { href })}
       {...(target && { target })}
       {...(target === '_blank' && { rel: 'noopener noreferrer' })}
@@ -19,6 +21,8 @@ const Link = ({ classes, children, href, target, ...others }) => {
 Link.propTypes = {
   /** Custom classes to be added to Label component.. */
   classes: PropTypes.string,
+  /** Disabled a link */
+  disabled: PropTypes.bool,
   /** Specifies the URL of the page the link goes to.. */
   href: PropTypes.string,
   /** Hint content.. */
@@ -29,6 +33,7 @@ Link.propTypes = {
 
 Link.defaultProps = {
   classes: '',
+  disabled: false,
   href: '',
   children: null,
   target: '',

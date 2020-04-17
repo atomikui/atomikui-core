@@ -3,7 +3,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Pagination from './Pagination';
-import PageItem from './PageItem';
+import Link from '../link';
 
 configure({ adapter: new Adapter() });
 
@@ -13,12 +13,12 @@ describe('<Pagination />', () => {
   beforeEach(() => {
     pagination = shallow(
       <Pagination>
-        <PageItem href="#">Previous</PageItem>
-        <PageItem href="#">1</PageItem>
-        <PageItem href="#">2</PageItem>
-        <PageItem href="#">3</PageItem>
-        <PageItem href="#">4</PageItem>
-        <PageItem href="#">Next</PageItem>
+        <Link href="#">Previous</Link>
+        <Link href="#">1</Link>
+        <Link href="#">2</Link>
+        <Link href="#">3</Link>
+        <Link href="#">4</Link>
+        <Link href="#">Next</Link>
       </Pagination>,
     );
   });
@@ -28,6 +28,6 @@ describe('<Pagination />', () => {
   });
 
   it('Should render 6 PageItems', () => {
-    expect(pagination.find('PageItem').length).toBe(6);
+    expect(pagination.find('Link').length).toBe(6);
   });
 });
