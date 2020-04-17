@@ -48,7 +48,7 @@
     padding: rem(16);
   }
 
-  &.is-drawer {
+  &.is-contextual {
     min-height: 100%;
   }
 
@@ -71,7 +71,7 @@
     max-height: 80%;
     max-width: 70%;
 
-    &.is-drawer {
+    &.is-contextual {
       max-width: rem(480);
     }
   }

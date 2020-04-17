@@ -15,7 +15,7 @@ const Overlay = ({
       className={classnames('overlay', classes, {
         [`overlay--${variant}`]: variant,
         'is-active': isActive,
-        'has-drawer': hasDrawer,
+        'has-contextual-dialog': hasDrawer,
       })}
       {...others}
     >

@@ -29,12 +29,12 @@
     transition-delay: 0.1s;
   }
 
-  &.has-drawer > * {
+  &.has-contextual-dialog > * {
     position: relative;
     left: 100%;
   }
 
-  &.is-active.has-drawer > * {
+  &.is-active.has-contextual-dialog > * {
     left: 0;
   }
 
@@ -50,7 +50,7 @@
     background-color: transparent;
   }
 
-  &.has-drawer {
+  &.has-contextual-dialog {
     justify-content: flex-end;
   }
 }

@@ -17,7 +17,7 @@ const toggleModal = () => {
   <Modal
     isOpen={isOpen}
     onClose={toggleModal}
-    title="Modal Title"
+    title="Modal Dialog"
     footer={
       <div className="text-align-right">
         <Button variant="primary" size="md" onClick={() => toggleModal()}>
@@ -40,7 +40,7 @@ const toggleModal = () => {
 </>;
 ```
 
-### Drawer
+### Contextual Dialog
 
 ```jsx
 import { useState } from 'react';
@@ -54,13 +54,13 @@ const toggleModal = () => {
 
 <>
   <Button variant="primary" size="md" onClick={() => toggleModal()}>
-    Toggle Drawer
+    Toggle Contextual Dialog
   </Button>
   <Modal
-    isDrawer
+    isContextual
     isOpen={isOpen}
     onClose={toggleModal}
-    title="Modal Title"
+    title="Contextual Dialog"
     footer={
       <div className="text-align-right">
         <Button variant="primary" size="md" onClick={() => toggleModal()}>
