@@ -1,9 +1,30 @@
 div[class^='rsg--sidebar'] {
+  background: #222;
+
+  [class^='rsg--logo']:not(h1) {
+    border-bottom: 1px solid darken($gray-400, 12%);
+  }
+
   [class^='rsg--logo'] > h1 {
     font-family: 'Hind Madurai', Arial, Helvetica, sans-serif;
     font-size: rem(20);
     font-weight: 500;
     line-height: 1.2;
+    color: $white;
+  }
+
+  [class^='rsg--search'] > * {
+    background: lighten($gray-500, 5%);
+    border: 0;
+
+    &:focus {
+      @include focus-outline();
+    }
+  }
+
+  [class^='rsg--link'] {
+    color: $white;
+    font-weight: 100;
   }
 
   [class^='rsg--root']
@@ -14,6 +35,6 @@ div[class^='rsg--sidebar'] {
     text-transform: uppercase;
     font-weight: $font-bold;
     display: block;
-    border-bottom: 1px solid darken($gray-100, 12%);
+    border-bottom: 1px solid darken($gray-400, 12%);
   }
 }
