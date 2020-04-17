@@ -3,10 +3,12 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
 import createFocusTrap from 'focus-trap';
+import { useSpring, animated } from 'react-spring';
 import FormField from '../form-field';
 import Button from '../button';
 import Label from '../label';
 import validateDate from '../../utilities/validate-date';
+import Overlay from '../overlay';
 
 const DatePicker = ({
   classes,
@@ -21,6 +23,14 @@ const DatePicker = ({
   const [focusTrap, setFocusTrap] = useState(null);
   const [theValue, setTheValue] = useState(validateDate(value));
   const [isOpen, setIsOpen] = useState(false);
+  const [visibility, setVisibility] = useState('hidden');
+
+  const [styleProps, set] = useSpring(() => {
+    return {
+      opacity: 1,
+      transform: 'scale(0)',
+    };
+  });
 
   const cancel = () => {
     setIsOpen(false);
@@ -63,6 +73,19 @@ const DatePicker = ({
   }, [calendar]);
 
   useEffect(() => {
+    set({
+      opacity: isOpen ? 1 : 0,
+      transform: isOpen ? 'scale(1)' : 'scale(0)',
+    });
+
+    if (isOpen) {
+      setVisibility('visible');
+    } else {
+      setTimeout(() => {
+        setVisibility('hidden');
+      }, 300);
+    }
+
     if (focusTrap) {
       setTimeout(() => {
         focusTrap[isOpen ? 'activate' : 'deactivate']();
@@ -99,10 +122,8 @@ const DatePicker = ({
           Select a Date
         </Button>
       </div>
-      <div
-        className={classnames('date-picker__calendar', {
-          'is-open': isOpen,
-        })}
+      <Overlay
+        style={{ visibility }}
         onKeyDown={(e) => {
           return handleKeyDown(e);
         }}
@@ -110,15 +131,19 @@ const DatePicker = ({
           return cancel();
         }}
       >
-        <div className="date-picker__calendar__ui" ref={calendar}>
+        <animated.div
+          style={styleProps}
+          className="date-picker__calendar"
+          ref={calendar}
+        >
           <Calendar
             onChange={(details) => {
               return handleDateChange(details);
             }}
             value={new Date(theValue)}
           />
-        </div>
-      </div>
+        </animated.div>
+      </Overlay>
     </div>
   );
 };
