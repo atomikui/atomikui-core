@@ -4,14 +4,14 @@ The `Overlay` component is used to block user interaction while processes are ta
 import { useState } from 'react';
 import { Overlay, Button } from '@alaneicker/react-component-library';
 
-const [open, setOpen] = useState(false);
+const [isActive, setIsActive] = useState(false);
 
 <>
-  <Button variant="primary" onClick={() => setOpen(true)}>
+  <Button variant="primary" onClick={() => setIsActive(true)}>
     Show Overlay
   </Button>
 
-  {open && <Overlay onClick={() => setOpen(false)} />}
+  <Overlay onClick={() => setIsActive(false)} isActive={isActive} />
 </>;
 ```
 
@@ -21,17 +21,19 @@ const [open, setOpen] = useState(false);
 import { useState } from 'react';
 import { Overlay, Button, Spinner } from '@alaneicker/react-component-library';
 
-const [open, setOpen] = useState(false);
+const [isActive, setIsActive] = useState(false);
 
 <>
-  <Button variant="primary" onClick={() => setOpen(true)}>
+  <Button variant="primary" onClick={() => setIsActive(true)}>
     Show Overlay
   </Button>
 
-  {open && (
-    <Overlay onClick={() => setOpen(false)} variant="white">
-      <Spinner size="xlg" color="blue" />
-    </Overlay>
-  )}
+  <Overlay
+    onClick={() => setIsActive(false)}
+    variant="white"
+    isActive={isActive}
+  >
+    <Spinner size="xlg" color="blue" />
+  </Overlay>
 </>;
 ```

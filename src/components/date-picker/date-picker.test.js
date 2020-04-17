@@ -29,18 +29,14 @@ describe('<DatePicker />', () => {
   it('Should open calendar', () => {
     datepicker.find('.date-picker__input__btn').simulate('click');
 
-    expect(datepicker.find('.date-picker__calendar').hasClass('is-open')).toBe(
-      true,
-    );
+    expect(datepicker.find('Overlay').prop('isActive')).toBe(true);
   });
 
   it('Should close calendar', () => {
     datepicker.find('.date-picker__input__btn').simulate('click');
     datepicker.find('.date-picker__calendar').simulate('click');
 
-    expect(datepicker.find('.date-picker__calendar').hasClass('is-open')).toBe(
-      false,
-    );
+    expect(datepicker.find('Overlay').prop('isActive')).toBe(false);
   });
 
   it('Should change input value when calendar date is clicked', () => {

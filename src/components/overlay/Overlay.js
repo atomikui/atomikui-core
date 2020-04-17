@@ -2,11 +2,12 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Overlay = ({ children, classes, variant, ...others }) => {
+const Overlay = ({ children, classes, isActive, variant, ...others }) => {
   return (
     <div
       className={classnames('overlay', classes, {
         [`overlay--${variant}`]: variant,
+        'is-active': isActive,
       })}
       {...others}
     >
@@ -20,6 +21,8 @@ Overlay.propTypes = {
   classes: PropTypes.string,
   /** Overlay content */
   children: PropTypes.node,
+  /** Specifies if overlay is active */
+  isActive: PropTypes.bool,
   /** Specifies the overlay theme variation */
   variant: PropTypes.oneOf(['blue', 'white']),
 };
@@ -27,6 +30,7 @@ Overlay.propTypes = {
 Overlay.defaultProps = {
   classes: '',
   children: null,
+  isActive: false,
   variant: null,
 };
 

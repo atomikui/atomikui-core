@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
 import createFocusTrap from 'focus-trap';
-import { useSpring, animated } from 'react-spring';
 import FormField from '../form-field';
 import Button from '../button';
 import Label from '../label';
@@ -23,13 +22,6 @@ const DatePicker = ({
   const [focusTrap, setFocusTrap] = useState(null);
   const [theValue, setTheValue] = useState(validateDate(value));
   const [isOpen, setIsOpen] = useState(false);
-  const [visibility, setVisibility] = useState('hidden');
-
-  const [styleProps, set] = useSpring(() => {
-    return {
-      opacity: 1,
-    };
-  });
 
   const cancel = () => {
     setIsOpen(false);
@@ -74,18 +66,6 @@ const DatePicker = ({
   }, [calendar]);
 
   useEffect(() => {
-    set({
-      opacity: isOpen ? 1 : 0,
-    });
-
-    if (isOpen) {
-      setVisibility('visible');
-    } else {
-      setTimeout(() => {
-        setVisibility('hidden');
-      }, 300);
-    }
-
     if (focusTrap) {
       setTimeout(() => {
         focusTrap[isOpen ? 'activate' : 'deactivate']();
@@ -123,7 +103,7 @@ const DatePicker = ({
         </Button>
       </div>
       <Overlay
-        style={{ visibility }}
+        isActive={isOpen}
         onKeyDown={(e) => {
           return handleKeyDown(e);
         }}
@@ -131,18 +111,14 @@ const DatePicker = ({
           return cancel();
         }}
       >
-        <animated.div
-          style={styleProps}
-          className="date-picker__calendar"
-          ref={calendar}
-        >
+        <div className="date-picker__calendar" ref={calendar}>
           <Calendar
             onChange={(details) => {
               return handleDateChange(details);
             }}
             value={new Date(theValue)}
           />
-        </animated.div>
+        </div>
       </Overlay>
     </div>
   );
