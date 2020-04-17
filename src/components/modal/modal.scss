@@ -52,7 +52,7 @@
     min-height: 100%;
   }
 
-  @each $theme-name, $map in $modal-themes {
+  @each $theme-name, $map in $modal-variants {
     &--#{$theme-name} {
       background-color: map-get($map, background-color);
       color: map-get($map, font-color);

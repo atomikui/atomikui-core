@@ -21,14 +21,14 @@ $blue-500: #002d4a !default;
 
 $light-gray: #dedede;
 
-$alert-colors: (
+$alert-variants: (
   info: $blue-200,
   success: $green-100,
   error: $red-100,
   warning: $orange-100,
 ) !default;
 
-$badge-colors: (
+$badge-variants: (
   'light-gray': $light-gray,
   info: $blue-200,
   success: $green-100,
@@ -70,21 +70,51 @@ $btn-variants: (
   ),
 ) !default;
 
-$background-colors: (
-  red: $red-100,
-  green: $green-100,
-  light-blue: $blue-100,
-  medium-blue: $blue-200,
-  dark-blue: $blue-400,
-  light-navy: lighten($blue-400, 10%),
-  light-gray: $gray-100,
-  medium-gray: $gray-300,
-  dark-gray: $gray-500,
-  black: $black,
-  white: $white,
+$avatar-variant: (
+  red: (
+    background-color: $red-100,
+    font-color: $white,
+  ),
+  orange: (
+    background-color: $orange-100,
+    font-color: $white,
+  ),
+  yellow: (
+    background-color: $yellow-100,
+  ),
+  green: (
+    background-color: $green-100,
+    font-color: $white,
+  ),
+  light-blue: (
+    background-color: $blue-100,
+  ),
+  medium-blue: (
+    background-color: $blue-200,
+    font-color: $white,
+  ),
+  dark-blue: (
+    background-color: $blue-300,
+    font-color: $white,
+  ),
+  light-gray: (
+    background-color: $gray-100,
+  ),
+  medium-gray: (
+    background-color: $gray-300,
+    font-color: $white,
+  ),
+  dark-gray: (
+    background-color: $gray-400,
+    font-color: $white,
+  ),
+  black: (
+    background-color: $black,
+    font-color: $white,
+  ),
 ) !default;
 
-$modal-themes: (
+$modal-variants: (
   info: (
     background-color: $blue-200,
     font-color: $white,
