@@ -13,9 +13,18 @@ div[class^='rsg--sidebar'] {
     color: $white;
   }
 
+  [class^='rsg--version'] {
+    color: $gray-200;
+
+    &::before {
+      content: 'Version ';
+    }
+  }
+
   [class^='rsg--search'] > * {
     background: lighten($gray-500, 5%);
     border: 0;
+    color: $white;
 
     &:focus {
       @include focus-outline();
