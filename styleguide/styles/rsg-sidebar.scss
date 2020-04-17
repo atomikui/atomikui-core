@@ -6,6 +6,10 @@ div[class^='rsg--sidebar'] {
     line-height: 1.2;
   }
 
+  [class^='rsg--isSelected'] [class^='rsg--link'] {
+    color: red;
+  }
+
   .rsg--heading-69 {
     text-transform: uppercase;
     font-weight: $font-bold;
