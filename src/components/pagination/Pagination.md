@@ -8,7 +8,7 @@ import { Pagination, Link } from '@alaneicker/react-component-library';
 <Pagination>
   <Link href="#">Previous</Link>
   <Link href="#">1</Link>
-  <Link href="#" isActive>
+  <Link href="#" active>
     2
   </Link>
   <Link href="#">3</Link>
@@ -25,7 +25,7 @@ import { Pagination, Link } from '@alaneicker/react-component-library';
 <Pagination>
   <Link onClick={() => {}}>Previous</Link>
   <Link onClick={() => {}}>1</Link>
-  <Link onClick={() => {}} isActive>
+  <Link onClick={() => {}} active>
     2
   </Link>
   <Link onClick={() => {}}>3</Link>
