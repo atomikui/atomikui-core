@@ -53,15 +53,13 @@
   }
 
   @each $theme-name, $map in $modal-themes {
-    &--#{theme-name} {
-      &__dialog {
-        background-color: map-get($map, background-color);
-        color: map-get($map, font-color);
-      }
+    &--#{$theme-name} {
+      background-color: map-get($map, background-color);
+      color: map-get($map, font-color);
 
-      &__header,
-      &__footer {
-        border-color: rgba(255, 255, 255, 0.5);
+      .modal__header,
+      .modal__footer {
+        border-color: rgba(255, 255, 255, 0.4);
       }
     }
   }
@@ -76,46 +74,3 @@
     }
   }
 }
-
-// .foobar {
-//   align-items: center;
-//   background-color: rgba(0, 0, 0, 0.4);
-//   bottom: 0;
-//   display: flex;
-//   justify-content: center;
-//   left: 0;
-//   opacity: 0;
-//   position: fixed;
-//   right: 0;
-//   top: 0;
-//   transition: all 0.3s ease-in-out;
-//   visibility: hidden;
-//   z-index: 200;
-
-//   &.is-open {
-//     opacity: 1;
-//     visibility: visible;
-//   }
-
-//   &--no-overlay {
-//     background-color: transparent;
-//   }
-
-//   &--drawer {
-//     .modal__dialog {
-//       bottom: 0;
-//       left: auto;
-//       max-height: inherit;
-//       max-width: inherit;
-//       position: absolute;
-//       right: -100%;
-//       top: 0;
-//       transition: all 0.3s ease-in-out !important;
-//       width: 100%;
-//     }
-
-//     &.is-open > .modal__dialog {
-//       right: 0;
-//     }
-//   }
-// }
