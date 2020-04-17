@@ -1,6 +1,6 @@
 .overlay {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -15,11 +15,11 @@
   }
 
   &--blue {
-    background-color: rgba(2, 122, 191, 0.4);
+    background-color: rgba(2, 122, 191, 0.5);
   }
 
   &--white {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
   }
 
   &--transparent {

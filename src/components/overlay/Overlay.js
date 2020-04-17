@@ -21,13 +21,13 @@ Overlay.propTypes = {
   /** Overlay content */
   children: PropTypes.node,
   /** Specifies the overlay theme variation */
-  variant: PropTypes.oneOf(['black', 'blue', 'white']),
+  variant: PropTypes.oneOf(['blue', 'white']),
 };
 
 Overlay.defaultProps = {
   classes: '',
   children: null,
-  variant: 'black',
+  variant: null,
 };
 
 export default Overlay;

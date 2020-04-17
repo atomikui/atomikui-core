@@ -26,7 +26,6 @@ const Modal = ({
   const [styleProps, set] = useSpring(() => {
     return {
       opacity: 1,
-      ...(!isDrawer && { transform: 'scale(0)' }),
       ...(isDrawer && { left: '100%' }),
     };
   });
@@ -64,7 +63,6 @@ const Modal = ({
     set({
       ...(!isDrawer && {
         opacity: isOpen ? 1 : 0,
-        transform: isOpen ? 'scale(1)' : 'scale(0)',
       }),
       ...(isDrawer && { left: isOpen ? '0' : '100%' }),
     });

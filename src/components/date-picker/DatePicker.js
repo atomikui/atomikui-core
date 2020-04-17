@@ -28,7 +28,6 @@ const DatePicker = ({
   const [styleProps, set] = useSpring(() => {
     return {
       opacity: 1,
-      transform: 'scale(0)',
     };
   });
 
@@ -64,7 +63,9 @@ const DatePicker = ({
   useEffect(() => {
     setFocusTrap(
       createFocusTrap(calendar.current, {
-        allowOutsideClick: true,
+        allowOutsideClick: () => {
+          return true;
+        },
         clickOutsideDeactivates: false,
         escapeDeactivates: true,
         fallbackFocus: calendar,
@@ -75,7 +76,6 @@ const DatePicker = ({
   useEffect(() => {
     set({
       opacity: isOpen ? 1 : 0,
-      transform: isOpen ? 'scale(1)' : 'scale(0)',
     });
 
     if (isOpen) {
