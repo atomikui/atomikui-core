@@ -19,14 +19,14 @@ module.exports = {
         {
           rel: 'stylesheet',
           href:
-            'https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,900,900i',
+            'https://fonts.googleapis.com/css?family=Hind+Madurai:300,300i,400,400i,500,500i,700,700i',
         },
       ],
     },
   },
   theme: {
     fontFamily: {
-      base: '"Montserrat", Arial, Helvetica, sans-serif',
+      base: '"Hind Madurai", Arial, Helvetica, sans-serif',
     },
   },
 };
