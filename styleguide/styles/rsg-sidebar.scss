@@ -6,7 +6,10 @@ div[class^='rsg--sidebar'] {
     line-height: 1.2;
   }
 
-  & nav > ul > li > a {
-    font-weight: $font-bold !important;
+  .rsg--heading-69 {
+    text-transform: uppercase;
+    font-weight: $font-bold;
+    display: block;
+    border-bottom: 1px solid darken($gray-100, 12%);
   }
 }
