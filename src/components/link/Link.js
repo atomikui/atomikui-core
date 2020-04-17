@@ -2,7 +2,15 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Link = ({ classes, children, disabled, href, target, ...others }) => {
+const Link = ({
+  active,
+  classes,
+  children,
+  disabled,
+  href,
+  target,
+  ...others
+}) => {
   return (
     <a
       className={classnames('link', classes, {
@@ -19,6 +27,8 @@ const Link = ({ classes, children, disabled, href, target, ...others }) => {
 };
 
 Link.propTypes = {
+  /** Specifies as active link */
+  active: PropTypes.bool,
   /** Custom classes to be added to Label component.. */
   classes: PropTypes.string,
   /** Disabled a link */
@@ -32,6 +42,7 @@ Link.propTypes = {
 };
 
 Link.defaultProps = {
+  active: false,
   classes: '',
   disabled: false,
   href: '',

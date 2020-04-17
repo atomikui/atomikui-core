@@ -1,17 +1,14 @@
 A `Breadcrumb` indicates the current page’s location in relation to a navigational hierarchy.
 
 ```jsx
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-} from '@alaneicker/react-component-library';
+import { Breadcrumb, Link } from '@alaneicker/react-component-library';
 
 <Breadcrumb>
-  <BreadcrumbItem href="/home">Home</BreadcrumbItem>
-  <BreadcrumbItem href="/products">Products</BreadcrumbItem>
-  <BreadcrumbItem href="/t-shirts" active>
+  <Link href="/home">Home</Link>
+  <Link href="/products">Products</Link>
+  <Link href="/t-shirts" disabled>
     T-Shirts
-  </BreadcrumbItem>
+  </Link>
 </Breadcrumb>;
 ```
 
