@@ -90,7 +90,7 @@ import { useState } from 'react';
 import { Modal, Button } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
-const [variant, setVariant] = useState('');
+const [variant, setVariant] = useState(null);
 
 const toggleModal = (theme) => {
   setVariant(theme);

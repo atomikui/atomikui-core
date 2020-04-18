@@ -22,16 +22,6 @@ const Modal = ({
 
   const modal = useRef();
 
-  const close = (e) => {
-    onClose();
-
-    const isOverlayClick = e.target.classList.contains('overlay');
-
-    if (isOverlayClick) {
-      onClose();
-    }
-  };
-
   const handleKeyDown = (e) => {
     if (e.keyCode === 27) {
       onClose();
@@ -69,7 +59,7 @@ const Modal = ({
       })}
       {...(!disableOverlayclick && {
         onClick: (e) => {
-          return close(e);
+          return onClose();
         },
       })}
       {...(closeOnEscape && {
@@ -91,7 +81,7 @@ const Modal = ({
           <button
             className="modal__close-button"
             onClick={(e) => {
-              return close(e);
+              return onClose();
             }}
           >
             <svg

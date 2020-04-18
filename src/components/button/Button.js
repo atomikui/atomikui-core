@@ -50,6 +50,7 @@ Button.propTypes = {
     'primary',
     'secondary',
     'tertiary',
+    'warning',
     'hollow',
     'link',
     'block',
