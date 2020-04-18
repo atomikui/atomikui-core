@@ -46,7 +46,7 @@ Avatar.propTypes = {
   /** Label to be displayed to the right or left of the avatar */
   label: PropTypes.string,
   /** Controls the size of the avatar */
-  size: PropTypes.oneOf('sm', 'lg'),
+  size: PropTypes.oneOf(['sm', 'lg']),
   /** Image to be displayed aiside Avatar */
   src: PropTypes.string,
   /** Avatar background color theme variation */
