@@ -4,22 +4,13 @@
 import { Button } from '@alaneicker/react-component-library';
 
 <>
-  <Button type="submit">Default</Button>
-  <Button type="submit" variant="primary">
-    Primary
-  </Button>
-  <Button type="submit" variant="secondary">
-    Secondary
-  </Button>
-  <Button type="submit" variant="tertiary">
-    Tertiary
-  </Button>
-  <Button type="submit" variant="hollow">
-    Hollow
-  </Button>
-  <Button type="submit" variant="link">
-    Link
-  </Button>
+  <Button>Default</Button>
+  <Button variant="primary">Primary</Button>
+  <Button variant="secondary">Secondary</Button>
+  <Button variant="tertiary">Tertiary</Button>
+  <Button variant="warning">Warning</Button>
+  <Button variant="hollow">Hollow</Button>
+  <Button variant="link">Link</Button>
 </>;
 ```
 
@@ -29,13 +20,11 @@ import { Button } from '@alaneicker/react-component-library';
 import { Button } from '@alaneicker/react-component-library';
 
 <>
-  <Button type="submit" variant="primary">
-    Default
-  </Button>
-  <Button type="submit" variant="primary" shape="square">
+  <Button variant="primary">Default</Button>
+  <Button variant="primary" shape="square">
     Square
   </Button>
-  <Button type="submit" variant="primary" shape="pill">
+  <Button variant="primary" shape="pill">
     Pill
   </Button>
 </>;
@@ -46,7 +35,7 @@ import { Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
-<Button type="submit" variant="primary" disabled>
+<Button variant="primary" disabled>
   Disabled
 </Button>;
 ```
@@ -56,7 +45,7 @@ import { Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
-<Button type="submit" variant="primary" block>
+<Button variant="primary" block>
   Block Button
 </Button>;
 ```
@@ -67,16 +56,12 @@ import { Button } from '@alaneicker/react-component-library';
 import { Button } from '@alaneicker/react-component-library';
 
 <>
-  <Button type="submit" size="sm">
-    Small
-  </Button>
-  <Button type="submit" variant="primary" size="md">
+  <Button size="sm">Small</Button>
+  <Button variant="primary" size="md">
     Medium
   </Button>
-  <Button type="submit" variant="secondary">
-    Default
-  </Button>
-  <Button type="submit" variant="tertiary" size="lg">
+  <Button variant="secondary">Default</Button>
+  <Button variant="tertiary" size="lg">
     Large
   </Button>
 </>;

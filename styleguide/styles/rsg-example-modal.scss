@@ -1,0 +1,5 @@
+[data-preview='Modal'] > * {
+  & > *:not(.overlay) {
+    margin-right: rem(8);
+  }
+}
