@@ -5,7 +5,7 @@ An image avatar can be created by passing in a `src` and `alt` prop.
 ```jsx
 import { Avatar } from '@alaneicker/react-component-library';
 
-<Avatar src="/profile-image.png" alt="Alan Smith" />;
+<Avatar src="profile-image.png" alt="Alan Smith" />;
 ```
 
 ### Avatar With a Label
@@ -19,12 +19,12 @@ import { Avatar } from '@alaneicker/react-component-library';
 
 <>
   <Avatar
-    src="/profile-image.png"
+    src="profile-image.png"
     alt="Some alt text"
     label="Right Aligned Label"
   />
   <Avatar
-    src="/profile-image.png"
+    src="profile-image.png"
     alt="Some alt text"
     label="Left Aligned Label"
     flipLabel
@@ -78,7 +78,6 @@ There are many color themes to choose from. simplay pass in a `variant` prop wit
 import { Avatar } from '@alaneicker/react-component-library';
 
 <>
-  <Avatar>AE</Avatar>
   <Avatar variant="red">AE</Avatar>
   <Avatar variant="orange">P</Avatar>
   <Avatar variant="yellow">MS</Avatar>
@@ -101,8 +100,8 @@ The `size` prop can be used to change the size of the avatar
 import { Avatar } from '@alaneicker/react-component-library';
 
 <>
-  <Avatar src="/profile-image.png" alt="Alan Smith" size="sm" />
-  <Avatar src="/profile-image.png" alt="Alan Smith" />
-  <Avatar src="/profile-image.png" alt="Alan Smith" size="lg" />
+  <Avatar src="profile-image.png" alt="Alan Smith" size="sm" />
+  <Avatar src="profile-image.png" alt="Alan Smith" />
+  <Avatar src="profile-image.png" alt="Alan Smith" size="lg" />
 </>;
 ```
