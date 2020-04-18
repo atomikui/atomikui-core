@@ -1,9 +1,9 @@
 [data-preview='Avatar'] > * {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 
   & > * {
-    margin: rem(0 8 8 0);
+    margin: rem(0 16 16 0);
   }
 }

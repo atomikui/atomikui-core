@@ -5,10 +5,7 @@ An image avatar can be created by passing in a `src` and `alt` prop.
 ```jsx
 import { Avatar } from '@alaneicker/react-component-library';
 
-<Avatar
-  src="https://avatars2.githubusercontent.com/u/56617615?s=460&u=954e132d7392963051ef1882aaa6d788fb6eb373&v=4"
-  alt="Alan Smith"
-/>;
+<Avatar src="/profile-image.png" alt="Alan Smith" />;
 ```
 
 ### Avatar With a Label
@@ -22,12 +19,12 @@ import { Avatar } from '@alaneicker/react-component-library';
 
 <>
   <Avatar
-    src="https://avatars2.githubusercontent.com/u/56617615?s=460&u=954e132d7392963051ef1882aaa6d788fb6eb373&v=4"
+    src="/profile-image.png"
     alt="Some alt text"
     label="Right Aligned Label"
   />
   <Avatar
-    src="https://avatars2.githubusercontent.com/u/56617615?s=460&u=954e132d7392963051ef1882aaa6d788fb6eb373&v=4"
+    src="/profile-image.png"
     alt="Some alt text"
     label="Left Aligned Label"
     flipLabel
@@ -93,5 +90,19 @@ import { Avatar } from '@alaneicker/react-component-library';
   <Avatar variant="medium-gray">JD</Avatar>
   <Avatar variant="dark-gray">M</Avatar>
   <Avatar variant="black">O</Avatar>
+</>;
+```
+
+### Avatar Sizes
+
+The `size` prop can be used to change the size of the avatar
+
+```jsx
+import { Avatar } from '@alaneicker/react-component-library';
+
+<>
+  <Avatar src="/profile-image.png" alt="Alan Smith" size="sm" />
+  <Avatar src="/profile-image.png" alt="Alan Smith" />
+  <Avatar src="/profile-image.png" alt="Alan Smith" size="lg" />
 </>;
 ```

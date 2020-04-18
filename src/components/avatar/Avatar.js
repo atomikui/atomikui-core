@@ -8,6 +8,7 @@ const Avatar = ({
   children,
   flipLabel,
   label,
+  size,
   src,
   variant,
   ...others
@@ -16,6 +17,7 @@ const Avatar = ({
     <span
       className={classnames('avatar', {
         'avatar--flip': flipLabel,
+        [`avatar--${size}`]: size,
       })}
       {...others}
     >
@@ -43,6 +45,8 @@ Avatar.propTypes = {
   flipLabel: PropTypes.bool,
   /** Label to be displayed to the right or left of the avatar */
   label: PropTypes.string,
+  /** Controls the size of the avatar */
+  size: PropTypes.oneOf('sm', 'lg'),
   /** Image to be displayed aiside Avatar */
   src: PropTypes.string,
   /** Avatar background color theme variation */
@@ -67,6 +71,7 @@ Avatar.defaultProps = {
   children: null,
   flipLabel: false,
   label: '',
+  size: null,
   src: '',
   variant: null,
 };
