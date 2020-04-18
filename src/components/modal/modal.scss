@@ -61,10 +61,6 @@
     padding: rem(16);
   }
 
-  &.is-contextual {
-    min-height: 100%;
-  }
-
   @each $theme-name, $map in $modal-variants {
     &--#{$theme-name} {
       background-color: map-get($map, background-color);
@@ -87,6 +83,18 @@
         }
       }
     }
+  }
+
+  &.is-contextual {
+    min-height: 100%;
+    max-width: rem(480);
+    position: relative;
+    left: 100%;
+    transition: left 0.3s ease-in-out;
+  }
+
+  &.is-open.is-contextual {
+    left: 0;
   }
 
   @media (min-width: $breakpoint-medium) {

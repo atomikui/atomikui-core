@@ -52,10 +52,9 @@ const Modal = ({
   return (
     <Overlay
       isActive={isOpen}
-      hasDrawer={isContextual}
       classes={classnames({
         'overlay--transparent': noOverlay,
-        'has-contextual-dialog': isContextual,
+        'overlay--align-right': isContextual,
       })}
       {...(!disableOverlayclick && {
         onClick: (e) => {
@@ -71,8 +70,9 @@ const Modal = ({
     >
       <div
         className={classnames('modal', {
-          'is-contextual': isContextual,
           [`modal--${variant}`]: variant,
+          'is-contextual': isContextual,
+          'is-open': isOpen,
         })}
         ref={modal}
       >

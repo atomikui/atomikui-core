@@ -51,6 +51,7 @@ Button.propTypes = {
     'secondary',
     'tertiary',
     'warning',
+    'white',
     'hollow',
     'link',
     'block',

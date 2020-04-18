@@ -93,7 +93,9 @@ const [isOpen, setIsOpen] = useState(false);
 const [variant, setVariant] = useState(null);
 
 const toggleModal = (theme) => {
-  setVariant(theme);
+  if (theme) {
+    setVariant(theme);
+  }
   setIsOpen(!isOpen);
 };
 
@@ -118,7 +120,7 @@ const toggleModal = (theme) => {
     title="Modal Dialog"
     footer={
       <div className="text-align-right">
-        <Button size="md" onClick={() => toggleModal()}>
+        <Button variant="white" size="md" onClick={() => toggleModal()}>
           OK
         </Button>
       </div>
