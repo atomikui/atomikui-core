@@ -2,7 +2,7 @@ div[class^='rsg--sidebar'] {
   background: #222;
 
   [class^='rsg--logo']:not(h1) {
-    border-bottom: 1px solid darken($gray-400, 12%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   [class^='rsg--logo'] > h1 {
