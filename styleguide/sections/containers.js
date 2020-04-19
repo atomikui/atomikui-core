@@ -6,6 +6,7 @@ module.exports = {
   sectionDepth: 6,
   components: () => {
     return [
+      'src/components/drawer/Drawer.js',
       'src/components/modal/Modal.js',
       'src/components/overlay/Overlay.js',
     ];

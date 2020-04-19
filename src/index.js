@@ -7,6 +7,7 @@ export { default as Breadcrumb } from './components/breadcrumb';
 export { default as Button } from './components/button';
 export { default as ButtonGroup } from './components/button-group';
 export { default as DatePicker } from './components/date-picker';
+export { default as Drawer } from './components/drawer';
 export { default as Dropdown } from './components/dropdown';
 export { default as FileUpload } from './components/file-upload';
 export { default as FormField } from './components/form-field';
