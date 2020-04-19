@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -26,7 +26,13 @@ const Overlay = ({
       })}
       {...others}
     >
-      {children}
+      {Children.map(children, (child) => {
+        return cloneElement(child, {
+          onClick: (e) => {
+            return e.stopPropagation();
+          },
+        });
+      })}
     </div>
   );
 };

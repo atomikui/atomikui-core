@@ -72,9 +72,6 @@ const Modal = ({
           'is-open': isOpen,
         })}
         ref={modal}
-        onClick={(e) => {
-          return e.stopPropagation();
-        }}
       >
         <div className="modal__header">
           <div className="modal__title">{title}</div>
