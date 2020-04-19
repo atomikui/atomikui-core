@@ -12,6 +12,7 @@ const Overlay = ({
   ...others
 }) => {
   useEffect(() => {
+    /* istanbul ignore next */
     if (!allowBodyScroll) {
       document.body.style.overflow = isActive ? 'hidden' : 'visible';
     }
