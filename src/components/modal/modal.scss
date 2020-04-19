@@ -85,25 +85,9 @@
     }
   }
 
-  &.is-contextual {
-    min-height: 100%;
-    max-width: rem(480);
-    position: relative;
-    left: 100%;
-    transition: left 0.3s ease-in-out;
-  }
-
-  &.is-open.is-contextual {
-    left: 0;
-  }
-
   @media (min-width: $breakpoint-medium) {
     height: auto;
     max-height: 80%;
     max-width: 70%;
-
-    &.is-contextual {
-      max-width: rem(480);
-    }
   }
 }

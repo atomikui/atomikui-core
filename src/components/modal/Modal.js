@@ -11,7 +11,6 @@ const Modal = ({
   disableOverlayclick,
   footer,
   noOverlay,
-  isContextual,
   isOpen,
   onClose,
   title,
@@ -34,12 +33,12 @@ const Modal = ({
         allowOutsideClick: () => {
           return !disableOverlayclick || noOverlay;
         },
-        clickOutsideDeactivates: isContextual && noOverlay,
+        clickOutsideDeactivates: noOverlay,
         escapeDeactivates: false,
         fallbackFocus: modal,
       }),
     );
-  }, [disableOverlayclick, noOverlay, isContextual]);
+  }, [disableOverlayclick, noOverlay]);
 
   useEffect(() => {
     if (focusTrap) {
@@ -54,7 +53,6 @@ const Modal = ({
       isActive={isOpen}
       classes={classnames({
         'overlay--transparent': noOverlay,
-        'overlay--align-right': isContextual,
       })}
       {...(!disableOverlayclick && {
         onClick: (e) => {
@@ -71,7 +69,6 @@ const Modal = ({
       <div
         className={classnames('modal', {
           [`modal--${variant}`]: variant,
-          'is-contextual': isContextual,
           'is-open': isOpen,
         })}
         ref={modal}
@@ -127,8 +124,6 @@ Modal.propTypes = {
   footer: PropTypes.node,
   /** Specifies if modal has an overlay. */
   noOverlay: PropTypes.bool,
-  /** Displays the modal as a drawer that slides out from the left or right. */
-  isContextual: PropTypes.bool,
   /** Toggles modal visibility state. */
   isOpen: PropTypes.bool,
   /** Callback triggered on close. */
@@ -146,7 +141,6 @@ Modal.defaultProps = {
   disableOverlayclick: false,
   footer: null,
   noOverlay: false,
-  isContextual: false,
   isOpen: false,
   onClose() {},
   title: '',
