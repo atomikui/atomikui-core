@@ -1,4 +1,4 @@
-.step {
+.rcl-step {
   align-items: center;
   display: flex;
   flex: 1;
@@ -51,7 +51,7 @@
   &--top-label {
     flex-direction: column-reverse;
 
-    .step__number {
+    .rcl-step__number {
       margin-bottom: 0;
       margin-top: rem(4);
     }

@@ -1,6 +1,6 @@
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import { shallow, configure } from 'enzyme';
+import { mount, configure } from 'enzyme';
 import Stepper from './Stepper';
 import Step from './Step';
 
@@ -10,7 +10,7 @@ describe('<Stepper />', () => {
   let stepper;
 
   beforeEach(() => {
-    stepper = shallow(
+    stepper = mount(
       <Stepper inline>
         <Step label="Personal Info" href="/personal-info" isComplete={true}>
           1
@@ -36,12 +36,22 @@ describe('<Stepper />', () => {
     expect(stepper.find('Step').length).toBe(4);
   });
 
+  it('Should render children with top labels', () => {
+    stepper.setProps({ topLabels: true });
+    expect(
+      stepper.find('.rcl-step').first().hasClass('rcl-step--top-label'),
+    ).toBe(true);
+  });
+
   it('Should render first child with an anchor tag', () => {
-    const link = stepper.find('Step').first().dive().find('Link');
+    console.log(stepper.find('.rcl-step').debug());
+    const link = stepper.find('.rcl-step').find('a');
     expect(link.length).toBe(1);
   });
 
   it('Should render as inline', () => {
-    expect(stepper.find('.stepper').hasClass('stepper--inline')).toBe(true);
+    expect(stepper.find('.rcl-stepper').hasClass('rcl-stepper--inline')).toBe(
+      true,
+    );
   });
 });

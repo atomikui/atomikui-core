@@ -10,20 +10,20 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
     <li
       key={Math.random()}
       aria-current={isActive}
-      className={classnames('step', {
+      className={classnames('rcl-step', {
         'is-complete': isComplete,
         'is-active': isActive,
-        'step--top-label': topLabel,
+        'rcl-step--top-label': topLabel,
       })}
     >
       <StepNumber
-        className="step__number"
+        className="rcl-step__number"
         {...(isComplete && href && { href })}
       >
         {!isComplete && children}
       </StepNumber>
       {label && (
-        <div className="step__label">
+        <div className="rcl-step__label">
           <span aria-hidden="true">{label}</span>
         </div>
       )}

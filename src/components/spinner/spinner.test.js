@@ -26,7 +26,9 @@ describe('<Spinner />', () => {
 
   test.each(sizes)('Should set the size modifier .spinner--%p', (size) => {
     spinner.setProps({ size });
-    expect(spinner.find('.spinner').hasClass(`spinner--${size}`)).toBe(true);
+    expect(spinner.find('.rcl-spinner').hasClass(`rcl-spinner--${size}`)).toBe(
+      true,
+    );
   });
 
   test.each(variants)(

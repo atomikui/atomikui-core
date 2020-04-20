@@ -2,12 +2,12 @@ import React, { Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Stepper = ({ children, classes, inline, topLabels, ...others }) => {
+const Stepper = ({ children, className, inline, topLabels, ...others }) => {
   return (
     <nav>
       <ul
-        className={classnames('stepper', classes, {
-          'stepper--inline': inline,
+        className={classnames('rcl-stepper', className, {
+          'rcl-stepper--inline': inline,
         })}
         {...others}
       >
@@ -23,7 +23,7 @@ const Stepper = ({ children, classes, inline, topLabels, ...others }) => {
 
 Stepper.propTypes = {
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Makes a stepper and its labels inline */
   inline: PropTypes.bool,
   /** Specifies stepper to have labels above step number */
@@ -32,7 +32,7 @@ Stepper.propTypes = {
 
 Stepper.defaultProps = {
   children: null,
-  classes: '',
+  className: '',
   inline: false,
   topLabels: false,
 };

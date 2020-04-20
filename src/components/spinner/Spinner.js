@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Spinner = ({ classes, variant, size, ...others }) => {
+const Spinner = ({ className, variant, size, ...others }) => {
   const themes = {
     default: '#333',
     red: '#D0191F',
@@ -13,8 +13,8 @@ const Spinner = ({ classes, variant, size, ...others }) => {
 
   return (
     <div
-      className={classnames('spinner', classes, {
-        [`spinner--${size}`]: size,
+      className={classnames('rcl-spinner', className, {
+        [`rcl-spinner--${size}`]: size,
       })}
       {...others}
     >
@@ -50,7 +50,7 @@ const Spinner = ({ classes, variant, size, ...others }) => {
 
 Spinner.propTypes = {
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Spinner color variant */
   variant: PropTypes.oneOf(['default', 'red', 'orange', 'green', 'blue']),
   /** Spinner size */
@@ -58,7 +58,7 @@ Spinner.propTypes = {
 };
 
 Spinner.defaultProps = {
-  classes: '',
+  className: '',
   variant: 'default',
   size: null,
 };
