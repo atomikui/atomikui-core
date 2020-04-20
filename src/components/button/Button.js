@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Button = ({
   block,
-  classes,
+  className,
   children,
   disabled,
   shape,
@@ -15,7 +15,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={classnames('btn', classes, {
+      className={classnames('btn', className, {
         [`btn--${variant}`]: variant,
         [`btn--${shape}`]: shape,
         [`btn--${size}`]: size,
@@ -34,7 +34,7 @@ Button.propTypes = {
   /** Displays button as a block elment. */
   block: PropTypes.bool,
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Specifies button content. */
   children: PropTypes.node,
   /** Specifies if button is diabled. */
@@ -60,7 +60,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   block: false,
-  classes: '',
+  className: '',
   children: '',
   disabled: false,
   shape: null,

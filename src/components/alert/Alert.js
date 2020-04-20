@@ -19,7 +19,7 @@ const Alert = ({ align, classes, children, variant, onClose, ...others }) => {
       {onClose && (
         <div className="alert__footer">
           <Button
-            classes="alert__btn"
+            className="alert__btn"
             variant="hollow"
             onClick={onClose}
             aria-hidden="true"
