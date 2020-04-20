@@ -1,6 +1,6 @@
 Drawers are commonly referred to as a side nav. The Drawer component allows for top, bottom, left and right positioning as well a push style drawer.
 
-### Fixed Drawer With Overlay
+### Left Aligned Drawer (Default)
 
 ```jsx
 import { useState } from 'react';
@@ -13,31 +13,28 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-      facilisis magna nulla, a convallis tortor dignissim sit amet. Fusce non
-      dictum felis. Fusce velit mi, placerat a feugiat sagittis, facilisis vel
-      lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-      per inceptos himenaeos. In vitae eros nunc. Pellentesque sed nisi tempor,
-      mollis eros posuere, maximus mauris. Donec tincidunt, dui quis tincidunt
-      pharetra, arcu erat commodo tortor, pharetra maximus sapien lectus quis
-      eros. Aliquam erat volutpat.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-      facilisis magna nulla, a convallis tortor dignissim sit amet. Fusce non
-      dictum felis. Fusce velit mi, placerat a feugiat sagittis, facilisis vel
-      lorem. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-      per inceptos himenaeos. In vitae eros nunc. Pellentesque sed nisi tempor,
-      mollis eros posuere, maximus mauris. Donec tincidunt, dui quis tincidunt
-      pharetra, arcu erat commodo tortor, pharetra maximus sapien lectus quis
-      eros. Aliquam erat volutpat.
-    </p>
+    <ul class="rcl-menu" style={{ width: '250px' }}>
+      <li>
+        <Button>Home</Button>
+      </li>
+      <li>
+        <a href="">About</a>
+      </li>
+      <li>
+        <a href="">Services</a>
+      </li>
+      <li>
+        <a href="">Blog</a>
+      </li>
+      <li>
+        <a href="">Conact</a>
+      </li>
+    </ul>
   </Drawer>
 </>;
 ```
 
-### Fixed Drawer - Left
+### Right Aligned Drawer
 
 ```jsx
 import { useState } from 'react';
@@ -49,11 +46,11 @@ const [isOpen, setIsOpen] = useState(false);
   <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
-  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
+  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right" />
 </>;
 ```
 
-### Fixed Drawer - Right
+### Top Aligned Drawer
 
 ```jsx
 import { useState } from 'react';
@@ -65,11 +62,11 @@ const [isOpen, setIsOpen] = useState(false);
   <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
-  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
+  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="top" />
 </>;
 ```
 
-### Fixed Drawer - Bottom
+### Bottom Aligned Drawer
 
 ```jsx
 import { useState } from 'react';
@@ -81,7 +78,11 @@ const [isOpen, setIsOpen] = useState(false);
   <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
-  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
+  <Drawer
+    isOpen={isOpen}
+    onClose={() => setIsOpen(false)}
+    position="bottom"
+  ></Drawer>
 </>;
 ```
 
