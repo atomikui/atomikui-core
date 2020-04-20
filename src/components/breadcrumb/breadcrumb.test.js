@@ -30,7 +30,7 @@ describe('<Breadcrumb />', () => {
     expect(breadcrumb.find('Link').length).toBe(3);
   });
 
-  it('Should should not render a Link for the active Link', () => {
+  it('Should should not render a Link for the active item', () => {
     const link = breadcrumb.find('Link').last().dive().find('Link');
     expect(link.length).toBe(0);
   });
