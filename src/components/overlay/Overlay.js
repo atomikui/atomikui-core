@@ -22,6 +22,7 @@ const Overlay = ({
     <div
       className={classnames('overlay', classes, {
         [`overlay--${variant}`]: variant,
+        [`overlay--align-${align}`]: align,
         'is-active': isActive,
       })}
       {...others}
