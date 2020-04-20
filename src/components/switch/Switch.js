@@ -6,7 +6,7 @@ import Label from '../label/Label';
 import generateId from '../../utilities/generateId';
 
 const Switch = ({
-  classes,
+  className,
   checked,
   disabled,
   errorText,
@@ -28,7 +28,7 @@ const Switch = ({
     <>
       <div
         htmlFor={uid}
-        className={classnames('switch', classes, {
+        className={classnames('rcl-switch', className, {
           'is-checked': checked,
           'is-disabled': disabled,
           'is-stacked': layout === 'stacked',
@@ -38,23 +38,23 @@ const Switch = ({
         <input
           id={uid}
           name={inputName}
-          className="switch__input"
+          className="rcl-switch__input"
           type="checkbox"
           checked={checked}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           onChange={onChange}
         />
-        <div className="switch__label">
+        <div className="rcl-switch__label">
           <Label htmlFor={uid}>{label}</Label>
         </div>
         <div
-          className="switch__toggle"
+          className="rcl-switch__toggle"
           {...(!disabled && { onClick: onChange })}
         ></div>
       </div>
       {(helpText || errorText) && (
-        <div className="formfield__hints">
+        <div className="margin-top-2">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
           {hasError && (
             <Hint id={inputErrorId} type="error">
@@ -69,7 +69,7 @@ const Switch = ({
 
 Switch.propTypes = {
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Specifies and inputs default checked state. */
   checked: PropTypes.bool,
   /** Specifies the switch disabled state. */
@@ -95,7 +95,7 @@ Switch.propTypes = {
 };
 
 Switch.defaultProps = {
-  classes: '',
+  className: '',
   checked: false,
   disabled: false,
   errorText: '',

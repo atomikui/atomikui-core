@@ -1,6 +1,9 @@
-.switch-panel {
+.rcl-switch-panel {
+  border-radius: rem(3);
+  box-shadow: rem(0 0 5) rgba(0, 0, 0, 0.15);
+
   & > * {
-    padding: rem(16 0);
+    padding: rem(16);
   }
 
   & > * + * {

@@ -28,10 +28,10 @@ describe('useToast', () => {
   });
 
   it('Should create a toaster', () => {
-    expect(app.find('.toaster').length).toBe(1);
+    expect(app.find('.rcl-toaster').length).toBe(1);
   });
 
   it('Should create one toast', () => {
-    expect(app.find('.toaster').children().length).toBe(1);
+    expect(app.find('.rcl-toaster').children().length).toBe(1);
   });
 });

@@ -1,4 +1,4 @@
-.switch {
+.rcl-switch {
   align-items: center;
   display: flex;
 
@@ -44,13 +44,13 @@
   &.is-stacked {
     display: block;
 
-    & > .switch__toggle {
+    & > .rcl-switch__toggle {
       margin-top: rem(3);
     }
   }
 
   &.is-checked {
-    .switch__toggle {
+    .rcl-switch__toggle {
       background: $blue-200;
 
       &:after {
@@ -59,7 +59,7 @@
     }
   }
 
-  &.has-error > .switch__toggle {
+  &.has-error > .rcl-switch__toggle {
     background: $red-100;
   }
 

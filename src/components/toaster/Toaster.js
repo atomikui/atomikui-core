@@ -2,12 +2,13 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Toaster = ({ children, position }) => {
+const Toaster = ({ children, className, position, ...others }) => {
   return (
     <div
-      className={classnames('toaster', {
-        [`toaster--${position}`]: position,
+      className={classnames('rcl-toaster', className, {
+        [`rcl-toaster--${position}`]: position,
       })}
+      {...others}
     >
       {children}
     </div>
@@ -17,12 +18,21 @@ const Toaster = ({ children, position }) => {
 Toaster.propTypes = {
   /** Toasts to be rendered inside of Toaster */
   children: PropTypes.node,
+  /** Specifies custom component classes. */
+  className: PropTypes.string,
   /** Specifies the position of the toaster */
-  position: PropTypes.oneOf(['top=left', 'bottom-left', 'bottom-right']),
+  position: PropTypes.oneOf([
+    'top=left',
+    'bottom-left',
+    'bottom-right',
+    'top-center',
+    'bottom-center',
+  ]),
 };
 
 Toaster.defaultProps = {
   children: null,
+  className: '',
   position: null,
 };
 

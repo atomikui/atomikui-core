@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import { mount, configure } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import Toast from './Toast';
 
 configure({ adapter: new Adapter() });
@@ -10,7 +10,7 @@ describe('<Toast />', () => {
   let toast;
 
   beforeEach(() => {
-    toast = mount(<Toast children="toast message" />);
+    toast = shallow(<Toast children="toast message" />);
   });
 
   it('Should render without errors', () => {
@@ -18,7 +18,7 @@ describe('<Toast />', () => {
   });
 
   it('Should render content', () => {
-    const content = toast.find('.alert__body').text();
+    const content = toast.find('Alert').children().text();
     expect(content).toBe('toast message');
   });
 });

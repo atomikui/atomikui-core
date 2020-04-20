@@ -1,3 +1,5 @@
+Switches toggle the state of a single setting on or off.
+
 ### Default Layout (Flexbox)
 
 ```jsx
@@ -6,7 +8,7 @@ import { Switch } from '@alaneicker/react-component-library';
 
 const [isChecked, setIsChecked] = useState(false);
 
-const handleChange = checked => {
+const handleChange = (checked) => {
   setIsChecked(!isChecked);
 };
 
@@ -25,7 +27,7 @@ import { Switch } from '@alaneicker/react-component-library';
 
 const [isChecked, setIsChecked] = useState(false);
 
-const handleChange = checked => {
+const handleChange = (checked) => {
   setIsChecked(!isChecked);
 };
 
@@ -45,7 +47,7 @@ import { Switch } from '@alaneicker/react-component-library';
 
 const [isChecked, setIsChecked] = useState(false);
 
-const handleChange = checked => {
+const handleChange = (checked) => {
   setIsChecked(!isChecked);
 };
 

@@ -27,46 +27,48 @@ describe('<DatePicker />', () => {
   });
 
   it('Should open calendar', () => {
-    datepicker.find('.date-picker__input__btn').simulate('click');
+    datepicker.find('button.rcl-date-picker__input__btn').simulate('click');
 
     expect(datepicker.find('Overlay').prop('isActive')).toBe(true);
   });
 
   it('Should close calendar', () => {
-    datepicker.find('.date-picker__input__btn').simulate('click');
-    datepicker.find('.date-picker__calendar').simulate('click');
+    datepicker.find('button.rcl-date-picker__input__btn').simulate('click');
+    datepicker.find('.react-calendar__tile').at(15).simulate('click');
 
     expect(datepicker.find('Overlay').prop('isActive')).toBe(false);
   });
 
   it('Should change input value when calendar date is clicked', () => {
-    datepicker.find('.react-calendar__tile').first().simulate('click');
+    datepicker.find('.react-calendar__tile').at(15).simulate('click');
 
-    expect(datepicker.find('input.formfield__input').prop('value')).not.toBe(
-      originalValue,
-    );
+    expect(
+      datepicker.find('input.rcl-formfield__input').prop('value'),
+    ).not.toBe(originalValue);
   });
 
   it('Should close calendar when on escape press', () => {
-    datepicker.find('.date-picker__input__btn').simulate('click');
+    datepicker.find('button.rcl-date-picker__input__btn').simulate('click');
 
     datepicker
       .find('.react-calendar__tile')
       .first()
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
-    expect(datepicker.find('.date-picker__calendar').hasClass('is-open')).toBe(
-      false,
-    );
+    expect(
+      datepicker.find('.rcl-date-picker__calendar').hasClass('is-open'),
+    ).toBe(false);
   });
 
   it('Should handle an invalid date', () => {
-    expect(datepicker.find('input.formfield__input').prop('value')).toBe('');
+    expect(datepicker.find('input.rcl-formfield__input').prop('value')).toBe(
+      '',
+    );
   });
 
   it('Should trigger onChange callback on blur with valid date', () => {
     datepicker
-      .find('input.formfield__input')
+      .find('input.rcl-formfield__input')
       .simulate('blur', { target: { value: '05/22/2020' } });
 
     expect(onChangeSpy.withArgs('05/22/2020').called).toBe(true);
@@ -74,7 +76,7 @@ describe('<DatePicker />', () => {
 
   it('Should trigger onChange callback on blur with `Invalid Date`', () => {
     datepicker
-      .find('input.formfield__input')
+      .find('input.rcl-formfield__input')
       .simulate('blur', { target: { value: '05/44/2020' } });
 
     expect(onChangeSpy.withArgs('Invalid Date').called).toBe(true);

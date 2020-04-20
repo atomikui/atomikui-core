@@ -1,3 +1,5 @@
+A switch panel is a grouped series of switches that represent related controls.
+
 ```jsx
 import { useState } from 'react';
 import { SwitchPanel, Switch } from '@alaneicker/react-component-library';

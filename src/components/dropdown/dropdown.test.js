@@ -36,15 +36,15 @@ describe('<Dropdown />', () => {
   it('Should handle an error', () => {
     dropdown.setProps({ hasError: true, errorText: 'This field is required' });
 
-    expect(dropdown.find('.dropdown').hasClass('has-error')).toBe(true);
-    expect(dropdown.find('.hint--error').length).toBe(1);
-    expect(dropdown.find('.hint--error').text()).toBe('This field is required');
+    expect(dropdown.find('.rcl-dropdown').hasClass('has-error')).toBe(true);
+    expect(dropdown.find('Hint').length).toBe(1);
+    expect(dropdown.find('Hint').text()).toBe('This field is required');
   });
 
   it('Should render a hint', () => {
     dropdown.setProps({ helpText: 'Some helpful text' });
 
-    expect(dropdown.find('.hint').length).toBe(1);
-    expect(dropdown.find('.hint').text()).toBe('Some helpful text');
+    expect(dropdown.find('Hint').length).toBe(1);
+    expect(dropdown.find('Hint').text()).toBe('Some helpful text');
   });
 });

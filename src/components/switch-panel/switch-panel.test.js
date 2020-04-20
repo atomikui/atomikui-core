@@ -1,7 +1,7 @@
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import sinon from 'sinon';
-import { mount, configure } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import SwitchPanel from './SwitchPanel';
 import Switch from '../switch';
 
@@ -14,7 +14,7 @@ describe('<SwitchPanel />', () => {
   beforeEach(() => {
     onChangeSpy = sinon.spy();
 
-    switchPanel = mount(
+    switchPanel = shallow(
       <SwitchPanel>
         <Switch label="Label" onChange={onChangeSpy} />
         <Switch label="Label" onChange={onChangeSpy} />
@@ -28,6 +28,6 @@ describe('<SwitchPanel />', () => {
   });
 
   it('Should render children', () => {
-    expect(switchPanel.find('.switch-panel').children().length).toBe(3);
+    expect(switchPanel.find('.rcl-switch-panel').children().length).toBe(3);
   });
 });

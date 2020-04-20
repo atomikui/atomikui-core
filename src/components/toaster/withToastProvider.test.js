@@ -24,7 +24,7 @@ describe('withToastProvider', () => {
   });
 
   it('Should remove a toast', () => {
-    app.find('.alert__btn').simulate('click');
-    expect(app.find('.toaster').children().length).toBe(0);
+    app.find('Button').simulate('click');
+    expect(app.find('.rcl-toaster').children().length).toBe(0);
   });
 });
