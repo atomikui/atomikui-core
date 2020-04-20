@@ -2,12 +2,12 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Badge = ({ children, classes, shape, variant, ...others }) => {
+const Badge = ({ children, className, shape, variant, ...others }) => {
   return (
     <div
-      className={classnames('badge', classes, {
-        [`badge--${variant}`]: variant,
-        [`badge--${shape}`]: shape,
+      className={classnames('rcl-badge', className, {
+        [`rcl-badge--${variant}`]: variant,
+        [`rcl-badge--${shape}`]: shape,
       })}
       {...others}
     >
@@ -18,7 +18,7 @@ const Badge = ({ children, classes, shape, variant, ...others }) => {
 
 Badge.propTypes = {
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Content to be displayed inside badge */
   children: PropTypes.node,
   /** Specifies a badge's shape. */
@@ -35,7 +35,7 @@ Badge.propTypes = {
 };
 
 Badge.defaultProps = {
-  classes: '',
+  className: '',
   children: '',
   shape: null,
   variant: null,

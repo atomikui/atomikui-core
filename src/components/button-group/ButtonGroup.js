@@ -7,7 +7,7 @@ import generateId from '../../utilities/generateId';
 
 const ButtonGroup = ({
   children,
-  classes,
+  className,
   errorText,
   hasError,
   helpText,
@@ -29,9 +29,9 @@ const ButtonGroup = ({
         </div>
       )}
       <div
-        className={classnames('button-group', classes, {
-          [`button-group--${size}`]: size,
-          'button-group--stretch': stretch,
+        className={classnames('rcl-button-group', className, {
+          [`rcl-button-group--${size}`]: size,
+          'rcl-button-group--stretch': stretch,
         })}
         role="group"
         {...others}
@@ -39,7 +39,7 @@ const ButtonGroup = ({
         {children}
       </div>
       {(helpText || errorText) && (
-        <div className="formfield__hints">
+        <div className="margin-top-2">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
           {hasError && (
             <Hint id={inputErrorId} type="error">
@@ -54,7 +54,7 @@ const ButtonGroup = ({
 
 ButtonGroup.propTypes = {
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Children to be rendered in the button group */
   children: PropTypes.node,
   /** Set the error text to be displayed */
@@ -74,7 +74,7 @@ ButtonGroup.propTypes = {
 };
 
 ButtonGroup.defaultProps = {
-  classes: '',
+  className: '',
   children: null,
   errorText: '',
   hasError: false,

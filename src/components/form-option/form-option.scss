@@ -1,4 +1,4 @@
-.form-option {
+.rcl-form-option {
   align-items: center;
   display: flex;
 
@@ -14,8 +14,8 @@
     width: rem(20);
   }
 
-  &--radio > .form-option__icon,
-  &--radio > .form-option__icon:after {
+  &--radio > .rcl-form-option__icon,
+  &--radio > .rcl-form-option__icon:after {
     border-radius: 50%;
   }
 
@@ -24,7 +24,7 @@
     position: absolute;
   }
 
-  & > input:checked + .form-option__icon:after {
+  & > input:checked + .rcl-form-option__icon:after {
     background: $blue-200;
     content: '';
     display: block;
@@ -32,24 +32,24 @@
     width: rem(12);
   }
 
-  & > input:focus + .form-option__icon {
+  & > input:focus + .rcl-form-option__icon {
     box-shadow: $formfield-focus;
   }
 
-  &.has-error > .form-option__icon {
+  &.has-error > .rcl-form-option__icon {
     border-color: $red-100;
   }
 
-  &.has-error > input:focus + .form-option__icon {
+  &.has-error > input:focus + .rcl-form-option__icon {
     box-shadow: $formfield-error-focus;
   }
 
-  &.is-disabled > input + .form-option__icon {
+  &.is-disabled > input + .rcl-form-option__icon {
     background: $gray-100;
     border: 0;
   }
 
-  &.is-disabled > input:checked + .form-option__icon:after {
+  &.is-disabled > input:checked + .rcl-form-option__icon:after {
     background: $gray-200;
   }
 }

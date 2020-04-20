@@ -3,23 +3,23 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../button';
 
-const Alert = ({ align, classes, children, variant, onClose, ...others }) => {
+const Alert = ({ align, className, children, variant, onClose, ...others }) => {
   return (
     <div
-      className={classnames('alert', classes, {
-        [`alert--${variant}`]: variant,
-        [`alert--${align}`]: align,
+      className={classnames('rcl-alert', className, {
+        [`rcl-alert--${variant}`]: variant,
+        [`rcl-alert--${align}`]: align,
       })}
       role="alert"
       aria-live={variant === 'error' ? 'assertive' : 'polite'}
       aria-atomic="true"
       {...others}
     >
-      <div className="alert__body">{children}</div>
+      <div className="rcl-alert__body">{children}</div>
       {onClose && (
-        <div className="alert__footer">
+        <div className="rcl-alert__footer">
           <Button
-            className="alert__btn"
+            className="rcl-alert__btn"
             variant="hollow"
             onClick={onClose}
             aria-hidden="true"
@@ -36,7 +36,7 @@ Alert.propTypes = {
   /** Aligns the text inside of the alert. */
   align: PropTypes.oneOf(['right', 'center']),
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** onClose Callback */
   onClose: PropTypes.func,
   /** Alert content. */
@@ -47,7 +47,7 @@ Alert.propTypes = {
 
 Alert.defaultProps = {
   align: null,
-  classes: '',
+  className: '',
   onClose: null,
   children: null,
   text: '',

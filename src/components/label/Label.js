@@ -2,9 +2,9 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Label = ({ classes, children, ...others }) => {
+const Label = ({ className, children, ...others }) => {
   return (
-    <label className={classnames('label', classes)} {...others}>
+    <label className={classnames('rcl-label', className)} {...others}>
       {children}
     </label>
   );
@@ -12,13 +12,13 @@ const Label = ({ classes, children, ...others }) => {
 
 Label.propTypes = {
   /** Custom classes to be added to Label component. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Label text. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
 
 Label.defaultProps = {
-  classes: '',
+  className: '',
   children: null,
 };
 

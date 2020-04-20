@@ -11,5 +11,3 @@ import { Breadcrumb, Link } from '@alaneicker/react-component-library';
   </Link>
 </Breadcrumb>;
 ```
-
-The `BreadcrumbItem` accepts all of the [Link](/#/Navigation/Link) component's props.

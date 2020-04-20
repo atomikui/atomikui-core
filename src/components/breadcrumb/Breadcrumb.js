@@ -3,10 +3,10 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import generateId from '../../utilities/generateId';
 
-const Breadcrumb = ({ children, classes, ...others }) => {
+const Breadcrumb = ({ children, className, ...others }) => {
   return (
     <nav>
-      <ol className={classnames('breadcrumb', classes, {})} {...others}>
+      <ol className={classnames('rcl-breadcrumb', className, {})} {...others}>
         {Children.map(children, (child) => {
           return <li key={generateId()}>{child}</li>;
         })}
@@ -17,13 +17,13 @@ const Breadcrumb = ({ children, classes, ...others }) => {
 
 Breadcrumb.propTypes = {
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Breadcrumb content. A list of Links */
   children: PropTypes.node,
 };
 
 Breadcrumb.defaultProps = {
-  classes: '',
+  className: '',
   children: null,
 };
 

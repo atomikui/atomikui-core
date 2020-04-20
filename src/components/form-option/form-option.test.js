@@ -53,17 +53,17 @@ describe('<FormOption />', () => {
       errorText: 'This field is required',
     });
 
-    expect(formOption.find('.form-option').hasClass('has-error')).toBe(true);
-    expect(formOption.find('.hint--error').length).toBe(1);
-    expect(formOption.find('.hint--error').text()).toBe(
-      'This field is required',
+    expect(formOption.find('label.rcl-form-option').hasClass('has-error')).toBe(
+      true,
     );
+    expect(formOption.find('Hint').length).toBe(1);
+    expect(formOption.find('Hint').text()).toBe('This field is required');
   });
 
   it('Should render a hint', () => {
     formOption.setProps({ helpText: 'Some helpful text' });
 
-    expect(formOption.find('.hint').length).toBe(1);
-    expect(formOption.find('.hint').text()).toBe('Some helpful text');
+    expect(formOption.find('Hint').length).toBe(1);
+    expect(formOption.find('Hint').text()).toBe('Some helpful text');
   });
 });

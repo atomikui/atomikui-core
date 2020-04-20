@@ -28,7 +28,10 @@ describe('<Accordion />', () => {
     accordion.find('input').first().simulate('change');
 
     expect(
-      accordion.find('.accordion__panel__label').first().prop('aria-expanded'),
+      accordion
+        .find('.rcl-accordion__panel__label')
+        .first()
+        .prop('aria-expanded'),
     ).toBe(true);
   });
 
@@ -46,11 +49,17 @@ describe('<Accordion />', () => {
       .simulate('change', { target: { checked: true } });
 
     expect(
-      accordion.find('.accordion__panel__label').first().prop('aria-expanded'),
+      accordion
+        .find('.rcl-accordion__panel__label')
+        .first()
+        .prop('aria-expanded'),
     ).toBe(true);
 
     expect(
-      accordion.find('.accordion__panel__label').last().prop('aria-expanded'),
+      accordion
+        .find('.rcl-accordion__panel__label')
+        .last()
+        .prop('aria-expanded'),
     ).toBe(true);
   });
 });

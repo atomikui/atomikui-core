@@ -54,14 +54,14 @@ describe('<FileUpload />', () => {
   });
 
   it('Should trigger onChange callback on file drop', () => {
-    fileUpload.find('.file-upload__wrapper').simulate('drop', onDropEvent);
+    fileUpload.find('.rcl-file-upload__wrapper').simulate('drop', onDropEvent);
 
     expect(onChangeSpy.called).toBe(true);
   });
 
   it('Should prevent call `preventDefault` and `stopPropagation` onDragOver', () => {
     fileUpload
-      .find('.file-upload__wrapper')
+      .find('.rcl-file-upload__wrapper')
       .simulate('dragOver', dragOverEvent);
 
     expect(preventDefaultSpy.called).toBe(true);
@@ -72,24 +72,24 @@ describe('<FileUpload />', () => {
     fileUpload.find('input').simulate('change', onChangeEvent);
 
     expect(
-      fileUpload.find('.file-upload__wrapper').children().last().text(),
+      fileUpload.find('.rcl-file-upload__wrapper').children().last().text(),
     ).toBe(fileName);
   });
 
   it('Should show addition text if `dragAndDrop` prop is `true`', () => {
     fileUpload.setProps({ dragAndDrop: true });
 
-    expect(fileUpload.find('.file-upload__drag-drop-label').text()).toBe(
+    expect(fileUpload.find('.rcl-file-upload__drag-drop-label').text()).toBe(
       'Select a file to upload or drag and drop in the box',
     );
   });
 
   it('Should render a list of files if `dragAndDrop` prop is `true`', () => {
     fileUpload.setProps({ dragAndDrop: true });
-    fileUpload.find('.file-upload__wrapper').simulate('drop', onDropEvent);
+    fileUpload.find('.rcl-file-upload__wrapper').simulate('drop', onDropEvent);
 
-    expect(fileUpload.find('.file-upload__file-list').children().length).toBe(
-      1,
-    );
+    expect(
+      fileUpload.find('.rcl-file-upload__file-list').children().length,
+    ).toBe(1);
   });
 });

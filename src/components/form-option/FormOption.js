@@ -8,7 +8,7 @@ import generateId from '../../utilities/generateId';
 const types = ['checkbox', 'radio'];
 
 const FormOption = ({
-  classes,
+  className,
   checked,
   disabled,
   errorText,
@@ -32,10 +32,10 @@ const FormOption = ({
     <>
       <Label
         htmlFor={uid}
-        classes={classnames('form-option', classes, {
+        className={classnames('rcl-form-option', className, {
           'has-error': hasError,
           'is-disabled': disabled,
-          'form-option--radio': type === 'radio',
+          'rcl-form-option--radio': type === 'radio',
         })}
       >
         <input
@@ -49,11 +49,11 @@ const FormOption = ({
           required
           {...others}
         />
-        <span className="form-option__icon"></span>
+        <span className="rcl-form-option__icon"></span>
         {label}
       </Label>
       {(helpText || errorText) && (
-        <div className="formfield__hints">
+        <div className="margin-top-2">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
           {hasError && (
             <Hint id={inputErrorId} type="error">
@@ -68,7 +68,7 @@ const FormOption = ({
 
 FormOption.propTypes = {
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Specifies the form option checked state. */
   checked: PropTypes.bool,
   /** Specifies form option disabled state. */
@@ -94,7 +94,7 @@ FormOption.propTypes = {
 };
 
 FormOption.defaultProps = {
-  classes: '',
+  className: '',
   checked: false,
   disabled: false,
   errorText: '',

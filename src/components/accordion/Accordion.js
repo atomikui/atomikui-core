@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import generateId from '../../utilities/generateId';
 
-const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
+const Accordion = ({ className, multipleOpen, panels, ...others }) => {
   const type = multipleOpen ? 'checkbox' : 'radio';
 
   const [expanded, setExpanded] = useState(() => {
@@ -31,17 +31,17 @@ const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
   };
 
   return (
-    <div className="accordion" {...others}>
+    <div className={classnames('rcl-accordion', classnames)} {...others}>
       {panels.map(({ label, content }, index) => {
         const id = generateId('control');
         const name = multipleOpen ? `control_${index}` : `control`;
 
         return (
           <div
-            className={classnames('accordion__panel', {
+            className={classnames('rcl-accordion__panel', {
               'is-open': expanded[index],
             })}
-            key={`accordion-item-${index}`}
+            key={`rcl-accordion-item-${index}`}
           >
             <input
               id={id}
@@ -53,14 +53,14 @@ const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
               }}
             />
             <label
-              className="accordion__panel__label"
+              className="rcl-accordion__panel__label"
               htmlFor={id}
               aria-expanded={expanded[index]}
               role="button"
             >
               <span>{label}</span>
               <svg
-                className="accordion__panel__label__icon"
+                className="rcl-accordion__panel__label__icon"
                 version="1.1"
                 id="Capa_1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
                 <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093" />
               </svg>
             </label>
-            <div className="accordion__panel__content" aria-labelledby={id}>
+            <div className="rcl-accordion__panel__content" aria-labelledby={id}>
               {content}
             </div>
           </div>
@@ -85,7 +85,7 @@ const Accordion = ({ classes, multipleOpen, panels, ...others }) => {
 
 Accordion.propTypes = {
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Array representing accordion items */
   panels: PropTypes.arrayOf(
     PropTypes.shape({
@@ -102,7 +102,7 @@ Accordion.propTypes = {
 };
 
 Accordion.defaultProps = {
-  classes: '',
+  className: '',
   panels: [],
   multipleOpen: false,
 };

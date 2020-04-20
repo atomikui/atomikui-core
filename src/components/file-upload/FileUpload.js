@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const FileUpload = ({
-  classes,
+  className,
   dragAndDrop,
   label,
   onChange,
@@ -39,7 +39,7 @@ const FileUpload = ({
   };
 
   return (
-    <div className="file-upload">
+    <div className={classnames('rcl-file-upload', className)}>
       <input
         id={id}
         name="fileUpload"
@@ -54,28 +54,30 @@ const FileUpload = ({
           return handleChange(e);
         }}
         htmlFor={id}
-        className={classnames('file-upload__wrapper', {
-          'file-upload__wrapper--drag-and-drop': dragAndDrop,
+        className={classnames('rcl-file-upload__wrapper', {
+          'rcl-file-upload__wrapper--drag-and-drop': dragAndDrop,
         })}
       >
         {dragAndDrop && (
-          <span className="file-upload__drag-drop-label">
+          <span className="rcl-file-upload__drag-drop-label">
             Select a file to upload or drag and drop in the box
           </span>
         )}
         <span
-          className={classnames('btn btn--condensed btn--nowrap', {
-            [`btn--${uploadBtnVariant}`]: uploadBtnVariant,
-            'btn--no-radius': !dragAndDrop,
+          className={classnames('rcl-btn rcl-btn--condensed rcl-btn--nowrap', {
+            [`rcl-btn--${uploadBtnVariant}`]: uploadBtnVariant,
+            'rcl-btn--no-radius': !dragAndDrop,
           })}
         >
           {label}
         </span>
         {!files.length && (
-          <span className="file-upload__no-files-label">No files selected</span>
+          <span className="rcl-file-upload__no-files-label">
+            No files selected
+          </span>
         )}
         {dragAndDrop ? (
-          <ul className="file-upload__file-list">
+          <ul className="rcl-file-upload__file-list">
             {files.map((file, index) => {
               return <li key={`file-${index}`}>{file}</li>;
             })}
@@ -90,7 +92,7 @@ const FileUpload = ({
 
 FileUpload.propTypes = {
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Makes fiel upload drag and drop */
   dragAndDrop: PropTypes.bool,
   /** File upload label */
@@ -109,7 +111,7 @@ FileUpload.propTypes = {
 };
 
 FileUpload.defaultProps = {
-  classes: '',
+  className: '',
   dragAndDrop: false,
   label: 'Select a File',
   onChange() {},

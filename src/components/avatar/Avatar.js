@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Avatar = ({
   alt,
-  classes,
+  className,
   children,
   flipLabel,
   label,
@@ -15,21 +15,21 @@ const Avatar = ({
 }) => {
   return (
     <span
-      className={classnames('avatar', {
-        'avatar--flip': flipLabel,
-        [`avatar--${size}`]: size,
+      className={classnames('rcl-avatar', {
+        'rcl-avatar--flip': flipLabel,
+        [`rcl-avatar--${size}`]: size,
       })}
       {...others}
     >
       <span
-        className={classnames('avatar__content', classes, {
-          [`avatar__content--${variant}`]: variant,
+        className={classnames('rcl-avatar__content', className, {
+          [`rcl-avatar__content--${variant}`]: variant,
         })}
       >
-        {src && <img className="avatar__image" src={src} alt={alt} />}
+        {src && <img className="rcl-avatar__image" src={src} alt={alt} />}
         {children && children}
       </span>
-      {label && <span className="avatar__label">{label}</span>}
+      {label && <span className="rcl-avatar__label">{label}</span>}
     </span>
   );
 };
@@ -38,7 +38,7 @@ Avatar.propTypes = {
   /** Avatar image alt text attribute */
   alt: PropTypes.string,
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Content to be displayed inside Avatar */
   children: PropTypes.node,
   /** Aligns label to the left of the avatar */
@@ -67,7 +67,7 @@ Avatar.propTypes = {
 
 Avatar.defaultProps = {
   alt: '',
-  classes: '',
+  className: '',
   children: null,
   flipLabel: false,
   label: '',

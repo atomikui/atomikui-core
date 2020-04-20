@@ -15,11 +15,11 @@ const Button = ({
 }) => {
   return (
     <button
-      className={classnames('btn', className, {
-        [`btn--${variant}`]: variant,
-        [`btn--${shape}`]: shape,
-        [`btn--${size}`]: size,
-        'btn--block': block,
+      className={classnames('rcl-btn', className, {
+        [`rcl-btn--${variant}`]: variant,
+        [`rcl-btn--${shape}`]: shape,
+        [`rcl-btn--${size}`]: size,
+        'rcl-btn--block': block,
       })}
       type={type}
       disabled={disabled}

@@ -11,7 +11,7 @@ describe('<Button />', () => {
   beforeEach(() => {
     button = shallow(
       <Button
-        classes="btn--custom"
+        className="rcl-btn--custom"
         size="lg"
         variant="primary"
         type="submit"
@@ -33,22 +33,22 @@ describe('<Button />', () => {
   });
 
   it('Should render theme based on `variant prop`', () => {
-    expect(button.find('.btn').hasClass('btn--primary')).toBe(true);
+    expect(button.find('.rcl-btn').hasClass('rcl-btn--primary')).toBe(true);
   });
 
   it('Should accept custom classes', () => {
-    expect(button.find('.btn').hasClass('btn--custom')).toBe(true);
+    expect(button.find('.rcl-btn').hasClass('rcl-btn--custom')).toBe(true);
   });
 
   it('Should render button as block', () => {
-    expect(button.find('.btn').hasClass('btn--block')).toBe(true);
+    expect(button.find('.rcl-btn').hasClass('rcl-btn--block')).toBe(true);
   });
 
   it('Should render button size variant', () => {
-    expect(button.find('.btn').hasClass('btn--lg')).toBe(true);
+    expect(button.find('.rcl-btn').hasClass('rcl-btn--lg')).toBe(true);
   });
 
   it('Should rbe able to disable button', () => {
-    expect(button.find('.btn').prop('disabled')).toBe(true);
+    expect(button.find('.rcl-btn').prop('disabled')).toBe(true);
   });
 });

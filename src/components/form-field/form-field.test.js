@@ -41,25 +41,25 @@ describe('<FormField />', () => {
   it('Should render help hint with text', () => {
     formField.setProps({ helpText: 'Help text' });
 
-    expect(formField.find('.hint').length).toBe(1);
-    expect(formField.find('.hint').text()).toBe('Help text');
+    expect(formField.find('.rcl-hint').length).toBe(1);
+    expect(formField.find('.rcl-hint').text()).toBe('Help text');
   });
 
   it('Should render error class', () => {
     formField.setProps({ hasError: true });
 
-    expect(formField.find('.formfield').hasClass('has-error')).toBe(true);
+    expect(formField.find('.rcl-formfield').hasClass('has-error')).toBe(true);
   });
 
   it('Should render error hint with text', () => {
     formField.setProps({ errorText: 'Error text', hasError: true });
 
-    expect(formField.find('.hint--error').length).toBe(1);
-    expect(formField.find('.hint--error').text()).toBe('Error text');
+    expect(formField.find('Hint').length).toBe(1);
+    expect(formField.find('Hint').text()).toBe('Error text');
   });
 
-  it('Should not render a label', () => {
-    expect(formField.find('.formfield__label').length).toBe(1);
-    expect(formField.find('.formfield__label').text()).toBe('Phone Number');
+  it('Should not render a label if label is null', () => {
+    formField.setProps({ label: null });
+    expect(formField.find('.rcl-formfield__label').length).toBe(0);
   });
 });

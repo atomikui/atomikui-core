@@ -6,7 +6,7 @@ import Label from '../label/Label';
 import generateId from '../../utilities/generateId';
 
 const Dropdown = ({
-  classes,
+  className,
   disabled,
   errorText,
   hasError,
@@ -28,22 +28,22 @@ const Dropdown = ({
 
   return (
     <div
-      className={classnames('dropdown', classes, {
+      className={classnames('rcl-dropdown', className, {
         'has-error': hasError,
         'is-disabled': disabled,
       })}
       {...others}
     >
       {!labelless && (
-        <div className="dropdown__label">
+        <div className="rcl-dropdown__label">
           <Label htmlFor={uid}>{label}</Label>
         </div>
       )}
-      <div className="dropdown__select">
+      <div className="rcl-dropdown__select">
         <select
           id={uid}
           name={inputName}
-          className={classnames('dropdown__select__menu', classes, {})}
+          className={classnames('rcl-dropdown__select__menu', className, {})}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           value={value}
@@ -68,7 +68,7 @@ const Dropdown = ({
         </select>
       </div>
       {(helpText || errorText) && (
-        <div className="formfield__hints">
+        <div className="margin-top-2">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
           {hasError && (
             <Hint id={inputErrorId} type="error">
@@ -83,7 +83,7 @@ const Dropdown = ({
 
 Dropdown.propTypes = {
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Disables a form field. */
   disabled: PropTypes.bool,
   /** Text to be displayed when there is an error. */
@@ -118,7 +118,7 @@ Dropdown.propTypes = {
 };
 
 Dropdown.defaultProps = {
-  classes: '',
+  className: '',
   disabled: false,
   errorText: '',
   hasError: false,

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import FormField from '../form-field';
 
-const AutoComplete = ({ classes, items, onChange, value, ...others }) => {
+const AutoComplete = ({ className, items, onChange, value, ...others }) => {
   const [itemList] = useState(items);
 
   return (
@@ -30,11 +30,11 @@ const AutoComplete = ({ classes, items, onChange, value, ...others }) => {
       }) => {
         return (
           <div
-            className={classnames('auto-complete', classes)}
+            className={classnames('rcl-auto-complete', className)}
             {...getRootProps({}, { suppressRefError: true })}
           >
             <FormField {...getInputProps()} {...others} />
-            <ul className="auto-complete__list" {...getMenuProps()}>
+            <ul className="rcl-auto-complete__list" {...getMenuProps()}>
               {isOpen
                 ? itemList
                     .filter((item) => {
@@ -75,7 +75,7 @@ const AutoComplete = ({ classes, items, onChange, value, ...others }) => {
 
 AutoComplete.propTypes = {
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Array of items that will appear in autocomplete dropdown menu */
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -88,7 +88,7 @@ AutoComplete.propTypes = {
 };
 
 AutoComplete.defaultProps = {
-  classes: '',
+  className: '',
   items: [],
   onChange() {},
   value: '',

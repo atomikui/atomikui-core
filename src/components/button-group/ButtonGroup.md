@@ -10,7 +10,7 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
   helpText="Select any car but a Chevrolet."
 >
   <Button>Chevrolet</Button>
-  <Button classes="is-selected">Ford</Button>
+  <Button className="is-selected">Ford</Button>
   <Button>GMC</Button>
   <Button>Honda</Button>
 </ButtonGroup>;
@@ -26,7 +26,7 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
   errorText="Chevrolet is not a good car. Pick another."
   hasError
 >
-  <Button classes="is-selected">Chevrolet</Button>
+  <Button className="is-selected">Chevrolet</Button>
   <Button>Ford</Button>
   <Button>GMC</Button>
   <Button>Honda</Button>
@@ -43,28 +43,28 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 <>
   <ButtonGroup label="Button Group (Small)" size="sm">
     <Button>Chevrolet</Button>
-    <Button classes="is-selected">Ford</Button>
+    <Button className="is-selected">Ford</Button>
     <Button>GMC</Button>
     <Button>Honda</Button>
   </ButtonGroup>
   <div className="margin-bottom-8" />
   <ButtonGroup label="Button Group (Medium)" size="md">
     <Button>Chevrolet</Button>
-    <Button classes="is-selected">Ford</Button>
+    <Button className="is-selected">Ford</Button>
     <Button>GMC</Button>
     <Button>Honda</Button>
   </ButtonGroup>
   <div className="margin-bottom-8" />
   <ButtonGroup label="Button Group (Default)">
     <Button>Chevrolet</Button>
-    <Button classes="is-selected">Ford</Button>
+    <Button className="is-selected">Ford</Button>
     <Button>GMC</Button>
     <Button>Honda</Button>
   </ButtonGroup>
   <div className="margin-bottom-8" />
   <ButtonGroup label="Button Group (Large)" size="lg">
     <Button>Chevrolet</Button>
-    <Button classes="is-selected">Ford</Button>
+    <Button className="is-selected">Ford</Button>
     <Button>GMC</Button>
     <Button>Honda</Button>
   </ButtonGroup>
@@ -80,7 +80,7 @@ import { ButtonGroup, Button } from '@alaneicker/react-component-library';
 
 <ButtonGroup label="Button Group (Medium)" stretch>
   <Button>Chevrolet</Button>
-  <Button classes="is-selected">Ford</Button>
+  <Button className="is-selected">Ford</Button>
   <Button>GMC</Button>
   <Button>Honda</Button>
 </ButtonGroup>;

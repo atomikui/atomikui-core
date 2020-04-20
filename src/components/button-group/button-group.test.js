@@ -13,7 +13,7 @@ describe('<ButtonGroup />', () => {
     buttonGroup = mount(
       <ButtonGroup label="Favorite Car Brand">
         <Button>Chevrolet</Button>
-        <Button classes="is-selected">Ford</Button>
+        <Button className="is-selected">Ford</Button>
         <Button>GMC</Button>
       </ButtonGroup>,
     );
@@ -26,14 +26,14 @@ describe('<ButtonGroup />', () => {
   it('Should render help hint with text', () => {
     buttonGroup.setProps({ helpText: 'Help text' });
 
-    expect(buttonGroup.find('.hint').length).toBe(1);
-    expect(buttonGroup.find('.hint').text()).toBe('Help text');
+    expect(buttonGroup.find('.rcl-hint').length).toBe(1);
+    expect(buttonGroup.find('.rcl-hint').text()).toBe('Help text');
   });
 
   it('Should render error hint with text', () => {
     buttonGroup.setProps({ errorText: 'Error text', hasError: true });
 
-    expect(buttonGroup.find('.hint--error').length).toBe(1);
-    expect(buttonGroup.find('.hint--error').text()).toBe('Error text');
+    expect(buttonGroup.find('.rcl-hint--error').length).toBe(1);
+    expect(buttonGroup.find('.rcl-hint--error').text()).toBe('Error text');
   });
 });

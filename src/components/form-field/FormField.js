@@ -54,12 +54,12 @@ const FormField = ({
 
   return (
     <div
-      className={classnames('formfield', classes, {
+      className={classnames('rcl-formfield', classes, {
         'has-error': hasError,
       })}
     >
       {label && (
-        <div className="formfield__label">
+        <div className="rcl-formfield__label">
           <Label htmlFor={uid}>{label}</Label>
         </div>
       )}
@@ -67,7 +67,7 @@ const FormField = ({
         <textarea
           id={uid}
           name={inputName}
-          className={classnames('formfield__textarea', classes, {})}
+          className={classnames('rcl-formfield__textarea', classes, {})}
           placeholder={placeholder}
           value={value}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
@@ -81,7 +81,7 @@ const FormField = ({
         <Input
           id={uid}
           name={inputName}
-          className={classnames('formfield__input', classes, {})}
+          className={classnames('rcl-formfield__input', classes, {})}
           type={fieldType}
           mask={mask}
           placeholder={placeholder}
@@ -95,7 +95,7 @@ const FormField = ({
         />
       )}
       {(helpText || errorText) && (
-        <div className="formfield__hints">
+        <div className="rcl-formfield__hints">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
           {hasError && (
             <Hint id={inputErrorId} type="error">

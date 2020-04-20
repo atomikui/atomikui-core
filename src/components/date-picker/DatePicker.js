@@ -10,13 +10,13 @@ import validateDate from '../../utilities/validate-date';
 import Overlay from '../overlay';
 
 const DatePicker = ({
-  classes,
+  className,
   disabled,
   label,
   onChange,
   onDateChange,
   value,
-  ...props
+  ...others
 }) => {
   const calendar = useRef();
   const [focusTrap, setFocusTrap] = useState(null);
@@ -74,13 +74,13 @@ const DatePicker = ({
   }, [focusTrap, isOpen]);
 
   return (
-    <div className={classnames('date-picker', classes)}>
+    <div className={classnames('rcl-date-picker', className)}>
       {label && (
-        <div className="date-picker__label">
+        <div className="rcl-date-picker__label">
           <Label>{label}</Label>
         </div>
       )}
-      <div className="date-picker__input">
+      <div className="rcl-date-picker__input">
         <FormField
           mask="99/99/9999"
           onBlur={(e) => {
@@ -88,10 +88,10 @@ const DatePicker = ({
           }}
           value={theValue}
           disabled={disabled}
-          {...props}
+          {...others}
         />
         <Button
-          classes="date-picker__input__btn"
+          className="rcl-date-picker__input__btn"
           variant="hollow"
           size="md"
           onClick={() => {
@@ -111,7 +111,7 @@ const DatePicker = ({
           return cancel();
         }}
       >
-        <div className="date-picker__calendar" ref={calendar}>
+        <div className="rcl-date-picker__calendar" ref={calendar}>
           <Calendar
             onChange={(details) => {
               return handleDateChange(details);
@@ -126,7 +126,7 @@ const DatePicker = ({
 
 DatePicker.propTypes = {
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Disables a date picker form field and calandar. */
   disabled: PropTypes.bool,
   /** Specifies label text. */
@@ -140,7 +140,7 @@ DatePicker.propTypes = {
 };
 
 DatePicker.defaultProps = {
-  classes: '',
+  className: '',
   disabled: false,
   label: '',
   onChange() {},

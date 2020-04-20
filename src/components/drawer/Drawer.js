@@ -6,7 +6,7 @@ import Overlay from '../overlay';
 
 const Drawer = ({
   children,
-  classes,
+  className,
   isOpen,
   onClose,
   position,
@@ -67,9 +67,9 @@ const Drawer = ({
       />
       <div
         ref={ref}
-        className={classnames('drawer', classes, {
+        className={classnames('rcl-drawer', className, {
           'is-open': isOpen,
-          [`drawer--${position}`]: position,
+          [`rcl-drawer--${position}`]: position,
         })}
         style={styles}
         {...others}
@@ -84,7 +84,7 @@ Drawer.propTypes = {
   /** Drawer content */
   children: PropTypes.node,
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Specifies if drawer is open */
   isOpen: PropTypes.bool,
   /** Callback triggered on close. */
@@ -95,7 +95,7 @@ Drawer.propTypes = {
 
 Drawer.defaultProps = {
   children: null,
-  classes: '',
+  className: '',
   isOpen: false,
   onClose: false,
   position: 'left',

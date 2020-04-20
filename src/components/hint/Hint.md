@@ -3,7 +3,7 @@ Default
 ```jsx
 import { Hint } from '@alaneicker/react-component-library';
 
-<Hint text="This is a default hint" />;
+<Hint>This is a default hint</Hint>;
 ```
 
 States (Error, Warning)

@@ -2,11 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Hint = ({ classes, children, type, ...others }) => {
+const Hint = ({ className, children, type, ...others }) => {
   return (
     <div
-      className={classnames('hint', classes, {
-        [`hint--${type}`]: type,
+      className={classnames('rcl-hint', className, {
+        [`rcl-hint--${type}`]: type,
       })}
       {...others}
     >
@@ -17,7 +17,7 @@ const Hint = ({ classes, children, type, ...others }) => {
 
 Hint.propTypes = {
   /** Custom classes to be added to Label component. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Hint content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the typr of hint. */
@@ -25,7 +25,7 @@ Hint.propTypes = {
 };
 
 Hint.defaultProps = {
-  classes: '',
+  className: '',
   children: null,
   type: null,
 };
