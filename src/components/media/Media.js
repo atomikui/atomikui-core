@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Media = ({
   align,
   body,
-  classes,
+  className,
   header,
   inline,
   footer,
@@ -14,16 +14,16 @@ const Media = ({
 }) => {
   return (
     <div
-      className={classnames('media', classes, {
-        'media--inline': inline,
-        'media--reverse': reverse,
+      className={classnames('rcl-media', className, {
+        'rcl-media--inline': inline,
+        'rcl-media--reverse': reverse,
         [`media--${align}`]: align,
       })}
       {...others}
     >
-      <div className="media__hd">{header}</div>
-      <div className="media__bd">{body}</div>
-      {footer && <div className="media__ft">{footer}</div>}
+      <div className="rcl-media__hd">{header}</div>
+      <div className="rcl-media__bd">{body}</div>
+      {footer && <div className="rcl-media__ft">{footer}</div>}
     </div>
   );
 };
@@ -32,7 +32,7 @@ Media.propTypes = {
   /** Specifies media content alignment */
   align: PropTypes.oneOf(['middle', 'bottom']),
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Media body content */
   body: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Media footer content */
@@ -47,7 +47,7 @@ Media.propTypes = {
 
 Media.defaultProps = {
   align: null,
-  classes: '',
+  className: '',
   body: 'Insert media body',
   header: 'Insert media header',
   footer: '',

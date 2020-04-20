@@ -42,12 +42,15 @@ describe('<RangeSlider />', () => {
   });
 
   it('Should render 10 ticks', () => {
-    expect(rangeSlider.find('.range-slider__ticks__tick').length).toBe(10);
+    expect(rangeSlider.find('.rcl-range-slider__ticks__tick').length).toBe(10);
   });
 
   it('If range slider `is not disabled` ticks should have onClick event', () => {
     expect(
-      rangeSlider.find('.range-slider__ticks__tick').first().prop('onClick'),
+      rangeSlider
+        .find('.rcl-range-slider__ticks__tick')
+        .first()
+        .prop('onClick'),
     ).toBeDefined();
   });
 
@@ -55,7 +58,10 @@ describe('<RangeSlider />', () => {
     rangeSlider.setProps({ disabled: true });
 
     expect(
-      rangeSlider.find('.range-slider__ticks__tick').first().prop('onClick'),
+      rangeSlider
+        .find('.rcl-range-slider__ticks__tick')
+        .first()
+        .prop('onClick'),
     ).toBeUndefined();
   });
 
@@ -63,7 +69,7 @@ describe('<RangeSlider />', () => {
     rangeSlider.find('input').simulate('change', { target: { value: '500' } });
 
     expect(
-      rangeSlider.find('.range-slider__ticks__label.is-selected').text(),
+      rangeSlider.find('.rcl-range-slider__ticks__label.is-selected').text(),
     ).toBe('$500');
   });
 
@@ -74,7 +80,10 @@ describe('<RangeSlider />', () => {
   });
 
   it('Should trigger onChange callback when tick label is clicked', () => {
-    rangeSlider.find('.range-slider__ticks__label').first().simulate('click');
+    rangeSlider
+      .find('.rcl-range-slider__ticks__label')
+      .first()
+      .simulate('click');
 
     expect(onChangeSpy.withArgs('100').called).toBe(true);
   });
@@ -85,17 +94,17 @@ describe('<RangeSlider />', () => {
       errorText: 'This field is required',
     });
 
-    expect(rangeSlider.find('.range-slider').hasClass('has-error')).toBe(true);
-    expect(rangeSlider.find('.hint--error').length).toBe(1);
-    expect(rangeSlider.find('.hint--error').text()).toBe(
-      'This field is required',
+    expect(rangeSlider.find('.rcl-range-slider').hasClass('has-error')).toBe(
+      true,
     );
+    expect(rangeSlider.find('Hint').length).toBe(1);
+    expect(rangeSlider.find('Hint').text()).toBe('This field is required');
   });
 
   it('Should render a hint', () => {
     rangeSlider.setProps({ helpText: 'Some helpful text' });
 
-    expect(rangeSlider.find('.hint').length).toBe(1);
-    expect(rangeSlider.find('.hint').text()).toBe('Some helpful text');
+    expect(rangeSlider.find('Hint').length).toBe(1);
+    expect(rangeSlider.find('Hint').text()).toBe('Some helpful text');
   });
 });

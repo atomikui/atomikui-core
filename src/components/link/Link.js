@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Link = ({
   active,
-  classes,
+  className,
   children,
   disabled,
   href,
@@ -13,7 +13,7 @@ const Link = ({
 }) => {
   return (
     <a
-      className={classnames('link', classes, {
+      className={classnames('rcl-link', className, {
         'is-disabled': disabled,
       })}
       {...(href && { href })}
@@ -30,7 +30,7 @@ Link.propTypes = {
   /** Specifies as active link */
   active: PropTypes.bool,
   /** Custom classes to be added to Label component.. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Disabled a link */
   disabled: PropTypes.bool,
   /** Specifies the URL of the page the link goes to.. */
@@ -43,7 +43,7 @@ Link.propTypes = {
 
 Link.defaultProps = {
   active: false,
-  classes: '',
+  className: '',
   disabled: false,
   href: '',
   children: null,

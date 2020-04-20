@@ -6,7 +6,7 @@ import Hint from '../hint';
 import Label from '../label';
 
 const RangeSlider = ({
-  classes,
+  className,
   disabled,
   errorText,
   hasError,
@@ -41,7 +41,7 @@ const RangeSlider = ({
     <>
       {label && <Label>{label}</Label>}
       <div
-        className={classnames('range-slider', classes, {
+        className={classnames('rcl-range-slider', className, {
           'has-error': hasError,
           'is-disabled': disabled,
         })}
@@ -65,12 +65,12 @@ const RangeSlider = ({
           {...others}
         />
         {ticks && (
-          <div className="range-slider__ticks" aria-hidden="true">
+          <div className="rcl-range-slider__ticks" aria-hidden="true">
             {ticks.map(({ text, val }, index) => {
               return (
                 <div
                   key={`tick-${index}`}
-                  className="range-slider__ticks__tick"
+                  className="rcl-range-slider__ticks__tick"
                   {...(!disabled && {
                     onClick: () => {
                       return handleChange(val);
@@ -78,7 +78,7 @@ const RangeSlider = ({
                   })}
                 >
                   <div
-                    className={classnames('range-slider__ticks__label', {
+                    className={classnames('rcl-range-slider__ticks__label', {
                       'is-selected': val === rangeValue,
                       'is-hidden-on-mobile': hideLabelsOnMobile,
                     })}
@@ -92,7 +92,7 @@ const RangeSlider = ({
         )}
       </div>
       {(helpText || errorText) && (
-        <div className="formfield__hints">
+        <div className="margin-top-2">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
           {hasError && (
             <Hint id={inputErrorId} type="error">
@@ -107,7 +107,7 @@ const RangeSlider = ({
 
 RangeSlider.propTypes = {
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Specifies range slider disabled state. */
   disabled: PropTypes.bool,
   /** Text to be displayed when there is an error. */
@@ -146,7 +146,7 @@ RangeSlider.propTypes = {
 };
 
 RangeSlider.defaultProps = {
-  classes: '',
+  className: '',
   disabled: false,
   errorText: '',
   hasError: false,

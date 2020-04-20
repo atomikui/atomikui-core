@@ -5,7 +5,7 @@ import createFocusTrap from 'focus-trap';
 import Overlay from '../overlay';
 
 const Modal = ({
-  classes,
+  className,
   children,
   closeOnEscape,
   disableOverlayclick,
@@ -67,16 +67,16 @@ const Modal = ({
       {...others}
     >
       <div
-        className={classnames('modal', {
-          [`modal--${variant}`]: variant,
+        className={classnames('rcl-modal', className, {
+          [`rcl-modal--${variant}`]: variant,
           'is-open': isOpen,
         })}
         ref={modal}
       >
-        <div className="modal__header">
-          <div className="modal__title">{title}</div>
+        <div className="rcl-modal__header">
+          <div className="rcl-modal__title">{title}</div>
           <button
-            className="modal__close-button"
+            className="rcl-modal__close-button"
             onClick={(e) => {
               return onClose();
             }}
@@ -101,8 +101,8 @@ const Modal = ({
             </svg>
           </button>
         </div>
-        <div className="modal__body">{children}</div>
-        {footer && <div className="modal__footer">{footer}</div>}
+        <div className="rcl-modal__body">{children}</div>
+        {footer && <div className="rcl-modal__footer">{footer}</div>}
       </div>
     </Overlay>
   );
@@ -110,7 +110,7 @@ const Modal = ({
 
 Modal.propTypes = {
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Child elements that will be rendered inside of the modal body. */
   children: PropTypes.node,
   /** Closes the modal when the escape key is pressed. */
@@ -132,7 +132,7 @@ Modal.propTypes = {
 };
 
 Modal.defaultProps = {
-  classes: '',
+  className: '',
   closeOnEscape: true,
   children: null,
   disableOverlayclick: false,

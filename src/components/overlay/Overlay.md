@@ -33,7 +33,7 @@ const [isActive, setIsActive] = useState(false);
     variant="white"
     isActive={isActive}
   >
-    <Spinner size="xlg" color="blue" />
+    <Spinner size="xlg" variant="blue" />
   </Overlay>
 </>;
 ```

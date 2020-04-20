@@ -5,13 +5,7 @@ import { Media, Button } from '@alaneicker/react-component-library';
 
 <Media
   align="middle"
-  header={
-    <img
-      src="https://www.pikpng.com/pngl/b/118-1189047_red-apple-fruits-png-transparent-images-clipart-icons.png"
-      height="120"
-      alt="profile image"
-    />
-  }
+  header={<img src="apple.png" height="120" alt="product image" />}
   body={
     <>
       <h3>Red Delicious Apples</h3>
@@ -40,13 +34,7 @@ import { Media, Button } from '@alaneicker/react-component-library';
 <Media
   reverse
   align="middle"
-  header={
-    <img
-      src="https://www.pikpng.com/pngl/b/118-1189047_red-apple-fruits-png-transparent-images-clipart-icons.png"
-      height="120"
-      alt="profile image"
-    />
-  }
+  header={<img src="apple.png" height="120" alt="product image" />}
   body={
     <>
       <h3>Red Delicious Apples</h3>

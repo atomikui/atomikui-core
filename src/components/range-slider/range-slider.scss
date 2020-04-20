@@ -1,4 +1,4 @@
-.range-slider {
+.rcl-range-slider {
   display: flex;
   margin: rem(18 0 42);
   position: relative;
@@ -109,7 +109,7 @@
     top: rem(-5);
     z-index: 2;
 
-    .range-slider__ticks__tick {
+    .rcl-range-slider__ticks__tick {
       background: $blue-000;
       border-radius: 50%;
       cursor: pointer;
@@ -120,7 +120,7 @@
       width: rem(15);
     }
 
-    .range-slider__ticks__label {
+    .rcl-range-slider__ticks__label {
       font-size: rem(14);
       padding-top: rem(30);
 
@@ -137,12 +137,12 @@
 
   &.is-disabled {
     input[type='range'],
-    .range-slider__ticks__tick {
+    .rcl-range-slider__ticks__tick {
       background: $gray-100;
       cursor: default;
     }
 
-    .range-slider__ticks__label {
+    .rcl-range-slider__ticks__label {
       color: $gray-200;
     }
 
@@ -161,7 +161,7 @@
 
   @media (min-width: $breakpoint-small) {
     &__ticks {
-      .range-slider__ticks__label {
+      .rcl-range-slider__ticks__label {
         &.is-hidden-on-mobile {
           display: block;
         }

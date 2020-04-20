@@ -12,7 +12,7 @@ describe('<ProgressBar />', () => {
     const now = 60;
     progressBar = shallow(
       <ProgressBar
-        classes="progress-bar--custom"
+        className="rcl-progress-bar--custom"
         variant="info"
         now={now}
         label={`${now}%`}
@@ -26,25 +26,24 @@ describe('<ProgressBar />', () => {
   });
 
   it('Should set the theme based on the `variant prop`', () => {
-    expect(progressBar.hasClass('progress-bar--info')).toBe(true);
+    expect(progressBar.hasClass('rcl-progress-bar--info')).toBe(true);
   });
 
   it('Should render as animated based on `animated prop`', () => {
-    expect(progressBar.hasClass('progress-bar--animated')).toBe(true);
+    expect(progressBar.hasClass('rcl-progress-bar--animated')).toBe(true);
   });
 
   it('Should set a custom class', () => {
-    expect(progressBar.hasClass('progress-bar--custom')).toBe(true);
+    expect(progressBar.hasClass('rcl-progress-bar--custom')).toBe(true);
   });
 
   it('Should set the label', () => {
-    expect(progressBar.find('.progress-bar__label').text()).toBe('60%');
+    expect(progressBar.find('.rcl-progress-bar__label').text()).toBe('60%');
   });
 
   it('Should set the width to 60%', () => {
-    expect(progressBar.find('.progress-bar__bar').prop('style')).toHaveProperty(
-      'width',
-      '60%',
-    );
+    expect(
+      progressBar.find('.rcl-progress-bar__bar').prop('style'),
+    ).toHaveProperty('width', '60%');
   });
 });

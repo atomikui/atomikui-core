@@ -3,13 +3,15 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import generateId from '../../utilities/generateId';
 
-const Pagination = ({ children, classes, ...others }) => {
+// TODO: Add Button support
+
+const Pagination = ({ children, className, ...others }) => {
   return (
-    <ul className={classnames('pagination', classes, {})} {...others}>
+    <ul className={classnames('rcl-pagination', className, {})} {...others}>
       {Children.map(children, (child) => {
         return (
           <li
-            className={classnames('pagination__item', {
+            className={classnames('rcl-pagination__item', {
               'is-active': child.props.active,
             })}
             key={generateId()}
@@ -26,12 +28,12 @@ Pagination.propTypes = {
   /** Child elements */
   children: PropTypes.node,
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Pagination.defaultProps = {
   children: null,
-  classes: '',
+  className: '',
 };
 
 export default Pagination;

@@ -34,27 +34,27 @@ describe('<Modal />', () => {
   });
 
   it('Should call onClose when modal close button is clicked', () => {
-    modal.find('.modal__close-button').simulate('click');
+    modal.find('.rcl-modal__close-button').simulate('click');
 
     expect(onCloseSpy.called).toBe(true);
   });
 
   it('Should call onClose when modal overlay is clicked', () => {
-    modal.find('.overlay').simulate('click');
+    modal.find('Overlay').simulate('click');
 
     expect(onCloseSpy.called).toBe(true);
   });
 
   it('Should not call onClose when modal overlay is clicked if `disableOverlayclick` is true', () => {
     modal.setProps({ disableOverlayclick: true });
-    modal.find('.overlay').simulate('click');
+    modal.find('Overlay').simulate('click');
 
     expect(onCloseSpy.called).toBe(false);
   });
 
   it('Should call onClose when escape key is pressed', () => {
     modal
-      .find('.modal__close-button')
+      .find('.rcl-modal__close-button')
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
     expect(onCloseSpy.called).toBe(true);

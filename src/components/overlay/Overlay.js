@@ -6,7 +6,7 @@ const Overlay = ({
   align,
   allowBodyScroll,
   children,
-  classes,
+  className,
   isActive,
   variant,
   ...others
@@ -20,9 +20,9 @@ const Overlay = ({
 
   return (
     <div
-      className={classnames('overlay', classes, {
-        [`overlay--${variant}`]: variant,
-        [`overlay--align-${align}`]: align,
+      className={classnames('rcl-overlay', className, {
+        [`rcl-overlay--${variant}`]: variant,
+        [`rcl-overlay--align-${align}`]: align,
         'is-active': isActive,
       })}
       {...others}
@@ -44,7 +44,7 @@ Overlay.propTypes = {
   /** Allosw body scroll when overlay is active */
   allowBodyScroll: PropTypes.bool,
   /** Adds custom component CSS classes */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Overlay content */
   children: PropTypes.node,
   /** Specifies if overlay is active */
@@ -56,7 +56,7 @@ Overlay.propTypes = {
 Overlay.defaultProps = {
   align: null,
   allowBodyScroll: false,
-  classes: '',
+  className: '',
   children: null,
   isActive: false,
   variant: null,
