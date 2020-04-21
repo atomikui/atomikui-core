@@ -115,32 +115,3 @@ const [isOpen, setIsOpen] = useState(false);
   </Drawer>
 </>;
 ```
-
-### Push Style Drawer
-
-```jsx
-import { useState } from 'react';
-import {
-  Drawer,
-  Button,
-  Link,
-  Menu,
-} from '@alaneicker/react-component-library';
-
-const [isOpen, setIsOpen] = useState(false);
-
-<>
-  <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
-    Toggle Drawer
-  </Button>
-  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-    <Menu>
-      <Link href="/home">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/services">Services</Link>
-      <Link href="/blocg">Blog</Link>
-      <Link href="/contact">Contact</Link>
-    </Menu>
-  </Drawer>
-</>;
-```
