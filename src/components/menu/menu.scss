@@ -42,10 +42,12 @@
 
   &--inline,
   &--inline-stretch {
-    display: flex;
+    display: inline-flex;
   }
 
   &--inline-stretch {
+    display: flex;
+
     & > * {
       flex: 1;
     }
