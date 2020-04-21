@@ -11,7 +11,7 @@ const Stats = () => {
     const linkTag = iframeDoc.createElement('link');
     linkTag.rel = 'stylesheet';
     linkTag.href =
-      'https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Bree+Serif&display=swap';
+      'https://fonts.googleapis.com/css?family=Hind+Madurai:300,300i,400,400i,500,500i,700,700i';
 
     iframeDoc.head.appendChild(linkTag);
 
@@ -19,8 +19,8 @@ const Stats = () => {
     styleTag.type = 'text/css';
     styleTag.appendChild(
       document.createTextNode(`
-      body { font-family: 'Montserrat', Arial, Helvetica, sans-serif !important; }
-      h1, h2, h3, h4, h5, h6, .header { font-family: 'Bree Serif', serif !important; }
+      body { font-family: 'Hind Madurai', Arial, Helvetica, sans-serif !important; }
+      h1, h2, h3, h4, h5, h6, .header { font-family: 'Hind Madurai', serif !important; color: #222; font-weight: 500; margin-top: 8px; }
       main { background: white; }
       .header { font-size: 36px !important; }
       .ant-layout-footer { display: none; }
