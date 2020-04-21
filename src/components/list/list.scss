@@ -1,0 +1,32 @@
+.rcl-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &--bulleted {
+    list-style-type: disc;
+    padding-inline-start: rem(40);
+  }
+
+  &--ordered {
+    list-style-type: decimal;
+    padding-inline-start: rem(40);
+  }
+
+  &--horizontal {
+    & > * {
+      display: inline-block;
+    }
+    & > * + * {
+      margin-left: rem(16);
+    }
+  }
+
+  &--align-center {
+    text-align: center;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -13,7 +13,7 @@ const Menu = ({
 }) => {
   return (
     <ul
-      className={classnames('rcl-menu', className, {
+      className={classnames('rcl-menu rcl-list', className, {
         'rcl-menu--inline': inline,
         'rcl-menu--inline-stretch': inlineStretch,
         'rcl-menu--with-dividers': dividers,
@@ -21,9 +21,7 @@ const Menu = ({
       })}
       {...others}
     >
-      {Children.map(children, (child) => {
-        return <li>{child}</li>;
-      })}
+      {children}
     </ul>
   );
 };
