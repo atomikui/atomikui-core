@@ -2,11 +2,20 @@ import React, { Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Menu = ({ align, children, className, dividers, inline, ...others }) => {
+const Menu = ({
+  align,
+  children,
+  className,
+  dividers,
+  inline,
+  inlineStretch,
+  ...others
+}) => {
   return (
     <ul
       className={classnames('rcl-menu', className, {
         'rcl-menu--inline': inline,
+        'rcl-menu--inline-stretch': inlineStretch,
         'rcl-menu--with-dividers': dividers,
         [`rcl-menu--align-${align}`]: align,
       })}
@@ -30,6 +39,8 @@ Menu.propTypes = {
   dividers: PropTypes.bool,
   /** Displays menu inline */
   inline: PropTypes.bool,
+  /** Displays menu inline 100% of parent width */
+  inlineStretch: PropTypes.bool,
 };
 
 Menu.defaultProps = {
@@ -38,6 +49,7 @@ Menu.defaultProps = {
   className: '',
   dividers: false,
   inline: false,
+  inlineStretch: false,
 };
 
 export default Menu;
