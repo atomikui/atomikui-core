@@ -41,8 +41,8 @@ describe('<FormField />', () => {
   it('Should render help hint with text', () => {
     formField.setProps({ helpText: 'Help text' });
 
-    expect(formField.find('.rcl-hint').length).toBe(1);
-    expect(formField.find('.rcl-hint').text()).toBe('Help text');
+    expect(formField.find('Hint').length).toBe(1);
+    expect(formField.find('Hint').text()).toBe('Help text');
   });
 
   it('Should render error class', () => {

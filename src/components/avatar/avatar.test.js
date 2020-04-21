@@ -11,6 +11,7 @@ describe('<Avatar />', () => {
     const avatar = shallow(
       <Avatar src="/profile-image.png" alt="Alan Smith" />,
     );
+
     expect(avatar.length).toBe(1);
   });
 
@@ -19,7 +20,7 @@ describe('<Avatar />', () => {
       <Avatar src="/profile-image.png" alt="Alan Smith" label="Avatar Label" />,
     );
 
-    const label = avatar.find('.rcl-avatar__image');
+    const label = avatar.find('.rcl-avatar__label');
 
     expect(label.length).toBe(1);
   });

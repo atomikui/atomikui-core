@@ -1,5 +1,6 @@
 .rcl-link {
   color: $blue-200;
+  cursor: pointer;
   text-decoration: none;
 
   &:hover {
@@ -7,7 +8,7 @@
   }
 
   &.is-disabled {
-    pointer-events: none;
     color: $gray-300;
+    pointer-events: none;
   }
 }

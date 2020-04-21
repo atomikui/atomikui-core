@@ -1,6 +1,5 @@
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import sinon from 'sinon';
 import { mount, configure } from 'enzyme';
 import Truncate from './Truncate';
 import Link from '../link';
@@ -9,11 +8,6 @@ configure({ adapter: new Adapter() });
 
 describe('<Truncate />', () => {
   let truncate;
-  const preventDefaultSpy = sinon.spy();
-
-  const event = {
-    preventDefault: preventDefaultSpy,
-  };
 
   beforeEach(() => {
     truncate = mount(
@@ -49,15 +43,18 @@ describe('<Truncate />', () => {
     expect(anchor.prop('href')).toBe('/path/to/article');
   });
 
-  it('Should prevent default action when link is clicked', () => {
-    truncate.find('a').simulate('click', event);
-    expect(preventDefaultSpy.called).toBe(true);
-  });
-
   it('Should truncate content', () => {
     const wordCount = truncate.text().replace(' ... Show more', '').split(' ')
       .length;
 
     expect(wordCount).toBe(50);
+  });
+
+  it('Should show truncated content', () => {
+    truncate.find('.rcl-link').simulate('click');
+    const wordCount = truncate.text().replace(' ... Show more', '').split(' ')
+      .length;
+
+    expect(wordCount).toBeGreaterThan(50);
   });
 });

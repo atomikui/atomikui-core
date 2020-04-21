@@ -28,27 +28,27 @@ describe('<Button />', () => {
   });
 
   it('Should render children', () => {
-    expect(button.find('span').length).toBe(1);
-    expect(button.find('span').text()).toBe('Submit');
+    expect(button.children().length).toBe(1);
+    expect(button.children().text()).toBe('Submit');
   });
 
   it('Should render theme based on `variant prop`', () => {
-    expect(button.find('.rcl-btn').hasClass('rcl-btn--primary')).toBe(true);
+    expect(button.hasClass('rcl-btn--primary')).toBe(true);
   });
 
   it('Should accept custom classes', () => {
-    expect(button.find('.rcl-btn').hasClass('rcl-btn--custom')).toBe(true);
+    expect(button.hasClass('rcl-btn--custom')).toBe(true);
   });
 
   it('Should render button as block', () => {
-    expect(button.find('.rcl-btn').hasClass('rcl-btn--block')).toBe(true);
+    expect(button.hasClass('rcl-btn--block')).toBe(true);
   });
 
   it('Should render button size variant', () => {
-    expect(button.find('.rcl-btn').hasClass('rcl-btn--lg')).toBe(true);
+    expect(button.hasClass('rcl-btn--lg')).toBe(true);
   });
 
   it('Should rbe able to disable button', () => {
-    expect(button.find('.rcl-btn').prop('disabled')).toBe(true);
+    expect(button.prop('disabled')).toBe(true);
   });
 });

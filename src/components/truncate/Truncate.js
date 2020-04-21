@@ -10,8 +10,7 @@ const Truncate = ({ children, expanded, afterEllipses, maxWords }) => {
 
   const [isTruncated, setIsTruncated] = useState(!expanded);
 
-  const toggleContent = (e) => {
-    e.preventDefault();
+  const toggleContent = () => {
     setIsTruncated(!isTruncated);
   };
 
@@ -21,9 +20,14 @@ const Truncate = ({ children, expanded, afterEllipses, maxWords }) => {
       {' ... '}
       {afterEllipses || (
         <>
-          <Link href="#" role="button" onClick={toggleContent}>
+          <span
+            className="rcl-link"
+            href="#"
+            role="button"
+            onClick={toggleContent}
+          >
             Show {isTruncated ? 'more' : 'less'}
-          </Link>
+          </span>
         </>
       )}
     </>

@@ -44,8 +44,7 @@ describe('<Stepper />', () => {
   });
 
   it('Should render first child with an anchor tag', () => {
-    console.log(stepper.find('.rcl-step').debug());
-    const link = stepper.find('.rcl-step').find('a');
+    const link = stepper.find('.rcl-step').find('Link');
     expect(link.length).toBe(1);
   });
 

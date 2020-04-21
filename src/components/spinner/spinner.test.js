@@ -1,6 +1,6 @@
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import { mount, configure } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import Spinner from './Spinner';
 
 configure({ adapter: new Adapter() });
@@ -17,7 +17,7 @@ describe('<Spinner />', () => {
   ];
 
   beforeEach(() => {
-    spinner = mount(<Spinner />);
+    spinner = shallow(<Spinner />);
   });
 
   it('Should render without errors', () => {
@@ -26,9 +26,7 @@ describe('<Spinner />', () => {
 
   test.each(sizes)('Should set the size modifier .spinner--%p', (size) => {
     spinner.setProps({ size });
-    expect(spinner.find('.rcl-spinner').hasClass(`rcl-spinner--${size}`)).toBe(
-      true,
-    );
+    expect(spinner.hasClass(`rcl-spinner--${size}`)).toBe(true);
   });
 
   test.each(variants)(

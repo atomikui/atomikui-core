@@ -23,6 +23,6 @@ describe('<Label />', () => {
   });
 
   it('Should render with a custom class', () => {
-    expect(label.find('label').hasClass('rcl-label--custon-class')).toBe(true);
+    expect(label.hasClass('rcl-label--custon-class')).toBe(true);
   });
 });

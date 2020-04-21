@@ -26,8 +26,6 @@ describe('<Toaster />', () => {
   });
 
   it('Should set a position modifier class', () => {
-    expect(
-      toaster.find('.rcl-toaster').hasClass('rcl-toaster--top-center'),
-    ).toBe(true);
+    expect(toaster.hasClass('rcl-toaster--top-center')).toBe(true);
   });
 });

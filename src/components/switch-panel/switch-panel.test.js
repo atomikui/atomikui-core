@@ -28,6 +28,6 @@ describe('<SwitchPanel />', () => {
   });
 
   it('Should render children', () => {
-    expect(switchPanel.find('.rcl-switch-panel').children().length).toBe(3);
+    expect(switchPanel.children().length).toBe(3);
   });
 });

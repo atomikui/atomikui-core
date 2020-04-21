@@ -11,7 +11,7 @@ describe('<Link />', () => {
   beforeEach(() => {
     link = shallow(
       <Link target="_blank" href="/home">
-        <span>This is a link</span>
+        This is a link
       </Link>,
     );
   });
@@ -21,8 +21,8 @@ describe('<Link />', () => {
   });
 
   it('Should render children', () => {
-    expect(link.find('span').length).toBe(1);
-    expect(link.find('span').text()).toBe('This is a link');
+    expect(link.length).toBe(1);
+    expect(link.text()).toBe('This is a link');
   });
 
   it('Should render with an href', () => {

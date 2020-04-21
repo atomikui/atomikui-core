@@ -11,7 +11,7 @@ describe('<Hint />', () => {
   beforeEach(() => {
     hint = shallow(
       <Hint type="error" className="rcl-hint--custon-class">
-        <span>This is a hint</span>
+        This is a hint
       </Hint>,
     );
   });
@@ -21,17 +21,15 @@ describe('<Hint />', () => {
   });
 
   it('Should render children', () => {
-    expect(hint.find('span').length).toBe(1);
-    expect(hint.find('span').text()).toBe('This is a hint');
+    expect(hint.length).toBe(1);
+    expect(hint.text()).toBe('This is a hint');
   });
 
   it('Should render theme based on `type` prop', () => {
-    expect(hint.find('.rcl-hint').hasClass('rcl-hint--error')).toBe(true);
+    expect(hint.hasClass('rcl-hint--error')).toBe(true);
   });
 
   it('Should render with a custom class', () => {
-    expect(hint.find('.rcl-hint').hasClass('rcl-hint--custon-class')).toBe(
-      true,
-    );
+    expect(hint.hasClass('rcl-hint--custon-class')).toBe(true);
   });
 });

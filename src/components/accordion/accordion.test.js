@@ -14,7 +14,6 @@ describe('<Accordion />', () => {
         panels={[
           { label: 'Panel Heading 1', content: 'Panel 1 content...' },
           { label: 'Panel Heading 2', content: 'Panel 2 content...' },
-          { label: 'Panel Heading 3', content: 'Panel 3 content...' },
         ]}
       />,
     );

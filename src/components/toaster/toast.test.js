@@ -18,7 +18,6 @@ describe('<Toast />', () => {
   });
 
   it('Should render content', () => {
-    const content = toast.find('Alert').children().text();
-    expect(content).toBe('toast message');
+    expect(toast.find('Alert').children().text()).toBe('toast message');
   });
 });
