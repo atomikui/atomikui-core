@@ -2,52 +2,38 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const List = ({
-  align,
-  bulleted,
-  children,
-  className,
-  horizontal,
-  ordered,
-  ...others
-}) => {
+const List = ({ align, children, className, type, ...others }) => {
+  const Ul = type === 'ordered' ? 'ol' : 'ul';
+
   return (
-    <ul
+    <Ul
       className={classnames('rcl-list', className, {
-        'rcl-list--bulleted': bulleted,
-        'rcl-list--ordered': ordered,
-        'rcl-list--horizontal': horizontal,
+        [`rcl-list--${type}`]: type,
         [`rcl-list--align-${align}`]: align,
       })}
       {...others}
     >
       {children}
-    </ul>
+    </Ul>
   );
 };
 
 List.propTypes = {
   /** Sets a lists text alignment */
   align: PropTypes.oneOf(['center', 'right']),
-  /** Makes a list bulleted */
-  bulleted: PropTypes.bool,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
   /** List children */
   children: PropTypes.node,
-  /** Makes a list horizontal */
-  horizontal: PropTypes.bool,
-  /** Makes a list an ordered list */
-  ordered: PropTypes.bool,
+  /** Defines the type of list */
+  type: PropTypes.oneOf(['bulleted', 'ordered', 'horizontal']),
 };
 
 List.defaultProps = {
   align: null,
-  bulleted: false,
   className: '',
   children: null,
-  horizontal: false,
-  ordered: false,
+  type: null,
 };
 
 export default List;

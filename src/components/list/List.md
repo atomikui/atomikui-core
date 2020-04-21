@@ -1,3 +1,5 @@
+Lists are be used to organize information. They can be non-sequential or ordered.
+
 ### Default List
 
 ```jsx
@@ -16,7 +18,7 @@ import { List, ListItem } from '@alaneicker/react-component-library';
 ```jsx
 import { List, ListItem } from '@alaneicker/react-component-library';
 
-<List bulleted>
+<List type="bulleted">
   <ListItem>Apple</ListItem>
   <ListItem>Orange</ListItem>
   <ListItem>Banana</ListItem>
@@ -29,7 +31,7 @@ import { List, ListItem } from '@alaneicker/react-component-library';
 ```jsx
 import { List, ListItem } from '@alaneicker/react-component-library';
 
-<List ordered>
+<List type="ordered">
   <ListItem>Apple</ListItem>
   <ListItem>Orange</ListItem>
   <ListItem>Banana</ListItem>
@@ -42,7 +44,7 @@ import { List, ListItem } from '@alaneicker/react-component-library';
 ```jsx
 import { List, ListItem } from '@alaneicker/react-component-library';
 
-<List horizontal>
+<List type="horizontal">
   <ListItem>Apple</ListItem>
   <ListItem>Orange</ListItem>
   <ListItem>Banana</ListItem>
@@ -56,19 +58,19 @@ import { List, ListItem } from '@alaneicker/react-component-library';
 import { List, ListItem } from '@alaneicker/react-component-library';
 
 <>
-  <List horizontal>
+  <List type="horizontal">
     <ListItem>Apple</ListItem>
     <ListItem>Orange</ListItem>
     <ListItem>Banana</ListItem>
     <ListItem>Mango</ListItem>
   </List>
-  <List align="center" horizontal>
+  <List align="center" type="horizontal">
     <ListItem>Apple</ListItem>
     <ListItem>Orange</ListItem>
     <ListItem>Banana</ListItem>
     <ListItem>Mango</ListItem>
   </List>
-  <List align="right" horizontal>
+  <List align="right" type="horizontal">
     <ListItem>Apple</ListItem>
     <ListItem>Orange</ListItem>
     <ListItem>Banana</ListItem>
