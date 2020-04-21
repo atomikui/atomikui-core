@@ -40,13 +40,12 @@
     border-left: rem(1) solid darken($gray-100, 10%);
   }
 
-  &--inline {
+  &--inline,
+  &--inline-stretch {
     display: flex;
   }
 
   &--inline-stretch {
-    display: flex;
-
     & > * {
       flex: 1;
     }
