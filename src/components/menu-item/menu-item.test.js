@@ -10,14 +10,18 @@ describe('<MenuItem />', () => {
   let menuitem;
 
   beforeEach(() => {
-    menuitem = shallow(<MenuItem />);
+    menuitem = shallow(<MenuItem>Item 1</MenuItem>);
   });
 
   it('Should render without errors', () => {
     expect(menuitem.length).toBe(1);
   });
 
-  it('Should render render a ListItem', () => {
+  it('Should render a ListItem', () => {
     expect(menuitem.find('ListItem').length).toBe(1);
+  });
+
+  it('Should render children', () => {
+    expect(menuitem.find('ListItem').children().text()).toBe('Item 1');
   });
 });
