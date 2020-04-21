@@ -43,3 +43,26 @@ import { Menu, Link } from '@alaneicker/react-component-library';
   </Menu>
 </>;
 ```
+
+### Menus with Dividers
+
+```jsx
+import { Menu, Link } from '@alaneicker/react-component-library';
+
+<>
+  <Menu dividers>
+    <Link href="/home">Home</Link>
+    <Link href="/about">About</Link>
+    <Link href="/services">Services</Link>
+    <Link href="/blocg">Blog</Link>
+    <Link href="/contact">Contact</Link>
+  </Menu>
+  <Menu inline dividers>
+    <Link href="/home">Home</Link>
+    <Link href="/about">About</Link>
+    <Link href="/services">Services</Link>
+    <Link href="/blocg">Blog</Link>
+    <Link href="/contact">Contact</Link>
+  </Menu>
+</>;
+```

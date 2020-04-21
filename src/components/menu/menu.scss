@@ -31,6 +31,14 @@
     }
   }
 
+  &--with-dividers:not(&--inline) > * + * {
+    border-top: rem(1) solid darken($gray-100, 5%);
+  }
+
+  &--inline.rcl-menu--with-dividers > * + * {
+    border-left: rem(1) solid darken($gray-100, 10%);
+  }
+
   &--inline > * {
     display: inline-block;
   }
