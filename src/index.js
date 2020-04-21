@@ -16,6 +16,7 @@ export { default as Hint } from './components/hint';
 export { default as Label } from './components/label';
 export { default as Link } from './components/link';
 export { default as Media } from './components/media';
+export { default as Menu } from './components/menu';
 export { default as Modal } from './components/modal';
 export { default as Overlay } from './components/overlay';
 export { default as Pagination } from './components/pagination';

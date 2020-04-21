@@ -1,0 +1,33 @@
+.rcl-menu {
+  margin: 0;
+  padding: rem(8 0);
+
+  & > * {
+    list-style-type: none;
+  }
+
+  & > * > * {
+    border: 0;
+    color: $black;
+    display: flex;
+    padding: rem(8 16);
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 100%;
+    font-size: inherit;
+    outline: 0;
+    transition: background 0.2s ease-in-out;
+
+    &:hover {
+      background: $gray-000;
+    }
+
+    &:focus,
+    &:active,
+    &.is-active {
+      background: $blue-200;
+      box-shadow: none;
+      color: $white;
+    }
+  }
+}

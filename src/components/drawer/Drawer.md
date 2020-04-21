@@ -4,7 +4,12 @@ Drawers are commonly referred to as a side nav. The Drawer component allows for 
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button } from '@alaneicker/react-component-library';
+import {
+  Drawer,
+  Button,
+  Link,
+  Menu,
+} from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -13,23 +18,13 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-    <ul class="rcl-menu" style={{ width: '250px' }}>
-      <li>
-        <Button>Home</Button>
-      </li>
-      <li>
-        <a href="">About</a>
-      </li>
-      <li>
-        <a href="">Services</a>
-      </li>
-      <li>
-        <a href="">Blog</a>
-      </li>
-      <li>
-        <a href="">Conact</a>
-      </li>
-    </ul>
+    <Menu style={{ width: '250px' }}>
+      <Link href="/home">Home</Link>
+      <Link href="/about">About</Link>
+      <Link href="/services">Services</Link>
+      <Link href="/blocg">Blog</Link>
+      <Link href="/contact">Contact</Link>
+    </Menu>
   </Drawer>
 </>;
 ```
@@ -38,7 +33,12 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button } from '@alaneicker/react-component-library';
+import {
+  Drawer,
+  Button,
+  Link,
+  Menu,
+} from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -46,7 +46,15 @@ const [isOpen, setIsOpen] = useState(false);
   <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
-  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right" />
+  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right">
+    <Menu style={{ width: '250px' }}>
+      <Link href="/home">Home</Link>
+      <Link href="/about">About</Link>
+      <Link href="/services">Services</Link>
+      <Link href="/blocg">Blog</Link>
+      <Link href="/contact">Contact</Link>
+    </Menu>
+  </Drawer>
 </>;
 ```
 
@@ -54,7 +62,12 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button } from '@alaneicker/react-component-library';
+import {
+  Drawer,
+  Button,
+  Link,
+  Menu,
+} from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -62,7 +75,15 @@ const [isOpen, setIsOpen] = useState(false);
   <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
-  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="top" />
+  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="top">
+    <Menu>
+      <Link href="/home">Home</Link>
+      <Link href="/about">About</Link>
+      <Link href="/services">Services</Link>
+      <Link href="/blocg">Blog</Link>
+      <Link href="/contact">Contact</Link>
+    </Menu>
+  </Drawer>
 </>;
 ```
 
@@ -70,7 +91,12 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button } from '@alaneicker/react-component-library';
+import {
+  Drawer,
+  Button,
+  Link,
+  Menu,
+} from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -78,11 +104,15 @@ const [isOpen, setIsOpen] = useState(false);
   <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
-  <Drawer
-    isOpen={isOpen}
-    onClose={() => setIsOpen(false)}
-    position="bottom"
-  ></Drawer>
+  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="bottom">
+    <Menu>
+      <Link href="/home">Home</Link>
+      <Link href="/about">About</Link>
+      <Link href="/services">Services</Link>
+      <Link href="/blocg">Blog</Link>
+      <Link href="/contact">Contact</Link>
+    </Menu>
+  </Drawer>
 </>;
 ```
 
@@ -90,7 +120,12 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button } from '@alaneicker/react-component-library';
+import {
+  Drawer,
+  Button,
+  Link,
+  Menu,
+} from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -98,6 +133,14 @@ const [isOpen, setIsOpen] = useState(false);
   <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
-  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
+  <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
+    <Menu>
+      <Link href="/home">Home</Link>
+      <Link href="/about">About</Link>
+      <Link href="/services">Services</Link>
+      <Link href="/blocg">Blog</Link>
+      <Link href="/contact">Contact</Link>
+    </Menu>
+  </Drawer>
 </>;
 ```
