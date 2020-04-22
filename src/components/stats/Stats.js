@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import Spinner from '../spinner';
 import './stats.scss';
 
 const Stats = () => {
@@ -7,14 +8,11 @@ const Stats = () => {
 
   const setIframeContentStyles = () => {
     const iframeDoc = iframeRef.current.contentWindow.document;
-
     const linkTag = iframeDoc.createElement('link');
     linkTag.rel = 'stylesheet';
     linkTag.href =
       'https://fonts.googleapis.com/css?family=Hind+Madurai:300,300i,400,400i,500,500i,700,700i';
-
     iframeDoc.head.appendChild(linkTag);
-
     const styleTag = iframeDoc.createElement('style');
     styleTag.type = 'text/css';
     styleTag.appendChild(
@@ -27,9 +25,7 @@ const Stats = () => {
       .ant-spin-container { margin-bottom: 24px; }
     `),
     );
-
     iframeDoc.head.appendChild(styleTag);
-
     setLoading(false);
   };
 
@@ -37,6 +33,7 @@ const Stats = () => {
     <div className="stats-container">
       {loading && (
         <div className="stats-container__loading">
+          <Spinner size="xlg" variant="blue" />
           <div>LOADING REPORT...</div>
         </div>
       )}
