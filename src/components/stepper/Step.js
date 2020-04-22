@@ -1,6 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Link from '../link';
 import ListItem from '../list-item';
 
@@ -21,6 +23,7 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
         className="rcl-step__number"
         {...(isComplete && href && { href })}
       >
+        {isComplete && <Icon icon={faCheck} color="white" />}
         {!isComplete && children}
       </StepNumber>
       {label && (
