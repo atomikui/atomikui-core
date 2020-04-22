@@ -9,6 +9,7 @@ import {
   Button,
   Link,
   Menu,
+  MenuItem,
 } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +20,21 @@ const [isOpen, setIsOpen] = useState(false);
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
     <Menu style={{ width: '250px' }}>
-      <Link href="/home">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/services">Services</Link>
-      <Link href="/blocg">Blog</Link>
-      <Link href="/contact">Contact</Link>
+      <MenuItem>
+        <Link href="/home">Home</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/about">About</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/services">Services</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/blocg">Blog</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/contact">Contact</Link>
+      </MenuItem>
     </Menu>
   </Drawer>
 </>;
@@ -38,6 +49,7 @@ import {
   Button,
   Link,
   Menu,
+  MenuItem,
 } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
@@ -48,11 +60,21 @@ const [isOpen, setIsOpen] = useState(false);
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right">
     <Menu style={{ width: '250px' }}>
-      <Link href="/home">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/services">Services</Link>
-      <Link href="/blocg">Blog</Link>
-      <Link href="/contact">Contact</Link>
+      <MenuItem>
+        <Link href="/home">Home</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/about">About</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/services">Services</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/blocg">Blog</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/contact">Contact</Link>
+      </MenuItem>
     </Menu>
   </Drawer>
 </>;
@@ -67,6 +89,7 @@ import {
   Button,
   Link,
   Menu,
+  MenuItem,
 } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
@@ -77,11 +100,21 @@ const [isOpen, setIsOpen] = useState(false);
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="top">
     <Menu>
-      <Link href="/home">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/services">Services</Link>
-      <Link href="/blocg">Blog</Link>
-      <Link href="/contact">Contact</Link>
+      <MenuItem>
+        <Link href="/home">Home</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/about">About</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/services">Services</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/blocg">Blog</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/contact">Contact</Link>
+      </MenuItem>
     </Menu>
   </Drawer>
 </>;
@@ -96,6 +129,7 @@ import {
   Button,
   Link,
   Menu,
+  MenuItem,
 } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
@@ -106,11 +140,21 @@ const [isOpen, setIsOpen] = useState(false);
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="bottom">
     <Menu>
-      <Link href="/home">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/services">Services</Link>
-      <Link href="/blocg">Blog</Link>
-      <Link href="/contact">Contact</Link>
+      <MenuItem>
+        <Link href="/home">Home</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/about">About</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/services">Services</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/blocg">Blog</Link>
+      </MenuItem>
+      <MenuItem>
+        <Link href="/contact">Contact</Link>
+      </MenuItem>
     </Menu>
   </Drawer>
 </>;
