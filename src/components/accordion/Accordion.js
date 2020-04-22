@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import generateId from '../../utilities/generateId';
 
 const Accordion = ({ className, multipleOpen, panels, ...others }) => {
@@ -59,19 +61,11 @@ const Accordion = ({ className, multipleOpen, panels, ...others }) => {
               role="button"
             >
               <span>{label}</span>
-              <svg
+              <Icon
                 className="rcl-accordion__panel__label__icon"
-                version="1.1"
-                id="Capa_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                x="0px"
-                y="0px"
-                viewBox="0 0 256 256"
-                xmlSpace="preserve"
-              >
-                <polygon points="225.813,48.907 128,146.72 30.187,48.907 0,79.093 128,207.093 256,79.093" />
-              </svg>
+                icon={faAngleDown}
+                size="lg"
+              />
             </label>
             <div className="rcl-accordion__panel__content" aria-labelledby={id}>
               {content}
