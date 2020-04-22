@@ -2,7 +2,13 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import {
+  faExclamationCircle,
+  faInfoCircle,
+  faCheckCircle,
+  faTimes,
+  faTimesCircle,
+} from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
 const Alert = ({ align, className, children, variant, onClose, ...others }) => {
@@ -17,6 +23,18 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
       aria-atomic="true"
       {...others}
     >
+      {(variant === 'info' || !variant) && (
+        <Icon icon={faInfoCircle} size="lg" color="white" />
+      )}
+      {variant === 'success' && (
+        <Icon icon={faCheckCircle} size="lg" color="white" />
+      )}
+      {variant === 'warning' && (
+        <Icon icon={faExclamationCircle} size="lg" color="white" />
+      )}
+      {variant === 'error' && (
+        <Icon icon={faTimesCircle} size="lg" color="white" />
+      )}
       <div className="rcl-alert__body">{children}</div>
       {onClose && (
         <div className="rcl-alert__footer">
@@ -26,7 +44,7 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
             onClick={onClose}
             aria-hidden="true"
           >
-            <Icon icon={faPlus} size="lg" color="white" />
+            <Icon icon={faTimes} size="lg" color="white" />
           </Button>
         </div>
       )}
