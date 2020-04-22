@@ -1,22 +1,17 @@
 All of the free <a href="https://fontawesome.com/icons?d=gallery&m=free" target="__blank">Font Awesome</a> icons are available to use.
 
-Import the Font Awesome React component.
+### Usage
 
-```html
+Import the Font Awesome dependencies and the icons that you'd like to use.
+
+```jsx
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-```
-
-Import the icons that you'd like to use.
-
-```html
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+
+<Icon icon={faCalendarAlt} size="2x" color="#444" />;
 ```
 
-Implement the component in your app.
-
-```html
-<Icon icon="{faCalendarAlt}" size="2x" color="#444" />
-```
+### Icon Library
 
 ```jsx
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
