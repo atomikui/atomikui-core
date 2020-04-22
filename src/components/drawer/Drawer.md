@@ -19,7 +19,7 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-    <Menu style={{ width: '250px' }}>
+    <Menu>
       <MenuItem>
         <Link href="/home">Home</Link>
       </MenuItem>
@@ -59,7 +59,7 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right">
-    <Menu style={{ width: '250px' }}>
+    <Menu>
       <MenuItem>
         <Link href="/home">Home</Link>
       </MenuItem>

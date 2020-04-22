@@ -3,7 +3,6 @@
   position: fixed;
   transition: all 0.3s ease-in-out;
   transition-timing-function: cubic-bezier(0.42, 0, 0, 1);
-  width: 100%;
   z-index: 1000;
 
   &--left {
@@ -30,10 +29,8 @@
     width: auto;
   }
 
-  @media (min-width: $breakpoint-medium) {
-    &--right,
-    &--left {
-      width: auto;
-    }
+  &--right,
+  &--left {
+    width: rem(250);
   }
 }
