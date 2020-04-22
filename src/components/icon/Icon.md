@@ -1,10 +1,25 @@
-```jsx
-import { Icon, faCoffee } from '@alaneicker/react-component-library';
+All of the free <a href="https://fontawesome.com/icons?d=gallery&m=free" target="__blank">Font Awesome</a> icons are available to use.
 
-<div className="icon-grid">
-  <div className="icon-grid__item">
-    <Icon icon={faCoffee} size="2x" />
-    <h4>faCoffee</h4>
-  </div>
+```html
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+
+<Icon icon="{faCalendarAlt}" size="2x" color="#444" />
+```
+
+```jsx
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import * as faIcons from '@fortawesome/free-solid-svg-icons';
+
+const icons = faIcons.fas;
+
+<div className="icon-list">
+  {Object.keys(icons).map((icon) => {
+    return (
+      <div key={Math.random()} className="icon-list__item">
+        <Icon icon={icons[icon]} size="2x" color="#444" />
+        <div className="icon-list__label">{icon}</div>
+      </div>
+    );
+  })}
 </div>;
 ```

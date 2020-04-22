@@ -32,6 +32,3 @@ export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
 export { withToastProvider, useToast } from './components/toaster';
 export { default as Truncate } from './components/truncate';
-
-export { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-export { faCoffee } from '@fortawesome/free-solid-svg-icons';
