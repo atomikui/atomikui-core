@@ -2,12 +2,13 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Link from '../link';
+import ListItem from '../list-item';
 
 const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
   const StepNumber = isComplete && href ? Link : 'span';
 
   return (
-    <li
+    <ListItem
       key={Math.random()}
       aria-current={isActive}
       className={classnames('rcl-step', {
@@ -27,7 +28,7 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
           <span aria-hidden="true">{label}</span>
         </div>
       )}
-    </li>
+    </ListItem>
   );
 };
 

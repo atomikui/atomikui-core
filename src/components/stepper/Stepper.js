@@ -1,11 +1,12 @@
 import React, { Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import List from '../list';
 
 const Stepper = ({ children, className, inline, topLabels, ...others }) => {
   return (
     <nav>
-      <ul
+      <List
         className={classnames('rcl-stepper', className, {
           'rcl-stepper--inline': inline,
         })}
@@ -16,7 +17,7 @@ const Stepper = ({ children, className, inline, topLabels, ...others }) => {
               return cloneElement(child, { topLabel: true });
             })
           : children}
-      </ul>
+      </List>
     </nav>
   );
 };

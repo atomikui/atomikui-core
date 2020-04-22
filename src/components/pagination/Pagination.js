@@ -2,25 +2,27 @@ import React, { Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import generateId from '../../utilities/generateId';
+import List from '../list';
+import ListItem from '../list-item';
 
 // TODO: Add Button support
 
 const Pagination = ({ children, className, ...others }) => {
   return (
-    <ul className={classnames('rcl-pagination', className, {})} {...others}>
+    <List className={classnames('rcl-pagination', className, {})} {...others}>
       {Children.map(children, (child) => {
         return (
-          <li
+          <ListItem
             className={classnames('rcl-pagination__item', {
               'is-active': child.props.active,
             })}
             key={generateId()}
           >
             {child}
-          </li>
+          </ListItem>
         );
       })}
-    </ul>
+    </List>
   );
 };
 

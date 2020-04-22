@@ -49,7 +49,7 @@ describe('<Stepper />', () => {
   });
 
   it('Should render as inline', () => {
-    expect(stepper.find('.rcl-stepper').hasClass('rcl-stepper--inline')).toBe(
+    expect(stepper.find('ul.rcl-stepper').hasClass('rcl-stepper--inline')).toBe(
       true,
     );
   });
