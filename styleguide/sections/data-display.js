@@ -7,9 +7,14 @@ module.exports = {
   components: () => {
     return [
       'src/components/avatar/Avatar.js',
-      'src/components/icon/Icon.js',
       'src/components/list/List.js',
       'src/components/list-item/ListItem.js',
     ];
   },
+  sections: [
+    {
+      name: 'Icons',
+      content: 'src/components/icon/Icon.md',
+    },
+  ],
 };
