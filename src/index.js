@@ -13,6 +13,7 @@ export { default as FileUpload } from './components/file-upload';
 export { default as FormField } from './components/form-field';
 export { default as FormOption } from './components/form-option';
 export { default as Hint } from './components/hint';
+export { default as Icon } from './components/icon';
 export { default as Label } from './components/label';
 export { default as Link } from './components/link';
 export { default as List } from './components/list';
