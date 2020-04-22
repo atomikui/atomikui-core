@@ -24,16 +24,21 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
       {...others}
     >
       {(variant === 'info' || !variant) && (
-        <Icon icon={faInfoCircle} size="lg" color="white" />
+        <Icon id="icon-info" icon={faInfoCircle} size="lg" color="white" />
       )}
       {variant === 'success' && (
-        <Icon icon={faCheckCircle} size="lg" color="white" />
+        <Icon id="icon-success" icon={faCheckCircle} size="lg" color="white" />
       )}
       {variant === 'warning' && (
-        <Icon icon={faExclamationCircle} size="lg" color="white" />
+        <Icon
+          id="icon-warning"
+          icon={faExclamationCircle}
+          size="lg"
+          color="white"
+        />
       )}
       {variant === 'error' && (
-        <Icon icon={faTimesCircle} size="lg" color="white" />
+        <Icon id="icon-error" icon={faTimesCircle} size="lg" color="white" />
       )}
       <div className="rcl-alert__body">{children}</div>
       {onClose && (
@@ -44,7 +49,7 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
             onClick={onClose}
             aria-hidden="true"
           >
-            <Icon icon={faTimes} size="lg" color="white" />
+            <Icon id="icon-close" icon={faTimes} size="lg" color="white" />
           </Button>
         </div>
       )}
