@@ -24,7 +24,12 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
       {...others}
     >
       {(variant === 'info' || !variant) && (
-        <Icon id="icon-info" icon={faInfoCircle} size="lg" color="white" />
+        <Icon
+          id="icon-info"
+          icon={faInfoCircle}
+          size="lg"
+          color={!variant ? '#027abf' : 'white'}
+        />
       )}
       {variant === 'success' && (
         <Icon id="icon-success" icon={faCheckCircle} size="lg" color="white" />
@@ -49,7 +54,12 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
             onClick={onClose}
             aria-hidden="true"
           >
-            <Icon id="icon-close" icon={faTimes} size="lg" color="white" />
+            <Icon
+              id="icon-close"
+              icon={faTimes}
+              size="lg"
+              color={!variant ? '#027abf' : 'white'}
+            />
           </Button>
         </div>
       )}

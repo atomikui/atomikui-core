@@ -1,8 +1,9 @@
 .rcl-alert {
   align-items: top;
-  background: $gray-500;
+  background: $white;
+  border: rem(1) solid $blue-200;
   border-radius: rem($border-radius);
-  color: $white;
+  color: $blue-200;
   display: flex;
   font-size: rem($root-font-size);
   font-weight: $font-medium;
@@ -33,6 +34,8 @@
   @each $name, $color in $alert-variants {
     &--#{$name} {
       background-color: $color;
+      color: $white;
+      border: 0;
     }
   }
 }
