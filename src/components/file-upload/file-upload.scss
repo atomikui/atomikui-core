@@ -11,7 +11,7 @@
   &__wrapper {
     align-items: center;
     border: rem(1) solid $gray-200;
-    border-radius: rem(3);
+    border-radius: rem($border-radius);
     display: flex;
     overflow: hidden;
 
@@ -27,7 +27,7 @@
 
     &--drag-and-drop {
       border: rem(2) dashed $gray-200;
-      border-radius: rem(3);
+      border-radius: rem($border-radius);
       display: flex;
       flex-direction: column;
       padding: rem(40 16);

@@ -6,7 +6,7 @@
     align-items: center;
     background-color: $white;
     border: rem(1) solid $gray-200;
-    border-radius: rem(3);
+    border-radius: rem($border-radius);
     display: flex;
     height: rem(20);
     justify-content: center;

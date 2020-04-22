@@ -1,6 +1,6 @@
 .rcl-badge {
   background-color: $gray-400;
-  border-radius: rem(3);
+  border-radius: rem($border-radius);
   color: $white;
   display: inline-block;
   font-size: 75%;

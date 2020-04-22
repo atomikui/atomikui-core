@@ -29,7 +29,7 @@
   &__close-button {
     background: transparent;
     border: 0;
-    border-radius: rem(3);
+    border-radius: rem($border-radius);
     cursor: pointer;
     height: rem(32);
     outline: 0;

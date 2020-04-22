@@ -1,6 +1,6 @@
 .rcl-progress-bar {
   background: $gray-100;
-  border-radius: rem(3);
+  border-radius: rem($border-radius);
   display: flex;
   height: rem(20);
   overflow: hidden;

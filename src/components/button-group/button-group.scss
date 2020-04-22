@@ -1,7 +1,7 @@
 .rcl-button-group {
   align-items: stretch;
   border: rem(1) solid $gray-200;
-  border-radius: rem(3);
+  border-radius: rem($border-radius);
   display: inline-flex;
   height: rem($input-height);
 

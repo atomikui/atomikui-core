@@ -1,5 +1,5 @@
 .rcl-switch-panel {
-  border-radius: rem(3);
+  border-radius: rem($border-radius);
   box-shadow: rem(0 0 5) rgba(0, 0, 0, 0.15);
 
   & > * {
