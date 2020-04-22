@@ -1,6 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
 const Alert = ({ align, className, children, variant, onClose, ...others }) => {
@@ -24,7 +26,7 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
             onClick={onClose}
             aria-hidden="true"
           >
-            Close
+            <Icon icon={faPlus} size="lg" color="white" />
           </Button>
         </div>
       )}
