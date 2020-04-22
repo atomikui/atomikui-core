@@ -30,5 +30,6 @@ export { default as Step } from './components/stepper/Step';
 export { default as Stepper } from './components/stepper';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
-export { withToastProvider, useToast } from './components/toaster';
+export { default as Tooltip } from './components/tooltip';
 export { default as Truncate } from './components/truncate';
+export { withToastProvider, useToast } from './components/toaster';

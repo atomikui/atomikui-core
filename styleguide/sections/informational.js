@@ -12,6 +12,7 @@ module.exports = {
       'src/components/label/Label.js',
       'src/components/progress-bar/ProgressBar.js',
       'src/components/spinner/Spinner.js',
+      'src/components/tooltip/Tooltip.js',
     ];
   },
 };
