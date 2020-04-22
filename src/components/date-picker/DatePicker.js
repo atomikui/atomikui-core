@@ -3,6 +3,8 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
 import createFocusTrap from 'focus-trap';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import FormField from '../form-field';
 import Button from '../button';
 import Label from '../label';
@@ -99,7 +101,7 @@ const DatePicker = ({
           }}
           disabled={disabled}
         >
-          Select a Date
+          <Icon icon={faCalendarAlt} size="lg" color="#444" />
         </Button>
       </div>
       <Overlay
