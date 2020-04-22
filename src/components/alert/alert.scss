@@ -1,6 +1,7 @@
 .rcl-alert {
   align-items: top;
   background: $gray-500;
+  border-radius: rem(3);
   color: $white;
   display: flex;
   font-size: rem($root-font-size);
