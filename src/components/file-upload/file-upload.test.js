@@ -88,8 +88,6 @@ describe('<FileUpload />', () => {
     fileUpload.setProps({ dragAndDrop: true });
     fileUpload.find('.rcl-file-upload__wrapper').simulate('drop', onDropEvent);
 
-    expect(
-      fileUpload.find('.rcl-file-upload__file-list').children().length,
-    ).toBe(1);
+    expect(fileUpload.find('List').children().length).toBe(1);
   });
 });

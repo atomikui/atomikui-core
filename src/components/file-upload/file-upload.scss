@@ -55,10 +55,8 @@
     font-weight: $font-bold;
   }
 
-  &__file-list {
-    list-style-type: none;
+  .rcl-file-upload__file-list {
     margin: rem(16 0 0);
-    padding: 0;
 
     & > * {
       background: $white;

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import List from '../list';
+import ListItem from '../list-item';
 
 const FileUpload = ({
   className,
@@ -77,11 +79,11 @@ const FileUpload = ({
           </span>
         )}
         {dragAndDrop ? (
-          <ul className="rcl-file-upload__file-list">
+          <List className="rcl-file-upload__file-list">
             {files.map((file, index) => {
-              return <li key={`file-${index}`}>{file}</li>;
+              return <ListItem key={`file-${index}`}>{file}</ListItem>;
             })}
-          </ul>
+          </List>
         ) : (
           <span>{files.join(', ')}</span>
         )}
