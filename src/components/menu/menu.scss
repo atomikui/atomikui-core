@@ -37,12 +37,10 @@
 
   &--inline,
   &--inline-stretch {
-    display: inline-flex;
+    display: flex;
   }
 
   &--inline-stretch {
-    display: flex;
-
     & > * {
       flex: 1;
     }
@@ -53,10 +51,10 @@
   }
 
   &--align-center {
-    text-align: center;
+    justify-content: center;
   }
 
   &--align-right {
-    text-align: right;
+    justify-content: flex-end;
   }
 }

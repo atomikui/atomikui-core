@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import List from '../list';
 
 const Menu = ({
   align,
@@ -12,8 +13,8 @@ const Menu = ({
   ...others
 }) => {
   return (
-    <ul
-      className={classnames('rcl-menu rcl-list', className, {
+    <List
+      className={classnames('rcl-menu', className, {
         'rcl-menu--inline': inline,
         'rcl-menu--inline-stretch': inlineStretch,
         'rcl-menu--with-dividers': dividers,
@@ -22,7 +23,7 @@ const Menu = ({
       {...others}
     >
       {children}
-    </ul>
+    </List>
   );
 };
 
