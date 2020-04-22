@@ -29,6 +29,12 @@
     width: auto;
   }
 
+  &--top,
+  &--bottom {
+    max-height: 50%;
+    overflow: auto;
+  }
+
   &--right,
   &--left {
     width: rem(250);
