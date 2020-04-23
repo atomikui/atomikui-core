@@ -1,3 +1,5 @@
+A Tooltip displays helpful te text when an element is hovered over, focused, or tapped.
+
 ### Tooltip - Top Aligned
 
 ```jsx
