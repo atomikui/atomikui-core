@@ -1,20 +1,40 @@
-import React from 'react';
-import classnames from 'classnames';
+import React, { Children, cloneElement, useState } from 'react';
 import PropTypes from 'prop-types';
 
-const Tooltip = ({ className, ...others }) => {
+const Tooltip = ({ children, align, ...props }) => {
+  const handeMouseEnter = (e) => {
+    const el = e.target;
+    const content = el.getAttribute('data-content');
+  };
+
+  const handeMouseLeave = () => {};
+
   return (
-    <div className={classnames('rcl-tooltip', className, {})} {...others}></div>
+    <>
+      {Children.map(children, (child) => {
+        return cloneElement(child, {
+          ...props,
+          onMouseEnter: handeMouseEnter,
+          onMouseLeave: handeMouseLeave,
+        });
+      })}
+    </>
   );
 };
 
 Tooltip.propTypes = {
-  /** Adds custom component CSS classes */
-  className: PropTypes.string,
+  /** The tooltip alignment */
+  align: PropTypes.oneOf('right', 'top', 'bottom', 'left'),
+  /** The child element that will recieve a tooltip */
+  children: PropTypes.node,
+  /** The text that will be rendered as tooltip content */
+  title: PropTypes.string,
 };
 
 Tooltip.defaultProps = {
-  className: '',
+  align: 'top',
+  children: null,
+  title: '',
 };
 
 export default Tooltip;
