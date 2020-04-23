@@ -23,7 +23,7 @@ const Tooltip = ({ children, align, ...props }) => {
     const content = e.target.getAttribute('data-content');
 
     const {
-      target: { offsetTop, offsetLeft, clientWidth },
+      target: { offsetTop, offsetLeft, clientWidth, clientHeight },
     } = e;
 
     setToolTip(creactTooltip(content));
@@ -44,6 +44,10 @@ const Tooltip = ({ children, align, ...props }) => {
         targetOffsetTop - (tooltipHeight + arrowOffset)
       }px`;
 
+      const bottomPosition = `${
+        targetOffsetTop + (clientHeight + arrowOffset)
+      }px`;
+
       const centerOffset =
         clientWidth > tooltipWidth
           ? targetOffsetLeft + (clientWidth - tooltipWidth) / 2
@@ -55,10 +59,18 @@ const Tooltip = ({ children, align, ...props }) => {
         case 'left':
           break;
         case 'bottom-left':
+          theTooltip.style.top = bottomPosition;
+          theTooltip.style.left = `${targetOffsetLeft}px`;
           break;
         case 'bottom-center':
+          theTooltip.style.top = bottomPosition;
+          theTooltip.style.left = `${centerOffset}px`;
           break;
         case 'bottom-right':
+          theTooltip.style.top = bottomPosition;
+          theTooltip.style.right = `${
+            window.innerWidth - (targetOffsetLeft + clientWidth)
+          }px`;
           break;
         case 'top-left':
           theTooltip.style.top = topPosition;
