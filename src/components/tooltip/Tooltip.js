@@ -1,7 +1,19 @@
-import React, { Children, cloneElement, useState } from 'react';
+import React, { Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
 const Tooltip = ({ children, align, ...props }) => {
+  const creactTooltip = (content) => {
+    return (
+      <div
+        className={classNames('rcl-tooltip', {
+          [`rcl-tooltip--align-${align}`]: align,
+        })}
+      >
+        {content}
+      </div>
+    );
+  };
+
   const handeMouseEnter = (e) => {
     const el = e.target;
     const content = el.getAttribute('data-content');
