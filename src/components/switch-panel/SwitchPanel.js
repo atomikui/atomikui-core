@@ -18,7 +18,7 @@ SwitchPanel.propTypes = {
 };
 
 SwitchPanel.defaultProps = {
-  children: null,
+  children: <></>,
   className: '',
 };
 

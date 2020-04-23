@@ -18,7 +18,7 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
   className: '',
-  children: null,
+  children: <></>,
 };
 
 export default ListItem;

@@ -46,7 +46,7 @@ Link.defaultProps = {
   className: '',
   disabled: false,
   href: '',
-  children: null,
+  children: <></>,
   target: '',
 };
 

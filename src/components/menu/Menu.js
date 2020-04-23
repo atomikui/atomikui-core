@@ -44,7 +44,7 @@ Menu.propTypes = {
 
 Menu.defaultProps = {
   align: null,
-  children: null,
+  children: <></>,
   className: '',
   dividers: false,
   inline: false,

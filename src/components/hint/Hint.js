@@ -26,7 +26,7 @@ Hint.propTypes = {
 
 Hint.defaultProps = {
   className: '',
-  children: null,
+  children: <></>,
   type: null,
 };
 

@@ -57,7 +57,7 @@ Overlay.defaultProps = {
   align: null,
   allowBodyScroll: false,
   className: '',
-  children: null,
+  children: <></>,
   isActive: false,
   variant: null,
 };

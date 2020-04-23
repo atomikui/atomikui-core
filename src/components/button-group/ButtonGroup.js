@@ -75,7 +75,7 @@ ButtonGroup.propTypes = {
 
 ButtonGroup.defaultProps = {
   className: '',
-  children: null,
+  children: <></>,
   errorText: '',
   hasError: false,
   helpText: '',

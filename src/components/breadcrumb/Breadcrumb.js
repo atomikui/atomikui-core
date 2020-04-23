@@ -24,7 +24,7 @@ Breadcrumb.propTypes = {
 
 Breadcrumb.defaultProps = {
   className: '',
-  children: null,
+  children: <></>,
 };
 
 export default Breadcrumb;

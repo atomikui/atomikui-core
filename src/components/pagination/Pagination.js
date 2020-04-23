@@ -34,7 +34,7 @@ Pagination.propTypes = {
 };
 
 Pagination.defaultProps = {
-  children: null,
+  children: <></>,
   className: '',
 };
 

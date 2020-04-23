@@ -68,7 +68,7 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   alt: '',
   className: '',
-  children: null,
+  children: <></>,
   flipLabel: false,
   label: '',
   size: null,

@@ -84,7 +84,7 @@ Alert.defaultProps = {
   align: null,
   className: '',
   onClose: null,
-  children: null,
+  children: <></>,
   text: '',
   variant: null,
 };

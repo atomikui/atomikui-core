@@ -119,7 +119,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   className: '',
   closeOnEscape: true,
-  children: null,
+  children: <></>,
   disableOverlayclick: false,
   footer: null,
   noOverlay: false,

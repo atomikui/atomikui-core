@@ -12,7 +12,7 @@ MenuItem.propTypes = {
 };
 
 MenuItem.defaultProps = {
-  children: null,
+  children: <></>,
 };
 
 export default MenuItem;
