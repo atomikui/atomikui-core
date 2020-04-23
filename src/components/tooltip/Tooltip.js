@@ -1,7 +1,10 @@
-import React, { Children, cloneElement } from 'react';
+import React, { Children, cloneElement, useState } from 'react';
+import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 
 const Tooltip = ({ children, align, ...props }) => {
+  const [tooltip, setToolTip] = useState(null);
+
   const creactTooltip = (content) => {
     return (
       <div
@@ -15,8 +18,13 @@ const Tooltip = ({ children, align, ...props }) => {
   };
 
   const handeMouseEnter = (e) => {
-    const el = e.target;
-    const content = el.getAttribute('data-content');
+    const {
+      target: { clientHeight, clientWidth },
+      clientX,
+      clientY,
+    } = e;
+
+    const content = e.target.getAttribute('data-content');
   };
 
   const handeMouseLeave = () => {};
@@ -30,13 +38,14 @@ const Tooltip = ({ children, align, ...props }) => {
           onMouseLeave: handeMouseLeave,
         });
       })}
+      {createPortal(tooltip, document.body)}
     </>
   );
 };
 
 Tooltip.propTypes = {
   /** The tooltip alignment */
-  align: PropTypes.oneOf('right', 'top', 'bottom', 'left'),
+  align: PropTypes.oneOf(['right', 'top', 'bottom', 'left']),
   /** The child element that will recieve a tooltip */
   children: PropTypes.node,
   /** The text that will be rendered as tooltip content */
