@@ -38,7 +38,7 @@ const Tooltip = ({ children, align, ...props }) => {
       const targetOffsetLeft = offsetLeft;
       const targetOffsetTop = offsetTop;
 
-      const arrowOffset = 10;
+      const arrowOffset = 12;
 
       const topPosition = `${
         targetOffsetTop - (tooltipHeight + arrowOffset)
