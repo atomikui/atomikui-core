@@ -1,16 +1,18 @@
 import React, { Children, cloneElement, useState } from 'react';
 import { createPortal } from 'react-dom';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Tooltip = ({ children, align, ...props }) => {
   const [tooltip, setToolTip] = useState(null);
 
-  const creactTooltip = (content) => {
+  const creactTooltip = (content, styles) => {
     return (
       <div
-        className={classNames('rcl-tooltip', {
+        className={classnames('rcl-tooltip', {
           [`rcl-tooltip--align-${align}`]: align,
         })}
+        style={styles}
       >
         {content}
       </div>
@@ -18,6 +20,8 @@ const Tooltip = ({ children, align, ...props }) => {
   };
 
   const handeMouseEnter = (e) => {
+    const styles = {};
+
     const {
       target: { clientHeight, clientWidth },
       clientX,
@@ -25,9 +29,13 @@ const Tooltip = ({ children, align, ...props }) => {
     } = e;
 
     const content = e.target.getAttribute('data-content');
+
+    setToolTip(creactTooltip(content, styles));
   };
 
-  const handeMouseLeave = () => {};
+  const handeMouseLeave = () => {
+    return setToolTip(null);
+  };
 
   return (
     <>
