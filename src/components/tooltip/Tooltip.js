@@ -6,13 +6,13 @@ import PropTypes from 'prop-types';
 const Tooltip = ({ children, align, ...props }) => {
   const [tooltip, setToolTip] = useState(null);
 
-  const creactTooltip = (content, styles) => {
+  const creactTooltip = (content) => {
     return (
       <div
+        id="rcl-tooltip"
         className={classnames('rcl-tooltip', {
           [`rcl-tooltip--align-${align}`]: align,
         })}
-        style={styles}
       >
         {content}
       </div>
@@ -20,17 +20,45 @@ const Tooltip = ({ children, align, ...props }) => {
   };
 
   const handeMouseEnter = (e) => {
-    const styles = {};
-
-    const {
-      target: { clientHeight, clientWidth },
-      clientX,
-      clientY,
-    } = e;
-
     const content = e.target.getAttribute('data-content');
 
-    setToolTip(creactTooltip(content, styles));
+    const {
+      target: { offsetTop, offsetLeft },
+    } = e;
+
+    setToolTip(creactTooltip(content));
+
+    setTimeout(() => {
+      const theTooltip = document.querySelector('#rcl-tooltip');
+      const coords = theTooltip.getBoundingClientRect();
+
+      const tooltipHeight = coords.height;
+      const tooltipWidth = coords.width;
+
+      const targetOffsetLeft = offsetLeft;
+      const targetOffsetTop = offsetTop;
+
+      switch (align) {
+        case 'right':
+          break;
+        case 'left':
+          break;
+        case 'bottom-left':
+          break;
+        case 'bottom-center':
+          break;
+        case 'bottom-right':
+          break;
+        case 'top-left':
+          // default
+          break;
+        case 'top-center':
+          break;
+        case 'top-right':
+          break;
+        default:
+      }
+    }, 0);
   };
 
   const handeMouseLeave = () => {
@@ -53,7 +81,16 @@ const Tooltip = ({ children, align, ...props }) => {
 
 Tooltip.propTypes = {
   /** The tooltip alignment */
-  align: PropTypes.oneOf(['right', 'top', 'bottom', 'left']),
+  align: PropTypes.oneOf([
+    'right',
+    'left',
+    'bottom-left',
+    'bottom-center',
+    'bottom-right',
+    'top-left',
+    'top-center',
+    'top-right',
+  ]),
   /** The child element that will recieve a tooltip */
   children: PropTypes.node,
   /** The text that will be rendered as tooltip content */
@@ -61,7 +98,7 @@ Tooltip.propTypes = {
 };
 
 Tooltip.defaultProps = {
-  align: 'top',
+  align: 'top-left',
   children: null,
   title: '',
 };
