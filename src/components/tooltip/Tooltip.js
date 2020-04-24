@@ -21,8 +21,7 @@ const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
 
   const createTooltip = (e) => {
     const content = e.target.getAttribute('data-tooltip');
-
-    console.log(e.target);
+    const isAnchor = e.target.tagName === 'A';
 
     const {
       target: { offsetTop, offsetLeft, clientWidth, clientHeight },
@@ -38,10 +37,12 @@ const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
       const tooltipWidth = coords.width;
 
       const targetOffsetLeft = offsetLeft;
-      const targetOffsetLeftPosition = `${offsetLeft}px`;
+      const targetOffsetLeftPosition = `${
+        offsetLeft - (tooltipWidth > clientWidth ? 16 : 0)
+      }px`;
       const targetOffsetTop = offsetTop;
 
-      const arrowOffset = 12;
+      const arrowOffset = isAnchor ? 10 : 14;
 
       // All top tooltip instances
       const topOffset = `${targetOffsetTop - (tooltipHeight + arrowOffset)}px`;

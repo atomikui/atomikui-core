@@ -1,6 +1,19 @@
 A Tooltip displays helpful te text when an element is hovered over, focused, or tapped.
 
-### Tooltip - Top Aligned
+```jsx
+import { Tooltip, Button, Link } from '@alaneicker/react-component-library';
+
+<div className="flex flex--align-middle flex--hr-32">
+  <Tooltip data-tooltip="This is a tooltip" align="top-center">
+    <Button variant="primary">Button Trigger</Button>
+  </Tooltip>
+  <Tooltip data-tooltip="This is a tooltip" align="top-center">
+    <Link href="">Link Trigger</Link>
+  </Tooltip>
+</div>;
+```
+
+### Tooltip - Alignment
 
 ```jsx
 import { Tooltip, Button } from '@alaneicker/react-component-library';
@@ -37,4 +50,14 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
     </Tooltip>
   </div>
 </>;
+```
+
+### Tooltip - onClick
+
+```jsx
+import { Tooltip, Button } from '@alaneicker/react-component-library';
+
+<Tooltip data-tooltip="This is a tooltip" triggerOnClick>
+  <Button variant="primary">On Click</Button>
+</Tooltip>;
 ```
