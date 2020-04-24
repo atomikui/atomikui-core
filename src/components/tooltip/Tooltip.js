@@ -1,12 +1,12 @@
-import React, { Children, cloneElement, useState } from 'react';
+import React, { Children, cloneElement, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Tooltip = ({ children, align, ...props }) => {
+const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
   const [tooltip, setToolTip] = useState(null);
 
-  const creactTooltip = (content) => {
+  const createTooltipElement = (content) => {
     return (
       <div
         id="rcl-tooltip"
@@ -19,14 +19,16 @@ const Tooltip = ({ children, align, ...props }) => {
     );
   };
 
-  const handeMouseEnter = (e) => {
-    const content = e.target.getAttribute('data-content');
+  const createTooltip = (e) => {
+    const content = e.target.getAttribute('data-tooltip');
+    alert('sdfsadfasdf');
+    console.log(e.target);
 
     const {
       target: { offsetTop, offsetLeft, clientWidth, clientHeight },
     } = e;
 
-    setToolTip(creactTooltip(content));
+    setToolTip(createTooltipElement(content));
 
     setTimeout(() => {
       const theTooltip = document.querySelector('#rcl-tooltip');
@@ -91,17 +93,33 @@ const Tooltip = ({ children, align, ...props }) => {
     }, 0);
   };
 
-  const handeMouseLeave = () => {
+  const removeTooltip = () => {
     return setToolTip(null);
   };
+
+  useEffect(() => {
+    if (triggerOnClick) {
+      document.addEventListener('click', (e) => {
+        if (!e.target.getAttribute('data-tooltip')) {
+          setToolTip(null);
+        }
+      });
+    }
+  }, []);
 
   return (
     <>
       {Children.map(children, (child) => {
         return cloneElement(child, {
           ...props,
-          onMouseEnter: handeMouseEnter,
-          onMouseLeave: handeMouseLeave,
+          ...(!triggerOnClick && {
+            onMouseEnter: createTooltip,
+            onMouseLeave: removeTooltip,
+          }),
+          ...(triggerOnClick && {
+            onClick: createTooltip,
+            onTouchStart: createTooltip,
+          }),
         });
       })}
       {createPortal(tooltip, document.body)}
@@ -125,12 +143,15 @@ Tooltip.propTypes = {
   children: PropTypes.node,
   /** The text that will be rendered as tooltip content */
   title: PropTypes.string,
+  /** triggers the tooltip onClick/onTouchStart */
+  triggerOnClick: PropTypes.bool,
 };
 
 Tooltip.defaultProps = {
   align: 'top-left',
   children: <></>,
   title: '',
+  triggerOnClick: false,
 };
 
 export default Tooltip;
