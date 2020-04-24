@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
+const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
   const [tooltip, setToolTip] = useState(null);
 
   const createTooltipElement = (content) => {
@@ -12,6 +12,7 @@ const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
         id="rcl-tooltip"
         className={classnames('rcl-tooltip', {
           [`rcl-tooltip--align-${align}`]: align,
+          [`rcl-tooltip--${variant}`]: variant,
         })}
       >
         <div className="rcl-tooltip__content">{content}</div>
@@ -158,6 +159,8 @@ Tooltip.propTypes = {
   title: PropTypes.string,
   /** triggers the tooltip onClick/onTouchStart */
   triggerOnClick: PropTypes.bool,
+  /** Tooltip theme variant */
+  variant: PropTypes.oneOf('info', 'warning', 'error', 'success'),
 };
 
 Tooltip.defaultProps = {
@@ -165,6 +168,7 @@ Tooltip.defaultProps = {
   children: <></>,
   title: '',
   triggerOnClick: false,
+  variant: null,
 };
 
 export default Tooltip;
