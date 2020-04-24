@@ -28,6 +28,14 @@ $alert-variants: (
   warning: $orange-100,
 ) !default;
 
+$tooltip-variants: (
+  dark: $gray-500,
+  info: $blue-200,
+  success: $green-100,
+  error: $red-100,
+  warning: $orange-100,
+) !default;
+
 $badge-variants: (
   'light-gray': $light-gray,
   info: $blue-200,

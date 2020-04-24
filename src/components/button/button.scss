@@ -1,9 +1,9 @@
 .rcl-btn,
 a.rcl-btn {
-  background-color: $gray-500;
-  border: 0;
+  background-color: $white;
+  border: rem(1) solid $blue-200;
   border-radius: rem($base-border-radius);
-  color: $white;
+  color: $blue-300;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
@@ -18,7 +18,7 @@ a.rcl-btn {
   transition: background-color 0.3s ease-in-out;
 
   &:hover {
-    background-color: darken($gray-400, 10%);
+    background-color: $blue-000;
   }
 
   &:focus,
@@ -48,6 +48,7 @@ a.rcl-btn {
   @each $variant, $map in $btn-variants {
     &--#{$variant} {
       background-color: map-get($map, background-color);
+      border: 0;
       color: map-get($map, font-color);
       padding: map-get($map, padding);
 
