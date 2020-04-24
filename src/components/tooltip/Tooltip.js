@@ -22,7 +22,6 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
 
   const createTooltip = (e) => {
     const content = e.target.getAttribute('data-tooltip');
-    const isAnchor = e.target.tagName === 'A';
 
     const {
       target: { offsetTop, offsetLeft, clientWidth, clientHeight },
