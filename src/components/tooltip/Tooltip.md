@@ -61,3 +61,13 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
   <Button variant="primary">On Click</Button>
 </Tooltip>;
 ```
+
+### Inverse Variant
+
+```jsx
+import { Tooltip, Button } from '@alaneicker/react-component-library';
+
+<Tooltip data-tooltip="This is a tooltip">
+  <Button variant="primary">Inverse</Button>
+</Tooltip>;
+```

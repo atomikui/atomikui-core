@@ -37,9 +37,7 @@ const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
       const tooltipWidth = coords.width;
 
       const targetOffsetLeft = offsetLeft;
-      const targetOffsetLeftPosition = `${
-        offsetLeft - (tooltipWidth > clientWidth ? 16 : 0)
-      }px`;
+      const targetOffsetLeftPosition = `${offsetLeft}px`;
       const targetOffsetTop = offsetTop;
 
       const arrowOffset = isAnchor ? 10 : 14;
