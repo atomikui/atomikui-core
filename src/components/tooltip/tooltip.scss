@@ -83,8 +83,37 @@
   }
 
   &--align-left {
+    &::before,
+    &::after {
+      top: 50%;
+      left: auto;
+      transform: rotate(-90deg);
+    }
+
+    &::before {
+      right: rem(-18);
+      margin-top: rem(-6);
+    }
+    &::after {
+      right: rem(-15);
+      margin-top: rem(-5);
+    }
   }
 
   &--align-right {
+    &::before,
+    &::after {
+      top: 50%;
+      transform: rotate(90deg);
+    }
+
+    &::before {
+      left: rem(-18);
+      margin-top: rem(-6);
+    }
+    &::after {
+      left: rem(-15);
+      margin-top: rem(-5);
+    }
   }
 }

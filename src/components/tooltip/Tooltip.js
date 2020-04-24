@@ -21,7 +21,7 @@ const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
 
   const createTooltip = (e) => {
     const content = e.target.getAttribute('data-tooltip');
-    alert('sdfsadfasdf');
+
     console.log(e.target);
 
     const {
@@ -38,55 +38,74 @@ const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
       const tooltipWidth = coords.width;
 
       const targetOffsetLeft = offsetLeft;
+      const targetOffsetLeftPosition = `${offsetLeft}px`;
       const targetOffsetTop = offsetTop;
 
       const arrowOffset = 12;
 
-      const topPosition = `${
-        targetOffsetTop - (tooltipHeight + arrowOffset)
-      }px`;
+      // All top tooltip instances
+      const topOffset = `${targetOffsetTop - (tooltipHeight + arrowOffset)}px`;
 
-      const bottomPosition = `${
+      // All bottom tooltip instances
+      const bottomOffset = `${
         targetOffsetTop + (clientHeight + arrowOffset)
       }px`;
 
-      const centerOffset =
+      // right
+      const rightOffset = `${targetOffsetLeft + (clientWidth + arrowOffset)}px`;
+
+      // left
+      const leftOffset = `${targetOffsetLeft - (tooltipWidth + arrowOffset)}px`;
+
+      // top-right & bottom-right
+      const topBottomRightOffset = `${
+        window.innerWidth - (targetOffsetLeft + clientWidth)
+      }px`;
+
+      // top-center & bottom-cnenter
+      const centerOffsetFromWidth =
         clientWidth > tooltipWidth
-          ? targetOffsetLeft + (clientWidth - tooltipWidth) / 2
-          : targetOffsetLeft - (tooltipWidth - clientWidth) / 2;
+          ? `${targetOffsetLeft + (clientWidth - tooltipWidth) / 2}px`
+          : `${targetOffsetLeft - (tooltipWidth - clientWidth) / 2}px`;
+
+      // left & right
+      const centerOffsetFromHeight =
+        clientWidth > tooltipWidth
+          ? `${targetOffsetTop + (clientHeight - tooltipHeight) / 2}px`
+          : `${targetOffsetTop - (tooltipHeight - clientHeight) / 2}px`;
 
       switch (align) {
         case 'right':
+          theTooltip.style.top = centerOffsetFromHeight;
+          theTooltip.style.left = rightOffset;
           break;
         case 'left':
+          theTooltip.style.top = centerOffsetFromHeight;
+          theTooltip.style.left = leftOffset;
           break;
         case 'bottom-left':
-          theTooltip.style.top = bottomPosition;
-          theTooltip.style.left = `${targetOffsetLeft}px`;
+          theTooltip.style.top = bottomOffset;
+          theTooltip.style.left = targetOffsetLeftPosition;
           break;
         case 'bottom-center':
-          theTooltip.style.top = bottomPosition;
-          theTooltip.style.left = `${centerOffset}px`;
+          theTooltip.style.top = bottomOffset;
+          theTooltip.style.left = centerOffsetFromWidth;
           break;
         case 'bottom-right':
-          theTooltip.style.top = bottomPosition;
-          theTooltip.style.right = `${
-            window.innerWidth - (targetOffsetLeft + clientWidth)
-          }px`;
+          theTooltip.style.top = bottomOffset;
+          theTooltip.style.right = topBottomRightOffset;
           break;
         case 'top-left':
-          theTooltip.style.top = topPosition;
-          theTooltip.style.left = `${targetOffsetLeft}px`;
+          theTooltip.style.top = topOffset;
+          theTooltip.style.left = targetOffsetLeftPosition;
           break;
         case 'top-center':
-          theTooltip.style.top = topPosition;
-          theTooltip.style.left = `${centerOffset}px`;
+          theTooltip.style.top = topOffset;
+          theTooltip.style.left = centerOffsetFromWidth;
           break;
         case 'top-right':
-          theTooltip.style.top = topPosition;
-          theTooltip.style.right = `${
-            window.innerWidth - (targetOffsetLeft + clientWidth)
-          }px`;
+          theTooltip.style.top = topOffset;
+          theTooltip.style.right = topBottomRightOffset;
           break;
         default:
       }
@@ -118,7 +137,6 @@ const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
           }),
           ...(triggerOnClick && {
             onClick: createTooltip,
-            onTouchStart: createTooltip,
           }),
         });
       })}
