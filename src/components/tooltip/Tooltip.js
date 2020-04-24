@@ -14,7 +14,7 @@ const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
           [`rcl-tooltip--align-${align}`]: align,
         })}
       >
-        {content}
+        <div className="rcl-tooltip__content">{content}</div>
       </div>
     );
   };
@@ -40,21 +40,17 @@ const Tooltip = ({ children, align, triggerOnClick, ...props }) => {
       const targetOffsetLeftPosition = `${offsetLeft}px`;
       const targetOffsetTop = offsetTop;
 
-      const arrowOffset = isAnchor ? 10 : 14;
-
       // All top tooltip instances
-      const topOffset = `${targetOffsetTop - (tooltipHeight + arrowOffset)}px`;
+      const topOffset = `${targetOffsetTop - tooltipHeight}px`;
 
       // All bottom tooltip instances
-      const bottomOffset = `${
-        targetOffsetTop + (clientHeight + arrowOffset)
-      }px`;
+      const bottomOffset = `${targetOffsetTop + clientHeight}px`;
 
       // right
-      const rightOffset = `${targetOffsetLeft + (clientWidth + arrowOffset)}px`;
+      const rightOffset = `${targetOffsetLeft + clientWidth}px`;
 
       // left
-      const leftOffset = `${targetOffsetLeft - (tooltipWidth + arrowOffset)}px`;
+      const leftOffset = `${targetOffsetLeft - tooltipWidth}px`;
 
       // top-right & bottom-right
       const topBottomRightOffset = `${
