@@ -20,91 +20,89 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
     );
   };
 
-  const createTooltip = (e) => {
+  const createTooltip = async (e) => {
     const content = e.target.getAttribute('data-tooltip');
 
     const {
       target: { offsetTop, offsetLeft, clientWidth, clientHeight },
     } = e;
 
-    setToolTip(createTooltipElement(content));
+    await setToolTip(createTooltipElement(content));
 
-    setTimeout(() => {
-      const theTooltip = document.querySelector('#rcl-tooltip');
-      const coords = theTooltip.getBoundingClientRect();
+    const theTooltip = await document.querySelector('#rcl-tooltip');
+    const coords = await theTooltip.getBoundingClientRect();
 
-      const tooltipHeight = coords.height;
-      const tooltipWidth = coords.width;
+    const tooltipHeight = coords.height;
+    const tooltipWidth = coords.width;
 
-      const targetOffsetLeft = offsetLeft;
-      const targetOffsetLeftPosition = `${offsetLeft}px`;
-      const targetOffsetTop = offsetTop;
+    const targetOffsetLeft = offsetLeft;
+    const targetOffsetLeftPosition = `${offsetLeft}px`;
+    const targetOffsetTop = offsetTop;
 
-      // All top tooltip instances
-      const topOffset = `${targetOffsetTop - tooltipHeight}px`;
+    // All top tooltip instances
+    const topOffset = `${targetOffsetTop - tooltipHeight}px`;
 
-      // All bottom tooltip instances
-      const bottomOffset = `${targetOffsetTop + clientHeight}px`;
+    // All bottom tooltip instances
+    const bottomOffset = `${targetOffsetTop + clientHeight}px`;
 
-      // right
-      const rightOffset = `${targetOffsetLeft + clientWidth}px`;
+    // right
+    const rightOffset = `${targetOffsetLeft + clientWidth}px`;
 
-      // left
-      const leftOffset = `${targetOffsetLeft - tooltipWidth}px`;
+    // left
+    const leftOffset = `${targetOffsetLeft - tooltipWidth}px`;
 
-      // top-right & bottom-right
-      const topBottomRightOffset = `${
-        window.innerWidth - (targetOffsetLeft + clientWidth)
-      }px`;
+    // top-right & bottom-right
+    const topBottomRightOffset = `${
+      window.innerWidth - (targetOffsetLeft + clientWidth)
+    }px`;
 
-      // top-center & bottom-cnenter
-      const centerOffsetFromWidth =
-        clientWidth > tooltipWidth
-          ? `${targetOffsetLeft + (clientWidth - tooltipWidth) / 2}px`
-          : `${targetOffsetLeft - (tooltipWidth - clientWidth) / 2}px`;
+    // top-center & bottom-cnenter
+    const centerOffsetFromWidth =
+      clientWidth > tooltipWidth
+        ? `${targetOffsetLeft + (clientWidth - tooltipWidth) / 2}px`
+        : `${targetOffsetLeft - (tooltipWidth - clientWidth) / 2}px`;
 
-      // left & right
-      const centerOffsetFromHeight =
-        clientWidth > tooltipWidth
-          ? `${targetOffsetTop + (clientHeight - tooltipHeight) / 2}px`
-          : `${targetOffsetTop - (tooltipHeight - clientHeight) / 2}px`;
+    // left & right
+    const centerOffsetFromHeight =
+      clientWidth > tooltipWidth
+        ? `${targetOffsetTop + (clientHeight - tooltipHeight) / 2}px`
+        : `${targetOffsetTop - (tooltipHeight - clientHeight) / 2}px`;
 
-      switch (align) {
-        case 'right':
-          theTooltip.style.top = centerOffsetFromHeight;
-          theTooltip.style.left = rightOffset;
-          break;
-        case 'left':
-          theTooltip.style.top = centerOffsetFromHeight;
-          theTooltip.style.left = leftOffset;
-          break;
-        case 'bottom-left':
-          theTooltip.style.top = bottomOffset;
-          theTooltip.style.left = targetOffsetLeftPosition;
-          break;
-        case 'bottom-center':
-          theTooltip.style.top = bottomOffset;
-          theTooltip.style.left = centerOffsetFromWidth;
-          break;
-        case 'bottom-right':
-          theTooltip.style.top = bottomOffset;
-          theTooltip.style.right = topBottomRightOffset;
-          break;
-        case 'top-left':
-          theTooltip.style.top = topOffset;
-          theTooltip.style.left = targetOffsetLeftPosition;
-          break;
-        case 'top-center':
-          theTooltip.style.top = topOffset;
-          theTooltip.style.left = centerOffsetFromWidth;
-          break;
-        case 'top-right':
-          theTooltip.style.top = topOffset;
-          theTooltip.style.right = topBottomRightOffset;
-          break;
-        default:
-      }
-    }, 0);
+    switch (align) {
+      case 'right':
+        theTooltip.style.top = centerOffsetFromHeight;
+        theTooltip.style.left = rightOffset;
+        break;
+      case 'left':
+        theTooltip.style.top = centerOffsetFromHeight;
+        theTooltip.style.left = leftOffset;
+        break;
+      case 'bottom-left':
+        theTooltip.style.top = bottomOffset;
+        theTooltip.style.left = targetOffsetLeftPosition;
+        break;
+      case 'bottom-center':
+        theTooltip.style.top = bottomOffset;
+        theTooltip.style.left = centerOffsetFromWidth;
+        break;
+      case 'bottom-right':
+        theTooltip.style.top = bottomOffset;
+        theTooltip.style.right = topBottomRightOffset;
+        break;
+      case 'top-left':
+        theTooltip.style.top = topOffset;
+        theTooltip.style.left = targetOffsetLeftPosition;
+        break;
+      case 'top-center':
+        theTooltip.style.top = topOffset;
+        theTooltip.style.left = centerOffsetFromWidth;
+        break;
+      case 'top-right':
+        theTooltip.style.top = topOffset;
+        theTooltip.style.right = topBottomRightOffset;
+        break;
+      default:
+    }
   };
 
   const removeTooltip = () => {
@@ -159,7 +157,7 @@ Tooltip.propTypes = {
   /** triggers the tooltip onClick/onTouchStart */
   triggerOnClick: PropTypes.bool,
   /** Tooltip theme variant */
-  variant: PropTypes.oneOf('info', 'warning', 'error', 'success'),
+  variant: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 
 Tooltip.defaultProps = {
