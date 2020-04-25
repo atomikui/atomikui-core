@@ -8,7 +8,7 @@ import { Tooltip, Button, Link } from '@alaneicker/react-component-library';
     <Button size="md">Button Trigger</Button>
   </Tooltip>
   <Tooltip data-tooltip="This is a tooltip" align="top-center">
-    <Link href="">Link Trigger</Link>
+    <Link href="#">Link Trigger</Link>
   </Tooltip>
 </div>;
 ```
@@ -68,9 +68,6 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
 import { Tooltip, Button } from '@alaneicker/react-component-library';
 
 <div className="flex flex--hr-16">
-  <Tooltip data-tooltip="This is a tooltip" variant="dark" align="top-center">
-    <Button size="md">Dark</Button>
-  </Tooltip>
   <Tooltip data-tooltip="This is a tooltip" variant="info" align="top-center">
     <Button size="md">Info</Button>
   </Tooltip>

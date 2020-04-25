@@ -125,6 +125,8 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
         return cloneElement(child, {
           ...props,
           ...(!triggerOnClick && {
+            onFocus: createTooltip,
+            onBlur: removeTooltip,
             onMouseEnter: createTooltip,
             onMouseLeave: removeTooltip,
           }),
@@ -157,7 +159,7 @@ Tooltip.propTypes = {
   /** triggers the tooltip onClick/onTouchStart */
   triggerOnClick: PropTypes.bool,
   /** Tooltip theme variant */
-  variant: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
+  variant: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
 };
 
 Tooltip.defaultProps = {

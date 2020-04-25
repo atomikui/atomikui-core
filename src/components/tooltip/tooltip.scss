@@ -2,14 +2,14 @@
   animation: fadeIn 0.2s linear;
   display: flex;
   flex-direction: column;
+  pointer-events: none;
   position: absolute;
   z-index: 1000;
 
   &__content {
-    background: $white;
-    border: rem(1) solid darken($gray-100, 5%);
+    background: $gray-500;
     border-radius: rem($base-border-radius);
-    box-shadow: rem(0 6 15) rgba(0, 0, 0, 0.2);
+    color: $white;
     font-size: rem(14);
     max-width: rem(250);
     padding: rem(12);
@@ -18,7 +18,7 @@
   &::after {
     border-left: rem(8) solid transparent;
     border-right: rem(8) solid transparent;
-    border-top: rem(8) solid $white;
+    border-top: rem(8) solid $gray-500;
     content: '';
     height: 0;
     width: 0;
@@ -38,10 +38,6 @@
   &--align-bottom-center,
   &--align-bottom-right {
     padding: rem(3 0 0);
-
-    & > .rcl-tooltip__content {
-      box-shadow: rem(0 -6 15) rgba(0, 0, 0, 0.2);
-    }
 
     &:after {
       margin-bottom: rem(-1);
@@ -94,13 +90,9 @@
   &--align-left {
     padding: rem(0 3 0 0);
 
-    & > .rcl-tooltip__content {
-      box-shadow: rem(6 0 15) rgba(0, 0, 0, 0.2);
-    }
-
     &:after {
       border-bottom: rem(8) solid transparent;
-      border-left: rem(8) solid $white;
+      border-left: rem(8) solid $gray-500;
       border-top: rem(8) solid transparent;
       height: 0;
       margin-left: rem(-1);
@@ -112,13 +104,9 @@
     flex-direction: row-reverse;
     padding: rem(0 0 0 3);
 
-    & > .rcl-tooltip__content {
-      box-shadow: rem(-6 0 15) rgba(0, 0, 0, 0.2);
-    }
-
     &:after {
       border-bottom: rem(8) solid transparent;
-      border-right: rem(8) solid $white;
+      border-right: rem(8) solid $gray-500;
       border-top: rem(8) solid transparent;
       height: 0;
       margin-right: rem(-1);
