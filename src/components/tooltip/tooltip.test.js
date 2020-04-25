@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import { act } from 'react-dom/test-utils';
 import { mount, configure } from 'enzyme';
 import Button from '../button';
 import Tooltip from './Tooltip';
@@ -14,49 +13,60 @@ document.addEventListener = jest.fn((event, cb) => {
 });
 
 describe('withToastProvider', () => {
-  const App = () => {
-    return (
+  let tooltip;
+
+  beforeEach(() => {
+    tooltip = mount(
       <Tooltip
         data-tooltip="This is a tooltip"
         variant="warning"
-        triggerOnClick
+        align="top-left"
       >
         <Button size="md">button</Button>
-      </Tooltip>
+      </Tooltip>,
     );
-  };
-
-  let app;
-
-  beforeEach(() => {
-    app = mount(<App />);
   });
 
-  it('Should create tooltip', () => {
-    app.find('Button').simulate('click');
-    expect(app.find('#rcl-tooltip').length).toBe(1);
+  afterEach(() => {
+    tooltip.find('Button').simulate('blur');
+  });
+
+  it('Should create and remove tooltip', () => {
+    tooltip.find('Button').simulate('focus');
+    expect(tooltip.find('#rcl-tooltip').length).toBe(1);
+
+    tooltip.find('Button').simulate('blur');
+    expect(tooltip.find('#rcl-tooltip').length).toBe(0);
   });
 
   it('Should create themed tooltip', () => {
-    app.find('Button').simulate('click');
-    expect(app.find('#rcl-tooltip').hasClass('rcl-tooltip--warning')).toBe(
-      true,
-    );
+    tooltip.find('Button').simulate('focus');
+    expect(
+      document
+        .querySelector('#rcl-tooltip')
+        .classList.contains('rcl-tooltip--warning'),
+    ).toBe(true);
   });
 
-  it('Should dismiss on document click', () => {
-    app.find('Button').simulate('click');
-
-    act(() => {
-      map.click({
-        target: {
-          getAttribute() {
-            return null;
-          },
-        },
-      });
-    });
-
-    expect(app.find('#rcl-tooltip').length).toBe(0);
-  });
+  test.each([
+    'right',
+    'left',
+    'bottom-left',
+    'bottom-center',
+    'bottom-right',
+    'top-left',
+    'top-center',
+    'top-right',
+  ])(
+    'Should set the position modifier class as .rcl-tooltip--align-%p',
+    (align) => {
+      tooltip.setProps({ align });
+      tooltip.find('Button').simulate('focus');
+      expect(
+        document
+          .querySelector('#rcl-tooltip')
+          .classList.contains(`rcl-tooltip--align-${align}`),
+      ).toBe(true);
+    },
+  );
 });

@@ -29,8 +29,8 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
 
     await setToolTip(createTooltipElement(content));
 
-    const theTooltip = await document.querySelector('#rcl-tooltip');
-    const coords = await theTooltip.getBoundingClientRect();
+    const theTooltip = document.querySelector('#rcl-tooltip');
+    const coords = theTooltip.getBoundingClientRect();
 
     const tooltipHeight = coords.height;
     const tooltipWidth = coords.width;
@@ -112,6 +112,7 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
   useEffect(() => {
     if (triggerOnClick) {
       document.addEventListener('click', (e) => {
+        console.log('sdfasdfasdfasdf');
         if (!e.target.getAttribute('data-tooltip')) {
           setToolTip(null);
         }
