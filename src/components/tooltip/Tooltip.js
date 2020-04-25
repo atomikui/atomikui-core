@@ -129,6 +129,7 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
             onBlur: removeTooltip,
             onMouseEnter: createTooltip,
             onMouseLeave: removeTooltip,
+            ...(tooltip && { 'aria-describedby': 'rcl-tooltip' }),
           }),
           ...(triggerOnClick && {
             onClick: createTooltip,
@@ -154,8 +155,6 @@ Tooltip.propTypes = {
   ]),
   /** The child element that will recieve a tooltip */
   children: PropTypes.node,
-  /** The text that will be rendered as tooltip content */
-  title: PropTypes.string,
   /** triggers the tooltip onClick/onTouchStart */
   triggerOnClick: PropTypes.bool,
   /** Tooltip theme variant */
@@ -165,7 +164,6 @@ Tooltip.propTypes = {
 Tooltip.defaultProps = {
   align: 'top-left',
   children: <></>,
-  title: '',
   triggerOnClick: false,
   variant: null,
 };
