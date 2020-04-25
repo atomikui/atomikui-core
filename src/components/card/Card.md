@@ -10,7 +10,7 @@ import {
   faEye,
 } from '@fortawesome/free-solid-svg-icons';
 
-<div className="flex flex--nowrap flex--hr-16">
+<div className="flex@medium flex@medium--nowrap flex--hr-16">
   <Card
     title="Default Card"
     footer={
