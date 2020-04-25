@@ -6,6 +6,7 @@ const Button = ({
   block,
   className,
   children,
+  condensed,
   disabled,
   shape,
   size,
@@ -19,6 +20,7 @@ const Button = ({
         [`rcl-btn--${variant}`]: variant,
         [`rcl-btn--${shape}`]: shape,
         [`rcl-btn--${size}`]: size,
+        'rcl-btn--condensed': condensed,
         'rcl-btn--block': block,
       })}
       type={type}
@@ -37,6 +39,8 @@ Button.propTypes = {
   className: PropTypes.string,
   /** Specifies button content. */
   children: PropTypes.node,
+  /** Condensed button horizontal padding */
+  condensed: PropTypes.bool,
   /** Specifies if button is diabled. */
   disabled: PropTypes.bool,
   /** Specifies a button's shape. */
@@ -62,6 +66,7 @@ Button.defaultProps = {
   block: false,
   className: '',
   children: '',
+  condensed: false,
   disabled: false,
   shape: null,
   size: null,

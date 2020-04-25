@@ -1,5 +1,5 @@
 ```jsx
-import { Card, Link } from '@alaneicker/react-component-library';
+import { Card, Link, Button } from '@alaneicker/react-component-library';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import {
   faThumbsUp,
@@ -13,18 +13,18 @@ import {
   title="Why React is Better Than Angular"
   footer={
     <div className="text-align-center">
-      <Link href="/download" className="margin-left-8 margin-right-8">
+      <Button variant="hollow" condensed>
         <Icon icon={faThumbsUp} size="lg" color="#444" />
-      </Link>
-      <Link href="/download" className="margin-left-8 margin-right-8">
+      </Button>
+      <Button variant="hollow" condensed>
         <Icon icon={faComment} size="lg" color="#444" />
-      </Link>
-      <Link href="/download" className="margin-left-8 margin-right-8">
+      </Button>
+      <Button variant="hollow" condensed>
         <Icon icon={faBookmark} size="lg" color="#444" />
-      </Link>
-      <Link href="/download" className="margin-left-8 margin-right-8">
+      </Button>
+      <Button variant="hollow" condensed>
         <Icon icon={faEye} size="lg" color="#444" />
-      </Link>
+      </Button>
     </div>
   }
 >

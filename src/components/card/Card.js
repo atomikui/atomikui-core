@@ -18,7 +18,7 @@ Card.propTypes = {
   /** Adds custom component CSS classes */
   className: PropTypes.string,
   /** Card footer */
-  footer: PropTypes.string,
+  footer: PropTypes.node,
   /** Card title */
   title: PropTypes.string,
 };
@@ -26,7 +26,7 @@ Card.propTypes = {
 Card.defaultProps = {
   children: <></>,
   className: '',
-  footer: '',
+  footer: <></>,
   title: '',
 };
 
