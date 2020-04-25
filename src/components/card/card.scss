@@ -1,0 +1,23 @@
+$card-border: darken($gray-100, 8%);
+
+.rcl-card {
+  border: rem(1) solid $card-border;
+  border-radius: rem($base-border-radius);
+
+  &__header {
+    border-bottom: rem(1) solid $card-border;
+    font-size: rem(24);
+    font-weight: $font-semibold;
+    line-height: 1.3;
+    padding: rem(16);
+  }
+
+  &__body {
+    padding: rem(16);
+  }
+
+  &__footer {
+    border-top: rem(1) solid $card-border;
+    padding: rem(8 16);
+  }
+}
