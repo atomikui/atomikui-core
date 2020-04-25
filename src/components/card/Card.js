@@ -2,9 +2,14 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Card = ({ children, className, footer, title, ...others }) => {
+const Card = ({ children, className, footer, inverse, title, ...others }) => {
   return (
-    <div className={classnames('rcl-card', className, {})} {...others}>
+    <div
+      className={classnames('rcl-card', className, {
+        'rcl-card--inverse': inverse,
+      })}
+      {...others}
+    >
       {title && <div className="rcl-card__header">{title}</div>}
       {children && <div className="rcl-card__body">{children}</div>}
       {footer && <div className="rcl-card__footer">{footer}</div>}
@@ -19,6 +24,8 @@ Card.propTypes = {
   className: PropTypes.string,
   /** Card footer */
   footer: PropTypes.node,
+  /** Inverse color variant */
+  inverse: PropTypes.bool,
   /** Card title */
   title: PropTypes.string,
 };
@@ -27,6 +34,7 @@ Card.defaultProps = {
   children: <></>,
   className: '',
   footer: <></>,
+  inverse: false,
   title: '',
 };
 
