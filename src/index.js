@@ -1,4 +1,5 @@
 export { default as Accordion } from './components/accordion';
+export { default as AccordionItem } from './components/accordion/AccordionItem';
 export { default as Alert } from './components/alert';
 export { default as AutoComplete } from './components/auto-complete';
 export { default as Avatar } from './components/avatar';

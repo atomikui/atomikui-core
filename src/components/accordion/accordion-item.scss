@@ -1,0 +1,72 @@
+.rcl-accordion-item {
+  background: $gray-000;
+  border-radius: rem($border-radius);
+
+  &__trigger {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    display: flex;
+    font-size: rem(18);
+    justify-content: space-between;
+    padding: rem(8 16);
+    width: 100%;
+
+    &:hover {
+      background: $blue-000;
+    }
+  }
+
+  &__trigger__icon {
+    fill: $gray-500;
+    height: rem(18);
+    transition: transform 0.2s linear;
+    width: rem(18);
+  }
+
+  &__body {
+    //display: none;
+    padding: rem(8 16 16);
+  }
+
+  &.is-open {
+    .rcl-accordion-item__trigger__label {
+      text-shadow: rem(0 0 1) $black;
+    }
+
+    .rcl-accordion-item__trigger__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--inverse {
+    background: $gray-500;
+    color: $white;
+
+    .rcl-accordion-item__trigger {
+      color: $white;
+
+      &:hover {
+        background: lighten($gray-500, 5%);
+      }
+    }
+  }
+
+  // & > input:checked ~ &__content {
+  //   display: block;
+  // }
+
+  // & > input:focus ~ &__label {
+  //   background: $blue-000;
+  // }
+
+  // & > input:checked ~ &__label {
+  //   text-shadow: rem(0 0 1) $black;
+  // }
+
+  // & > input:checked ~ &__label > &__label__icon {
+  //   transform: rotate(180deg);
+  // }
+}
