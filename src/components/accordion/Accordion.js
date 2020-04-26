@@ -8,6 +8,12 @@ import generateId from '../../utilities/generateId';
 const Accordion = ({ className, multipleOpen, panels, ...others }) => {
   const type = multipleOpen ? 'checkbox' : 'radio';
 
+  if (multipleOpen) {
+    const [state, setState] = useState([]);
+  } else {
+    const [state, setState] = useState(null);
+  }
+
   const [expanded, setExpanded] = useState(() => {
     let state = {};
 

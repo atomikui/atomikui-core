@@ -1,21 +1,17 @@
 $border: rem(1) solid lighten($gray-200, 15%);
 
 .rcl-accordion {
-  background: $white;
-  border: rem(1) solid $gray-200;
-  border-radius: rem($border-radius);
-
-  & > * + * {
-    border-top: $border;
-  }
-
   &__panel {
+    background: $gray-100;
+    border-radius: rem($border-radius);
+    margin-bottom: rem(4);
+
     &__label {
       align-items: center;
       cursor: pointer;
       display: block;
       display: flex;
-      font-weight: $font-semibold;
+      font-size: rem(18);
       justify-content: space-between;
       padding: rem(8 16);
 
@@ -28,12 +24,12 @@ $border: rem(1) solid lighten($gray-200, 15%);
       fill: $gray-500;
       height: rem(18);
       width: rem(18);
+      transition: transform 0.2s linear;
     }
 
     &__content {
-      border-top: $border;
       display: none;
-      padding: rem(16);
+      padding: rem(8 16 16);
     }
 
     & > input {
@@ -47,6 +43,10 @@ $border: rem(1) solid lighten($gray-200, 15%);
 
     & > input:focus ~ &__label {
       box-shadow: inset rem(0 0 0 2) $blue-100;
+    }
+
+    & > input:checked ~ &__label {
+      text-shadow: rem(0 0 0.8) $black;
     }
 
     & > input:checked ~ &__label > &__label__icon {
