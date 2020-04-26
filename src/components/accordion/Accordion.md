@@ -6,6 +6,7 @@ The `Accordion` component organizes content within collapsable items. It allows 
 import { Accordion } from '@alaneicker/react-component-library';
 
 <Accordion
+  inverse
   panels={[
     { label: 'Panel Heading 1', content: 'Panel 1 content...' },
     { label: 'Panel Heading 2', content: 'Panel 2 content...' },

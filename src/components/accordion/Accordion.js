@@ -5,7 +5,7 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import generateId from '../../utilities/generateId';
 
-const Accordion = ({ className, multipleOpen, panels, ...others }) => {
+const Accordion = ({ className, inverse, multipleOpen, panels, ...others }) => {
   const type = multipleOpen ? 'checkbox' : 'radio';
 
   if (multipleOpen) {
@@ -39,7 +39,12 @@ const Accordion = ({ className, multipleOpen, panels, ...others }) => {
   };
 
   return (
-    <div className={classnames('rcl-accordion', classnames)} {...others}>
+    <div
+      className={classnames('rcl-accordion', classnames, {
+        'rcl-accordion--inverse': inverse,
+      })}
+      {...others}
+    >
       {panels.map(({ label, content }, index) => {
         const id = generateId('control');
         const name = multipleOpen ? `control_${index}` : `control`;
@@ -86,6 +91,8 @@ const Accordion = ({ className, multipleOpen, panels, ...others }) => {
 Accordion.propTypes = {
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Inverse color variant */
+  inverse: PropTypes.bool,
   /** Array representing accordion items */
   panels: PropTypes.arrayOf(
     PropTypes.shape({
@@ -103,6 +110,7 @@ Accordion.propTypes = {
 
 Accordion.defaultProps = {
   className: '',
+  inverse: false,
   panels: [],
   multipleOpen: false,
 };
