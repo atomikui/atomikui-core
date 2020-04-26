@@ -7,11 +7,11 @@
     background: transparent;
     border: 0;
     cursor: pointer;
-    display: block;
     display: flex;
     font-size: rem(18);
     justify-content: space-between;
-    padding: rem(8 16);
+    outline: 0;
+    padding: rem(12 16);
     width: 100%;
 
     &:hover {
@@ -19,16 +19,37 @@
     }
   }
 
+  &__trigger__label {
+    font-weight: $font-medium;
+  }
+
   &__trigger__icon {
     fill: $gray-500;
     height: rem(18);
-    transition: transform 0.2s linear;
+    transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
     width: rem(18);
   }
 
   &__body {
-    //display: none;
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+    will-change: height;
+  }
+
+  &__body__content {
+    opacity: 0;
     padding: rem(8 16 16);
+    transition: opacity 0.3s linear 0.15s;
+  }
+
+  &[aria-expanded='true'] {
+    .rcl-accordion-item__body__content {
+      opacity: 1;
+    }
+
+    .rcl-accordion-item__trigger__icon {
+      transform: rotate(180deg);
+    }
   }
 
   &.is-open {

@@ -5,15 +5,35 @@ The `Accordion` component organizes content within collapsable items. It allows 
 ```jsx
 import { Accordion, AccordionItem } from '@alaneicker/react-component-library';
 
-<Accordion inverse>
+<Accordion>
   <AccordionItem label="Accordion Heading 1">
-    Accordion Item 1 content...
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in varius
+    est. Mauris lacinia lacinia lectus. Sed finibus orci sed nisl eleifend, eu
+    feugiat augue molestie. Quisque laoreet eros sit amet dolor varius, in
+    varius ligula gravida. Pellentesque auctor aliquam nulla, et venenatis
+    lectus malesuada et. Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit. Maecenas in varius est. Mauris lacinia lacinia lectus. Sed finibus
+    orci sed nisl eleifend, eu feugiat augue molestie. Quisque laoreet eros sit
+    amet dolor varius, in varius ligula gravida. Pellentesque auctor aliquam
+    nulla, et venenatis lectus malesuada et. Lorem ipsum dolor sit amet,
+    consectetur adipiscing elit. Maecenas in varius est. Mauris lacinia lacinia
+    lectus. Sed finibus orci sed nisl eleifend, eu feugiat augue molestie.
+    Quisque laoreet eros sit amet dolor varius, in varius ligula gravida.
+    Pellentesque auctor aliquam nulla, et venenatis lectus malesuada et.
   </AccordionItem>
   <AccordionItem label="Accordion Heading 2">
-    Accordion Item 2 content...
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in varius
+    est. Mauris lacinia lacinia lectus. Sed finibus orci sed nisl eleifend, eu
+    feugiat augue molestie. Quisque laoreet eros sit amet dolor varius, in
+    varius ligula gravida. Pellentesque auctor aliquam nulla, et venenatis
+    lectus malesuada et.
   </AccordionItem>
   <AccordionItem label="Accordion Heading 3">
-    Accordion Item 3 content...
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in varius
+    est. Mauris lacinia lacinia lectus. Sed finibus orci sed nisl eleifend, eu
+    feugiat augue molestie. Quisque laoreet eros sit amet dolor varius, in
+    varius ligula gravida. Pellentesque auctor aliquam nulla, et venenatis
+    lectus malesuada et.
   </AccordionItem>
 </Accordion>;
 ```

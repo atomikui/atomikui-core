@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
@@ -12,14 +12,23 @@ const AccordionItem = ({
   label,
   ...others
 }) => {
+  const [isExpanded, setIsExpanded] = useState(expanded);
+  const contentRef = useRef();
+
   return (
     <div
       className={classnames('rcl-accordion-item', className, {
         'rcl-accordion-item--inverse': inverse,
       })}
+      aria-expanded={isExpanded}
       {...others}
     >
-      <button className="rcl-accordion-item__trigger">
+      <button
+        className="rcl-accordion-item__trigger"
+        onClick={() => {
+          return setIsExpanded(!isExpanded);
+        }}
+      >
         <span className="rcl-accordion-item__trigger__label">{label}</span>
         <Icon
           className="rcl-accordion-item__trigger__icon"
@@ -28,11 +37,14 @@ const AccordionItem = ({
         />
       </button>
       <div
-        className={classnames('rcl-accordion-item__body', {
-          'is-expanded': expanded,
-        })}
+        className="rcl-accordion-item__body"
+        style={{
+          height: isExpanded ? `${contentRef.current.scrollHeight}px` : 0,
+        }}
       >
-        {children}
+        <div className="rcl-accordion-item__body__content" ref={contentRef}>
+          {children}
+        </div>
       </div>
     </div>
   );
