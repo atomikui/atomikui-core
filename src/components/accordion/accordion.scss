@@ -1,10 +1,13 @@
 $border: rem(1) solid lighten($gray-200, 15%);
 
 .rcl-accordion {
+  & > * + * {
+    margin-top: rem(3);
+  }
+
   &__panel {
     background: $gray-000;
     border-radius: rem($border-radius);
-    margin-bottom: rem(4);
 
     &__label {
       align-items: center;
@@ -62,7 +65,7 @@ $border: rem(1) solid lighten($gray-200, 15%);
 
     .rcl-accordion__panel__label:hover,
     .rcl-accordion__panel > input:focus ~ .rcl-accordion__panel__label {
-      background: lighten($gray-500, 8%);
+      background: lighten($gray-500, 5%);
     }
 
     .rcl-accordion__panel > input:checked ~ .rcl-accordion__panel__label {
