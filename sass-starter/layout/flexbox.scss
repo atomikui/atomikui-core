@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 
   @each $increment in $spacing-increments {
-    &--hr-#{$increment} > * + * {
+    &--spacing-#{$increment} > * + * {
       margin-left: rem($increment);
     }
   }
@@ -83,8 +83,11 @@
 
     @media (max-width: $breakpoint) {
       &\@#{$name} {
-        &[class*='--hr'] > * + * {
-          margin-left: 0;
+        @each $increment in $spacing-increments {
+          &.flex--spacing-#{$increment} > * + * {
+            margin-top: rem($increment);
+            margin-left: 0;
+          }
         }
       }
     }

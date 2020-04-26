@@ -3,7 +3,7 @@ A Tooltip displays helpful te text when an element is hovered over, focused, or 
 ```jsx
 import { Tooltip, Button, Link } from '@alaneicker/react-component-library';
 
-<div className="flex flex--align-middle flex--hr-32">
+<div className="flex flex--align-middle flex--spacing-32">
   <Tooltip data-tooltip="This is a tooltip" align="top-center">
     <Button size="md">Button Trigger</Button>
   </Tooltip>
@@ -67,7 +67,7 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Tooltip, Button } from '@alaneicker/react-component-library';
 
-<div className="flex flex--hr-16">
+<div className="flex flex--spacing-16">
   <Tooltip data-tooltip="This is a tooltip" variant="info" align="top-center">
     <Button size="md">Info</Button>
   </Tooltip>
