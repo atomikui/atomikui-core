@@ -12,7 +12,7 @@ document.addEventListener = jest.fn((event, cb) => {
   map[event] = cb;
 });
 
-describe('withToastProvider', () => {
+describe('<Tooltip />', () => {
   let tooltip;
 
   beforeEach(() => {
