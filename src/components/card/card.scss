@@ -1,8 +1,5 @@
-$card-border: darken($gray-100, 8%);
-
 .rcl-card {
-  background: $white;
-  border: rem(1) solid $card-border;
+  background: $gray-100;
   border-radius: rem($base-border-radius);
 
   &__header {
@@ -22,7 +19,6 @@ $card-border: darken($gray-100, 8%);
 
   &--inverse {
     background: $gray-500;
-    border: 0;
     color: $white;
 
     // Override default anchor styles
