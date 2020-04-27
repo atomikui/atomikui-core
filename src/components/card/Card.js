@@ -2,11 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Card = ({ children, className, footer, inverse, title, ...others }) => {
+const Card = ({ children, className, footer, theme, title, ...others }) => {
   return (
     <div
       className={classnames('rcl-card', className, {
-        'rcl-card--inverse': inverse,
+        [`rcl-card--${theme}`]: theme,
       })}
       {...others}
     >
@@ -24,8 +24,8 @@ Card.propTypes = {
   className: PropTypes.string,
   /** Card footer */
   footer: PropTypes.node,
-  /** Inverse color variant */
-  inverse: PropTypes.bool,
+  /** theme theme variant */
+  theme: PropTypes.bool,
   /** Card title */
   title: PropTypes.string,
 };
@@ -34,7 +34,7 @@ Card.defaultProps = {
   children: <></>,
   className: '',
   footer: <></>,
-  inverse: false,
+  theme: false,
   title: '',
 };
 

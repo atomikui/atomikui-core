@@ -36,8 +36,8 @@ import {
     <Link href="/articles/why-react-is-better-than-angular">Read more</Link>
   </Card>
   <Card
-    inverse
-    title="Inverse Card"
+    theme="dark"
+    title="Dark Card"
     footer={
       <div className="text-align-center">
         <Button theme="hollow" condensed>
