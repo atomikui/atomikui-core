@@ -2,6 +2,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { mount, configure } from 'enzyme';
 import Accordion from './Accordion';
+import AccordionItem from './AccordionItem';
 
 configure({ adapter: new Adapter() });
 
@@ -10,12 +11,23 @@ describe('<Accordion />', () => {
 
   beforeEach(() => {
     accordion = mount(
-      <Accordion
-        panels={[
-          { label: 'Panel Heading 1', content: 'Panel 1 content...' },
-          { label: 'Panel Heading 2', content: 'Panel 2 content...' },
-        ]}
-      />,
+      <Accordion>
+        <AccordionItem label="Accordion Heading 1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          diam justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse
+          quis ultricies diam.
+        </AccordionItem>
+        <AccordionItem label="Accordion Heading 2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          diam justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse
+          quis ultricies diam.
+        </AccordionItem>
+        <AccordionItem label="Accordion Heading 3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+          diam justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse
+          quis ultricies diam.
+        </AccordionItem>
+      </Accordion>,
     );
   });
 
@@ -23,42 +35,21 @@ describe('<Accordion />', () => {
     expect(accordion.length).toBe(1);
   });
 
-  it('Should expand a panel', () => {
-    accordion.find('input').first().simulate('change');
-
-    expect(
-      accordion
-        .find('.rcl-accordion__panel__label')
-        .first()
-        .prop('aria-expanded'),
-    ).toBe(true);
+  it('Should should render 3 children', () => {
+    expect(accordion.find('AccordionItem').length).toBe(3);
   });
 
-  it('Should expand a multiple panels', () => {
-    accordion.setProps({ multipleOpen: true });
-
-    accordion
-      .find('input')
-      .first()
-      .simulate('change', { target: { checked: true } });
-
-    accordion
-      .find('input')
-      .last()
-      .simulate('change', { target: { checked: true } });
+  it('Should handle the click event if `multipleOpen` prop is false', () => {
+    accordion.find('.rcl-accordion-item__trigger').first().simulate('click');
 
     expect(
-      accordion
-        .find('.rcl-accordion__panel__label')
-        .first()
-        .prop('aria-expanded'),
+      accordion.find('.rcl-accordion-item').first().prop('aria-expanded'),
     ).toBe(true);
 
+    accordion.find('.rcl-accordion-item__trigger').first().simulate('click');
+
     expect(
-      accordion
-        .find('.rcl-accordion__panel__label')
-        .last()
-        .prop('aria-expanded'),
-    ).toBe(true);
+      accordion.find('.rcl-accordion-item').first().prop('aria-expanded'),
+    ).toBe(false);
   });
 });

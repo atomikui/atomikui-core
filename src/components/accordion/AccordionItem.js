@@ -38,8 +38,7 @@ const AccordionItem = ({
     >
       <button
         className="rcl-accordion-item__trigger"
-        onClick={(childState) => {
-          console.log(childState);
+        onClick={() => {
           return handleOnClick();
         }}
       >
