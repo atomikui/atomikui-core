@@ -18,7 +18,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 </>;
 ```
 
-### Tabs alignment
+### Tabs Alignment
 
 ```jsx
 import { Tabs, Tab } from '@alaneicker/react-component-library';
