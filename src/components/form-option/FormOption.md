@@ -1,3 +1,5 @@
+The FormOption component is a form control that renders a checkbox and radio button. Use this component when displaying a list of choices.
+
 ### Checkbox
 
 ```jsx

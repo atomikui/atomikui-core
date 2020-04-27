@@ -1,4 +1,6 @@
-Default
+A Hint provides the user with helpful information about a task that is being performed.
+
+### Default
 
 ```jsx
 import { Hint } from '@alaneicker/react-component-library';
@@ -6,7 +8,7 @@ import { Hint } from '@alaneicker/react-component-library';
 <Hint>This is a default hint</Hint>;
 ```
 
-States (Error, Warning)
+### States (Error, Warning)
 
 ```jsx
 import { Hint } from '@alaneicker/react-component-library';

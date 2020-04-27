@@ -1,3 +1,5 @@
+The Spinner component can be used tp indicate that a process is taking place. Unline the ProgressBar components, the Spinner does not indicate quantitative progress.
+
 ### Themes
 
 ```jsx

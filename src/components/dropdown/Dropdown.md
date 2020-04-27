@@ -1,3 +1,5 @@
+The Dropdown component is a form control that displays a list of selectable options.
+
 ### Default State
 
 ```jsx
@@ -9,7 +11,7 @@ const [value, setValue] = useState('');
 <Dropdown
   label="Select a Color"
   errorText="Please select a color"
-  onChange={e => setValue(e.target.value)}
+  onChange={(e) => setValue(e.target.value)}
   value={value}
   options={[
     { text: 'Red', value: 'Red' },
@@ -35,7 +37,7 @@ const [value, setValue] = useState('');
   errorText="Please select a color"
   hasError={!value}
   required
-  onChange={e => setValue(e.target.value)}
+  onChange={(e) => setValue(e.target.value)}
   value={value}
   options={[
     { text: 'Red', value: 'Red' },

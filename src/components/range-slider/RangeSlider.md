@@ -1,3 +1,5 @@
+The RangeSlider component is a form control that allows a user to specify a numeric value which must be no less than a given value, and no more than another given value.
+
 ### Basic Range Slider
 
 ```jsx

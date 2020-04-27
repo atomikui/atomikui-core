@@ -1,3 +1,5 @@
+The ProgressBar component is used as an indicator quantitative progress.
+
 ### Basic Progress Bar
 
 ```jsx

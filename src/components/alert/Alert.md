@@ -1,3 +1,5 @@
+The Alert component is used to provide the user with an important message without disrupting the user's task.
+
 ### States (default, info, warning, error, success)
 
 ```jsx

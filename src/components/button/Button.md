@@ -1,3 +1,5 @@
+The Button component is a form control that triggers an action when clicked.
+
 ### Button Variants
 
 ```jsx
