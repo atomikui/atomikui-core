@@ -6,6 +6,7 @@ const Tabs = ({
   align,
   children,
   className,
+  inverse,
   initialActiveTab,
   onChange,
   ...others
@@ -21,11 +22,13 @@ const Tabs = ({
     <div
       className={classnames('rcl-tabs', className, {
         [`rcl-tabs--align-${align}`]: align,
+        [`rcl-tabs--inverse`]: inverse,
       })}
       {...others}
     >
       {Children.map(children, (child, index) => {
         return cloneElement(child, {
+          inverse,
           active: index === activeTab,
           onClick: () => {
             return handleChange(index);
@@ -43,6 +46,8 @@ Tabs.propTypes = {
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Set the tabs theme as inverse */
+  inverse: PropTypes.bool,
   /** The inital active tab */
   initialActiveTab: PropTypes.number,
   /** onChange callback */
@@ -53,6 +58,7 @@ Tabs.defaultProps = {
   align: null,
   children: <></>,
   className: '',
+  inverse: false,
   initialActiveTab: 0,
   onChange() {},
 };

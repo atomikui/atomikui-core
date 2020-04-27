@@ -3,6 +3,11 @@
   padding: rem(16);
   display: none;
 
+  &--inverse {
+    background: lighten($gray-500, 6%);
+    color: $white;
+  }
+
   &.is-active {
     display: block;
   }

@@ -2,6 +2,10 @@
   background: $gray-100;
   display: flex;
 
+  &--inverse {
+    background: $gray-500;
+  }
+
   &--align-center {
     justify-content: center;
   }

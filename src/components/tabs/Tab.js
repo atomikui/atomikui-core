@@ -3,12 +3,13 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../button';
 
-const Tab = ({ active, className, label, onClick, ...others }) => {
+const Tab = ({ active, className, inverse, label, onClick, ...others }) => {
   return (
     <Button
       variant="hollow"
       className={classnames('rcl-tab', className, {
         'is-active': active,
+        'rcl-tab--inverse': inverse,
       })}
       {...(onClick && { onClick })}
       {...others}
@@ -25,6 +26,8 @@ Tab.propTypes = {
   className: PropTypes.string,
   /** Tab click event callback */
   onClick: PropTypes.func,
+  /** Sets Tab theme as inverse */
+  inverse: PropTypes.bool,
   /** Tab label text */
   label: PropTypes.string,
 };
@@ -32,6 +35,7 @@ Tab.propTypes = {
 Tab.defaultProps = {
   active: false,
   className: '',
+  inverse: false,
   onClick() {},
   label: '',
 };
