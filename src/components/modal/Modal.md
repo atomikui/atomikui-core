@@ -1,3 +1,5 @@
+A modal displays content that temporarily blocks interactions with the main part of a site or application.
+
 ### Modal Dialog
 
 ```jsx

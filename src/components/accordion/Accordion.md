@@ -1,4 +1,4 @@
-The `Accordion` component organizes content within collapsable items. It allows the display of only one collapsed item at a time.
+The Accordion component organizes content within collapsable items. It allows the display of only one collapsed item at a time.
 
 ### Accordion - Single Panel Open
 

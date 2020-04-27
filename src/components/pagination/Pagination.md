@@ -1,4 +1,4 @@
-The `Pagination` component is used to indicate a series of related content exists across multiple pages.
+The Pagination component is used to indicate a series of related content exists across multiple pages.
 
 ### Pagination as Links
 

@@ -1,3 +1,5 @@
+The Truncate component wraps text and truncates it at a word count specified by the `maxWords` prop.
+
 ### Defualt With "Show More/Less" Toggle
 
 ```jsx

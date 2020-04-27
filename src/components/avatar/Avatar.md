@@ -1,3 +1,5 @@
+An avatar is a graphical representation of something.
+
 ### Image Avatars
 
 An image avatar can be created by passing in a `src` and `alt` prop.

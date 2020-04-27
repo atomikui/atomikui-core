@@ -1,4 +1,4 @@
-A menu displays grouped navigation actions
+A Menu displays grouped navigation actions
 
 ### Vertical Menu
 

@@ -1,4 +1,4 @@
-A `Breadcrumb` indicates the current page’s location in relation to a navigational hierarchy.
+A Breadcrumb indicates the current page’s location in relation to a navigational hierarchy.
 
 ```jsx
 import { Breadcrumb, Link } from '@alaneicker/react-component-library';

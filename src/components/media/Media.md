@@ -1,4 +1,4 @@
-The `Media` component helps build repetitive layouts where some media is positioned alongside content.
+The Media component helps build repetitive layouts where some media is positioned alongside content.
 
 ```jsx
 import { Media, Button } from '@alaneicker/react-component-library';

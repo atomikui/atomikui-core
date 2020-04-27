@@ -1,4 +1,4 @@
-The `ButtonGroup` is a series of buttons together on a single line, representing selectable options.
+The ButtonGroup is a series of buttons together on a single line, representing selectable options.
 
 It is a stateless component, therefore the selected state must be managed externally.
 
