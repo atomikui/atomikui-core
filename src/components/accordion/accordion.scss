@@ -1,56 +1,23 @@
 $border: rem(1) solid lighten($gray-200, 15%);
 
 .rcl-accordion {
-  background: $white;
-  border: rem(1) solid $gray-200;
-  border-radius: rem($border-radius);
-
   & > * + * {
-    border-top: $border;
+    margin-top: rem(3);
   }
 
-  &__panel {
-    &__label {
-      align-items: center;
-      cursor: pointer;
-      display: block;
-      display: flex;
-      font-weight: $font-semibold;
-      justify-content: space-between;
-      padding: rem(8 16);
-
-      &:hover {
-        background: $blue-000;
-      }
+  &--inverse {
+    .rcl-accordion__panel {
+      background: $gray-500;
+      color: $white;
     }
 
-    &__label__icon {
-      fill: $gray-500;
-      height: rem(18);
-      width: rem(18);
+    .rcl-accordion__panel__label:hover,
+    .rcl-accordion__panel > input:focus ~ .rcl-accordion__panel__label {
+      background: lighten($gray-500, 5%);
     }
 
-    &__content {
-      border-top: $border;
-      display: none;
-      padding: rem(16);
-    }
-
-    & > input {
-      left: rem(-10000);
-      position: absolute;
-    }
-
-    & > input:checked ~ &__content {
-      display: block;
-    }
-
-    & > input:focus ~ &__label {
-      box-shadow: inset rem(0 0 0 2) $blue-100;
-    }
-
-    & > input:checked ~ &__label > &__label__icon {
-      transform: rotate(180deg);
+    .rcl-accordion__panel > input:checked ~ .rcl-accordion__panel__label {
+      text-shadow: rem(0 0 1) $white;
     }
   }
 }

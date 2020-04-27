@@ -7,6 +7,7 @@ module.exports = {
   components: () => {
     return [
       'src/components/accordion/Accordion.js',
+      'src/components/accordion/AccordionItem.js',
       'src/components/tabs/Tabs.js',
       'src/components/truncate/Truncate.js',
     ];

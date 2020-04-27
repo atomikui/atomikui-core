@@ -112,7 +112,6 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
   useEffect(() => {
     if (triggerOnClick) {
       document.addEventListener('click', (e) => {
-        console.log('sdfasdfasdfasdf');
         if (!e.target.getAttribute('data-tooltip')) {
           setToolTip(null);
         }
