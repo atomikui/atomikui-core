@@ -1,4 +1,4 @@
-The `AccordionItem` is used in conjunction with the [Accordion](/#/Content/Accordion) component and passed in as a child.
+The AccordionItem is used in conjunction with the [Accordion](/#/Content/Accordion) component and passed in as a child.
 
 ```jsx
 import { AccordionItem } from '@alaneicker/react-component-library';
@@ -14,3 +14,7 @@ import { AccordionItem } from '@alaneicker/react-component-library';
   Sed vitae mauris quam. Nam efficitur venenatis pulvinar. Suspendisse potenti.
 </AccordionItem>;
 ```
+
+#### Used With:
+
+[`<Accordion />`](/#/Content/Accordion)
