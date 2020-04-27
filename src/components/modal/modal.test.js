@@ -67,4 +67,12 @@ describe('<Modal />', () => {
 
     expect(onCloseSpy.called).toBe(false);
   });
+
+  it('Should set the overlay theme variant', () => {
+    modal.setProps({ overlayThemeVariant: 'white' });
+
+    expect(modal.find('.rcl-overlay').hasClass('rcl-overlay--white')).toBe(
+      true,
+    );
+  });
 });
