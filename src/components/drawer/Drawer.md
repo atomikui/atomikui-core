@@ -15,7 +15,7 @@ import {
 const [isOpen, setIsOpen] = useState(false);
 
 <>
-  <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
+  <Button theme="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
@@ -55,7 +55,7 @@ import {
 const [isOpen, setIsOpen] = useState(false);
 
 <>
-  <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
+  <Button theme="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right">
@@ -95,7 +95,7 @@ import {
 const [isOpen, setIsOpen] = useState(false);
 
 <>
-  <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
+  <Button theme="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="top">
@@ -135,7 +135,7 @@ import {
 const [isOpen, setIsOpen] = useState(false);
 
 <>
-  <Button variant="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
+  <Button theme="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="bottom">

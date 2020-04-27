@@ -11,30 +11,30 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
-const Alert = ({ align, className, children, variant, onClose, ...others }) => {
+const Alert = ({ align, className, children, theme, onClose, ...others }) => {
   return (
     <div
       className={classnames('rcl-alert', className, {
-        [`rcl-alert--${variant}`]: variant,
+        [`rcl-alert--${theme}`]: theme,
         [`rcl-alert--${align}`]: align,
       })}
       role="alert"
-      aria-live={variant === 'error' ? 'assertive' : 'polite'}
+      aria-live={theme === 'error' ? 'assertive' : 'polite'}
       aria-atomic="true"
       {...others}
     >
-      {(variant === 'info' || !variant) && (
+      {(theme === 'info' || theme === 'dark' || !theme) && (
         <Icon
           id="icon-info"
           icon={faInfoCircle}
           size="lg"
-          color={!variant ? '#027abf' : 'white'}
+          color={!theme ? '#027abf' : 'white'}
         />
       )}
-      {variant === 'success' && (
+      {theme === 'success' && (
         <Icon id="icon-success" icon={faCheckCircle} size="lg" color="white" />
       )}
-      {variant === 'warning' && (
+      {theme === 'warning' && (
         <Icon
           id="icon-warning"
           icon={faExclamationCircle}
@@ -42,7 +42,7 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
           color="white"
         />
       )}
-      {variant === 'error' && (
+      {theme === 'error' && (
         <Icon id="icon-error" icon={faTimesCircle} size="lg" color="white" />
       )}
       <div className="rcl-alert__body">{children}</div>
@@ -50,7 +50,7 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
         <div className="rcl-alert__footer">
           <Button
             className="rcl-alert__btn"
-            variant="hollow"
+            theme="hollow"
             onClick={onClose}
             aria-hidden="true"
           >
@@ -58,7 +58,7 @@ const Alert = ({ align, className, children, variant, onClose, ...others }) => {
               id="icon-close"
               icon={faTimes}
               size="lg"
-              color={!variant ? '#027abf' : 'white'}
+              color={!theme ? '#027abf' : 'white'}
             />
           </Button>
         </div>
@@ -77,7 +77,7 @@ Alert.propTypes = {
   /** Alert content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the alert theme variation. */
-  variant: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+  theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 
 Alert.defaultProps = {
@@ -86,7 +86,7 @@ Alert.defaultProps = {
   onClose: null,
   children: <></>,
   text: '',
-  variant: null,
+  theme: null,
 };
 
 export default Alert;

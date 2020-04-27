@@ -19,6 +19,7 @@ const RandomToastGenerator = withToastProvider(() => {
 
   const toastMessages = [
     { content: 'This is a default toast message!' },
+    { type: 'dark', content: 'This is an dark toast message!' },
     { type: 'info', content: 'This is an informational toast message!' },
     { type: 'warning', content: 'This is a warning toast message!' },
     { type: 'error', content: 'This is an error toast message!' },
@@ -38,7 +39,7 @@ const RandomToastGenerator = withToastProvider(() => {
   }, []);
 
   return (
-    <Button variant="primary" size="md" onClick={setRandomToast}>
+    <Button theme="primary" size="md" onClick={setRandomToast}>
       Add Random Toast
     </Button>
   );

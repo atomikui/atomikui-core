@@ -11,13 +11,13 @@ const Button = ({
   shape,
   size,
   type,
-  variant,
+  theme,
   ...others
 }) => {
   return (
     <button
       className={classnames('rcl-btn', className, {
-        [`rcl-btn--${variant}`]: variant,
+        [`rcl-btn--${theme}`]: theme,
         [`rcl-btn--${shape}`]: shape,
         [`rcl-btn--${size}`]: size,
         'rcl-btn--condensed': condensed,
@@ -50,7 +50,7 @@ Button.propTypes = {
   /** Specifies the type of button. */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /** Specifies the button variation. */
-  variant: PropTypes.oneOf([
+  theme: PropTypes.oneOf([
     'dark',
     'primary',
     'secondary',
@@ -72,7 +72,7 @@ Button.defaultProps = {
   shape: null,
   size: null,
   type: 'button',
-  variant: null,
+  theme: null,
 };
 
 export default Button;

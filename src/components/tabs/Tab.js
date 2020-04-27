@@ -6,7 +6,7 @@ import Button from '../button';
 const Tab = ({ active, className, inverse, label, onClick, ...others }) => {
   return (
     <Button
-      variant="hollow"
+      theme="hollow"
       className={classnames('rcl-tab', className, {
         'is-active': active,
         'rcl-tab--inverse': inverse,

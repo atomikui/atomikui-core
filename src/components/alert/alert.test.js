@@ -35,16 +35,16 @@ describe('<Alert />', () => {
   it('Should render the appropriate aria-live attribute value', () => {
     expect(alert.prop('aria-live')).toBe('polite');
 
-    alert.setProps({ variant: 'error' });
+    alert.setProps({ theme: 'error' });
 
     expect(alert.prop('aria-live')).toBe('assertive');
   });
 
   test.each(['success', 'error', 'warning', 'info'])(
     'Should render an %p Icon',
-    (variant) => {
-      alert.setProps({ variant });
-      expect(alert.find(`#icon-${variant}`).length).toBe(1);
+    (theme) => {
+      alert.setProps({ theme });
+      expect(alert.find(`#icon-${theme}`).length).toBe(1);
     },
   );
 });

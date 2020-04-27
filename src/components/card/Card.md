@@ -15,16 +15,16 @@ import {
     title="Default Card"
     footer={
       <div className="text-align-center">
-        <Button variant="hollow" condensed>
+        <Button theme="hollow" condensed>
           <Icon icon={faThumbsUp} size="lg" color="#444" />
         </Button>
-        <Button variant="hollow" condensed>
+        <Button theme="hollow" condensed>
           <Icon icon={faComment} size="lg" color="#444" />
         </Button>
-        <Button variant="hollow" condensed>
+        <Button theme="hollow" condensed>
           <Icon icon={faBookmark} size="lg" color="#444" />
         </Button>
-        <Button variant="hollow" condensed>
+        <Button theme="hollow" condensed>
           <Icon icon={faEye} size="lg" color="#444" />
         </Button>
       </div>
@@ -40,16 +40,16 @@ import {
     title="Inverse Card"
     footer={
       <div className="text-align-center">
-        <Button variant="hollow" condensed>
+        <Button theme="hollow" condensed>
           <Icon icon={faThumbsUp} size="lg" color="white" />
         </Button>
-        <Button variant="hollow" condensed>
+        <Button theme="hollow" condensed>
           <Icon icon={faComment} size="lg" color="white" />
         </Button>
-        <Button variant="hollow" condensed>
+        <Button theme="hollow" condensed>
           <Icon icon={faBookmark} size="lg" color="white" />
         </Button>
-        <Button variant="hollow" condensed>
+        <Button theme="hollow" condensed>
           <Icon icon={faEye} size="lg" color="white" />
         </Button>
       </div>

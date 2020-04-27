@@ -1,18 +1,19 @@
 The Button component is a form control that triggers an action when clicked.
 
-### Button Variants
+### Button themes
 
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
 <>
   <Button>Default</Button>
-  <Button variant="primary">Primary</Button>
-  <Button variant="secondary">Secondary</Button>
-  <Button variant="tertiary">Tertiary</Button>
-  <Button variant="warning">Warning</Button>
-  <Button variant="hollow">Hollow</Button>
-  <Button variant="link">Link</Button>
+  <Button theme="dark">Dark</Button>
+  <Button theme="primary">Primary</Button>
+  <Button theme="secondary">Secondary</Button>
+  <Button theme="tertiary">Tertiary</Button>
+  <Button theme="warning">Warning</Button>
+  <Button theme="hollow">Hollow</Button>
+  <Button theme="link">Link</Button>
 </>;
 ```
 
@@ -22,11 +23,11 @@ import { Button } from '@alaneicker/react-component-library';
 import { Button } from '@alaneicker/react-component-library';
 
 <>
-  <Button variant="primary">Default</Button>
-  <Button variant="primary" shape="square">
+  <Button theme="primary">Default</Button>
+  <Button theme="primary" shape="square">
     Square
   </Button>
-  <Button variant="primary" shape="pill">
+  <Button theme="primary" shape="pill">
     Pill
   </Button>
 </>;
@@ -37,7 +38,7 @@ import { Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
-<Button variant="primary" disabled>
+<Button theme="primary" disabled>
   Disabled
 </Button>;
 ```
@@ -47,7 +48,7 @@ import { Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
-<Button variant="primary" block>
+<Button theme="primary" block>
   Block Button
 </Button>;
 ```
@@ -59,11 +60,11 @@ import { Button } from '@alaneicker/react-component-library';
 
 <>
   <Button size="sm">Small</Button>
-  <Button variant="primary" size="md">
+  <Button theme="primary" size="md">
     Medium
   </Button>
-  <Button variant="secondary">Default</Button>
-  <Button variant="tertiary" size="lg">
+  <Button theme="secondary">Default</Button>
+  <Button theme="tertiary" size="lg">
     Large
   </Button>
 </>;

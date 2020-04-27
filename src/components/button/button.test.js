@@ -13,7 +13,7 @@ describe('<Button />', () => {
       <Button
         className="rcl-btn--custom"
         size="lg"
-        variant="primary"
+        theme="primary"
         type="submit"
         block
         disabled
@@ -32,7 +32,7 @@ describe('<Button />', () => {
     expect(button.children().text()).toBe('Submit');
   });
 
-  it('Should render theme based on `variant prop`', () => {
+  it('Should render theme based on `theme prop`', () => {
     expect(button.hasClass('rcl-btn--primary')).toBe(true);
   });
 
@@ -44,7 +44,7 @@ describe('<Button />', () => {
     expect(button.hasClass('rcl-btn--block')).toBe(true);
   });
 
-  it('Should render button size variant', () => {
+  it('Should render button size theme', () => {
     expect(button.hasClass('rcl-btn--lg')).toBe(true);
   });
 

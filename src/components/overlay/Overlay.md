@@ -7,7 +7,7 @@ import { Overlay, Button } from '@alaneicker/react-component-library';
 const [isActive, setIsActive] = useState(false);
 
 <>
-  <Button variant="primary" onClick={() => setIsActive(true)}>
+  <Button theme="primary" onClick={() => setIsActive(true)}>
     Show Overlay
   </Button>
 
@@ -24,16 +24,12 @@ import { Overlay, Button, Spinner } from '@alaneicker/react-component-library';
 const [isActive, setIsActive] = useState(false);
 
 <>
-  <Button variant="primary" onClick={() => setIsActive(true)}>
+  <Button theme="primary" onClick={() => setIsActive(true)}>
     Show Overlay
   </Button>
 
-  <Overlay
-    onClick={() => setIsActive(false)}
-    variant="white"
-    isActive={isActive}
-  >
-    <Spinner size="xlg" variant="blue" />
+  <Overlay onClick={() => setIsActive(false)} theme="white" isActive={isActive}>
+    <Spinner size="xlg" theme="blue" />
   </Overlay>
 </>;
 ```

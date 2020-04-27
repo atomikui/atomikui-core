@@ -22,6 +22,7 @@ $blue-500: #002d4a !default;
 $light-gray: #dedede;
 
 $alert-variants: (
+  dark: $gray-500,
   info: $blue-200,
   success: $green-100,
   error: $red-100,

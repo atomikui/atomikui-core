@@ -94,7 +94,7 @@ const DatePicker = ({
         />
         <Button
           className="rcl-date-picker__input__btn"
-          variant="hollow"
+          theme="hollow"
           size="md"
           onClick={() => {
             return setIsOpen(!isOpen);

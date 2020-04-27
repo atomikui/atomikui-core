@@ -13,7 +13,7 @@ const toggleModal = () => {
 };
 
 <>
-  <Button variant="primary" size="md" onClick={() => toggleModal()}>
+  <Button theme="primary" size="md" onClick={() => toggleModal()}>
     Toggle Modal
   </Button>
   <Modal
@@ -22,7 +22,7 @@ const toggleModal = () => {
     title="Modal Dialog"
     footer={
       <div className="text-align-right">
-        <Button variant="primary" size="md" onClick={() => toggleModal()}>
+        <Button theme="primary" size="md" onClick={() => toggleModal()}>
           OK
         </Button>
       </div>
@@ -49,41 +49,41 @@ import { useState } from 'react';
 import { Modal, Button } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
-const [variant, setVariant] = useState(null);
+const [theme, settheme] = useState(null);
 
 const toggleModal = (theme) => {
   if (theme) {
-    setVariant(theme);
+    settheme(theme);
   }
   setIsOpen(!isOpen);
 };
 
 <>
-  <Button variant="dark" size="md" onClick={() => toggleModal('dark')}>
+  <Button theme="dark" size="md" onClick={() => toggleModal('dark')}>
     Dark Modal
   </Button>
-  <Button variant="primary" size="md" onClick={() => toggleModal('info')}>
+  <Button theme="primary" size="md" onClick={() => toggleModal('info')}>
     Info Modal
   </Button>
-  <Button variant="warning" size="md" onClick={() => toggleModal('warning')}>
+  <Button theme="warning" size="md" onClick={() => toggleModal('warning')}>
     Warning Modal
   </Button>
-  <Button variant="tertiary" size="md" onClick={() => toggleModal('error')}>
+  <Button theme="tertiary" size="md" onClick={() => toggleModal('error')}>
     Error Modal
   </Button>
-  <Button variant="secondary" size="md" onClick={() => toggleModal('success')}>
+  <Button theme="secondary" size="md" onClick={() => toggleModal('success')}>
     Success Modal
   </Button>
 
   <Modal
-    variant={variant}
-    overlayThemeVariant="white"
+    theme={theme}
+    overlayThemetheme="white"
     isOpen={isOpen}
     onClose={toggleModal}
     title="Modal Dialog"
     footer={
       <div className="text-align-right">
-        <Button variant="white" size="md" onClick={() => toggleModal()}>
+        <Button theme="white" size="md" onClick={() => toggleModal()}>
           OK
         </Button>
       </div>

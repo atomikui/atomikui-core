@@ -68,24 +68,16 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
 import { Tooltip, Button } from '@alaneicker/react-component-library';
 
 <div className="flex flex--spacing-16">
-  <Tooltip data-tooltip="This is a tooltip" variant="info" align="top-center">
+  <Tooltip data-tooltip="This is a tooltip" theme="info" align="top-center">
     <Button size="md">Info</Button>
   </Tooltip>
-  <Tooltip
-    data-tooltip="This is a tooltip"
-    variant="warning"
-    align="top-center"
-  >
+  <Tooltip data-tooltip="This is a tooltip" theme="warning" align="top-center">
     <Button size="md">Warning</Button>
   </Tooltip>
-  <Tooltip data-tooltip="This is a tooltip" variant="error" align="top-center">
+  <Tooltip data-tooltip="This is a tooltip" theme="error" align="top-center">
     <Button size="md">Error</Button>
   </Tooltip>
-  <Tooltip
-    data-tooltip="This is a tooltip"
-    variant="success"
-    align="top-center"
-  >
+  <Tooltip data-tooltip="This is a tooltip" theme="success" align="top-center">
     <Button size="md">Success</Button>
   </Tooltip>
 </div>;

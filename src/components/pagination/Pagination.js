@@ -5,8 +5,6 @@ import generateId from '../../utilities/generateId';
 import List from '../list';
 import ListItem from '../list-item';
 
-// TODO: Add Button support
-
 const Pagination = ({ children, className, ...others }) => {
   return (
     <List className={classnames('rcl-pagination', className, {})} {...others}>
