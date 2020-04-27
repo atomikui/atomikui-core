@@ -117,7 +117,7 @@ Modal.propTypes = {
   /** title to be displayed in modal header */
   title: PropTypes.string,
   /** Modal theme variation */
-  variant: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+  variant: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 
 Modal.defaultProps = {

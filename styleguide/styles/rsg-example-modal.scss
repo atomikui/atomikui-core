@@ -1,5 +1,5 @@
 [data-preview='Modal'] > * {
   & > *:not(.rcl-overlay) {
-    margin-right: rem(8);
+    margin: rem(0 8 8 0);
   }
 }

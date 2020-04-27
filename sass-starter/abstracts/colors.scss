@@ -54,6 +54,10 @@ $text-colors: (
 ) !default;
 
 $btn-variants: (
+  dark: (
+    background-color: $gray-500,
+    font-color: $white,
+  ),
   primary: (
     background-color: $blue-200,
     font-color: $white,
@@ -130,6 +134,10 @@ $avatar-variant: (
 ) !default;
 
 $modal-variants: (
+  dark: (
+    background-color: $gray-500,
+    font-color: $white,
+  ),
   info: (
     background-color: $blue-200,
     font-color: $white,

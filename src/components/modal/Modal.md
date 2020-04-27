@@ -59,6 +59,9 @@ const toggleModal = (theme) => {
 };
 
 <>
+  <Button variant="dark" size="md" onClick={() => toggleModal('dark')}>
+    Dark Modal
+  </Button>
   <Button variant="primary" size="md" onClick={() => toggleModal('info')}>
     Info Modal
   </Button>
@@ -74,6 +77,7 @@ const toggleModal = (theme) => {
 
   <Modal
     variant={variant}
+    overlayThemeVariant="white"
     isOpen={isOpen}
     onClose={toggleModal}
     title="Modal Dialog"
