@@ -1,2 +1,16 @@
 .rcl-tabs {
+  background: $gray-100;
+  display: flex;
+
+  &--align-center {
+    justify-content: center;
+  }
+
+  &--align-right {
+    justify-content: flex-end;
+  }
+
+  &--align-stretch > * {
+    flex: 1;
+  }
 }

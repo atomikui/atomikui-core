@@ -9,6 +9,8 @@ module.exports = {
       'src/components/accordion/Accordion.js',
       'src/components/accordion/AccordionItem.js',
       'src/components/tabs/Tabs.js',
+      'src/components/tabs/Tab.js',
+      'src/components/tabs/TabPanel.js',
       'src/components/truncate/Truncate.js',
     ];
   },

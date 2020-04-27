@@ -1,0 +1,9 @@
+.rcl-tab-panel {
+  background: $gray-000;
+  padding: rem(16);
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

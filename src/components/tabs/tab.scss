@@ -1,0 +1,33 @@
+.rcl-tab {
+  position: relative;
+
+  &::before {
+    background: $blue-200;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: rem(2);
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in-out;
+    transition-timing-function: cubic-bezier(0.42, 0, 0, 1);
+    width: 0;
+  }
+
+  &:hover,
+  &:focus {
+    background: darken($gray-100, 4%);
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+
+  &.is-active {
+    &::before {
+      width: 100%;
+    }
+  }
+}
