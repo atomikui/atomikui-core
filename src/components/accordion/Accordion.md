@@ -7,63 +7,121 @@ import { Accordion, AccordionItem } from '@alaneicker/react-component-library';
 
 <Accordion>
   <AccordionItem label="Accordion Heading 1">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in varius
-    est. Mauris lacinia lacinia lectus. Sed finibus orci sed nisl eleifend, eu
-    feugiat augue molestie. Quisque laoreet eros sit amet dolor varius, in
-    varius ligula gravida. Pellentesque auctor aliquam nulla, et venenatis
-    lectus malesuada et. Lorem ipsum dolor sit amet, consectetur adipiscing
-    elit. Maecenas in varius est. Mauris lacinia lacinia lectus. Sed finibus
-    orci sed nisl eleifend, eu feugiat augue molestie. Quisque laoreet eros sit
-    amet dolor varius, in varius ligula gravida. Pellentesque auctor aliquam
-    nulla, et venenatis lectus malesuada et. Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit. Maecenas in varius est. Mauris lacinia lacinia
-    lectus. Sed finibus orci sed nisl eleifend, eu feugiat augue molestie.
-    Quisque laoreet eros sit amet dolor varius, in varius ligula gravida.
-    Pellentesque auctor aliquam nulla, et venenatis lectus malesuada et.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
+    justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
+    ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
+    est. Fusce erat sapien, aliquam id nisl quis, bibendum dignissim metus. Sed
+    convallis nibh vel maximus eleifend. Duis tristique turpis dui, in volutpat
+    nisi fringilla et. Suspendisse convallis cursus sodales. Suspendisse id
+    neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
+    turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
+    pulvinar. Suspendisse potenti.
   </AccordionItem>
   <AccordionItem label="Accordion Heading 2">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in varius
-    est. Mauris lacinia lacinia lectus. Sed finibus orci sed nisl eleifend, eu
-    feugiat augue molestie. Quisque laoreet eros sit amet dolor varius, in
-    varius ligula gravida. Pellentesque auctor aliquam nulla, et venenatis
-    lectus malesuada et.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
+    justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
+    ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
+    est. Fusce erat sapien, aliquam id nisl quis, bibendum dignissim metus. Sed
+    convallis nibh vel maximus eleifend. Duis tristique turpis dui, in volutpat
+    nisi fringilla et. Suspendisse convallis cursus sodales. Suspendisse id
+    neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
+    turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
+    pulvinar. Suspendisse potenti.
   </AccordionItem>
   <AccordionItem label="Accordion Heading 3">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in varius
-    est. Mauris lacinia lacinia lectus. Sed finibus orci sed nisl eleifend, eu
-    feugiat augue molestie. Quisque laoreet eros sit amet dolor varius, in
-    varius ligula gravida. Pellentesque auctor aliquam nulla, et venenatis
-    lectus malesuada et.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
+    justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
+    ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
+    est. Fusce erat sapien, aliquam id nisl quis, bibendum dignissim metus. Sed
+    convallis nibh vel maximus eleifend. Duis tristique turpis dui, in volutpat
+    nisi fringilla et. Suspendisse convallis cursus sodales. Suspendisse id
+    neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
+    turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
+    pulvinar. Suspendisse potenti.
   </AccordionItem>
 </Accordion>;
 ```
 
-<!-- ### Accordion - Multiple Panels Open
+### Accordion - Multiple Panels Open
 
 ```jsx
-import { Accordion } from '@alaneicker/react-component-library';
+import { Accordion, AccordionItem } from '@alaneicker/react-component-library';
 
-<Accordion
-  multipleOpen
-  panels={[
-    { label: 'Panel Heading 1', content: 'Panel 1 content...' },
-    { label: 'Panel Heading 2', content: 'Panel 2 content...' },
-    { label: 'Panel Heading 3', content: 'Panel 3 content...' },
-  ]}
-/>;
+<Accordion multipleOpen>
+  <AccordionItem label="Accordion Heading 1">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
+    justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
+    ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
+    est. Fusce erat sapien, aliquam id nisl quis, bibendum dignissim metus. Sed
+    convallis nibh vel maximus eleifend. Duis tristique turpis dui, in volutpat
+    nisi fringilla et. Suspendisse convallis cursus sodales. Suspendisse id
+    neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
+    turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
+    pulvinar. Suspendisse potenti.
+  </AccordionItem>
+  <AccordionItem label="Accordion Heading 2">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
+    justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
+    ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
+    est. Fusce erat sapien, aliquam id nisl quis, bibendum dignissim metus. Sed
+    convallis nibh vel maximus eleifend. Duis tristique turpis dui, in volutpat
+    nisi fringilla et. Suspendisse convallis cursus sodales. Suspendisse id
+    neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
+    turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
+    pulvinar. Suspendisse potenti.
+  </AccordionItem>
+  <AccordionItem label="Accordion Heading 3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
+    justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
+    ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
+    est. Fusce erat sapien, aliquam id nisl quis, bibendum dignissim metus. Sed
+    convallis nibh vel maximus eleifend. Duis tristique turpis dui, in volutpat
+    nisi fringilla et. Suspendisse convallis cursus sodales. Suspendisse id
+    neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
+    turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
+    pulvinar. Suspendisse potenti.
+  </AccordionItem>
+</Accordion>;
 ```
 
-### Accordion With Default Expanded Panel
+### Accordion - Inverse Theme
 
 ```jsx
-import { Accordion } from '@alaneicker/react-component-library';
+import { Accordion, AccordionItem } from '@alaneicker/react-component-library';
 
-<Accordion
-  multipleOpen
-  panels={[
-    { label: 'Panel Heading 1', content: 'Panel 1 content...', expanded: true },
-    { label: 'Panel Heading 2', content: 'Panel 2 content...' },
-    { label: 'Panel Heading 3', content: 'Panel 3 content...' },
-  ]}
-/>;
-``` -->
+<Accordion inverse>
+  <AccordionItem label="Accordion Heading 1">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
+    justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
+    ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
+    est. Fusce erat sapien, aliquam id nisl quis, bibendum dignissim metus. Sed
+    convallis nibh vel maximus eleifend. Duis tristique turpis dui, in volutpat
+    nisi fringilla et. Suspendisse convallis cursus sodales. Suspendisse id
+    neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
+    turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
+    pulvinar. Suspendisse potenti.
+  </AccordionItem>
+  <AccordionItem label="Accordion Heading 2">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
+    justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
+    ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
+    est. Fusce erat sapien, aliquam id nisl quis, bibendum dignissim metus. Sed
+    convallis nibh vel maximus eleifend. Duis tristique turpis dui, in volutpat
+    nisi fringilla et. Suspendisse convallis cursus sodales. Suspendisse id
+    neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
+    turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
+    pulvinar. Suspendisse potenti.
+  </AccordionItem>
+  <AccordionItem label="Accordion Heading 3">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
+    justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
+    ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
+    est. Fusce erat sapien, aliquam id nisl quis, bibendum dignissim metus. Sed
+    convallis nibh vel maximus eleifend. Duis tristique turpis dui, in volutpat
+    nisi fringilla et. Suspendisse convallis cursus sodales. Suspendisse id
+    neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
+    turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
+    pulvinar. Suspendisse potenti.
+  </AccordionItem>
+</Accordion>;
+```

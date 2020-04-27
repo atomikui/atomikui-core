@@ -1,9 +1,6 @@
 import React, { useState, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import generateId from '../../utilities/generateId';
 
 const Accordion = ({
   className,
@@ -12,27 +9,7 @@ const Accordion = ({
   multipleOpen,
   ...others
 }) => {
-  const type = multipleOpen ? 'checkbox' : 'radio';
-
-  if (multipleOpen) {
-    const [state, setState] = useState([]);
-  } else {
-    const [state, setState] = useState(null);
-  }
-
-  // const updateAriaExpanded = (index, isChecked) => {
-  //   if (type === 'radio') {
-  //     const state = {};
-
-  //     Object.keys(expanded).forEach((key) => {
-  //       state[key] = +key === index || false;
-  //     });
-
-  //     setExpanded(state);
-  //   } else {
-  //     setExpanded({ ...expanded, [index]: isChecked });
-  //   }
-  // };
+  const [isExpanded, setIsExpanded] = useState(null);
 
   return (
     <div
@@ -41,8 +18,16 @@ const Accordion = ({
       })}
       {...others}
     >
-      {Children.map(children, (child) => {
-        return cloneElement(child, { inverse });
+      {Children.map(children, (child, index) => {
+        return cloneElement(child, {
+          inverse,
+          ...(!multipleOpen && {
+            handleClick: (isOpen) => {
+              return setIsExpanded(isOpen ? null : index);
+            },
+            expanded: index === isExpanded,
+          }),
+        });
       })}
     </div>
   );

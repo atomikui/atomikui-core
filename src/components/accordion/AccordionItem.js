@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
@@ -8,12 +8,25 @@ const AccordionItem = ({
   children,
   className,
   expanded,
+  handleClick,
   inverse,
   label,
   ...others
 }) => {
   const [isExpanded, setIsExpanded] = useState(expanded);
   const contentRef = useRef();
+
+  const handleOnClick = () => {
+    if (handleClick) {
+      return handleClick(isExpanded);
+    }
+
+    return setIsExpanded(!isExpanded);
+  };
+
+  useEffect(() => {
+    setIsExpanded(expanded);
+  }, [expanded]);
 
   return (
     <div
@@ -25,8 +38,9 @@ const AccordionItem = ({
     >
       <button
         className="rcl-accordion-item__trigger"
-        onClick={() => {
-          return setIsExpanded(!isExpanded);
+        onClick={(childState) => {
+          console.log(childState);
+          return handleOnClick();
         }}
       >
         <span className="rcl-accordion-item__trigger__label">{label}</span>
@@ -61,6 +75,8 @@ AccordionItem.propTypes = {
   label: PropTypes.string,
   /** If set to true, the panel will be expanded by default */
   expanded: PropTypes.bool,
+  /** onClick callback */
+  handleClick: PropTypes.func,
 };
 
 AccordionItem.defaultProps = {
@@ -69,6 +85,7 @@ AccordionItem.defaultProps = {
   inverse: false,
   label: '',
   expanded: false,
+  handleClick: null,
 };
 
 export default AccordionItem;
