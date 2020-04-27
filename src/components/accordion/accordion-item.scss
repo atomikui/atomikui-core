@@ -14,7 +14,8 @@
     padding: rem(12 16);
     width: 100%;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: $blue-000;
     }
   }
@@ -69,25 +70,10 @@
     .rcl-accordion-item__trigger {
       color: $white;
 
-      &:hover {
-        background: lighten($gray-500, 5%);
+      &:hover,
+      &:focus {
+        background: lighten($gray-500, 8%);
       }
     }
   }
-
-  // & > input:checked ~ &__content {
-  //   display: block;
-  // }
-
-  // & > input:focus ~ &__label {
-  //   background: $blue-000;
-  // }
-
-  // & > input:checked ~ &__label {
-  //   text-shadow: rem(0 0 1) $black;
-  // }
-
-  // & > input:checked ~ &__label > &__label__icon {
-  //   transform: rotate(180deg);
-  // }
 }
