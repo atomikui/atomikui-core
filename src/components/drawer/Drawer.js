@@ -1,10 +1,4 @@
-import React, {
-  useEffect,
-  useRef,
-  useState,
-  Children,
-  cloneElement,
-} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
@@ -76,9 +70,7 @@ const Drawer = useTheme(
           style={styles}
           {...others}
         >
-          {Children.map(children, (child) => {
-            return cloneElement(child, { theme });
-          })}
+          {children}
         </div>
       </>
     );
