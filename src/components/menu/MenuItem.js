@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ListItem from '../list-item';
+import { ListItem } from '../list';
 
 const MenuItem = ({ children, ...props }) => {
   return <ListItem {...props}>{children}</ListItem>;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Link from '../link';
-import ListItem from '../list-item';
+import { ListItem } from '../list';
 
 const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
   const StepNumber = isComplete && href ? Link : 'span';

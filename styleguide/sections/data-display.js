@@ -8,7 +8,7 @@ module.exports = {
     return [
       'src/components/avatar/Avatar.js',
       'src/components/list/List.js',
-      'src/components/list-item/ListItem.js',
+      'src/components/list/ListItem.js',
     ];
   },
   sections: [
