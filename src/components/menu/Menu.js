@@ -10,6 +10,7 @@ const Menu = ({
   dividers,
   inline,
   inlineStretch,
+  theme,
   ...others
 }) => {
   return (
@@ -19,6 +20,7 @@ const Menu = ({
         'rcl-menu--inline-stretch': inlineStretch,
         'rcl-menu--with-dividers': dividers,
         [`rcl-menu--align-${align}`]: align,
+        [`rcl-menu--${theme}`]: theme,
       })}
       {...others}
     >
@@ -40,6 +42,8 @@ Menu.propTypes = {
   inline: PropTypes.bool,
   /** Displays menu inline 100% of parent width */
   inlineStretch: PropTypes.bool,
+  /** Color theme variant */
+  theme: PropTypes.oneOf(['dark']),
 };
 
 Menu.defaultProps = {
@@ -49,6 +53,7 @@ Menu.defaultProps = {
   dividers: false,
   inline: false,
   inlineStretch: false,
+  theme: null,
 };
 
 export default Menu;

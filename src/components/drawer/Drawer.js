@@ -1,4 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  Children,
+  cloneElement,
+} from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
@@ -10,6 +16,7 @@ const Drawer = ({
   isOpen,
   onClose,
   position,
+  theme,
   ...others
 }) => {
   const ref = useRef();
@@ -70,11 +77,14 @@ const Drawer = ({
         className={classnames('rcl-drawer', className, {
           'is-open': isOpen,
           [`rcl-drawer--${position}`]: position,
+          [`rcl-drawer--${theme}`]: theme,
         })}
         style={styles}
         {...others}
       >
-        {children}
+        {Children.map(children, (child) => {
+          return cloneElement(child, { theme });
+        })}
       </div>
     </>
   );
@@ -91,6 +101,8 @@ Drawer.propTypes = {
   onClose: PropTypes.func,
   /** Drawer position */
   position: PropTypes.oneOf(['left', 'top', 'right', 'bottom']),
+  /** Color theme variant */
+  theme: PropTypes.oneOf(['dark']),
 };
 
 Drawer.defaultProps = {
@@ -99,6 +111,7 @@ Drawer.defaultProps = {
   isOpen: false,
   onClose() {},
   position: 'left',
+  theme: null,
 };
 
 export default Drawer;

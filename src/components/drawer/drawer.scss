@@ -39,4 +39,8 @@
   &--left {
     width: rem(250);
   }
+
+  &--dark {
+    background: $gray-500;
+  }
 }
