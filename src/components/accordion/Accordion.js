@@ -1,31 +1,34 @@
 import React, { useState, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import useTheme from '../../themeProvider';
 
-const Accordion = ({ className, children, theme, multipleOpen, ...others }) => {
-  const [isExpanded, setIsExpanded] = useState(null);
+const Accordion = useTheme(
+  ({ className, children, theme, multipleOpen, ...others }) => {
+    const [isExpanded, setIsExpanded] = useState(null);
 
-  return (
-    <div
-      className={classnames('rcl-accordion', classnames, {
-        [`rcl-accordion--${theme}`]: theme,
-      })}
-      {...others}
-    >
-      {Children.map(children, (child, index) => {
-        return cloneElement(child, {
-          theme,
-          ...(!multipleOpen && {
-            handleClick: (isOpen) => {
-              return setIsExpanded(isOpen ? null : index);
-            },
-            expanded: index === isExpanded,
-          }),
-        });
-      })}
-    </div>
-  );
-};
+    return (
+      <div
+        className={classnames('rcl-accordion', classnames, {
+          [`rcl-accordion--${theme}`]: theme,
+        })}
+        {...others}
+      >
+        {Children.map(children, (child, index) => {
+          return cloneElement(child, {
+            theme,
+            ...(!multipleOpen && {
+              handleClick: (isOpen) => {
+                return setIsExpanded(isOpen ? null : index);
+              },
+              expanded: index === isExpanded,
+            }),
+          });
+        })}
+      </div>
+    );
+  },
+);
 
 Accordion.propTypes = {
   /** Array of AccordionItems */
