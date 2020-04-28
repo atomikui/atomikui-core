@@ -35,30 +35,5 @@ import {
     blandit arcu...
     <Link href="/articles/why-react-is-better-than-angular">Read more</Link>
   </Card>
-  <Card
-    theme="dark"
-    title="Dark Card"
-    footer={
-      <div className="text-align-center">
-        <Button theme="hollow" condensed>
-          <Icon icon={faThumbsUp} size="lg" color="white" />
-        </Button>
-        <Button theme="hollow" condensed>
-          <Icon icon={faComment} size="lg" color="white" />
-        </Button>
-        <Button theme="hollow" condensed>
-          <Icon icon={faBookmark} size="lg" color="white" />
-        </Button>
-        <Button theme="hollow" condensed>
-          <Icon icon={faEye} size="lg" color="white" />
-        </Button>
-      </div>
-    }
-  >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fermentum
-    lectus vel libero gravida, sit amet sodales ipsum maximus. Vivamus quis
-    blandit arcu...
-    <Link href="/articles/why-react-is-better-than-angular">Read more</Link>
-  </Card>
 </div>;
 ```
