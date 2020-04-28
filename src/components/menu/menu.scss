@@ -19,9 +19,11 @@
     }
 
     &:focus,
-    &:active {
+    &:active,
+    &:focus {
       background: $blue-200;
       box-shadow: none;
+      color: $white;
     }
   }
 
