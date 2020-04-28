@@ -11,40 +11,32 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
-const Alert = ({ align, className, children, theme, onClose, ...others }) => {
+const Alert = ({ align, className, children, type, onClose, ...others }) => {
+  const icons = {
+    info: faInfoCircle,
+    dark: faInfoCircle,
+    warning: faExclamationCircle,
+    error: faTimesCircle,
+    success: faCheckCircle,
+  };
+
   return (
     <div
       className={classnames('rcl-alert', className, {
-        [`rcl-alert--${theme}`]: theme,
+        [`rcl-alert--${type}`]: type,
         [`rcl-alert--${align}`]: align,
       })}
       role="alert"
-      aria-live={theme === 'error' ? 'assertive' : 'polite'}
+      aria-live={type === 'error' ? 'assertive' : 'polite'}
       aria-atomic="true"
       {...others}
     >
-      {(theme === 'info' || theme === 'dark' || !theme) && (
-        <Icon
-          id="icon-info"
-          icon={faInfoCircle}
-          size="lg"
-          color={!theme ? '#027abf' : 'white'}
-        />
-      )}
-      {theme === 'success' && (
-        <Icon id="icon-success" icon={faCheckCircle} size="lg" color="white" />
-      )}
-      {theme === 'warning' && (
-        <Icon
-          id="icon-warning"
-          icon={faExclamationCircle}
-          size="lg"
-          color="white"
-        />
-      )}
-      {theme === 'error' && (
-        <Icon id="icon-error" icon={faTimesCircle} size="lg" color="white" />
-      )}
+      <Icon
+        id={`icon-${type}`}
+        icon={!type ? icons.info : icons[type]}
+        size="lg"
+        color={!type ? '#027abf' : 'white'}
+      />
       <div className="rcl-alert__body">{children}</div>
       {onClose && (
         <div className="rcl-alert__footer">
@@ -58,7 +50,7 @@ const Alert = ({ align, className, children, theme, onClose, ...others }) => {
               id="icon-close"
               icon={faTimes}
               size="lg"
-              color={!theme ? '#027abf' : 'white'}
+              color={!type ? '#027abf' : 'white'}
             />
           </Button>
         </div>
@@ -77,7 +69,7 @@ Alert.propTypes = {
   /** Alert content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the alert theme variation. */
-  theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
+  type: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 
 Alert.defaultProps = {
@@ -86,7 +78,7 @@ Alert.defaultProps = {
   onClose: null,
   children: <></>,
   text: '',
-  theme: null,
+  type: null,
 };
 
 export default Alert;
