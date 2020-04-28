@@ -9,86 +9,81 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
 import Overlay from '../overlay';
+import useTheme from '../../themeProvider';
 
-const Drawer = ({
-  children,
-  className,
-  isOpen,
-  onClose,
-  position,
-  theme,
-  ...others
-}) => {
-  const ref = useRef();
+const Drawer = useTheme(
+  ({ children, className, isOpen, onClose, position, theme, ...others }) => {
+    const ref = useRef();
 
-  const [focusTrap, setFocusTrap] = useState(null);
-  const [styles, setStyles] = useState({});
+    const [focusTrap, setFocusTrap] = useState(null);
+    const [styles, setStyles] = useState({});
 
-  const handleKeyDown = (e) => {
-    if (e.keyCode === 27) {
-      onClose();
-    }
-  };
+    const handleKeyDown = (e) => {
+      if (e.keyCode === 27) {
+        onClose();
+      }
+    };
 
-  useEffect(() => {
-    setFocusTrap(
-      createFocusTrap(ref.current, {
-        allowOutsideClick: () => {
-          return true;
-        },
-        clickOutsideDeactivates: true,
-        escapeDeactivates: true,
-        fallbackFocus: ref,
-      }),
+    useEffect(() => {
+      setFocusTrap(
+        createFocusTrap(ref.current, {
+          allowOutsideClick: () => {
+            return true;
+          },
+          clickOutsideDeactivates: true,
+          escapeDeactivates: true,
+          fallbackFocus: ref,
+        }),
+      );
+    }, []);
+
+    useEffect(() => {
+      setStyles({
+        [position]: isOpen
+          ? 0
+          : `-${
+              ref.current[
+                position.match(/top|bottom/) ? 'clientHeight' : 'clientWidth'
+              ]
+            }px`,
+      });
+
+      if (focusTrap) {
+        setTimeout(() => {
+          focusTrap[isOpen ? 'activate' : 'deactivate']();
+        }, 300);
+      }
+    }, [focusTrap, isOpen]);
+
+    return (
+      <>
+        <Overlay
+          isActive={isOpen}
+          onClick={() => {
+            return onClose();
+          }}
+        />
+        <div
+          ref={ref}
+          onKeyDown={(e) => {
+            return handleKeyDown(e);
+          }}
+          className={classnames('rcl-drawer', className, {
+            'is-open': isOpen,
+            [`rcl-drawer--${position}`]: position,
+            [`rcl-drawer--${theme}`]: theme,
+          })}
+          style={styles}
+          {...others}
+        >
+          {Children.map(children, (child) => {
+            return cloneElement(child, { theme });
+          })}
+        </div>
+      </>
     );
-  }, []);
-
-  useEffect(() => {
-    setStyles({
-      [position]: isOpen
-        ? 0
-        : `-${
-            ref.current[
-              position.match(/top|bottom/) ? 'clientHeight' : 'clientWidth'
-            ]
-          }px`,
-    });
-
-    if (focusTrap) {
-      setTimeout(() => {
-        focusTrap[isOpen ? 'activate' : 'deactivate']();
-      }, 300);
-    }
-  }, [focusTrap, isOpen]);
-
-  return (
-    <>
-      <Overlay
-        isActive={isOpen}
-        onClick={() => {
-          return onClose();
-        }}
-      />
-      <div
-        ref={ref}
-        onKeyDown={(e) => {
-          return handleKeyDown(e);
-        }}
-        className={classnames('rcl-drawer', className, {
-          'is-open': isOpen,
-          [`rcl-drawer--${position}`]: position,
-          [`rcl-drawer--${theme}`]: theme,
-        })}
-        style={styles}
-        {...others}
-      >
-        {Children.map(children, (child) => {
-          return cloneElement(child, { theme });
-        })}
-      </div>
-    </>
-  );
-};
+  },
+);
 
 Drawer.propTypes = {
   /** Drawer content */

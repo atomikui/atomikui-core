@@ -29,6 +29,15 @@
 
   &--dark {
     background: $gray-500;
+
+    & > * > * {
+      color: $white;
+
+      &:hover {
+        background: $black;
+        color: $white;
+      }
+    }
   }
 
   &--with-dividers:not(&--inline):not(&--inline-stretch) > * + * {
