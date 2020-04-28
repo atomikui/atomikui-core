@@ -9,8 +9,8 @@ const AccordionItem = ({
   className,
   expanded,
   handleClick,
-  inverse,
   label,
+  theme,
   ...others
 }) => {
   const [isExpanded, setIsExpanded] = useState(expanded);
@@ -31,7 +31,7 @@ const AccordionItem = ({
   return (
     <div
       className={classnames('rcl-accordion-item', className, {
-        'rcl-accordion-item--inverse': inverse,
+        [`rcl-accordion-item--${theme}`]: theme,
       })}
       aria-expanded={isExpanded}
       {...others}
@@ -68,23 +68,23 @@ AccordionItem.propTypes = {
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
-  /** Inverse color variant */
-  inverse: PropTypes.bool,
   /** Label to be displayed in panel heading */
   label: PropTypes.string,
   /** If set to true, the panel will be expanded by default */
   expanded: PropTypes.bool,
   /** onClick callback */
   handleClick: PropTypes.func,
+  /** Color theme variant */
+  theme: PropTypes.oneOf(['dark']),
 };
 
 AccordionItem.defaultProps = {
   children: <></>,
   className: '',
-  inverse: false,
   label: '',
   expanded: false,
   handleClick: null,
+  theme: null,
 };
 
 export default AccordionItem;

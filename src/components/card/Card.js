@@ -24,7 +24,7 @@ Card.propTypes = {
   className: PropTypes.string,
   /** Card footer */
   footer: PropTypes.node,
-  /** theme theme variant */
+  /** Color theme variant */
   theme: PropTypes.bool,
   /** Card title */
   title: PropTypes.string,

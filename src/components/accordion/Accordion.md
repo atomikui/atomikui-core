@@ -84,12 +84,12 @@ import { Accordion, AccordionItem } from '@alaneicker/react-component-library';
 </Accordion>;
 ```
 
-### Accordion - Inverse Theme
+### Accordion - Dark Theme
 
 ```jsx
 import { Accordion, AccordionItem } from '@alaneicker/react-component-library';
 
-<Accordion inverse>
+<Accordion theme="dark">
   <AccordionItem label="Accordion Heading 1">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
     justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis

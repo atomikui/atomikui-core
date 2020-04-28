@@ -116,7 +116,7 @@ Modal.propTypes = {
   overlayThemeVariant: PropTypes.oneOf(['white', 'blue']),
   /** title to be displayed in modal header */
   title: PropTypes.string,
-  /** Modal theme variation */
+  /** Color theme variation */
   theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 

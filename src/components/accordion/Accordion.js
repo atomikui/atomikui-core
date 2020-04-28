@@ -2,25 +2,19 @@ import React, { useState, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Accordion = ({
-  className,
-  children,
-  inverse,
-  multipleOpen,
-  ...others
-}) => {
+const Accordion = ({ className, children, theme, multipleOpen, ...others }) => {
   const [isExpanded, setIsExpanded] = useState(null);
 
   return (
     <div
       className={classnames('rcl-accordion', classnames, {
-        'rcl-accordion--inverse': inverse,
+        [`rcl-accordion--${theme}`]: theme,
       })}
       {...others}
     >
       {Children.map(children, (child, index) => {
         return cloneElement(child, {
-          inverse,
+          theme,
           ...(!multipleOpen && {
             handleClick: (isOpen) => {
               return setIsExpanded(isOpen ? null : index);
@@ -38,17 +32,17 @@ Accordion.propTypes = {
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
-  /** Inverse color variant */
-  inverse: PropTypes.bool,
   /** allow multiple panels to be open */
   multipleOpen: PropTypes.bool,
+  /** Color theme variant */
+  theme: PropTypes.oneOf(['dark']),
 };
 
 Accordion.defaultProps = {
   children: <></>,
   className: '',
-  inverse: false,
   multipleOpen: false,
+  theme: null,
 };
 
 export default Accordion;
