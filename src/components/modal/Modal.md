@@ -49,11 +49,11 @@ import { useState } from 'react';
 import { Modal, Button } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
-const [theme, settheme] = useState(null);
+const [type, setType] = useState(null);
 
-const toggleModal = (theme) => {
-  if (theme) {
-    settheme(theme);
+const toggleModal = (type) => {
+  if (type) {
+    setType(type);
   }
   setIsOpen(!isOpen);
 };
@@ -76,7 +76,7 @@ const toggleModal = (theme) => {
   </Button>
 
   <Modal
-    theme={theme}
+    type={type}
     overlayThemeVariant="white"
     isOpen={isOpen}
     onClose={toggleModal}

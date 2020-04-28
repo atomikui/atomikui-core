@@ -1,20 +1,21 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import useTheme from '../../themeProvider';
 
-const TabPanel = ({ className, inverse, state, ...others }) => {
+const TabPanel = useTheme(({ className, state, theme, ...others }) => {
   const [currentIndex, panelIndex] = state;
 
   return (
     <div
       className={classnames('rcl-tab-panel', className, {
         'is-active': currentIndex === panelIndex,
-        'rcl-tab-panel--inverse': inverse,
+        [`rcl-tab-panel--${theme}`]: theme,
       })}
       {...others}
     ></div>
   );
-};
+});
 
 TabPanel.propTypes = {
   /** Adds custom component CSS classes */
@@ -23,12 +24,15 @@ TabPanel.propTypes = {
   inverse: PropTypes.bool,
   /** The Tab panel state */
   state: PropTypes.arrayOf(PropTypes.number),
+  /** Color theme variant */
+  theme: PropTypes.oneOf(['dark']),
 };
 
 TabPanel.defaultProps = {
   className: '',
   inverse: false,
   state: [-1, 0],
+  theme: null,
 };
 
 export default TabPanel;

@@ -3,7 +3,7 @@
   padding: rem(16);
   display: none;
 
-  &--inverse {
+  &--dark {
     background: lighten($gray-500, 6%);
     color: $white;
   }

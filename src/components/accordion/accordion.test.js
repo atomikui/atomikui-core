@@ -36,7 +36,7 @@ describe('<Accordion />', () => {
   });
 
   it('Should should render 3 children', () => {
-    expect(accordion.find('AccordionItem').length).toBe(3);
+    expect(accordion.find('.rcl-accordion').children().length).toBe(3);
   });
 
   it('Should handle the click event if `multipleOpen` prop is false', () => {
