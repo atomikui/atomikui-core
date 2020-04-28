@@ -1,3 +1,1 @@
-import Truncate from './Truncate';
-
-export default Truncate;
+export { default } from './Truncate';

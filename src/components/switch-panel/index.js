@@ -1,3 +1,1 @@
-import SwitchPanel from './SwitchPanel';
-
-export default SwitchPanel;
+export { default } from './SwitchPanel';

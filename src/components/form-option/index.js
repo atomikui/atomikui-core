@@ -1,3 +1,1 @@
-import FormOption from './FormOption';
-
-export default FormOption;
+export { default } from './FormOption';
