@@ -55,7 +55,7 @@ a.rcl-btn {
       &:active,
       &:focus,
       &:hover {
-        background-color: darken(map-get($map, background-color), 10%);
+        background-color: darken(map-get($map, background-color), 8%);
       }
 
       &:focus,
