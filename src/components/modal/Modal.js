@@ -17,7 +17,7 @@ const Modal = ({
   onClose,
   overlayThemeVariant,
   title,
-  variant,
+  theme,
   ...others
 }) => {
   const [focusTrap, setFocusTrap] = useState(null);
@@ -53,7 +53,7 @@ const Modal = ({
 
   return (
     <Overlay
-      {...(overlayThemeVariant && { variant: overlayThemeVariant })}
+      {...(overlayThemeVariant && { theme: overlayThemeVariant })}
       isActive={isOpen}
       classes={classnames({
         'overlay--transparent': noOverlay,
@@ -72,7 +72,7 @@ const Modal = ({
     >
       <div
         className={classnames('rcl-modal', className, {
-          [`rcl-modal--${variant}`]: variant,
+          [`rcl-modal--${theme}`]: theme,
           'is-open': isOpen,
         })}
         ref={modal}
@@ -112,12 +112,12 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   /** Callback triggered on close. */
   onClose: PropTypes.func,
-  /** Set the overlay theme variant */
+  /** Set the overlay theme variation */
   overlayThemeVariant: PropTypes.oneOf(['white', 'blue']),
   /** title to be displayed in modal header */
   title: PropTypes.string,
   /** Modal theme variation */
-  variant: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
+  theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 
 Modal.defaultProps = {
@@ -131,7 +131,7 @@ Modal.defaultProps = {
   onClose() {},
   overlayThemeVariant: null,
   title: '',
-  variant: null,
+  theme: null,
 };
 
 export default Modal;

@@ -8,7 +8,7 @@ const Overlay = ({
   children,
   className,
   isActive,
-  variant,
+  theme,
   ...others
 }) => {
   useEffect(() => {
@@ -21,7 +21,7 @@ const Overlay = ({
   return (
     <div
       className={classnames('rcl-overlay', className, {
-        [`rcl-overlay--${variant}`]: variant,
+        [`rcl-overlay--${theme}`]: theme,
         [`rcl-overlay--align-${align}`]: align,
         'is-active': isActive,
       })}
@@ -50,7 +50,7 @@ Overlay.propTypes = {
   /** Specifies if overlay is active */
   isActive: PropTypes.bool,
   /** Specifies the overlay theme variation */
-  variant: PropTypes.oneOf(['blue', 'white']),
+  theme: PropTypes.oneOf(['blue', 'white']),
 };
 
 Overlay.defaultProps = {
@@ -59,7 +59,7 @@ Overlay.defaultProps = {
   className: '',
   children: <></>,
   isActive: false,
-  variant: null,
+  theme: null,
 };
 
 export default Overlay;

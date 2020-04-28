@@ -28,7 +28,7 @@ describe('<Overlay />', () => {
   });
 
   it('Should set a color variant', () => {
-    overlay.setProps({ variant: 'blue' });
+    overlay.setProps({ theme: 'blue' });
     expect(overlay.hasClass('rcl-overlay--blue')).toBe(true);
   });
 
