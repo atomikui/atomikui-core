@@ -1,1 +1,4 @@
-export { default } from './Accordion';
+import Accordion from './Accordion';
+import AccordionItem from './AccordionItem';
+
+export { Accordion, AccordionItem };
