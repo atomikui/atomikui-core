@@ -37,7 +37,9 @@
       border-radius: rem(0 3 3 0);
     }
 
-    &.is-selected {
+    &.is-selected,
+    &.is-selected:hover,
+    &.is-selected:focus {
       background: $blue-200;
       color: $white;
     }
@@ -45,6 +47,24 @@
 
   & > * + * {
     border-left: rem(1) solid darken($gray-100, 10%);
+  }
+
+  &--dark {
+    border: 0;
+
+    & > * {
+      background: $gray-500;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        background: darken($black, 5%);
+      }
+    }
+
+    & > * + * {
+      border-left-color: $gray-400;
+    }
   }
 
   &--sm {
