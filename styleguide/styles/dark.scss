@@ -1,0 +1,16 @@
+@import '../../sass-starter/abstracts';
+
+[data-preview='Card'],
+[data-preview='Icons'] {
+  svg > path {
+    fill: $gray-100;
+  }
+}
+
+[data-testid='mountNode'] {
+  color: $white;
+}
+
+table[class^='rsg--table'] tbody > * + * {
+  border-top-color: #444;
+}

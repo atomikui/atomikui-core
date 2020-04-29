@@ -17,7 +17,11 @@ module.exports = {
   },
   assetsDir: './public',
   styleguideDir: './build',
-  require: ['./src/styles/main.scss', './styleguide/styles/main.scss'],
+  require: [
+    './src/styles/main.scss',
+    './styleguide/styles/main.scss',
+    theme === 'dark' && './styleguide/styles/dark.scss',
+  ],
   template: {
     head: {
       links: [
@@ -33,7 +37,7 @@ module.exports = {
     ...(theme === 'dark' && {
       color: {
         base: '#efefef',
-        baseBackground: '#151515',
+        baseBackground: '#1a1a1a',
         border: '#444',
       },
     }),
