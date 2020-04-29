@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import MaskedField from 'react-masked-field';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
-import useTheme from '../../themeProvider';
+import ThemeContext from '../../themeContext';
 import generateId from '../../utilities/generateId';
 
 const types = [
@@ -27,91 +27,89 @@ const types = [
   'week',
 ];
 
-const FormField = useTheme(
-  ({
-    classes,
-    disabled,
-    errorText,
-    hasError,
-    helpText,
-    id,
-    label,
-    mask,
-    name,
-    onChange,
-    placeholder,
-    readOnly,
-    required,
-    theme,
-    type,
-    value,
-    ...others
-  }) => {
-    const uid = id || generateId();
-    const inputName = name || uid;
-    const inputHintId = `${inputName}_hint`;
-    const inputErrorId = `${inputName}_error`;
-    const fieldType = !types.includes(type) ? 'text' : type;
+const FormField = ({
+  classes,
+  disabled,
+  errorText,
+  hasError,
+  helpText,
+  id,
+  label,
+  mask,
+  name,
+  onChange,
+  placeholder,
+  readOnly,
+  required,
+  type,
+  value,
+  ...others
+}) => {
+  const { theme } = useContext(ThemeContext);
+  const uid = id || generateId();
+  const inputName = name || uid;
+  const inputHintId = `${inputName}_hint`;
+  const inputErrorId = `${inputName}_error`;
+  const fieldType = !types.includes(type) ? 'text' : type;
 
-    const Input = mask ? MaskedField : 'input';
+  const Input = mask ? MaskedField : 'input';
 
-    return (
-      <div
-        className={classnames('rcl-formfield', classes, {
-          'has-error': hasError,
-          [`rcl-formfield--${theme}`]: theme,
-        })}
-      >
-        {label && (
-          <div className="rcl-formfield__label">
-            <Label htmlFor={uid}>{label}</Label>
-          </div>
-        )}
-        {type === 'textarea' ? (
-          <textarea
-            id={uid}
-            name={inputName}
-            className={classnames('rcl-formfield__textarea', classes, {})}
-            placeholder={placeholder}
-            value={value}
-            aria-describedby={`${inputHintId} ${inputErrorId}`}
-            required={required}
-            readOnly={readOnly}
-            disabled={disabled}
-            onChange={onChange}
-            {...others}
-          />
-        ) : (
-          <Input
-            id={uid}
-            name={inputName}
-            className={classnames('rcl-formfield__input', classes, {})}
-            type={fieldType}
-            mask={mask}
-            placeholder={placeholder}
-            value={value}
-            aria-describedby={`${inputHintId} ${inputErrorId}`}
-            readOnly={readOnly}
-            disabled={disabled}
-            onChange={onChange}
-            required
-            {...others}
-          />
-        )}
-        {(helpText || errorText) && (
-          <div className="rcl-formfield__hints">
-            {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-            {hasError && (
-              <Hint id={inputErrorId} type="error">
-                {errorText}
-              </Hint>
-            )}
-          </div>
-        )}
-      </div>
-    );
-  },
-);
+  return (
+    <div
+      className={classnames('rcl-formfield', classes, {
+        'has-error': hasError,
+        [`rcl-formfield--${theme}`]: theme,
+      })}
+    >
+      {label && (
+        <div className="rcl-formfield__label">
+          <Label htmlFor={uid}>{label}</Label>
+        </div>
+      )}
+      {type === 'textarea' ? (
+        <textarea
+          id={uid}
+          name={inputName}
+          className={classnames('rcl-formfield__textarea', classes, {})}
+          placeholder={placeholder}
+          value={value}
+          aria-describedby={`${inputHintId} ${inputErrorId}`}
+          required={required}
+          readOnly={readOnly}
+          disabled={disabled}
+          onChange={onChange}
+          {...others}
+        />
+      ) : (
+        <Input
+          id={uid}
+          name={inputName}
+          className={classnames('rcl-formfield__input', classes, {})}
+          type={fieldType}
+          mask={mask}
+          placeholder={placeholder}
+          value={value}
+          aria-describedby={`${inputHintId} ${inputErrorId}`}
+          readOnly={readOnly}
+          disabled={disabled}
+          onChange={onChange}
+          required
+          {...others}
+        />
+      )}
+      {(helpText || errorText) && (
+        <div className="rcl-formfield__hints">
+          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+          {hasError && (
+            <Hint id={inputErrorId} type="error">
+              {errorText}
+            </Hint>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
 
 FormField.propTypes = {
   /** Specifies custom component classes. */
@@ -140,8 +138,6 @@ FormField.propTypes = {
   readOnly: PropTypes.bool,
   /** Specifies if a field is required. */
   required: PropTypes.bool,
-  /** Color theme variant */
-  theme: PropTypes.oneOf('dark'),
   /** Specifies the type of input. */
   type: PropTypes.oneOf(types),
   /** Specifies the inputs value. */
@@ -162,7 +158,6 @@ FormField.defaultProps = {
   placeholder: '',
   readOnly: false,
   required: false,
-  theme: null,
   type: 'text',
   value: '',
 };
