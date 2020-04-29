@@ -8,12 +8,13 @@ configure({ adapter: new Adapter() });
 describe('<Spinner />', () => {
   let spinner;
   const sizes = ['sm', 'md', 'lg', 'xlg'];
-  const variants = [
+  const themes = [
     ['default', '#333'],
     ['red', '#D0191F'],
     ['orange', '#ff8400'],
     ['green', '#4fa009'],
     ['blue', '#027abf'],
+    ['white', '#fff'],
   ];
 
   beforeEach(() => {
@@ -29,10 +30,10 @@ describe('<Spinner />', () => {
     expect(spinner.hasClass(`rcl-spinner--${size}`)).toBe(true);
   });
 
-  test.each(variants)(
+  test.each(themes)(
     'If color prop is %p it should set spinner svg stroke to %p',
-    (variant, stroke) => {
-      spinner.setProps({ variant });
+    (theme, stroke) => {
+      spinner.setProps({ theme });
       expect(spinner.find('svg > circle').prop('stroke')).toBe(stroke);
     },
   );

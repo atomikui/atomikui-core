@@ -40,7 +40,9 @@ describe('<List />', () => {
     (modifier) => {
       list.setProps({ type: modifier });
 
-      expect(list.hasClass(`rcl-list--${modifier}`)).toBe(true);
+      expect(list.find('.rcl-list').hasClass(`rcl-list--${modifier}`)).toBe(
+        true,
+      );
     },
   );
 
@@ -49,7 +51,15 @@ describe('<List />', () => {
     (modifier) => {
       list.setProps({ align: modifier });
 
-      expect(list.hasClass(`rcl-list--align-${modifier}`)).toBe(true);
+      expect(
+        list.find('.rcl-list').hasClass(`rcl-list--align-${modifier}`),
+      ).toBe(true);
     },
   );
+
+  it('Should render inside of a <nav /> element if type id menu', () => {
+    list.setProps({ type: 'menu' });
+
+    expect(list.find('nav').length).toBe(1);
+  });
 });
