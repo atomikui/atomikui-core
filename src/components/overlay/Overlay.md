@@ -28,8 +28,8 @@ const [isActive, setIsActive] = useState(false);
     Show Overlay
   </Button>
 
-  <Overlay onClick={() => setIsActive(false)} theme="white" isActive={isActive}>
-    <Spinner size="xlg" theme="blue" />
+  <Overlay onClick={() => setIsActive(false)} isActive={isActive}>
+    <Spinner size="xlg" theme="white" />
   </Overlay>
 </>;
 ```

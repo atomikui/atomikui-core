@@ -77,7 +77,6 @@ const toggleModal = (type) => {
 
   <Modal
     type={type}
-    overlayThemeVariant="white"
     isOpen={isOpen}
     onClose={toggleModal}
     title="Modal Dialog"
