@@ -22,6 +22,10 @@ a > code[class^='rsg--code'] {
   cursor: pointer;
 }
 
+[class^='rsg--footer'] {
+  display: none !important;
+}
+
 #rsg-root > * {
   position: relative;
 }

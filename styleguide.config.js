@@ -36,9 +36,19 @@ module.exports = {
   theme: {
     ...(theme === 'dark' && {
       color: {
+        // Base styleguide styles
         base: '#efefef',
         baseBackground: '#1a1a1a',
         border: '#444',
+        // syntax highlighting styles
+        codeBackground: '#272C34',
+        codeString: '#a6e22e',
+        codeKeyword: '#66d9ef',
+        codeOperator: '#f8f8f2',
+        codePunctuation: '#f8f8f2',
+        codeBase: '#f8f8f2',
+        codeFunction: '#e6db74',
+        codeProperty: '',
       },
     }),
     fontFamily: {

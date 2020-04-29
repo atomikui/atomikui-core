@@ -14,3 +14,11 @@
 table[class^='rsg--table'] tbody > * + * {
   border-top-color: #444;
 }
+
+[class^='rsg--name'] {
+  color: #a6e22e !important;
+}
+
+[class^='rsg--type'] {
+  color: #66d9ef !important;
+}
