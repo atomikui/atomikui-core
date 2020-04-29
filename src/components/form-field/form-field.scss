@@ -52,6 +52,19 @@
     margin-top: rem(3);
   }
 
+  &--dark {
+    .rcl-formfield__input,
+    .rcl-formfield__textarea {
+      background: $gray-500;
+      border-color: $gray-400;
+      color: $white;
+    }
+
+    .rcl-formfield__label {
+      color: $white;
+    }
+  }
+
   @each $name, $breakpoint in $breakpoints {
     @media (min-width: $breakpoint) {
       @each $size in $formfield-sizes {

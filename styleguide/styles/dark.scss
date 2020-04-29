@@ -11,9 +11,9 @@ body {
   }
 }
 
-[data-testid='mountNode'] {
-  color: $white;
-}
+// [data-testid='mountNode'] {
+//   color: $white;
+// }
 
 table[class^='rsg--table'] tbody > * + * {
   border-top-color: #444;
