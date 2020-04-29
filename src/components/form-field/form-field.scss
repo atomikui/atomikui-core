@@ -15,7 +15,7 @@
     width: 100%;
 
     &:not(:read-only):focus {
-      box-shadow: $formfield-focus;
+      @include focus-outline();
     }
 
     &:disabled {
@@ -36,7 +36,7 @@
 
   &.has-error > &__input:focus,
   &.has-error > &:focus {
-    box-shadow: $formfield-error-focus;
+    @include focus-error-outline();
   }
 
   &__textarea {

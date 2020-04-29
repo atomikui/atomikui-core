@@ -8,12 +8,12 @@
   }
 
   &.is-disabled {
-    .dropdown__select {
+    .rcl-dropdown__select {
       background: $gray-000;
       border: 0;
     }
 
-    .dropdown__select:after {
+    .rcl-dropdown__select:after {
       background-color: $gray-200;
     }
   }
@@ -54,7 +54,7 @@
     width: 100%;
 
     &:focus {
-      box-shadow: $formfield-focus;
+      @include focus-outline();
     }
 
     &:disabled {
@@ -68,11 +68,26 @@
 
   &.has-error &__select__menu {
     &:focus {
-      box-shadow: $formfield-error-focus;
+      @include focus-error-outline();
     }
   }
 
   &.has-error &__select::after {
     background-color: $red-100;
+  }
+
+  &--dark {
+    .rcl-dropdown__select {
+      background: $gray-500;
+      border-color: $gray-400;
+
+      & > select {
+        color: $white;
+      }
+    }
+
+    .rcl-dropdown__label {
+      color: $white;
+    }
   }
 }
