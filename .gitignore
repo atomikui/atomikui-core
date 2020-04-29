@@ -1,5 +1,5 @@
 .npmrc
-.env
+.env.*
 
 # dependencies
 /node_modules
