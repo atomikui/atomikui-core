@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import ThemeContext from '../../themeContext';
 
 const Label = ({ className, children, ...others }) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <label className={classnames('rcl-label', className)} {...others}>
+    <label
+      className={classnames('rcl-label', className, {
+        [`rcl-label--${theme}`]: theme,
+      })}
+      {...others}
+    >
       {children}
     </label>
   );

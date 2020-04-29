@@ -1,26 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../button';
-import useTheme from '../../themeProvider';
+import ThemeContext from '../../themeContext';
 
-const Tab = useTheme(
-  ({ active, className, label, onClick, theme, ...others }) => {
-    return (
-      <Button
-        theme="hollow"
-        className={classnames('rcl-tab', className, {
-          'is-active': active,
-          [`rcl-tab--${theme}`]: theme,
-        })}
-        {...(onClick && { onClick })}
-        {...others}
-      >
-        {label}
-      </Button>
-    );
-  },
-);
+const Tab = ({ active, className, label, onClick, ...others }) => {
+  const { theme } = useContext(ThemeContext);
+
+  return (
+    <Button
+      theme="hollow"
+      className={classnames('rcl-tab', className, {
+        'is-active': active,
+        [`rcl-tab--${theme}`]: theme,
+      })}
+      {...(onClick && { onClick })}
+      {...others}
+    >
+      {label}
+    </Button>
+  );
+};
 
 Tab.propTypes = {
   /** Makes a Tab active */
@@ -31,8 +31,6 @@ Tab.propTypes = {
   onClick: PropTypes.func,
   /** Tab label text */
   label: PropTypes.string,
-  /** Color theme variant */
-  theme: PropTypes.oneOf(['dark']),
 };
 
 Tab.defaultProps = {
@@ -40,7 +38,6 @@ Tab.defaultProps = {
   className: '',
   onClick() {},
   label: '',
-  theme: null,
 };
 
 export default Tab;

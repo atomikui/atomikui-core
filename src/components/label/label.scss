@@ -1,3 +1,7 @@
 .rcl-label {
   @include label();
+
+  &--dark {
+    color: $white;
+  }
 }

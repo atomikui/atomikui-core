@@ -59,10 +59,6 @@
       border-color: $gray-400;
       color: $white;
     }
-
-    .rcl-formfield__label {
-      color: $white;
-    }
   }
 
   @each $name, $breakpoint in $breakpoints {

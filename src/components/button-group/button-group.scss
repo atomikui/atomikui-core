@@ -58,7 +58,7 @@
 
       &:hover,
       &:focus {
-        background: darken($black, 5%);
+        background: lighten($gray-500, 6%);
       }
     }
 

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import useTheme from '../../themeProvider';
+import ThemeContext from '../../themeContext';
 
-const TabPanel = useTheme(({ className, state, theme, ...others }) => {
+const TabPanel = ({ className, state, ...others }) => {
+  const { theme } = useContext(ThemeContext);
   const [currentIndex, panelIndex] = state;
 
   return (
@@ -15,7 +16,7 @@ const TabPanel = useTheme(({ className, state, theme, ...others }) => {
       {...others}
     ></div>
   );
-});
+};
 
 TabPanel.propTypes = {
   /** Adds custom component CSS classes */
@@ -24,15 +25,12 @@ TabPanel.propTypes = {
   inverse: PropTypes.bool,
   /** The Tab panel state */
   state: PropTypes.arrayOf(PropTypes.number),
-  /** Color theme variant */
-  theme: PropTypes.oneOf(['dark']),
 };
 
 TabPanel.defaultProps = {
   className: '',
   inverse: false,
   state: [-1, 0],
-  theme: null,
 };
 
 export default TabPanel;

@@ -1,45 +1,44 @@
-import React, { Children, cloneElement, useState } from 'react';
+import React, { Children, cloneElement, useState, useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import useTheme from '../../themeProvider';
+import ThemeContext from '../../themeContext';
 
-const Tabs = useTheme(
-  ({
-    align,
-    children,
-    className,
-    initialActiveTab,
-    onChange,
-    theme,
-    ...others
-  }) => {
-    const [activeTab, setActiveTab] = useState(initialActiveTab);
+const Tabs = ({
+  align,
+  children,
+  className,
+  initialActiveTab,
+  onChange,
+  ...others
+}) => {
+  const { theme } = useContext(ThemeContext);
 
-    const handleChange = (index) => {
-      setActiveTab(index);
-      onChange(index);
-    };
+  const [activeTab, setActiveTab] = useState(initialActiveTab);
 
-    return (
-      <div
-        className={classnames('rcl-tabs', className, {
-          [`rcl-tabs--align-${align}`]: align,
-          [`rcl-tabs--${theme}`]: theme,
-        })}
-        {...others}
-      >
-        {Children.map(children, (child, index) => {
-          return cloneElement(child, {
-            active: index === activeTab,
-            onClick: () => {
-              return handleChange(index);
-            },
-          });
-        })}
-      </div>
-    );
-  },
-);
+  const handleChange = (index) => {
+    setActiveTab(index);
+    onChange(index);
+  };
+
+  return (
+    <div
+      className={classnames('rcl-tabs', className, {
+        [`rcl-tabs--align-${align}`]: align,
+        [`rcl-tabs--${theme}`]: theme,
+      })}
+      {...others}
+    >
+      {Children.map(children, (child, index) => {
+        return cloneElement(child, {
+          active: index === activeTab,
+          onClick: () => {
+            return handleChange(index);
+          },
+        });
+      })}
+    </div>
+  );
+};
 
 Tabs.propTypes = {
   /** Sets the alignment of the Tabs children */
@@ -52,8 +51,6 @@ Tabs.propTypes = {
   initialActiveTab: PropTypes.number,
   /** onChange callback */
   onChange: PropTypes.func,
-  /** Color theme variant */
-  theme: PropTypes.oneOf(['dark']),
 };
 
 Tabs.defaultProps = {
@@ -62,7 +59,6 @@ Tabs.defaultProps = {
   className: '',
   initialActiveTab: 0,
   onChange() {},
-  theme: null,
 };
 
 export default Tabs;
