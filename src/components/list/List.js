@@ -2,8 +2,9 @@ import React, { Fragment, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const List = ({ align, children, className, isMenu, type, ...others }) => {
+const List = ({ align, children, className, type, ...others }) => {
   const Ul = type === 'ordered' ? 'ol' : 'ul';
+  const isMenu = type === 'menu';
   const Wrapper = isMenu ? 'nav' : Fragment;
 
   return (
@@ -30,17 +31,14 @@ List.propTypes = {
   className: PropTypes.string,
   /** List children */
   children: PropTypes.node,
-  /** Specifies that a list is a menu */
-  isMenu: PropTypes.bool,
   /** Defines the type of list */
-  type: PropTypes.oneOf(['bulleted', 'ordered', 'horizontal']),
+  type: PropTypes.oneOf(['bulleted', 'ordered', 'horizontal', 'menu']),
 };
 
 List.defaultProps = {
   align: null,
   className: '',
   children: <></>,
-  isMenu: false,
   type: null,
 };
 

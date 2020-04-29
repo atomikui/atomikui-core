@@ -19,7 +19,7 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-    <List isMenu>
+    <List type="menu">
       <ListItem>
         <Link href="/home">Home</Link>
       </ListItem>
@@ -59,7 +59,7 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right">
-    <List isMenu>
+    <List type="menu">
       <ListItem>
         <Link href="/home">Home</Link>
       </ListItem>
@@ -99,7 +99,7 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="top">
-    <List isMenu>
+    <List type="menu">
       <ListItem>
         <Link href="/home">Home</Link>
       </ListItem>
@@ -139,7 +139,7 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="bottom">
-    <List isMenu>
+    <List type="menu">
       <ListItem>
         <Link href="/home">Home</Link>
       </ListItem>
