@@ -48,8 +48,8 @@ import {
   Drawer,
   Button,
   Link,
-  Menu,
-  MenuItem,
+  List,
+  ListItem,
 } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
@@ -59,23 +59,23 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right">
-    <Menu>
-      <MenuItem>
+    <List isMenu>
+      <ListItem>
         <Link href="/home">Home</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/about">About</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/services">Services</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/blocg">Blog</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/contact">Contact</Link>
-      </MenuItem>
-    </Menu>
+      </ListItem>
+    </List>
   </Drawer>
 </>;
 ```
@@ -88,8 +88,8 @@ import {
   Drawer,
   Button,
   Link,
-  Menu,
-  MenuItem,
+  List,
+  ListItem,
 } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
@@ -99,23 +99,23 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="top">
-    <Menu>
-      <MenuItem>
+    <List isMenu>
+      <ListItem>
         <Link href="/home">Home</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/about">About</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/services">Services</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/blocg">Blog</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/contact">Contact</Link>
-      </MenuItem>
-    </Menu>
+      </ListItem>
+    </List>
   </Drawer>
 </>;
 ```
@@ -128,8 +128,8 @@ import {
   Drawer,
   Button,
   Link,
-  Menu,
-  MenuItem,
+  List,
+  ListItem,
 } from '@alaneicker/react-component-library';
 
 const [isOpen, setIsOpen] = useState(false);
@@ -139,23 +139,23 @@ const [isOpen, setIsOpen] = useState(false);
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="bottom">
-    <Menu>
-      <MenuItem>
+    <List isMenu>
+      <ListItem>
         <Link href="/home">Home</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/about">About</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/services">Services</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/blocg">Blog</Link>
-      </MenuItem>
-      <MenuItem>
+      </ListItem>
+      <ListItem>
         <Link href="/contact">Contact</Link>
-      </MenuItem>
-    </Menu>
+      </ListItem>
+    </List>
   </Drawer>
 </>;
 ```
