@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import useTheme from '../../themeProvider';
+import generateId from '../../utilities/generateId';
 
 const AccordionItem = useTheme(
   ({ children, className, expanded, handleClick, label, theme, ...others }) => {
     const [isExpanded, setIsExpanded] = useState(expanded);
     const contentRef = useRef();
+
+    const headerId = generateId('header');
+    const panelId = generateId('panel');
 
     const handleOnClick = () => {
       if (handleClick) {
@@ -27,10 +31,12 @@ const AccordionItem = useTheme(
         className={classnames('rcl-accordion-item', className, {
           [`rcl-accordion-item--${theme}`]: theme,
         })}
-        aria-expanded={isExpanded}
         {...others}
       >
         <button
+          id={headerId}
+          aria-expanded={isExpanded}
+          aria-controls={panelId}
           className="rcl-accordion-item__trigger"
           onClick={() => {
             return handleOnClick();
@@ -44,6 +50,9 @@ const AccordionItem = useTheme(
           />
         </button>
         <div
+          id={panelId}
+          arial-labelledby={headerId}
+          role="region"
           className="rcl-accordion-item__body"
           style={{
             height: isExpanded ? `${contentRef.current.scrollHeight}px` : 0,

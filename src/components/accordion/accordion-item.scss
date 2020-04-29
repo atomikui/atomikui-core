@@ -14,9 +14,20 @@
     padding: rem(12 16);
     width: 100%;
 
-    &:hover,
     &:focus {
       background: $blue-000;
+    }
+
+    &[aria-expanded='true'] {
+      & ~ .rcl-accordion-item__body {
+        & > .rcl-accordion-item__body__content {
+          opacity: 1;
+        }
+      }
+
+      & > .rcl-accordion-item__trigger__icon {
+        transform: rotate(180deg);
+      }
     }
   }
 
@@ -43,16 +54,6 @@
     transition: opacity 0.3s linear 0.15s;
   }
 
-  &[aria-expanded='true'] {
-    .rcl-accordion-item__body__content {
-      opacity: 1;
-    }
-
-    .rcl-accordion-item__trigger__icon {
-      transform: rotate(180deg);
-    }
-  }
-
   &.is-open {
     .rcl-accordion-item__trigger__label {
       text-shadow: rem(0 0 1) $black;
@@ -70,7 +71,6 @@
     .rcl-accordion-item__trigger {
       color: $white;
 
-      &:hover,
       &:focus {
         background: lighten($gray-500, 8%);
       }
