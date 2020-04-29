@@ -42,7 +42,7 @@ describe('<AccordionItem />', () => {
     accordionItem.find('button').simulate('click');
 
     expect(
-      accordionItem.find('.rcl-accordion-item').prop('aria-expanded'),
+      accordionItem.find('.rcl-accordion-item__trigger').prop('aria-expanded'),
     ).toBe(true);
   });
 

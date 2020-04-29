@@ -43,13 +43,19 @@ describe('<Accordion />', () => {
     accordion.find('.rcl-accordion-item__trigger').first().simulate('click');
 
     expect(
-      accordion.find('.rcl-accordion-item').first().prop('aria-expanded'),
+      accordion
+        .find('.rcl-accordion-item__trigger')
+        .first()
+        .prop('aria-expanded'),
     ).toBe(true);
 
     accordion.find('.rcl-accordion-item__trigger').first().simulate('click');
 
     expect(
-      accordion.find('.rcl-accordion-item').first().prop('aria-expanded'),
+      accordion
+        .find('.rcl-accordion-item__trigger')
+        .first()
+        .prop('aria-expanded'),
     ).toBe(false);
   });
 });
