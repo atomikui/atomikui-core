@@ -18,7 +18,6 @@ export { default as Label } from './components/label';
 export { default as Link } from './components/link';
 export { List, ListItem } from './components/list';
 export { default as Media } from './components/media';
-export { Menu, MenuItem } from './components/menu';
 export { default as Modal } from './components/modal';
 export { default as Overlay } from './components/overlay';
 export { default as Pagination } from './components/pagination';
