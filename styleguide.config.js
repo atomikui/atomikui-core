@@ -40,6 +40,7 @@ module.exports = {
         base: '#efefef',
         baseBackground: '#1a1a1a',
         border: '#444',
+        link: '#88ccfc',
         // syntax highlighting styles
         codeBackground: '#272C34',
         codeString: '#a6e22e',

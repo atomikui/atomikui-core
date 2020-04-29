@@ -1,5 +1,9 @@
 @import '../../sass-starter/abstracts';
 
+body {
+  background-color: #1a1a1a;
+}
+
 [data-preview='Card'],
 [data-preview='Icons'] {
   svg > path {
@@ -21,4 +25,8 @@ table[class^='rsg--table'] tbody > * + * {
 
 [class^='rsg--type'] {
   color: #66d9ef !important;
+}
+
+[class^='rsg--pathline'] {
+  color: $gray-200 !important;
 }
