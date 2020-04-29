@@ -21,6 +21,7 @@
     "publish:patch": "npm version patch -m \"Upgrade to %s\" && npm publish --access public",
     "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "test": "jest --coverage --config=./jest/jest.config.js",
+    "start:dark": "NODE_ENV=development THEME=dark styleguidist server",
     "start": "NODE_ENV=development styleguidist server",
     "build:component-library": "NODE_ENV=production rm -rf dist && babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && npm run build:styles && cp package.json dist/package.json",
     "build:styles": "cross-env webpack --config webpack.config.js",
