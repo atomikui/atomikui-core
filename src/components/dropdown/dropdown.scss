@@ -84,10 +84,6 @@
       & > select {
         color: $white;
       }
-
-      &::after {
-        background-color: $blue-100;
-      }
     }
 
     &.is-disabled {

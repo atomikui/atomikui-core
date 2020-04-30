@@ -19,7 +19,7 @@
     height: rem($switch-height);
     position: relative;
     transition: all 0.1s ease-in-out;
-    width: rem(60);
+    width: rem(50);
 
     &:after {
       background: $white;
@@ -75,6 +75,16 @@
     &:after {
       background: $gray-200;
       box-shadow: none;
+    }
+  }
+
+  &--dark {
+    & > .rcl-switch__toggle {
+      background: lighten($gray-500, 10%);
+
+      &::after {
+        box-shadow: none;
+      }
     }
   }
 }

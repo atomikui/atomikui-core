@@ -5,7 +5,7 @@
   &__icon {
     align-items: center;
     background-image: $white;
-    border: rem(2) solid $gray-200;
+    border: rem(1) solid $gray-200;
     border-radius: rem($border-radius);
     display: flex;
     height: rem(20);
@@ -58,11 +58,6 @@
     & > .rcl-form-option__icon {
       background: $gray-500;
       border-color: $gray-300;
-    }
-
-    & > input:checked ~ .rcl-form-option__icon {
-      background: $blue-100;
-      border-color: $blue-100;
     }
 
     &.is-disabled {
