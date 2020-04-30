@@ -26,51 +26,51 @@
     &:checked + .rcl-form-option__icon {
       background: $blue-100;
       border-color: $blue-100;
+    }
 
-      &:focus + &__icon {
-        box-shadow: $formfield-focus;
-      }
+    &:checked:focus + .rcl-form-option__icon {
+      box-shadow: $formfield-focus;
     }
   }
 
-  &.has-error > &__icon {
-    border-color: $red-100;
+  &.has-error {
+    & > .rcl-form-option__icon {
+      border-color: $red-100;
+    }
 
     & > input:focus + .rcl-form-option__icon {
       box-shadow: $formfield-error-focus;
     }
   }
 
-  &.is-disabled {
-    & > input {
-      & + .rcl-form-option__icon {
-        background: $gray-100;
-        border: 0;
-      }
+  // &.is-disabled {
+  //   & + .rcl-form-option__icon {
+  //     background: $gray-100;
+  //     border: 0;
+  //   }
 
-      &:checked + .rcl-form-option__icon {
-        background: $gray-200;
-      }
-    }
-  }
+  //   & > input:checked + .rcl-form-option__icon {
+  //     background: $gray-200;
+  //   }
+  // }
 
-  &--dark {
-    & > .rcl-form-option__icon {
-      background: $gray-500;
-      border-color: $gray-300;
-    }
+  // &.rcl-form-option--dark {
+  //   & > .rcl-form-option__icon {
+  //     background: $gray-500;
+  //     border-color: $gray-300;
+  //   }
 
-    &.is-disabled {
-      & > input {
-        & + .rcl-form-option__icon {
-          background: $gray-500;
-          border: 0;
-        }
+  //   &.is-disabled {
+  //     & > input {
+  //       & + .rcl-form-option__icon {
+  //         background: $gray-500;
+  //         border: 0;
+  //       }
 
-        &:checked + .rcl-form-option__icon {
-          background: $gray-400;
-        }
-      }
-    }
-  }
+  //       &:checked + .rcl-form-option__icon {
+  //         background: $gray-400;
+  //       }
+  //     }
+  //   }
+  // }
 }

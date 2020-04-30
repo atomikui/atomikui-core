@@ -69,16 +69,6 @@
     }
   }
 
-  &.rcl-switch--dark {
-    & > .rcl-switch__toggle {
-      background: lighten($gray-500, 10%);
-
-      &::after {
-        box-shadow: none;
-      }
-    }
-  }
-
   &.is-disabled,
   &.is-checked.is-disabled {
     & > .rcl-switch__toggle {
@@ -99,6 +89,12 @@
           background: darken($gray-300, 6%);
         }
       }
+    }
+  }
+
+  &.rcl-switch--dark {
+    &:not(.is-checked):not(.has-error) > .rcl-switch__toggle {
+      background: lighten($gray-500, 10%);
     }
   }
 }
