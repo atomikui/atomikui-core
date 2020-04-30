@@ -5,75 +5,6 @@
   display: inline-flex;
   height: rem($input-height);
 
-  & > * {
-    align-items: center;
-    background: $white;
-    border: 0;
-    border-radius: 0;
-    color: $blue-400;
-    cursor: pointer;
-    font-size: rem(13);
-    font-weight: $font-semibold;
-    min-height: auto;
-    padding: rem(6 16);
-    position: relative;
-    text-align: center;
-    text-transform: uppercase;
-
-    &:hover,
-    &:focus {
-      background: $gray-100;
-    }
-
-    &:focus {
-      z-index: 900;
-    }
-
-    &:first-of-type {
-      border-radius: rem(3 0 0 3);
-    }
-
-    &:last-of-type {
-      border-radius: rem(0 3 3 0);
-    }
-
-    &.is-selected,
-    &.is-selected:hover,
-    &.is-selected:focus {
-      background: $blue-200;
-      color: $white;
-    }
-  }
-
-  & > * + * {
-    border-left: rem(1) solid darken($gray-100, 10%);
-  }
-
-  &--dark {
-    border: 0;
-
-    & > * {
-      background: $gray-500;
-      color: $white;
-
-      &:hover,
-      &:focus {
-        background: lighten($gray-500, 6%);
-      }
-
-      &.is-selected,
-      &.is-selected:hover,
-      &.is-selected:focus {
-        background: $blue-100;
-        color: $black;
-      }
-    }
-
-    & > * + * {
-      border-left-color: $gray-400;
-    }
-  }
-
   &--sm {
     height: rem($input-height - 14);
 
@@ -103,6 +34,75 @@
 
     & > * {
       flex: 1;
+    }
+  }
+
+  & > * {
+    align-items: center;
+    background: $white;
+    border: 0;
+    border-radius: 0;
+    color: $blue-400;
+    cursor: pointer;
+    font-size: rem(13);
+    font-weight: $font-semibold;
+    min-height: auto;
+    padding: rem(6 16);
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+
+    & > * + * {
+      border-left: rem(1) solid darken($gray-100, 10%);
+    }
+
+    &:hover,
+    &:focus {
+      background: $gray-100;
+    }
+
+    &:focus {
+      z-index: 900;
+    }
+
+    &:first-of-type {
+      border-radius: rem(3 0 0 3);
+    }
+
+    &:last-of-type {
+      border-radius: rem(0 3 3 0);
+    }
+
+    &.is-selected,
+    &.is-selected:hover,
+    &.is-selected:focus {
+      background: $blue-200;
+      color: $white;
+    }
+  }
+
+  &.rcl-button-group--dark {
+    border: 0;
+
+    & > * + * {
+      border-left-color: $gray-400;
+    }
+
+    & > * {
+      background: $gray-500;
+      color: $white;
+
+      &:hover,
+      &:focus {
+        background: lighten($gray-500, 6%);
+      }
+
+      &.is-selected,
+      &.is-selected:hover,
+      &.is-selected:focus {
+        background: $blue-100;
+        color: $black;
+      }
     }
   }
 }
