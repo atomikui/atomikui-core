@@ -11,10 +11,6 @@ body {
   }
 }
 
-// [data-testid='mountNode'] {
-//   color: $white;
-// }
-
 table[class^='rsg--table'] tbody > * + * {
   border-top-color: #444;
 }
@@ -29,4 +25,8 @@ table[class^='rsg--table'] tbody > * + * {
 
 [class^='rsg--pathline'] {
   color: $gray-200 !important;
+}
+
+.icon-list__label {
+  color: $white;
 }

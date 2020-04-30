@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
 import ThemeContext from '../../themeContext';
@@ -52,7 +54,9 @@ const FormOption = ({
           required
           {...others}
         />
-        <span className="rcl-form-option__icon"></span>
+        <span className="rcl-form-option__icon">
+          {checked && <Icon icon={faCheck} color="#1a1a1a" />}
+        </span>
         {label}
       </Label>
       {(helpText || errorText) && (

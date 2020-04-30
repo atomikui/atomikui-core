@@ -5,7 +5,7 @@
   &__icon {
     align-items: center;
     background-image: $white;
-    border: rem(1) solid $gray-200;
+    border: rem(2) solid $gray-200;
     border-radius: rem($border-radius);
     display: flex;
     height: rem(20);
@@ -24,13 +24,8 @@
     position: absolute;
 
     &:checked + .rcl-form-option__icon {
-      &::after {
-        background: $blue-200;
-        content: '';
-        display: block;
-        height: rem(12);
-        width: rem(12);
-      }
+      background: $blue-200;
+      border-color: $blue-200;
 
       &:focus + &__icon {
         box-shadow: $formfield-focus;
@@ -54,9 +49,7 @@
       }
 
       &:checked + .rcl-form-option__icon {
-        &::after {
-          background: $gray-200;
-        }
+        background: $gray-200;
       }
     }
   }
@@ -64,11 +57,12 @@
   &--dark {
     & > .rcl-form-option__icon {
       background: $gray-500;
-      border-color: $gray-400;
+      border-color: $gray-300;
+    }
 
-      &::after {
-        background: $blue-100;
-      }
+    & > input:checked ~ .rcl-form-option__icon {
+      background: $blue-100;
+      border-color: $blue-100;
     }
 
     &.is-disabled {
@@ -79,9 +73,7 @@
         }
 
         &:checked + .rcl-form-option__icon {
-          &::after {
-            background: $gray-300;
-          }
+          background: $gray-400;
         }
       }
     }

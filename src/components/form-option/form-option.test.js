@@ -66,4 +66,12 @@ describe('<FormOption />', () => {
     expect(formOption.find('Hint').length).toBe(1);
     expect(formOption.find('Hint').text()).toBe('Some helpful text');
   });
+
+  it('Should display an Icon if checked', () => {
+    formOption.setProps({ checked: true });
+
+    expect(formOption.find('.rcl-form-option__icon').find('svg').length).toBe(
+      1,
+    );
+  });
 });
