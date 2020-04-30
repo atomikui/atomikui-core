@@ -44,36 +44,27 @@
   -moz-appearance: none;
   appearance: none;
   background-color: $white;
-  border: $input-border;
+  border: rem(1) solid $gray-200;
   border-radius: rem($base-border-radius);
   font-family: inherit;
   font-size: inherit;
   height: rem($input-height);
   outline: 0;
-  padding: rem(8);
+  padding: rem(0 8);
   width: 100%;
 
-  &:focus {
+  &:disabled {
+    background: $gray-000;
+    border: 0;
+    color: $gray-300;
+  }
+
+  &:read-only {
+    border: 0;
+    padding: 0;
+  }
+
+  &:not(:read-only):focus {
     @include focus-outline();
-  }
-
-  &--has-error {
-    border-color: $red-100;
-  }
-
-  @each $name, $size in $formfield-sizes {
-    &--#{$name} {
-      width: rem($size);
-    }
-  }
-
-  @each $name, $breakpoint in $breakpoints {
-    @media (min-width: $breakpoint) {
-      @each $size in $formfield-sizes {
-        &--#{$size}\@#{$name} {
-          width: rem($size);
-        }
-      }
-    }
   }
 }

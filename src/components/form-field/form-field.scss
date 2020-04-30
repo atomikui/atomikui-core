@@ -1,45 +1,11 @@
 .rcl-formfield {
-  &__input,
-  &__textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: $white;
-    border: rem(1) solid $gray-200;
-    border-radius: rem($base-border-radius);
-    font-family: inherit;
-    font-size: inherit;
-    height: rem($input-height);
-    outline: 0;
-    padding: rem(0 8);
-    width: 100%;
-
-    &:not(:read-only):focus {
-      @include focus-outline();
-    }
-
-    &:disabled {
-      background: $gray-000;
-      border: 0;
-      color: $gray-300;
-    }
-
-    &:read-only {
-      border: 0;
-      padding: 0;
-    }
-  }
-
-  &.has-error > &__input {
-    border-color: $red-100;
-  }
-
-  &.has-error > &__input:focus,
-  &.has-error > &:focus {
-    @include focus-error-outline();
+  &__input {
+    @include input();
   }
 
   &__textarea {
+    @include input();
+
     height: rem($text-area-height);
     padding: rem(8);
   }
@@ -52,13 +18,22 @@
     margin-top: rem(3);
   }
 
-  &--dark {
+  &.rcl-formfield--dark {
     .rcl-formfield__input,
     .rcl-formfield__textarea {
       background: $gray-500;
       border-color: $gray-400;
       color: $white;
     }
+  }
+
+  &.has-error > &__input {
+    border-color: $red-100;
+  }
+
+  &.has-error > &__input:focus,
+  &.has-error > &:focus {
+    @include focus-error-outline();
   }
 
   @each $name, $breakpoint in $breakpoints {
