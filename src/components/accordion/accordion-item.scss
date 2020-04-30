@@ -2,6 +2,29 @@
   background: $gray-000;
   border-radius: rem($border-radius);
 
+  &__trigger__label {
+    font-weight: $font-medium;
+  }
+
+  &__trigger__icon {
+    fill: $gray-500;
+    height: rem(18);
+    transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+    width: rem(18);
+  }
+
+  &__body {
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+    will-change: height;
+  }
+
+  &__body__content {
+    opacity: 0;
+    padding: rem(8 16 16);
+    transition: opacity 0.3s linear 0.15s;
+  }
+
   &__trigger {
     align-items: center;
     background: transparent;
@@ -29,30 +52,7 @@
         transform: rotate(180deg);
       }
     }
-  }
-
-  &__trigger__label {
-    font-weight: $font-medium;
-  }
-
-  &__trigger__icon {
-    fill: $gray-500;
-    height: rem(18);
-    transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
-    width: rem(18);
-  }
-
-  &__body {
-    overflow: hidden;
-    transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
-    will-change: height;
-  }
-
-  &__body__content {
-    opacity: 0;
-    padding: rem(8 16 16);
-    transition: opacity 0.3s linear 0.15s;
-  }
+  
 
   &.is-open {
     .rcl-accordion-item__trigger__label {
