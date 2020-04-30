@@ -156,13 +156,13 @@
     }
   }
 
-  .rcl-range-slider--dark,
-  .rcl-range-slider--dark.is-disabled {
-    input[type='range'] {
+  &.rcl-range-slider--dark,
+  &.rcl-range-slider--dark.is-disabled {
+    & > input[type='range'] {
       background: $gray-400;
     }
 
-    &__ticks {
+    .rcl-range-slider__ticks {
       &__tick {
         background: $gray-400;
       }
@@ -177,12 +177,14 @@
     }
   }
 
-  .rcl-range-slider.is-disabled {
-    &__ticks__label {
-      color: $gray-200;
+  &.rcl-range-slider--dark.is-disabled {
+    .rcl-range-slider__ticks {
+      &__label {
+        color: $gray-200;
 
-      &.is-selected {
-        color: $white;
+        &.is-selected {
+          color: $white;
+        }
       }
     }
   }
