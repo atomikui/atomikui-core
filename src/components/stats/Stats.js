@@ -17,8 +17,15 @@ const Stats = () => {
     styleTag.type = 'text/css';
     styleTag.appendChild(
       document.createTextNode(`
-      body { font-family: 'Hind Madurai', Arial, Helvetica, sans-serif !important; }
-      h1, h2, h3, h4, h5, h6, .header { font-family: 'Hind Madurai', serif !important; color: #222; font-weight: 500; margin-top: 8px; }
+      body { 
+        font-family: 'Hind Madurai', Arial, Helvetica, sans-serif !important; 
+      }
+      h1, h2, h3, h4, h5, h6, .header { 
+        font-family: 'Hind Madurai', serif !important; 
+        color: #222;
+        font-weight: 500; 
+        margin-top: 8px; 
+      }
       main { background: white; }
       .header { font-size: 36px !important; }
       .ant-layout-footer { display: none; }
