@@ -156,13 +156,13 @@
     }
   }
 
-  &--dark,
-  &--dark.is-disabled {
+  .rcl-range-slider--dark,
+  .rcl-range-slider--dark.is-disabled {
     input[type='range'] {
       background: $gray-400;
     }
 
-    .rcl-range-slider__ticks {
+    &__ticks {
       &__tick {
         background: $gray-400;
       }
@@ -177,8 +177,8 @@
     }
   }
 
-  &--dark.is-disabled {
-    .rcl-range-slider__ticks__label {
+  .rcl-range-slider.is-disabled {
+    &__ticks__label {
       color: $gray-200;
 
       &.is-selected {
