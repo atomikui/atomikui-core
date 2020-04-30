@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
+import ThemeContext from '../../themeContext';
 import generateId from '../../utilities/generateId';
 
 const types = ['checkbox', 'radio'];
@@ -22,6 +23,7 @@ const FormOption = ({
   type,
   ...others
 }) => {
+  const { theme } = useContext(ThemeContext);
   const uid = id || generateId();
   const inputName = name || uid;
   const inputHintId = `${inputName}_hint`;
@@ -36,6 +38,7 @@ const FormOption = ({
           'has-error': hasError,
           'is-disabled': disabled,
           'rcl-form-option--radio': type === 'radio',
+          [`rcl-form-option--${theme}`]: theme,
         })}
       >
         <input
