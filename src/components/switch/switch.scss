@@ -59,22 +59,36 @@
     }
   }
 
-  &.has-error > .rcl-switch__toggle {
-    background: $red-100;
+  &.has-error {
+    & > .rcl-switch__toggle {
+      background: $red-100;
+    }
+
+    & > &__input:focus ~ &__toggle {
+      box-shadow: $formfield-error-focus;
+    }
   }
 
-  &.has-error > &__input:focus ~ &__toggle {
-    box-shadow: $formfield-error-focus;
-  }
+  &.is-disabled,
+  &.is-checked.is-disabled {
+    & > .rcl-switch__toggle {
+      background: $gray-100;
+      cursor: default;
 
-  &.is-disabled > &__toggle,
-  &.is-checked.is-disabled > &__toggle {
-    background: $gray-100;
-    cursor: default;
+      &:after {
+        background: $gray-200;
+        box-shadow: none;
+      }
+    }
 
-    &:after {
-      background: $gray-200;
-      box-shadow: none;
+    &.rcl-switch--dark {
+      & > .rcl-switch__toggle {
+        background: lighten($gray-500, 10%);
+
+        &::after {
+          background: darken($gray-300, 6%);
+        }
+      }
     }
   }
 

@@ -9,4 +9,10 @@
   & > * + * {
     border-top: rem(1) solid $gray-100;
   }
+
+  &--dark {
+    & > * + * {
+      border-top-color: lighten($gray-500, 5%);
+    }
+  }
 }
