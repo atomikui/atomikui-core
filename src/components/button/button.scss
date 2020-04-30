@@ -1,7 +1,7 @@
 .rcl-btn,
 a.rcl-btn {
-  background-color: $white;
-  border: rem(1) solid $blue-200;
+  background-color: $gray-100;
+  border: rem(1) solid $gray-200;
   border-radius: rem($base-border-radius);
   color: $blue-300;
   cursor: pointer;
@@ -35,6 +35,29 @@ a.rcl-btn {
     box-shadow: 0;
     color: $gray-300;
     cursor: default;
+  }
+
+  &--dark {
+    background: $gray-400;
+    border: 0;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background: darken($gray-400, 10%);
+    }
+
+    &.rcl-btn--hollow {
+      color: $blue-100;
+
+      &:hover {
+        background: $gray-500;
+      }
+    }
+
+    &.rcl-btn--link {
+      color: $blue-100;
+    }
   }
 
   @each $name, $map in $button-sizes {
@@ -79,10 +102,10 @@ a.rcl-btn {
 
   &--link {
     min-height: auto;
-    text-decoration: underline;
 
     &:hover {
       color: $black;
+      text-decoration: underline;
     }
   }
 

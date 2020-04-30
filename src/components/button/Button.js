@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import ThemeContext from '../../themeContext';
 
 const Button = ({
   block,
@@ -14,10 +15,13 @@ const Button = ({
   theme,
   ...others
 }) => {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <button
       className={classnames('rcl-btn', className, {
         [`rcl-btn--${theme}`]: theme,
+        [`rcl-btn--${themeContext.theme}`]: themeContext.theme,
         [`rcl-btn--${shape}`]: shape,
         [`rcl-btn--${size}`]: size,
         'rcl-btn--condensed': condensed,
@@ -51,7 +55,6 @@ Button.propTypes = {
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /** Specifies the button variation. */
   theme: PropTypes.oneOf([
-    'dark',
     'primary',
     'secondary',
     'tertiary',

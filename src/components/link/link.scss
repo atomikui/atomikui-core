@@ -4,11 +4,17 @@
   text-decoration: none;
 
   &:hover {
-    color: $black;
+    text-decoration: underline;
   }
 
   &.is-disabled {
-    color: $gray-300;
     pointer-events: none;
+  }
+
+  &--dark {
+    color: $blue-100;
+
+    &:hover {
+    }
   }
 }

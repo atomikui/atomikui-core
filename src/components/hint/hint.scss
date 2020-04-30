@@ -2,6 +2,10 @@
   color: $gray-400;
   font-size: rem(12);
 
+  &--dark {
+    color: $gray-200;
+  }
+
   &--error {
     color: $red-100;
   }

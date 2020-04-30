@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import ThemeContext from '../../themeContext';
 
 const Hint = ({ className, children, type, ...others }) => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div
       className={classnames('rcl-hint', className, {
         [`rcl-hint--${type}`]: type,
+        [`rcl-hint--${theme}`]: theme,
       })}
       {...others}
     >

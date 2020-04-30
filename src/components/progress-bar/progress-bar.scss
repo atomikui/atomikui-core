@@ -48,6 +48,10 @@
     background-size: 25px 25px;
   }
 
+  &--dark {
+    background: $gray-500;
+  }
+
   @keyframes move {
     0% {
       background-position: 0 0;

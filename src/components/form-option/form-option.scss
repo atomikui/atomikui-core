@@ -24,8 +24,8 @@
     position: absolute;
 
     &:checked + .rcl-form-option__icon {
-      background: $blue-200;
-      border-color: $blue-200;
+      background: $blue-100;
+      border-color: $blue-100;
 
       &:focus + &__icon {
         box-shadow: $formfield-focus;

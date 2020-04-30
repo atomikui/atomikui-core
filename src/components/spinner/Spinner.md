@@ -7,6 +7,7 @@ import { Spinner } from '@alaneicker/react-component-library';
 
 <>
   <Spinner />
+  <Spinner theme="white" />
   <Spinner theme="red" />
   <Spinner theme="orange" />
   <Spinner theme="green" />

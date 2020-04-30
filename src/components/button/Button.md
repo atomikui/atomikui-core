@@ -7,7 +7,6 @@ import { Button } from '@alaneicker/react-component-library';
 
 <>
   <Button>Default</Button>
-  <Button theme="dark">Dark</Button>
   <Button theme="primary">Primary</Button>
   <Button theme="secondary">Secondary</Button>
   <Button theme="tertiary">Tertiary</Button>

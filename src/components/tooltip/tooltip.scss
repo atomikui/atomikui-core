@@ -24,6 +24,29 @@
     width: 0;
   }
 
+  &--dark {
+    & > .rcl-tooltip__content {
+      background: $gray-100;
+      color: $black;
+    }
+
+    &::after {
+      border-top-color: $gray-100;
+    }
+
+    &.rcl-tooltip--align-left {
+      &::after {
+        border-left-color: $gray-100;
+      }
+    }
+
+    &.rcl-tooltip--align-right {
+      &::after {
+        border-right-color: $gray-100;
+      }
+    }
+  }
+
   &--align-top-left,
   &--align-top-center,
   &--align-top-right {
