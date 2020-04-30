@@ -71,20 +71,6 @@
     }
   }
 
-  &.has-error &__select {
-    border-color: $red-100;
-  }
-
-  &.has-error &__select__menu {
-    &:focus {
-      @include focus-error-outline();
-    }
-  }
-
-  &.has-error &__select::after {
-    background-color: $red-100;
-  }
-
   &--dark.is-disabled {
     .rcl-dropdown__select {
       background: $gray-500;
@@ -97,5 +83,19 @@
     .rcl-dropdown__select::after {
       background-color: $gray-500;
     }
+  }
+
+  &.has-error &__select {
+    border-color: $red-100;
+  }
+
+  &.has-error &__select__menu {
+    &:focus {
+      @include focus-error-outline();
+    }
+  }
+
+  &.has-error &__select::after {
+    background-color: $red-100;
   }
 }
