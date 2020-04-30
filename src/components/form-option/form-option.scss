@@ -15,7 +15,7 @@
   }
 
   &--radio > .rcl-form-option__icon,
-  &--radio > .rcl-form-option__icon:after {
+  &--radio > .rcl-form-option__icon::after {
     border-radius: 50%;
   }
 

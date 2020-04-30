@@ -13,7 +13,7 @@
       border: 0;
     }
 
-    .rcl-dropdown__select:after {
+    .rcl-dropdown__select::after {
       background-color: lighten($gray-200, 13%);
     }
   }
@@ -95,7 +95,7 @@
         }
       }
 
-      .rcl-dropdown__select:after {
+      .rcl-dropdown__select::after {
         background-color: $gray-500;
       }
     }
