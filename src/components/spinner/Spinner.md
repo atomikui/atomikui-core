@@ -7,10 +7,10 @@ import { Spinner } from '@alaneicker/react-component-library';
 
 <>
   <Spinner />
-  <Spinner variant="red" />
-  <Spinner variant="orange" />
-  <Spinner variant="green" />
-  <Spinner variant="blue" />
+  <Spinner theme="red" />
+  <Spinner theme="orange" />
+  <Spinner theme="green" />
+  <Spinner theme="blue" />
 </>;
 ```
 
@@ -18,10 +18,10 @@ import { Spinner } from '@alaneicker/react-component-library';
 
 ```jsx
 <>
-  <Spinner size="sm" />
-  <Spinner size="md" />
-  <Spinner />
-  <Spinner size="lg" />
-  <Spinner size="xlg" />
+  <Spinner theme="blue" size="sm" />
+  <Spinner theme="blue" size="md" />
+  <Spinner theme="blue" />
+  <Spinner theme="blue" size="lg" />
+  <Spinner theme="blue" size="xlg" />
 </>
 ```
