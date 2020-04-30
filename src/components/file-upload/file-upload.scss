@@ -1,19 +1,4 @@
 .rcl-file-upload {
-  &--dark {
-    & > .rcl-file-upload__wrapper {
-      background: $gray-500;
-      border-color: $gray-400;
-      color: $white;
-
-      & > .rcl-file-upload__file-list {
-        & > * {
-          background: lighten($gray-500, 12%);
-          border-color: $gray-400;
-        }
-      }
-    }
-  }
-
   & > input {
     left: rem(-10000);
     position: absolute;
@@ -82,6 +67,21 @@
 
     & > * + * {
       margin-left: rem(8);
+    }
+  }
+
+  &--dark {
+    & > .rcl-file-upload__wrapper {
+      background: $gray-500;
+      border-color: $gray-400;
+      color: $white;
+
+      & > .rcl-file-upload__file-list {
+        & > * {
+          background: lighten($gray-500, 12%);
+          border-color: $gray-400;
+        }
+      }
     }
   }
 }

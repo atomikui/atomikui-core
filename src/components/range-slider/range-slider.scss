@@ -40,7 +40,6 @@
     background-color: $white;
     border: rem(11) solid $blue-200;
     border-radius: 50%;
-    box-shadow: rem(0 0 0 2) $white;
     cursor: pointer;
     height: rem(32);
     width: rem(32);
@@ -52,7 +51,6 @@
     background-color: $white;
     border: rem(11) solid $blue-200;
     border-radius: 50%;
-    box-shadow: rem(0 0 0 2) $white;
     cursor: pointer;
     height: rem(10);
     width: rem(10);
@@ -60,7 +58,6 @@
 
   ::-ms-thumb {
     background-color: $white;
-    border: rem(2) solid $blue-200;
     border-radius: 50%;
     cursor: pointer;
     height: rem(8);
@@ -156,6 +153,37 @@
 
     ::-ms-thumb {
       border-color: $gray-200;
+    }
+  }
+
+  &--dark,
+  &--dark.is-disabled {
+    input[type='range'] {
+      background: $gray-400;
+    }
+
+    .rcl-range-slider__ticks {
+      &__tick {
+        background: $gray-400;
+      }
+
+      &__label {
+        color: $white;
+
+        &.is-selected {
+          color: $blue-100;
+        }
+      }
+    }
+  }
+
+  &--dark.is-disabled {
+    .rcl-range-slider__ticks__label {
+      color: $gray-200;
+
+      &.is-selected {
+        color: $white;
+      }
     }
   }
 
