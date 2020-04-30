@@ -156,8 +156,7 @@
     }
   }
 
-  &.rcl-range-slider--dark,
-  &.rcl-range-slider--dark.is-disabled {
+  &.rcl-range-slider--dark {
     & > input[type='range'] {
       background: $gray-400;
     }
@@ -179,6 +178,10 @@
 
   &.rcl-range-slider--dark.is-disabled {
     .rcl-range-slider__ticks {
+      &__tick {
+        background: $gray-400;
+      }
+
       &__label {
         color: $gray-200;
 
