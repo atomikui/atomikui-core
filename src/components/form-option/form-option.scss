@@ -19,58 +19,48 @@
     border-radius: 50%;
   }
 
+  &--dark > .rcl-form-option__icon {
+    background: $gray-500;
+    border-color: $gray-300;
+  }
+
+  &.has-error > .rcl-form-option__icon {
+    border-color: $red-100;
+  }
+
+  &.is-disabled + .rcl-form-option__icon {
+    background: $gray-100;
+    border: 0;
+  }
+
   & > input {
     left: rem(-10000);
     position: absolute;
-
-    &:checked + .rcl-form-option__icon {
-      background: $blue-100;
-      border-color: $blue-100;
-    }
-
-    &:checked:focus + .rcl-form-option__icon {
-      box-shadow: $formfield-focus;
-    }
   }
 
-  &.has-error {
-    & > .rcl-form-option__icon {
-      border-color: $red-100;
-    }
-
-    & > input:focus + .rcl-form-option__icon {
-      box-shadow: $formfield-error-focus;
-    }
+  &--dark.is-disabled > input + .rcl-form-option__icon {
+    background: $gray-500;
+    border: 0;
   }
 
-  // &.is-disabled {
-  //   & + .rcl-form-option__icon {
-  //     background: $gray-100;
-  //     border: 0;
-  //   }
+  & > input:checked + .rcl-form-option__icon {
+    background: $blue-100;
+    border-color: $blue-100;
+  }
 
-  //   & > input:checked + .rcl-form-option__icon {
-  //     background: $gray-200;
-  //   }
-  // }
+  &--dark.is-disabled > input:checked + .rcl-form-option__icon {
+    background: $gray-400;
+  }
 
-  // &.rcl-form-option--dark {
-  //   & > .rcl-form-option__icon {
-  //     background: $gray-500;
-  //     border-color: $gray-300;
-  //   }
+  & > input:checked:focus + .rcl-form-option__icon {
+    box-shadow: $formfield-focus;
+  }
 
-  //   &.is-disabled {
-  //     & > input {
-  //       & + .rcl-form-option__icon {
-  //         background: $gray-500;
-  //         border: 0;
-  //       }
+  &.has-error > input:focus + .rcl-form-option__icon {
+    box-shadow: $formfield-error-focus;
+  }
 
-  //       &:checked + .rcl-form-option__icon {
-  //         background: $gray-400;
-  //       }
-  //     }
-  //   }
-  // }
+  &.is-disabled > input:checked + .rcl-form-option__icon {
+    background: $gray-200;
+  }
 }
