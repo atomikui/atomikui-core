@@ -1,4 +1,19 @@
 .rcl-file-upload {
+  &--dark {
+    & > .rcl-file-upload__wrapper {
+      background: $gray-500;
+      border-color: $gray-400;
+      color: $white;
+
+      & > .rcl-file-upload__file-list {
+        & > * {
+          background: lighten($gray-500, 12%);
+          border-color: $gray-400;
+        }
+      }
+    }
+  }
+
   & > input {
     left: rem(-10000);
     position: absolute;
@@ -10,6 +25,7 @@
 
   &__wrapper {
     align-items: center;
+    background: $white;
     border: rem(1) solid $gray-200;
     border-radius: rem($border-radius);
     display: flex;
@@ -45,7 +61,6 @@
       }
 
       &:hover {
-        background: lighten($blue-000, 5%);
         border-color: $blue-100;
       }
     }
@@ -55,9 +70,7 @@
     font-weight: $font-bold;
   }
 
-  .rcl-file-upload__file-list {
-    margin: rem(16 0 0);
-
+  &__file-list {
     & > * {
       background: $white;
       border: rem(1) solid darken($blue-100, 7%);

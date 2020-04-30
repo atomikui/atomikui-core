@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { List, ListItem } from '../list';
+import ThemeContext from '../../themeContext';
 
 const FileUpload = ({
   className,
@@ -11,6 +12,8 @@ const FileUpload = ({
   uploadBtnVariant,
   ...others
 }) => {
+  const { theme } = useContext(ThemeContext);
+
   const [files, setFiles] = useState([]);
 
   const id = `file-input-${Math.round(Math.random() * 10000000)}`;
@@ -40,7 +43,11 @@ const FileUpload = ({
   };
 
   return (
-    <div className={classnames('rcl-file-upload', className)}>
+    <div
+      className={classnames('rcl-file-upload', className, {
+        [`rcl-file-upload--${theme}`]: theme,
+      })}
+    >
       <input
         id={id}
         name="fileUpload"
@@ -78,11 +85,14 @@ const FileUpload = ({
           </span>
         )}
         {dragAndDrop ? (
-          <List className="rcl-file-upload__file-list">
-            {files.map((file, index) => {
-              return <ListItem key={`file-${index}`}>{file}</ListItem>;
-            })}
-          </List>
+          <>
+            <div className="margin-top-16" />
+            <List className="rcl-file-upload__file-list">
+              {files.map((file, index) => {
+                return <ListItem key={`file-${index}`}>{file}</ListItem>;
+              })}
+            </List>
+          </>
         ) : (
           <span>{files.join(', ')}</span>
         )}
