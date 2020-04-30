@@ -9,15 +9,15 @@
       flex-direction: row;
       justify-content: space-between;
 
+      &::before {
+        margin-right: rem(8);
+      }
+
       &:not(:first-child)::before,
       &:not(:last-child)::after {
         position: static;
         width: auto;
         flex: 1;
-      }
-
-      &:before {
-        margin-right: rem(8);
       }
     }
   }

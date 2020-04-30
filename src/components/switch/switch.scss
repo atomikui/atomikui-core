@@ -21,7 +21,7 @@
     transition: all 0.1s ease-in-out;
     width: rem(50);
 
-    &:after {
+    &::after {
       background: $white;
       border-radius: 50%;
       box-shadow: rem(-1 1 3) rgba(0, 0, 0, 0.35);
@@ -53,7 +53,7 @@
     .rcl-switch__toggle {
       background: $blue-200;
 
-      &:after {
+      &::after {
         left: calc(100% - #{$switch-height}px + 5px);
       }
     }
@@ -75,7 +75,7 @@
       background: $gray-100;
       cursor: default;
 
-      &:after {
+      &::after {
         background: $gray-200;
         box-shadow: none;
       }
