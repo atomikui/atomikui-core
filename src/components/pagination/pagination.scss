@@ -1,4 +1,5 @@
 .rcl-pagination {
+  background: $white;
   border: rem(1) solid $gray-200;
   border-radius: rem($border-radius);
   display: inline-flex;
@@ -16,21 +17,43 @@
     outline: 0;
     padding: rem(8);
     line-height: 1;
-    text-decoration: none;
+    transition: background 0.2s linear;
 
     &:focus,
     &:active {
-      background-color: $blue-000;
+      background: $blue-000;
       @include focus-outline();
     }
 
     &:hover {
-      background-color: $blue-000;
+      background: $blue-000;
+      text-decoration: none;
     }
   }
 
   &__item.is-active > a {
     background: $blue-200;
     color: $white;
+  }
+
+  &--dark {
+    background: $gray-500;
+    border-color: $gray-400;
+
+    & > * + * {
+      border-left: rem(1) solid $gray-400;
+    }
+
+    & > .rcl-pagination__item.is-active > a {
+      background: $blue-100;
+      color: $black;
+    }
+
+    & > .rcl-pagination__item:not(.is-active) > a {
+      &:hover,
+      &:active {
+        background: lighten($gray-500, 6%);
+      }
+    }
   }
 }
