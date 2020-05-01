@@ -41,7 +41,7 @@
     border-color: $gray-400;
 
     & > * + * {
-      border-left: rem(1) solid $gray-400;
+      border-left: rem(1) solid darken($gray-400, 6%);
     }
 
     & > .rcl-pagination__item.is-active > a {
