@@ -58,17 +58,10 @@ const Drawer = ({
 
   return (
     <>
-      <Overlay
-        isActive={isOpen}
-        onClick={() => {
-          return onClose();
-        }}
-      />
+      <Overlay isActive={isOpen} onClick={onClose} />
       <div
         ref={ref}
-        onKeyDown={(e) => {
-          return handleKeyDown(e);
-        }}
+        onKeyDown={handleKeyDown}
         className={classnames('rcl-drawer', className, {
           'is-open': isOpen,
           [`rcl-drawer--${position}`]: position,

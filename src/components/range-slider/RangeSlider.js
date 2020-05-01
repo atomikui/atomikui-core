@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import generateId from '../../utilities/generateId';
@@ -26,6 +26,7 @@ const RangeSlider = ({
   value,
   ...others
 }) => {
+  const sliderRef = useRef();
   const { theme } = useContext(ThemeContext);
   const [rangeValue, setRangeValue] = useState(value);
 
@@ -37,6 +38,7 @@ const RangeSlider = ({
   const handleChange = (updateValue) => {
     setRangeValue(updateValue);
     onChange(updateValue);
+    sliderRef.current.focus();
   };
 
   return (
@@ -50,6 +52,7 @@ const RangeSlider = ({
         })}
       >
         <input
+          ref={sliderRef}
           id={uid}
           aria-valuemin={min}
           aria-valuemax={max}

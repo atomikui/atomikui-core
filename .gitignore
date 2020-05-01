@@ -1,6 +1,8 @@
 .npmrc
 .env.*
 
+TODOS
+
 # dependencies
 /node_modules
 /.pnp

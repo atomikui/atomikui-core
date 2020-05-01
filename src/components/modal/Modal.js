@@ -64,14 +64,10 @@ const Modal = ({
         'overlay--transparent': noOverlay,
       })}
       {...(!disableOverlayclick && {
-        onClick: (e) => {
-          return onClose();
-        },
+        onClick: onClose,
       })}
       {...(closeOnEscape && {
-        onKeyDown: (e) => {
-          return handleKeyDown(e);
-        },
+        onKeyDown: handleKeyDown,
       })}
       {...others}
     >
@@ -84,12 +80,7 @@ const Modal = ({
       >
         <div className="rcl-modal__header">
           <div className="rcl-modal__title">{title}</div>
-          <button
-            className="rcl-modal__close-button"
-            onClick={(e) => {
-              return onClose();
-            }}
-          >
+          <button className="rcl-modal__close-button" onClick={onClose}>
             <Icon icon={faTimes} size="2x" color="white" />
           </button>
         </div>

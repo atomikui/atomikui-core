@@ -46,9 +46,7 @@ const AccordionItem = ({
         aria-expanded={isExpanded}
         aria-controls={panelId}
         className="rcl-accordion-item__trigger"
-        onClick={() => {
-          return handleOnClick();
-        }}
+        onClick={handleOnClick}
       >
         <span className="rcl-accordion-item__trigger__label">{label}</span>
         <Icon

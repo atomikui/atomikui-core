@@ -58,9 +58,7 @@ const FileUpload = ({
       />
       <label
         onDragOver={onDragOver}
-        onDrop={(e) => {
-          return handleChange(e);
-        }}
+        onDrop={handleChange}
         htmlFor={id}
         className={classnames('rcl-file-upload__wrapper', {
           'rcl-file-upload__wrapper--drag-and-drop': dragAndDrop,

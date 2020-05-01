@@ -104,15 +104,7 @@ const DatePicker = ({
           <Icon icon={faCalendarAlt} size="lg" color="#444" />
         </Button>
       </div>
-      <Overlay
-        isActive={isOpen}
-        onKeyDown={(e) => {
-          return handleKeyDown(e);
-        }}
-        onClick={() => {
-          return cancel();
-        }}
-      >
+      <Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}>
         <div className="rcl-date-picker__calendar" ref={calendar}>
           <Calendar
             onChange={(details) => {
