@@ -8,6 +8,7 @@
     display: block;
     height: rem(2);
     left: 50%;
+    opacity: 0;
     position: absolute;
     transform: translateX(-50%);
     transition: all 0.3s ease-in-out;
@@ -40,6 +41,7 @@
 
   &.is-active {
     &::before {
+      opacity: 1;
       width: 100%;
     }
   }
