@@ -7,7 +7,20 @@ import TabPanel from './TabPanel';
 configure({ adapter: new Adapter() });
 
 describe('<TabPanel />', () => {
-  beforeEach(() => {});
+  let tabPanel;
 
-  it('Should render without errors', () => {});
+  beforeEach(() => {
+    tabPanel = shallow(
+      <TabPanel state={[0, 0]}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sem
+        elit, aliquam sit amet elit et, porta hendrerit turpis. Donec metus
+        nulla, aliquam sagittis sagittis vel, maximus sit amet turpis. Curabitur
+        nec dapibus quam.
+      </TabPanel>,
+    );
+  });
+
+  it('Should render without errors', () => {
+    expect(tabPanel.length).toBe(1);
+  });
 });
