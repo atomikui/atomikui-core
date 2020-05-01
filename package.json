@@ -25,7 +25,7 @@
     "start": "NODE_ENV=development styleguidist server",
     "build:component-library": "NODE_ENV=production rm -rf dist && babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && npm run build:styles && cp package.json dist/package.json",
     "build:styles": "cross-env webpack --config webpack.config.js",
-    "build": "NODE_ENV=production npm run test && styleguidist build",
+    "build": "NODE_ENV=production npm run test && npm run lint && npm run lint:css && styleguidist build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

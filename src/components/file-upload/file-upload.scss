@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        border-color: $blue-100;
+        border-color: $blue-200;
       }
     }
   }
@@ -75,6 +75,12 @@
       background: $gray-500;
       border-color: $gray-400;
       color: $white;
+
+      &--drag-and-drop {
+        &:hover {
+          border-color: $blue-100;
+        }
+      }
 
       & > .rcl-file-upload__file-list {
         & > * {
