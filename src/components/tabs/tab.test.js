@@ -7,7 +7,17 @@ import Tab from './Tab';
 configure({ adapter: new Adapter() });
 
 describe('<Tab />', () => {
-  beforeEach(() => {});
+  let tab;
+  beforeEach(() => {
+    tab = shallow(<Tab label="Tab One" />);
+  });
 
-  it('Should render without errors', () => {});
+  it('Should render without errors', () => {
+    expect(tab.length).toBe(1);
+  });
+
+  it('Should render a button with text', () => {
+    expect(tab.find('Button').length).toBe(1);
+    expect(tab.find('Button').children().text()).toBe('Tab One');
+  });
 });
