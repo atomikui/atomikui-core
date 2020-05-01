@@ -131,6 +131,20 @@
   }
 
   &.is-disabled {
+    input[type='range'] {
+      &::-webkit-slider-thumb {
+        box-shadow: none;
+      }
+
+      &::-moz-range-thumb {
+        box-shadow: none;
+      }
+
+      &::-ms-thumb {
+        box-shadow: none;
+      }
+    }
+
     input[type='range'],
     .rcl-range-slider__ticks__tick {
       background: $gray-100;
