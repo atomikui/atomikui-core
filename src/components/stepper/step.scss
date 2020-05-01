@@ -76,6 +76,22 @@
     }
   }
 
+  &.rcl-step--dark {
+    &:not(:first-child)::before,
+    &:not(:last-child)::after {
+      background: $gray-400;
+    }
+
+    &.is-complete {
+      & .rcl-step__number {
+        &:focus,
+        &:hover {
+          box-shadow: rem(0 0 0 8) rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
   @media (min-width: $breakpoint-medium) {
     &__label {
       display: block;
