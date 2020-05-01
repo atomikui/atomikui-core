@@ -4,60 +4,58 @@
   position: relative;
   width: 100%;
 
-  input[type='range'] {
+  & > input[type='range'] {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: $blue-000;
     border: 0;
-    border-radius: rem(5);
-    height: rem(5);
+    border-radius: rem(4);
+    height: rem(4);
     margin: 0;
     padding: 0;
     position: relative;
     width: calc(100% - 1px);
     z-index: 3;
 
+    &:hover,
     &:focus {
-      border-color: lighten($blue-200, 35%);
       outline: 0;
 
       &::-webkit-slider-thumb {
-        background-color: darken($blue-200, 10%);
+        box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.2);
       }
 
       &::-moz-range-thumb {
-        background-color: darken($blue-200, 10%);
+        box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.2);
       }
 
       &::-ms-thumb {
-        background-color: darken($blue-200, 10%);
+        box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.2);
       }
     }
   }
 
   ::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: $white;
-    border: rem(11) solid $blue-200;
+    background-color: $blue-200;
     border-radius: 50%;
     cursor: pointer;
-    height: rem(32);
-    width: rem(32);
+    height: rem(28);
+    width: rem(28);
   }
 
   ::-moz-range-thumb {
     appearance: none;
     -moz-appearance: none;
-    background-color: $white;
-    border: rem(11) solid $blue-200;
+    background-color: $blue-200;
     border-radius: 50%;
     cursor: pointer;
-    height: rem(10);
-    width: rem(10);
+    height: rem(28);
+    width: rem(28);
   }
 
   ::-ms-thumb {
-    background-color: $white;
+    background-color: $blue-200;
     border-radius: 50%;
     cursor: pointer;
     height: rem(8);
@@ -144,15 +142,15 @@
     }
 
     ::-webkit-slider-thumb {
-      border-color: $gray-200;
+      background: $gray-200;
     }
 
     ::-moz-range-thumb {
-      border-color: $gray-200;
+      background: $gray-200;
     }
 
     ::-ms-thumb {
-      border-color: $gray-200;
+      background: $gray-200;
     }
   }
 
