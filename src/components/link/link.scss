@@ -8,6 +8,7 @@
   }
 
   &.is-disabled {
+    color: $black;
     pointer-events: none;
   }
 
