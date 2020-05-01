@@ -173,6 +173,18 @@
       background: $gray-400;
     }
 
+    ::-webkit-slider-thumb {
+      background: $blue-100;
+    }
+
+    ::-moz-slider-thumb {
+      background: $blue-100;
+    }
+
+    ::-ms-slider-thumb {
+      background: $blue-100;
+    }
+
     .rcl-range-slider__ticks {
       &__tick {
         background: $gray-400;
