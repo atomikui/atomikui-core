@@ -26,8 +26,7 @@
     height: rem(28);
     width: rem(28);
 
-    &:hover,
-    &:focus {
+    &:hover {
       box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.2);
     }
   }
@@ -41,8 +40,7 @@
     height: rem(28);
     width: rem(28);
 
-    &:hover,
-    &:focus {
+    &:hover {
       box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.2);
     }
   }
@@ -54,8 +52,7 @@
     height: rem(8);
     width: rem(8);
 
-    &:hover,
-    &:focus {
+    &:hover {
       box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.2);
     }
   }
@@ -154,18 +151,6 @@
 
     .rcl-range-slider__ticks__label {
       color: $gray-200;
-    }
-
-    ::-webkit-slider-thumb {
-      background: $gray-200;
-    }
-
-    ::-moz-range-thumb {
-      background: $gray-200;
-    }
-
-    ::-ms-thumb {
-      background: $gray-200;
     }
   }
 
