@@ -1,15 +1,23 @@
 @import '../../sass-starter/abstracts';
+
+// Base styles
 @import './base';
+
+// Icon page layout styles
 @import './icons';
-@import './rsg-example-avatar';
+
+// Styleguisist overrides
 @import './rsg-controls';
 @import './rsg-elements';
+@import './rsg-sidebar';
+@import './rsg-table';
+
+// code examples
 @import './rsg-example-alert';
+@import './rsg-example-avatar';
 @import './rsg-example-badge';
 @import './rsg-example-button';
 @import './rsg-example-form-option';
 @import './rsg-example-modal';
 @import './rsg-example-progress-bar';
 @import './rsg-example-step';
-@import './rsg-sidebar';
-@import './rsg-table';
