@@ -84,7 +84,7 @@ const validationSchema = yup.object().shape({
         name="file"
         label="Upload Resume"
         uploadBtnVariant="primary"
-        hintText="PDF format only"
+        helpText="PDF format only"
         onChange={(file) => console.log(file)}
       />
     </div>

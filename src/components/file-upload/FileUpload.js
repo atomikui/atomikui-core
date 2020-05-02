@@ -2,12 +2,18 @@ import React, { useState, useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { List, ListItem } from '../list';
+import Hint from '../hint/Hint';
+import generateId from '../../utilities/generateId';
 import ThemeContext from '../../themeContext';
 
 const FileUpload = ({
   className,
   dragAndDrop,
+  errorText,
+  hasError,
+  helpText,
   label,
+  name,
   onChange,
   uploadBtnVariant,
   ...others
@@ -16,7 +22,10 @@ const FileUpload = ({
 
   const [files, setFiles] = useState([]);
 
-  const id = `file-input-${Math.round(Math.random() * 10000000)}`;
+  const id = generateId('file-input');
+  const inputName = name || id;
+  const inputHintId = `${inputName}_hint`;
+  const inputErrorId = `${inputName}_error`;
 
   const getFileNames = (fileList) => {
     const fileArray = [];
@@ -95,6 +104,16 @@ const FileUpload = ({
           <span>{files.join(', ')}</span>
         )}
       </label>
+      {(helpText || errorText) && (
+        <div className="rcl-formfield__hints">
+          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+          {hasError && (
+            <Hint id={inputErrorId} type="error">
+              {errorText}
+            </Hint>
+          )}
+        </div>
+      )}
     </div>
   );
 };
@@ -104,8 +123,16 @@ FileUpload.propTypes = {
   className: PropTypes.string,
   /** Makes fiel upload drag and drop */
   dragAndDrop: PropTypes.bool,
+  /** Text to be displayed when there is an error. */
+  errorText: PropTypes.string,
+  /** Specifies the error state. */
+  hasError: PropTypes.bool,
+  /** Assistive text to be displayed with form field. */
+  helpText: PropTypes.string,
   /** File upload label */
   label: PropTypes.string,
+  /** Specifies input name attribute. */
+  name: PropTypes.string,
   /** Triggers onChange callback */
   onChange: PropTypes.func,
   /** Specifies the upload button variant */
@@ -122,6 +149,9 @@ FileUpload.propTypes = {
 FileUpload.defaultProps = {
   className: '',
   dragAndDrop: false,
+  errorText: '',
+  hasError: false,
+  helpText: '',
   label: 'Select a File',
   onChange() {},
   uploadBtnVariant: null,
