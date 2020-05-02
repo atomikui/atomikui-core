@@ -55,6 +55,7 @@ const FileUpload = ({
     <div
       className={classnames('rcl-file-upload', className, {
         [`rcl-file-upload--${theme}`]: theme,
+        'has-error': hasError,
       })}
     >
       <input

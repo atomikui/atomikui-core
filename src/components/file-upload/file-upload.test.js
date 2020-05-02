@@ -90,4 +90,26 @@ describe('<FileUpload />', () => {
 
     expect(fileUpload.find('List').children().length).toBe(1);
   });
+
+  it('Should render error class', () => {
+    fileUpload.setProps({ hasError: true });
+
+    expect(fileUpload.find('.rcl-file-upload').hasClass('has-error')).toBe(
+      true,
+    );
+  });
+
+  it('Should render error hint with text', () => {
+    fileUpload.setProps({ errorText: 'Error text', hasError: true });
+
+    expect(fileUpload.find('Hint').length).toBe(1);
+    expect(fileUpload.find('Hint').text()).toBe('Error text');
+  });
+
+  it('Should render help hint with text', () => {
+    fileUpload.setProps({ helpText: 'Help text' });
+
+    expect(fileUpload.find('Hint').length).toBe(1);
+    expect(fileUpload.find('Hint').text()).toBe('Help text');
+  });
 });
