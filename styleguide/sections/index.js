@@ -7,6 +7,7 @@ const informational = require('./informational');
 const layout = require('./layout');
 const navigation = require('./navigation');
 const providers = require('./providers');
+const templates = require('./templates');
 
 module.exports = [
   gettingStarted,
@@ -18,4 +19,5 @@ module.exports = [
   layout,
   navigation,
   providers,
+  templates,
 ];
