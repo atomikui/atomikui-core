@@ -15,7 +15,7 @@ import { Alert } from '@alaneicker/react-component-library';
 </>;
 ```
 
-### Alert with close button
+### Dismissable Alert
 
 Simply add an `onClose` prop with a callback and a close button will be added to the alert.
 
