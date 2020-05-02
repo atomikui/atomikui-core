@@ -105,7 +105,7 @@
     "react-dom": "^16.13.1",
     "react-masked-field": "^2.0.3",
     "react-spring": "^8.0.27",
-    "react-styleguidist": "^11.0.5",
+    "react-styleguidist": "9.2.0",
     "react-table": "^7.0.4",
     "sass-loader": "^8.0.2",
     "sinon": "^9.0.1",
