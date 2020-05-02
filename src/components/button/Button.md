@@ -42,6 +42,19 @@ import { Button } from '@alaneicker/react-component-library';
 </Button>;
 ```
 
+### Icon Button
+
+```jsx
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
+import { Button } from '@alaneicker/react-component-library';
+
+<Button theme="primary">
+  <Icon icon={faCloudDownloadAlt} size="lg" className="margin-right-8" />
+  Download
+</Button>;
+```
+
 ### Responsive Button
 
 ```jsx
