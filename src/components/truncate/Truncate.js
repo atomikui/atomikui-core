@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Link from '../link';
+import Button from '../button';
 
 const Truncate = ({ children, expanded, afterEllipses, maxWords }) => {
   const [originalText] = useState(children);
@@ -20,14 +20,9 @@ const Truncate = ({ children, expanded, afterEllipses, maxWords }) => {
       {' ... '}
       {afterEllipses || (
         <>
-          <span
-            className="rcl-link"
-            href="#"
-            role="button"
-            onClick={toggleContent}
-          >
+          <Button theme="link" onClick={toggleContent}>
             Show {isTruncated ? 'more' : 'less'}
-          </span>
+          </Button>
         </>
       )}
     </>
