@@ -51,7 +51,7 @@ describe('<Truncate />', () => {
   });
 
   it('Should show truncated content', () => {
-    truncate.find('.rcl-link').simulate('click');
+    truncate.find('Button').simulate('click');
     const wordCount = truncate.text().replace(' ... Show more', '').split(' ')
       .length;
 
