@@ -38,6 +38,18 @@ const data = useMemo(
       age: '22',
       occupation: 'Car Salesman',
     },
+    {
+      firstName: 'Jane',
+      lastName: 'Doe',
+      age: '38',
+      occupation: 'VP of Marketing',
+    },
+    {
+      firstName: 'Paul',
+      lastName: 'MnCormick',
+      age: '54',
+      occupation: 'Plumber',
+    },
   ],
   [],
 );

@@ -1,0 +1,30 @@
+$cell-border-color: lighten($gray-200, 10%);
+
+.rcl-table {
+  border: rem(1) solid $gray-200;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+
+  th,
+  td {
+    padding: rem(8 16);
+  }
+
+  tr > td {
+    border-top: rem(1) solid $cell-border-color;
+  }
+
+  tr > * + * {
+    border-left: rem(1) solid $cell-border-color;
+  }
+
+  tr:first-of-type > td {
+    border-top-width: rem(2);
+    border-top-color: $gray-300;
+  }
+
+  tbody > tr:nth-child(even) {
+    background: lighten($blue-000, 5%);
+  }
+}
