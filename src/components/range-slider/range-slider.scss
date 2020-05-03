@@ -178,15 +178,15 @@
     outline: 0;
 
     &::-webkit-slider-thumb {
-      box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.2);
+      box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.25);
     }
 
     &::-moz-slider-thumb {
-      box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.2);
+      box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.25);
     }
 
     &::-ms-slider-thumb {
-      box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.2);
+      box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.25);
     }
   }
 

@@ -55,7 +55,7 @@ const FormOption = ({
           {...others}
         />
         <span className="rcl-form-option__icon">
-          {checked && <Icon icon={faCheck} color="#1a1a1a" />}
+          {checked && <Icon icon={faCheck} color="white" />}
         </span>
         {label}
       </Label>
