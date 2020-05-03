@@ -7,12 +7,11 @@ import { SwitchPanel, Switch } from '@alaneicker/react-component-library';
 const [switches, setSwitches] = useState([
   {
     label: 'Send me notifications',
-    checked: false,
+    checked: true,
   },
   {
     label: 'Subscribe me to the newsletter',
     checked: true,
-    disabled: true,
   },
   {
     label: 'Set as default account',
@@ -28,7 +27,7 @@ const handleChange = (index) => {
   );
 };
 
-<SwitchPanel>
+<SwitchPanel label="Subscriber Settings">
   {switches.map(({ label, checked, disabled }, index) => (
     <Switch
       key={`switch-${index}`}

@@ -83,6 +83,6 @@
   }
 
   &--dark:not(.is-checked):not(.has-error) > .rcl-switch__toggle {
-    background: lighten($gray-500, 10%);
+    background: $gray-400;
   }
 }

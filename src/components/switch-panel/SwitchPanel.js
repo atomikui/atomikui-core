@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import ThemeContext from '../../themeContext';
 
-const SwitchPanel = ({ children, className, ...others }) => {
+const SwitchPanel = ({ children, className, label, ...others }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -13,7 +13,8 @@ const SwitchPanel = ({ children, className, ...others }) => {
       })}
       {...others}
     >
-      {children}
+      <div className="rcl-switch-panel__hd">{label}</div>
+      <div className="rcl-switch-panel__bd">{children}</div>
     </div>
   );
 };
@@ -23,11 +24,14 @@ SwitchPanel.propTypes = {
   children: PropTypes.node,
   /** Specifies custom component classes. */
   className: PropTypes.string,
+  /** LSwitch panel group label */
+  label: PropTypes.string,
 };
 
 SwitchPanel.defaultProps = {
   children: <></>,
   className: '',
+  label: '',
 };
 
 export default SwitchPanel;

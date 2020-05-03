@@ -1,18 +1,38 @@
 .rcl-switch-panel {
+  background: $white;
+  border: rem(1) solid $gray-200;
   border-radius: rem($border-radius);
-  box-shadow: rem(0 0 5) rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 
-  & > * {
-    padding: rem(16);
+  &__hd {
+    background: $gray-100;
+    font-weight: $font-semibold;
+    padding: rem(12 16);
+    text-transform: uppercase;
   }
 
-  & > * + * {
-    border-top: rem(1) solid $gray-100;
+  &__bd {
+    & > * {
+      padding: rem(16);
+    }
+
+    & > * + * {
+      border-top: rem(1) solid $gray-100;
+    }
   }
 
   &--dark {
-    & > * + * {
-      border-top-color: lighten($gray-500, 5%);
+    background: $gray-500;
+    border: 0;
+
+    & > .rcl-switch-panel__hd {
+      background: lighten($gray-500, 8%);
+    }
+
+    & > .rcl-switch-panel__bd {
+      & > * + * {
+        border-top-color: lighten($gray-500, 5%);
+      }
     }
   }
 }
