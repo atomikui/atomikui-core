@@ -1,4 +1,5 @@
 ```jsx
+import { useState } from 'react';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import {
@@ -9,6 +10,8 @@ import {
   FormOption,
   RangeSlider,
 } from '@alaneicker/react-component-library';
+
+const [sendNotifications, setSendNotifications] = useState(false);
 
 const validationSchema = yup.object().shape({
   first_name: yup.string().required('First name is required'),
@@ -52,7 +55,8 @@ const {
   initialValues,
   validationSchema,
   onSubmit: (values) => {
-    console.log(values);
+    const formData = { ...values, sendNotifications };
+    console.log(formData);
   },
 });
 
@@ -152,6 +156,8 @@ const {
       <FormOption
         name="notification_subscribe"
         label="Sign me up for job notifications"
+        onChange={() => setSendNotifications(!sendNotifications)}
+        checked={sendNotifications}
       />
     </div>
     <Button theme="primary" type="submit">
