@@ -9,6 +9,7 @@ module.exports = {
       'src/components/avatar/Avatar.js',
       'src/components/list/List.js',
       'src/components/list/ListItem.js',
+      'src/components/table/Table.js',
     ];
   },
   sections: [
