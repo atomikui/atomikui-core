@@ -62,7 +62,12 @@ const {
   },
 });
 
-<form onSubmit={handleSubmit} noValidate autoComplete="off">
+<form
+  onSubmit={handleSubmit}
+  noValidate
+  autoComplete="off"
+  style={{ maxWidth: '500px', margin: '0 auto' }}
+>
   <fieldset>
     <legend className="margin-bottom-24">Applicant Information</legend>
     <div className="margin-bottom-24">
