@@ -11,6 +11,7 @@ const Table = ({
   isPaginated,
   isLoading,
   pageCount,
+  isSortable,
   ...others
 }) => {
   const { theme } = useContext(ThemeContext);
@@ -77,7 +78,9 @@ Table.propTypes = {
   isPaginated: PropTypes.bool,
   /** Data is being loaded */
   isLoading: PropTypes.bool,
-  /**  If paginated, the total number of pages */
+  /** adds sorting capability to table */
+  isSortable: PropTypes.bool,
+  /** If paginated, the total number of pages */
   pageCount: PropTypes.number,
 };
 
@@ -87,6 +90,7 @@ Table.defaultProps = {
   data: [],
   isPaginated: false,
   isLoading: false,
+  isSortable: false,
   pageCount: 0,
 };
 
