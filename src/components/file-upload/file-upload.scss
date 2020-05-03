@@ -90,4 +90,10 @@
       }
     }
   }
+
+  &.has-error {
+    & > .rcl-file-upload__wrapper {
+      border-color: $red-100;
+    }
+  }
 }

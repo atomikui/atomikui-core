@@ -19,11 +19,15 @@ const validationSchema = yup.object().shape({
     .required('Please enter your email'),
   phone: yup.string().required('Phone is required'),
   level_of_experience: yup.string().required('Level of experience is required'),
-  salary_range: yup.string().required('Salary range is required'),
-  file: yup
+  salary_range: yup
+    .number()
+    .required('Salary range is required')
+    .moreThan(100000, 'Common! You deserve a better salary!'),
+  file_upload: yup
     .mixed()
     .required('A file is required')
-    .test('fileFormat', 'PDF only', (value) => {
+    .test('fileFormat', 'The file selected was not a PDF', (value) => {
+      console.log('FILE:', value);
       return value && ['application/pdf'].includes(value.type);
     }),
 });
@@ -34,11 +38,17 @@ const initialValues = {
   email: '',
   phone: '',
   level_of_experience: '',
-  salary_range: '',
-  file: '',
+  salary_range: '100000',
 };
 
-const { handleSubmit, handleChange, values, errors, touched } = useFormik({
+const {
+  handleSubmit,
+  handleChange,
+  values,
+  errors,
+  setFieldValue,
+  touched,
+} = useFormik({
   initialValues,
   validationSchema,
   onSubmit: (values) => {
@@ -46,7 +56,7 @@ const { handleSubmit, handleChange, values, errors, touched } = useFormik({
   },
 });
 
-<form onSubmit={handleSubmit}>
+<form onSubmit={handleSubmit} noValidate autoComplete="off">
   <fieldset>
     <legend className="margin-bottom-24">Applicant Information</legend>
     <div className="margin-bottom-24">
@@ -55,7 +65,7 @@ const { handleSubmit, handleChange, values, errors, touched } = useFormik({
         label="First Name"
         value={values.first_name}
         onChange={handleChange}
-        hasError={errors.first_name && touched.first_name}
+        hasError={!!(errors.first_name && touched.first_name)}
         errorText={errors.first_name}
       />
     </div>
@@ -65,7 +75,7 @@ const { handleSubmit, handleChange, values, errors, touched } = useFormik({
         label="Last Name"
         value={values.last_name}
         onChange={handleChange}
-        hasError={errors.last_name && touched.last_name}
+        hasError={!!(errors.last_name && touched.last_name)}
         errorText={errors.last_name}
       />
     </div>
@@ -75,7 +85,7 @@ const { handleSubmit, handleChange, values, errors, touched } = useFormik({
         label="Email address"
         value={values.email}
         onChange={handleChange}
-        hasError={errors.email && touched.email}
+        hasError={!!(errors.email && touched.email)}
         errorText={errors.email}
       />
     </div>
@@ -86,7 +96,7 @@ const { handleSubmit, handleChange, values, errors, touched } = useFormik({
         mask="(999) 999-9999"
         value={values.phone}
         onChange={handleChange}
-        hasError={errors.phone && touched.phone}
+        hasError={!!(errors.phone && touched.phone)}
         errorText={errors.phone}
       />
     </div>
@@ -97,7 +107,7 @@ const { handleSubmit, handleChange, values, errors, touched } = useFormik({
         errorText="Please select a color"
         value={values.level_of_experience}
         onChange={handleChange}
-        hasError={errors.level_of_experience && touched.level_of_experience}
+        hasError={!!(errors.level_of_experience && touched.level_of_experience)}
         errorText={errors.level_of_experience}
         options={[
           { text: 'Junior Level', value: 'Junior Level' },
@@ -111,13 +121,13 @@ const { handleSubmit, handleChange, values, errors, touched } = useFormik({
       <RangeSlider
         name="salary_range"
         label="Salary Range"
-        hasError={errors.salary_range && touched.salary_range}
-        errorText={errors.first_name}
+        hasError={!!(errors.salary_range && touched.salary_range)}
+        errorText={errors.salary_range}
         min="100000"
         max="500000"
         step="100000"
         value={values.salary_range}
-        onChange={handleChange}
+        onChange={(value) => setFieldValue('salary_range', value)}
         ticks={[
           { text: '$100k', val: '100000' },
           { text: '$200k', val: '200000' },
@@ -129,13 +139,13 @@ const { handleSubmit, handleChange, values, errors, touched } = useFormik({
     </div>
     <div className="margin-bottom-24 padding-top-24">
       <FileUpload
-        name="file"
+        name="file_upload"
         label="Upload Resume"
         uploadBtnVariant="primary"
-        onChange={handleChange}
+        onChange={(files) => setFieldValue('file_upload', files[0])}
         helpText="PDF format only"
-        errorText={errors.file}
-        hasError={errors.file && touched.file}
+        errorText={errors.file_upload}
+        hasError={!!errors.file_upload}
       />
     </div>
     <div className="margin-bottom-24 margin-top-24">
