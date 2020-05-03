@@ -1,3 +1,5 @@
+### Basic Table
+
 ```jsx
 import { useMemo } from 'react';
 import { Table } from '@alaneicker/react-component-library';
