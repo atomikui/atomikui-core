@@ -1,7 +1,7 @@
 .rcl-btn,
 a.rcl-btn {
-  background-color: $gray-100;
-  border: rem(1) solid $default-border-gray;
+  background-color: $color-btn-default;
+  border: 0;
   border-radius: rem($base-border-radius);
   color: $blue-300;
   cursor: pointer;
