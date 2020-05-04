@@ -8,13 +8,17 @@ div[class^='rsg--sidebar'] {
   [class^='rsg--logo'] > h1 {
     font-family: 'Hind Madurai', Arial, Helvetica, sans-serif;
     font-size: rem(20);
-    font-weight: 500;
-    line-height: 1.2;
+    font-weight: 600;
+    line-height: 1.1;
     color: $white;
+    padding-left: rem(60);
+    background: no-repeat left center/rem(52)
+      url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0iIzg4Y2NmYyIgZD0iTTI0LDM0QzExLjEsMzQsMSwyOS42LDEsMjRjMC01LjYsMTAuMS0xMCwyMy0xMGMxMi45LDAsMjMsNC40LDIzLDEwQzQ3LDI5LjYsMzYuOSwzNCwyNCwzNHogTTI0LDE2CWMtMTIuNiwwLTIxLDQuMS0yMSw4YzAsMy45LDguNCw4LDIxLDhzMjEtNC4xLDIxLThDNDUsMjAuMSwzNi42LDE2LDI0LDE2eiIvPjxwYXRoIGZpbGw9IiM4MGRlZWEiIGQ9Ik0xNS4xLDQ0LjZjLTEsMC0xLjgtMC4yLTIuNi0wLjdDNy42LDQxLjEsOC45LDMwLjIsMTUuMywxOWwwLDBjMy01LjIsNi43LTkuNiwxMC4zLTEyLjRjMy45LTMsNy40LTMuOSw5LjgtMi41CWMyLjUsMS40LDMuNCw0LjksMi44LDkuOGMtMC42LDQuNi0yLjYsMTAtNS42LDE1LjJjLTMsNS4yLTYuNyw5LjYtMTAuMywxMi40QzE5LjcsNDMuNSwxNy4yLDQ0LjYsMTUuMSw0NC42eiBNMzIuOSw1LjQJYy0xLjYsMC0zLjcsMC45LTYsMi43Yy0zLjQsMi43LTYuOSw2LjktOS44LDExLjlsMCwwYy02LjMsMTAuOS02LjksMjAuMy0zLjYsMjIuMmMxLjcsMSw0LjUsMC4xLDcuNi0yLjNjMy40LTIuNyw2LjktNi45LDkuOC0xMS45CWMyLjktNSw0LjgtMTAuMSw1LjQtMTQuNGMwLjUtNC0wLjEtNi44LTEuOC03LjhDMzQsNS42LDMzLjUsNS40LDMyLjksNS40eiIvPjxwYXRoIGZpbGw9IiM4MGRlZWEiIGQ9Ik0zMyw0NC42Yy01LDAtMTIuMi02LjEtMTcuNi0xNS42QzguOSwxNy44LDcuNiw2LjksMTIuNSw0LjFsMCwwQzE3LjQsMS4zLDI2LjIsNy44LDMyLjcsMTkJYzMsNS4yLDUsMTAuNiw1LjYsMTUuMmMwLjcsNC45LTAuMyw4LjMtMi44LDkuOEMzNC43LDQ0LjQsMzMuOSw0NC42LDMzLDQ0LjZ6IE0xMy41LDUuOGMtMy4zLDEuOS0yLjcsMTEuMywzLjYsMjIuMgljNi4zLDEwLjksMTQuMSwxNi4xLDE3LjQsMTQuMmMxLjctMSwyLjMtMy44LDEuOC03LjhjLTAuNi00LjMtMi41LTkuNC01LjQtMTQuNEMyNC42LDkuMSwxNi44LDMuOSwxMy41LDUuOEwxMy41LDUuOHoiLz48Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSI0IiBmaWxsPSIjODBkZWVhIi8+PC9zdmc+');
   }
 
   [class^='rsg--version'] {
     color: $gray-200;
+    font-size: rem(13);
 
     &::before {
       content: 'Version ';
