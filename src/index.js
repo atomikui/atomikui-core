@@ -27,7 +27,6 @@ export { default as Spinner } from './components/spinner';
 export { Stepper, Step } from './components/stepper';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
-export { default as Table } from './components/table';
 export { Tabs, Tab, TabPanel } from './components/tabs';
 export { default as Tooltip } from './components/tooltip';
 export { default as Truncate } from './components/truncate';

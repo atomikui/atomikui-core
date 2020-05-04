@@ -9,13 +9,18 @@ module.exports = {
       'src/components/avatar/Avatar.js',
       'src/components/list/List.js',
       'src/components/list/ListItem.js',
-      'src/components/table/Table.js',
     ];
   },
   sections: [
     {
       name: 'Icons',
       content: 'src/components/icon/Icon.md',
+      usageMode: 'expand',
+      exampleMode: 'expand',
+    },
+    {
+      name: 'Table',
+      content: 'src/components/table/Table.md',
       usageMode: 'expand',
       exampleMode: 'expand',
     },
