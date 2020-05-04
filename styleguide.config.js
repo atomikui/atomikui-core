@@ -34,24 +34,24 @@ module.exports = {
     },
   },
   theme: {
-    ...(theme === 'dark' && {
-      color: {
-        // Base styleguide styles
+    color: {
+      // Base styleguide dark theme styles
+      ...(theme === 'dark' && {
         base: '#efefef',
         baseBackground: '#1a1a1a',
         border: '#444',
         link: '#88ccfc',
-        // syntax highlighting styles
-        codeBackground: '#272C34',
-        codeString: '#a6e22e',
-        codeKeyword: '#66d9ef',
-        codeOperator: '#f8f8f2',
-        codePunctuation: '#f8f8f2',
-        codeBase: '#f8f8f2',
-        codeFunction: '#e6db74',
-        codeProperty: '',
-      },
-    }),
+      }),
+      // syntax highlighting styles
+      codeBackground: '#272C34',
+      codeString: '#a6e22e',
+      codeKeyword: '#66d9ef',
+      codeOperator: '#f8f8f2',
+      codePunctuation: '#f8f8f2',
+      codeBase: '#f8f8f2',
+      codeFunction: '#e6db74',
+      codeProperty: '',
+    },
     fontFamily: {
       base: '"Hind Madurai", Arial, Helvetica, sans-serif',
     },
