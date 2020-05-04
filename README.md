@@ -46,12 +46,24 @@
   </div>
 </div>
 
-The React Component Library offers a wide array of React component that can be used to kickstart any react project. From form controls to information components like modals, alerts and icons, you'll find everything here to build your React application.
+The React Component Library offers a wide array of React component that can be used to kickstart any project. From form controls to information components like modals, alerts and icons, you'll find everything here to build your next React application.
+
+### Features
+
+#### Customizable Components and Third-Party Support
+
+The React Component Library comes with a variety of customizable React components as well as integrated third-party support for:
+
+- React Table
+- React Flexbox Grid
+- Formik
+- Yup
 
 #### Theming
 
-A "dark mode" theme is available and can easily be set through a simple environment variable. Also, each component can be easily themed to your liking simply by passing in a custom CSS class.
+- Light mode theme (Default)
+- Dark mode theme
 
-#### Get Started
+### Get Started
 
 [Installation the Component Library](/#/Getting%20Started/Installation)
