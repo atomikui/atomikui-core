@@ -30,7 +30,8 @@
     color: $blue-400;
   }
 
-  &--light-gray {
+  &--light-gray,
+  &--light-blue {
     color: inherit;
   }
 }

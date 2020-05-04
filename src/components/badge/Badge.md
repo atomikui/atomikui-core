@@ -27,6 +27,7 @@ import { Badge } from '@alaneicker/react-component-library';
 <>
   <Badge>Default</Badge>
   <Badge variant="light-gray">Light Gray</Badge>
+  <Badge variant="light-blue">Light Blue</Badge>
   <Badge variant="info">Info</Badge>
   <Badge variant="warning">Warning</Badge>
   <Badge variant="error">Error</Badge>
