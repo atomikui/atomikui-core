@@ -4,17 +4,25 @@ The React Component Library recommends [React Table](https://react-table.js.org/
 
 _Note: The ThemeContext pulls the `theme` enrironment variable from the .env file. E.g. `THEME=dark`._
 
+Import the ThemeContext.
+
+```html
+import ThemeContext from '../../themeContext';
+```
+
+Inside your table component, get the theme class from ThemeContext and apply it to the table;
+
+```html
+const { theme } = useContext(ThemeContext);
+```
+
 ```jsx
-import { useMemo, useContext } from 'react';
+import { useMemo } from 'react';
 import { useTable } from 'react-table';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../themeContext';
 
 const Table = ({ columns, data, ...others }) => {
-  // Gets the theme from the ThemeContext
-  const { theme } = useContext(ThemeContext);
-
   const {
     getTableProps,
     getTableBodyProps,
@@ -27,14 +35,7 @@ const Table = ({ columns, data, ...others }) => {
   });
 
   return (
-    <table
-      {...getTableProps()}
-      className={classnames('rcl-table', {
-        // Sets the table theme modifier class form the ThemeContext
-        [`rcl-table--${theme}`]: theme,
-      })}
-      {...others}
-    >
+    <table {...getTableProps()} className="rcl-table" {...others}>
       <thead>
         {headerGroups.map((headerGroup) => {
           return (

@@ -18,11 +18,5 @@ module.exports = {
       usageMode: 'expand',
       exampleMode: 'expand',
     },
-    {
-      name: 'Table',
-      content: 'src/components/table/Table.md',
-      usageMode: 'expand',
-      exampleMode: 'expand',
-    },
   ],
 };
