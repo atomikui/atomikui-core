@@ -1,60 +1,40 @@
 ### Basic Table
 
 ```jsx
-import { useMemo } from 'react';
+import { useState, useMemo } from 'react';
+import { useAsyncMemo } from 'use-async-memo';
 import { Table } from '@alaneicker/react-component-library';
 
 const columns = useMemo(
   () => [
     {
-      Header: 'First Name',
-      accessor: 'firstName',
+      Header: 'User ID',
+      accessor: 'userId',
     },
     {
-      Header: 'Last Name',
-      accessor: 'lastName',
+      Header: 'ID',
+      accessor: 'id',
     },
     {
-      Header: 'Age',
-      accessor: 'age',
+      Header: 'Title',
+      accessor: 'title',
     },
     {
-      Header: 'Occupation',
-      accessor: 'occupation',
+      Header: 'Completed',
+      accessor: 'completed',
     },
   ],
   [],
 );
 
-const data = useMemo(
-  () => [
-    {
-      firstName: 'Alan',
-      lastName: 'Eicker',
-      age: '30',
-      occupation: 'Front End Engineer',
-    },
-    {
-      firstName: 'Bob',
-      lastName: 'Smith',
-      age: '22',
-      occupation: 'Car Salesman',
-    },
-    {
-      firstName: 'Jane',
-      lastName: 'Doe',
-      age: '38',
-      occupation: 'VP of Marketing',
-    },
-    {
-      firstName: 'Paul',
-      lastName: 'MnCormick',
-      age: '54',
-      occupation: 'Plumber',
-    },
-  ],
-  [],
-);
+const data = useAsyncMemo(async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+  const responseData = await response.json();
 
-<Table columns={columns} data={data}></Table>;
+  return await responseData.map((row) => {
+    return { ...row, completed: String(row.completed) };
+  });
+}, []);
+
+<Table columns={columns} data={data} />;
 ```
