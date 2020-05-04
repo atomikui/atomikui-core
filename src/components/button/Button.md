@@ -22,13 +22,9 @@ import { Button } from '@alaneicker/react-component-library';
 import { Button } from '@alaneicker/react-component-library';
 
 <>
-  <Button theme="primary">Default</Button>
-  <Button theme="primary" shape="square">
-    Square
-  </Button>
-  <Button theme="primary" shape="pill">
-    Pill
-  </Button>
+  <Button>Default</Button>
+  <Button shape="square">Square</Button>
+  <Button shape="pill">Pill</Button>
 </>;
 ```
 
@@ -37,9 +33,7 @@ import { Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
-<Button theme="primary" disabled>
-  Disabled
-</Button>;
+<Button disabled>Disabled</Button>;
 ```
 
 ### Icon Button
@@ -49,7 +43,7 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@alaneicker/react-component-library';
 
-<Button theme="primary">
+<Button>
   <Icon icon={faCloudDownloadAlt} size="lg" className="margin-right-8" />
   Download
 </Button>;
@@ -60,9 +54,7 @@ import { Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Button } from '@alaneicker/react-component-library';
 
-<Button theme="primary" block>
-  Block Button
-</Button>;
+<Button block>Block Button</Button>;
 ```
 
 ### Button Sizes
@@ -72,12 +64,8 @@ import { Button } from '@alaneicker/react-component-library';
 
 <>
   <Button size="sm">Small</Button>
-  <Button theme="primary" size="md">
-    Medium
-  </Button>
-  <Button theme="secondary">Default</Button>
-  <Button theme="tertiary" size="lg">
-    Large
-  </Button>
+  <Button size="md">Medium</Button>
+  <Button>Default</Button>
+  <Button size="lg">Large</Button>
 </>;
 ```

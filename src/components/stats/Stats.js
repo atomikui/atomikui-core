@@ -40,7 +40,7 @@ const Stats = () => {
     <div className="stats-container">
       {loading && (
         <div className="stats-container__loading">
-          <Spinner size="xlg" variant="blue" />
+          <Spinner size="xlg" theme="blue" />
           <div>LOADING REPORT...</div>
         </div>
       )}
