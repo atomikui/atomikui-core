@@ -5,13 +5,25 @@ h4,
 h5,
 h6 {
   &[class^='rsg--'] {
-    font-weight: 700;
     font-family: 'Hind Madurai', Arial, Helvetica, sans-serif;
+    font-weight: 700;
   }
 }
 
 h1[class^='rsg--'] {
   font-size: rem(40);
+}
+
+[class^='rsg--preview'] {
+  border-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+[class^='rsg--tab'] {
+  [class^='rsg--root'],
+  textarea {
+    border-radius: 0 !important;
+  }
 }
 
 code[class^='rsg--code']:not(:empty) {
