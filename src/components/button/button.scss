@@ -1,7 +1,7 @@
 .rcl-btn,
 a.rcl-btn {
   background-color: $gray-100;
-  border: rem(1) solid $gray-200;
+  border: rem(1) solid $default-border-gray;
   border-radius: rem($base-border-radius);
   color: $blue-300;
   cursor: pointer;
@@ -54,7 +54,7 @@ a.rcl-btn {
       color: $blue-100;
 
       &:hover {
-        background: $gray-500;
+        background: $dark-background-gray;
       }
     }
 

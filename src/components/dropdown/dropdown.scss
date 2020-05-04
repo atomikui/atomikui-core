@@ -9,7 +9,7 @@
 
   &__select {
     background-color: $white;
-    border: rem(1) solid $gray-200;
+    border: rem(1) solid $default-border-gray;
     border-radius: rem($base-border-radius);
     position: relative;
 
@@ -52,8 +52,8 @@
   }
 
   &--dark > .rcl-dropdown__select {
-    background: $gray-500;
-    border-color: $gray-400;
+    background: $dark-background-gray;
+    border-color: $dark-border-gray;
 
     & > select {
       color: $white;
@@ -62,7 +62,7 @@
 
   &.is-disabled {
     .rcl-dropdown__select {
-      background: $gray-000;
+      background: $default-background-light-gray;
       border: 0;
     }
 
@@ -73,7 +73,7 @@
 
   &--dark.is-disabled {
     .rcl-dropdown__select {
-      background: $gray-500;
+      background: $dark-background-gray;
 
       & > select {
         color: $gray-200;
@@ -86,7 +86,7 @@
   }
 
   &.has-error &__select {
-    border-color: $red-100;
+    border-color: $error-red;
   }
 
   &.has-error &__select__menu {

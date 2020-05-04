@@ -76,7 +76,7 @@
       cursor: default;
 
       &::after {
-        background: $gray-200;
+        background: $disabled-background-gray;
         box-shadow: none;
       }
     }

@@ -1,11 +1,11 @@
 .rcl-switch-panel {
   background: $white;
-  border: rem(1) solid $gray-200;
+  border: rem(1) solid $default-border-gray;
   border-radius: rem($border-radius);
   overflow: hidden;
 
   &__hd {
-    background: $gray-100;
+    background: $gray-000;
     font-weight: $font-semibold;
     padding: rem(12 16);
     text-transform: uppercase;
@@ -22,7 +22,7 @@
   }
 
   &--dark {
-    background: $gray-500;
+    background: $dark-background-gray;
     border: 0;
 
     & > .rcl-switch-panel__hd {

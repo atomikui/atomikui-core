@@ -1,5 +1,5 @@
 .rcl-accordion-item {
-  background: $gray-000;
+  background: $default-background-light-gray;
   border-radius: rem($border-radius);
 
   &__trigger__label {
@@ -65,7 +65,7 @@
   }
 
   &--dark {
-    background: $gray-500;
+    background: $dark-background-gray;
     color: $white;
 
     .rcl-accordion-item__trigger {

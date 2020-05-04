@@ -21,14 +21,14 @@
   &--dark {
     .rcl-formfield__input,
     .rcl-formfield__textarea {
-      background: $gray-500;
-      border-color: $gray-400;
+      background: $dark-background-gray;
+      border-color: $dark-border-gray;
       color: $white;
     }
   }
 
   &.has-error > &__input {
-    border-color: $red-100;
+    border-color: $error-red;
   }
 
   &.has-error > &__input:focus,

@@ -1,3 +1,5 @@
+@import '../abstracts/color-assignments.scss';
+
 @mixin appearance-reset {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -12,23 +14,24 @@
 }
 
 @mixin focus-outline {
-  box-shadow: rem(0 0 0 2) $blue-100;
+  box-shadow: rem(0 0 0 2) $focus-blue-light;
 }
 
 @mixin focus-error-outline {
-  box-shadow: rem(0 0 0 2) lighten($red-100, 20%);
+  box-shadow: rem(0 0 0 2) $focus-red;
 }
 
 @mixin focus-warning-outline {
-  box-shadow: rem(0 0 0 2) lighten($orange-100, 20%);
+  box-shadow: rem(0 0 0 2) $focus-orange;
 }
 
 @mixin radio-button-focus-outline {
-  box-shadow: rem(0 0 0 2) $blue-100, inset 0 0 0 rem(6) $blue-200;
+  box-shadow: rem(0 0 0 2) $focus-blue-light,
+    inset 0 0 0 rem(6) $focus-blue-medium;
 }
 
 @mixin radio-button-checked-outline {
-  box-shadow: inset 0 0 0 rem(6) $blue-200;
+  box-shadow: inset 0 0 0 rem(6) $focus-blue-medium;
 }
 
 @mixin form-option {
@@ -54,7 +57,7 @@
   width: 100%;
 
   &:disabled {
-    background: $gray-000;
+    background: $default-background-light-gray;
     border: 0;
     color: $gray-300;
   }

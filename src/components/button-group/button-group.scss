@@ -1,6 +1,6 @@
 .rcl-button-group {
   align-items: stretch;
-  border: rem(1) solid $gray-200;
+  border: rem(1) solid $default-border-gray;
   border-radius: rem($border-radius);
   display: inline-flex;
   height: rem($input-height);
@@ -82,14 +82,14 @@
   }
 
   &.rcl-button-group--dark {
-    border-color: $gray-400;
+    border-color: $dark-border-gray;
 
     & > * + * {
       border-left: rem(1) solid darken($gray-400, 6%);
     }
 
     & > * {
-      background: $gray-500;
+      background: $dark-background-gray;
       color: $white;
 
       &:hover,

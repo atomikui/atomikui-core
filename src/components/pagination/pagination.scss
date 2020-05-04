@@ -1,6 +1,6 @@
 .rcl-pagination {
   background: $white;
-  border: rem(1) solid $gray-200;
+  border: rem(1) solid $default-border-gray;
   border-radius: rem($border-radius);
   display: inline-flex;
   list-style: none;
@@ -37,8 +37,8 @@
   }
 
   &--dark {
-    background: $gray-500;
-    border-color: $gray-400;
+    background: $dark-background-gray;
+    border-color: $dark-border-gray;
 
     & > * + * {
       border-left: rem(1) solid darken($gray-400, 6%);

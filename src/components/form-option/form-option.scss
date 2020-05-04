@@ -5,7 +5,7 @@
   &__icon {
     align-items: center;
     background-image: $white;
-    border: rem(1) solid $gray-200;
+    border: rem(1) solid $default-border-gray;
     border-radius: rem($border-radius);
     display: flex;
     height: rem(20);
@@ -20,16 +20,17 @@
   }
 
   &--dark > .rcl-form-option__icon {
-    background: $gray-500;
+    background: $dark-background-gray;
     border-color: $gray-300;
   }
 
   &.has-error > .rcl-form-option__icon {
-    border-color: $red-100;
+    border-color: $error-red;
   }
 
   &.is-disabled + .rcl-form-option__icon {
     background: $gray-100;
+    border-color: $default-border-gray;
     border: 0;
   }
 
@@ -39,7 +40,7 @@
   }
 
   &--dark.is-disabled > input + .rcl-form-option__icon {
-    background: $gray-500;
+    background: $dark-background-gray;
     border: 0;
   }
 
@@ -61,6 +62,7 @@
   }
 
   &.is-disabled > input:checked + .rcl-form-option__icon {
-    background: $gray-200;
+    background: $disabled-background-gray;
+    border-color: $disabled-background-gray;
   }
 }

@@ -11,7 +11,7 @@
   &__wrapper {
     align-items: center;
     background: $white;
-    border: rem(1) solid $gray-200;
+    border: rem(1) solid $default-border-gray;
     border-radius: rem($border-radius);
     display: flex;
     overflow: hidden;
@@ -72,8 +72,8 @@
 
   &--dark {
     & > .rcl-file-upload__wrapper {
-      background: $gray-500;
-      border-color: $gray-400;
+      background: $dark-background-gray;
+      border-color: $dark-border-gray;
       color: $white;
 
       &--drag-and-drop {
@@ -85,7 +85,7 @@
       & > .rcl-file-upload__file-list {
         & > * {
           background: lighten($gray-500, 12%);
-          border-color: $gray-400;
+          border-color: $dark-border-gray;
         }
       }
     }
@@ -93,7 +93,7 @@
 
   &.has-error {
     & > .rcl-file-upload__wrapper {
-      border-color: $red-100;
+      border-color: $error-red;
     }
   }
 }

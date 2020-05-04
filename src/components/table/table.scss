@@ -1,7 +1,7 @@
 $cell-border-color: lighten($gray-200, 10%);
 
 .rcl-table {
-  border: rem(1) solid $gray-200;
+  border: rem(1) solid $default-border-gray;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
