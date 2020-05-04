@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Label from '../label';
 import Hint from '../hint';
 import generateId from '../../utilities/generateId';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const ButtonGroup = ({
   children,

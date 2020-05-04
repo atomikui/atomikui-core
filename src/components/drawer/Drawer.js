@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
 import Overlay from '../overlay';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const Drawer = ({
   children,

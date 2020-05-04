@@ -5,7 +5,7 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Link from '../link';
 import { ListItem } from '../list';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
   const { theme } = useContext(ThemeContext);

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../button';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const Tab = ({ active, className, label, onClick, ...others }) => {
   const { theme } = useContext(ThemeContext);

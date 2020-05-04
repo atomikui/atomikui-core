@@ -8,7 +8,7 @@ import React, {
 import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
   const { theme } = useContext(ThemeContext);

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { List, ListItem } from '../list';
 import Hint from '../hint/Hint';
 import generateId from '../../utilities/generateId';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const FileUpload = ({
   className,

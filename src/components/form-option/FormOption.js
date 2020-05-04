@@ -5,7 +5,7 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 import generateId from '../../utilities/generateId';
 
 const types = ['checkbox', 'radio'];

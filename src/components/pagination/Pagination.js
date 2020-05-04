@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import generateId from '../../utilities/generateId';
 import { List, ListItem } from '../list';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const Pagination = ({ children, className, ...others }) => {
   const { theme } = useContext(ThemeContext);

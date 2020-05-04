@@ -5,7 +5,7 @@ import createFocusTrap from 'focus-trap';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const Modal = ({
   className,

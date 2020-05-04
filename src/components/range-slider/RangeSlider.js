@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import generateId from '../../utilities/generateId';
 import Hint from '../hint';
 import Label from '../label';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const RangeSlider = ({
   className,

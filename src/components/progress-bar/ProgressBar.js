@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 
 const ProgressBar = ({
   animated,

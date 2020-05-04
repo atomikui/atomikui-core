@@ -7,7 +7,7 @@ _Note: The ThemeContext pulls the `theme` enrironment variable from the .env fil
 Import the ThemeContext.
 
 ```html
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 ```
 
 Inside your table component, get the theme class from ThemeContext and apply it to the table;

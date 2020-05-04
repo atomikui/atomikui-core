@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import ThemeContext from '../../themeContext';
+import ThemeContext from '../../theme-context';
 import generateId from '../../utilities/generateId';
 
 const AccordionItem = ({
