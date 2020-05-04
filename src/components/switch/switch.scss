@@ -12,7 +12,7 @@
   }
 
   &__toggle {
-    background: $gray-100;
+    background: $background-light-gray;
     border-radius: rem($switch-height);
     cursor: pointer;
     display: block;
@@ -72,7 +72,7 @@
   &.is-disabled,
   &.is-checked.is-disabled {
     & > .rcl-switch__toggle {
-      background: $gray-100;
+      background: $background-light-gray;
       cursor: default;
 
       &::after {

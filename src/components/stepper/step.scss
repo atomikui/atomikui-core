@@ -8,7 +8,7 @@
 
   &:not(:first-child)::before,
   &:not(:last-child)::after {
-    background: $gray-100;
+    background: $background-light-gray;
     border-radius: rem(4);
     content: '';
     display: block;

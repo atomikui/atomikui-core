@@ -110,6 +110,7 @@ a.rcl-btn {
 
   &--link {
     min-height: auto;
+    font-size: inherit;
 
     &:hover {
       color: $black;

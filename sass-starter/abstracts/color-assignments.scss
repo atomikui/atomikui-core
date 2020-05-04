@@ -3,7 +3,8 @@ $default-border-gray: $gray-200;
 $dark-border-gray: $gray-400;
 
 // Background colors
-$default-background-light-gray: $gray-000;
+$default-background-lightest-gray: $gray-000;
+$background-light-gray: $gray-100;
 $disabled-background-gray: $gray-200;
 $dark-background-gray: $gray-500;
 
@@ -15,6 +16,12 @@ $focus-orange: lighten($orange-100, 20%);
 
 // State colors
 $error-red: $red-100;
-$warning-oramge: $orange-100;
+$warning-orange: $orange-100;
 $info-blue: $blue-200;
 $success-green: $green-100;
+
+$color-primary: $blue-200;
+$color-secondary: $green-100;
+$color-tertiary: $red-100;
+
+$color-link: $blue-200;

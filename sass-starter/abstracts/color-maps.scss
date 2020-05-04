@@ -1,0 +1,133 @@
+@import '../abstracts/color-assignments';
+
+$alert-variants: (
+  dark: $gray-500,
+  info: $info-blue,
+  success: $success-green,
+  error: $error-red,
+  warning: $warning-orange,
+) !default;
+
+$tooltip-variants: (
+  info: $info-blue,
+  success: $success-green,
+  error: $error-red,
+  warning: $warning-orange,
+) !default;
+
+$badge-variants: (
+  'light-gray': $light-gray,
+  info: $info-blue,
+  success: $success-green,
+  error: $error-red,
+  warning: $warning-orange,
+) !default;
+
+$text-colors: (
+  black: $black,
+  white: $white,
+  gray: $gray-300,
+  red: $red-100,
+  green: $green-100,
+  blue: $blue-200,
+  navy: $blue-400,
+) !default;
+
+$btn-variants: (
+  primary: (
+    background-color: $color-primary,
+    font-color: $white,
+  ),
+  secondary: (
+    background-color: $color-secondary,
+    font-color: $white,
+  ),
+  tertiary: (
+    background-color: $color-tertiary,
+    font-color: $white,
+  ),
+  warning: (
+    background-color: $warning-orange,
+    font-color: $white,
+  ),
+  white: (
+    background-color: $white,
+    font-color: $blue-400,
+  ),
+  hollow: (
+    background-color: transparent,
+    font-color: $blue-400,
+  ),
+  link: (
+    background-color: transparent,
+    font-color: $color-link,
+    padding: 0,
+  ),
+) !default;
+
+$avatar-variant: (
+  red: (
+    background-color: $red-100,
+    font-color: $white,
+  ),
+  orange: (
+    background-color: $orange-100,
+    font-color: $white,
+  ),
+  yellow: (
+    background-color: $yellow-100,
+  ),
+  green: (
+    background-color: $green-100,
+    font-color: $white,
+  ),
+  light-blue: (
+    background-color: $blue-100,
+  ),
+  medium-blue: (
+    background-color: $blue-200,
+    font-color: $white,
+  ),
+  dark-blue: (
+    background-color: $blue-300,
+    font-color: $white,
+  ),
+  light-gray: (
+    background-color: $gray-100,
+  ),
+  medium-gray: (
+    background-color: $gray-300,
+    font-color: $white,
+  ),
+  dark-gray: (
+    background-color: $gray-400,
+    font-color: $white,
+  ),
+  black: (
+    background-color: $black,
+    font-color: $white,
+  ),
+) !default;
+
+$modal-variants: (
+  dark: (
+    background-color: $gray-500,
+    font-color: $white,
+  ),
+  info: (
+    background-color: $info-blue,
+    font-color: $white,
+  ),
+  success: (
+    background-color: $success-green,
+    font-color: $white,
+  ),
+  error: (
+    background-color: $error-red,
+    font-color: $white,
+  ),
+  warning: (
+    background-color: $warning-orange,
+    font-color: $white,
+  ),
+) !default;
