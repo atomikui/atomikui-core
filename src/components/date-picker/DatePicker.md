@@ -8,7 +8,6 @@ import { DatePicker } from '@alaneicker/react-component-library';
     label="Select a Date"
     helpText="Expected Format: MM/DD/YYYY"
     onChange={(date) => console.log(date)}
-    value="04/06/2020"
   />
 </>;
 ```

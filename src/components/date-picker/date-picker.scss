@@ -24,5 +24,15 @@
     &:focus {
       background-color: transparent;
     }
+
+    &:disabled {
+      background: transparent;
+
+      & > svg {
+        & > path {
+          fill: $gray-300;
+        }
+      }
+    }
   }
 }

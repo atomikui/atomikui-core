@@ -3,7 +3,6 @@
   border: 0;
   box-shadow: rem(0 0 40) rgba(0, 0, 0, 0.25);
   padding: rem(4);
-  width: rem(300) !important;
 
   .react-calendar__month-view__days__day--weekend {
     color: $red-100;
@@ -19,38 +18,33 @@
   }
 
   .react-calendar__navigation button:enabled:hover,
-  .react-calendar__navigation button:enabled:focus,
   .react-calendar__tile:enabled:hover,
+  .react-calendar__navigation button:enabled:focus,
   .react-calendar__tile:enabled:focus {
     background: $default-background-lightest-gray;
   }
 
-  .react-calendar__tile--active,
-  .react-calendar__tile--active.react-calendar__tile--now,
-  .react-calendar__tile--active.react-calendar__month-view__days__day--weekend {
+  .react-calendar__tile--active {
     background: $blue-200;
     color: $white;
   }
 
-  .react-calendar__tile--active:enabled:focus,
-  .react-calendar__tile--active:enabled:hover {
+  .react-calendar__tile--active:enabled:hover,
+  .react-calendar__tile--active:enabled:focus {
     background: darken($blue-200, 10%);
   }
 
-  .react-calendar__tile--now {
+  .react-calendar__tile--now,
+  .react-calendar__tile--active.react-calendar__tile--now {
     background: $blue-000;
     color: $black;
   }
 
-  .react-calendar__tile--now:hover {
-    background: darken($blue-000, 5%) !important;
+  .react-calendar__tile--active.react-calendar__tile--now:hover {
+    background: darken($blue-000, 5%);
   }
 
-  @media (min-width: $breakpoint-small) {
-    width: rem(350) !important;
-  }
-
-  &--dark {
+  &.react-calendar--dark {
     background: $gray-500;
     border: rem(1) solid $gray-400;
     border-radius: rem($border-radius);
@@ -64,8 +58,8 @@
 
     .react-calendar__navigation button:enabled:hover,
     .react-calendar__navigation button:enabled:focus,
-    .react-calendar__tile:enabled:hover,
-    .react-calendar__tile:enabled:focus {
+    .react-calendar__tile:not(.react-calendar__tile--active):not(.react-calendar__tile--now):enabled:hover,
+    .react-calendar__tile:not(.react-calendar__tile--active):not(.react-calendar__tile--now):enabled:focus {
       background: $gray-450;
     }
 
@@ -73,9 +67,14 @@
       color: $orange-100;
     }
 
-    .react-calendar__tile--active {
-      background: $blue-100 !important;
+    .react-calendar__tile--now,
+    .react-calendar__tile--active.react-calendar__tile--now {
+      background: $blue-100;
       color: $black;
+    }
+
+    .react-calendar__tile--now:hover {
+      background: darken($blue-100, 7%);
     }
   }
 }

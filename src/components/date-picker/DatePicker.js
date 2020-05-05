@@ -24,7 +24,7 @@ const DatePicker = ({
   const calendar = useRef();
   const { theme } = useContext(ThemeContext);
   const [focusTrap, setFocusTrap] = useState(null);
-  const [theValue, setTheValue] = useState(validateDate(value));
+  const [theValue, setTheValue] = useState(validateDate(value) || new Date());
   const [isOpen, setIsOpen] = useState(false);
 
   const cancel = () => {
