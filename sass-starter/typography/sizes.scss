@@ -4,7 +4,7 @@
   }
 
   @each $name, $breakpoint in $breakpoints {
-    @media(min-width: $breakpoint) {
+    @media (min-width: $breakpoint) {
       .text-size-#{$font-size}\@#{$name} {
         font-size: rem($font-size);
       }

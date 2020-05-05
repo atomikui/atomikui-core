@@ -40,10 +40,6 @@
     flex: 1;
   }
 
-  &--nowrap {
-    flex-wrap: nowrap;
-  }
-
   &--right-col-fixed\@100 {
     & > :first-child {
       flex: rem(100) 0 0;
