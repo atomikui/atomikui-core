@@ -23,7 +23,7 @@
     "lint:css": "stylelint ./src/components/**/*.scss ./sass-starter/**/*.scss --config .stylelintrc.json --fix",
     "test": "jest --coverage --config=./jest/jest.config.js",
     "start": "NODE_ENV=development styleguidist server",
-    "build:component-library": "NODE_ENV=production rm -rf dist && babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && npm run build:styles && cp package.json dist/package.json",
+    "build:component-library": "NODE_ENV=production rm -rf dist && babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && yarn build:styles && cp package.json dist/package.json",
     "build:styles": "cross-env webpack --config webpack.config.js",
     "build": "NODE_ENV=production npm run test && npm run lint && npm run lint:css && styleguidist build",
     "predeploy": "npm run build",

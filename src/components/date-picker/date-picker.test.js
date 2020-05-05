@@ -61,8 +61,9 @@ describe('<DatePicker />', () => {
   });
 
   it('Should handle an invalid date', () => {
+    datepicker.setProps({ value: '05/33/1999' });
     expect(datepicker.find('input.rcl-formfield__input').prop('value')).toBe(
-      '',
+      '__/__/____',
     );
   });
 

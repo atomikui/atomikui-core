@@ -111,7 +111,7 @@ const DatePicker = ({
         </Button>
       </div>
       <Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}>
-        <div className="rcl-date-picker__calendar'" ref={calendar}>
+        <div className="rcl-date-picker__calendar" ref={calendar}>
           <Calendar
             className={classnames({
               [`react-calendar--${theme}`]: theme,
