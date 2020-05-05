@@ -1,5 +1,8 @@
 .react-calendar {
-  border: 0 !important;
+  background: $white;
+  border: 0;
+  box-shadow: rem(0 0 40) rgba(0, 0, 0, 0.25);
+  padding: rem(4);
   width: rem(300) !important;
 
   .react-calendar__month-view__days__day--weekend {
@@ -45,5 +48,34 @@
 
   @media (min-width: $breakpoint-small) {
     width: rem(350) !important;
+  }
+
+  &--dark {
+    background: $gray-500;
+    border: rem(1) solid $gray-400;
+    border-radius: rem($border-radius);
+    box-shadow: rem(0 0 40) rgba(0, 0, 0, 0.75);
+
+    .react-calendar__tile,
+    .react-calendar__navigation__label,
+    .react-calendar__navigation__arrow {
+      color: $white;
+    }
+
+    .react-calendar__navigation button:enabled:hover,
+    .react-calendar__navigation button:enabled:focus,
+    .react-calendar__tile:enabled:hover,
+    .react-calendar__tile:enabled:focus {
+      background: $gray-450;
+    }
+
+    .react-calendar__month-view__days__day--weekend {
+      color: $orange-100;
+    }
+
+    .react-calendar__tile--active {
+      background: $blue-100 !important;
+      color: $black;
+    }
   }
 }
