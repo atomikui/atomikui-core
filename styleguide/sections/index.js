@@ -1,5 +1,6 @@
 const containers = require('./containers');
 const content = require('./content');
+const cssUtilities = require('./css-utilities');
 const dataDisplay = require('./data-display');
 const gettingStarted = require('./getting-started');
 const form = require('./form');
@@ -20,4 +21,5 @@ module.exports = [
   navigation,
   providers,
   templates,
+  cssUtilities,
 ];

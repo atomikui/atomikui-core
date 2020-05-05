@@ -66,4 +66,4 @@ The React Component Library comes with a variety of customizable React component
 
 ### Get Started
 
-[Installation the Component Library](/#/Getting%20Started/Installation)
+[Installation the Component Library](https://alaneicker1975.github.io/react-component-library/#/Getting%20Started/Installation)
