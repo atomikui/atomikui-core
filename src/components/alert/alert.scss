@@ -31,6 +31,14 @@
     }
   }
 
+  &--middle {
+    align-items: center;
+  }
+
+  &--bottom {
+    align-items: flex-end;
+  }
+
   @each $name, $color in $alert-variants {
     &--#{$name} {
       background-color: $color;

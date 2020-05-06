@@ -15,6 +15,16 @@ import { Alert } from '@alaneicker/react-component-library';
 </>;
 ```
 
+### Alert With Custom Icon
+
+```jsx
+import { Alert, Spinner } from '@alaneicker/react-component-library';
+
+<Alert type="dark" align="middle" icon={<Spinner theme="blue" />}>
+  Please wait while we load your content
+</Alert>;
+```
+
 ### Dismissable Alert
 
 Simply add an `onClose` prop with a callback and a close button will be added to the alert.

@@ -11,7 +11,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
-const Alert = ({ align, className, children, type, onClose, ...others }) => {
+const Alert = ({
+  align,
+  className,
+  children,
+  icon,
+  type,
+  onClose,
+  ...others
+}) => {
   const icons = {
     info: faInfoCircle,
     dark: faInfoCircle,
@@ -31,12 +39,14 @@ const Alert = ({ align, className, children, type, onClose, ...others }) => {
       aria-atomic="true"
       {...others}
     >
-      <Icon
-        id={`icon-${type}`}
-        icon={!type ? icons.info : icons[type]}
-        size="lg"
-        color={!type ? '#027abf' : 'white'}
-      />
+      {icon || (
+        <Icon
+          id={`icon-${type}`}
+          icon={!type ? icons.info : icons[type]}
+          size="lg"
+          color={!type ? '#027abf' : 'white'}
+        />
+      )}
       <div className="rcl-alert__body">{children}</div>
       {onClose && (
         <div className="rcl-alert__footer">
@@ -60,10 +70,12 @@ const Alert = ({ align, className, children, type, onClose, ...others }) => {
 };
 
 Alert.propTypes = {
-  /** Aligns the text inside of the alert. */
-  align: PropTypes.oneOf(['right', 'center']),
+  /** Vertically aligns the alert content. */
+  align: PropTypes.oneOf(['middle', 'bottom']),
   /** Specifies custom component classes. */
   className: PropTypes.string,
+  /** A custom icon to be displayed to the left of the alert body text */
+  icon: PropTypes.node,
   /** onClose Callback */
   onClose: PropTypes.func,
   /** Alert content. */
@@ -75,6 +87,7 @@ Alert.propTypes = {
 Alert.defaultProps = {
   align: null,
   className: '',
+  icon: null,
   onClose: null,
   children: <></>,
   text: '',
