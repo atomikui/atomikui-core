@@ -17,3 +17,19 @@ import { Rating } from '@alaneicker/react-component-library';
 
 <Rating stars={2} maxStars={5} onSelect={(rating) => console.log(rating)} />;
 ```
+
+### Rating Sizes
+
+```jsx
+import { Rating } from '@alaneicker/react-component-library';
+
+<>
+  <Rating stars={3.5} size="xs" />
+  <Rating stars={3.5} size="sm" />
+  <Rating stars={3.5} />
+  <Rating stars={3.5} size="lg" />
+  <Rating stars={3.5} size="2x" />
+  <Rating stars={3.5} size="3x" />
+  <Rating stars={3.5} size="4x" />
+</>;
+```
