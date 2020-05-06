@@ -26,4 +26,19 @@ describe('<Rating />', () => {
     rating.setProps({ stars: 4.5 });
     expect(rating.find('.rcl-rating').children().length).toBe(5);
   });
+
+  it('Should not render more than 5 stars', () => {
+    rating.setProps({ stars: 20 });
+
+    expect(rating.find('.rcl-rating').children().length).toBe(5);
+  });
+
+  it('Should trigger onSelect callback', () => {
+    const onSelectSpy = sinon.spy();
+    rating.setProps({ onSelect: onSelectSpy });
+
+    rating.find('.rcl-rating').children().first().simulate('click');
+
+    expect(onSelectSpy.withArgs(1).called).toBe(true);
+  });
 });
