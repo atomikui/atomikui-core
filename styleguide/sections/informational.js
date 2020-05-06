@@ -11,6 +11,7 @@ module.exports = {
       'src/components/hint/Hint.js',
       'src/components/label/Label.js',
       'src/components/progress-bar/ProgressBar.js',
+      'src/components/price/Price.js',
       'src/components/rating/Rating.js',
       'src/components/spinner/Spinner.js',
       'src/components/tooltip/Tooltip.js',

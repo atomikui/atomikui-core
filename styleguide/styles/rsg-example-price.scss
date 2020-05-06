@@ -1,0 +1,12 @@
+[data-preview='Price'] > * {
+  & > * {
+    display: flex;
+    flex-wrap: wrap;
+
+    &::after {
+      content: '';
+      margin-bottom: rem(16);
+      width: 100%;
+    }
+  }
+}
