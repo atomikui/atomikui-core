@@ -10,15 +10,10 @@ import { Rating } from '@alaneicker/react-component-library';
 
 ### Selectable Rating
 
-The `selectable` prop allows for the selection of a rating. Use the `maxStars` prop to set the number of stars to display. E.g `maxStars={5}` would set a rating out of 5 stars. A rating can have no more than 5 stars.
+The `onSelect` prop makes each star selectable and returns a callback with the rating score. Use the `maxStars` prop to set the number of stars to display. E.g `maxStars={5}` would set a rating out of 5 stars. A rating can have no more than 5 stars.
 
 ```jsx
 import { Rating } from '@alaneicker/react-component-library';
 
-<Rating
-  stars={2}
-  maxStars={5}
-  onSelect={(rating) => console.log(rating)}
-  selectable
-/>;
+<Rating stars={2} maxStars={5} onSelect={(rating) => console.log(rating)} />;
 ```

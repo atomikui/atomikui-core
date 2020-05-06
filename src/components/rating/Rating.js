@@ -4,22 +4,15 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 
-const Rating = ({
-  className,
-  maxStars,
-  onSelect,
-  selectable,
-  stars,
-  ...others
-}) => {
-  const hasHalfStar = !Number.isInteger(stars) && !selectable;
+const Rating = ({ className, maxStars, onSelect, stars, ...others }) => {
+  const hasHalfStar = !Number.isInteger(stars) && !onSelect;
   const fullStars = Math.floor(stars);
 
   const setRatingBaseline = (baseline) => {
     return baseline <= 5 ? baseline : 5;
   };
 
-  const ratingBaseline = setRatingBaseline(selectable ? maxStars : fullStars);
+  const ratingBaseline = setRatingBaseline(onSelect ? maxStars : fullStars);
 
   const ratings = Array.from(Array(ratingBaseline).keys());
 
@@ -40,14 +33,14 @@ const Rating = ({
         return (
           <Icon
             className={classnames('rcl-rating__star', {
-              'rcl-rating__star--selectable': selectable,
-              'is-selected': selectable && index + 1 <= rating,
+              'rcl-rating__star--selectable': onSelect,
+              'is-selected': onSelect && index + 1 <= rating,
             })}
             key={Math.random()}
             icon={faStar}
             size="lg"
             aria-hidden="true"
-            {...(selectable && {
+            {...(onSelect && {
               onClick: () => {
                 return handleSelection(index + 1);
               },
@@ -71,16 +64,13 @@ Rating.propTypes = {
   onSelect: PropTypes.func,
   /** Number od rating stars */
   stars: PropTypes.number,
-  /** Makes stars selectable */
-  selectable: PropTypes.bool,
 };
 
 Rating.defaultProps = {
   className: '',
   maxStars: 5,
-  onSelect() {},
+  onSelect: null,
   stars: 0,
-  selectable: false,
 };
 
 export default Rating;
