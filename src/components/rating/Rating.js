@@ -63,7 +63,7 @@ Rating.propTypes = {
   /** onSelect callback */
   onSelect: PropTypes.func,
   /** Star size */
-  size: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', '2x', '3x', '4x']),
+  size: PropTypes.string,
   /** Number od rating stars */
   stars: PropTypes.number,
 };
@@ -72,7 +72,7 @@ Rating.defaultProps = {
   className: '',
   maxStars: 5,
   onSelect: null,
-  size: 'md',
+  size: null,
   stars: 0,
 };
 

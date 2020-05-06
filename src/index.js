@@ -26,6 +26,7 @@ export { default as ProgressBar } from './components/progress-bar';
 export { default as RangeSlider } from './components/range-slider';
 export { default as Rating } from './components/rating';
 export { default as Spinner } from './components/spinner';
+export { default as Statistic } from './components/statistic';
 export { Stepper, Step } from './components/stepper';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
