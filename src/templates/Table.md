@@ -1,20 +1,6 @@
 ### Basic Table
 
-The React Component Library recommends [React Table](https://react-table.js.org/) for handling tabular data. The `.rcl-table` class can used to add basic styles to the table. Subsequently, the `ThemeContext` can be imported annd used to apply the table theme modiefier class.
-
-_Note: The ThemeContext pulls the `theme` enrironment variable from the .env file. E.g. `THEME=dark`._
-
-Import the ThemeContext.
-
-```html
-import ThemeContext from '../../theme-context';
-```
-
-Inside your table component, get the theme class from ThemeContext and apply it to the table;
-
-```html
-const { theme } = useContext(ThemeContext);
-```
+The React Component Library recommends [React Table](https://react-table.js.org/) for handling tabular data. The `.rcl-table` class can be used to add basic styles to the table. Subsequently, the `.rcl-table--dark` modifier class can be added to apply a dark theme to the table.
 
 ```jsx
 import { useMemo } from 'react';
