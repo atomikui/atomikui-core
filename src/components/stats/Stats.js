@@ -18,10 +18,10 @@ const Stats = () => {
     styleTag.appendChild(
       document.createTextNode(`
       body { 
-        font-family: 'Hind Madurai', Arial, Helvetica, sans-serif !important; 
+        font-family: 'Lato', Arial, Helvetica, sans-serif !important; 
       }
       h1, h2, h3, h4, h5, h6, .header { 
-        font-family: 'Hind Madurai', serif !important; 
+        font-family: 'Lato', serif !important; 
         color: #222;
         font-weight: 500; 
         margin-top: 8px; 

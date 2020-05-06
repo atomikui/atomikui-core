@@ -1,0 +1,32 @@
+.rcl-statistic {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+
+  &__hd {
+    align-items: center;
+    display: flex;
+    margin-bottom: rem(2);
+  }
+
+  &__icon {
+    margin-right: rem(8);
+  }
+
+  &__value {
+    font-size: rem(32);
+    font-weight: $font-medium;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  &__value--lg {
+    font-size: rem(50);
+    white-space: nowrap;
+  }
+
+  &__ft {
+    font-weight: $font-medium;
+    text-transform: uppercase;
+  }
+}

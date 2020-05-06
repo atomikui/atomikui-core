@@ -1,5 +1,5 @@
 // Default font
-$base-font-family: 'Hind Madurai', arial, helvetica, sans-serif !default;
+$base-font-family: 'Lato', arial, helvetica, sans-serif !default;
 
 // Root font size
 $root-font-size: 16 !default;
@@ -20,12 +20,12 @@ $font-light: 300 !default;
 $font-light-italic: 300 !default;
 $font-normal: 400 !default;
 $font-normal-italic: 400 !default;
-$font-medium: 500 !default;
-$font-medium-italic: 500 !default;
-$font-semibold: 600 !default;
-$font-semibold-italic: 600 !default;
-$font-bold: 700 !default;
-$font-bold-italic: 700 !default;
+$font-medium: 700 !default;
+$font-medium-italic: 700 !default;
+$font-semibold: 700 !default;
+$font-semibold-italic: 700 !default;
+$font-bold: 900 !default;
+$font-bold-italic: 900 !default;
 
 $font-weights: (
   light: $font-light,
