@@ -4,7 +4,7 @@ Below demonstrates how to get started with Font Awesome icons.
 
 ### Usage
 
-Import the Font Awesome dependencies and the icons that you'd like to use.
+Install and import the Font Awesome dependencies and the icons that you'd like to use.
 
 ```jsx
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
