@@ -27,6 +27,15 @@
 
   &__ft {
     font-weight: $font-medium;
+    line-height: 1.2;
     text-transform: uppercase;
+  }
+
+  &--top-label {
+    flex-direction: column-reverse;
+
+    & > .rcl-statistic__hd {
+      margin: 0;
+    }
   }
 }

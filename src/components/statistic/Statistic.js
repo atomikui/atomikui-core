@@ -18,7 +18,12 @@ const Statistic = ({
   );
 
   return (
-    <div className={classnames('rcl-statistic', className, {})} {...others}>
+    <div
+      className={classnames('rcl-statistic', className, {
+        'rcl-statistic--top-label': topLabel,
+      })}
+      {...others}
+    >
       <div className="rcl-statistic__hd">
         {icon && (
           <span className="rcl-statistic__icon">
