@@ -15,5 +15,10 @@ The `selectable` prop allows for the selection of a rating. Use the `maxStars` p
 ```jsx
 import { Rating } from '@alaneicker/react-component-library';
 
-<Rating stars={2} maxStars={5} selectable />;
+<Rating
+  stars={2}
+  maxStars={5}
+  onSelect={(rating) => console.log(rating)}
+  selectable
+/>;
 ```
