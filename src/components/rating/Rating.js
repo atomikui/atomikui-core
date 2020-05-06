@@ -12,7 +12,7 @@ const Rating = ({ className, maxStars, selectable, stars, ...others }) => {
     return baseline <= 5 ? baseline : 5;
   };
 
-  const ratingBaseline = setRatingBaseline(maxStars || fullStars);
+  const ratingBaseline = setRatingBaseline(selectable ? maxStars : fullStars);
 
   const ratings = Array.from(Array(ratingBaseline).keys());
 
@@ -34,6 +34,7 @@ const Rating = ({ className, maxStars, selectable, stars, ...others }) => {
             key={Math.random()}
             icon={faStar}
             size="lg"
+            aria-hidden="true"
             {...(selectable && {
               onClick: () => {
                 return setRating(index + 1);
@@ -62,7 +63,7 @@ Rating.propTypes = {
 
 Rating.defaultProps = {
   className: '',
-  maxStars: null,
+  maxStars: 5,
   stars: 0,
   selectable: false,
 };
