@@ -1,2 +1,33 @@
 .rcl-rating {
+  &__star {
+    & > path {
+      fill: $yellow-200;
+    }
+
+    &--selectable {
+      cursor: pointer;
+
+      & > path {
+        fill: $gray-200;
+      }
+
+      &:hover {
+        & > path {
+          fill: $gray-300;
+        }
+      }
+    }
+
+    &.is-selected {
+      & > path {
+        fill: $yellow-200;
+      }
+
+      &:hover {
+        & > path {
+          fill: $yellow-300;
+        }
+      }
+    }
+  }
 }

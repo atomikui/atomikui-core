@@ -83,6 +83,7 @@ import { Avatar } from '@alaneicker/react-component-library';
   <Avatar variant="red">AE</Avatar>
   <Avatar variant="orange">P</Avatar>
   <Avatar variant="yellow">MS</Avatar>
+  <Avatar variant="gold">RJ</Avatar>
   <Avatar variant="green">AJ</Avatar>
   <Avatar variant="light-blue">MA</Avatar>
   <Avatar variant="medium-blue">T</Avatar>
