@@ -7,7 +7,13 @@ import Price from './Price';
 configure({ adapter: new Adapter() });
 
 describe('<Price />', () => {
-  beforeEach(() => {});
+  let price;
 
-  it('Should render without errors', () => {});
+  beforeEach(() => {
+    price = shallow(<Price amount={124.99} label="/ month" />);
+  });
+
+  it('Should render without errors', () => {
+    expect(price.length).toBe(1);
+  });
 });
