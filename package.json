@@ -1,5 +1,6 @@
 {
   "name": "@alaneicker/react-component-library",
+  "description": "A Comprehensive Library of React Components",
   "version": "0.2.4",
   "main": "./dist/index.js",
   "engines": {
