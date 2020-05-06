@@ -19,7 +19,11 @@ const Rating = ({ className, maxStars, selectable, stars, ...others }) => {
   const [rating, setRating] = useState(fullStars);
 
   return (
-    <div className={classnames('rcl-rating', className)} {...others}>
+    <div
+      className={classnames('rcl-rating', className)}
+      {...others}
+      aria-label={`Rating: ${stars} out of ${ratingBaseline} stars`}
+    >
       {ratings.map((index) => {
         return (
           <Icon
