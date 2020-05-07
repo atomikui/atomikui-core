@@ -5,10 +5,13 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 
 const Statistic = ({
   className,
+  color,
+  horizontal,
   icon,
   iconColor,
   value,
   label,
+  size,
   topLabel,
   ...others
 }) => {
@@ -20,7 +23,8 @@ const Statistic = ({
   return (
     <div
       className={classnames('rcl-statistic', className, {
-        'rcl-statistic--top-label': topLabel,
+        'rcl-statistic--top-label': topLabel && !horizontal,
+        'rcl-statistic--horizontal': horizontal,
       })}
       {...others}
     >
@@ -32,7 +36,9 @@ const Statistic = ({
         )}
         <span
           className={classnames('rcl-statistic__value', {
-            'rcl-statistic__value--lg': isNumber,
+            'rcl-statistic__value--number': isNumber,
+            [`rcl-statistic__value--${size}`]: size,
+            [`rcl-statistic__value--${color}`]: color,
           })}
         >
           {value}
@@ -46,6 +52,22 @@ const Statistic = ({
 Statistic.propTypes = {
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Sets the color of the statistic value */
+  color: PropTypes.oneOf([
+    'red',
+    'orange',
+    'gold',
+    'yellow',
+    'green',
+    'light-blue',
+    'medium-blue',
+    'dark-blue',
+    'light-gray',
+    'medium-gray',
+    'dark-gray',
+  ]),
+  /** Sets layout as horizontal */
+  horizontal: PropTypes.bool,
   /** Icon to be displayed next to statistic */
   icon: PropTypes.node,
   /** Color of the icon */
@@ -54,15 +76,19 @@ Statistic.propTypes = {
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Postions label on top */
   topLabel: PropTypes.bool,
+  /** Sets the size of the value text */
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   /** Statistic value */
   value: PropTypes.string,
 };
 
 Statistic.defaultProps = {
   className: '',
+  horizontal: false,
   icon: null,
   iconColor: '#222',
   label: '',
+  size: null,
   topLabel: false,
   value: '',
 };

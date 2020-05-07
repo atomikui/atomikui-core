@@ -112,6 +112,19 @@ $avatar-variant: (
   ),
 ) !default;
 
+$statistic-variants: (
+  red: $red-100,
+  orange: $orange-100,
+  yellow: $yellow-100,
+  gold: $yellow-200,
+  green: $green-100,
+  light-blue: $blue-100,
+  medium-blue: $blue-200,
+  dark-blue: $blue-300,
+  medium-gray: $gray-300,
+  dark-gray: $gray-400,
+) !default;
+
 $modal-variants: (
   dark: (
     background-color: $gray-500,

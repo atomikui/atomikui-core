@@ -1,3 +1,9 @@
-[data-preview='Statistic'] > * > * + * {
-  margin-top: rem(30);
+[data-preview='Statistic'] > * {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+
+  & > * {
+    margin: rem(0 24 16 0);
+  }
 }

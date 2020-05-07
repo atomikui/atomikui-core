@@ -1,12 +1,12 @@
 .rcl-statistic {
+  align-items: center;
   display: inline-flex;
   flex-direction: column;
   text-align: center;
 
   &__hd {
-    align-items: center;
     display: flex;
-    margin-bottom: rem(2);
+    margin-bottom: rem(4);
   }
 
   &__icon {
@@ -18,17 +18,61 @@
     font-weight: $font-medium;
     line-height: 1;
     text-transform: uppercase;
-  }
 
-  &__value--lg {
-    font-size: rem(50);
-    white-space: nowrap;
+    @each $color, $value in $statistic-variants {
+      &.rcl-statistic__value--#{$color} {
+        color: $value;
+      }
+    }
+
+    &--sm {
+      font-size: rem(18);
+    }
+
+    &--md {
+      font-size: rem(22);
+    }
+
+    &--lg {
+      font-size: rem(28);
+    }
+
+    &.rcl-statistic__value--number {
+      font-size: rem(56);
+      white-space: nowrap;
+
+      &.rcl-statistic__value--sm {
+        font-size: rem(24);
+      }
+
+      &.rcl-statistic__value--md {
+        font-size: rem(32);
+      }
+
+      &.rcl-statistic__value--lg {
+        font-size: rem(48);
+      }
+    }
   }
 
   &__ft {
+    font-size: rem(14);
     font-weight: $font-medium;
     line-height: 1.2;
     text-transform: uppercase;
+  }
+
+  &--horizontal {
+    align-items: center;
+    flex-direction: row;
+
+    .rcl-statistic__hd {
+      margin: 0;
+    }
+
+    .rcl-statistic__ft {
+      margin-left: rem(8);
+    }
   }
 
   &--top-label {
