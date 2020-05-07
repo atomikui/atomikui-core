@@ -22,17 +22,26 @@ const ChatWindow = ({
   const chatWindowBodyRef = useRef();
   const userInputRef = useRef();
 
-  const [message, setValue] = useState('');
+  const [message, setMessage] = useState('');
   const [focusTrap, setFocusTrap] = useState(null);
   const [ipAddress, setIpAddress] = useState(null);
 
   const handleChange = (e) => {
-    setValue(e.target.value);
+    setMessage(e.target.value);
   };
 
   const handleSubmit = () => {
     onMessageSent({ message, originIpAddress: ipAddress });
-    setValue('');
+    setMessage('');
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      if (message) {
+        handleSubmit();
+      }
+    }
   };
 
   const setChatWindowScrollPosition = () => {
@@ -133,6 +142,7 @@ const ChatWindow = ({
           placeholder="Enter your message..."
           value={message}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
         />
         <Button
           className="rcl-chat-window__send-btn"
