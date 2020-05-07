@@ -7,6 +7,8 @@ export { default as Breadcrumb } from './components/breadcrumb';
 export { default as Button } from './components/button';
 export { default as ButtonGroup } from './components/button-group';
 export { default as Card } from './components/card';
+export { default as ChatWindow } from './components/chat-window';
+export { default as ChatMessage } from './components/chat-message';
 export { default as DatePicker } from './components/date-picker';
 export { default as Drawer } from './components/drawer';
 export { default as Dropdown } from './components/dropdown';
