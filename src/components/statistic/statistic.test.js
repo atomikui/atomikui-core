@@ -9,7 +9,11 @@ configure({ adapter: new Adapter() });
 describe('<Statistic />', () => {
   let statistic;
 
-  beforeEach(() => {});
+  beforeEach(() => {
+    statistic = shallow(<Statistic value="25,000" label="Views" />);
+  });
 
-  it('Should render without errors', () => {});
+  it('Should render without errors', () => {
+    expect(statistic.length).toBe(1);
+  });
 });
