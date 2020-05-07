@@ -5,13 +5,15 @@ import classnames from 'classnames';
 const ChatMessage = ({ dateTimeStamp, message, isSameOrigin }) => {
   return (
     <div
-      className={classnames('chat-message', {
+      className={classnames('rcl-chat-message', {
         'is-same-origin': isSameOrigin,
       })}
     >
-      <div className="chat-message__item__timestamp">{dateTimeStamp}</div>
-      <div className="chat-message__item">
-        <span className="chat-message__item__text">{message}</span>
+      {dateTimeStamp && (
+        <div className="rcl-chat-message__item__timestamp">{dateTimeStamp}</div>
+      )}
+      <div className="rcl-chat-message__item">
+        <span className="rcl-chat-message__item__text">{message}</span>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ a.rcl-btn {
   }
 
   &:hover {
-    background-color: $blue-000;
+    background-color: darken($blue-000, 7%);
   }
 
   &:focus,

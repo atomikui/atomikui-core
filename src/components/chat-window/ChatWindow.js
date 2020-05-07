@@ -5,7 +5,7 @@ import createFocusTrap from 'focus-trap';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import ChatMessage from '../chat-message';
-import './chat-window.scss';
+import Button from '../button';
 
 const ChatWindow = ({
   className,
@@ -16,6 +16,7 @@ const ChatWindow = ({
   position,
   incomingSenderName,
   incomingSenderImg,
+  incomingSenderStatus,
 }) => {
   const chatWindowRef = useRef();
   const chatWindowBodyRef = useRef();
@@ -48,6 +49,7 @@ const ChatWindow = ({
   useEffect(() => {
     fetch('https://ipinfo.io/json')
       .then((res) => {
+        console.log(res);
         return res.json();
       })
       .then(({ ip }) => {
@@ -83,31 +85,36 @@ const ChatWindow = ({
   return (
     <div
       ref={chatWindowRef}
-      className={classnames('chat-window', className, {
+      className={classnames('rcl-chat-window', className, {
         'is-open': isOpen,
-        [`chat-window--${position}`]: position,
+        [`rcl-chat-window--${position}`]: position,
       })}
     >
-      <div className="chat-window__header">
-        <div className="chat-window__title">
+      <div className="rcl-chat-window__header">
+        <div className="rcl-chat-window__title">
           <img
-            className="chat-window__avatar"
+            className="rcl-chat-window__avatar"
             src={incomingSenderImg}
             alt="Avatar"
           />
           {incomingSenderName}
+          <span
+            className={classnames('rcl-chat-window__sender-status', {
+              [`rcl-chat-window__sender-status--${incomingSenderStatus}`]: incomingSenderStatus,
+            })}
+          ></span>
         </div>
         <button
-          className="chat-window__close-btn"
+          className="rcl-chat-window__close-btn"
           onClick={() => {
             return onClose();
           }}
           aria-label="close button"
         >
-          <Icon icon={faTimes} />
+          <Icon icon={faTimes} size="2x" color="white" />
         </button>
       </div>
-      <div ref={chatWindowBodyRef} className="chat-window__body">
+      <div ref={chatWindowBodyRef} className="rcl-chat-window__body">
         {messages.map(({ originIpAddress, ...props }) => {
           return (
             <ChatMessage
@@ -118,25 +125,24 @@ const ChatWindow = ({
           );
         })}
       </div>
-      <div className="chat-window__footer">
+      <div className="rcl-chat-window__footer">
         <textarea
           ref={userInputRef}
-          className="chat-window__input"
+          className="rcl-chat-window__input"
           rows="1"
           placeholder="Enter your message..."
           value={message}
           onChange={handleChange}
         />
-        <button
-          className="chat-window__send-btn"
-          type="button"
+        <Button
+          className="rcl-chat-window__send-btn"
           onClick={() => {
             return handleSubmit();
           }}
           disabled={!message}
         >
           Send
-        </button>
+        </Button>
       </div>
     </div>
   );
@@ -170,6 +176,8 @@ ChatWindow.propTypes = {
   incomingSenderImg: PropTypes.string,
   /** Name of incoming sender */
   incomingSenderName: PropTypes.string,
+  /** Status of incoming sender */
+  incomingSenderStatus: PropTypes.oneOf(['available', 'away', 'offline']),
 };
 
 ChatWindow.defaultProps = {
