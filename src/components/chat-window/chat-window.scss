@@ -1,6 +1,7 @@
 .rcl-chat-window {
   background: $gray-100;
   bottom: 0;
+  box-shadow: rem(-10 10 20) rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   left: 0;
@@ -117,6 +118,7 @@
     overflow: hidden;
     padding: 0;
     width: rem(32);
+    transition: background 0.2s linear;
 
     &:hover,
     &:focus {
