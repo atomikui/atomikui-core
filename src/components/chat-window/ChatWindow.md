@@ -8,7 +8,7 @@ import { faComment } from '@fortawesome/free-solid-svg-icons';
 const incomingMessage = {
   sender: 'Paul Smith',
   senderStatus: 'available',
-  senderImg: 'https://avatars0.githubusercontent.com/u/56617615',
+  senderImg: 'profile-image.png',
   messages: [
     {
       message: 'Hello there!',
@@ -19,8 +19,6 @@ const incomingMessage = {
 };
 
 const outgoingMessages = {
-  incomingSenderName: 'Paul Smith',
-  incomingSenderImg: 'https://avatars0.githubusercontent.com/u/56617615',
   messages: [
     {
       message: "Hi!, What's up?",

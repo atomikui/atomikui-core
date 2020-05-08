@@ -99,8 +99,10 @@
     min-height: rem($input-height);
     padding: rem(0 16);
 
-    &:disabled {
-      border-color: $gray-200;
+    &:disabled,
+    &:disabled:hover {
+      background: darken($gray-100, 6%);
+      border-color: darken($gray-100, 6%);
     }
   }
 

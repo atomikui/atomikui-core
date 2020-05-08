@@ -108,6 +108,7 @@ const ChatWindow = ({
           />
           {incomingSenderName}
           <span
+            aria-label={`Status: ${incomingSenderStatus}`}
             className={classnames('rcl-chat-window__sender-status', {
               [`rcl-chat-window__sender-status--${incomingSenderStatus}`]: incomingSenderStatus,
             })}
