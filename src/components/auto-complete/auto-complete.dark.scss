@@ -1,0 +1,19 @@
+.rcl-auto-complete {
+  &__list {
+    background: $gray-500;
+
+    & > * {
+      color: $white;
+
+      &:hover,
+      &.is-highlighted {
+        background: lighten($gray-500, 5%);
+      }
+
+      &.is-selected {
+        background: $blue-200;
+        color: $white;
+      }
+    }
+  }
+}

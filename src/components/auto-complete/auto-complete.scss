@@ -7,21 +7,22 @@
     left: 0;
     list-style-type: none;
     margin: 0;
+    max-height: rem(190);
+    overflow: auto;
     padding: 0;
     position: absolute;
     right: 0;
     top: rem($input-height + 25);
     z-index: 900;
-    max-height: rem(190);
-    overflow: auto;
 
     & > * + * {
       border-top: rem(1) $gray-100;
     }
 
     & > * {
-      padding: rem(8);
+      color: $black;
       cursor: pointer;
+      padding: rem(8);
 
       &:hover,
       &.is-highlighted {
