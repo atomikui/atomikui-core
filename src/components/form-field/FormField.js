@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import MaskedField from 'react-masked-field';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
-import ThemeContext from '../../theme-context';
 import generateId from '../../utilities/generateId';
 
 const types = [
@@ -45,7 +44,6 @@ const FormField = ({
   value,
   ...others
 }) => {
-  const { theme } = useContext(ThemeContext);
   const uid = id || generateId();
   const inputName = name || uid;
   const inputHintId = `${inputName}_hint`;
@@ -58,7 +56,6 @@ const FormField = ({
     <div
       className={classnames('rcl-formfield', classes, {
         'has-error': hasError,
-        [`rcl-formfield--${theme}`]: theme,
       })}
     >
       {label && (

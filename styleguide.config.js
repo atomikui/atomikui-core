@@ -5,7 +5,7 @@ const { version } = require('./package.json');
 
 dotenv.config();
 
-const theme = process.env.THEME;
+const isDarkMode = process.env.DARK_MODE === 'true';
 
 module.exports = {
   version,
@@ -20,7 +20,7 @@ module.exports = {
   require: [
     './src/styles/main.scss',
     './styleguide/styles/main.scss',
-    ...(theme === 'dark'
+    ...(isDarkMode
       ? ['./src/styles/dark.scss', './styleguide/styles/dark.scss']
       : []),
   ],
@@ -38,7 +38,7 @@ module.exports = {
   theme: {
     color: {
       // Base styleguide dark theme styles
-      ...(theme === 'dark' && {
+      ...(isDarkMode && {
         base: '#efefef',
         baseBackground: '#1a1a1a',
         border: '#444',

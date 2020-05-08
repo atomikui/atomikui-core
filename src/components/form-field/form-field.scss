@@ -18,15 +18,6 @@
     margin-top: rem(3);
   }
 
-  &--dark {
-    .rcl-formfield__input,
-    .rcl-formfield__textarea {
-      background: $dark-background-gray;
-      border-color: $dark-border-gray;
-      color: $white;
-    }
-  }
-
   &.has-error > &__input {
     border-color: $error-red;
   }
