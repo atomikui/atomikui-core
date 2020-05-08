@@ -1,0 +1,12 @@
+.rcl-accordion-item {
+  background: $dark-background-gray;
+  color: $white;
+
+  &__trigger {
+    color: $white;
+
+    &:focus {
+      background: lighten($gray-500, 8%);
+    }
+  }
+}

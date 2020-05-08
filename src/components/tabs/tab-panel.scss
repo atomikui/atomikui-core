@@ -1,12 +1,8 @@
 .rcl-tab-panel {
   background: $default-background-lightest-gray;
-  padding: rem(16);
+  color: $black;
   display: none;
-
-  &--dark {
-    background: lighten($gray-500, 6%);
-    color: $white;
-  }
+  padding: rem(16);
 
   &.is-active {
     display: block;

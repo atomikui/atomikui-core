@@ -2,10 +2,6 @@
   background: $background-light-gray;
   display: flex;
 
-  &--dark {
-    background: $dark-background-gray;
-  }
-
   &--align-center {
     justify-content: center;
   }

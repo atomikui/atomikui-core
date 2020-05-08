@@ -63,17 +63,4 @@
       transform: rotate(180deg);
     }
   }
-
-  &--dark {
-    background: $dark-background-gray;
-    color: $white;
-
-    .rcl-accordion-item__trigger {
-      color: $white;
-
-      &:focus {
-        background: lighten($gray-500, 8%);
-      }
-    }
-  }
 }

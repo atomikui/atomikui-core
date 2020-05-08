@@ -1,7 +1,6 @@
-import React, { Children, cloneElement, useState, useContext } from 'react';
+import React, { Children, cloneElement, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../theme-context';
 
 const Tabs = ({
   align,
@@ -11,8 +10,6 @@ const Tabs = ({
   onChange,
   ...others
 }) => {
-  const { theme } = useContext(ThemeContext);
-
   const [activeTab, setActiveTab] = useState(initialActiveTab);
 
   const handleChange = (index) => {
@@ -24,7 +21,6 @@ const Tabs = ({
     <div
       className={classnames('rcl-tabs', className, {
         [`rcl-tabs--align-${align}`]: align,
-        [`rcl-tabs--${theme}`]: theme,
       })}
       {...others}
     >

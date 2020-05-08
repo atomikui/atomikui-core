@@ -1,18 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../button';
-import ThemeContext from '../../theme-context';
 
 const Tab = ({ active, className, label, onClick, ...others }) => {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <Button
       theme="hollow"
       className={classnames('rcl-tab', className, {
         'is-active': active,
-        [`rcl-tab--${theme}`]: theme,
       })}
       {...(onClick && { onClick })}
       {...others}

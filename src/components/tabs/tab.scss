@@ -26,19 +26,6 @@
     box-shadow: none;
   }
 
-  &--dark {
-    color: white;
-
-    &::before {
-      background: $blue-100;
-    }
-
-    &:hover,
-    &:focus {
-      background: lighten($gray-500, 6%);
-    }
-  }
-
   &.is-active {
     &::before {
       opacity: 1;

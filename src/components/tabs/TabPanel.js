@@ -1,17 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../theme-context';
 
 const TabPanel = ({ className, state, ...others }) => {
-  const { theme } = useContext(ThemeContext);
   const [currentIndex, panelIndex] = state;
 
   return (
     <div
       className={classnames('rcl-tab-panel', className, {
         'is-active': currentIndex === panelIndex,
-        [`rcl-tab-panel--${theme}`]: theme,
       })}
       {...others}
     ></div>

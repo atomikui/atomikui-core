@@ -1,4 +1,5 @@
 @import '../../sass-starter/main';
+@import '../components/accordion/accordion-item.dark';
 @import '../components/card/card.dark';
 @import '../components/chat-window/chat-window.dark';
 @import '../components/chat-message/chat-message.dark';
@@ -12,3 +13,6 @@
 @import '../components/list/list-item.dark';
 
 @import '../components/range-slider/range-slider.dark';
+@import '../components//tabs/tab.dark';
+@import '../components/tabs/tabs.dark';
+@import '../components/tabs/tab-panel.dark';

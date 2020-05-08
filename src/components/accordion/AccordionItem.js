@@ -1,9 +1,8 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import ThemeContext from '../../theme-context';
 import generateId from '../../utilities/generateId';
 
 const AccordionItem = ({
@@ -14,8 +13,6 @@ const AccordionItem = ({
   label,
   ...others
 }) => {
-  const { theme } = useContext(ThemeContext);
-
   const [isExpanded, setIsExpanded] = useState(expanded);
   const contentRef = useRef();
 
@@ -35,12 +32,7 @@ const AccordionItem = ({
   }, [expanded]);
 
   return (
-    <div
-      className={classnames('rcl-accordion-item', className, {
-        [`rcl-accordion-item--${theme}`]: theme,
-      })}
-      {...others}
-    >
+    <div className="rcl-accordion-item" {...others}>
       <button
         id={headerId}
         aria-expanded={isExpanded}

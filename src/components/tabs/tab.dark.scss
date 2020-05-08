@@ -1,0 +1,12 @@
+.rcl-tab {
+  color: white;
+
+  &::before {
+    background: $blue-100;
+  }
+
+  &:hover,
+  &:focus {
+    background: lighten($gray-500, 6%);
+  }
+}
