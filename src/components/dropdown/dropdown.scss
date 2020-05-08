@@ -51,15 +51,6 @@
     }
   }
 
-  &--dark > .rcl-dropdown__select {
-    background: $dark-background-gray;
-    border-color: $dark-border-gray;
-
-    & > select {
-      color: $white;
-    }
-  }
-
   &.is-disabled {
     .rcl-dropdown__select {
       background: $default-background-lightest-gray;
@@ -68,20 +59,6 @@
 
     .rcl-dropdown__select::after {
       background-color: lighten($gray-200, 13%);
-    }
-  }
-
-  &--dark.is-disabled {
-    .rcl-dropdown__select {
-      background: $dark-background-gray;
-
-      & > select {
-        color: $gray-200;
-      }
-    }
-
-    .rcl-dropdown__select::after {
-      background-color: $gray-500;
     }
   }
 

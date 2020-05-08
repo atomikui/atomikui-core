@@ -1,0 +1,24 @@
+.rcl-dropdown {
+  &__select {
+    background: $dark-background-gray;
+    border-color: $dark-border-gray;
+
+    & > select {
+      color: $white;
+    }
+  }
+
+  &.is-disabled {
+    .rcl-dropdown__select {
+      background: $dark-background-gray;
+
+      & > select {
+        color: $gray-200;
+      }
+
+      &::after {
+        background-color: $gray-500;
+      }
+    }
+  }
+}

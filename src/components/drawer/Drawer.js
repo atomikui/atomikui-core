@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState, useContext } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
 import Overlay from '../overlay';
-import ThemeContext from '../../theme-context';
 
 const Drawer = ({
   children,
@@ -13,7 +12,6 @@ const Drawer = ({
   position,
   ...others
 }) => {
-  const { theme } = useContext(ThemeContext);
   const ref = useRef();
 
   const [focusTrap, setFocusTrap] = useState(null);
@@ -65,7 +63,6 @@ const Drawer = ({
         className={classnames('rcl-drawer', className, {
           'is-open': isOpen,
           [`rcl-drawer--${position}`]: position,
-          [`rcl-drawer--${theme}`]: theme,
         })}
         style={styles}
         {...others}
