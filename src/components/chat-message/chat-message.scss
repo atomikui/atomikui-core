@@ -6,12 +6,13 @@
   &__item__timestamp {
     color: $gray-400;
     font-size: rem(12);
-    margin-bottom: rem(3);
+    margin-bottom: rem(4);
   }
 
   &__item__text {
     background: $white;
     border-radius: rem(8);
+    color: $black;
     font-size: rem(14);
     line-height: 1.2;
     max-width: 65%;
