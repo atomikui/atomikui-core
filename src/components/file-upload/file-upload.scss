@@ -70,27 +70,6 @@
     }
   }
 
-  &--dark {
-    & > .rcl-file-upload__wrapper {
-      background: $dark-background-gray;
-      border-color: $dark-border-gray;
-      color: $white;
-
-      &--drag-and-drop {
-        &:hover {
-          border-color: $blue-100;
-        }
-      }
-
-      & > .rcl-file-upload__file-list {
-        & > * {
-          background: lighten($gray-500, 12%);
-          border-color: $dark-border-gray;
-        }
-      }
-    }
-  }
-
   &.has-error {
     & > .rcl-file-upload__wrapper {
       border-color: $error-red;

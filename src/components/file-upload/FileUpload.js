@@ -1,10 +1,9 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { List, ListItem } from '../list';
 import Hint from '../hint/Hint';
 import generateId from '../../utilities/generateId';
-import ThemeContext from '../../theme-context';
 
 const FileUpload = ({
   className,
@@ -18,8 +17,6 @@ const FileUpload = ({
   uploadBtnVariant,
   ...others
 }) => {
-  const { theme } = useContext(ThemeContext);
-
   const [files, setFiles] = useState([]);
 
   const id = generateId('file-input');
@@ -54,7 +51,6 @@ const FileUpload = ({
   return (
     <div
       className={classnames('rcl-file-upload', className, {
-        [`rcl-file-upload--${theme}`]: theme,
         'has-error': hasError,
       })}
     >

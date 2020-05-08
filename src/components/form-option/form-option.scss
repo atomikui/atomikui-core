@@ -19,11 +19,6 @@
     border-radius: 50%;
   }
 
-  &--dark > .rcl-form-option__icon {
-    background: $dark-background-gray;
-    border-color: $gray-300;
-  }
-
   &.has-error > .rcl-form-option__icon {
     border-color: $error-red;
   }
@@ -39,18 +34,9 @@
     position: absolute;
   }
 
-  &--dark.is-disabled > input + .rcl-form-option__icon {
-    background: $dark-background-gray;
-    border: 0;
-  }
-
   & > input:checked + .rcl-form-option__icon {
     background: $blue-200;
     border-color: $blue-200;
-  }
-
-  &--dark.is-disabled > input:checked + .rcl-form-option__icon {
-    background: $gray-400;
   }
 
   & > input:checked:focus + .rcl-form-option__icon {
