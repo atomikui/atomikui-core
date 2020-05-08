@@ -20,7 +20,9 @@ module.exports = {
   require: [
     './src/styles/main.scss',
     './styleguide/styles/main.scss',
-    ...(theme === 'dark' ? ['./styleguide/styles/dark.scss'] : []),
+    ...(theme === 'dark'
+      ? ['./src/styles/dark.scss', './styleguide/styles/dark.scss']
+      : []),
   ],
   template: {
     head: {

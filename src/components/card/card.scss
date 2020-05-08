@@ -22,25 +22,4 @@
   .rcl-btn--hollow:focus {
     background: darken($gray-100, 8%);
   }
-
-  &--dark {
-    background: $dark-background-gray;
-    color: $white;
-
-    // Override default anchor styles
-    a,
-    a:hover {
-      color: $blue-100;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    // Override default hollow button styles
-    .rcl-btn--hollow:hover,
-    .rcl-btn--hollow:focus {
-      background: lighten($gray-500, 9%);
-    }
-  }
 }

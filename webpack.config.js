@@ -15,17 +15,27 @@ let cssBuildPath;
 switch (buildEvent) {
   case 'build:styles':
     buildDir = './dist/styles';
-    cssBuildPath = 'react-component-library.css';
+    cssBuildPath = '[name].css';
     break;
   default:
     buildDir = './styles';
-    cssBuildPath = 'styles/react-component-library.css';
+    cssBuildPath = 'styles/[name].css';
 }
 
 module.exports = {
   mode: !prod ? 'development' : 'production',
-  entry: [path.resolve(__dirname, 'src/styles/main.scss')],
+  entry: {
+    'react-component-library.main': path.resolve(
+      __dirname,
+      'src/styles/main.scss',
+    ),
+    'react-component-library.dark': path.resolve(
+      __dirname,
+      'src/styles/dark.scss',
+    ),
+  },
   output: {
+    filename: '[name].js',
     path: path.resolve(__dirname, buildDir),
   },
   devtool: 'none',
@@ -81,7 +91,7 @@ module.exports = {
     new CompressionPlugin(),
     new MiniCssExtractPlugin({
       filename: cssBuildPath,
-      chunkFilename: '[id].css',
+      chunkFilename: cssBuildPath,
     }),
   ],
 };
