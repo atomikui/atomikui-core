@@ -154,26 +154,6 @@
     }
   }
 
-  &.rcl-range-slider--dark {
-    & > input[type='range'] {
-      background: $gray-400;
-    }
-
-    .rcl-range-slider__ticks {
-      &__tick {
-        background: $gray-400;
-      }
-
-      &__label {
-        color: $white;
-
-        &.is-selected {
-          color: $blue-100;
-        }
-      }
-    }
-  }
-
   & > input[type='range']:focus {
     outline: 0;
 
@@ -187,22 +167,6 @@
 
     &::-ms-slider-thumb {
       box-shadow: rem(0 0 0 8) rgba(136, 204, 252, 0.25);
-    }
-  }
-
-  &.rcl-range-slider--dark.is-disabled {
-    .rcl-range-slider__ticks {
-      &__tick {
-        background: $gray-400;
-      }
-
-      &__label {
-        color: $gray-200;
-
-        &.is-selected {
-          color: $white;
-        }
-      }
     }
   }
 

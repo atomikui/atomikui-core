@@ -1,0 +1,39 @@
+.rcl-range-slider {
+  & > input[type='range'] {
+    background: $gray-400;
+  }
+
+  &__ticks {
+    & > .rcl-range-slider__ticks__tick {
+      background: $gray-400;
+
+      & > .rcl-range-slider__ticks__label {
+        color: $white;
+
+        &.is-selected {
+          color: $blue-100;
+        }
+      }
+    }
+  }
+
+  &.is-disabled {
+    input[type='range'] {
+      background: $gray-400;
+    }
+
+    .rcl-range-slider__ticks {
+      &__tick {
+        background: $gray-400;
+      }
+
+      &__label {
+        color: $gray-200;
+
+        &.is-selected {
+          color: $white;
+        }
+      }
+    }
+  }
+}
