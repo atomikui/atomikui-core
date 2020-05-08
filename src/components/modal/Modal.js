@@ -1,11 +1,10 @@
-import React, { useRef, useEffect, useState, useContext } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
-import ThemeContext from '../../theme-context';
 
 const Modal = ({
   className,
@@ -21,13 +20,9 @@ const Modal = ({
   type,
   ...others
 }) => {
-  const { theme } = useContext(ThemeContext);
-
   const [focusTrap, setFocusTrap] = useState(null);
 
   const modal = useRef();
-
-  const modalTheme = type || theme;
 
   const handleKeyDown = (e) => {
     if (e.keyCode === 27) {
@@ -73,7 +68,7 @@ const Modal = ({
     >
       <div
         className={classnames('rcl-modal', className, {
-          [`rcl-modal--${modalTheme}`]: modalTheme,
+          [`rcl-modal--${type}`]: type,
           'is-open': isOpen,
         })}
         ref={modal}
