@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Label from '../label';
 import Hint from '../hint';
 import generateId from '../../utilities/generateId';
-import ThemeContext from '../../theme-context';
 
 const ButtonGroup = ({
   children,
@@ -18,7 +17,6 @@ const ButtonGroup = ({
   stretch,
   ...others
 }) => {
-  const { theme } = useContext(ThemeContext);
   const uid = generateId();
   const inputHintId = `${uid}_hint`;
   const inputErrorId = `${uid}_error`;
@@ -33,7 +31,6 @@ const ButtonGroup = ({
       <div
         className={classnames('rcl-button-group', className, {
           [`rcl-button-group--${size}`]: size,
-          [`rcl-button-group--${theme}`]: theme,
           'rcl-button-group--stretch': stretch,
         })}
         role="group"
