@@ -25,16 +25,4 @@
       }
     }
   }
-
-  &.rcl-list-item--dark {
-    color: $white;
-
-    &.is-menu-item > * {
-      color: $white;
-
-      &:hover {
-        background: $black;
-      }
-    }
-  }
 }

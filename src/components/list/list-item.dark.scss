@@ -1,0 +1,11 @@
+.rcl-list-item {
+  color: $white;
+
+  &.is-menu-item > * {
+    color: $white;
+
+    &:hover {
+      background: $black;
+    }
+  }
+}
