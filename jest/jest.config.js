@@ -28,6 +28,9 @@ module.exports = {
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$',
     '^.+\\.module\\.(css|sass|scss)$',
   ],
+  moduleNameMapper: {
+    '\\.(css|scss)$': '<rootDir>/jest/cssMock.js',
+  },
   moduleFileExtensions: [
     'web.js',
     'js',

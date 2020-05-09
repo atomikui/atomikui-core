@@ -20,6 +20,12 @@
     top: 0;
     width: rem($input-height);
 
+    & > svg {
+      & > path {
+        fill: $gray-500;
+      }
+    }
+
     &:hover,
     &:focus {
       background-color: transparent;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useContext } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
@@ -10,7 +10,7 @@ import Button from '../button';
 import Label from '../label';
 import validateDate from '../../utilities/validate-date';
 import Overlay from '../overlay';
-import ThemeContext from '../../theme-context';
+import 'react-calendar/dist/Calendar.css';
 
 const DatePicker = ({
   className,
@@ -22,7 +22,6 @@ const DatePicker = ({
   ...others
 }) => {
   const calendar = useRef();
-  const { theme } = useContext(ThemeContext);
   const [focusTrap, setFocusTrap] = useState(null);
   const [theValue, setTheValue] = useState(validateDate(value) || new Date());
   const [isOpen, setIsOpen] = useState(false);
@@ -103,19 +102,12 @@ const DatePicker = ({
           }}
           disabled={disabled}
         >
-          <Icon
-            icon={faCalendarAlt}
-            size="lg"
-            color={theme === 'dark' ? 'white' : '#444'}
-          />
+          <Icon icon={faCalendarAlt} size="lg" />
         </Button>
       </div>
       <Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}>
         <div className="rcl-date-picker__calendar" ref={calendar}>
           <Calendar
-            className={classnames({
-              [`react-calendar--${theme}`]: theme,
-            })}
             onChange={(details) => {
               return handleDateChange(details);
             }}
