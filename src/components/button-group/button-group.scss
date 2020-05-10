@@ -5,38 +5,6 @@
   display: inline-flex;
   height: rem($input-height);
 
-  &--sm {
-    height: rem($input-height - 14);
-
-    & > * {
-      font-size: rem(10);
-    }
-  }
-
-  &--md {
-    height: rem($input-height - 8);
-
-    & > * {
-      font-size: rem(13);
-    }
-  }
-
-  &--lg {
-    height: rem($input-height + 8);
-
-    & > * {
-      font-size: rem(18);
-    }
-  }
-
-  &--stretch {
-    display: flex;
-
-    & > * {
-      flex: 1;
-    }
-  }
-
   & > * {
     align-items: center;
     background: $white;
@@ -52,7 +20,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    & > * + * {
+    &:not(:first-child) {
       border-left: rem(1) solid darken($gray-100, 10%);
     }
 
@@ -78,6 +46,38 @@
     &.is-selected:focus {
       background: $blue-200;
       color: $white;
+    }
+  }
+
+  &.rcl-button-group--sm {
+    height: rem($input-height - 14);
+
+    & > * {
+      font-size: rem(10);
+    }
+  }
+
+  &.rcl-button-group--md {
+    height: rem($input-height - 8);
+
+    & > * {
+      font-size: rem(13);
+    }
+  }
+
+  &.rcl-button-group--lg {
+    height: rem($input-height + 8);
+
+    & > * {
+      font-size: rem(18);
+    }
+  }
+
+  &.rcl-button-group--stretch {
+    display: flex;
+
+    & > * {
+      flex: 1;
     }
   }
 }
