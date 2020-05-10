@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
 import generateId from '../../utilities/generateId';
-import ThemeContext from '../../theme-context';
 
 const Switch = ({
   className,
@@ -20,7 +19,6 @@ const Switch = ({
   onChange,
   required,
 }) => {
-  const { theme } = useContext(ThemeContext);
   const uid = id || generateId();
   const inputName = name || uid;
   const inputHintId = `${inputName}_hint`;
@@ -35,7 +33,6 @@ const Switch = ({
           'is-disabled': disabled,
           'is-stacked': layout === 'stacked',
           'has-error': hasError,
-          [`rcl-switch--${theme}`]: theme,
         })}
       >
         <input

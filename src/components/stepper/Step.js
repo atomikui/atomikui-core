@@ -1,14 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Link from '../link';
 import { ListItem } from '../list';
-import ThemeContext from '../../theme-context';
 
 const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
-  const { theme } = useContext(ThemeContext);
   const StepNumber = isComplete && href ? Link : 'span';
 
   return (
@@ -19,7 +17,6 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
         'is-complete': isComplete,
         'is-active': isActive,
         'rcl-step--top-label': topLabel,
-        [`rcl-step--${theme}`]: theme,
       })}
     >
       <StepNumber

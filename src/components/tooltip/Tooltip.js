@@ -1,17 +1,9 @@
-import React, {
-  Children,
-  cloneElement,
-  useState,
-  useEffect,
-  useContext,
-} from 'react';
+import React, { Children, cloneElement, useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../theme-context';
 
 const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
-  const { theme } = useContext(ThemeContext);
   const [tooltip, setToolTip] = useState(null);
 
   const createTooltipElement = (content) => {
@@ -21,7 +13,6 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
         className={classnames('rcl-tooltip', {
           [`rcl-tooltip--align-${align}`]: align,
           [`rcl-tooltip--${variant}`]: variant,
-          [`rcl-tooltip--${theme}`]: theme,
         })}
       >
         <div className="rcl-tooltip__content">{content}</div>

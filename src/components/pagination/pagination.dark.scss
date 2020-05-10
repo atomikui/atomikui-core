@@ -1,0 +1,23 @@
+.rcl-pagination {
+  background: $dark-background-gray;
+  border-color: $dark-border-gray;
+
+  & > * + * {
+    border-left: rem(1) solid darken($gray-400, 6%);
+  }
+
+  & > &__item > a {
+    color: $white;
+  }
+
+  & > &__item.is-active > a {
+    background: $blue-200;
+  }
+
+  & > &__item:not(.is-active) > a {
+    &:hover,
+    &:active {
+      background: lighten($gray-500, 6%);
+    }
+  }
+}

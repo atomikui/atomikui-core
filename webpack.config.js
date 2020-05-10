@@ -15,7 +15,7 @@ let cssBuildPath;
 switch (buildEvent) {
   case 'build:styles':
     buildDir = './dist/styles';
-    cssBuildPath = '[name].css';
+    cssBuildPath = '[name].min.css';
     break;
   default:
     buildDir = './styles';
@@ -25,14 +25,8 @@ switch (buildEvent) {
 module.exports = {
   mode: !prod ? 'development' : 'production',
   entry: {
-    'react-component-library.main': path.resolve(
-      __dirname,
-      'src/styles/main.scss',
-    ),
-    'react-component-library.dark': path.resolve(
-      __dirname,
-      'src/styles/dark.scss',
-    ),
+    main: path.resolve(__dirname, 'src/styles/main.scss'),
+    dark: path.resolve(__dirname, 'src/styles/dark.scss'),
   },
   output: {
     filename: '[name].js',

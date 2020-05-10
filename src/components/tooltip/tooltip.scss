@@ -24,29 +24,6 @@
     width: 0;
   }
 
-  &--dark {
-    & > .rcl-tooltip__content {
-      background: $background-light-gray;
-      color: $black;
-    }
-
-    &::after {
-      border-top-color: $gray-100;
-    }
-
-    &.rcl-tooltip--align-left {
-      &::after {
-        border-left-color: $gray-100;
-      }
-    }
-
-    &.rcl-tooltip--align-right {
-      &::after {
-        border-right-color: $gray-100;
-      }
-    }
-  }
-
   &--align-top-left,
   &--align-top-center,
   &--align-top-right {
@@ -135,10 +112,6 @@
         background-color: $color;
         border: 0;
         color: $white;
-
-        @if ($name == white) {
-          color: $black;
-        }
       }
 
       &::after {

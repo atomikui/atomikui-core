@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../theme-context';
 
 const ProgressBar = ({
   animated,
@@ -11,13 +10,10 @@ const ProgressBar = ({
   variant,
   ...others
 }) => {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <div
       className={classnames('rcl-progress-bar', className, {
         [`rcl-progress-bar--${variant}`]: variant,
-        [`rcl-progress-bar--${theme}`]: theme,
         'rcl-progress-bar--animated': animated,
       })}
       {...others}

@@ -35,25 +35,4 @@
     background: $blue-200;
     color: $white;
   }
-
-  &--dark {
-    background: $dark-background-gray;
-    border-color: $dark-border-gray;
-
-    & > * + * {
-      border-left: rem(1) solid darken($gray-400, 6%);
-    }
-
-    & > .rcl-pagination__item.is-active > a {
-      background: $blue-100;
-      color: $black;
-    }
-
-    & > .rcl-pagination__item:not(.is-active) > a {
-      &:hover,
-      &:active {
-        background: lighten($gray-500, 6%);
-      }
-    }
-  }
 }

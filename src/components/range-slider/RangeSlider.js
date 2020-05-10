@@ -1,10 +1,9 @@
-import React, { useState, useContext, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import generateId from '../../utilities/generateId';
 import Hint from '../hint';
 import Label from '../label';
-import ThemeContext from '../../theme-context';
 
 const RangeSlider = ({
   className,
@@ -27,7 +26,6 @@ const RangeSlider = ({
   ...others
 }) => {
   const sliderRef = useRef();
-  const { theme } = useContext(ThemeContext);
   const [rangeValue, setRangeValue] = useState(value);
 
   const uid = id || generateId();
@@ -48,7 +46,6 @@ const RangeSlider = ({
         className={classnames('rcl-range-slider', className, {
           'has-error': hasError,
           'is-disabled': disabled,
-          [`rcl-range-slider--${theme}`]: theme,
         })}
       >
         <input

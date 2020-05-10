@@ -81,8 +81,4 @@
       }
     }
   }
-
-  &--dark:not(.is-checked):not(.has-error) > .rcl-switch__toggle {
-    background: $gray-400;
-  }
 }

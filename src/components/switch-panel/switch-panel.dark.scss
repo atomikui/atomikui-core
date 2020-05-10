@@ -1,0 +1,14 @@
+.rcl-switch-panel {
+  background: $dark-background-gray;
+  border: 0;
+
+  & > .rcl-switch-panel__hd {
+    background: lighten($gray-500, 8%);
+  }
+
+  & > .rcl-switch-panel__bd {
+    & > * + * {
+      border-top-color: lighten($gray-500, 5%);
+    }
+  }
+}

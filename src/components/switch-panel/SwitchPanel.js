@@ -1,18 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../theme-context';
 
 const SwitchPanel = ({ children, className, label, ...others }) => {
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <div
-      className={classnames('rcl-switch-panel', className, {
-        [`rcl-switch-panel--${theme}`]: theme,
-      })}
-      {...others}
-    >
+    <div className="rcl-switch-panel" {...others}>
       <div className="rcl-switch-panel__hd">{label}</div>
       <div className="rcl-switch-panel__bd">{children}</div>
     </div>

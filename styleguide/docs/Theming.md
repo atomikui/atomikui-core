@@ -1,5 +1,9 @@
-The React Component Library offers two themes - the default light theme and a dark theme. The dark theme can be activated by simply adding the following to a `.env` file:
+The React Component Library offers two themes - the default light theme and a dark theme. The dark theme CSS can be imported after the main CSS import to override the default styles.
 
 ```html
-THEME=dark
+import '@alaneicker/react-component-library/dis/styles/main.mim.css';
+```
+
+```html
+import '@alaneicker/react-component-library/dis/styles/dark.min.css';
 ```

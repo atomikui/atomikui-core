@@ -1,20 +1,12 @@
-import React, { Children, useContext } from 'react';
+import React, { Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import generateId from '../../utilities/generateId';
 import { List, ListItem } from '../list';
-import ThemeContext from '../../theme-context';
 
 const Pagination = ({ children, className, ...others }) => {
-  const { theme } = useContext(ThemeContext);
-
   return (
-    <List
-      className={classnames('rcl-pagination', className, {
-        [`rcl-pagination--${theme}`]: theme,
-      })}
-      {...others}
-    >
+    <List className="rcl-pagination" {...others}>
       {Children.map(children, (child) => {
         return (
           <ListItem
