@@ -1,0 +1,30 @@
+.rcl-btn,
+a.rcl-btn {
+  &:not(.rcl-btn--primary):not(.rcl-btn--secondary):not(.rcl-btn--tertiary):not(.rcl-btn--warning):not(.rcl-btn--hollow):not(.rcl-btn--link) {
+    background: $gray-400;
+    border: 0;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background: darken($gray-400, 10%);
+    }
+  }
+
+  &--hollow {
+    color: $blue-100;
+
+    &:hover {
+      background: $dark-background-gray;
+    }
+  }
+
+  &--link {
+    color: $blue-100;
+
+    &:hover {
+      color: $blue-100;
+      text-decoration: underline;
+    }
+  }
+}

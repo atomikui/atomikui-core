@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../theme-context';
 
 const Button = ({
   block,
@@ -15,13 +14,10 @@ const Button = ({
   theme,
   ...others
 }) => {
-  const themeContext = useContext(ThemeContext);
-
   return (
     <button
       className={classnames('rcl-btn', className, {
         [`rcl-btn--${theme}`]: theme,
-        [`rcl-btn--${themeContext.theme}`]: themeContext.theme,
         [`rcl-btn--${shape}`]: shape,
         [`rcl-btn--${size}`]: size,
         'rcl-btn--condensed': condensed,

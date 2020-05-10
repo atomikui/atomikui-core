@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import ThemeContext from '../../theme-context';
 
 const Link = ({
   active,
@@ -12,13 +11,10 @@ const Link = ({
   target,
   ...others
 }) => {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <a
       className={classnames('rcl-link', className, {
         'is-disabled': disabled,
-        [`rcl-link--${theme}`]: theme,
       })}
       {...(href && { href })}
       {...(target && { target })}

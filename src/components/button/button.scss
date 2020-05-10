@@ -40,34 +40,6 @@ a.rcl-btn {
     cursor: default;
   }
 
-  &--dark {
-    background: $gray-400;
-    border: 0;
-    color: $white;
-
-    &:hover,
-    &:focus {
-      background: darken($gray-400, 10%);
-    }
-
-    &.rcl-btn--hollow {
-      color: $blue-100;
-
-      &:hover {
-        background: $dark-background-gray;
-      }
-    }
-
-    &.rcl-btn--link {
-      color: $blue-100;
-
-      &:hover {
-        color: $blue-100;
-        text-decoration: underline;
-      }
-    }
-  }
-
   @each $name, $map in $button-sizes {
     &--#{$name} {
       font-size: rem(map-get($map, font-size));
@@ -93,28 +65,28 @@ a.rcl-btn {
       &:active {
         box-shadow: rem(0 0 0 3) lighten(map-get($map, background-color), 15%);
       }
-    }
-  }
 
-  &--hollow {
-    &:hover {
-      background-color: $blue-000;
-    }
+      @if ($variant == hollow) {
+        &:hover {
+          background-color: $blue-000;
+        }
 
-    &:focus,
-    &:active {
-      background-color: $blue-000;
-      @include focus-outline();
-    }
-  }
+        &:focus,
+        &:active {
+          background-color: $blue-000;
+          @include focus-outline();
+        }
+      }
 
-  &--link {
-    min-height: auto;
-    font-size: inherit;
+      @if ($variant == link) {
+        min-height: auto;
+        font-size: inherit;
 
-    &:hover {
-      color: $black;
-      text-decoration: underline;
+        &:hover {
+          color: $black;
+          text-decoration: underline;
+        }
+      }
     }
   }
 

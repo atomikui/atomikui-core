@@ -11,12 +11,4 @@
     color: $black;
     pointer-events: none;
   }
-
-  &--dark {
-    color: $blue-100;
-
-    &.is-disabled {
-      color: $gray-200;
-    }
-  }
 }

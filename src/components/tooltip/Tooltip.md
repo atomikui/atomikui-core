@@ -2,8 +2,9 @@ A Tooltip displays helpful te text when an element is hovered over, focused, or 
 
 ```jsx
 import { Tooltip, Button, Link } from '@alaneicker/react-component-library';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
-<div className="flex flex--align-middle flex--spacing-32">
+<div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
   <Tooltip data-tooltip="This is a tooltip" align="top-center">
     <Button size="md">Button Trigger</Button>
   </Tooltip>
@@ -19,7 +20,13 @@ import { Tooltip, Button, Link } from '@alaneicker/react-component-library';
 import { Tooltip, Button } from '@alaneicker/react-component-library';
 
 <>
-  <div className="flex flex--space-between">
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      marginBottom: '16px',
+    }}
+  >
     <Tooltip data-tooltip="This is a tooltip">
       <Button size="md">top-left</Button>
     </Tooltip>
@@ -30,7 +37,13 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
       <Button size="md">top-right</Button>
     </Tooltip>
   </div>
-  <div className="flex flex--space-between margin-top-16 margin-bottom-16">
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      marginBottom: '16px',
+    }}
+  >
     <Tooltip data-tooltip="This is a tooltip" align="right">
       <Button size="md">right</Button>
     </Tooltip>
@@ -38,7 +51,13 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
       <Button size="md">left</Button>
     </Tooltip>
   </div>
-  <div className="flex flex--space-between">
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      marginBottom: '16px',
+    }}
+  >
     <Tooltip data-tooltip="This is a tooltip" align="bottom-left">
       <Button size="md">bottom-left</Button>
     </Tooltip>
@@ -57,9 +76,11 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Tooltip, Button } from '@alaneicker/react-component-library';
 
-<Tooltip data-tooltip="This is a tooltip" triggerOnClick>
-  <Button size="md">On Click</Button>
-</Tooltip>;
+<div style={{ display: 'flex', justifyContent: 'space-around' }}>
+  <Tooltip data-tooltip="This is a tooltip" align="top-center" triggerOnClick>
+    <Button size="md">On Click</Button>
+  </Tooltip>
+</div>;
 ```
 
 ### Theme Variant
@@ -67,7 +88,10 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
 ```jsx
 import { Tooltip, Button } from '@alaneicker/react-component-library';
 
-<div className="flex flex--spacing-16">
+<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <Tooltip data-tooltip="This is a tooltip" variant="white" align="top-center">
+    <Button size="md">White</Button>
+  </Tooltip>
   <Tooltip data-tooltip="This is a tooltip" variant="info" align="top-center">
     <Button size="md">Info</Button>
   </Tooltip>
