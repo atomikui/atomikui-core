@@ -138,7 +138,7 @@ FormField.propTypes = {
   /** Specifies the type of input. */
   type: PropTypes.oneOf(types),
   /** Specifies the inputs value. */
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
 };
 
 FormField.defaultProps = {

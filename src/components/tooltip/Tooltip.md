@@ -89,9 +89,6 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
 import { Tooltip, Button } from '@alaneicker/react-component-library';
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-  <Tooltip data-tooltip="This is a tooltip" variant="white" align="top-center">
-    <Button size="md">White</Button>
-  </Tooltip>
   <Tooltip data-tooltip="This is a tooltip" variant="info" align="top-center">
     <Button size="md">Info</Button>
   </Tooltip>

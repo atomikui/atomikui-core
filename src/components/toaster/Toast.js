@@ -52,7 +52,7 @@ Toast.propTypes = {
   /** Removes a toast */
   remove: PropTypes.func,
   /** Type of toast - oneOf: info, warning, error, success */
-  type: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+  type: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 
 Toast.defaultProps = {

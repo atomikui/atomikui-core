@@ -59,7 +59,7 @@ const toggleModal = (type) => {
 };
 
 <>
-  <Button theme="dark" size="md" onClick={() => toggleModal('dark')}>
+  <Button size="md" onClick={() => toggleModal('dark')}>
     Dark Modal
   </Button>
   <Button theme="primary" size="md" onClick={() => toggleModal('info')}>

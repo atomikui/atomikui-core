@@ -54,6 +54,7 @@ Avatar.propTypes = {
     'red',
     'orange',
     'yellow',
+    'gold',
     'green',
     'light-blue',
     'medium-blue',

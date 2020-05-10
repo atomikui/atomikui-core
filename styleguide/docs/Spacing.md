@@ -75,7 +75,7 @@ const Column = ({ children, className, transparent, ...props }) => {
 <Grid fluid>
   {units.map((unit) => {
     return (
-      <Row>
+      <Row key={Math.random()}>
         <Column md={5} className={`margin-top-${unit}`}>
           .margin-top-{unit} / .padding-top-{unit}
         </Column>
@@ -91,7 +91,7 @@ const Column = ({ children, className, transparent, ...props }) => {
   <div style={styles.divider}></div>
   {units.map((unit) => {
     return (
-      <Row>
+      <Row key={Math.random()}>
         <Column md={5} className={`margin-right-${unit}`}>
           .margin-right-{unit} / .padding-right-{unit}
         </Column>

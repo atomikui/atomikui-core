@@ -1,6 +1,6 @@
 <div style="display: flex; align-items: center; border-bottom: 1px solid #ddd; padding-bottom: 16px; margin-bottom: 32px;">
-  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="120" width="120"
-    viewBox="0 0 204.556 204.556" style="enable-background:new 0 0 204.556 204.556;" xml:space="preserve">
+  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" height="120" width="120"
+    viewBox="0 0 204.556 204.556" style="enable-background:new 0 0 204.556 204.556;" xmlSpace="preserve">
   <path fill="#80deea" d="M76.918,155.742c-3.587-15.872-5.484-34.36-5.484-53.463c0-5.577,0.164-11.174,0.485-16.631
         c0.108-1.814-1.278-3.372-3.092-3.478c-1.79-0.116-3.372,1.278-3.478,3.092c-0.329,5.588-0.497,11.314-0.497,17.019
         c0,19.584,1.952,38.572,5.646,54.914c0.346,1.527,1.703,2.565,3.207,2.565c0.242,0,0.486-0.027,0.729-0.082

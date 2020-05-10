@@ -69,7 +69,7 @@ Statistic.propTypes = {
   /** Sets layout as horizontal */
   horizontal: PropTypes.bool,
   /** Icon to be displayed next to statistic */
-  icon: PropTypes.node,
+  icon: PropTypes.object,
   /** Color of the icon */
   iconColor: PropTypes.string,
   /** Label for statistic value */
@@ -79,7 +79,7 @@ Statistic.propTypes = {
   /** Sets the size of the value text */
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   /** Statistic value */
-  value: PropTypes.string,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
 
 Statistic.defaultProps = {

@@ -26,6 +26,7 @@ Badge.propTypes = {
   /** Specifies the badge theme variation. */
   variant: PropTypes.oneOf([
     'light-gray',
+    'light-blue',
     'info',
     'warning',
     'error',

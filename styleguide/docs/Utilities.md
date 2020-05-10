@@ -21,7 +21,7 @@ const displayOptions = [
 
 <>
   {displayOptions.map((option) => {
-    return <div>.display-{option}</div>;
+    return <div key={Math.random()}>.display-{option}</div>;
   })}
 </>;
 ```

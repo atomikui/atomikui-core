@@ -18,15 +18,12 @@ const TabPanel = ({ className, state, ...others }) => {
 TabPanel.propTypes = {
   /** Adds custom component CSS classes */
   className: PropTypes.string,
-  /** Sets tabe panel theme as inverse */
-  inverse: PropTypes.bool,
   /** The Tab panel state */
   state: PropTypes.arrayOf(PropTypes.number),
 };
 
 TabPanel.defaultProps = {
   className: '',
-  inverse: false,
   state: [-1, 0],
 };
 

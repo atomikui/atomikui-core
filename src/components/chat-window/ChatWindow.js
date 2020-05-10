@@ -58,7 +58,6 @@ const ChatWindow = ({
   useEffect(() => {
     fetch('https://ipinfo.io/json')
       .then((res) => {
-        console.log(res);
         return res.json();
       })
       .then(({ ip }) => {
