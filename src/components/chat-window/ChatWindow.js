@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import createFocusTrap from 'focus-trap';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import ChatMessage from '../chat-message';
 import Button from '../button';
 
@@ -100,11 +100,20 @@ const ChatWindow = ({
     >
       <div className="rcl-chat-window__header">
         <div className="rcl-chat-window__title">
-          <img
-            className="rcl-chat-window__avatar"
-            src={incomingSenderImg}
-            alt="Avatar"
-          />
+          {incomingSenderImg ? (
+            <img
+              className="rcl-chat-window__avatar"
+              src={incomingSenderImg}
+              alt="Avatar"
+            />
+          ) : (
+            <Icon
+              className="rcl-chat-window__avatar-icon"
+              icon={faUserCircle}
+              size="2x"
+              color="white"
+            />
+          )}
           {incomingSenderName}
           <span
             aria-label={`Status: ${incomingSenderStatus}`}

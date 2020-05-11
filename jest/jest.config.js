@@ -4,6 +4,7 @@ module.exports = {
   roots: ['<rootDir>'],
   modulePaths: ['<rootDir>/node_modules'],
   collectCoverage: true,
+  setupFiles: ['<rootDir>/jest/global-mocks.js'],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
     '!src/**/*.d.ts',
@@ -29,7 +30,7 @@ module.exports = {
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   moduleNameMapper: {
-    '\\.(css|scss)$': '<rootDir>/jest/cssMock.js',
+    '\\.(css|scss)$': '<rootDir>/jest/css-mock.js',
   },
   moduleFileExtensions: [
     'web.js',

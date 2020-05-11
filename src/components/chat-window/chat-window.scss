@@ -41,6 +41,12 @@
     width: rem(40);
   }
 
+  &__avatar-icon {
+    height: rem(40);
+    margin-right: rem(8);
+    width: rem(40);
+  }
+
   &__sender-status {
     background: white;
     border-radius: 50%;
@@ -117,8 +123,8 @@
     line-height: 0;
     overflow: hidden;
     padding: 0;
-    width: rem(32);
     transition: background 0.2s linear;
+    width: rem(32);
 
     &:hover,
     &:focus {
