@@ -10,7 +10,7 @@ build/
 public/
 coverage/
 jest/
-sass-starter/
+sass-utilities/
 styleguide/
 
 styleguide.config.js
