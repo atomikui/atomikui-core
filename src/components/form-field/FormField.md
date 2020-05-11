@@ -8,7 +8,7 @@ const [value, setValue] = useState('');
 
 <FormField
   type="text"
-  label="Search"
+  label="First Name"
   value={value}
   onChange={(e) => setValue(e.target.value)}
 />;
