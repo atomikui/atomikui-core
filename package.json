@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm run test-and-lint && npm run build:component-library",
+    "prepublish": "npm run test-and-lint && npm run build:atomik",
     "postpublish": "git push && git push --tags && rm -rf dist",
     "publish:major": "npm version major -m \"Upgrade to %s\" && npm publish --access public",
     "publish:minor": "npm version minor -m \"Upgrade to %s\" && npm publish --access public",
@@ -24,7 +24,7 @@
     "lint:css": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc.json --fix",
     "test": "jest --coverage --config=./jest/jest.config.js",
     "start": "NODE_ENV=development styleguidist server",
-    "build:component-library": "NODE_ENV=production rm -rf dist && babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && npm run build:styles && cp package.json dist/package.json",
+    "build:atomik": "NODE_ENV=production rm -rf dist && babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && npm run build:styles && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
     "build": "NODE_ENV=production npm run test-and-lint && styleguidist build",
     "test-and-lint": "npm run test && npm run lint && npm run lint:css",
