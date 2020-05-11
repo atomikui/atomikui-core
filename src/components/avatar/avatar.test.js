@@ -19,7 +19,7 @@ describe('<Avatar />', () => {
       <Avatar src="/profile-image.png" alt="Alan Smith" label="Avatar Label" />,
     );
 
-    const label = avatar.find('.rcl-avatar__label');
+    const label = avatar.find('.atomikui-avatar__label');
 
     expect(label.length).toBe(1);
   });

@@ -25,15 +25,15 @@ const Rating = ({ className, maxStars, onSelect, size, stars, ...others }) => {
 
   return (
     <div
-      className={classnames('rcl-rating', className)}
+      className={classnames('atomikui-rating', className)}
       {...others}
       aria-label={`Rating: ${stars} out of ${ratingBaseline} stars`}
     >
       {ratings.map((index) => {
         return (
           <Icon
-            className={classnames('rcl-rating__star', {
-              'rcl-rating__star--selectable': onSelect,
+            className={classnames('atomikui-rating__star', {
+              'atomikui-rating__star--selectable': onSelect,
               'is-selected': onSelect && index + 1 <= rating,
             })}
             key={Math.random()}
@@ -49,7 +49,11 @@ const Rating = ({ className, maxStars, onSelect, size, stars, ...others }) => {
         );
       })}
       {hasHalfStar && ratingBaseline < 5 && (
-        <Icon className="rcl-rating__star" icon={faStarHalfAlt} size={size} />
+        <Icon
+          className="atomikui-rating__star"
+          icon={faStarHalfAlt}
+          size={size}
+        />
       )}
     </div>
   );

@@ -27,7 +27,7 @@ describe('<Spinner />', () => {
 
   test.each(sizes)('Should set the size modifier .spinner--%p', (size) => {
     spinner.setProps({ size });
-    expect(spinner.hasClass(`rcl-spinner--${size}`)).toBe(true);
+    expect(spinner.hasClass(`atomikui-spinner--${size}`)).toBe(true);
   });
 
   test.each(themes)(

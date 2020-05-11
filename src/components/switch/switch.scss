@@ -1,4 +1,4 @@
-.rcl-switch {
+.atomikui-switch {
   align-items: center;
   display: flex;
 
@@ -44,13 +44,13 @@
   &.is-stacked {
     display: block;
 
-    & > .rcl-switch__toggle {
+    & > .atomikui-switch__toggle {
       margin-top: rem(3);
     }
   }
 
   &.is-checked {
-    .rcl-switch__toggle {
+    .atomikui-switch__toggle {
       background: $blue-200;
 
       &::after {
@@ -60,7 +60,7 @@
   }
 
   &.has-error {
-    & > .rcl-switch__toggle {
+    & > .atomikui-switch__toggle {
       background: $red-100;
     }
 
@@ -71,7 +71,7 @@
 
   &.is-disabled,
   &.is-checked.is-disabled {
-    & > .rcl-switch__toggle {
+    & > .atomikui-switch__toggle {
       background: $background-light-gray;
       cursor: default;
 

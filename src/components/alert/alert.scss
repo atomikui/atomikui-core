@@ -1,4 +1,4 @@
-.rcl-alert {
+.atomikui-alert {
   align-items: top;
   background: $blue-000;
   // border: rem(1) solid $blue-200;
@@ -15,7 +15,7 @@
     padding: rem(0 16);
   }
 
-  .rcl-btn.rcl-alert__btn {
+  .atomikui-btn.atomikui-alert__btn {
     border: 0;
     cursor: pointer;
     height: rem(24);

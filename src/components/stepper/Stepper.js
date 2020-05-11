@@ -7,8 +7,8 @@ const Stepper = ({ children, className, inline, topLabels, ...others }) => {
   return (
     <nav>
       <List
-        className={classnames('rcl-stepper', className, {
-          'rcl-stepper--inline': inline,
+        className={classnames('atomikui-stepper', className, {
+          'atomikui-stepper--inline': inline,
         })}
         {...others}
       >

@@ -10,7 +10,7 @@ describe('<Hint />', () => {
 
   beforeEach(() => {
     hint = shallow(
-      <Hint type="error" className="rcl-hint--custon-class">
+      <Hint type="error" className="atomikui-hint--custon-class">
         This is a hint
       </Hint>,
     );
@@ -26,10 +26,10 @@ describe('<Hint />', () => {
   });
 
   it('Should render theme based on `type` prop', () => {
-    expect(hint.hasClass('rcl-hint--error')).toBe(true);
+    expect(hint.hasClass('atomikui-hint--error')).toBe(true);
   });
 
   it('Should render with a custom class', () => {
-    expect(hint.hasClass('rcl-hint--custon-class')).toBe(true);
+    expect(hint.hasClass('atomikui-hint--custon-class')).toBe(true);
   });
 });

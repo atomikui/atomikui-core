@@ -35,23 +35,25 @@ describe('<List />', () => {
   });
 
   test.each(['bulleted', 'ordered', 'horizontal'])(
-    'Should apply .rcl-list--%p modifier class',
+    'Should apply .atomikui-list--%p modifier class',
     (modifier) => {
       list.setProps({ type: modifier });
 
-      expect(list.find('.rcl-list').hasClass(`rcl-list--${modifier}`)).toBe(
-        true,
-      );
+      expect(
+        list.find('.atomikui-list').hasClass(`atomikui-list--${modifier}`),
+      ).toBe(true);
     },
   );
 
   test.each(['center', 'right'])(
-    'Should apply .rcl-list--%p modifier class',
+    'Should apply .atomikui-list--%p modifier class',
     (modifier) => {
       list.setProps({ align: modifier });
 
       expect(
-        list.find('.rcl-list').hasClass(`rcl-list--align-${modifier}`),
+        list
+          .find('.atomikui-list')
+          .hasClass(`atomikui-list--align-${modifier}`),
       ).toBe(true);
     },
   );

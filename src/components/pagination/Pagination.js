@@ -6,11 +6,11 @@ import { List, ListItem } from '../list';
 
 const Pagination = ({ children, className, ...others }) => {
   return (
-    <List className="rcl-pagination" {...others}>
+    <List className="atomikui-pagination" {...others}>
       {Children.map(children, (child) => {
         return (
           <ListItem
-            className={classnames('rcl-pagination__item', {
+            className={classnames('atomikui-pagination__item', {
               'is-active': child.props.active,
             })}
             key={generateId()}

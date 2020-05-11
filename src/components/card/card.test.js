@@ -22,14 +22,14 @@ describe('<Card />', () => {
   });
 
   it('Should render a header', () => {
-    expect(card.find('.rcl-card__header').length).toBe(1);
+    expect(card.find('.atomikui-card__header').length).toBe(1);
   });
 
   it('Should render a body', () => {
-    expect(card.find('.rcl-card__body').length).toBe(1);
+    expect(card.find('.atomikui-card__body').length).toBe(1);
   });
 
   it('Should render a footer', () => {
-    expect(card.find('.rcl-card__footer').length).toBe(1);
+    expect(card.find('.atomikui-card__footer').length).toBe(1);
   });
 });

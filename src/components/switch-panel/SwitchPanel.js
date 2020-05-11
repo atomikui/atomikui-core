@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const SwitchPanel = ({ children, className, label, ...others }) => {
   return (
-    <div className="rcl-switch-panel" {...others}>
-      <div className="rcl-switch-panel__hd">{label}</div>
-      <div className="rcl-switch-panel__bd">{children}</div>
+    <div className="atomikui-switch-panel" {...others}>
+      <div className="atomikui-switch-panel__hd">{label}</div>
+      <div className="atomikui-switch-panel__bd">{children}</div>
     </div>
   );
 };

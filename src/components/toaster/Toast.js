@@ -35,7 +35,7 @@ const Toast = ({ children, className, duration, remove, type, ...others }) => {
 
   return (
     <animated.div style={styleProps} className={className} {...others}>
-      <Alert classes="rcl-toaster__toast" type={type} onClose={remove}>
+      <Alert classes="atomikui-toaster__toast" type={type} onClose={remove}>
         {children}
       </Alert>
     </animated.div>

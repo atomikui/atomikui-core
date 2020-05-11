@@ -1,4 +1,4 @@
-.rcl-step {
+.atomikui-step {
   align-items: center;
   display: flex;
   flex: 1;
@@ -51,7 +51,7 @@
   &--top-label {
     flex-direction: column-reverse;
 
-    .rcl-step__number {
+    .atomikui-step__number {
       margin-bottom: 0;
       margin-top: rem(4);
     }

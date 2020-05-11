@@ -1,6 +1,6 @@
-.rcl-btn,
-a.rcl-btn {
-  &:not(.rcl-btn--primary):not(.rcl-btn--secondary):not(.rcl-btn--tertiary):not(.rcl-btn--warning):not(.rcl-btn--hollow):not(.rcl-btn--link) {
+.atomikui-btn,
+a.atomikui-btn {
+  &:not(.atomikui-btn--primary):not(.atomikui-btn--secondary):not(.atomikui-btn--tertiary):not(.atomikui-btn--warning):not(.atomikui-btn--hollow):not(.atomikui-btn--link) {
     background: $gray-400;
     border: 0;
     color: $white;

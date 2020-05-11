@@ -14,16 +14,16 @@ const Media = ({
 }) => {
   return (
     <div
-      className={classnames('rcl-media', className, {
-        'rcl-media--inline': inline,
-        'rcl-media--reverse': reverse,
+      className={classnames('atomikui-media', className, {
+        'atomikui-media--inline': inline,
+        'atomikui-media--reverse': reverse,
         [`media--${align}`]: align,
       })}
       {...others}
     >
-      <div className="rcl-media__hd">{header}</div>
-      <div className="rcl-media__bd">{body}</div>
-      {footer && <div className="rcl-media__ft">{footer}</div>}
+      <div className="atomikui-media__hd">{header}</div>
+      <div className="atomikui-media__bd">{body}</div>
+      {footer && <div className="atomikui-media__ft">{footer}</div>}
     </div>
   );
 };

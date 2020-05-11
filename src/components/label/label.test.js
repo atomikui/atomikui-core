@@ -10,7 +10,7 @@ describe('<Label />', () => {
 
   beforeEach(() => {
     label = shallow(
-      <Label className="rcl-label--custon-class">This is a label</Label>,
+      <Label className="atomikui-label--custon-class">This is a label</Label>,
     );
   });
 
@@ -23,6 +23,6 @@ describe('<Label />', () => {
   });
 
   it('Should render with a custom class', () => {
-    expect(label.hasClass('rcl-label--custon-class')).toBe(true);
+    expect(label.hasClass('atomikui-label--custon-class')).toBe(true);
   });
 });

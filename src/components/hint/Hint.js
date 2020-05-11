@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const Hint = ({ className, children, type, ...others }) => {
   return (
     <div
-      className={classnames('rcl-hint', className, {
-        [`rcl-hint--${type}`]: type,
+      className={classnames('atomikui-hint', className, {
+        [`atomikui-hint--${type}`]: type,
       })}
       {...others}
     >

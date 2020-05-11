@@ -1,5 +1,5 @@
-.rcl-btn,
-a.rcl-btn {
+.atomikui-btn,
+a.atomikui-btn {
   background-color: $color-btn-default;
   border: 0;
   border-radius: rem($base-border-radius);
@@ -16,7 +16,7 @@ a.rcl-btn {
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
 
-  &:not(.rcl-btn--link) {
+  &:not(.atomikui-btn--link) {
     text-transform: uppercase;
   }
 

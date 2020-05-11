@@ -9,13 +9,13 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
   const createTooltipElement = (content) => {
     return (
       <div
-        id="rcl-tooltip"
-        className={classnames('rcl-tooltip', {
-          [`rcl-tooltip--align-${align}`]: align,
-          [`rcl-tooltip--${variant}`]: variant,
+        id="atomikui-tooltip"
+        className={classnames('atomikui-tooltip', {
+          [`atomikui-tooltip--align-${align}`]: align,
+          [`atomikui-tooltip--${variant}`]: variant,
         })}
       >
-        <div className="rcl-tooltip__content">{content}</div>
+        <div className="atomikui-tooltip__content">{content}</div>
       </div>
     );
   };
@@ -29,7 +29,7 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
 
     await setToolTip(createTooltipElement(content));
 
-    const theTooltip = document.querySelector('#rcl-tooltip');
+    const theTooltip = document.querySelector('#atomikui-tooltip');
     const coords = theTooltip.getBoundingClientRect();
 
     const tooltipHeight = coords.height;
@@ -129,7 +129,7 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
             onBlur: removeTooltip,
             onMouseEnter: createTooltip,
             onMouseLeave: removeTooltip,
-            ...(tooltip && { 'aria-describedby': 'rcl-tooltip' }),
+            ...(tooltip && { 'aria-describedby': 'atomikui-tooltip' }),
           }),
           ...(triggerOnClick && {
             onClick: createTooltip,

@@ -7,7 +7,7 @@ const Tab = ({ active, className, label, onClick, ...others }) => {
   return (
     <Button
       theme="hollow"
-      className={classnames('rcl-tab', className, {
+      className={classnames('atomikui-tab', className, {
         'is-active': active,
       })}
       {...(onClick && { onClick })}

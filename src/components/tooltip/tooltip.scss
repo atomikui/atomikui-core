@@ -1,4 +1,4 @@
-.rcl-tooltip {
+.atomikui-tooltip {
   animation: fadeIn 0.2s linear;
   display: flex;
   flex-direction: column;
@@ -108,7 +108,7 @@
 
   @each $name, $color in $tooltip-variants {
     &--#{$name} {
-      .rcl-tooltip__content {
+      .atomikui-tooltip__content {
         background-color: $color;
         border: 0;
         color: $white;
@@ -118,12 +118,12 @@
         border-top-color: $color;
       }
 
-      &.rcl-tooltip--align-left::after {
+      &.atomikui-tooltip--align-left::after {
         border-left-color: $color;
         border-top-color: transparent;
       }
 
-      &.rcl-tooltip--align-right::after {
+      &.atomikui-tooltip--align-right::after {
         border-right-color: $color;
         border-top-color: transparent;
       }

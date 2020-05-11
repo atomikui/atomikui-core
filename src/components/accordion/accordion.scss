@@ -1,6 +1,6 @@
 $border: rem(1) solid lighten($gray-200, 15%);
 
-.rcl-accordion {
+.atomikui-accordion {
   & > * + * {
     margin-top: rem(3);
   }

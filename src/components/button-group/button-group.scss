@@ -1,4 +1,4 @@
-.rcl-button-group {
+.atomikui-button-group {
   align-items: stretch;
   border: rem(1) solid $default-border-gray;
   border-radius: rem($border-radius);
@@ -49,7 +49,7 @@
     }
   }
 
-  &.rcl-button-group--sm {
+  &.atomikui-button-group--sm {
     height: rem($input-height - 14);
 
     & > * {
@@ -57,7 +57,7 @@
     }
   }
 
-  &.rcl-button-group--md {
+  &.atomikui-button-group--md {
     height: rem($input-height - 8);
 
     & > * {
@@ -65,7 +65,7 @@
     }
   }
 
-  &.rcl-button-group--lg {
+  &.atomikui-button-group--lg {
     height: rem($input-height + 8);
 
     & > * {
@@ -73,7 +73,7 @@
     }
   }
 
-  &.rcl-button-group--stretch {
+  &.atomikui-button-group--stretch {
     display: flex;
 
     & > * {

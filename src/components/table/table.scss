@@ -1,4 +1,4 @@
-.rcl-table {
+.atomikui-table {
   $cell-border-color: lighten($gray-200, 10%);
 
   border: rem(1) solid $default-border-gray;
@@ -28,7 +28,7 @@
     background: lighten($blue-000, 5%);
   }
 
-  &.rcl-table--dark {
+  &.atomikui-table--dark {
     $cell-border-color: $gray-400;
 
     border-color: $gray-400;

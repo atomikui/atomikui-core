@@ -32,18 +32,18 @@ describe('<Tooltip />', () => {
 
   it('Should create and remove tooltip', () => {
     tooltip.find('Button').simulate('focus');
-    expect(tooltip.find('#rcl-tooltip').length).toBe(1);
+    expect(tooltip.find('#atomikui-tooltip').length).toBe(1);
 
     tooltip.find('Button').simulate('blur');
-    expect(tooltip.find('#rcl-tooltip').length).toBe(0);
+    expect(tooltip.find('#atomikui-tooltip').length).toBe(0);
   });
 
   it('Should create themed tooltip', () => {
     tooltip.find('Button').simulate('focus');
     expect(
       document
-        .querySelector('#rcl-tooltip')
-        .classList.contains('rcl-tooltip--warning'),
+        .querySelector('#atomikui-tooltip')
+        .classList.contains('atomikui-tooltip--warning'),
     ).toBe(true);
   });
 
@@ -57,14 +57,14 @@ describe('<Tooltip />', () => {
     'top-center',
     'top-right',
   ])(
-    'Should set the position modifier class as .rcl-tooltip--align-%p',
+    'Should set the position modifier class as .atomikui-tooltip--align-%p',
     (align) => {
       tooltip.setProps({ align });
       tooltip.find('Button').simulate('focus');
       expect(
         document
-          .querySelector('#rcl-tooltip')
-          .classList.contains(`rcl-tooltip--align-${align}`),
+          .querySelector('#atomikui-tooltip')
+          .classList.contains(`atomikui-tooltip--align-${align}`),
       ).toBe(true);
     },
   );

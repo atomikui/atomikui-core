@@ -24,6 +24,6 @@ describe('withToastProvider', () => {
 
   it('Should remove a toast', () => {
     app.find('Button').simulate('click');
-    expect(app.find('.rcl-toaster').children().length).toBe(0);
+    expect(app.find('.atomikui-toaster').children().length).toBe(0);
   });
 });

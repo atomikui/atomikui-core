@@ -1,4 +1,4 @@
-.rcl-range-slider {
+.atomikui-range-slider {
   display: flex;
   margin: rem(18 0 42);
   position: relative;
@@ -99,7 +99,7 @@
     top: rem(-5);
     z-index: 2;
 
-    .rcl-range-slider__ticks__tick {
+    .atomikui-range-slider__ticks__tick {
       background: $blue-000;
       border-radius: 50%;
       cursor: pointer;
@@ -110,7 +110,7 @@
       width: rem(15);
     }
 
-    .rcl-range-slider__ticks__label {
+    .atomikui-range-slider__ticks__label {
       font-size: rem(14);
       padding-top: rem(30);
 
@@ -144,12 +144,12 @@
     }
 
     input[type='range'],
-    .rcl-range-slider__ticks__tick {
+    .atomikui-range-slider__ticks__tick {
       background: $background-light-gray;
       cursor: default;
     }
 
-    .rcl-range-slider__ticks__label {
+    .atomikui-range-slider__ticks__label {
       color: $gray-200;
     }
   }
@@ -172,7 +172,7 @@
 
   @media (min-width: $breakpoint-small) {
     &__ticks {
-      .rcl-range-slider__ticks__label {
+      .atomikui-range-slider__ticks__label {
         &.is-hidden-on-mobile {
           display: block;
         }

@@ -28,7 +28,7 @@ describe('<Overlay />', () => {
 
   it('Should set a color variant', () => {
     overlay.setProps({ theme: 'blue' });
-    expect(overlay.hasClass('rcl-overlay--blue')).toBe(true);
+    expect(overlay.hasClass('atomikui-overlay--blue')).toBe(true);
   });
 
   it('Should add onClick to all children', () => {

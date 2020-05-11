@@ -20,9 +20,9 @@ const Overlay = ({
 
   return (
     <div
-      className={classnames('rcl-overlay', className, {
-        [`rcl-overlay--${theme}`]: theme,
-        [`rcl-overlay--align-${align}`]: align,
+      className={classnames('atomikui-overlay', className, {
+        [`atomikui-overlay--${theme}`]: theme,
+        [`atomikui-overlay--align-${align}`]: align,
         'is-active': isActive,
       })}
       {...others}

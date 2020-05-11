@@ -28,22 +28,26 @@ const Dropdown = ({
 
   return (
     <div
-      className={classnames('rcl-dropdown', className, {
+      className={classnames('atomikui-dropdown', className, {
         'has-error': hasError,
         'is-disabled': disabled,
       })}
       {...others}
     >
       {!labelless && (
-        <div className="rcl-dropdown__label">
+        <div className="atomikui-dropdown__label">
           <Label htmlFor={uid}>{label}</Label>
         </div>
       )}
-      <div className="rcl-dropdown__select">
+      <div className="atomikui-dropdown__select">
         <select
           id={uid}
           name={inputName}
-          className={classnames('rcl-dropdown__select__menu', className, {})}
+          className={classnames(
+            'atomikui-dropdown__select__menu',
+            className,
+            {},
+          )}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           value={value}

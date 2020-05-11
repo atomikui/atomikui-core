@@ -1,4 +1,4 @@
-.rcl-statistic {
+.atomikui-statistic {
   align-items: center;
   display: inline-flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
     text-transform: uppercase;
 
     @each $color, $value in $statistic-variants {
-      &.rcl-statistic__value--#{$color} {
+      &.atomikui-statistic__value--#{$color} {
         color: $value;
       }
     }
@@ -37,19 +37,19 @@
       font-size: rem(28);
     }
 
-    &.rcl-statistic__value--number {
+    &.atomikui-statistic__value--number {
       font-size: rem(56);
       white-space: nowrap;
 
-      &.rcl-statistic__value--sm {
+      &.atomikui-statistic__value--sm {
         font-size: rem(24);
       }
 
-      &.rcl-statistic__value--md {
+      &.atomikui-statistic__value--md {
         font-size: rem(32);
       }
 
-      &.rcl-statistic__value--lg {
+      &.atomikui-statistic__value--lg {
         font-size: rem(48);
       }
     }
@@ -66,11 +66,11 @@
     align-items: center;
     flex-direction: row;
 
-    .rcl-statistic__hd {
+    .atomikui-statistic__hd {
       margin: 0;
     }
 
-    .rcl-statistic__ft {
+    .atomikui-statistic__ft {
       margin-left: rem(8);
     }
   }
@@ -78,7 +78,7 @@
   &--top-label {
     flex-direction: column-reverse;
 
-    & > .rcl-statistic__hd {
+    & > .atomikui-statistic__hd {
       margin: 0;
     }
   }

@@ -14,8 +14,8 @@ const Spinner = ({ className, theme, size, ...others }) => {
 
   return (
     <div
-      className={classnames('rcl-spinner', className, {
-        [`rcl-spinner--${size}`]: size,
+      className={classnames('atomikui-spinner', className, {
+        [`atomikui-spinner--${size}`]: size,
       })}
       {...others}
     >

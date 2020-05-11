@@ -36,7 +36,9 @@ describe('<Dropdown />', () => {
   it('Should handle an error', () => {
     dropdown.setProps({ hasError: true, errorText: 'This field is required' });
 
-    expect(dropdown.find('.rcl-dropdown').hasClass('has-error')).toBe(true);
+    expect(dropdown.find('.atomikui-dropdown').hasClass('has-error')).toBe(
+      true,
+    );
     expect(dropdown.find('Hint').length).toBe(1);
     expect(dropdown.find('Hint').text()).toBe('This field is required');
   });

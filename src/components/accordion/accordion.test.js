@@ -36,24 +36,30 @@ describe('<Accordion />', () => {
   });
 
   it('Should should render 3 children', () => {
-    expect(accordion.find('.rcl-accordion').children().length).toBe(3);
+    expect(accordion.find('.atomikui-accordion').children().length).toBe(3);
   });
 
   it('Should handle the click event if `multipleOpen` prop is false', () => {
-    accordion.find('.rcl-accordion-item__trigger').first().simulate('click');
+    accordion
+      .find('.atomikui-accordion-item__trigger')
+      .first()
+      .simulate('click');
 
     expect(
       accordion
-        .find('.rcl-accordion-item__trigger')
+        .find('.atomikui-accordion-item__trigger')
         .first()
         .prop('aria-expanded'),
     ).toBe(true);
 
-    accordion.find('.rcl-accordion-item__trigger').first().simulate('click');
+    accordion
+      .find('.atomikui-accordion-item__trigger')
+      .first()
+      .simulate('click');
 
     expect(
       accordion
-        .find('.rcl-accordion-item__trigger')
+        .find('.atomikui-accordion-item__trigger')
         .first()
         .prop('aria-expanded'),
     ).toBe(false);

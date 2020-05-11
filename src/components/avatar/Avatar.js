@@ -15,21 +15,21 @@ const Avatar = ({
 }) => {
   return (
     <span
-      className={classnames('rcl-avatar', {
-        'rcl-avatar--flip': flipLabel,
-        [`rcl-avatar--${size}`]: size,
+      className={classnames('atomikui-avatar', {
+        'atomikui-avatar--flip': flipLabel,
+        [`atomikui-avatar--${size}`]: size,
       })}
       {...others}
     >
       <span
-        className={classnames('rcl-avatar__content', className, {
-          [`rcl-avatar__content--${variant}`]: variant,
+        className={classnames('atomikui-avatar__content', className, {
+          [`atomikui-avatar__content--${variant}`]: variant,
         })}
       >
-        {src && <img className="rcl-avatar__image" src={src} alt={alt} />}
+        {src && <img className="atomikui-avatar__image" src={src} alt={alt} />}
         {children && children}
       </span>
-      {label && <span className="rcl-avatar__label">{label}</span>}
+      {label && <span className="atomikui-avatar__label">{label}</span>}
     </span>
   );
 };

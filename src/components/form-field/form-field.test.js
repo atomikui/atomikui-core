@@ -48,7 +48,9 @@ describe('<FormField />', () => {
   it('Should render error class', () => {
     formField.setProps({ hasError: true });
 
-    expect(formField.find('.rcl-formfield').hasClass('has-error')).toBe(true);
+    expect(formField.find('.atomikui-formfield').hasClass('has-error')).toBe(
+      true,
+    );
   });
 
   it('Should render error hint with text', () => {
@@ -60,6 +62,6 @@ describe('<FormField />', () => {
 
   it('Should not render a label if label is null', () => {
     formField.setProps({ label: null });
-    expect(formField.find('.rcl-formfield__label').length).toBe(0);
+    expect(formField.find('.atomikui-formfield__label').length).toBe(0);
   });
 });

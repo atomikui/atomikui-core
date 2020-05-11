@@ -30,11 +30,11 @@ const AutoComplete = ({ className, items, onChange, value, ...others }) => {
       }) => {
         return (
           <div
-            className={classnames('rcl-auto-complete', className)}
+            className={classnames('atomikui-auto-complete', className)}
             {...getRootProps({}, { suppressRefError: true })}
           >
             <FormField {...getInputProps()} {...others} />
-            <ul className="rcl-auto-complete__list" {...getMenuProps()}>
+            <ul className="atomikui-auto-complete__list" {...getMenuProps()}>
               {isOpen
                 ? itemList
                     .filter((item) => {

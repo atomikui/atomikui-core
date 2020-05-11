@@ -1,4 +1,4 @@
-.rcl-modal {
+.atomikui-modal {
   background-color: $white;
   box-shadow: rem(0 0 70) rgba(0, 0, 0, 0.25);
   color: $black;
@@ -67,12 +67,12 @@
       background-color: map-get($map, background-color);
       color: map-get($map, font-color);
 
-      .rcl-modal__header,
-      .rcl-modal__footer {
+      .atomikui-modal__header,
+      .atomikui-modal__footer {
         border-color: rgba(255, 255, 255, 0.4);
       }
 
-      .rcl-modal__close-button {
+      .atomikui-modal__close-button {
         & > svg > path {
           fill: $white;
 

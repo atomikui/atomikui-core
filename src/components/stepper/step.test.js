@@ -26,6 +26,6 @@ describe('<Step />', () => {
 
   it('Should render a span if isComplete is false', () => {
     step.setProps({ isComplete: false });
-    expect(step.find('span.rcl-step__number').length).toBe(1);
+    expect(step.find('span.atomikui-step__number').length).toBe(1);
   });
 });

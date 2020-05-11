@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ListItem = ({ children, className, isMenu, ...others }) => {
   return (
     <li
-      className={classnames('rcl-list-item', className, {
+      className={classnames('atomikui-list-item', className, {
         'is-menu-item': isMenu,
       })}
       {...others}

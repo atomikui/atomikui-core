@@ -11,7 +11,7 @@ describe('<Button />', () => {
   beforeEach(() => {
     button = shallow(
       <Button
-        className="rcl-btn--custom"
+        className="atomikui-btn--custom"
         size="lg"
         theme="primary"
         type="submit"
@@ -33,19 +33,19 @@ describe('<Button />', () => {
   });
 
   it('Should render theme based on `theme prop`', () => {
-    expect(button.hasClass('rcl-btn--primary')).toBe(true);
+    expect(button.hasClass('atomikui-btn--primary')).toBe(true);
   });
 
   it('Should accept custom classes', () => {
-    expect(button.hasClass('rcl-btn--custom')).toBe(true);
+    expect(button.hasClass('atomikui-btn--custom')).toBe(true);
   });
 
   it('Should render button as block', () => {
-    expect(button.hasClass('rcl-btn--block')).toBe(true);
+    expect(button.hasClass('atomikui-btn--block')).toBe(true);
   });
 
   it('Should render button size theme', () => {
-    expect(button.hasClass('rcl-btn--lg')).toBe(true);
+    expect(button.hasClass('atomikui-btn--lg')).toBe(true);
   });
 
   it('Should rbe able to disable button', () => {

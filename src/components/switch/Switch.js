@@ -28,7 +28,7 @@ const Switch = ({
     <>
       <div
         htmlFor={uid}
-        className={classnames('rcl-switch', className, {
+        className={classnames('atomikui-switch', className, {
           'is-checked': checked,
           'is-disabled': disabled,
           'is-stacked': layout === 'stacked',
@@ -38,18 +38,18 @@ const Switch = ({
         <input
           id={uid}
           name={inputName}
-          className="rcl-switch__input"
+          className="atomikui-switch__input"
           type="checkbox"
           checked={checked}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
           onChange={onChange}
         />
-        <div className="rcl-switch__label">
+        <div className="atomikui-switch__label">
           <Label htmlFor={uid}>{label}</Label>
         </div>
         <div
-          className="rcl-switch__toggle"
+          className="atomikui-switch__toggle"
           {...(!disabled && { onClick: onChange })}
         ></div>
       </div>

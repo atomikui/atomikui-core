@@ -1,4 +1,4 @@
-.rcl-form-option {
+.atomikui-form-option {
   align-items: center;
   display: flex;
 
@@ -14,16 +14,16 @@
     width: rem(20);
   }
 
-  &--radio > .rcl-form-option__icon,
-  &--radio > .rcl-form-option__icon::after {
+  &--radio > .atomikui-form-option__icon,
+  &--radio > .atomikui-form-option__icon::after {
     border-radius: 50%;
   }
 
-  &.has-error > .rcl-form-option__icon {
+  &.has-error > .atomikui-form-option__icon {
     border-color: $error-red;
   }
 
-  &.is-disabled + .rcl-form-option__icon {
+  &.is-disabled + .atomikui-form-option__icon {
     background: $background-light-gray;
     border-color: $default-border-gray;
     border: 0;
@@ -34,20 +34,20 @@
     position: absolute;
   }
 
-  & > input:checked + .rcl-form-option__icon {
+  & > input:checked + .atomikui-form-option__icon {
     background: $blue-200;
     border-color: $blue-200;
   }
 
-  & > input:checked:focus + .rcl-form-option__icon {
+  & > input:checked:focus + .atomikui-form-option__icon {
     box-shadow: $formfield-focus;
   }
 
-  &.has-error > input:focus + .rcl-form-option__icon {
+  &.has-error > input:focus + .atomikui-form-option__icon {
     box-shadow: $formfield-error-focus;
   }
 
-  &.is-disabled > input:checked + .rcl-form-option__icon {
+  &.is-disabled > input:checked + .atomikui-form-option__icon {
     background: $disabled-background-gray;
     border-color: $disabled-background-gray;
   }

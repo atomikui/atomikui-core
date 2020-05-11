@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const Toaster = ({ children, className, position, ...others }) => {
   return (
     <div
-      className={classnames('rcl-toaster', className, {
-        [`rcl-toaster--${position}`]: position,
+      className={classnames('atomikui-toaster', className, {
+        [`atomikui-toaster--${position}`]: position,
       })}
       {...others}
     >

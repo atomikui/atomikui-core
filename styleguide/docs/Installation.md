@@ -21,7 +21,7 @@ yarn add @alaneicker/atomik-ui
 Import the Atomik UI library core CSS. This will provide the default light theme and dark theme.
 
 ```html
-import '@alaneicker/atomik-ui/dist/styles/react-component-library.css';
+import '@alaneicker/atomik-ui/dist/styles/main.mim.css';
 ```
 
 #### 3. Begin Importing Components

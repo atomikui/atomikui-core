@@ -23,9 +23,9 @@ describe('<ChatMessage />', () => {
   });
 
   it('Should render the timestamp', () => {
-    expect(chatMessage.find('.rcl-chat-message__item__timestamp').text()).toBe(
-      'Tuesday, March 10, 2020 3:36 PM',
-    );
+    expect(
+      chatMessage.find('.atomikui-chat-message__item__timestamp').text(),
+    ).toBe('Tuesday, March 10, 2020 3:36 PM');
   });
 
   it('Should add a modifier class if same origin', () => {

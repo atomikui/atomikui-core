@@ -7,7 +7,7 @@ const TabPanel = ({ className, state, ...others }) => {
 
   return (
     <div
-      className={classnames('rcl-tab-panel', className, {
+      className={classnames('atomikui-tab-panel', className, {
         'is-active': currentIndex === panelIndex,
       })}
       {...others}

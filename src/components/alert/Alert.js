@@ -30,9 +30,9 @@ const Alert = ({
 
   return (
     <div
-      className={classnames('rcl-alert', className, {
-        [`rcl-alert--${type}`]: type,
-        [`rcl-alert--${align}`]: align,
+      className={classnames('atomikui-alert', className, {
+        [`atomikui-alert--${type}`]: type,
+        [`atomikui-alert--${align}`]: align,
       })}
       role="alert"
       aria-live={type === 'error' ? 'assertive' : 'polite'}
@@ -47,11 +47,11 @@ const Alert = ({
           color={!type ? '#027abf' : 'white'}
         />
       )}
-      <div className="rcl-alert__body">{children}</div>
+      <div className="atomikui-alert__body">{children}</div>
       {onClose && (
-        <div className="rcl-alert__footer">
+        <div className="atomikui-alert__footer">
           <Button
-            className="rcl-alert__btn"
+            className="atomikui-alert__btn"
             theme="hollow"
             onClick={onClose}
             aria-hidden="true"

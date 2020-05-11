@@ -13,7 +13,7 @@ const Link = ({
 }) => {
   return (
     <a
-      className={classnames('rcl-link', className, {
+      className={classnames('atomikui-link', className, {
         'is-disabled': disabled,
       })}
       {...(href && { href })}

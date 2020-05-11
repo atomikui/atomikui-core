@@ -21,7 +21,7 @@ describe('<Drawer />', () => {
 
   it('Should call onClose when escape key is pressed', () => {
     drawer
-      .find('.rcl-drawer')
+      .find('.atomikui-drawer')
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
     expect(onCloseSpy.called).toBe(true);
@@ -34,6 +34,6 @@ describe('<Drawer />', () => {
   });
 
   it('Should set the left position of the drawer', () => {
-    expect(drawer.find('.rcl-drawer').props().style.left).toBe(0);
+    expect(drawer.find('.atomikui-drawer').props().style.left).toBe(0);
   });
 });

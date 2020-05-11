@@ -6,7 +6,10 @@ import generateId from '../../utilities/generateId';
 const Breadcrumb = ({ children, className, ...others }) => {
   return (
     <nav>
-      <ol className={classnames('rcl-breadcrumb', className, {})} {...others}>
+      <ol
+        className={classnames('atomikui-breadcrumb', className, {})}
+        {...others}
+      >
         {Children.map(children, (child) => {
           return <li key={generateId()}>{child}</li>;
         })}

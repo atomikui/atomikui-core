@@ -16,12 +16,12 @@ const Button = ({
 }) => {
   return (
     <button
-      className={classnames('rcl-btn', className, {
-        [`rcl-btn--${theme}`]: theme,
-        [`rcl-btn--${shape}`]: shape,
-        [`rcl-btn--${size}`]: size,
-        'rcl-btn--condensed': condensed,
-        'rcl-btn--block': block,
+      className={classnames('atomikui-btn', className, {
+        [`atomikui-btn--${theme}`]: theme,
+        [`atomikui-btn--${shape}`]: shape,
+        [`atomikui-btn--${size}`]: size,
+        'atomikui-btn--condensed': condensed,
+        'atomikui-btn--block': block,
       })}
       type={type}
       disabled={disabled}

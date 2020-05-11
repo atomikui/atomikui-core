@@ -39,18 +39,21 @@ describe('<Stepper />', () => {
   it('Should render children with top labels', () => {
     stepper.setProps({ topLabels: true });
     expect(
-      stepper.find('.rcl-step').first().hasClass('rcl-step--top-label'),
+      stepper
+        .find('.atomikui-step')
+        .first()
+        .hasClass('atomikui-step--top-label'),
     ).toBe(true);
   });
 
   it('Should render first child with an anchor tag', () => {
-    const link = stepper.find('.rcl-step').find('Link');
+    const link = stepper.find('.atomikui-step').find('Link');
     expect(link.length).toBe(1);
   });
 
   it('Should render as inline', () => {
-    expect(stepper.find('ul.rcl-stepper').hasClass('rcl-stepper--inline')).toBe(
-      true,
-    );
+    expect(
+      stepper.find('ul.atomikui-stepper').hasClass('atomikui-stepper--inline'),
+    ).toBe(true);
   });
 });

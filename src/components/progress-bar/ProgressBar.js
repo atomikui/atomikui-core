@@ -12,21 +12,21 @@ const ProgressBar = ({
 }) => {
   return (
     <div
-      className={classnames('rcl-progress-bar', className, {
-        [`rcl-progress-bar--${variant}`]: variant,
-        'rcl-progress-bar--animated': animated,
+      className={classnames('atomikui-progress-bar', className, {
+        [`atomikui-progress-bar--${variant}`]: variant,
+        'atomikui-progress-bar--animated': animated,
       })}
       {...others}
     >
       <div
-        className="rcl-progress-bar__bar"
+        className="atomikui-progress-bar__bar"
         role="progressbar"
         aria-valuenow={now}
         aria-valuemin="0"
         aria-valuemax="100"
         style={{ width: `${now}%` }}
       >
-        <span className="rcl-progress-bar__label">{label}</span>
+        <span className="atomikui-progress-bar__label">{label}</span>
       </div>
     </div>
   );

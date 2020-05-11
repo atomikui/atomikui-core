@@ -1,4 +1,4 @@
-.rcl-dropdown {
+.atomikui-dropdown {
   &__select {
     background: $dark-background-gray;
     border-color: $dark-border-gray;
@@ -9,7 +9,7 @@
   }
 
   &.is-disabled {
-    .rcl-dropdown__select {
+    .atomikui-dropdown__select {
       background: $dark-background-gray;
 
       & > select {

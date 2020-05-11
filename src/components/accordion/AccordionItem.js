@@ -32,17 +32,17 @@ const AccordionItem = ({
   }, [expanded]);
 
   return (
-    <div className="rcl-accordion-item" {...others}>
+    <div className="atomikui-accordion-item" {...others}>
       <button
         id={headerId}
         aria-expanded={isExpanded}
         aria-controls={panelId}
-        className="rcl-accordion-item__trigger"
+        className="atomikui-accordion-item__trigger"
         onClick={handleOnClick}
       >
-        <span className="rcl-accordion-item__trigger__label">{label}</span>
+        <span className="atomikui-accordion-item__trigger__label">{label}</span>
         <Icon
-          className="rcl-accordion-item__trigger__icon"
+          className="atomikui-accordion-item__trigger__icon"
           icon={faAngleDown}
           size="lg"
         />
@@ -51,12 +51,15 @@ const AccordionItem = ({
         id={panelId}
         arial-labelledby={headerId}
         role="region"
-        className="rcl-accordion-item__body"
+        className="atomikui-accordion-item__body"
         style={{
           height: isExpanded ? `${contentRef.current.scrollHeight}px` : 0,
         }}
       >
-        <div className="rcl-accordion-item__body__content" ref={contentRef}>
+        <div
+          className="atomikui-accordion-item__body__content"
+          ref={contentRef}
+        >
           {children}
         </div>
       </div>

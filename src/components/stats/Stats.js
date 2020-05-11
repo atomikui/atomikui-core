@@ -53,7 +53,7 @@ const Stats = () => {
         title="jest coverage report"
         src={
           process.env.NODE_ENV === 'production'
-            ? 'https://alaneicker1975.github.io/react-component-library/coverage-report.html'
+            ? 'https://alaneicker1975.github.io/atomik-ui/coverage-report.html'
             : '/coverage-report.html'
         }
         onLoad={setIframeContentStyles}

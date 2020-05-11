@@ -6,7 +6,7 @@ const Accordion = ({ className, children, multipleOpen, ...others }) => {
   const [isExpanded, setIsExpanded] = useState(null);
 
   return (
-    <div className={classnames('rcl-accordion', classnames)} {...others}>
+    <div className={classnames('atomikui-accordion', classnames)} {...others}>
       {Children.map(children, (child, index) => {
         return cloneElement(child, {
           ...(!multipleOpen && {

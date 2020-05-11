@@ -1,11 +1,11 @@
-.rcl-form-option {
+.atomikui-form-option {
   &__icon {
     background: $dark-background-gray;
     border-color: $gray-300;
   }
 
   &.is-disabled > input {
-    & + .rcl-form-option__icon {
+    & + .atomikui-form-option__icon {
       background: $dark-background-gray;
       border: 0;
     }

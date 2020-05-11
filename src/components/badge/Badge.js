@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 const Badge = ({ children, className, shape, variant, ...others }) => {
   return (
     <div
-      className={classnames('rcl-badge', className, {
-        [`rcl-badge--${variant}`]: variant,
-        [`rcl-badge--${shape}`]: shape,
+      className={classnames('atomikui-badge', className, {
+        [`atomikui-badge--${variant}`]: variant,
+        [`atomikui-badge--${shape}`]: shape,
       })}
       {...others}
     >

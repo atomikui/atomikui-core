@@ -13,21 +13,21 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
     <ListItem
       key={Math.random()}
       aria-current={isActive}
-      className={classnames('rcl-step', {
+      className={classnames('atomikui-step', {
         'is-complete': isComplete,
         'is-active': isActive,
-        'rcl-step--top-label': topLabel,
+        'atomikui-step--top-label': topLabel,
       })}
     >
       <StepNumber
-        className="rcl-step__number"
+        className="atomikui-step__number"
         {...(isComplete && href && { href })}
       >
         {isComplete && <Icon icon={faCheck} color="white" />}
         {!isComplete && children}
       </StepNumber>
       {label && (
-        <div className="rcl-step__label">
+        <div className="atomikui-step__label">
           <span aria-hidden="true">{label}</span>
         </div>
       )}

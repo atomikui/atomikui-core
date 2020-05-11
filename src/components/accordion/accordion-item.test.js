@@ -26,14 +26,14 @@ describe('<AccordionItem />', () => {
 
   it('Should render without errors', () => {
     expect(
-      accordionItem.find('.rcl-accordion-item__body__content').children()
+      accordionItem.find('.atomikui-accordion-item__body__content').children()
         .length,
     ).toBe(1);
   });
 
   it('Should render a label', () => {
     expect(
-      accordionItem.find('.rcl-accordion-item__trigger__label').text(),
+      accordionItem.find('.atomikui-accordion-item__trigger__label').text(),
     ).toBe('Accordion Heading 1');
   });
 
@@ -41,7 +41,9 @@ describe('<AccordionItem />', () => {
     accordionItem.find('button').simulate('click');
 
     expect(
-      accordionItem.find('.rcl-accordion-item__trigger').prop('aria-expanded'),
+      accordionItem
+        .find('.atomikui-accordion-item__trigger')
+        .prop('aria-expanded'),
     ).toBe(true);
   });
 

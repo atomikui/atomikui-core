@@ -1,13 +1,13 @@
-.rcl-range-slider {
+.atomikui-range-slider {
   & > input[type='range'] {
     background: $gray-400;
   }
 
   &__ticks {
-    & > .rcl-range-slider__ticks__tick {
+    & > .atomikui-range-slider__ticks__tick {
       background: $gray-400;
 
-      & > .rcl-range-slider__ticks__label {
+      & > .atomikui-range-slider__ticks__label {
         color: $white;
 
         &.is-selected {
@@ -22,7 +22,7 @@
       background: $gray-400;
     }
 
-    .rcl-range-slider__ticks {
+    .atomikui-range-slider__ticks {
       &__tick {
         background: $gray-400;
       }

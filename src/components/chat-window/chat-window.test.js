@@ -42,24 +42,24 @@ describe('<ChatWindow />', () => {
 
   it('Should trigger onClose callback', () => {
     chatWindow.setProps({ isOpen: true });
-    chatWindow.find('.rcl-chat-window__close-btn').simulate('click');
+    chatWindow.find('.atomikui-chat-window__close-btn').simulate('click');
     expect(onCloseSpy.called).toBe(true);
   });
 
   it('Should trigger onMessageSent callback', () => {
     chatWindow
-      .find('.rcl-chat-window__input')
+      .find('.atomikui-chat-window__input')
       .simulate('change', { target: { value: 'Hello!' } });
-    chatWindow.find('.rcl-chat-window__send-btn').simulate('click');
+    chatWindow.find('.atomikui-chat-window__send-btn').simulate('click');
 
     expect(onMessageSentSpy.called).toBe(true);
   });
 
   it('Should trigger onMessageSent callback when enter key is pressed', () => {
     chatWindow
-      .find('.rcl-chat-window__input')
+      .find('.atomikui-chat-window__input')
       .simulate('change', { target: { value: 'Hello!' } });
-    chatWindow.find('.rcl-chat-window__input').simulate('keydown', {
+    chatWindow.find('.atomikui-chat-window__input').simulate('keydown', {
       key: 'Enter',
       keyCode: 13,
       which: 13,
@@ -71,7 +71,7 @@ describe('<ChatWindow />', () => {
 
   it('Should auto expand the user input', () => {
     chatWindow
-      .find('.rcl-chat-window__input')
+      .find('.atomikui-chat-window__input')
       .simulate('change', { target: { value: longText } });
   });
 });

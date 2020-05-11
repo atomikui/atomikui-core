@@ -1,4 +1,4 @@
-.rcl-chat-window {
+.atomikui-chat-window {
   background: $gray-100;
   bottom: 0;
   box-shadow: rem(-10 10 20) rgba(0, 0, 0, 0.2);
@@ -54,15 +54,15 @@
     margin-left: rem(8);
     width: rem(8);
 
-    &.rcl-chat-window__sender-status--available {
+    &.atomikui-chat-window__sender-status--available {
       background: $green-000;
     }
 
-    &.rcl-chat-window__sender-status--away {
+    &.atomikui-chat-window__sender-status--away {
       background: $yellow-200;
     }
 
-    &.rcl-chat-window__sender-status--offline {
+    &.atomikui-chat-window__sender-status--offline {
       background: $red-100;
     }
   }

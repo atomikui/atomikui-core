@@ -1,4 +1,4 @@
-.rcl-file-upload {
+.atomikui-file-upload {
   & > input {
     left: rem(-10000);
     position: absolute;
@@ -71,7 +71,7 @@
   }
 
   &.has-error {
-    & > .rcl-file-upload__wrapper {
+    & > .atomikui-file-upload__wrapper {
       border-color: $error-red;
     }
   }

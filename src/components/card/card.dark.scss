@@ -1,4 +1,4 @@
-.rcl-card {
+.atomikui-card {
   background: $dark-background-gray;
   color: $white;
 
@@ -13,8 +13,8 @@
   }
 
   // Override default hollow button styles
-  .rcl-btn--hollow:hover,
-  .rcl-btn--hollow:focus {
+  .atomikui-btn--hollow:hover,
+  .atomikui-btn--hollow:focus {
     background: lighten($gray-500, 9%);
   }
 }

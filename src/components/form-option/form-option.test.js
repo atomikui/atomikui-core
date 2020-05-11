@@ -53,9 +53,9 @@ describe('<FormOption />', () => {
       errorText: 'This field is required',
     });
 
-    expect(formOption.find('label.rcl-form-option').hasClass('has-error')).toBe(
-      true,
-    );
+    expect(
+      formOption.find('label.atomikui-form-option').hasClass('has-error'),
+    ).toBe(true);
     expect(formOption.find('Hint').length).toBe(1);
     expect(formOption.find('Hint').text()).toBe('This field is required');
   });
@@ -70,8 +70,8 @@ describe('<FormOption />', () => {
   it('Should display an Icon if checked', () => {
     formOption.setProps({ checked: true });
 
-    expect(formOption.find('.rcl-form-option__icon').find('svg').length).toBe(
-      1,
-    );
+    expect(
+      formOption.find('.atomikui-form-option__icon').find('svg').length,
+    ).toBe(1);
   });
 });

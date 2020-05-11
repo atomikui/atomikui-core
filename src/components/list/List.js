@@ -10,9 +10,9 @@ const List = ({ align, children, className, type, ...others }) => {
   return (
     <Wrapper>
       <Ul
-        className={classnames('rcl-list', className, {
-          [`rcl-list--${type}`]: type,
-          [`rcl-list--align-${align}`]: align,
+        className={classnames('atomikui-list', className, {
+          [`atomikui-list--${type}`]: type,
+          [`atomikui-list--align-${align}`]: align,
         })}
         {...others}
       >

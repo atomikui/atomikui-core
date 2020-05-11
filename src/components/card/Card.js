@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 
 const Card = ({ children, className, footer, title, ...others }) => {
   return (
-    <div className="rcl-card" {...others}>
-      {title && <div className="rcl-card__header">{title}</div>}
-      {children && <div className="rcl-card__body">{children}</div>}
-      {footer && <div className="rcl-card__footer">{footer}</div>}
+    <div className="atomikui-card" {...others}>
+      {title && <div className="atomikui-card__header">{title}</div>}
+      {children && <div className="atomikui-card__body">{children}</div>}
+      {footer && <div className="atomikui-card__footer">{footer}</div>}
     </div>
   );
 };

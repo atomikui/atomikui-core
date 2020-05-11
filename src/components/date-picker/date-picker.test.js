@@ -27,13 +27,17 @@ describe('<DatePicker />', () => {
   });
 
   it('Should open calendar', () => {
-    datepicker.find('button.rcl-date-picker__input__btn').simulate('click');
+    datepicker
+      .find('button.atomikui-date-picker__input__btn')
+      .simulate('click');
 
     expect(datepicker.find('Overlay').prop('isActive')).toBe(true);
   });
 
   it('Should close calendar', () => {
-    datepicker.find('button.rcl-date-picker__input__btn').simulate('click');
+    datepicker
+      .find('button.atomikui-date-picker__input__btn')
+      .simulate('click');
     datepicker.find('.react-calendar__tile').at(15).simulate('click');
 
     expect(datepicker.find('Overlay').prop('isActive')).toBe(false);
@@ -43,12 +47,14 @@ describe('<DatePicker />', () => {
     datepicker.find('.react-calendar__tile').at(15).simulate('click');
 
     expect(
-      datepicker.find('input.rcl-formfield__input').prop('value'),
+      datepicker.find('input.atomikui-formfield__input').prop('value'),
     ).not.toBe(originalValue);
   });
 
   it('Should close calendar when on escape press', () => {
-    datepicker.find('button.rcl-date-picker__input__btn').simulate('click');
+    datepicker
+      .find('button.atomikui-date-picker__input__btn')
+      .simulate('click');
 
     datepicker
       .find('.react-calendar__tile')
@@ -56,20 +62,20 @@ describe('<DatePicker />', () => {
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
     expect(
-      datepicker.find('.rcl-date-picker__calendar').hasClass('is-open'),
+      datepicker.find('.atomikui-date-picker__calendar').hasClass('is-open'),
     ).toBe(false);
   });
 
   it('Should handle an invalid date', () => {
     datepicker.setProps({ value: '05/33/1999' });
-    expect(datepicker.find('input.rcl-formfield__input').prop('value')).toBe(
-      '__/__/____',
-    );
+    expect(
+      datepicker.find('input.atomikui-formfield__input').prop('value'),
+    ).toBe('__/__/____');
   });
 
   it('Should trigger onChange callback on blur with valid date', () => {
     datepicker
-      .find('input.rcl-formfield__input')
+      .find('input.atomikui-formfield__input')
       .simulate('blur', { target: { value: '05/22/2020' } });
 
     expect(onChangeSpy.withArgs('05/22/2020').called).toBe(true);
@@ -77,7 +83,7 @@ describe('<DatePicker />', () => {
 
   it('Should trigger onChange callback on blur with `Invalid Date`', () => {
     datepicker
-      .find('input.rcl-formfield__input')
+      .find('input.atomikui-formfield__input')
       .simulate('blur', { target: { value: '05/44/2020' } });
 
     expect(onChangeSpy.withArgs('Invalid Date').called).toBe(true);

@@ -22,29 +22,29 @@ const Statistic = ({
 
   return (
     <div
-      className={classnames('rcl-statistic', className, {
-        'rcl-statistic--top-label': topLabel && !horizontal,
-        'rcl-statistic--horizontal': horizontal,
+      className={classnames('atomikui-statistic', className, {
+        'atomikui-statistic--top-label': topLabel && !horizontal,
+        'atomikui-statistic--horizontal': horizontal,
       })}
       {...others}
     >
-      <div className="rcl-statistic__hd">
+      <div className="atomikui-statistic__hd">
         {icon && (
-          <span className="rcl-statistic__icon">
+          <span className="atomikui-statistic__icon">
             <Icon icon={icon} size="3x" color={iconColor} />
           </span>
         )}
         <span
-          className={classnames('rcl-statistic__value', {
-            'rcl-statistic__value--number': isNumber,
-            [`rcl-statistic__value--${size}`]: size,
-            [`rcl-statistic__value--${color}`]: color,
+          className={classnames('atomikui-statistic__value', {
+            'atomikui-statistic__value--number': isNumber,
+            [`atomikui-statistic__value--${size}`]: size,
+            [`atomikui-statistic__value--${color}`]: color,
           })}
         >
           {value}
         </span>
       </div>
-      <div className="rcl-statistic__ft">{label}</div>
+      <div className="atomikui-statistic__ft">{label}</div>
     </div>
   );
 };

@@ -67,20 +67,20 @@ const Modal = ({
       {...others}
     >
       <div
-        className={classnames('rcl-modal', className, {
-          [`rcl-modal--${type}`]: type,
+        className={classnames('atomikui-modal', className, {
+          [`atomikui-modal--${type}`]: type,
           'is-open': isOpen,
         })}
         ref={modal}
       >
-        <div className="rcl-modal__header">
-          <div className="rcl-modal__title">{title}</div>
-          <button className="rcl-modal__close-button" onClick={onClose}>
+        <div className="atomikui-modal__header">
+          <div className="atomikui-modal__title">{title}</div>
+          <button className="atomikui-modal__close-button" onClick={onClose}>
             <Icon icon={faTimes} size="2x" color="white" />
           </button>
         </div>
-        <div className="rcl-modal__body">{children}</div>
-        {footer && <div className="rcl-modal__footer">{footer}</div>}
+        <div className="atomikui-modal__body">{children}</div>
+        {footer && <div className="atomikui-modal__footer">{footer}</div>}
       </div>
     </Overlay>
   );

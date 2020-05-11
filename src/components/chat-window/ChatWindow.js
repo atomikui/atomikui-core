@@ -93,22 +93,22 @@ const ChatWindow = ({
   return (
     <div
       ref={chatWindowRef}
-      className={classnames('rcl-chat-window', className, {
+      className={classnames('atomikui-chat-window', className, {
         'is-open': isOpen,
-        [`rcl-chat-window--${position}`]: position,
+        [`atomikui-chat-window--${position}`]: position,
       })}
     >
-      <div className="rcl-chat-window__header">
-        <div className="rcl-chat-window__title">
+      <div className="atomikui-chat-window__header">
+        <div className="atomikui-chat-window__title">
           {incomingSenderImg ? (
             <img
-              className="rcl-chat-window__avatar"
+              className="atomikui-chat-window__avatar"
               src={incomingSenderImg}
               alt="Avatar"
             />
           ) : (
             <Icon
-              className="rcl-chat-window__avatar-icon"
+              className="atomikui-chat-window__avatar-icon"
               icon={faUserCircle}
               size="2x"
               color="white"
@@ -117,13 +117,13 @@ const ChatWindow = ({
           {incomingSenderName}
           <span
             aria-label={`Status: ${incomingSenderStatus}`}
-            className={classnames('rcl-chat-window__sender-status', {
-              [`rcl-chat-window__sender-status--${incomingSenderStatus}`]: incomingSenderStatus,
+            className={classnames('atomikui-chat-window__sender-status', {
+              [`atomikui-chat-window__sender-status--${incomingSenderStatus}`]: incomingSenderStatus,
             })}
           ></span>
         </div>
         <button
-          className="rcl-chat-window__close-btn"
+          className="atomikui-chat-window__close-btn"
           onClick={() => {
             return onClose();
           }}
@@ -132,7 +132,7 @@ const ChatWindow = ({
           <Icon icon={faTimes} size="2x" color="white" />
         </button>
       </div>
-      <div ref={chatWindowBodyRef} className="rcl-chat-window__body">
+      <div ref={chatWindowBodyRef} className="atomikui-chat-window__body">
         {messages.map(({ originIpAddress, ...props }) => {
           return (
             <ChatMessage
@@ -143,10 +143,10 @@ const ChatWindow = ({
           );
         })}
       </div>
-      <div className="rcl-chat-window__footer">
+      <div className="atomikui-chat-window__footer">
         <textarea
           ref={userInputRef}
-          className="rcl-chat-window__input"
+          className="atomikui-chat-window__input"
           rows="1"
           placeholder="Enter your message..."
           value={message}
@@ -154,7 +154,7 @@ const ChatWindow = ({
           onKeyDown={handleKeyDown}
         />
         <Button
-          className="rcl-chat-window__send-btn"
+          className="atomikui-chat-window__send-btn"
           onClick={() => {
             return handleSubmit();
           }}

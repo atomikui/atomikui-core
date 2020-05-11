@@ -50,7 +50,7 @@ const FileUpload = ({
 
   return (
     <div
-      className={classnames('rcl-file-upload', className, {
+      className={classnames('atomikui-file-upload', className, {
         'has-error': hasError,
       })}
     >
@@ -66,32 +66,35 @@ const FileUpload = ({
         onDragOver={onDragOver}
         onDrop={handleChange}
         htmlFor={id}
-        className={classnames('rcl-file-upload__wrapper', {
-          'rcl-file-upload__wrapper--drag-and-drop': dragAndDrop,
+        className={classnames('atomikui-file-upload__wrapper', {
+          'atomikui-file-upload__wrapper--drag-and-drop': dragAndDrop,
         })}
       >
         {dragAndDrop && (
-          <span className="rcl-file-upload__drag-drop-label">
+          <span className="atomikui-file-upload__drag-drop-label">
             Select a file to upload or drag and drop in the box
           </span>
         )}
         <span
-          className={classnames('rcl-btn rcl-btn--condensed rcl-btn--nowrap', {
-            [`rcl-btn--${uploadBtnVariant}`]: uploadBtnVariant,
-            'rcl-btn--no-radius': !dragAndDrop,
-          })}
+          className={classnames(
+            'atomikui-btn atomikui-btn--condensed atomikui-btn--nowrap',
+            {
+              [`atomikui-btn--${uploadBtnVariant}`]: uploadBtnVariant,
+              'atomikui-btn--no-radius': !dragAndDrop,
+            },
+          )}
         >
           {label}
         </span>
         {!files.length && (
-          <span className="rcl-file-upload__no-files-label">
+          <span className="atomikui-file-upload__no-files-label">
             No files selected
           </span>
         )}
         {dragAndDrop ? (
           <>
             <div className="margin-top-16" />
-            <List className="rcl-file-upload__file-list">
+            <List className="atomikui-file-upload__file-list">
               {files.map((file, index) => {
                 return <ListItem key={`file-${index}`}>{file}</ListItem>;
               })}
@@ -102,7 +105,7 @@ const FileUpload = ({
         )}
       </label>
       {(helpText || errorText) && (
-        <div className="rcl-formfield__hints">
+        <div className="atomikui-formfield__hints">
           {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
           {hasError && (
             <Hint id={inputErrorId} type="error">

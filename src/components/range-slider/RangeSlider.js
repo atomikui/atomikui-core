@@ -43,7 +43,7 @@ const RangeSlider = ({
     <>
       {label && <Label>{label}</Label>}
       <div
-        className={classnames('rcl-range-slider', className, {
+        className={classnames('atomikui-range-slider', className, {
           'has-error': hasError,
           'is-disabled': disabled,
         })}
@@ -68,12 +68,12 @@ const RangeSlider = ({
           {...others}
         />
         {ticks && (
-          <div className="rcl-range-slider__ticks" aria-hidden="true">
+          <div className="atomikui-range-slider__ticks" aria-hidden="true">
             {ticks.map(({ text, val }, index) => {
               return (
                 <div
                   key={`tick-${index}`}
-                  className="rcl-range-slider__ticks__tick"
+                  className="atomikui-range-slider__ticks__tick"
                   {...(!disabled && {
                     onClick: () => {
                       return handleChange(val);
@@ -81,10 +81,13 @@ const RangeSlider = ({
                   })}
                 >
                   <div
-                    className={classnames('rcl-range-slider__ticks__label', {
-                      'is-selected': val === rangeValue,
-                      'is-hidden-on-mobile': hideLabelsOnMobile,
-                    })}
+                    className={classnames(
+                      'atomikui-range-slider__ticks__label',
+                      {
+                        'is-selected': val === rangeValue,
+                        'is-hidden-on-mobile': hideLabelsOnMobile,
+                      },
+                    )}
                   >
                     {text}
                   </div>

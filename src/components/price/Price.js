@@ -12,14 +12,14 @@ const Price = ({
 }) => {
   return (
     <span
-      className={classnames('rcl-price', className, {
-        [`rcl-price--${size}`]: size,
+      className={classnames('atomikui-price', className, {
+        [`atomikui-price--${size}`]: size,
       })}
       {...others}
     >
-      <span className="rcl-price__currency">{currencySymbol}</span>
-      <span className="rcl-price__amount">{amount}</span>
-      <span className="rcl-price__label">{label}</span>
+      <span className="atomikui-price__currency">{currencySymbol}</span>
+      <span className="atomikui-price__amount">{amount}</span>
+      <span className="atomikui-price__label">{label}</span>
     </span>
   );
 };

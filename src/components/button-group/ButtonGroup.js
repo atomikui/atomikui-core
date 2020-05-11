@@ -29,9 +29,9 @@ const ButtonGroup = ({
         </div>
       )}
       <div
-        className={classnames('rcl-button-group', className, {
-          [`rcl-button-group--${size}`]: size,
-          'rcl-button-group--stretch': stretch,
+        className={classnames('atomikui-button-group', className, {
+          [`atomikui-button-group--${size}`]: size,
+          'atomikui-button-group--stretch': stretch,
         })}
         role="group"
         {...others}

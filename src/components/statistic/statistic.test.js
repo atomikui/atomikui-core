@@ -20,17 +20,17 @@ describe('<Statistic />', () => {
   it('Should render with the label on the top', () => {
     statistic.setProps({ topLabel: true });
 
-    expect(statistic.hasClass('rcl-statistic--top-label')).toBe(true);
+    expect(statistic.hasClass('atomikui-statistic--top-label')).toBe(true);
   });
 
   it('Should render horizontal format', () => {
     statistic.setProps({ horizontal: true });
 
-    expect(statistic.hasClass('rcl-statistic--horizontal')).toBe(true);
+    expect(statistic.hasClass('atomikui-statistic--horizontal')).toBe(true);
   });
 
   it('Should render with an icon', () => {
     statistic.setProps({ icon: faUsers });
-    expect(statistic.find('.rcl-statistic__icon').length).toBe(1);
+    expect(statistic.find('.atomikui-statistic__icon').length).toBe(1);
   });
 });

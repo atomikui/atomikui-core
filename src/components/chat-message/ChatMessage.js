@@ -6,15 +6,17 @@ import moment from 'moment';
 const ChatMessage = ({ dateTimeStamp, message, isSameOrigin }) => {
   return (
     <div
-      className={classnames('rcl-chat-message', {
+      className={classnames('atomikui-chat-message', {
         'is-same-origin': isSameOrigin,
       })}
     >
       {dateTimeStamp && (
-        <div className="rcl-chat-message__item__timestamp">{dateTimeStamp}</div>
+        <div className="atomikui-chat-message__item__timestamp">
+          {dateTimeStamp}
+        </div>
       )}
-      <div className="rcl-chat-message__item">
-        <span className="rcl-chat-message__item__text">{message}</span>
+      <div className="atomikui-chat-message__item">
+        <span className="atomikui-chat-message__item__text">{message}</span>
       </div>
     </div>
   );

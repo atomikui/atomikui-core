@@ -19,8 +19,8 @@ const Tabs = ({
 
   return (
     <div
-      className={classnames('rcl-tabs', className, {
-        [`rcl-tabs--align-${align}`]: align,
+      className={classnames('atomikui-tabs', className, {
+        [`atomikui-tabs--align-${align}`]: align,
       })}
       {...others}
     >

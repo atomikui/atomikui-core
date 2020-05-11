@@ -60,9 +60,9 @@ const Drawer = ({
       <div
         ref={ref}
         onKeyDown={handleKeyDown}
-        className={classnames('rcl-drawer', className, {
+        className={classnames('atomikui-drawer', className, {
           'is-open': isOpen,
-          [`rcl-drawer--${position}`]: position,
+          [`atomikui-drawer--${position}`]: position,
         })}
         style={styles}
         {...others}

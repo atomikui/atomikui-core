@@ -1,4 +1,4 @@
-.rcl-dropdown {
+.atomikui-dropdown {
   &__label {
     margin-bottom: rem(3);
   }
@@ -52,12 +52,12 @@
   }
 
   &.is-disabled {
-    .rcl-dropdown__select {
+    .atomikui-dropdown__select {
       background: $default-background-lightest-gray;
       border: 0;
     }
 
-    .rcl-dropdown__select::after {
+    .atomikui-dropdown__select::after {
       background-color: lighten($gray-200, 13%);
     }
   }

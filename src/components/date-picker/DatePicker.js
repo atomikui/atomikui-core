@@ -77,13 +77,13 @@ const DatePicker = ({
   }, [focusTrap, isOpen]);
 
   return (
-    <div className={classnames('rcl-date-picker', className)}>
+    <div className={classnames('atomikui-date-picker', className)}>
       {label && (
-        <div className="rcl-date-picker__label">
+        <div className="atomikui-date-picker__label">
           <Label>{label}</Label>
         </div>
       )}
-      <div className="rcl-date-picker__input">
+      <div className="atomikui-date-picker__input">
         <FormField
           mask="99/99/9999"
           onBlur={(e) => {
@@ -94,7 +94,7 @@ const DatePicker = ({
           {...others}
         />
         <Button
-          className="rcl-date-picker__input__btn"
+          className="atomikui-date-picker__input__btn"
           theme="hollow"
           size="md"
           onClick={() => {
@@ -106,7 +106,7 @@ const DatePicker = ({
         </Button>
       </div>
       <Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}>
-        <div className="rcl-date-picker__calendar" ref={calendar}>
+        <div className="atomikui-date-picker__calendar" ref={calendar}>
           <Calendar
             onChange={(details) => {
               return handleDateChange(details);

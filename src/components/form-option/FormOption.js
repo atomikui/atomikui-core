@@ -34,10 +34,10 @@ const FormOption = ({
     <>
       <Label
         htmlFor={uid}
-        className={classnames('rcl-form-option', className, {
+        className={classnames('atomikui-form-option', className, {
           'has-error': hasError,
           'is-disabled': disabled,
-          'rcl-form-option--radio': type === 'radio',
+          'atomikui-form-option--radio': type === 'radio',
         })}
       >
         <input
@@ -51,7 +51,7 @@ const FormOption = ({
           required
           {...others}
         />
-        <span className="rcl-form-option__icon">
+        <span className="atomikui-form-option__icon">
           {checked && <Icon icon={faCheck} color="white" />}
         </span>
         {label}

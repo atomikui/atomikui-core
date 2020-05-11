@@ -66,4 +66,4 @@ Atomik UI comes with a variety of customizable React components as well as integ
 
 ### Get Started
 
-[Installation the Component Library](https://alaneicker1975.github.io/react-component-library/#/Getting%20Started/Installation)
+[Installation the Component Library](https://alaneicker1975.github.io/atomik-ui/#/Getting%20Started/Installation)
