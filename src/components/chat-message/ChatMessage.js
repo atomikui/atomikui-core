@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import moment from 'moment';
 
 const ChatMessage = ({ dateTimeStamp, message, isSameOrigin }) => {
   return (
@@ -20,13 +21,15 @@ const ChatMessage = ({ dateTimeStamp, message, isSameOrigin }) => {
 };
 
 ChatMessage.propTypes = {
+  dateTimeStamp: PropTypes.string,
   message: PropTypes.string,
-  fromMe: PropTypes.bool,
+  isSameOrigin: PropTypes.bool,
 };
 
 ChatMessage.defaultProps = {
+  dateTimeStamp: '',
   message: '',
-  fromMe: false,
+  isSameOrigin: false,
 };
 
 export default ChatMessage;
