@@ -1,5 +1,5 @@
 {
-  "name": "@alaneicker/react-component-library",
+  "name": "@alaneicker/atomik-ui",
   "description": "A Comprehensive Library of React Components",
   "version": "0.3.0",
   "main": "./dist/index.js",

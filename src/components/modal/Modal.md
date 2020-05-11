@@ -4,7 +4,7 @@ A modal displays content that temporarily blocks interactions with the main part
 
 ```jsx
 import { useState } from 'react';
-import { Modal, Button } from '@alaneicker/react-component-library';
+import { Modal, Button } from '@alaneicker/atomik-ui';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -46,7 +46,7 @@ const toggleModal = () => {
 
 ```jsx
 import { useState } from 'react';
-import { Modal, Button } from '@alaneicker/react-component-library';
+import { Modal, Button } from '@alaneicker/atomik-ui';
 
 const [isOpen, setIsOpen] = useState(false);
 const [type, setType] = useState(null);

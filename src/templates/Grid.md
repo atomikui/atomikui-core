@@ -1,4 +1,4 @@
-The React Component Library recommends [React Flexbox Grid](http://roylee0704.github.io/react-flexbox-grid/) to handle layputs requiring a grid. It offers a variety of options and is inuitive for those with experience using grid systems.
+Atomik UI recommends [React Flexbox Grid](http://roylee0704.github.io/react-flexbox-grid/) to handle layputs requiring a grid. It offers a variety of options and is inuitive for those with experience using grid systems.
 
 ```jsx
 import { Grid, Row, Col } from 'react-flexbox-grid';

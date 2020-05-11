@@ -4,7 +4,7 @@ Switches toggle the state of a single setting on or off.
 
 ```jsx
 import { useState } from 'react';
-import { Switch } from '@alaneicker/react-component-library';
+import { Switch } from '@alaneicker/atomik-ui';
 
 const [isChecked, setIsChecked] = useState(false);
 
@@ -23,7 +23,7 @@ const handleChange = (checked) => {
 
 ```jsx
 import { useState } from 'react';
-import { Switch } from '@alaneicker/react-component-library';
+import { Switch } from '@alaneicker/atomik-ui';
 
 const [isChecked, setIsChecked] = useState(false);
 
@@ -43,7 +43,7 @@ const handleChange = (checked) => {
 
 ```jsx
 import { useState } from 'react';
-import { Switch } from '@alaneicker/react-component-library';
+import { Switch } from '@alaneicker/atomik-ui';
 
 const [isChecked, setIsChecked] = useState(false);
 
@@ -64,7 +64,7 @@ const handleChange = (checked) => {
 ### Disabled State
 
 ```jsx
-import { Switch } from '@alaneicker/react-component-library';
+import { Switch } from '@alaneicker/atomik-ui';
 
 <Switch
   label="Send me notifications"

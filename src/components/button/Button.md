@@ -3,7 +3,7 @@ The Button component is a form control that triggers an action when clicked.
 ### Button themes
 
 ```jsx
-import { Button } from '@alaneicker/react-component-library';
+import { Button } from '@alaneicker/atomik-ui';
 
 <>
   <Button>Default</Button>
@@ -19,7 +19,7 @@ import { Button } from '@alaneicker/react-component-library';
 ### Button Shapes
 
 ```jsx
-import { Button } from '@alaneicker/react-component-library';
+import { Button } from '@alaneicker/atomik-ui';
 
 <>
   <Button>Default</Button>
@@ -31,7 +31,7 @@ import { Button } from '@alaneicker/react-component-library';
 ### Disabled Button
 
 ```jsx
-import { Button } from '@alaneicker/react-component-library';
+import { Button } from '@alaneicker/atomik-ui';
 
 <Button disabled>Disabled</Button>;
 ```
@@ -41,7 +41,7 @@ import { Button } from '@alaneicker/react-component-library';
 ```jsx
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '@alaneicker/react-component-library';
+import { Button } from '@alaneicker/atomik-ui';
 
 <Button>
   <Icon icon={faCloudDownloadAlt} size="lg" className="margin-right-8" />
@@ -52,7 +52,7 @@ import { Button } from '@alaneicker/react-component-library';
 ### Responsive Button
 
 ```jsx
-import { Button } from '@alaneicker/react-component-library';
+import { Button } from '@alaneicker/atomik-ui';
 
 <Button block>Block Button</Button>;
 ```
@@ -60,7 +60,7 @@ import { Button } from '@alaneicker/react-component-library';
 ### Button Sizes
 
 ```jsx
-import { Button } from '@alaneicker/react-component-library';
+import { Button } from '@alaneicker/atomik-ui';
 
 <>
   <Button size="sm">Small</Button>

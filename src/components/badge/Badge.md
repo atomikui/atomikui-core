@@ -1,7 +1,7 @@
 The Badge component scales to match the size of the parent element by using relative font sizing.
 
 ```jsx
-import { Badge } from '@alaneicker/react-component-library';
+import { Badge } from '@alaneicker/atomik-ui';
 
 <>
   <h1>
@@ -22,7 +22,7 @@ import { Badge } from '@alaneicker/react-component-library';
 ### Badge Themes
 
 ```jsx
-import { Badge } from '@alaneicker/react-component-library';
+import { Badge } from '@alaneicker/atomik-ui';
 
 <>
   <Badge>Default</Badge>
@@ -39,7 +39,7 @@ import { Badge } from '@alaneicker/react-component-library';
 ### Badge Shapes
 
 ```jsx
-import { Badge } from '@alaneicker/react-component-library';
+import { Badge } from '@alaneicker/atomik-ui';
 
 <>
   <Badge variant="info">Default</Badge>

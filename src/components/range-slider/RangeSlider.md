@@ -3,7 +3,7 @@ The RangeSlider component is a form control that allows a user to specify a nume
 ### Basic Range Slider
 
 ```jsx
-import { RangeSlider } from '@alaneicker/react-component-library';
+import { RangeSlider } from '@alaneicker/atomik-ui';
 
 <RangeSlider
   label="Select Amount"
@@ -20,7 +20,7 @@ import { RangeSlider } from '@alaneicker/react-component-library';
 ### Range Slider With Ticks and Labels
 
 ```jsx
-import { RangeSlider } from '@alaneicker/react-component-library';
+import { RangeSlider } from '@alaneicker/atomik-ui';
 
 <RangeSlider
   label="Select Amount"
@@ -50,7 +50,7 @@ import { RangeSlider } from '@alaneicker/react-component-library';
 ### Disabled State
 
 ```jsx
-import { RangeSlider } from '@alaneicker/react-component-library';
+import { RangeSlider } from '@alaneicker/atomik-ui';
 
 <RangeSlider
   label="Select Amount"

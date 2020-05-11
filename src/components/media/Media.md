@@ -1,7 +1,7 @@
 The Media component helps build repetitive layouts where some media is positioned alongside content.
 
 ```jsx
-import { Media, Button } from '@alaneicker/react-component-library';
+import { Media, Button } from '@alaneicker/atomik-ui';
 
 <Media
   align="middle"
@@ -29,7 +29,7 @@ import { Media, Button } from '@alaneicker/react-component-library';
 ### Media With Reversed Child Ordering
 
 ```jsx
-import { Media, Button } from '@alaneicker/react-component-library';
+import { Media, Button } from '@alaneicker/atomik-ui';
 
 <Media
   reverse

@@ -3,7 +3,7 @@ The FileUpload component allows for the selection of one or more files via file 
 ### File Upload - File Browser
 
 ```jsx
-import { FileUpload } from '@alaneicker/react-component-library';
+import { FileUpload } from '@alaneicker/atomik-ui';
 
 <FileUpload
   label="Upload file"
@@ -15,7 +15,7 @@ import { FileUpload } from '@alaneicker/react-component-library';
 ### File Upload - Drag and Drop
 
 ```jsx
-import { FileUpload } from '@alaneicker/react-component-library';
+import { FileUpload } from '@alaneicker/atomik-ui';
 
 <FileUpload
   label="Upload file"

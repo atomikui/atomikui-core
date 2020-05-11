@@ -11,7 +11,7 @@ import {
   FormField,
   FormOption,
   RangeSlider,
-} from '@alaneicker/react-component-library';
+} from '@alaneicker/atomik-ui';
 
 const [sendNotifications, setSendNotifications] = useState(false);
 

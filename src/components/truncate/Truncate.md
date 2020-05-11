@@ -3,7 +3,7 @@ The Truncate component wraps text and truncates it at a word count specified by 
 ### Defualt With "Show More/Less" Toggle
 
 ```jsx
-import { Truncate, Link } from '@alaneicker/react-component-library';
+import { Truncate, Link } from '@alaneicker/atomik-ui';
 
 <p>
   <Truncate maxWords={50}>
@@ -26,7 +26,7 @@ import { Truncate, Link } from '@alaneicker/react-component-library';
 The `afterEllipses` prop allows for setting custom content after the ellipses.
 
 ```jsx
-import { Truncate, Link } from '@alaneicker/react-component-library';
+import { Truncate, Link } from '@alaneicker/atomik-ui';
 
 <p>
   <Truncate
@@ -56,7 +56,7 @@ import { Truncate, Link } from '@alaneicker/react-component-library';
 The `expanded` prop can be used to make the content expanded by default.
 
 ```jsx
-import { Truncate, Link } from '@alaneicker/react-component-library';
+import { Truncate, Link } from '@alaneicker/atomik-ui';
 
 <p>
   <Truncate maxWords={50} expanded>

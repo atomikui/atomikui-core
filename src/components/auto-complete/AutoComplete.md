@@ -3,7 +3,7 @@ The AutoComplete component is a FormField enhanced by a panel of suggested optio
 **Note:** All of the [Formfield](#/Form/FormField) props are availabel to use with the `AutoComplete` component.
 
 ```jsx
-import { AutoComplete } from '@alaneicker/react-component-library';
+import { AutoComplete } from '@alaneicker/atomik-ui';
 
 <AutoComplete
   label="Select Your Favorite Fruit"

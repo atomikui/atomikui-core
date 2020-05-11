@@ -5,7 +5,7 @@ A statistic is a piece of data about a specific attribute.
 A basict statistic has a value and a label.
 
 ```jsx
-import { Statistic } from '@alaneicker/react-component-library';
+import { Statistic } from '@alaneicker/atomik-ui';
 
 <>
   <Statistic value="25,000" label="Views" />
@@ -27,7 +27,7 @@ import { Statistic } from '@alaneicker/react-component-library';
 The `topLabel` prop can be used to position the label above the value.
 
 ```jsx
-import { Statistic } from '@alaneicker/react-component-library';
+import { Statistic } from '@alaneicker/atomik-ui';
 
 <Statistic value="$75,000" label="Money Raised" topLabel />;
 ```
@@ -37,7 +37,7 @@ import { Statistic } from '@alaneicker/react-component-library';
 The `icon` prop can be used to set an icon nex to the calue. Set the icon color with the `iconColor` prop.
 
 ```jsx
-import { Statistic } from '@alaneicker/react-component-library';
+import { Statistic } from '@alaneicker/atomik-ui';
 import { faUsers } from '@fortawesome/free-solid-svg-icons';
 
 <Statistic
@@ -53,7 +53,7 @@ import { faUsers } from '@fortawesome/free-solid-svg-icons';
 The `horizontal` prop can be used to create a horizontal layout.
 
 ```jsx
-import { Statistic } from '@alaneicker/react-component-library';
+import { Statistic } from '@alaneicker/atomik-ui';
 
 <Statistic value="45,700" label="Miles" horizontal />;
 ```
@@ -63,7 +63,7 @@ import { Statistic } from '@alaneicker/react-component-library';
 The `size` prop can be used to alter the statistic size. Sizes values include `sm`, `md`, and `lg`;
 
 ```jsx
-import { Statistic } from '@alaneicker/react-component-library';
+import { Statistic } from '@alaneicker/atomik-ui';
 
 <>
   <Statistic value="33,000" label="Downloads" size="sm" />
@@ -78,7 +78,7 @@ import { Statistic } from '@alaneicker/react-component-library';
 The `color` prop can be used to set the color of the statistic value.
 
 ```jsx
-import { Statistic } from '@alaneicker/react-component-library';
+import { Statistic } from '@alaneicker/atomik-ui';
 
 <>
   <Statistic value="27" label="Red" color="red" />

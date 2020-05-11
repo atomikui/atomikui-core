@@ -3,7 +3,7 @@ The Accordion component is a collection of expandable AccordionItems. It allows 
 ### Accordion - Single Panel Open
 
 ```jsx
-import { Accordion, AccordionItem } from '@alaneicker/react-component-library';
+import { Accordion, AccordionItem } from '@alaneicker/atomik-ui';
 
 <Accordion>
   <AccordionItem label="Accordion Heading 1">
@@ -45,7 +45,7 @@ import { Accordion, AccordionItem } from '@alaneicker/react-component-library';
 ### Accordion - Multiple Panels Open
 
 ```jsx
-import { Accordion, AccordionItem } from '@alaneicker/react-component-library';
+import { Accordion, AccordionItem } from '@alaneicker/atomik-ui';
 
 <Accordion multipleOpen>
   <AccordionItem label="Accordion Heading 1">

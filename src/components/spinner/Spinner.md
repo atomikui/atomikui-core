@@ -3,7 +3,7 @@ The Spinner component can be used tp indicate that a process is taking place. Un
 ### Themes
 
 ```jsx
-import { Spinner } from '@alaneicker/react-component-library';
+import { Spinner } from '@alaneicker/atomik-ui';
 
 <>
   <Spinner />

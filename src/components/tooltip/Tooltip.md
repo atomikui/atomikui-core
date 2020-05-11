@@ -1,7 +1,7 @@
 A Tooltip displays helpful te text when an element is hovered over, focused, or tapped.
 
 ```jsx
-import { Tooltip, Button, Link } from '@alaneicker/react-component-library';
+import { Tooltip, Button, Link } from '@alaneicker/atomik-ui';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
@@ -17,7 +17,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 ### Tooltip - Alignment
 
 ```jsx
-import { Tooltip, Button } from '@alaneicker/react-component-library';
+import { Tooltip, Button } from '@alaneicker/atomik-ui';
 
 <>
   <div
@@ -74,7 +74,7 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
 ### Tooltip - onClick
 
 ```jsx
-import { Tooltip, Button } from '@alaneicker/react-component-library';
+import { Tooltip, Button } from '@alaneicker/atomik-ui';
 
 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
   <Tooltip data-tooltip="This is a tooltip" align="top-center" triggerOnClick>
@@ -86,7 +86,7 @@ import { Tooltip, Button } from '@alaneicker/react-component-library';
 ### Theme Variant
 
 ```jsx
-import { Tooltip, Button } from '@alaneicker/react-component-library';
+import { Tooltip, Button } from '@alaneicker/atomik-ui';
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
   <Tooltip data-tooltip="This is a tooltip" variant="info" align="top-center">

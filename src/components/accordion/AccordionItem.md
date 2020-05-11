@@ -1,7 +1,7 @@
 The AccordionItem is used in conjunction with the [Accordion](/#/Content/Accordion) component and passed in as a child.
 
 ```jsx
-import { AccordionItem } from '@alaneicker/react-component-library';
+import { AccordionItem } from '@alaneicker/atomik-ui';
 
 <AccordionItem label="Accordion Item Heading">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam justo,

@@ -13,7 +13,7 @@ module.exports = {
   pagePerSection: true,
   sections: [...sections],
   moduleAliases: {
-    '@alaneicker/react-component-library': path.resolve(__dirname, 'src'),
+    '@alaneicker/atomik-ui': path.resolve(__dirname, 'src'),
   },
   assetsDir: './public',
   styleguideDir: './build',

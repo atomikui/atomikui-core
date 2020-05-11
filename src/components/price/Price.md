@@ -1,7 +1,7 @@
 The Price component can be used to create a stylized version of a price
 
 ```jsx
-import { Price } from '@alaneicker/react-component-library';
+import { Price } from '@alaneicker/atomik-ui';
 
 <Price amount={124.99} label="/ month" />;
 ```
@@ -9,7 +9,7 @@ import { Price } from '@alaneicker/react-component-library';
 ### Sizes
 
 ```jsx
-import { Price } from '@alaneicker/react-component-library';
+import { Price } from '@alaneicker/atomik-ui';
 
 <>
   <Price amount={124.99} label="/ month" size="sm" />

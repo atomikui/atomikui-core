@@ -2,7 +2,7 @@ A Tab is a child of the Tabs component and is used to toggle the visibility of a
 
 ```jsx
 import { useState } from 'react';
-import { Tab } from '@alaneicker/react-component-library';
+import { Tab } from '@alaneicker/atomik-ui';
 
 <>
   <Tab label="Tab One" />

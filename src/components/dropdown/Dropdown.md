@@ -4,7 +4,7 @@ The Dropdown component is a form control that displays a list of selectable opti
 
 ```jsx
 import { useState } from 'react';
-import { Dropdown } from '@alaneicker/react-component-library';
+import { Dropdown } from '@alaneicker/atomik-ui';
 
 const [value, setValue] = useState('');
 
@@ -28,7 +28,7 @@ const [value, setValue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { Dropdown } from '@alaneicker/react-component-library';
+import { Dropdown } from '@alaneicker/atomik-ui';
 
 const [value, setValue] = useState('');
 
@@ -54,7 +54,7 @@ const [value, setValue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { Dropdown } from '@alaneicker/react-component-library';
+import { Dropdown } from '@alaneicker/atomik-ui';
 
 <Dropdown
   label="Select a Color"

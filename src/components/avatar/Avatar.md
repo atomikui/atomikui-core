@@ -5,7 +5,7 @@ An avatar is a graphical representation of something.
 An image avatar can be created by passing in a `src` and `alt` prop.
 
 ```jsx
-import { Avatar } from '@alaneicker/react-component-library';
+import { Avatar } from '@alaneicker/atomik-ui';
 
 <Avatar src="profile-image.png" alt="Alan Smith" />;
 ```
@@ -17,7 +17,7 @@ A label can be added to an avatar with `label` prop.
 By default the label is positioned to the right of the avatar. Use the `flipLabel` prop to align it to the left.
 
 ```jsx
-import { Avatar } from '@alaneicker/react-component-library';
+import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
   <Avatar
@@ -39,7 +39,7 @@ import { Avatar } from '@alaneicker/react-component-library';
 A letter avatar can be created simply by passing in one or two initials as children.
 
 ```jsx
-import { Avatar } from '@alaneicker/react-component-library';
+import { Avatar } from '@alaneicker/atomik-ui';
 
 <Avatar variant="medium-blue">AE</Avatar>;
 ```
@@ -49,7 +49,7 @@ import { Avatar } from '@alaneicker/react-component-library';
 Add an SVG as a child to create an icon avatar.
 
 ```jsx
-import { Avatar } from '@alaneicker/react-component-library';
+import { Avatar } from '@alaneicker/atomik-ui';
 
 <Avatar variant="red">
   <svg
@@ -77,7 +77,7 @@ import { Avatar } from '@alaneicker/react-component-library';
 There are many color themes to choose from. simplay pass in a `variant` prop with the color of your choice.
 
 ```jsx
-import { Avatar } from '@alaneicker/react-component-library';
+import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
   <Avatar variant="red">AE</Avatar>
@@ -100,7 +100,7 @@ import { Avatar } from '@alaneicker/react-component-library';
 The `size` prop can be used to change the size of the avatar
 
 ```jsx
-import { Avatar } from '@alaneicker/react-component-library';
+import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
   <Avatar src="profile-image.png" alt="Alan Smith" size="sm" />

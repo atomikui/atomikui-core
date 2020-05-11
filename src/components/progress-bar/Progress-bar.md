@@ -3,7 +3,7 @@ The ProgressBar component is used as an indicator quantitative progress.
 ### Basic Progress Bar
 
 ```jsx
-import { ProgressBar } from '@alaneicker/react-component-library';
+import { ProgressBar } from '@alaneicker/atomik-ui';
 
 const now = 60;
 
@@ -15,7 +15,7 @@ const now = 60;
 ### Theme Variants
 
 ```jsx
-import { ProgressBar } from '@alaneicker/react-component-library';
+import { ProgressBar } from '@alaneicker/atomik-ui';
 
 <>
   <ProgressBar now={60} variant="success" />
@@ -28,7 +28,7 @@ import { ProgressBar } from '@alaneicker/react-component-library';
 ### Animated Progress Bar
 
 ```jsx
-import { ProgressBar } from '@alaneicker/react-component-library';
+import { ProgressBar } from '@alaneicker/atomik-ui';
 
 <>
   <ProgressBar now={70} animated />

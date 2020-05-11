@@ -5,7 +5,7 @@ See the [Step](/#/Navigation/Step) component API documentation for more informat
 ### Default Stepper
 
 ```jsx
-import { Stepper, Step } from '@alaneicker/react-component-library';
+import { Stepper, Step } from '@alaneicker/atomik-ui';
 
 <Stepper>
   <Step label="Personal Info" href="/personal-info" isComplete={true}>
@@ -26,7 +26,7 @@ import { Stepper, Step } from '@alaneicker/react-component-library';
 ### Stepper with Labels on Top
 
 ```jsx
-import { Stepper, Step } from '@alaneicker/react-component-library';
+import { Stepper, Step } from '@alaneicker/atomik-ui';
 
 <Stepper topLabels>
   <Step label="Personal Info" href="/personal-info" isComplete={true}>
@@ -47,7 +47,7 @@ import { Stepper, Step } from '@alaneicker/react-component-library';
 ### Stepper with Inline Labels
 
 ```jsx
-import { Stepper, Step } from '@alaneicker/react-component-library';
+import { Stepper, Step } from '@alaneicker/atomik-ui';
 
 <Stepper inline>
   <Step label="Personal Info" href="/personal-info" isComplete={true}>

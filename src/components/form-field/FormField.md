@@ -2,7 +2,7 @@
 
 ```jsx
 import { useState } from 'react';
-import { FormField } from '@alaneicker/react-component-library';
+import { FormField } from '@alaneicker/atomik-ui';
 
 const [value, setValue] = useState('');
 
@@ -18,7 +18,7 @@ const [value, setValue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { FormField } from '@alaneicker/react-component-library';
+import { FormField } from '@alaneicker/atomik-ui';
 
 const [value, setValue] = useState('');
 
@@ -34,7 +34,7 @@ const [value, setValue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { FormField } from '@alaneicker/react-component-library';
+import { FormField } from '@alaneicker/atomik-ui';
 
 const [value, setValue] = useState('');
 
@@ -51,7 +51,7 @@ const [value, setValue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { FormField } from '@alaneicker/react-component-library';
+import { FormField } from '@alaneicker/atomik-ui';
 
 const [value, setValue] = useState('');
 
@@ -68,7 +68,7 @@ const [value, setValue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { FormField } from '@alaneicker/react-component-library';
+import { FormField } from '@alaneicker/atomik-ui';
 
 const [value, setValue] = useState('');
 
@@ -86,7 +86,7 @@ const [value, setValue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { FormField } from '@alaneicker/react-component-library';
+import { FormField } from '@alaneicker/atomik-ui';
 
 <FormField
   type="text"
@@ -100,7 +100,7 @@ import { FormField } from '@alaneicker/react-component-library';
 
 ```jsx
 import { useState } from 'react';
-import { FormField } from '@alaneicker/react-component-library';
+import { FormField } from '@alaneicker/atomik-ui';
 
 <FormField
   type="text"

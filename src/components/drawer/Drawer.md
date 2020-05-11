@@ -4,13 +4,7 @@ Drawers are commonly referred to as a side nav. The Drawer component allows for 
 
 ```jsx
 import { useState } from 'react';
-import {
-  Drawer,
-  Button,
-  Link,
-  List,
-  ListItem,
-} from '@alaneicker/react-component-library';
+import { Drawer, Button, Link, List, ListItem } from '@alaneicker/atomik-ui';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -44,13 +38,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import {
-  Drawer,
-  Button,
-  Link,
-  List,
-  ListItem,
-} from '@alaneicker/react-component-library';
+import { Drawer, Button, Link, List, ListItem } from '@alaneicker/atomik-ui';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -84,13 +72,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import {
-  Drawer,
-  Button,
-  Link,
-  List,
-  ListItem,
-} from '@alaneicker/react-component-library';
+import { Drawer, Button, Link, List, ListItem } from '@alaneicker/atomik-ui';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -124,13 +106,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import {
-  Drawer,
-  Button,
-  Link,
-  List,
-  ListItem,
-} from '@alaneicker/react-component-library';
+import { Drawer, Button, Link, List, ListItem } from '@alaneicker/atomik-ui';
 
 const [isOpen, setIsOpen] = useState(false);
 

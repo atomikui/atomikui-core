@@ -1,7 +1,7 @@
 A ListItem is used with the List component and passed in it as a child.
 
 ```jsx
-import { ListItem } from '@alaneicker/react-component-library';
+import { ListItem } from '@alaneicker/atomik-ui';
 
 <ListItem>List Item</ListItem>;
 ```

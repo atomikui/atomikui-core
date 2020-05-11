@@ -41,18 +41,18 @@
         s17.067,7.656,17.067,17.067S111.688,119.346,102.278,119.346z"/>
   </svg>
   <div style="padding-left: 20px; line-height: 1;">
-    # React Component Library
+    # Atomik UI
     #### A Library of React Components for Rapid Application Development
   </div>
 </div>
 
-The React Component Library offers a wide array of React component that can be used to kickstart any project. From form controls to information components like modals, alerts and icons, you'll find everything here to build your next React application.
+Atomik UI offers a wide array of React component that can be used to kickstart any project. From form controls to information components like modals, alerts and icons, you'll find everything here to build your next React application.
 
 ### Features
 
 #### Customizable Components and Third-Party Support
 
-The React Component Library comes with a variety of customizable React components as well as integrated third-party support for:
+Atomik UI comes with a variety of customizable React components as well as integrated third-party support for:
 
 - React Table
 - React Flexbox Grid

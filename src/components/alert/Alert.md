@@ -3,7 +3,7 @@ The Alert component is used to provide the user with an important message withou
 ### States (default, info, warning, error, success)
 
 ```jsx
-import { Alert } from '@alaneicker/react-component-library';
+import { Alert } from '@alaneicker/atomik-ui';
 
 <>
   <Alert>This is a default alert</Alert>
@@ -18,7 +18,7 @@ import { Alert } from '@alaneicker/react-component-library';
 ### Alert With Custom Icon
 
 ```jsx
-import { Alert, Spinner } from '@alaneicker/react-component-library';
+import { Alert, Spinner } from '@alaneicker/atomik-ui';
 
 <Alert type="dark" align="middle" icon={<Spinner theme="blue" />}>
   Please wait while we load your content
@@ -30,7 +30,7 @@ import { Alert, Spinner } from '@alaneicker/react-component-library';
 Simply add an `onClose` prop with a callback and a close button will be added to the alert.
 
 ```jsx
-import { Alert } from '@alaneicker/react-component-library';
+import { Alert } from '@alaneicker/atomik-ui';
 
 <>
   <Alert type="info" onClose={() => console.log('closed')}>

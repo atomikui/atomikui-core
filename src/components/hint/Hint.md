@@ -3,7 +3,7 @@ A Hint provides the user with helpful information about a task that is being per
 ### Default
 
 ```jsx
-import { Hint } from '@alaneicker/react-component-library';
+import { Hint } from '@alaneicker/atomik-ui';
 
 <Hint>This is a default hint</Hint>;
 ```
@@ -11,7 +11,7 @@ import { Hint } from '@alaneicker/react-component-library';
 ### States (Error, Warning)
 
 ```jsx
-import { Hint } from '@alaneicker/react-component-library';
+import { Hint } from '@alaneicker/atomik-ui';
 
 <>
   <Hint type="error">This is an error hint</Hint>

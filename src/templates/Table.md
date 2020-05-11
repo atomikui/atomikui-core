@@ -1,6 +1,6 @@
 ### Basic Table
 
-The React Component Library recommends [React Table](https://react-table.js.org/) for handling tabular data. The `.rcl-table` class can be used to add basic styles to the table. Subsequently, the `.rcl-table--dark` modifier class can be added to apply a dark theme to the table.
+Atomik UI recommends [React Table](https://react-table.js.org/) for handling tabular data. The `.rcl-table` class can be used to add basic styles to the table. Subsequently, the `.rcl-table--dark` modifier class can be added to apply a dark theme to the table.
 
 ```jsx
 import { useMemo } from 'react';

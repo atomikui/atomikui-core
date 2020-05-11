@@ -4,7 +4,7 @@ The FormOption component is a form control that renders a checkbox and radio but
 
 ```jsx
 import { useState } from 'react';
-import { FormOption } from '@alaneicker/react-component-library';
+import { FormOption } from '@alaneicker/atomik-ui';
 
 const [checked, setChecked] = useState(false);
 
@@ -20,7 +20,7 @@ const [checked, setChecked] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { FormOption } from '@alaneicker/react-component-library';
+import { FormOption } from '@alaneicker/atomik-ui';
 
 const [formOptions, setFormOptions] = useState([
   { label: 'Option 1', name: 'radio1', checked: true },
@@ -54,7 +54,7 @@ const onChange = (index) => {
 
 ```jsx
 import { useState } from 'react';
-import { FormOption } from '@alaneicker/react-component-library';
+import { FormOption } from '@alaneicker/atomik-ui';
 
 const [checkBoxChecked, setCheckboxChecked] = useState(true);
 const [radioChecked, setRadioChecked] = useState(true);
@@ -83,7 +83,7 @@ const [radioChecked, setRadioChecked] = useState(true);
 ### Disabled State
 
 ```jsx
-import { FormOption } from '@alaneicker/react-component-library';
+import { FormOption } from '@alaneicker/atomik-ui';
 
 <>
   <FormOption

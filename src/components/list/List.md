@@ -3,7 +3,7 @@ Lists are be used to organize information. They can be non-sequential or ordered
 ### Default List
 
 ```jsx
-import { List, ListItem } from '@alaneicker/react-component-library';
+import { List, ListItem } from '@alaneicker/atomik-ui';
 
 <List>
   <ListItem>Apple</ListItem>
@@ -16,7 +16,7 @@ import { List, ListItem } from '@alaneicker/react-component-library';
 ### Bulleted List
 
 ```jsx
-import { List, ListItem } from '@alaneicker/react-component-library';
+import { List, ListItem } from '@alaneicker/atomik-ui';
 
 <List type="bulleted">
   <ListItem>Apple</ListItem>
@@ -29,7 +29,7 @@ import { List, ListItem } from '@alaneicker/react-component-library';
 ### Ordered List
 
 ```jsx
-import { List, ListItem } from '@alaneicker/react-component-library';
+import { List, ListItem } from '@alaneicker/atomik-ui';
 
 <List type="ordered">
   <ListItem>Apple</ListItem>
@@ -42,7 +42,7 @@ import { List, ListItem } from '@alaneicker/react-component-library';
 ### Horizontal List
 
 ```jsx
-import { List, ListItem } from '@alaneicker/react-component-library';
+import { List, ListItem } from '@alaneicker/atomik-ui';
 
 <List type="horizontal">
   <ListItem>Apple</ListItem>
@@ -55,7 +55,7 @@ import { List, ListItem } from '@alaneicker/react-component-library';
 ### List Alignment
 
 ```jsx
-import { List, ListItem } from '@alaneicker/react-component-library';
+import { List, ListItem } from '@alaneicker/atomik-ui';
 
 <>
   <List type="horizontal">
