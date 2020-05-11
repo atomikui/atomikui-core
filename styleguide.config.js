@@ -9,7 +9,7 @@ const isDarkMode = process.env.DARK_MODE === 'true';
 
 module.exports = {
   version,
-  title: 'React Component Library',
+  title: 'Atomik UI',
   pagePerSection: true,
   sections: [...sections],
   moduleAliases: {

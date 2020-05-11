@@ -11,7 +11,7 @@ const Stats = () => {
     const linkTag = iframeDoc.createElement('link');
     linkTag.rel = 'stylesheet';
     linkTag.href =
-      'https://fonts.googleapis.com/css?family=Hind+Madurai:300,300i,400,400i,500,500i,700,700i';
+      'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap';
     iframeDoc.head.appendChild(linkTag);
     const styleTag = iframeDoc.createElement('style');
     styleTag.type = 'text/css';
@@ -23,7 +23,7 @@ const Stats = () => {
       h1, h2, h3, h4, h5, h6, .header { 
         font-family: 'Lato', serif !important; 
         color: #222;
-        font-weight: 500; 
+        font-weight: 700; 
         margin-top: 8px; 
       }
       main { background: white; }
