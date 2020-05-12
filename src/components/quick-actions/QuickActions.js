@@ -15,6 +15,7 @@ const QuickActions = ({ className, actions, position, ...others }) => {
       className={classnames('atomikui-quick-actions', className, {
         'is-mobile': isMobileDevice,
         'is-desktop': !isMobileDevice,
+        [`atomikui-quick-actions--${position}`]: position,
       })}
       {...others}
     >
