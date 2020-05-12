@@ -1,4 +1,4 @@
-import React, { cloneElement } from 'react';
+import React, { cloneElement, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
@@ -6,10 +6,9 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import isMobile from '../../utilities/mobile-detect';
 import Button from '../button';
 
-// TODO: Replace hover with mouseover evnets
-
 const QuickActions = ({ className, actions, position, ...others }) => {
   const isMobileDevice = isMobile();
+  const buttonRef = useRef();
 
   return (
     <div
@@ -19,14 +18,23 @@ const QuickActions = ({ className, actions, position, ...others }) => {
       })}
       {...others}
     >
-      <Button className="atomikui-quick-actions__toggle" theme="primary">
+      <button
+        ref={buttonRef}
+        className="atomikui-quick-actions__toggle"
+        theme="primary"
+        {...(isMobileDevice && {
+          onClick: () => {
+            return buttonRef.current.focus();
+          },
+        })}
+      >
         <Icon icon={faPlus} size="lg" color="white" />
-      </Button>
+      </button>
       <div className="atomikui-quick-actions__action-btns" role="menu">
         {actions.map(({ icon, label, onClick }) => {
           return (
             <Button
-              tabindex="-1"
+              tabIndex="-1"
               role="menuitem"
               key={Math.random()}
               title={label}

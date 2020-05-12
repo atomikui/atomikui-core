@@ -15,11 +15,21 @@
   display: inline-flex;
 
   &__toggle {
+    background: $blue-200;
+    border: 0;
     border-radius: 50%;
+    cursor: pointer;
     height: rem(48);
     padding: 0;
     transition: all 0.15s linear;
     width: rem(48);
+
+    &:active,
+    &:focus,
+    &:hover {
+      background: darken($blue-200, 10%);
+      outline: 0;
+    }
   }
 
   &__action-btns {
