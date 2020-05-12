@@ -1,38 +1,42 @@
-import React, { cloneElement, useRef } from 'react';
+import React, { cloneElement, useRef, useState, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import isMobile from '../../utilities/mobile-detect';
 import Button from '../button';
 
 const QuickActions = ({ className, actions, position, ...others }) => {
-  const isMobileDevice = isMobile();
-  const buttonRef = useRef();
+  const parentRef = useRef();
   const numActions = actions.length;
 
   if (numActions < 3 || numActions > 6) {
     throw new Error(`Expected 3-6 actions, but got ${numActions}`);
   }
 
+  const onBlur = () => {
+    parentRef.current.blur();
+  };
+
+  const handleActionClick = (onClick) => {
+    parentRef.current.focus();
+    parentRef.current.blur();
+    onClick();
+  };
+
   return (
     <div
+      ref={parentRef}
+      tabIndex="0"
       className={classnames('atomikui-quick-actions', className, {
-        'is-mobile': isMobileDevice,
-        'is-desktop': !isMobileDevice,
         [`atomikui-quick-actions--${position}`]: position,
       })}
+      onMouseLeave={onBlur}
       {...others}
     >
       <button
-        ref={buttonRef}
+        tabIndex="-1"
         className="atomikui-quick-actions__toggle"
         theme="primary"
-        {...(isMobileDevice && {
-          onClick: () => {
-            return buttonRef.current.focus();
-          },
-        })}
       >
         <Icon icon={faPlus} size="2x" color="white" />
       </button>
@@ -40,11 +44,12 @@ const QuickActions = ({ className, actions, position, ...others }) => {
         {actions.map(({ icon, label, onClick }) => {
           return (
             <Button
-              tabIndex="-1"
               role="menuitem"
               key={Math.random()}
               title={label}
-              onClick={onClick}
+              onClick={() => {
+                return handleActionClick(onClick);
+              }}
             >
               {icon && cloneElement(icon, { size: 'lg', 'aria-hidden': true })}
             </Button>

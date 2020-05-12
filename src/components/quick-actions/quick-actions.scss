@@ -46,8 +46,8 @@
     & > * {
       border-radius: 50%;
       height: rem(40);
-      opacity: 0;
       margin: rem(6);
+      opacity: 0;
       padding: 0;
       pointer-events: none;
       transform: scale(0);
@@ -112,8 +112,13 @@
     }
   }
 
-  &.is-desktop:hover {
+  &:hover,
+  &:focus,
+  &:focus-within {
+    outline: 0;
+
     & > .atomikui-quick-actions__toggle {
+      background: darken($blue-200, 10%);
       transform: rotate(45deg);
     }
 
@@ -122,13 +127,11 @@
     }
   }
 
-  &.is-mobile {
-    & > .atomikui-quick-actions__toggle:focus {
-      transform: rotate(45deg);
+  // & > .atomikui-quick-actions__toggle:focus {
+  //   transform: rotate(45deg);
 
-      & ~ .atomikui-quick-actions__action-btns {
-        @include actionButtonsActiveState();
-      }
-    }
-  }
+  //   & ~ .atomikui-quick-actions__action-btns {
+  //     @include actionButtonsActiveState();
+  //   }
+  // }
 }
