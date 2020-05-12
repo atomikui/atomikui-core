@@ -5,6 +5,8 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
+// TODO: Replace hover with mouseover evnets
+
 const QuickActions = ({ className, actions, position, ...others }) => {
   return (
     <div
