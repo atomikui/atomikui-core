@@ -1,4 +1,6 @@
-A floating menu displaying three to size related actions.
+A floating menu displaying three to six related actions. Action buttons can be positioned to the right (default), left, to and bottom.
+
+_Note: for best results, the QuickActions menu should be positioned absolute or fixed._
 
 ```jsx
 import { useState } from 'react';
@@ -23,10 +25,14 @@ const constwrapperStyle = {
     display: 'flex',
     alignItems: 'flex-end',
   },
+  bottom: {
+    display: 'flex',
+    alignItems: 'flex-start',
+  },
 };
 
 <>
-  <List type="horizontal">
+  <List type="horizontal" align="center">
     <ListItem>
       <Button size="sm" onClick={() => setPosition()}>
         Right

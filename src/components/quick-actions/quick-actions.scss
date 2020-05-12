@@ -1,7 +1,6 @@
 @mixin actionButtonsActiveState {
   max-height: rem(320);
   max-width: rem(320);
-  padding: rem(0 8);
   transition-delay: 0s;
 
   & > * {
@@ -21,6 +20,7 @@
     border-radius: 50%;
     cursor: pointer;
     height: rem(48);
+    margin: rem(0 5 0 0);
     padding: 0;
     transition: all 0.15s linear;
     width: rem(48);
@@ -46,8 +46,8 @@
     & > * {
       border-radius: 50%;
       height: rem(36);
-      margin: rem(0 8);
       opacity: 0;
+      margin: rem(5);
       padding: 0;
       pointer-events: none;
       transform: scale(0);
@@ -79,6 +79,10 @@
   &--left {
     flex-direction: row-reverse;
 
+    & > .atomikui-quick-actions__toggle {
+      margin: rem(0 0 0 5);
+    }
+
     & > .atomikui-quick-actions__action-btns {
       flex-direction: row-reverse;
     }
@@ -87,13 +91,24 @@
   &--top {
     flex-direction: column-reverse;
 
+    & > .atomikui-quick-actions__toggle {
+      margin: rem(5 0 0);
+    }
+
     & > .atomikui-quick-actions__action-btns {
       flex-direction: column-reverse;
-      padding: rem(8 0);
+    }
+  }
 
-      & > * {
-        margin: rem(8 0);
-      }
+  &--bottom {
+    flex-direction: column;
+
+    & > .atomikui-quick-actions__toggle {
+      margin: rem(0 0 5);
+    }
+
+    & > .atomikui-quick-actions__action-btns {
+      flex-direction: column;
     }
   }
 

@@ -9,6 +9,11 @@ import Button from '../button';
 const QuickActions = ({ className, actions, position, ...others }) => {
   const isMobileDevice = isMobile();
   const buttonRef = useRef();
+  const numActions = actions.length;
+
+  if (numActions < 3 || numActions > 6) {
+    throw new Error(`Expected 3-6 actions, but got ${numActions}`);
+  }
 
   return (
     <div
