@@ -1,3 +1,15 @@
+@mixin actionButtonsActiveState {
+  max-height: rem(320);
+  max-width: rem(320);
+  transition-delay: 0s;
+
+  & > * {
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1);
+  }
+}
+
 .atomikui-quick-actions {
   align-items: center;
   display: inline-flex;
@@ -17,6 +29,10 @@
     padding: rem(0 16);
     transform: all 0.15s linear;
     transition-delay: 0.3s;
+
+    & > * + * {
+      margin-left: rem(16);
+    }
 
     & > * {
       border-radius: 50%;
@@ -48,26 +64,24 @@
         transition-delay: 0.3s;
       }
     }
-
-    & > * + * {
-      margin-left: rem(16);
-    }
   }
 
-  &:hover {
+  &.is-desktop:hover {
     & > .atomikui-quick-actions__toggle {
       transform: rotate(45deg);
     }
 
     & > .atomikui-quick-actions__action-btns {
-      max-height: rem(320);
-      max-width: rem(320);
-      transition-delay: 0s;
+      @include actionButtonsActiveState();
+    }
+  }
 
-      & > * {
-        opacity: 1;
-        pointer-events: all;
-        transform: scale(1);
+  &.is-mobile {
+    & > .atomikui-quick-actions__toggle:focus {
+      transform: rotate(45deg);
+
+      & ~ .atomikui-quick-actions__action-btns {
+        @include actionButtonsActiveState();
       }
     }
   }

@@ -3,14 +3,20 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import isMobile from '../../utilities/mobile-detect';
 import Button from '../button';
 
 // TODO: Replace hover with mouseover evnets
 
 const QuickActions = ({ className, actions, position, ...others }) => {
+  const isMobileDevice = isMobile();
+
   return (
     <div
-      className={classnames('atomikui-quick-actions', className, {})}
+      className={classnames('atomikui-quick-actions', className, {
+        'is-mobile': isMobileDevice,
+        'is-desktop': !isMobileDevice,
+      })}
       {...others}
     >
       <Button className="atomikui-quick-actions__toggle" theme="primary">
