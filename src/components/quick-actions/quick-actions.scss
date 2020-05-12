@@ -1,0 +1,74 @@
+.atomikui-quick-actions {
+  align-items: center;
+  display: inline-flex;
+
+  &__toggle {
+    border-radius: 50%;
+    height: rem(48);
+    padding: 0;
+    transition: all 0.15s linear;
+    width: rem(48);
+  }
+
+  &__action-btns {
+    max-height: 0;
+    max-width: 0;
+    overflow: hidden;
+    padding: rem(0 16);
+    transform: all 0.15s linear;
+    transition-delay: 0.3s;
+
+    & > * {
+      border-radius: 50%;
+      height: rem(36);
+      opacity: 0;
+      padding: 0;
+      pointer-events: none;
+      transform: scale(0);
+      transition: all 0.1s linear;
+      width: rem(36);
+
+      &:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+
+      &:nth-child(3) {
+        transition-delay: 0.15s;
+      }
+
+      &:nth-child(4) {
+        transition-delay: 0.2s;
+      }
+
+      &:nth-child(5) {
+        transition-delay: 0.25s;
+      }
+
+      &:nth-child(6) {
+        transition-delay: 0.3s;
+      }
+    }
+
+    & > * + * {
+      margin-left: rem(16);
+    }
+  }
+
+  &:hover {
+    & > .atomikui-quick-actions__toggle {
+      transform: rotate(45deg);
+    }
+
+    & > .atomikui-quick-actions__action-btns {
+      max-height: rem(320);
+      max-width: rem(320);
+      transition-delay: 0s;
+
+      & > * {
+        opacity: 1;
+        pointer-events: all;
+        transform: scale(1);
+      }
+    }
+  }
+}

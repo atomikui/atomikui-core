@@ -25,6 +25,7 @@ export { default as Overlay } from './components/overlay';
 export { default as Pagination } from './components/pagination';
 export { default as Price } from './components/price';
 export { default as ProgressBar } from './components/progress-bar';
+export { default as QuickActions } from './components/quick-actions';
 export { default as RangeSlider } from './components/range-slider';
 export { default as Rating } from './components/rating';
 export { default as Spinner } from './components/spinner';

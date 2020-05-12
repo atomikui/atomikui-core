@@ -79,8 +79,8 @@ a.atomikui-btn {
       }
 
       @if ($variant == link) {
-        min-height: auto;
         font-size: inherit;
+        min-height: auto;
 
         &:hover {
           color: $black;
