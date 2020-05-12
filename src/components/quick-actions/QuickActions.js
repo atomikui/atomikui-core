@@ -69,7 +69,7 @@ QuickActions.propTypes = {
       onClick: PropTypes.func,
     }),
   ),
-  /** Menu position */
+  /** Action menu position. Default: "right" */
   position: PropTypes.oneOf(['left', 'top', 'bottom']),
 };
 
