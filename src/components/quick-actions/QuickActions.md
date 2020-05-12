@@ -14,22 +14,22 @@ import {
   actions={[
     {
       label: 'Save',
-      icon: <Icon icon={faSave} size="lg" />,
+      icon: <Icon icon={faSave} />,
       onClick: () => {},
     },
     {
       label: 'Copy',
-      icon: <Icon icon={faCopy} size="lg" />,
+      icon: <Icon icon={faCopy} />,
       onClick: () => {},
     },
     {
       label: 'Print',
-      icon: <Icon icon={faPrint} size="lg" />,
+      icon: <Icon icon={faPrint} />,
       onClick: () => {},
     },
     {
       label: 'Share',
-      icon: <Icon icon={faShareAlt} size="lg" />,
+      icon: <Icon icon={faShareAlt} />,
       onClick: () => {},
     },
   ]}

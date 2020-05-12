@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
@@ -14,11 +14,17 @@ const QuickActions = ({ className, actions, position, ...others }) => {
       <Button className="atomikui-quick-actions__toggle" theme="primary">
         <Icon icon={faPlus} size="lg" color="white" />
       </Button>
-      <div className="atomikui-quick-actions__action-btns">
+      <div className="atomikui-quick-actions__action-btns" role="menu">
         {actions.map(({ icon, label, onClick }) => {
           return (
-            <Button key={Math.random()} aria-label={label} onClick={onClick}>
-              {icon}
+            <Button
+              tabindex="-1"
+              role="menuitem"
+              key={Math.random()}
+              title={label}
+              onClick={onClick}
+            >
+              {cloneElement(icon, { size: 'lg', 'aria-hidden': true })}
             </Button>
           );
         })}
