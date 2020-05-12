@@ -46,7 +46,7 @@ const QuickActions = ({ className, actions, position, ...others }) => {
               title={label}
               onClick={onClick}
             >
-              {cloneElement(icon, { size: 'lg', 'aria-hidden': true })}
+              {icon && cloneElement(icon, { size: 'lg', 'aria-hidden': true })}
             </Button>
           );
         })}

@@ -67,22 +67,22 @@ const constwrapperStyle = {
         {
           label: 'Save',
           icon: <Icon icon={faSave} />,
-          onClick: () => {},
+          onClick: () => console.log('Save'),
         },
         {
           label: 'Copy',
           icon: <Icon icon={faCopy} />,
-          onClick: () => {},
+          onClick: () => console.log('Copy'),
         },
         {
           label: 'Print',
           icon: <Icon icon={faPrint} />,
-          onClick: () => {},
+          onClick: () => console.log('Print'),
         },
         {
           label: 'Share',
           icon: <Icon icon={faShareAlt} />,
-          onClick: () => {},
+          onClick: () => console.log('Share'),
         },
       ]}
     />
