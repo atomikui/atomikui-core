@@ -19,11 +19,11 @@
     border: 0;
     border-radius: 50%;
     cursor: pointer;
-    height: rem(48);
-    margin: rem(0 5 0 0);
+    height: rem(56);
+    margin: rem(0 6 0 0);
     padding: 0;
     transition: all 0.15s linear;
-    width: rem(48);
+    width: rem(56);
 
     &:active,
     &:focus,
@@ -45,14 +45,14 @@
 
     & > * {
       border-radius: 50%;
-      height: rem(36);
+      height: rem(40);
       opacity: 0;
-      margin: rem(5);
+      margin: rem(6);
       padding: 0;
       pointer-events: none;
       transform: scale(0);
       transition: all 0.1s linear;
-      width: rem(36);
+      width: rem(42);
 
       &:nth-child(2) {
         transition-delay: 0.1s;
@@ -80,7 +80,7 @@
     flex-direction: row-reverse;
 
     & > .atomikui-quick-actions__toggle {
-      margin: rem(0 0 0 5);
+      margin: rem(0 0 0 6);
     }
 
     & > .atomikui-quick-actions__action-btns {
@@ -92,7 +92,7 @@
     flex-direction: column-reverse;
 
     & > .atomikui-quick-actions__toggle {
-      margin: rem(5 0 0);
+      margin: rem(6 0 0);
     }
 
     & > .atomikui-quick-actions__action-btns {

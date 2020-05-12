@@ -34,7 +34,7 @@ const QuickActions = ({ className, actions, position, ...others }) => {
           },
         })}
       >
-        <Icon icon={faPlus} size="lg" color="white" />
+        <Icon icon={faPlus} size="2x" color="white" />
       </button>
       <div className="atomikui-quick-actions__action-btns" role="menu">
         {actions.map(({ icon, label, onClick }) => {
