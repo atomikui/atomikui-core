@@ -38,9 +38,11 @@
     margin-left: rem(16);
   }
 
-  svg {
-    path {
-      fill: $gray-500;
+  &__action-item {
+    svg {
+      path {
+        fill: $gray-500;
+      }
     }
   }
 }

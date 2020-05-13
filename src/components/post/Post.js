@@ -43,7 +43,12 @@ const Post = ({
           <List type="horizontal" className="atomikui-post__actions">
             {facebookLink && (
               <ListItem>
-                <Link id="facebook" href={facebookLink} title="Facebook">
+                <Link
+                  className="atomikui-post__action-item"
+                  id="facebook"
+                  href={facebookLink}
+                  title="Facebook"
+                >
                   <svg viewBox="0 0 128 128" width="24" height="24">
                     <path d="M116.42,5.07H11.58a6.5,6.5,0,0,0-6.5,6.5V116.42a6.5,6.5,0,0,0,6.5,6.5H68V77.29H52.66V59.5H68V46.38c0-15.22,9.3-23.51,22.88-23.51a126,126,0,0,1,13.72.7V39.48H95.21c-7.39,0-8.82,3.51-8.82,8.66V59.5H104l-2.29,17.79H86.39v45.64h30a6.51,6.51,0,0,0,6.5-6.5V11.58A6.5,6.5,0,0,0,116.42,5.07Z"></path>
                   </svg>
@@ -52,7 +57,12 @@ const Post = ({
             )}
             {twitterLink && (
               <ListItem>
-                <Link id="twitter" href={twitterLink} title="Twitter">
+                <Link
+                  className="atomikui-post__action-item"
+                  id="twitter"
+                  href={twitterLink}
+                  title="Twitter"
+                >
                   <svg viewBox="0 0 128 110" width="24" height="24">
                     <path
                       d="M40.58,115.3c47.64,0,73.69-39.47,73.69-73.69,0-1.12,0-2.24-.07-3.35a52.7,52.7,0,0,0,12.92-13.41,51.7,51.7,0,0,1-14.87,4.08A26,26,0,0,0,123.63,14.6a51.9,51.9,0,0,1-16.45,6.29A25.92,25.92,0,0,0,63.05,44.51,73.53,73.53,0,0,1,9.67,17.45a25.92,25.92,0,0,0,8,34.58A25.71,25.71,0,0,1,6,48.78c0,.11,0,.22,0,.33A25.91,25.91,0,0,0,26.73,74.5a25.86,25.86,0,0,1-11.7.44,25.93,25.93,0,0,0,24.2,18A52,52,0,0,1,7.06,104a52.72,52.72,0,0,1-6.18-.36,73.32,73.32,0,0,0,39.7,11.63"
@@ -64,7 +74,12 @@ const Post = ({
             )}
             {linkedInLink && (
               <ListItem>
-                <Link id="linkedin" href={linkedInLink} title="LinkedIn">
+                <Link
+                  className="atomikui-post__action-item"
+                  id="linkedin"
+                  href={linkedInLink}
+                  title="LinkedIn"
+                >
                   <svg viewBox="0 0 430.117 430.118" width="24" height="24">
                     <path
                       id="original"
@@ -77,6 +92,7 @@ const Post = ({
             )}
             <ListItem>
               <Button
+                className="atomikui-post__action-item"
                 id="bookmark"
                 theme="link"
                 title={bookmarked ? 'Unsave Story' : 'Save Story'}

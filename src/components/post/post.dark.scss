@@ -6,9 +6,11 @@
     color: $white;
   }
 
-  svg {
-    path {
-      fill: $white;
+  &__action-item {
+    svg {
+      path {
+        fill: $white;
+      }
     }
   }
 }
