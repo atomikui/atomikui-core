@@ -37,4 +37,10 @@
   &__actions {
     margin-left: rem(16);
   }
+
+  svg {
+    path {
+      fill: $gray-500;
+    }
+  }
 }

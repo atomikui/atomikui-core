@@ -1,0 +1,14 @@
+.atomikui-post {
+  color: $white;
+
+  &__title,
+  &__author-info > a {
+    color: $white;
+  }
+
+  svg {
+    path {
+      fill: $white;
+    }
+  }
+}
