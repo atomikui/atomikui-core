@@ -7,7 +7,7 @@ const replies = [
   <Comment
     avatar="mary.png"
     author="Mary"
-    authorLink="/path/to/author/page"
+    authorLink="/profile/mary"
     metadata="Today at 11:17am"
     replyAction={() => {}}
   >
@@ -16,7 +16,7 @@ const replies = [
   <Comment
     avatar="steve.png"
     author="Steve Johnson"
-    authorLink="/path/to/author/page"
+    authorLink="/profile/steve-johnson"
     metadata="Yesterday at 3:21pm"
     replyAction={() => {}}
   >
@@ -28,7 +28,7 @@ const replies = [
   <Comment
     avatar="bob.png"
     author="Bob Smith"
-    authorLink="/path/to/author/page"
+    authorLink="/profile/bob-smith"
     metadata="3 days ago at 5:35pm"
     replyAction={() => {}}
     replies={replies}
