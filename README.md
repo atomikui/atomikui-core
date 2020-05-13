@@ -41,8 +41,8 @@
         s17.067,7.656,17.067,17.067S111.688,119.346,102.278,119.346z"/>
   </svg>
   <div style="padding-left: 20px; line-height: 1;">
-    # Atomik UI
-    #### A Library of React Components for Rapid Application Development
+    <h1 id="brand-heading">Atomik UI</h1>
+    <h2 id="brand-subheading">A Library of React Components for Rapid Application Development</h2>
   </div>
 </div>
 

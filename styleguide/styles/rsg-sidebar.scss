@@ -17,13 +17,13 @@ div[class^='rsg--sidebar'] {
     background-size: rem(32);
     color: $white;
     display: inline-block;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-    font-size: rem(22);
+    font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
+    font-size: rem(32);
     font-weight: 400;
-    height: rem(32);
     margin: 0 auto;
-    padding-left: rem(38);
+    padding-left: rem(40);
     text-transform: uppercase;
+    line-height: 1;
 
     & ~ p {
       background: $blue-200;

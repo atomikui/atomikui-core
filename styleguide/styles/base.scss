@@ -1,3 +1,17 @@
 body {
   line-height: 1.4;
 }
+
+#brand-heading,
+#brand-subheading {
+  font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
+}
+
+#brand-heading {
+  font-size: rem(56);
+  text-transform: uppercase;
+}
+
+#brand-subheading {
+  font-size: rem(28);
+}
