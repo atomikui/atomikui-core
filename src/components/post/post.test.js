@@ -64,6 +64,19 @@ describe('<Post />', () => {
     expect(post.length).toBe(1);
   });
 
+  it('Should render comments', () => {
+    expect(post.find('.atomikui-post__comments').find('Comment').length).toBe(
+      1,
+    );
+  });
+
+  it('Should render text if there are no comments', () => {
+    post.setProps({ comments: [] });
+    expect(post.find('.atomikui-post__comments').text()).toBe(
+      'No comments to show',
+    );
+  });
+
   it('Should trigger onBookmark callback', () => {
     post.find('button#bookmark').simulate('click');
     expect(onBookmarkSpy.withArgs(true).called).toBe(true);
