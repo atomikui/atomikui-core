@@ -3,13 +3,14 @@
   display: flex;
 
   &__avatar {
-    flex: 0 rem(50);
+    flex: 0 0 rem(50);
   }
 
   &__title {
     display: inline-block;
     color: $black;
     font-weight: $font-bold;
+    margin-right: rem(12);
 
     & > a {
       color: $black;
@@ -19,7 +20,6 @@
   &__metadata {
     color: $gray-300;
     display: inline-block;
-    margin-left: rem(12);
   }
 
   &__text {
