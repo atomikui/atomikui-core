@@ -126,12 +126,4 @@
       @include actionButtonsActiveState();
     }
   }
-
-  // & > .atomikui-quick-actions__toggle:focus {
-  //   transform: rotate(45deg);
-
-  //   & ~ .atomikui-quick-actions__action-btns {
-  //     @include actionButtonsActiveState();
-  //   }
-  // }
 }

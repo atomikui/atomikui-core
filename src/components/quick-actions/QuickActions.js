@@ -5,23 +5,38 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
+// IN PROGRESS
+// TODO: Keyboard accessibility
+
 const QuickActions = ({ className, actions, position, ...others }) => {
   const parentRef = useRef();
   const numActions = actions.length;
+
+  const [focusedActionIndex, setFocusedActionIndex] = useState(-1);
 
   if (numActions < 3 || numActions > 6) {
     throw new Error(`Expected 3-6 actions, but got ${numActions}`);
   }
 
+  const onFocus = () => {
+    parentRef.current.focus();
+    setFocusedActionIndex(-1);
+  };
+
   const onBlur = () => {
+    parentRef.current.focus();
     parentRef.current.blur();
+    setFocusedActionIndex(-1);
   };
 
   const handleActionClick = (onClick) => {
-    parentRef.current.focus();
-    parentRef.current.blur();
+    onBlur();
     onClick();
   };
+
+  useEffect(() => {
+    // focusedActionIndex
+  }, []);
 
   return (
     <div
@@ -31,6 +46,7 @@ const QuickActions = ({ className, actions, position, ...others }) => {
         [`atomikui-quick-actions--${position}`]: position,
       })}
       onMouseLeave={onBlur}
+      onFocus={onFocus}
       {...others}
     >
       <button
@@ -44,6 +60,7 @@ const QuickActions = ({ className, actions, position, ...others }) => {
         {actions.map(({ icon, label, onClick }) => {
           return (
             <Button
+              tabIndex="-1"
               role="menuitem"
               key={Math.random()}
               title={label}

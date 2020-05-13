@@ -80,6 +80,7 @@ a.atomikui-btn {
 
       @if ($variant == link) {
         font-size: inherit;
+        font-weight: $font-normal;
         min-height: auto;
 
         &:hover {
