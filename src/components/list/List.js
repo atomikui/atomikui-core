@@ -32,7 +32,13 @@ List.propTypes = {
   /** List children */
   children: PropTypes.node,
   /** Defines the type of list */
-  type: PropTypes.oneOf(['bulleted', 'ordered', 'horizontal', 'menu']),
+  type: PropTypes.oneOf([
+    'bulleted',
+    'ordered',
+    'horizontal',
+    'horizontal-flush',
+    'menu',
+  ]),
 };
 
 List.defaultProps = {

@@ -22,6 +22,12 @@
     }
   }
 
+  &--horizontal-flush {
+    & > * {
+      display: inline-block;
+    }
+  }
+
   &--align-center {
     text-align: center;
   }
