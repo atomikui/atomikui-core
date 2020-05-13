@@ -5,8 +5,7 @@ h4,
 h5,
 h6 {
   &[class^='rsg--'] {
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+    font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
   }
 }
 
@@ -14,8 +13,16 @@ h1#section-getting-started {
   display: none;
 }
 
-h1[class^='rsg--'] {
-  font-size: rem(40);
+h2[class^='rsg--'] {
+  font-size: rem(50);
+}
+
+h3[class^='rsg--'] {
+  font-size: rem(30);
+}
+
+h4[class^='rsg--'] {
+  font-size: rem(20);
 }
 
 [class^='rsg--preview'] {
