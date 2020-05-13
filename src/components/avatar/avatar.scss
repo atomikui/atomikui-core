@@ -2,10 +2,6 @@
   align-items: center;
   display: inline-flex;
 
-  &--flip {
-    flex-direction: row-reverse;
-  }
-
   &__content {
     align-items: center;
     background-color: $gray-100;
@@ -37,6 +33,18 @@
     font-size: rem(16);
     padding: rem(0 8);
     text-transform: uppercase;
+  }
+
+  &--flip {
+    flex-direction: row-reverse;
+  }
+
+  &--square > &__content {
+    border-radius: 0;
+  }
+
+  &--bevel > &__content {
+    border-radius: rem(8);
   }
 
   &--sm > &__content {

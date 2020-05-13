@@ -18,19 +18,21 @@ const Comment = ({
 }) => {
   return (
     <div className={classnames('atomikui-comment', className)} {...others}>
-      <Avatar src={avatar} alt={author} />
+      <div className="atomikui-comment__avatar">
+        <Avatar src={avatar} alt={author} theme="bevel" />
+      </div>
       <div className="atomikui-comment__content">
-        <Link className="atomikui-comment__title" href={authorLink}>
-          {author}
-        </Link>
+        <div className="atomikui-comment__title">
+          <Link href={authorLink}>{author}</Link>
+        </div>
         <div className="atomikui-comment__metadata">{metadata}</div>
         <div className="atomikui-comment__text">{children}</div>
-        {replies.length > 0 && (
-          <div className="atomikui-comment__replies"></div>
-        )}
         <Button theme="link" onClick={replyAction}>
           Reply
         </Button>
+        {replies.length > 0 && (
+          <div className="atomikui-comment__replies">{replies}</div>
+        )}
       </div>
     </div>
   );

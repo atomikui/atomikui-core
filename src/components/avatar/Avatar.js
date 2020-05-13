@@ -10,6 +10,7 @@ const Avatar = ({
   label,
   size,
   src,
+  theme,
   variant,
   ...others
 }) => {
@@ -18,6 +19,7 @@ const Avatar = ({
       className={classnames('atomikui-avatar', {
         'atomikui-avatar--flip': flipLabel,
         [`atomikui-avatar--${size}`]: size,
+        [`atomikui-avatar--${theme}`]: theme,
       })}
       {...others}
     >
@@ -49,6 +51,8 @@ Avatar.propTypes = {
   size: PropTypes.oneOf(['sm', 'lg']),
   /** Image to be displayed aiside Avatar */
   src: PropTypes.string,
+  /** Avatar theme variation */
+  theme: PropTypes.oneOf(['square', 'bevel']),
   /** Avatar background color theme variation */
   variant: PropTypes.oneOf([
     'red',
@@ -74,6 +78,7 @@ Avatar.defaultProps = {
   label: '',
   size: null,
   src: '',
+  theme: null,
   variant: null,
 };
 

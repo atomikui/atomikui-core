@@ -1,2 +1,31 @@
 .atomikui-comment {
+  align-items: flex-start;
+  display: flex;
+
+  &__avatar {
+    flex: 0 rem(50);
+  }
+
+  &__title {
+    display: inline-block;
+
+    & > a {
+      color: $black;
+      font-weight: $font-bold;
+    }
+  }
+
+  &__metadata {
+    color: $gray-300;
+    display: inline-block;
+    margin-left: rem(12);
+  }
+
+  &__text {
+    padding: rem(4 0);
+  }
+
+  &__replies > * {
+    margin-top: rem(16);
+  }
 }
