@@ -10,9 +10,13 @@ configure({ adapter: new Adapter() });
 describe('<Post />', () => {
   let post;
   let onBookmarkSpy;
+  let onReportSpy;
+  let onCommentSpy;
 
   beforeEach(() => {
     onBookmarkSpy = sinon.spy();
+    onReportSpy = sinon.spy();
+    onCommentSpy = sinon.spy();
 
     post = mount(
       <Post
@@ -25,6 +29,8 @@ describe('<Post />', () => {
         linkedInLink="linkedin/link"
         twitterLink="/twitter/link"
         onBookmark={onBookmarkSpy}
+        onReport={onReportSpy}
+        onComment={onCommentSpy}
         comments={[
           <Comment
             key="comment-1"
@@ -58,8 +64,18 @@ describe('<Post />', () => {
     expect(post.length).toBe(1);
   });
 
-  it('Should trigger onBookmark callback when post is bookmarked', () => {
+  it('Should trigger onBookmark callback', () => {
     post.find('button#bookmark').simulate('click');
-    expect(onBookmarkSpy.called).toBe(true);
+    expect(onBookmarkSpy.withArgs(true).called).toBe(true);
+  });
+
+  it('Should trigger onReport callback', () => {
+    post.find('button#report-btn').simulate('click');
+    expect(onReportSpy.called).toBe(true);
+  });
+
+  it('Should trigger onComment callback', () => {
+    post.find('button#comment-btn').simulate('click');
+    expect(onCommentSpy.called).toBe(true);
   });
 });

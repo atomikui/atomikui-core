@@ -13,6 +13,8 @@ import { Post, Comment } from '@alaneicker/atomik-ui';
   linkedInLink="linkedin/link"
   twitterLink="/twitter/link"
   onBookmark={(isBookmarked) => console.log(isBookmarked)}
+  onComment={() => console.log('initiailizing comment')}
+  onReport={() => console.log('submitting report')}
   comments={[
     <Comment
       key="comment-1"

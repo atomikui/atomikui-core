@@ -18,6 +18,8 @@ const Post = ({
   linkedInLink,
   onBookmark,
   metadata,
+  onComment,
+  onReport,
   title,
   twitterLink,
   ...others
@@ -119,7 +121,19 @@ const Post = ({
       </div>
       <div className="atomikui-post__bd">{children}</div>
       <div className="atomikui-post__ft">
-        <Button size="md">Leave a Comment</Button>
+        <List type="horizontal">
+          <ListItem>
+            <Button id="comment-btn" size="md" onClick={onComment}>
+              Leave a Comment
+            </Button>
+          </ListItem>
+          <ListItem>
+            <Button id="report-btn" theme="link" onClick={onReport}>
+              Report
+            </Button>
+          </ListItem>
+        </List>
+
         {!!comments.length && (
           <>
             <h3 className="margin-top-36 margin-bottom-24">Comments</h3>
@@ -154,6 +168,10 @@ Post.propTypes = {
   onBookmark: PropTypes.func,
   /** Comment information. E.g. date or time of comment */
   metadata: PropTypes.string,
+  /** Triggers callback onComment */
+  onComment: PropTypes.func,
+  /** Triggers callback onReport */
+  onReport: PropTypes.func,
   /** Post title */
   title: PropTypes.string,
   /** Twitter link */
@@ -170,8 +188,10 @@ Post.defaultProps = {
   facebookLink: '',
   isBookmarked: false,
   linkedInLink: '',
+  onComment() {},
   onBookmark() {},
   metadata: '',
+  onReport() {},
   title: '',
   twitterLink: '',
 };
