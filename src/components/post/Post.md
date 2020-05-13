@@ -1,7 +1,7 @@
 Content displayed for public viewing. E.g a blog post.
 
 ```jsx
-import { Post } from '@alaneicker/atomik-ui';
+import { Post, Comment } from '@alaneicker/atomik-ui';
 
 <Post
   title="Getting Started With React Functional Components"
@@ -13,6 +13,17 @@ import { Post } from '@alaneicker/atomik-ui';
   linkedInLink="linkedin/link"
   twitterLink="/twitter/link"
   onBookmark={(isBookmarked) => console.log(isBookmarked)}
+  comments={[
+    <Comment
+      avatar="mary.png"
+      author="Mary"
+      authorLink="/profile/mary"
+      metadata="Today at 11:17 AM"
+      replyAction={() => {}}
+    >
+      Awesome post. This article is right on point!
+    </Comment>,
+  ]}
 >
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in lacus

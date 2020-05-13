@@ -109,7 +109,12 @@ const Post = ({
       <div className="atomikui-post__bd">{children}</div>
       <div className="atomikui-post__ft">
         <Button size="md">Leave a Reply</Button>
-        {!!comments.length && <div className="margin-top-36">{comments}</div>}
+        {!!comments.length && (
+          <>
+            <h3 className="margin-top-36 margin-bottom-24">Comments</h3>
+            <div>{comments}</div>
+          </>
+        )}
       </div>
     </div>
   );
