@@ -8,7 +8,7 @@ const replies = [
     avatar="mary.png"
     author="Mary"
     authorLink="/path/to/author/page"
-    metadata="Yesterday at 11:17pm"
+    metadata="Today at 11:17am"
     replyAction={() => {}}
   >
     I agree. Great post!
@@ -17,7 +17,7 @@ const replies = [
     avatar="steve.png"
     author="Steve Johnson"
     authorLink="/path/to/author/page"
-    metadata="Today at 3:21pm"
+    metadata="Yesterday at 3:21pm"
     replyAction={() => {}}
   >
     Great content like this is hard to find. I look forward to more posts.
@@ -29,7 +29,7 @@ const replies = [
     avatar="bob.png"
     author="Bob Smith"
     authorLink="/path/to/author/page"
-    metadata="Today at 5:35pm"
+    metadata="3 days ago at 5:35pm"
     replyAction={() => {}}
     replies={replies}
   >
