@@ -27,7 +27,11 @@ const Comment = ({
         </div>
         <div className="atomikui-comment__metadata">{metadata}</div>
         <div className="atomikui-comment__text">{children}</div>
-        <Button theme="link" onClick={replyAction}>
+        <Button
+          className="atomikui-comment__reply-btn"
+          theme="link"
+          onClick={replyAction}
+        >
           Reply
         </Button>
         {!!replies.length && (
