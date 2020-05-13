@@ -24,6 +24,7 @@ export { default as Media } from './components/media';
 export { default as Modal } from './components/modal';
 export { default as Overlay } from './components/overlay';
 export { default as Pagination } from './components/pagination';
+export { default as Post } from './components/post';
 export { default as Price } from './components/price';
 export { default as ProgressBar } from './components/progress-bar';
 // export { default as QuickActions } from './components/quick-actions';

@@ -9,6 +9,7 @@ module.exports = {
       'src/components/accordion/Accordion.js',
       'src/components/accordion/AccordionItem.js',
       'src/components/comment/Comment.js',
+      'src/components/post/Post.js',
       'src/components/tabs/Tabs.js',
       'src/components/tabs/Tab.js',
       'src/components/tabs/TabPanel.js',

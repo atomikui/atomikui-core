@@ -1,0 +1,40 @@
+.atomikui-post {
+  &__bd {
+    margin: rem(36 0 24);
+  }
+
+  &__title {
+    font-size: rem(32);
+    font-weight: $font-medium;
+  }
+
+  &__metadata {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(24 0 0);
+  }
+
+  &__post-info {
+    align-items: center;
+    display: flex;
+  }
+
+  &__author-info {
+    padding-left: rem(12);
+
+    & > a {
+      color: $black;
+      font-weight: $font-bold;
+    }
+  }
+
+  &__post-metadata {
+    color: $gray-300;
+    font-size: rem(13);
+  }
+
+  &__actions {
+    margin-left: rem(16);
+  }
+}
