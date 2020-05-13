@@ -1,4 +1,4 @@
-Content displayed for public viewing. E.g a blog post.
+Content displayed for public viewing, such as a blog post.
 
 ```jsx
 import { Post, Comment } from '@alaneicker/atomik-ui';
