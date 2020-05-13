@@ -15,6 +15,7 @@ import { Post, Comment } from '@alaneicker/atomik-ui';
   onBookmark={(isBookmarked) => console.log(isBookmarked)}
   comments={[
     <Comment
+      key="comment-1"
       avatar="mary.png"
       author="Mary"
       authorLink="/profile/mary"
