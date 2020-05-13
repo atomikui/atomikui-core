@@ -23,7 +23,7 @@ const Comment = ({
       </div>
       <div className="atomikui-comment__content">
         <div className="atomikui-comment__title">
-          <Link href={authorLink}>{author}</Link>
+          {authorLink ? <Link href={authorLink}>{author}</Link> : author}
         </div>
         <div className="atomikui-comment__metadata">{metadata}</div>
         <div className="atomikui-comment__text">{children}</div>

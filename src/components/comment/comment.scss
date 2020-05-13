@@ -8,10 +8,11 @@
 
   &__title {
     display: inline-block;
+    color: $black;
+    font-weight: $font-bold;
 
     & > a {
       color: $black;
-      font-weight: $font-bold;
     }
   }
 
