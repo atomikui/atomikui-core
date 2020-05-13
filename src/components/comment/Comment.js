@@ -30,7 +30,7 @@ const Comment = ({
         <Button theme="link" onClick={replyAction}>
           Reply
         </Button>
-        {replies.length > 0 && (
+        {!!replies.length && (
           <div className="atomikui-comment__replies">{replies}</div>
         )}
       </div>
