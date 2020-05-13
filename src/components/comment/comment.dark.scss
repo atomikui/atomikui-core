@@ -1,2 +1,7 @@
 .atomikui-comment {
+  color: $white;
+
+  &__title > a {
+    color: $white;
+  }
 }

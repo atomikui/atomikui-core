@@ -1,7 +1,7 @@
 A comment displays user feedback about site content such as a blog post or a news article.
 
 ```jsx
-import { Comment, Avatar } from '@alaneicker/atomik-ui';
+import { Comment } from '@alaneicker/atomik-ui';
 
 const replies = [
   <Comment
