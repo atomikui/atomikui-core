@@ -12,7 +12,6 @@ module.exports = {
       'src/components/modal/Modal.js',
       'src/components/overlay/Overlay.js',
       'src/components/sticky/Sticky.js',
-      // 'src/components/quick-actions/QuickActions.js',
     ];
   },
 };
