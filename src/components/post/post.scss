@@ -39,7 +39,8 @@
   }
 
   &__action-item {
-    padding: rem(8);
+    padding: rem(2 8);
+
     svg {
       path {
         fill: $gray-500;
