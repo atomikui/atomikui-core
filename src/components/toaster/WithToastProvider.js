@@ -1,9 +1,9 @@
 import React, { useState, useMemo } from 'react';
-import { createPortal } from 'react-dom';
 import generateId from '../../utilities/generateId';
 import ToastContext from './toast-context';
 import Toaster from './Toaster';
 import Toast from './Toast';
+import Portal from '../portal';
 
 const withToastProvider = (Component) => {
   const WithToastProvider = (props) => {
@@ -32,7 +32,7 @@ const withToastProvider = (Component) => {
     return (
       <ToastContext.Provider value={providerValue}>
         <Component {...props} />
-        {createPortal(
+        <Portal container={document.body}>
           <Toaster position={position}>
             {toasts.map(({ id, content, type }, i) => {
               return (
@@ -48,9 +48,8 @@ const withToastProvider = (Component) => {
                 </Toast>
               );
             })}
-          </Toaster>,
-          document.body,
-        )}
+          </Toaster>
+        </Portal>
       </ToastContext.Provider>
     );
   };

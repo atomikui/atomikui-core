@@ -1,7 +1,7 @@
 import React, { Children, cloneElement, useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import Portal from '../portal';
 
 const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
   const [tooltip, setToolTip] = useState(null);
@@ -136,7 +136,7 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
           }),
         });
       })}
-      {createPortal(tooltip, document.body)}
+      <Portal container={document.body}>{tooltip}</Portal>
     </>
   );
 };
