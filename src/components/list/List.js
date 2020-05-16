@@ -2,7 +2,7 @@ import React, { Fragment, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const List = ({ align, children, className, type, ...others }) => {
+const List = ({ align, children, className, loose, type, ...others }) => {
   const Ul = type === 'ordered' ? 'ol' : 'ul';
   const isMenu = type === 'menu';
   const Wrapper = isMenu ? 'nav' : Fragment;
@@ -13,6 +13,7 @@ const List = ({ align, children, className, type, ...others }) => {
         className={classnames('atomikui-list', className, {
           [`atomikui-list--${type}`]: type,
           [`atomikui-list--align-${align}`]: align,
+          'atomikui-list--loose': loose,
         })}
         {...others}
       >
@@ -31,6 +32,8 @@ List.propTypes = {
   className: PropTypes.string,
   /** List children */
   children: PropTypes.node,
+  /** Adds 8px of spacing between list items */
+  loose: PropTypes.bool,
   /** Defines the type of list */
   type: PropTypes.oneOf([
     'bulleted',
@@ -45,6 +48,7 @@ List.defaultProps = {
   align: null,
   className: '',
   children: <></>,
+  loose: false,
   type: null,
 };
 
