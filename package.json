@@ -1,7 +1,7 @@
 {
   "name": "@alaneicker/atomik-ui",
   "description": "A Comprehensive Library of React Components",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "main": "./dist/index.js",
   "engines": {
     "node": ">=12.16.2",
