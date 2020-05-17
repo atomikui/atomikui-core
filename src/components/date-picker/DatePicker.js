@@ -10,7 +10,6 @@ import Button from '../button';
 import Label from '../label';
 import validateDate from '../../utilities/validate-date';
 import Overlay from '../overlay';
-import 'react-calendar/dist/Calendar.css';
 
 const DatePicker = ({
   className,

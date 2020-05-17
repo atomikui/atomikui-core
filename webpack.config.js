@@ -43,7 +43,7 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader',
-        include: /flexboxgrid|react-calendar/,
+        include: /flexboxgrid/,
       },
       {
         test: /\.(s?css|sass)$/,
