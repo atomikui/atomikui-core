@@ -54,7 +54,7 @@ describe('<CheckOption />', () => {
     });
 
     expect(
-      checkOption.find('label.atomikui-form-option').hasClass('has-error'),
+      checkOption.find('label.atomikui-check-option').hasClass('has-error'),
     ).toBe(true);
     expect(checkOption.find('Hint').length).toBe(1);
     expect(checkOption.find('Hint').text()).toBe('This field is required');
@@ -71,7 +71,7 @@ describe('<CheckOption />', () => {
     checkOption.setProps({ checked: true });
 
     expect(
-      checkOption.find('.atomikui-form-option__icon').find('svg').length,
+      checkOption.find('.atomikui-check-option__icon').find('svg').length,
     ).toBe(1);
   });
 });
