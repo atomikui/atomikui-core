@@ -34,10 +34,10 @@ const CheckOption = ({
     <>
       <Label
         htmlFor={uid}
-        className={classnames('atomikui-form-option', className, {
+        className={classnames('atomikui-check-option', className, {
           'has-error': hasError,
           'is-disabled': disabled,
-          'atomikui-form-option--radio': type === 'radio',
+          'atomikui-check-option--radio': type === 'radio',
         })}
       >
         <input
@@ -51,7 +51,7 @@ const CheckOption = ({
           required
           {...others}
         />
-        <span className="atomikui-form-option__icon">
+        <span className="atomikui-check-option__icon">
           {checked && <Icon icon={faCheck} color="white" />}
         </span>
         {label}

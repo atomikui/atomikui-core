@@ -1,11 +1,11 @@
-.atomikui-form-option {
+.atomikui-check-option {
   &__icon {
     background: $dark-background-gray;
     border-color: $gray-300;
   }
 
   &.is-disabled > input {
-    & + .atomikui-form-option__icon {
+    & + .atomikui-check-option__icon {
       background: $dark-background-gray;
       border: 0;
     }
