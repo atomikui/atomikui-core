@@ -9,7 +9,7 @@ import generateId from '../../utilities/generateId';
 
 const types = ['checkbox', 'radio'];
 
-const FormOption = ({
+const CheckOption = ({
   className,
   checked,
   disabled,
@@ -70,7 +70,7 @@ const FormOption = ({
   );
 };
 
-FormOption.propTypes = {
+CheckOption.propTypes = {
   /** Specifies custom component classes. */
   className: PropTypes.string,
   /** Specifies the form option checked state. */
@@ -97,7 +97,7 @@ FormOption.propTypes = {
   type: PropTypes.oneOf(types),
 };
 
-FormOption.defaultProps = {
+CheckOption.defaultProps = {
   className: '',
   checked: false,
   disabled: false,
@@ -112,4 +112,4 @@ FormOption.defaultProps = {
   type: 'checkbox',
 };
 
-export default FormOption;
+export default CheckOption;

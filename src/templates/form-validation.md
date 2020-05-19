@@ -9,7 +9,7 @@ import {
   Dropdown,
   FileUpload,
   FormField,
-  FormOption,
+  CheckOption,
   RangeSlider,
 } from '@alaneicker/atomik-ui';
 
@@ -160,7 +160,7 @@ const {
       />
     </div>
     <div className="margin-bottom-24 margin-top-24">
-      <FormOption
+      <CheckOption
         name="notification_subscribe"
         label="Sign me up for job notifications"
         onChange={() => setSendNotifications(!sendNotifications)}

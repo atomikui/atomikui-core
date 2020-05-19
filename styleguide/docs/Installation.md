@@ -29,5 +29,5 @@ import '@alaneicker/atomik-ui/dist/styles/main.mim.css';
 It is recommended to import components as needed instead of importing the whole Atomik UI.
 
 ```html
-import { FormField, FormOption, Dropdown } from '@alaneicker/atomik-ui';
+import { FormField, CheckOption, Dropdown } from '@alaneicker/atomik-ui';
 ```

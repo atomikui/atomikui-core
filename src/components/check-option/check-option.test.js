@@ -1,0 +1,77 @@
+import Adapter from 'enzyme-adapter-react-16';
+import React from 'react';
+import sinon from 'sinon';
+import { mount, configure } from 'enzyme';
+import CheckOption from './CheckOption';
+
+configure({ adapter: new Adapter() });
+
+describe('<CheckOption />', () => {
+  let checkOption;
+  let checkOptionSpy;
+
+  beforeEach(() => {
+    checkOptionSpy = sinon.spy();
+
+    checkOption = mount(
+      <CheckOption
+        label="I agree to the terms and conditions"
+        onChange={checkOptionSpy}
+      />,
+    );
+  });
+
+  it('Should render without errors', () => {
+    expect(checkOption.length).toBe(1);
+  });
+
+  it('Should render checkbox by default', () => {
+    checkOption.setProps({ type: 'text' });
+
+    expect(checkOption.find('input').prop('type')).toBe('checkbox');
+  });
+
+  it('Should render radio button', () => {
+    checkOption.setProps({ type: 'radio' });
+
+    expect(checkOption.find('input').prop('type')).toBe('radio');
+  });
+
+  it('Should set name attribute based of ID if no name prop is not set', () => {
+    expect(checkOption.find('input').prop('name').match(/uid-/)).not.toBeNull();
+  });
+
+  it('Should trigger onChange callback', () => {
+    checkOption.find('input').simulate('change', { checked: true });
+
+    expect(checkOptionSpy.called).toBe(true);
+  });
+
+  it('Should handle an error', () => {
+    checkOption.setProps({
+      hasError: true,
+      errorText: 'This field is required',
+    });
+
+    expect(
+      checkOption.find('label.atomikui-form-option').hasClass('has-error'),
+    ).toBe(true);
+    expect(checkOption.find('Hint').length).toBe(1);
+    expect(checkOption.find('Hint').text()).toBe('This field is required');
+  });
+
+  it('Should render a hint', () => {
+    checkOption.setProps({ helpText: 'Some helpful text' });
+
+    expect(checkOption.find('Hint').length).toBe(1);
+    expect(checkOption.find('Hint').text()).toBe('Some helpful text');
+  });
+
+  it('Should display an Icon if checked', () => {
+    checkOption.setProps({ checked: true });
+
+    expect(
+      checkOption.find('.atomikui-form-option__icon').find('svg').length,
+    ).toBe(1);
+  });
+});

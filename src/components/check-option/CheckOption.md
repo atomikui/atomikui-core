@@ -1,14 +1,14 @@
-The FormOption component is a form control that renders a checkbox and radio button. Use this component when displaying a list of choices.
+The CheckOption component is a form control that renders a checkbox and radio button. Use this component when displaying a list of choices.
 
 ### Checkbox
 
 ```jsx
 import { useState } from 'react';
-import { FormOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@alaneicker/atomik-ui';
 
 const [checked, setChecked] = useState(false);
 
-<FormOption
+<CheckOption
   label="I agree to the terms & conditions"
   checked={checked}
   name="checkbox1"
@@ -20,25 +20,25 @@ const [checked, setChecked] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { FormOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@alaneicker/atomik-ui';
 
-const [formOptions, setFormOptions] = useState([
+const [checkOptions, setCheckOptions] = useState([
   { label: 'Option 1', name: 'radio1', checked: true },
   { label: 'Option 2', name: 'radio1', checked: false },
   { label: 'Option 3', name: 'radio1', checked: false },
 ]);
 
 const onChange = (index) => {
-  const updatesFormOprions = formOptions.map((formOption, i) => {
-    return { ...formOption, checked: i === index ? true : false };
+  const updatesCheckOprions = checkOptions.map((checkOption, i) => {
+    return { ...checkOption, checked: i === index ? true : false };
   });
 
-  setFormOptions(updatesFormOprions);
+  setCheckOptions(updatesCheckOprions);
 };
 
 <>
-  {formOptions.map(({ label, name, checked }, index) => (
-    <FormOption
+  {checkOptions.map(({ label, name, checked }, index) => (
+    <CheckOption
       key={`form-option-${index}`}
       type="radio"
       label={label}
@@ -54,13 +54,13 @@ const onChange = (index) => {
 
 ```jsx
 import { useState } from 'react';
-import { FormOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@alaneicker/atomik-ui';
 
 const [checkBoxChecked, setCheckboxChecked] = useState(true);
 const [radioChecked, setRadioChecked] = useState(true);
 
 <>
-  <FormOption
+  <CheckOption
     label="I agree to the terms & conditions"
     name="checkbox2"
     errorText="Please agree to the terms"
@@ -68,7 +68,7 @@ const [radioChecked, setRadioChecked] = useState(true);
     checked={!checkBoxChecked}
     onChange={() => setCheckboxChecked(!checkBoxChecked)}
   />
-  <FormOption
+  <CheckOption
     type="radio"
     label="Option 1"
     name="radio2"
@@ -83,30 +83,30 @@ const [radioChecked, setRadioChecked] = useState(true);
 ### Disabled State
 
 ```jsx
-import { FormOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@alaneicker/atomik-ui';
 
 <>
-  <FormOption
+  <CheckOption
     label="I agree to the terms & conditions"
     errorText="Please agree to the terms"
     name="checkbox3"
     disabled
   />
-  <FormOption
+  <CheckOption
     type="radio"
     label="Option 1"
     name="radio3"
     errorText="Select an option"
     disabled
   />
-  <FormOption
+  <CheckOption
     label="I agree to the terms & conditions"
     errorText="Please agree to the terms"
     name="checkbox4"
     disabled
     checked
   />
-  <FormOption
+  <CheckOption
     type="radio"
     label="Option 1"
     name="radio4"
