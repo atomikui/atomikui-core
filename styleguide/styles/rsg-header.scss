@@ -1,0 +1,15 @@
+header[class^='rsg--header'] {
+  border-bottom: rem(2) solid darken($gray-100, 8%);
+  margin-bottom: rem(36);
+  padding-bottom: rem(8);
+
+  h2 {
+    & > a {
+      pointer-events: none;
+    }
+  }
+
+  & > [class^='rsg--wrapper'] {
+    margin-bottom: 0;
+  }
+}

@@ -1,5 +1,18 @@
-table[class^="rsg--table"] {
-  tbody > * + * {
-    border-top: rem(1) solid $gray-100;
+table[class^='rsg--table'] {
+  background: $gray-000;
+
+  thead {
+    border-bottom: rem(2) solid darken($gray-100, 7%);
+  }
+
+  th,
+  td {
+    padding: rem(8 16);
+  }
+
+  tbody {
+    tr > * + * {
+      border-left: rem(1) solid darken($gray-100, 5%);
+    }
   }
 }
