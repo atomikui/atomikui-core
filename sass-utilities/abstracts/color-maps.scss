@@ -33,6 +33,13 @@ $text-colors: (
   navy: $blue-400,
 ) !default;
 
+$price-colors: (
+  light-green: $green-000,
+  green: $green-100,
+  blue: $blue-200,
+  red: $red-100,
+);
+
 $btn-variants: (
   primary: (
     background-color: $color-btn-primary,

@@ -6,6 +6,7 @@ const Tabs = ({
   align,
   children,
   className,
+  comparison,
   initialActiveTab,
   onChange,
   ...others
@@ -27,6 +28,7 @@ const Tabs = ({
       {Children.map(children, (child, index) => {
         return cloneElement(child, {
           active: index === activeTab,
+          comparison,
           onClick: () => {
             return handleChange(index);
           },
@@ -43,6 +45,8 @@ Tabs.propTypes = {
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Adds comparison variant styles */
+  comparison: PropTypes.bool,
   /** The inital active tab */
   initialActiveTab: PropTypes.number,
   /** onChange callback */
@@ -53,6 +57,7 @@ Tabs.defaultProps = {
   align: null,
   children: <></>,
   className: '',
+  comparison: false,
   initialActiveTab: 0,
   onChange() {},
 };

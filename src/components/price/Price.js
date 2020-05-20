@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const Price = ({
   amount,
   className,
+  color,
   currencySymbol,
   label,
   size,
@@ -14,6 +15,7 @@ const Price = ({
     <span
       className={classnames('atomikui-price', className, {
         [`atomikui-price--${size}`]: size,
+        [`atomikui-price--${color}`]: color,
       })}
       {...others}
     >
@@ -27,6 +29,8 @@ const Price = ({
 Price.propTypes = {
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Price color variant */
+  color: PropTypes.oneOf(['light-green', 'green', 'red']),
   /** currency symbol */
   currencySymbol: PropTypes.string,
   /** The amount */
@@ -39,6 +43,7 @@ Price.propTypes = {
 
 Price.defaultProps = {
   className: '',
+  color: null,
   currencySymbol: '$',
   amount: 0,
   label: '',

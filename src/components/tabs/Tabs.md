@@ -80,3 +80,35 @@ import { Tabs, Tab } from '@alaneicker/atomik-ui';
   </Tabs>
 </>;
 ```
+
+### Comparison Variant
+
+```jsx
+import { useState } from 'react';
+import { Tabs, Tab, TabPanel, Price } from '@alaneicker/atomik-ui';
+
+const [currentIndex, setCurrentIndex] = useState(0);
+
+<>
+  <Tabs onChange={(index) => setCurrentIndex(index)} align="stretch" comparison>
+    <Tab label="Silver">
+      <Price amount={49} label="/ year" size="lg" color="light-green" />
+    </Tab>
+    <Tab label="Gold">
+      <Price amount={69} label="/ year" size="lg" color="light-green" />
+    </Tab>
+    <Tab label="Paltinum Plan">
+      <Price amount={99} label="/ year" size="lg" color="light-green" />
+    </Tab>
+  </Tabs>
+  <TabPanel state={[currentIndex, 0]}>
+    <h3 className="text-size-24">Silver Plan</h3>
+  </TabPanel>
+  <TabPanel state={[currentIndex, 1]}>
+    <h3 className="text-size-24">Gold Plan</h3>
+  </TabPanel>
+  <TabPanel state={[currentIndex, 2]}>
+    <h3 className="text-size-24">Platinum Plan</h3>
+  </TabPanel>
+</>;
+```

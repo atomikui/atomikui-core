@@ -35,4 +35,10 @@
   &--xl {
     font-size: rem(40);
   }
+
+  @each $color, $value in $price-colors {
+    &--#{$color} {
+      color: $value;
+    }
+  }
 }

@@ -3,17 +3,27 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../button';
 
-const Tab = ({ active, className, label, onClick, ...others }) => {
+const Tab = ({
+  active,
+  children,
+  className,
+  comparison,
+  label,
+  onClick,
+  ...others
+}) => {
   return (
     <Button
       theme="hollow"
       className={classnames('atomikui-tab', className, {
         'is-active': active,
+        'atomikui-tab--comparison': comparison,
       })}
       {...(onClick && { onClick })}
       {...others}
     >
       {label}
+      {children && <span className="atomikui-tab__content">{children}</span>}
     </Button>
   );
 };
@@ -21,8 +31,12 @@ const Tab = ({ active, className, label, onClick, ...others }) => {
 Tab.propTypes = {
   /** Makes a Tab active */
   active: PropTypes.bool,
+  /** Tab children */
+  children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Adds comparison tab styles */
+  comparison: PropTypes.bool,
   /** Tab click event callback */
   onClick: PropTypes.func,
   /** Tab label text */
@@ -31,7 +45,9 @@ Tab.propTypes = {
 
 Tab.defaultProps = {
   active: false,
-  className: '',
+  children: null,
+  className: null,
+  comparison: false,
   onClick() {},
   label: '',
 };

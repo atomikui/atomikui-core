@@ -1,12 +1,27 @@
 .atomikui-tab {
   position: relative;
+  color: $gray-500;
+
+  &__content {
+    display: inline-block;
+    padding: rem(8 0);
+    width: 100%;
+  }
+
+  &:not(.is-active) {
+    .atomikui-tab__content {
+      * {
+        color: $gray-500;
+      }
+    }
+  }
 
   &::before {
     background: $blue-200;
     bottom: 0;
     content: '';
     display: block;
-    height: rem(2);
+    height: rem(3);
     left: 50%;
     opacity: 0;
     position: absolute;
@@ -30,6 +45,29 @@
     &::before {
       opacity: 1;
       width: 100%;
+    }
+  }
+
+  &.atomikui-tab--comparison {
+    &.is-active {
+      background: $gray-500;
+      color: $white;
+
+      &::before {
+        background: transparent;
+      }
+
+      &::after {
+        border-left: rem(10) solid transparent;
+        border-right: rem(10) solid transparent;
+        border-top: rem(10) solid $gray-500;
+        content: '';
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 100%;
+        transform: translateX(-50%);
+      }
     }
   }
 }
