@@ -90,7 +90,12 @@ import { Tabs, Tab, TabPanel, Price } from '@alaneicker/atomik-ui';
 const [currentIndex, setCurrentIndex] = useState(0);
 
 <>
-  <Tabs onChange={(index) => setCurrentIndex(index)} align="stretch" comparison>
+  <Tabs
+    onChange={(index) => setCurrentIndex(index)}
+    align="stretch"
+    initialActiveTab={1}
+    comparison
+  >
     <Tab label="Silver">
       <Price amount={49} label="/ year" size="lg" color="light-green" />
     </Tab>
