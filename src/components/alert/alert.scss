@@ -1,7 +1,6 @@
 .atomikui-alert {
   align-items: top;
   background: $blue-000;
-  // border: rem(1) solid $blue-200;
   border-radius: rem($border-radius);
   color: $black;
   display: flex;
@@ -9,6 +8,7 @@
   font-weight: $font-medium;
   justify-content: space-between;
   padding: rem(16);
+  width: 100%;
 
   &__body {
     flex: 1;
@@ -42,8 +42,8 @@
   @each $name, $color in $alert-variants {
     &--#{$name} {
       background-color: $color;
-      color: $white;
       border: 0;
+      color: $white;
     }
   }
 }

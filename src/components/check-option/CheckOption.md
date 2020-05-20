@@ -38,14 +38,16 @@ const onChange = (index) => {
 
 <>
   {checkOptions.map(({ label, name, checked }, index) => (
-    <CheckOption
-      key={`form-option-${index}`}
-      type="radio"
-      label={label}
-      name={name}
-      checked={checked}
-      onChange={() => onChange(index)}
-    />
+    <div>
+      <CheckOption
+        key={`form-option-${index}`}
+        type="radio"
+        label={label}
+        name={name}
+        checked={checked}
+        onChange={() => onChange(index)}
+      />
+    </div>
   ))}
 </>;
 ```

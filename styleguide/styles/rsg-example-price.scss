@@ -1,7 +1,7 @@
 [data-preview='Price'] > * {
   & > * {
-    display: flex;
     flex-wrap: wrap;
+    margin-right: rem(16);
 
     &::after {
       content: '';

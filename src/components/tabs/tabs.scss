@@ -1,7 +1,8 @@
 .atomikui-tabs {
   background: $background-light-gray;
   display: flex;
-  height: rem(48);
+  min-height: rem(48);
+  width: 100%;
 
   &--align-center {
     justify-content: center;

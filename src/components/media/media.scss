@@ -1,5 +1,6 @@
 .atomikui-media {
   display: flex;
+  width: 100%;
 
   & > * + * {
     margin: rem(0 0 0 16);
