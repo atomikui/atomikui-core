@@ -15,4 +15,9 @@ describe('<Price />', () => {
   it('Should render without errors', () => {
     expect(price.length).toBe(1);
   });
+
+  it('Should set the color modifier', () => {
+    price.setProps({ color: 'green' });
+    expect(price.hasClass('atomikui-price--green')).toBe(true);
+  });
 });
