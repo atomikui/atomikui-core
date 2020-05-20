@@ -102,7 +102,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
     <Tab label="Gold">
       <Price amount={69} label="/ year" size="lg" color="light-green" />
     </Tab>
-    <Tab label="Paltinum Plan">
+    <Tab label="Paltinum">
       <Price amount={99} label="/ year" size="lg" color="light-green" />
     </Tab>
   </Tabs>

@@ -1,6 +1,14 @@
 .atomikui-tab {
   color: white;
 
+  &:not(.is-active) {
+    .atomikui-tab__content {
+      * {
+        color: $white;
+      }
+    }
+  }
+
   &::before {
     background: $blue-100;
   }
@@ -8,5 +16,15 @@
   &:hover,
   &:focus {
     background: lighten($gray-500, 6%);
+  }
+
+  &.atomikui-tab--comparison {
+    &.is-active {
+      background: darken($gray-500, 5%);
+
+      &::after {
+        border-top-color: darken($gray-500, 5%);
+      }
+    }
   }
 }
