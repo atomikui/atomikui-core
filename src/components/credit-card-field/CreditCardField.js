@@ -118,12 +118,23 @@ const CreditCardField = ({
             mask="99/99"
             borderless
             style={{ width: '70px' }}
+            disabled
           />
           {!hideCvc && (
-            <FormField {...cardCvc} style={{ width: '55px' }} borderless />
+            <FormField
+              {...cardCvc}
+              style={{ width: '55px' }}
+              borderless
+              disabled
+            />
           )}
           {!hideZip && (
-            <FormField {...cardZip} style={{ width: '65px' }} borderless />
+            <FormField
+              {...cardZip}
+              style={{ width: '65px' }}
+              borderless
+              disabled
+            />
           )}
         </div>
       </fieldset>

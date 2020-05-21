@@ -5,10 +5,15 @@
 
   &__fields {
     align-items: center;
+    background: $white;
     border: rem(1) solid $gray-200;
     border-radius: rem($border-radius);
     display: inline-flex;
     position: relative;
+
+    input:disabled {
+      background: transparent;
+    }
 
     & > * {
       margin-right: rem(8);
