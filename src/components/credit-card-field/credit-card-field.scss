@@ -4,10 +4,15 @@
   }
 
   &__fields {
+    align-items: center;
     border: rem(1) solid $gray-200;
     border-radius: rem($border-radius);
     display: inline-flex;
     position: relative;
+
+    & > svg {
+      margin: rem(0 8);
+    }
   }
 
   &.has-error {
