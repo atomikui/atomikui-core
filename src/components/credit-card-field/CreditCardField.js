@@ -1,4 +1,4 @@
-import React, { useState, useRef, Fragment } from 'react';
+import React, { useState, useEffect, useRef, Fragment } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
@@ -13,43 +13,49 @@ const CreditCardField = ({
   onChange,
   ...others
 }) => {
-  const state = useState({
-    number: '',
-    expiry: '',
-    cvc: '',
-    zip: '',
+  const [cardNumber, setCardNumber] = useState({
+    placeholder: 'Card Number',
+    fieldName: 'cc_number',
+    hasError: false,
+    errorMessage: 'Card number is required',
+    value: '1234567812345678',
   });
 
-  const fields = [
-    ...[
-      {
-        placeholder: 'Card Number',
-        fieldName: 'cc_number',
-        hasError: false,
-        errorText: 'Card number is required',
-      },
-      {
-        placeholder: 'Card Expiration',
-        fieldName: 'cc_expiry',
-        hasError: false,
-        errorText: 'Card expiration date is required',
-      },
-    ],
-    ...customFields,
-  ];
+  const [cardExpiry, setCardExpiry] = useState({
+    placeholder: 'Card Expiration',
+    fieldName: 'cc_expiry',
+    hasError: false,
+    errorMessage: 'Card expiration date is required',
+    value: '',
+  });
 
-  console.log(fields);
+  const [cardCvc, setCardCvc] = useState({
+    placeholder: 'CVC',
+    fieldName: 'cc_cvc',
+    hasError: false,
+    errorMessage: 'Card CVC is required',
+    value: '',
+  });
 
-  const hasErrors = fields
-    .map(({ hasError }) => {
-      return hasError;
-    })
-    .reduce((a, b) => {
-      return a + b;
-    }, 0);
+  const [cardZip, setCardZip] = useState({
+    placeholder: 'ZIP',
+    fieldName: 'cc_zip',
+    hasError: false,
+    errorMessage: 'ZIP code is required',
+    value: '',
+  });
 
-  const handleChange = (e) => {
-    onChange(state);
+  const hasErrors = [
+    cardNumber.hasError,
+    cardExpiry.hasError,
+    cardCvc.hasError,
+    cardZip.hasError,
+  ].reduce((a, b) => {
+    return a + b;
+  }, 0);
+
+  const handleChange = (e, index) => {
+    // onChange(fields);
   };
 
   return (
@@ -70,41 +76,40 @@ const CreditCardField = ({
             height="38"
           >
             <path
-              fill="#666"
+              fill="#aaa"
               d="m472 135h-464c-4.4 0-8-3.6-8-8v-24c0-22.1 17.9-40 40-40h400c22.1 0 40 17.9 40 40v24c0 4.4-3.6 8-8 8zm0 16h-464c-4.4 0-8 3.6-8 8v36c0 4.4 3.6 8 8 8h464c4.4 0 8-3.6 8-8v-36c0-4.4-3.6-8-8-8zm-464 68h464c4.4 0 8 3.6 8 8v150c0 22.1-17.9 40-40 40h-400c-22.1 0-40-17.9-40-40v-150c0-4.4 3.6-8 8-8zm140 117c0-4.4-3.6-8-8-8h-67c-4.4 0-8 3.6-8 8s3.6 8 8 8h67c4.4 0 8-3.6 8-8zm0-50c0-4.4-3.6-8-8-8h-67c-4.4 0-8 3.6-8 8s3.6 8 8 8h67c4.4 0 8-3.6 8-8z"
             />
           </svg>
-          {fields.map(({ placeholder, fieldName, hasError }) => {
-            return (
-              <div
-                key={shortid.generate()}
-                className={`atomikui-credit-card-field__${fieldName}`}
-              >
-                <FormField
-                  name={`cc_${fieldName}`}
-                  placeholder={placeholder}
-                  value={state.number}
-                  hasError={hasError}
-                  borderless
-                />
-              </div>
-            );
-          })}
+          <FormField {...cardNumber} borderless />
+          <FormField {...cardExpiry} borderless />
+          <FormField {...cardCvc} borderless />
+          <FormField {...cardZip} borderless />
         </div>
       </fieldset>
       {!!hasErrors && (
         <List>
-          {fields.map(({ hasError, errorText }) => {
-            return (
-              <Fragment key={shortid.generate()}>
-                {hasError && (
-                  <ListItem>
-                    <Hint type="error">{errorText}</Hint>
-                  </ListItem>
-                )}
-              </Fragment>
-            );
-          })}
+          <>
+            {cardNumber.hasError && (
+              <ListItem>
+                <Hint type="error">{cardNumber.errorMessage}</Hint>
+              </ListItem>
+            )}
+            {cardExpiry.hasError && (
+              <ListItem>
+                <Hint type="error">{cardExpiry.errorMessage}</Hint>
+              </ListItem>
+            )}
+            {cardCvc.hasError && (
+              <ListItem>
+                <Hint type="error">{cardCvc.errorMessage}</Hint>
+              </ListItem>
+            )}
+            {cardZip.hasError && (
+              <ListItem>
+                <Hint type="error">{cardZip.errorMessage}</Hint>
+              </ListItem>
+            )}
+          </>
         </List>
       )}
     </>
