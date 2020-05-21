@@ -7,7 +7,7 @@ An image avatar can be created by passing in a `src` and `alt` prop.
 ```jsx
 import { Avatar } from '@alaneicker/atomik-ui';
 
-<Avatar src="profile-image.png" alt="Alan Smith" />;
+<Avatar src="bob.png" alt="Bob Smith" />;
 ```
 
 ### Avatar With a Label
@@ -20,13 +20,9 @@ By default the label is positioned to the right of the avatar. Use the `flipLabe
 import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
+  <Avatar src="bob.png" alt="Some alt text" label="Right Aligned Label" />
   <Avatar
-    src="profile-image.png"
-    alt="Some alt text"
-    label="Right Aligned Label"
-  />
-  <Avatar
-    src="profile-image.png"
+    src="mary.png"
     alt="Some alt text"
     label="Left Aligned Label"
     flipLabel
@@ -103,9 +99,9 @@ Avatar shapes include `bevel` and `square`. The default shape is round.
 import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
-  <Avatar src="mary.png" /> {/* default */}
-  <Avatar src="steve.png" shape="square" />
-  <Avatar src="bob.png" shape="bevel" />
+  <Avatar src="mary.png" alt="Mary" /> {/* default */}
+  <Avatar src="steve.png" shape="square" alt="Steve" />
+  <Avatar src="bob.png" shape="bevel" alt="Bob" />
 </>;
 ```
 
@@ -117,8 +113,8 @@ The `size` prop can be used to change the size of the avatar
 import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
-  <Avatar src="profile-image.png" alt="Alan Smith" size="sm" />
-  <Avatar src="profile-image.png" alt="Alan Smith" />
-  <Avatar src="profile-image.png" alt="Alan Smith" size="lg" />
+  <Avatar src="mary.png" alt="Mary" size="sm" />
+  <Avatar src="steve.png" alt="Steve" />
+  <Avatar src="bob.png" alt="Bob" size="lg" />
 </>;
 ```
