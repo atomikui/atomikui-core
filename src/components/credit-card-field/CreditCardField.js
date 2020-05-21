@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import cardValidator from 'card-validator';
@@ -33,6 +33,7 @@ const CreditCardField = ({
   };
 
   const cardNumber = {
+    id: 'credit-card-number',
     placeholder: 'Card Number',
     name: 'creditCardNumber',
     onChange: handleChange,
@@ -42,6 +43,7 @@ const CreditCardField = ({
   };
 
   const cardExpiry = {
+    id: 'credit-card-expiry',
     placeholder: 'Expires',
     name: 'creditCardExpiry',
     onChange: handleChange,
@@ -51,6 +53,7 @@ const CreditCardField = ({
   };
 
   const cardCvc = {
+    id: 'credit-card-cvc',
     placeholder: 'CVC',
     name: 'creditCardCvc',
     onChange: handleChange,
@@ -60,6 +63,7 @@ const CreditCardField = ({
   };
 
   const cardZip = {
+    id: 'credit-card-zip',
     placeholder: 'ZIP',
     name: 'creditCardZip',
     onChange: handleChange,
