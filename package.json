@@ -28,7 +28,8 @@
     "build:styles": "cross-env webpack -p --config webpack.config.js",
     "build": "NODE_ENV=production npm run test-and-lint && styleguidist build",
     "test-and-lint": "npm run test && npm run lint && npm run lint:css",
-    "predeploy": "npm run build",
+    "git-commit-and-push": "git add . && git commit -m 'test coverage report' && git push",
+    "predeploy": "npm run build && yarn git-commit-and-push",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
