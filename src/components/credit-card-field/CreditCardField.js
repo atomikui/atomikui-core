@@ -1,49 +1,72 @@
-import React, { useState, useEffect, useRef, Fragment } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import shortid from 'shortid';
+import cardValidator from 'card-validator';
 import FormField from '../form-field';
 import Hint from '../hint';
 import { List, ListItem } from '../list';
+import creditCardIcons from './credit-card-icons';
 
 const CreditCardField = ({
   className,
-  customFields,
+  creditCardExpiry,
+  creditCardNumber,
+  creditCardCvc,
+  creditCardZip,
+  hideCvc,
+  hideZip,
   label,
+  onCardNumberChange,
   onChange,
   ...others
 }) => {
-  const [cardNumber, setCardNumber] = useState({
+  const [cardType, setCardType] = useState(null);
+
+  const [mask, setMask] = useState(null);
+
+  const stripMask = (str) => {
+    return str.replace(/(-|_)/g, '');
+  };
+
+  const handleChange = (event) => {
+    onChange(event.target.value, event.target.name);
+  };
+
+  const cardNumber = {
     placeholder: 'Card Number',
-    fieldName: 'cc_number',
+    name: 'creditCardNumber',
+    onChange: handleChange,
     hasError: false,
-    errorMessage: 'Card number is required',
-    value: '1234567812345678',
-  });
+    value: creditCardNumber,
+    'data-error-message': 'Card number is required',
+  };
 
-  const [cardExpiry, setCardExpiry] = useState({
-    placeholder: 'Card Expiration',
-    fieldName: 'cc_expiry',
+  const cardExpiry = {
+    placeholder: 'Expires',
+    name: 'creditCardExpiry',
+    onChange: handleChange,
+    value: creditCardExpiry,
     hasError: false,
-    errorMessage: 'Card expiration date is required',
-    value: '',
-  });
+    'data-error-message': 'Card expiration date is required',
+  };
 
-  const [cardCvc, setCardCvc] = useState({
+  const cardCvc = {
     placeholder: 'CVC',
-    fieldName: 'cc_cvc',
+    name: 'creditCardCvc',
+    onChange: handleChange,
+    value: creditCardCvc,
     hasError: false,
-    errorMessage: 'Card CVC is required',
-    value: '',
-  });
+    'data-error-message': 'Card CVC is required',
+  };
 
-  const [cardZip, setCardZip] = useState({
+  const cardZip = {
     placeholder: 'ZIP',
-    fieldName: 'cc_zip',
+    name: 'creditCardZip',
+    onChange: handleChange,
+    value: creditCardZip,
     hasError: false,
-    errorMessage: 'ZIP code is required',
-    value: '',
-  });
+    'data-error-message': 'ZIP code is required',
+  };
 
   const hasErrors = [
     cardNumber.hasError,
@@ -54,9 +77,23 @@ const CreditCardField = ({
     return a + b;
   }, 0);
 
-  const handleChange = (e, index) => {
-    // onChange(fields);
-  };
+  useEffect(() => {
+    const validatedCard = cardValidator.number(stripMask(creditCardNumber));
+
+    try {
+      setCardType(validatedCard.card.type);
+      onCardNumberChange(validatedCard.isValid, validatedCard.card.type);
+      setMask(
+        validatedCard.card.type === 'american-express'
+          ? '9999-9999-9999-999'
+          : '9999-9999-9999-9999',
+      );
+    } catch (e) {
+      setCardType('default');
+      onCardNumberChange(false, '');
+      setMask('9999-9999-9999-9999');
+    }
+  }, [creditCardNumber]);
 
   return (
     <>
@@ -68,22 +105,26 @@ const CreditCardField = ({
       >
         <legend className="atomikui-label">{label}</legend>
         <div className="atomikui-credit-card-field__fields">
-          <svg
-            id="Layer_1"
-            enableBackground="new 0 0 480 480"
-            viewBox="0 0 480 480"
-            xmlns="http://www.w3.org/2000/svg"
-            height="38"
-          >
-            <path
-              fill="#aaa"
-              d="m472 135h-464c-4.4 0-8-3.6-8-8v-24c0-22.1 17.9-40 40-40h400c22.1 0 40 17.9 40 40v24c0 4.4-3.6 8-8 8zm0 16h-464c-4.4 0-8 3.6-8 8v36c0 4.4 3.6 8 8 8h464c4.4 0 8-3.6 8-8v-36c0-4.4-3.6-8-8-8zm-464 68h464c4.4 0 8 3.6 8 8v150c0 22.1-17.9 40-40 40h-400c-22.1 0-40-17.9-40-40v-150c0-4.4 3.6-8 8-8zm140 117c0-4.4-3.6-8-8-8h-67c-4.4 0-8 3.6-8 8s3.6 8 8 8h67c4.4 0 8-3.6 8-8zm0-50c0-4.4-3.6-8-8-8h-67c-4.4 0-8 3.6-8 8s3.6 8 8 8h67c4.4 0 8-3.6 8-8z"
-            />
-          </svg>
-          <FormField {...cardNumber} borderless />
-          <FormField {...cardExpiry} borderless />
-          <FormField {...cardCvc} borderless />
-          <FormField {...cardZip} borderless />
+          {creditCardIcons[cardType]}
+          <FormField
+            {...cardNumber}
+            mask={mask}
+            maxLength={cardType === 'american-express' ? '25' : '26'}
+            style={{ width: '182px' }}
+            borderless
+          />
+          <FormField
+            {...cardExpiry}
+            mask="99/99"
+            borderless
+            style={{ width: '70px' }}
+          />
+          {!hideCvc && (
+            <FormField {...cardCvc} style={{ width: '55px' }} borderless />
+          )}
+          {!hideZip && (
+            <FormField {...cardZip} style={{ width: '65px' }} borderless />
+          )}
         </div>
       </fieldset>
       {!!hasErrors && (
@@ -91,22 +132,22 @@ const CreditCardField = ({
           <>
             {cardNumber.hasError && (
               <ListItem>
-                <Hint type="error">{cardNumber.errorMessage}</Hint>
+                <Hint type="error">{cardNumber['data-error-message']}</Hint>
               </ListItem>
             )}
             {cardExpiry.hasError && (
               <ListItem>
-                <Hint type="error">{cardExpiry.errorMessage}</Hint>
+                <Hint type="error">{cardExpiry['data-error-message']}</Hint>
               </ListItem>
             )}
             {cardCvc.hasError && (
               <ListItem>
-                <Hint type="error">{cardCvc.errorMessage}</Hint>
+                <Hint type="error">{cardCvc['data-error-message']}</Hint>
               </ListItem>
             )}
             {cardZip.hasError && (
               <ListItem>
-                <Hint type="error">{cardZip.errorMessage}</Hint>
+                <Hint type="error">{cardZip['data-error-message']}</Hint>
               </ListItem>
             )}
           </>
@@ -119,25 +160,36 @@ const CreditCardField = ({
 CreditCardField.propTypes = {
   /** Adds custom component CSS classes */
   className: PropTypes.string,
-  /** Form fields */
-  customFields: PropTypes.arrayOf(
-    PropTypes.shape({
-      placeholder: PropTypes.string,
-      fieldName: PropTypes.string,
-      hasError: PropTypes.bool,
-      errorText: PropTypes.string,
-    }),
-  ),
-  /** Creditcard fieldset label */
+  /** Credit card expiration date value */
+  creditCardExpiry: PropTypes.string,
+  /** Credit card number value */
+  creditCardNumber: PropTypes.string,
+  /** Credit card CVC value */
+  creditCardCvc: PropTypes.string,
+  /** Credit card ZIP code value */
+  creditCardZip: PropTypes.string,
+  /** Hides the CVC field */
+  hideCvc: PropTypes.bool,
+  /** Hides the ZIP code field */
+  hideZip: PropTypes.bool,
+  /** Credit card fieldset label */
   label: PropTypes.string,
+  /** Callback after card number changes */
+  onCardNumberChange: PropTypes.func,
   /** onChange callback */
   onChange: PropTypes.func,
 };
 
 CreditCardField.defaultProps = {
   className: '',
-  customFields: [],
+  creditCardExpiry: '',
+  creditCardNumber: '',
+  creditCardCvc: '',
+  creditCardZip: '',
+  hideCvc: false,
+  hideZip: false,
   label: '',
+  onCardNumberChange() {},
   onChange() {},
 };
 

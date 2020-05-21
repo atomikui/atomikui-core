@@ -10,6 +10,10 @@
     display: inline-flex;
     position: relative;
 
+    & > * {
+      margin-right: rem(8);
+    }
+
     & > svg {
       margin: rem(0 8);
     }
