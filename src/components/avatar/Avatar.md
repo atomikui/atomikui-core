@@ -95,6 +95,20 @@ import { Avatar } from '@alaneicker/atomik-ui';
 </>;
 ```
 
+### Avatar shapes
+
+Avatar shapes include `bevel` and `square`. The default shape is round.
+
+```jsx
+import { Avatar } from '@alaneicker/atomik-ui';
+
+<>
+  <Avatar src="mary.png" /> {/* default */}
+  <Avatar src="steve.png" shape="square" />
+  <Avatar src="bob.png" shape="bevel" />
+</>;
+```
+
 ### Avatar Sizes
 
 The `size` prop can be used to change the size of the avatar

@@ -19,7 +19,7 @@ const Comment = ({
   return (
     <div className={classnames('atomikui-comment', className)} {...others}>
       <div className="atomikui-comment__avatar">
-        <Avatar src={avatar} alt={author} theme="bevel" />
+        <Avatar src={avatar} alt={author} shape="bevel" />
       </div>
       <div className="atomikui-comment__content">
         <div className="atomikui-comment__title">
