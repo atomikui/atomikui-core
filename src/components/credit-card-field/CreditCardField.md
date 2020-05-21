@@ -1,3 +1,7 @@
+The CreditCardField is an inline fieldset for capturing credit card information. It validates a credit card as it is typed and returns the following state values: `creditCardNumber`, `cardNumberIsValid`, `creditCardExpiry`, `creditCardCvc` and `creditCardZip`.
+
+_Please note: the CreditCardField only performs client-side validation. Server-side validation is still required._
+
 ```jsx
 import { useState } from 'react';
 import { CreditCardField } from '@alaneicker/atomik-ui';
@@ -31,7 +35,7 @@ const handleCardNumberValidation = (cardType, isValid) => {
 
 <>
   <div>
-    State:
+    Credit Card State:
     <br />
     <pre>{JSON.stringify(state, null, 2)}</pre>
   </div>
