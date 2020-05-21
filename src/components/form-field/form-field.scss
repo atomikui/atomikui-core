@@ -27,6 +27,13 @@
     @include focus-error-outline();
   }
 
+  &--borderless {
+    & > .atomikui-formfield__input,
+    & > .atomikui-formfield__textarea {
+      border: 0;
+    }
+  }
+
   @each $name, $breakpoint in $breakpoints {
     @media (min-width: $breakpoint) {
       @each $size in $formfield-sizes {

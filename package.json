@@ -61,7 +61,8 @@
     "react-dom": "^16.13.1",
     "react-flexbox-grid": "^2.1.2",
     "react-masked-field": "^2.0.3",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "shortid": "^2.2.15"
   },
   "peerDependencies": {
     "classnames": "^2.2.6",

@@ -11,6 +11,7 @@ export { default as ChatWindow } from './components/chat-window';
 export { default as ChatMessage } from './components/chat-message';
 export { default as CheckOption } from './components/check-option';
 export { default as Comment } from './components/comment';
+export { default as CreditCardField } from './components/credit-card-field';
 export { default as DatePicker } from './components/date-picker';
 export { default as Drawer } from './components/drawer';
 export { default as Dropdown } from './components/dropdown';

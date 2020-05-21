@@ -27,7 +27,8 @@ const types = [
 ];
 
 const FormField = ({
-  classes,
+  borderless,
+  className,
   disabled,
   errorText,
   hasError,
@@ -54,8 +55,9 @@ const FormField = ({
 
   return (
     <div
-      className={classnames('atomikui-formfield', classes, {
+      className={classnames('atomikui-formfield', className, {
         'has-error': hasError,
+        'atomikui-formfield--borderless': borderless,
       })}
     >
       {label && (
@@ -67,7 +69,7 @@ const FormField = ({
         <textarea
           id={uid}
           name={inputName}
-          className={classnames('atomikui-formfield__textarea', classes, {})}
+          className={classnames('atomikui-formfield__textarea', className, {})}
           placeholder={placeholder}
           value={value}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
@@ -81,7 +83,7 @@ const FormField = ({
         <Input
           id={uid}
           name={inputName}
-          className={classnames('atomikui-formfield__input', classes, {})}
+          className={classnames('atomikui-formfield__input', className, {})}
           type={fieldType}
           mask={mask}
           placeholder={placeholder}
@@ -109,8 +111,10 @@ const FormField = ({
 };
 
 FormField.propTypes = {
+  /** Sets forn field with no border */
+  borderless: PropTypes.bool,
   /** Specifies custom component classes. */
-  classes: PropTypes.string,
+  className: PropTypes.string,
   /** Disables a form field. */
   disabled: PropTypes.bool,
   /** Text to be displayed when there is an error. */
@@ -142,7 +146,8 @@ FormField.propTypes = {
 };
 
 FormField.defaultProps = {
-  classes: '',
+  borderless: false,
+  className: '',
   disabled: false,
   errorText: '',
   hasError: false,

@@ -1,0 +1,18 @@
+.atomikui-credit-card-field {
+  legend {
+    margin-bottom: rem(3);
+  }
+
+  &__fields {
+    border: rem(1) solid $gray-200;
+    border-radius: rem($border-radius);
+    display: inline-flex;
+    position: relative;
+  }
+
+  &.has-error {
+    & > .atomikui-credit-card-field__fields {
+      border-color: $error-red;
+    }
+  }
+}
