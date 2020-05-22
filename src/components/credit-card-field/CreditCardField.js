@@ -25,7 +25,6 @@ const CreditCardField = ({
   const [creditCardFieldWidth, setCreditCardFieldWidth] = useState('auto');
   const [cardIsValid, setCardIsValid] = useState(false);
   const [creditCardIsFocused, setCreditCardIsFocused] = useState(false);
-  const [mask, setMask] = useState(null);
 
   const minCreditCardFieldWidth = '53px';
 
@@ -117,17 +116,11 @@ const CreditCardField = ({
       setCardType(type);
       setCardIsValid(isValid);
       setCreditCardFieldWidth(isValid ? minCreditCardFieldWidth : 'auto');
-      setMask(
-        validatedCard.card.type === 'american-express'
-          ? '9999-9999-9999-999'
-          : '9999-9999-9999-9999',
-      );
       onCardNumberChange(type, isValid);
     } catch (e) {
       setCardType('default');
       setCardIsValid(false);
       setCreditCardFieldWidth('auto');
-      setMask('9999-9999-9999-9999');
       onCardNumberChange(false, '');
     }
   }, [creditCardNumber]);
@@ -155,31 +148,38 @@ const CreditCardField = ({
           <label>Credit Card Number</label>
           <FormField
             {...cardNumber}
-            type="number"
             maxLength={cardType === 'american-express' ? '25' : '26'}
             style={{ width: creditCardFieldWidth }}
             onFocus={onCreditCardFocus}
             onBlur={onCreditCardBlur}
             borderless
           />
-          {((cardIsValid && !creditCardIsFocused) ||
-            errors.includes('creditCardExpiry')) && (
+          <div
+            className={classnames({
+              'is-visibly-hidden':
+                !cardIsValid ||
+                (creditCardIsFocused && !errors.includes('creditCardExpiry')),
+            })}
+          >
+            <label>Expiration Date</label>
+            <FormField
+              {...cardExpiry}
+              mask="99/99"
+              onKeyUp={(e) => {
+                return handleExpiryChange(e.target.value);
+              }}
+              borderless
+            />
+          </div>
+          {!hideCvc && (
             <>
-              <label>Expiration Date</label>
-              <FormField
-                {...cardExpiry}
-                mask="99/99"
-                onKeyUp={(e) => {
-                  return handleExpiryChange(e.target.value);
-                }}
-                borderless
-              />
-            </>
-          )}
-          {((cardIsValid && !creditCardIsFocused) ||
-            errors.includes('creditCardCvc')) &&
-            !hideCvc && (
-              <>
+              <div
+                className={classnames({
+                  'is-visibly-hidden':
+                    !cardIsValid ||
+                    (creditCardIsFocused && !errors.includes('creditCardCvc')),
+                })}
+              >
                 <label>CVC</label>
                 <FormField
                   {...cardCvc}
@@ -189,16 +189,23 @@ const CreditCardField = ({
                   maxLength="3"
                   borderless
                 />
-              </>
-            )}
-          {((cardIsValid && !creditCardIsFocused) ||
-            errors.includes('creditCardZip')) &&
-            !hideZip && (
-              <>
+              </div>
+            </>
+          )}
+          {!hideZip && (
+            <>
+              <div
+                className={classnames({
+                  'is-visibly-hidden':
+                    !cardIsValid ||
+                    (creditCardIsFocused && !errors.includes('creditCardZip')),
+                })}
+              >
                 <label>ZIP Code</label>
                 <FormField {...cardZip} maxLength="5" borderless />
-              </>
-            )}
+              </div>
+            </>
+          )}
         </div>
       </fieldset>
       {!!errors.length && (

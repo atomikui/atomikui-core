@@ -1,3 +1,8 @@
+.is-visibly-hidden {
+  position: absolute;
+  left: rem(-10000);
+}
+
 @each $value in $display-options {
   .display-#{$value} {
     display: $value;
