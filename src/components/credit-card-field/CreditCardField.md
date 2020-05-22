@@ -14,7 +14,7 @@ const [state, setState] = useState({
   creditCardZip: '',
 });
 
-const onChange = (value, field) => {
+const onChange = (field, value) => {
   setState((prevState) => {
     return {
       ...prevState,

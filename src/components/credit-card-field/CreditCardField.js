@@ -33,7 +33,7 @@ const CreditCardField = ({
   };
 
   const handleChange = (event) => {
-    onChange(event.target.value, event.target.name);
+    onChange(event.target.name, event.target.value);
   };
 
   const handleExpiryChange = (value) => {
@@ -110,7 +110,14 @@ const CreditCardField = ({
   }, 0);
 
   useEffect(() => {
-    const validatedCard = cardValidator.number(stripMask(creditCardNumber));
+    const value = stripMask(creditCardNumber);
+    const validatedCard = cardValidator.number(value);
+
+    if (!value) {
+      onChange('creditCardExpiry', '');
+      onChange('creditCardCvc', '');
+      onChange('creditCardZip', '');
+    }
 
     try {
       const { type } = validatedCard.card;
