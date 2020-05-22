@@ -40,7 +40,7 @@ const handleCardNumberValidation = (cardType, isValid) => {
     <pre>{JSON.stringify(state, null, 2)}</pre>
   </div>
   <CreditCardField
-    label="Credit Card"
+    label="Credit Card Information"
     creditCardNumber={state.creditCardNumber}
     creditCardExpiry={state.creditCardExpiry}
     creditCardCvc={state.creditCardCvc}
