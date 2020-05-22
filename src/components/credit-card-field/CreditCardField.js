@@ -155,7 +155,7 @@ const CreditCardField = ({
           <label>Credit Card Number</label>
           <FormField
             {...cardNumber}
-            mask={mask}
+            type="number"
             maxLength={cardType === 'american-express' ? '25' : '26'}
             style={{ width: creditCardFieldWidth }}
             onFocus={onCreditCardFocus}
