@@ -29,11 +29,23 @@ const CreditCardField = ({
   const minCreditCardFieldWidth = '53px';
 
   const stripMask = (str) => {
-    return str.replace(/(-|_)/g, '');
+    return str.replace(/(-|\/|_)/g, '');
   };
 
   const handleChange = (event) => {
     onChange(event.target.value, event.target.name);
+  };
+
+  const handleExpiryChange = (value) => {
+    if (stripMask(value).length === 4) {
+      document.querySelector('#credit-card-cvc').focus();
+    }
+  };
+
+  const handleCvcChange = (value) => {
+    if (String(value).length === 3) {
+      document.querySelector('#credit-card-zip').focus();
+    }
   };
 
   const onCreditCardFocus = () => {
@@ -142,6 +154,7 @@ const CreditCardField = ({
         <legend className="atomikui-label">{label}</legend>
         <div className="atomikui-credit-card-field__fields">
           {creditCardIcons[cardType]}
+          <label>Credit Card Number</label>
           <FormField
             {...cardNumber}
             mask={mask}
@@ -153,9 +166,34 @@ const CreditCardField = ({
           />
           {cardIsValid && !creditCardIsFocused && (
             <>
-              <FormField {...cardExpiry} mask="99/99" borderless />
-              {!hideCvc && <FormField {...cardCvc} borderless />}
-              {!hideZip && <FormField {...cardZip} borderless />}
+              <label>Expiration Date</label>
+              <FormField
+                {...cardExpiry}
+                mask="99/99"
+                onKeyUp={(e) => {
+                  return handleExpiryChange(e.target.value);
+                }}
+                borderless
+              />
+              {!hideCvc && (
+                <>
+                  <label>CVC</label>
+                  <FormField
+                    {...cardCvc}
+                    onKeyUp={(e) => {
+                      return handleCvcChange(e.target.value);
+                    }}
+                    maxLength="3"
+                    borderless
+                  />
+                </>
+              )}
+              {!hideZip && (
+                <>
+                  <label>ZIP Code</label>
+                  <FormField {...cardZip} maxLength="5" borderless />
+                </>
+              )}
             </>
           )}
         </div>
