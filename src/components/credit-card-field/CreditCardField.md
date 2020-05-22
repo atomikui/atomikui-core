@@ -7,11 +7,11 @@ import { useState } from 'react';
 import { CreditCardField } from '@alaneicker/atomik-ui';
 
 const [state, setState] = useState({
-  creditCardNumber: '5555555555555555',
+  creditCardNumber: '',
   cardNumberIsValid: false,
-  creditCardExpiry: '06/20',
-  creditCardCvc: '1234',
-  creditCardZip: '60089',
+  creditCardExpiry: '',
+  creditCardCvc: '',
+  creditCardZip: '',
 });
 
 const onChange = (value, field) => {
@@ -34,11 +34,11 @@ const handleCardNumberValidation = (cardType, isValid) => {
 };
 
 <>
-  {/*<div>
+  <div>
     Credit Card State:
     <br />
     <pre>{JSON.stringify(state, null, 2)}</pre>
-  </div>*/}
+  </div>
   <CreditCardField
     label="Credit Card"
     creditCardNumber={state.creditCardNumber}

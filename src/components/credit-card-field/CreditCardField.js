@@ -21,7 +21,12 @@ const CreditCardField = ({
   ...others
 }) => {
   const [cardType, setCardType] = useState(null);
+  const [creditCardFieldWidth, setCreditCardFieldWidth] = useState('auto');
+  const [cardIsValid, setCardIsValid] = useState(false);
+  const [creditCardIsFocused, setCreditCardIsFocused] = useState(false);
   const [mask, setMask] = useState(null);
+
+  const minCreditCardFieldWidth = '53px';
 
   const stripMask = (str) => {
     return str.replace(/(-|_)/g, '');
@@ -29,6 +34,18 @@ const CreditCardField = ({
 
   const handleChange = (event) => {
     onChange(event.target.value, event.target.name);
+  };
+
+  const onCreditCardFocus = () => {
+    setCreditCardFieldWidth('auto');
+    setCreditCardIsFocused(true);
+  };
+
+  const onCreditCardBlur = () => {
+    if (cardIsValid) {
+      setCreditCardFieldWidth(minCreditCardFieldWidth);
+    }
+    setCreditCardIsFocused(false);
   };
 
   const cardNumber = {
@@ -84,8 +101,13 @@ const CreditCardField = ({
     const validatedCard = cardValidator.number(stripMask(creditCardNumber));
 
     try {
-      setCardType(validatedCard.card.type);
-      onCardNumberChange(validatedCard.isValid, validatedCard.card.type);
+      const { type } = validatedCard.card;
+      const { isValid } = validatedCard;
+
+      setCardType(type);
+      onCardNumberChange(type, isValid);
+      setCardIsValid(isValid);
+      setCreditCardFieldWidth(isValid ? minCreditCardFieldWidth : 'auto');
       setMask(
         validatedCard.card.type === 'american-express'
           ? '9999-9999-9999-999'
@@ -94,9 +116,20 @@ const CreditCardField = ({
     } catch (e) {
       setCardType('default');
       onCardNumberChange(false, '');
+      setCardIsValid(false);
+      setCreditCardFieldWidth('auto');
       setMask('9999-9999-9999-9999');
     }
   }, [creditCardNumber]);
+
+  useEffect(() => {
+    if (cardIsValid) {
+      setTimeout(() => {
+        document.querySelector('#credit-card-number').blur();
+        document.querySelector('#credit-card-expiry').focus();
+      }, 10);
+    }
+  }, [cardIsValid]);
 
   return (
     <>
@@ -111,22 +144,19 @@ const CreditCardField = ({
           {creditCardIcons[cardType]}
           <FormField
             {...cardNumber}
-            style={{ minWidth: '50px' }}
             mask={mask}
             maxLength={cardType === 'american-express' ? '25' : '26'}
+            style={{ width: creditCardFieldWidth }}
+            onFocus={onCreditCardFocus}
+            onBlur={onCreditCardBlur}
             borderless
           />
-          <FormField
-            {...cardExpiry}
-            style={{ minWidth: '55px' }}
-            mask="99/99"
-            borderless
-          />
-          {!hideCvc && (
-            <FormField {...cardCvc} style={{ minWidth: '22px' }} borderless />
-          )}
-          {!hideZip && (
-            <FormField {...cardZip} style={{ minWidth: '60px' }} borderless />
+          {cardIsValid && !creditCardIsFocused && (
+            <>
+              <FormField {...cardExpiry} mask="99/99" borderless />
+              {!hideCvc && <FormField {...cardCvc} borderless />}
+              {!hideZip && <FormField {...cardZip} borderless />}
+            </>
           )}
         </div>
       </fieldset>
