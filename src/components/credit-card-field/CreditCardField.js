@@ -32,20 +32,18 @@ const CreditCardField = ({
     return str.replace(/(-|\/|_)/g, '');
   };
 
-  const handleChange = (event) => {
-    onChange(event.target.name, event.target.value);
-  };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-  const handleExpiryChange = (value) => {
-    if (stripMask(value).length === 4) {
+    if (name === 'creditCardExpiry' && stripMask(value).length === 4) {
       document.querySelector('#credit-card-cvc').focus();
     }
-  };
 
-  const handleCvcChange = (value) => {
-    if (String(value).length === 3) {
+    if (name === 'creditCardCvc' && String(value).length === 3) {
       document.querySelector('#credit-card-zip').focus();
     }
+
+    onChange(name, value);
   };
 
   const onCreditCardFocus = () => {
@@ -162,14 +160,7 @@ const CreditCardField = ({
             })}
           >
             <label>Expiration Date</label>
-            <FormField
-              {...cardExpiry}
-              mask="99/99"
-              onKeyUp={(e) => {
-                return handleExpiryChange(e.target.value);
-              }}
-              borderless
-            />
+            <FormField {...cardExpiry} mask="99/99" borderless />
           </div>
           {!hideCvc && (
             <>
@@ -181,14 +172,7 @@ const CreditCardField = ({
                 })}
               >
                 <label>CVC</label>
-                <FormField
-                  {...cardCvc}
-                  onKeyUp={(e) => {
-                    return handleCvcChange(e.target.value);
-                  }}
-                  maxLength="3"
-                  borderless
-                />
+                <FormField {...cardCvc} maxLength="3" borderless />
               </div>
             </>
           )}
