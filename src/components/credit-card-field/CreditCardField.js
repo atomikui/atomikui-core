@@ -3,9 +3,9 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import cardValidator from 'card-validator';
 import FormField from '../form-field';
+import creditCardIcons from './credit-card-icons';
 import Hint from '../hint';
 import { List, ListItem } from '../list';
-import creditCardIcons from './credit-card-icons';
 
 const CreditCardField = ({
   className,
@@ -13,6 +13,7 @@ const CreditCardField = ({
   creditCardNumber,
   creditCardCvc,
   creditCardZip,
+  errors,
   hideCvc,
   hideZip,
   label,
@@ -65,9 +66,7 @@ const CreditCardField = ({
     placeholder: 'Card Number',
     name: 'creditCardNumber',
     onChange: handleChange,
-    hasError: false,
     value: creditCardNumber,
-    'data-error-message': 'Card number is required',
   };
 
   const cardExpiry = {
@@ -76,8 +75,6 @@ const CreditCardField = ({
     name: 'creditCardExpiry',
     onChange: handleChange,
     value: creditCardExpiry,
-    hasError: false,
-    'data-error-message': 'Card expiration date is required',
   };
 
   const cardCvc = {
@@ -86,8 +83,6 @@ const CreditCardField = ({
     name: 'creditCardCvc',
     onChange: handleChange,
     value: creditCardCvc,
-    hasError: false,
-    'data-error-message': 'Card CVC is required',
   };
 
   const cardZip = {
@@ -96,18 +91,14 @@ const CreditCardField = ({
     name: 'creditCardZip',
     onChange: handleChange,
     value: creditCardZip,
-    hasError: false,
-    'data-error-message': 'ZIP code is required',
   };
 
-  const hasErrors = [
-    cardNumber.hasError,
-    cardExpiry.hasError,
-    cardCvc.hasError,
-    cardZip.hasError,
-  ].reduce((a, b) => {
-    return a + b;
-  }, 0);
+  const errorMessages = {
+    creditCardNumber: 'Please enter a valid credit card',
+    creditCardExpiry: 'Please enter card expiration date',
+    creditCardCvc: 'Please enter card CVC',
+    creditCardZip: 'Please enter the ZIP code associeted with the card',
+  };
 
   useEffect(() => {
     const value = stripMask(creditCardNumber);
@@ -124,7 +115,6 @@ const CreditCardField = ({
       const { isValid } = validatedCard;
 
       setCardType(type);
-      onCardNumberChange(type, isValid);
       setCardIsValid(isValid);
       setCreditCardFieldWidth(isValid ? minCreditCardFieldWidth : 'auto');
       setMask(
@@ -132,12 +122,13 @@ const CreditCardField = ({
           ? '9999-9999-9999-999'
           : '9999-9999-9999-9999',
       );
+      onCardNumberChange(type, isValid);
     } catch (e) {
       setCardType('default');
-      onCardNumberChange(false, '');
       setCardIsValid(false);
       setCreditCardFieldWidth('auto');
       setMask('9999-9999-9999-9999');
+      onCardNumberChange(false, '');
     }
   }, [creditCardNumber]);
 
@@ -154,7 +145,7 @@ const CreditCardField = ({
     <>
       <fieldset
         className={classnames('atomikui-credit-card-field', className, {
-          'has-error': hasErrors,
+          'has-error': errors.length,
         })}
         {...others}
       >
@@ -171,7 +162,8 @@ const CreditCardField = ({
             onBlur={onCreditCardBlur}
             borderless
           />
-          {cardIsValid && !creditCardIsFocused && (
+          {((cardIsValid && !creditCardIsFocused) ||
+            errors.includes('creditCardExpiry')) && (
             <>
               <label>Expiration Date</label>
               <FormField
@@ -182,54 +174,45 @@ const CreditCardField = ({
                 }}
                 borderless
               />
-              {!hideCvc && (
-                <>
-                  <label>CVC</label>
-                  <FormField
-                    {...cardCvc}
-                    onKeyUp={(e) => {
-                      return handleCvcChange(e.target.value);
-                    }}
-                    maxLength="3"
-                    borderless
-                  />
-                </>
-              )}
-              {!hideZip && (
-                <>
-                  <label>ZIP Code</label>
-                  <FormField {...cardZip} maxLength="5" borderless />
-                </>
-              )}
             </>
           )}
+          {((cardIsValid && !creditCardIsFocused) ||
+            errors.includes('creditCardCvc')) &&
+            !hideCvc && (
+              <>
+                <label>CVC</label>
+                <FormField
+                  {...cardCvc}
+                  onKeyUp={(e) => {
+                    return handleCvcChange(e.target.value);
+                  }}
+                  maxLength="3"
+                  borderless
+                />
+              </>
+            )}
+          {((cardIsValid && !creditCardIsFocused) ||
+            errors.includes('creditCardZip')) &&
+            !hideZip && (
+              <>
+                <label>ZIP Code</label>
+                <FormField {...cardZip} maxLength="5" borderless />
+              </>
+            )}
         </div>
       </fieldset>
-      {!!hasErrors && (
-        <List>
-          <>
-            {cardNumber.hasError && (
-              <ListItem>
-                <Hint type="error">{cardNumber['data-error-message']}</Hint>
-              </ListItem>
-            )}
-            {cardExpiry.hasError && (
-              <ListItem>
-                <Hint type="error">{cardExpiry['data-error-message']}</Hint>
-              </ListItem>
-            )}
-            {cardCvc.hasError && (
-              <ListItem>
-                <Hint type="error">{cardCvc['data-error-message']}</Hint>
-              </ListItem>
-            )}
-            {cardZip.hasError && (
-              <ListItem>
-                <Hint type="error">{cardZip['data-error-message']}</Hint>
-              </ListItem>
-            )}
-          </>
-        </List>
+      {!!errors.length && (
+        <div className="margin-top-2">
+          <List>
+            {errors.map((field) => {
+              return (
+                <ListItem>
+                  <Hint type="error">{errorMessages[field]}</Hint>
+                </ListItem>
+              );
+            })}
+          </List>
+        </div>
       )}
     </>
   );
@@ -246,6 +229,8 @@ CreditCardField.propTypes = {
   creditCardCvc: PropTypes.string,
   /** Credit card ZIP code value */
   creditCardZip: PropTypes.string,
+  /** Errors */
+  errors: PropTypes.array,
   /** Hides the CVC field */
   hideCvc: PropTypes.bool,
   /** Hides the ZIP code field */
@@ -264,6 +249,7 @@ CreditCardField.defaultProps = {
   creditCardNumber: '',
   creditCardCvc: '',
   creditCardZip: '',
+  errors: [],
   hideCvc: false,
   hideZip: false,
   label: '',

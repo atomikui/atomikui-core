@@ -20,10 +20,6 @@
       flex: rem(0 0 40);
     }
 
-    & > * + * {
-      flex: 1;
-    }
-
     & > * {
       margin-right: rem(4);
     }
