@@ -43,6 +43,7 @@ input[type='number'] {
 *:-webkit-autofill:active {
   transition: all 5000s ease-in-out 0s;
   transition-property: background-color, color;
+  box-shadow: 0 0 0 1000px $white inset;
   -webkit-box-shadow: 0 0 0 1000px $white inset;
   -webkit-text-fill-color: $white;
 }
