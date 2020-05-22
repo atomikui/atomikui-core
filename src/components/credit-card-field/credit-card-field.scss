@@ -8,15 +8,15 @@
     background: $white;
     border: rem(1) solid $gray-200;
     border-radius: rem($border-radius);
-    display: inline-flex;
+    display: flex;
     position: relative;
 
-    input:disabled {
-      background: transparent;
+    input {
+      font-size: rem(14);
     }
 
     & > * {
-      margin-right: rem(8);
+      margin-right: rem(4);
     }
 
     & > svg {
@@ -27,6 +27,13 @@
   &.has-error {
     & > .atomikui-credit-card-field__fields {
       border-color: $error-red;
+
+      & > * {
+        margin-right: rem(8);
+      }
     }
+  }
+
+  @media (min-width: $breakpoint-medium) {
   }
 }

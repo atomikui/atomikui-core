@@ -21,7 +21,6 @@ const CreditCardField = ({
   ...others
 }) => {
   const [cardType, setCardType] = useState(null);
-
   const [mask, setMask] = useState(null);
 
   const stripMask = (str) => {
@@ -112,33 +111,22 @@ const CreditCardField = ({
           {creditCardIcons[cardType]}
           <FormField
             {...cardNumber}
+            style={{ minWidth: '50px' }}
             mask={mask}
             maxLength={cardType === 'american-express' ? '25' : '26'}
-            style={{ width: '182px' }}
             borderless
           />
           <FormField
             {...cardExpiry}
+            style={{ minWidth: '55px' }}
             mask="99/99"
             borderless
-            style={{ width: '70px' }}
-            disabled
           />
           {!hideCvc && (
-            <FormField
-              {...cardCvc}
-              style={{ width: '55px' }}
-              borderless
-              disabled
-            />
+            <FormField {...cardCvc} style={{ minWidth: '22px' }} borderless />
           )}
           {!hideZip && (
-            <FormField
-              {...cardZip}
-              style={{ width: '65px' }}
-              borderless
-              disabled
-            />
+            <FormField {...cardZip} style={{ minWidth: '60px' }} borderless />
           )}
         </div>
       </fieldset>
