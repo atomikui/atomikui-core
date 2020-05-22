@@ -18,6 +18,13 @@
     margin-top: rem(3);
   }
 
+  &--borderless {
+    & > .atomikui-formfield__input,
+    & > .atomikui-formfield__textarea {
+      border: 0;
+    }
+  }
+
   &.has-error > &__input {
     border-color: $error-red;
   }
@@ -25,13 +32,6 @@
   &.has-error > &__input:focus,
   &.has-error > &:focus {
     @include focus-error-outline();
-  }
-
-  &--borderless {
-    & > .atomikui-formfield__input,
-    & > .atomikui-formfield__textarea {
-      border: 0;
-    }
   }
 
   @each $name, $breakpoint in $breakpoints {

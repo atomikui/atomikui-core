@@ -1,2 +1,6 @@
 .atomikui-credit-card-field {
+  &__fields {
+    background: $dark-background-gray;
+    border-color: $dark-border-gray;
+  }
 }
