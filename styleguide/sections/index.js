@@ -6,6 +6,7 @@ const experimental = require('./experimental');
 const dom = require('./dom');
 const gettingStarted = require('./getting-started');
 const form = require('./form');
+const iconography = require('./iconography');
 const informational = require('./informational');
 const layout = require('./layout');
 const navigation = require('./navigation');
@@ -19,6 +20,7 @@ module.exports = [
   dataDisplay,
   dom,
   form,
+  iconography,
   informational,
   layout,
   navigation,

@@ -17,12 +17,4 @@ module.exports = {
       'src/components/truncate/Truncate.js',
     ];
   },
-  sections: [
-    {
-      name: 'Icons',
-      content: 'src/components/icon/Icon.md',
-      usageMode: 'expand',
-      exampleMode: 'expand',
-    },
-  ],
 };
