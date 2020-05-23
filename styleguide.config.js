@@ -1,11 +1,6 @@
-const dotenv = require('dotenv-flow');
 const path = require('path');
 const sections = require('./styleguide/sections');
 const { version } = require('./package.json');
-
-dotenv.config();
-
-const isDarkMode = process.env.DARK_MODE === 'true';
 
 module.exports = {
   version,
@@ -17,13 +12,7 @@ module.exports = {
   },
   assetsDir: './public',
   styleguideDir: './build',
-  require: [
-    './src/styles/main.scss',
-    './styleguide/styles/main.scss',
-    ...(isDarkMode
-      ? ['./src/styles/dark.scss', './styleguide/styles/dark.scss']
-      : []),
-  ],
+  require: ['./src/styles/main.scss', './styleguide/styles/main.scss'],
   template: {
     head: {
       links: [
@@ -37,13 +26,6 @@ module.exports = {
   },
   theme: {
     color: {
-      // Base styleguide dark theme styles
-      ...(isDarkMode && {
-        base: '#efefef',
-        baseBackground: '#1a1a1a',
-        border: '#444',
-        link: '#88ccfc',
-      }),
       // syntax highlighting styles
       codeBackground: '#272C34',
       codeString: '#a6e22e',

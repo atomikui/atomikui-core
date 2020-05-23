@@ -7,7 +7,9 @@ import { Spinner } from '@alaneicker/atomik-ui';
 
 <>
   <Spinner />
-  <Spinner theme="white" />
+  <div style={{ background: '#222', padding: '3px', display: 'inline-block' }}>
+    <Spinner theme="white" />
+  </div>
   <Spinner theme="red" />
   <Spinner theme="orange" />
   <Spinner theme="green" />

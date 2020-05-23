@@ -7,10 +7,6 @@ module.exports = {
       name: 'Installation',
       content: './styleguide/docs/Installation.md',
     },
-    {
-      name: 'Theming',
-      content: './styleguide/docs/Theming.md',
-    },
   ],
   components: () => {
     return ['src/components/stats/Stats.js'];
