@@ -49,18 +49,4 @@ describe('<CreditCardField />', () => {
     expect(onchangeSpy.called).toBe(true);
     expect(onCardNumberChangeSpy.called).toBe(true);
   });
-
-  it('Should set the width of the credit card number field when focused or blurred', () => {
-    creditCardField.find('input#credit-card-number').simulate('focus');
-
-    expect(
-      creditCardField.find('input#credit-card-number').prop('style').width,
-    ).toBe('auto');
-
-    creditCardField.find('input#credit-card-number').simulate('blur');
-
-    expect(
-      creditCardField.find('input#credit-card-number').prop('style').width,
-    ).toBe('53px');
-  });
 });

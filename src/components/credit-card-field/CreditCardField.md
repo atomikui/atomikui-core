@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { CreditCardField } from '@alaneicker/atomik-ui';
 
 const [state, setState] = useState({
-  creditCardNumber: '4833130035858703',
+  creditCardNumber: '',
   cardNumberIsValid: false,
   creditCardExpiry: '',
   creditCardCvc: '',
