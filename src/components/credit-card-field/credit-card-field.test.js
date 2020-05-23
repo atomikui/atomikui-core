@@ -31,4 +31,28 @@ describe('<CreditCardField />', () => {
   it('Should render without errors', () => {
     expect(creditCardField.length).toBe(1);
   });
+
+  it('Should set the value of the credit card number field', () => {
+    expect(creditCardField.find('input#credit-card-number').prop('value')).toBe(
+      '6011111111111117',
+    );
+  });
+
+  it('Should set the value of the credit card expiration field', () => {
+    expect(creditCardField.find('input#credit-card-expiry').prop('value')).toBe(
+      '06/22',
+    );
+  });
+
+  it('Should set the value of the credit card CVC field', () => {
+    expect(creditCardField.find('input#credit-card-cvc').prop('value')).toBe(
+      '123',
+    );
+  });
+
+  it('Should set the value of the credit card ZIP code field', () => {
+    expect(creditCardField.find('input#credit-card-zip').prop('value')).toBe(
+      '60068',
+    );
+  });
 });
