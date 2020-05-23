@@ -55,4 +55,13 @@ describe('<CreditCardField />', () => {
       '60068',
     );
   });
+
+  it('Should trigger callbacks', () => {
+    creditCardField
+      .find('input#credit-card-number')
+      .simulate('change', { target: { value: '5105105105105100' } });
+
+    expect(onchangeSpy.called).toBe(true);
+    expect(onCardNumberChangeSpy.called).toBe(true);
+  });
 });
