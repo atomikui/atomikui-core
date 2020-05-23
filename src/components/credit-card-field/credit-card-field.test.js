@@ -32,28 +32,13 @@ describe('<CreditCardField />', () => {
     expect(creditCardField.length).toBe(1);
   });
 
-  it('Should set the value of the credit card number field', () => {
-    expect(creditCardField.find('input#credit-card-number').prop('value')).toBe(
-      '6011111111111117',
-    );
-  });
-
-  it('Should set the value of the credit card expiration field', () => {
-    expect(creditCardField.find('input#credit-card-expiry').prop('value')).toBe(
-      '06/22',
-    );
-  });
-
-  it('Should set the value of the credit card CVC field', () => {
-    expect(creditCardField.find('input#credit-card-cvc').prop('value')).toBe(
-      '123',
-    );
-  });
-
-  it('Should set the value of the credit card ZIP code field', () => {
-    expect(creditCardField.find('input#credit-card-zip').prop('value')).toBe(
-      '60068',
-    );
+  test.each([
+    ['input#credit-card-number', '6011111111111117'],
+    ['input#credit-card-expiry', '06/22'],
+    ['input#credit-card-cvc', '123'],
+    ['input#credit-card-zip', '60068'],
+  ])('Should set the value of %p as %p', (id, value) => {
+    expect(creditCardField.find(id).prop('value')).toBe(value);
   });
 
   it('Should trigger callbacks', () => {
