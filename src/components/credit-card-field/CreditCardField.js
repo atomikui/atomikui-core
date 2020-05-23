@@ -28,8 +28,6 @@ const CreditCardField = ({
   const [cardIsValid, setCardIsValid] = useState(false);
   const [creditCardIsFocused, setCreditCardIsFocused] = useState(false);
 
-  const minCreditCardFieldWidth = '53px';
-
   const stripMask = (str) => {
     return str.replace(/(-|\/|_)/g, '');
   };

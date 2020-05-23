@@ -30,8 +30,7 @@
   }
 
   &__last-four-digits {
-    height: rem($input-height);
-    line-height: rem($input-height);
+    line-height: rem($input-height + 1);
   }
 
   &.has-error {
