@@ -49,4 +49,12 @@ describe('<CreditCardField />', () => {
     expect(onchangeSpy.called).toBe(true);
     expect(onCardNumberChangeSpy.called).toBe(true);
   });
+
+  // it('Should put focus on CVC field after expiration date is filled', () => {
+  //   creditCardField
+  //     .find('input#credit-card-expiry')
+  //     .simulate('change', { target: { value: '05/21' } });
+
+  //   expect(document.activeElement.id === 'credit-card-cvc').toBe(true);
+  // });
 });
