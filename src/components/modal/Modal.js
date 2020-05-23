@@ -15,7 +15,7 @@ const Modal = ({
   noOverlay,
   isOpen,
   onClose,
-  overlayThemeVariant,
+  theme,
   title,
   type,
   ...others
@@ -53,7 +53,7 @@ const Modal = ({
 
   return (
     <Overlay
-      {...(overlayThemeVariant && { theme: overlayThemeVariant })}
+      {...(theme && { theme })}
       isActive={isOpen}
       classes={classnames({
         'overlay--transparent': noOverlay,
@@ -103,8 +103,8 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   /** Callback triggered on close. */
   onClose: PropTypes.func,
-  /** Set the overlay theme variation */
-  overlayThemeVariant: PropTypes.oneOf(['white', 'blue']),
+  /** Sets the color theme variation */
+  theme: PropTypes.oneOf(['white', 'blue']),
   /** title to be displayed in modal header */
   title: PropTypes.string,
   /** Color theme variation */
@@ -120,7 +120,7 @@ Modal.defaultProps = {
   isOpen: false,
   noOverlay: false,
   onClose() {},
-  overlayThemeVariant: null,
+  theme: null,
   title: '',
   type: null,
 };

@@ -59,11 +59,6 @@ Atomik UI comes with a variety of customizable React components as well as integ
 - Formik
 - Yup
 
-#### Theming
-
-- Light mode theme (Default)
-- Dark mode theme
-
 ### Get Started
 
 [Installation the Component Library](https://alaneicker1975.github.io/atomik-ui/#/Getting%20Started/Installation)
