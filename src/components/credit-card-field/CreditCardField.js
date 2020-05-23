@@ -59,8 +59,15 @@ const CreditCardField = ({
     setCreditCardIsFocused(false);
   };
 
+  const enforceMaxLength = (maxLength, e) => {
+    if (e.target.value.length === maxLength && e.keyCode !== 8) {
+      e.preventDefault();
+    }
+  };
+
   const cardNumber = {
     id: 'credit-card-number',
+    type: 'number',
     placeholder: 'Card Number',
     name: 'creditCardNumber',
     onChange: handleChange,
@@ -77,6 +84,7 @@ const CreditCardField = ({
 
   const cardCvc = {
     id: 'credit-card-cvc',
+    type: 'number',
     placeholder: 'CVC',
     name: 'creditCardCvc',
     onChange: handleChange,
@@ -85,6 +93,7 @@ const CreditCardField = ({
 
   const cardZip = {
     id: 'credit-card-zip',
+    type: 'number',
     placeholder: 'ZIP',
     name: 'creditCardZip',
     onChange: handleChange,
@@ -196,7 +205,13 @@ const CreditCardField = ({
                 })}
               >
                 <label>CVC</label>
-                <FormField {...cardCvc} maxLength="3" borderless />
+                <FormField
+                  {...cardCvc}
+                  onKeyDown={(e) => {
+                    return enforceMaxLength(3, e);
+                  }}
+                  borderless
+                />
               </div>
             </>
           )}
@@ -210,7 +225,13 @@ const CreditCardField = ({
                 })}
               >
                 <label>ZIP Code</label>
-                <FormField {...cardZip} maxLength="5" borderless />
+                <FormField
+                  {...cardZip}
+                  onKeyDown={(e) => {
+                    return enforceMaxLength(5, e);
+                  }}
+                  borderless
+                />
               </div>
             </>
           )}
