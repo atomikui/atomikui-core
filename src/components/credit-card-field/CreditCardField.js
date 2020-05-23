@@ -89,7 +89,7 @@ const CreditCardField = ({
     name: 'creditCardCvc',
     onChange: handleChange,
     value: creditCardCvc,
-    pattern: 'd*',
+    pattern: '[0-9]*',
   };
 
   const cardZip = {
@@ -99,7 +99,7 @@ const CreditCardField = ({
     name: 'creditCardZip',
     onChange: handleChange,
     value: creditCardZip,
-    pattern: 'd*',
+    pattern: '[0-9]*',
   };
 
   const errorMessages = {
