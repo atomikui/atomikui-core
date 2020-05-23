@@ -26,7 +26,6 @@ module.exports = {
   mode: !prod ? 'development' : 'production',
   entry: {
     main: path.resolve(__dirname, 'src/styles/main.scss'),
-    dark: path.resolve(__dirname, 'src/styles/dark.scss'),
   },
   output: {
     filename: '[name].js',
