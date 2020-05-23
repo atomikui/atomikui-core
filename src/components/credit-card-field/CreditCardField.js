@@ -72,6 +72,7 @@ const CreditCardField = ({
     name: 'creditCardNumber',
     onChange: handleChange,
     value: creditCardNumber,
+    pattern: '[0-9]*',
   };
 
   const cardExpiry = {
