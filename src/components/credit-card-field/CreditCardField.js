@@ -22,7 +22,9 @@ const CreditCardField = ({
   ...others
 }) => {
   const [cardType, setCardType] = useState(null);
-  const [creditCardFieldWidth, setCreditCardFieldWidth] = useState('auto');
+  const [cardPreview, setCardPreview] = useState('5555');
+  const [cardPreviewHidden, setCardPreviewhidden] = useState(false);
+  const [cardFieldHidden, setCardFieldHidden] = useState('auto');
   const [cardIsValid, setCardIsValid] = useState(false);
   const [creditCardIsFocused, setCreditCardIsFocused] = useState(false);
 
@@ -47,13 +49,14 @@ const CreditCardField = ({
   };
 
   const onCreditCardFocus = () => {
-    setCreditCardFieldWidth('auto');
+    setCardFieldHidden(false);
     setCreditCardIsFocused(true);
   };
 
   const onCreditCardBlur = () => {
     if (cardIsValid) {
-      setCreditCardFieldWidth(minCreditCardFieldWidth);
+      setCardFieldHidden(true);
+      setCardPreviewhidden(true);
     }
     setCreditCardIsFocused(false);
   };
@@ -113,12 +116,16 @@ const CreditCardField = ({
 
       setCardType(type);
       setCardIsValid(isValid);
-      setCreditCardFieldWidth(isValid ? minCreditCardFieldWidth : 'auto');
+      setCardFieldHidden(isValid);
+      setCardPreviewhidden(isValid);
+      setCardPreview(isValid ? value.substr(-4) : '');
       onCardNumberChange(type, isValid);
     } catch (e) {
       setCardType('default');
       setCardIsValid(false);
-      setCreditCardFieldWidth('auto');
+      setCardFieldHidden(false);
+      setCardPreviewhidden(false);
+      setCardPreview('');
       onCardNumberChange(false, '');
     }
   }, [creditCardNumber]);
@@ -131,6 +138,13 @@ const CreditCardField = ({
       }, 10);
     }
   }, [cardIsValid]);
+
+  useEffect(() => {
+    if (cardFieldHidden === false) {
+      document.querySelector('#credit-card-number').focus();
+      setCardPreviewhidden(false);
+    }
+  }, [cardFieldHidden]);
 
   return (
     <>
@@ -146,12 +160,24 @@ const CreditCardField = ({
           <label>Credit Card Number</label>
           <FormField
             {...cardNumber}
+            className={classnames({
+              'display-none': cardFieldHidden,
+            })}
             maxLength={cardType === 'american-express' ? '25' : '26'}
-            style={{ width: creditCardFieldWidth }}
             onFocus={onCreditCardFocus}
             onBlur={onCreditCardBlur}
             borderless
           />
+          {cardPreviewHidden && (
+            <div
+              className="atomikui-credit-card-field__last-four-digits"
+              onClick={() => {
+                return setCardFieldHidden(false);
+              }}
+            >
+              {cardPreview}
+            </div>
+          )}
           <div
             className={classnames({
               'is-visibly-hidden':
