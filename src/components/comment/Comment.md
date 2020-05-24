@@ -5,6 +5,7 @@ import { Comment } from '@alaneicker/atomik-ui';
 
 const replies = [
   <Comment
+    key="comment-1"
     avatar="mary.png"
     author="Mary"
     authorLink="/profile/mary"
@@ -14,6 +15,7 @@ const replies = [
     I agree. Great post!
   </Comment>,
   <Comment
+    key="comment-2"
     avatar="steve.png"
     author="Steve Johnson"
     authorLink="/profile/steve-johnson"

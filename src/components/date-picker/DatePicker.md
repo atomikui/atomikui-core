@@ -7,6 +7,7 @@ import { DatePicker } from '@alaneicker/atomik-ui';
   <DatePicker
     label="Select a Date"
     helpText="Expected Format: MM/DD/YYYY"
+    value="05/22/2020"
     onChange={(date) => console.log(date)}
   />
 </>;

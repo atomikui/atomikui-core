@@ -19,6 +19,7 @@ const [checked, setChecked] = useState(false);
 ### Radio Button
 
 ```jsx
+import shortid from 'shortid';
 import { useState } from 'react';
 import { CheckOption } from '@alaneicker/atomik-ui';
 
@@ -38,9 +39,8 @@ const onChange = (index) => {
 
 <>
   {checkOptions.map(({ label, name, checked }, index) => (
-    <div>
+    <div key={shortid.generate()}>
       <CheckOption
-        key={`check-option-${index}`}
         type="radio"
         label={label}
         name={name}

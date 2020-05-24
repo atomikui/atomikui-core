@@ -55,7 +55,7 @@ const colors = [
 <>
   {colors.map(({ name, hex }) => {
     return (
-      <div>
+      <div key={name}>
         <span
           style={{
             color: hex,
@@ -76,7 +76,11 @@ const colors = [
 const textSizes = [12, 14, 16, 20, 24, 30, 36, 42, 48];
 
 textSizes.map((size) => {
-  return <div style={{ fontSize: `${size}px` }}>.text-size-{size}</div>;
+  return (
+    <div key={size} style={{ fontSize: `${size}px` }}>
+      .text-size-{size}
+    </div>
+  );
 });
 ```
 
@@ -106,6 +110,10 @@ const fontWeights = [
 ];
 
 fontWeights.map(({ weight, name }) => {
-  return <div style={{ fontWeight: weight }}>.text-weight-{name}</div>;
+  return (
+    <div key={weight} style={{ fontWeight: weight }}>
+      .text-weight-{name}
+    </div>
+  );
 });
 ```
