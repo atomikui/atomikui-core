@@ -38,7 +38,7 @@ describe('<CheckOption />', () => {
   });
 
   it('Should set name attribute based of ID if no name prop is not set', () => {
-    expect(checkOption.find('input').prop('name').match(/uid-/)).not.toBeNull();
+    expect(checkOption.find('input').prop('name')).not.toBeNull();
   });
 
   it('Should trigger onChange callback', () => {

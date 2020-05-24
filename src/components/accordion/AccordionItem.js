@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import generateId from '../../utilities/generateId';
 
 const AccordionItem = ({
   children,
@@ -16,8 +15,8 @@ const AccordionItem = ({
   const [isExpanded, setIsExpanded] = useState(expanded);
   const contentRef = useRef();
 
-  const headerId = generateId('header');
-  const panelId = generateId('panel');
+  const headerId = shortid.generate();
+  const panelId = shortid.generate();
 
   const handleOnClick = () => {
     if (handleClick) {

@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import createFocusTrap from 'focus-trap';
+import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import ChatMessage from '../chat-message';
@@ -136,7 +137,7 @@ const ChatWindow = ({
         {messages.map(({ originIpAddress, ...props }) => {
           return (
             <ChatMessage
-              key={Math.random()}
+              key={shortid.generate()}
               isSameOrigin={originIpAddress === ipAddress}
               {...props}
             />

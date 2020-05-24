@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import generateId from '../../utilities/generateId';
+import shortid from 'shortid';
 
 const Breadcrumb = ({ children, className, ...others }) => {
   return (
@@ -11,7 +11,7 @@ const Breadcrumb = ({ children, className, ...others }) => {
         {...others}
       >
         {Children.map(children, (child) => {
-          return <li key={generateId()}>{child}</li>;
+          return <li key={shortid.generate()}>{child}</li>;
         })}
       </ol>
     </nav>

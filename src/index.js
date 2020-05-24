@@ -34,7 +34,6 @@ export { default as Rating } from './components/rating';
 export { default as Spinner } from './components/spinner';
 export { default as Statistic } from './components/statistic';
 export { Stepper, Step } from './components/stepper';
-export { default as Sticky } from './components/sticky';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
 export { Tabs, Tab, TabPanel } from './components/tabs';

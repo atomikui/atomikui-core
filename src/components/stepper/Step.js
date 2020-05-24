@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import shortid from 'shortid';
 import Link from '../link';
 import { ListItem } from '../list';
 
@@ -11,7 +12,7 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
 
   return (
     <ListItem
-      key={Math.random()}
+      key={shortid.generate()}
       aria-current={isActive}
       className={classnames('atomikui-step', {
         'is-complete': isComplete,

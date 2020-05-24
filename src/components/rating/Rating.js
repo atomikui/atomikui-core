@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 
@@ -36,7 +37,7 @@ const Rating = ({ className, maxStars, onSelect, size, stars, ...others }) => {
               'atomikui-rating__star--selectable': onSelect,
               'is-selected': onSelect && index + 1 <= rating,
             })}
-            key={Math.random()}
+            key={shortid.generate()}
             icon={faStar}
             aria-hidden="true"
             size={size}

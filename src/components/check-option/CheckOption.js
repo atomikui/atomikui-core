@@ -1,11 +1,11 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
-import generateId from '../../utilities/generateId';
 
 const types = ['checkbox', 'radio'];
 
@@ -24,7 +24,7 @@ const CheckOption = ({
   type,
   ...others
 }) => {
-  const uid = id || generateId();
+  const uid = id || shortid.generate();
   const inputName = name || uid;
   const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;

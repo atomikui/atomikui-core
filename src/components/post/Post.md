@@ -1,6 +1,7 @@
 Content displayed for public viewing, such as a blog post.
 
 ```jsx
+import shortid from 'shortid';
 import { Post, Comment } from '@alaneicker/atomik-ui';
 
 <Post
@@ -17,7 +18,7 @@ import { Post, Comment } from '@alaneicker/atomik-ui';
   onReport={() => console.log('submitting report')}
   comments={[
     <Comment
-      key="comment-1"
+      key={shortid.generate()}
       avatar="mary.png"
       author="Mary"
       authorLink="/profile/mary"

@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
-import generateId from '../../utilities/generateId';
 
 const Switch = ({
   className,
@@ -19,7 +19,7 @@ const Switch = ({
   onChange,
   required,
 }) => {
-  const uid = id || generateId();
+  const uid = id || shortid.generate();
   const inputName = name || uid;
   const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import generateId from '../../utilities/generateId';
+import shortid from 'shortid';
 import ToastContext from './toast-context';
 import Toaster from './Toaster';
 import Toast from './Toast';
@@ -10,7 +10,7 @@ const withToastProvider = (Component) => {
     const [toasts, setToasts] = useState([]);
 
     const add = (type, content) => {
-      const id = generateId();
+      const id = shortid.generate();
 
       setToasts([...toasts, { id, type, content }]);
     };

@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import Label from '../label';
 import Hint from '../hint';
-import generateId from '../../utilities/generateId';
 
 const ButtonGroup = ({
   children,
@@ -17,7 +17,7 @@ const ButtonGroup = ({
   stretch,
   ...others
 }) => {
-  const uid = generateId();
+  const uid = shortid.generate();
   const inputHintId = `${uid}_hint`;
   const inputErrorId = `${uid}_error`;
 

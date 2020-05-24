@@ -1,7 +1,7 @@
 import React, { Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import generateId from '../../utilities/generateId';
+import shortid from 'shortid';
 import { List, ListItem } from '../list';
 
 const Pagination = ({ children, className, ...others }) => {
@@ -13,7 +13,7 @@ const Pagination = ({ children, className, ...others }) => {
             className={classnames('atomikui-pagination__item', {
               'is-active': child.props.active,
             })}
-            key={generateId()}
+            key={shortid.generate()}
           >
             {child}
           </ListItem>

@@ -3,6 +3,7 @@ Vertical and horizontal rhythm can be achieved with margin and padding utility c
 ### Margin and Padding Utilities
 
 ```jsx
+import shortid from 'shortid';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const styles = {
@@ -75,7 +76,7 @@ const Column = ({ children, className, transparent, ...props }) => {
 <Grid fluid>
   {units.map((unit) => {
     return (
-      <Row key={Math.random()}>
+      <Row key={shortid.generate()}>
         <Column md={5} className={`margin-top-${unit}`}>
           .margin-top-{unit} / .padding-top-{unit}
         </Column>
@@ -91,7 +92,7 @@ const Column = ({ children, className, transparent, ...props }) => {
   <div style={styles.divider}></div>
   {units.map((unit) => {
     return (
-      <Row key={Math.random()}>
+      <Row key={shortid.generate()}>
         <Column md={5} className={`margin-right-${unit}`}>
           .margin-right-{unit} / .padding-right-{unit}
         </Column>

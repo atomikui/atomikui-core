@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import { List, ListItem } from '../list';
 import Hint from '../hint/Hint';
-import generateId from '../../utilities/generateId';
 
 const FileUpload = ({
   className,
@@ -19,7 +19,7 @@ const FileUpload = ({
 }) => {
   const [files, setFiles] = useState([]);
 
-  const id = generateId('file-input');
+  const id = shortid.generate();
   const inputName = name || id;
   const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;
@@ -96,7 +96,7 @@ const FileUpload = ({
             <div className="margin-top-16" />
             <List className="atomikui-file-upload__file-list">
               {files.map((file, index) => {
-                return <ListItem key={`file-${index}`}>{file}</ListItem>;
+                return <ListItem key={shortid.generate()}>{file}</ListItem>;
               })}
             </List>
           </>

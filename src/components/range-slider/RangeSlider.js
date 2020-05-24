@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import generateId from '../../utilities/generateId';
+import shortid from 'shortid';
 import Hint from '../hint';
 import Label from '../label';
 
@@ -28,7 +28,7 @@ const RangeSlider = ({
   const sliderRef = useRef();
   const [rangeValue, setRangeValue] = useState(value);
 
-  const uid = id || generateId();
+  const uid = id || shortid.generate();
   const inputName = name || uid;
   const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;
@@ -72,7 +72,7 @@ const RangeSlider = ({
             {ticks.map(({ text, val }, index) => {
               return (
                 <div
-                  key={`tick-${index}`}
+                  key={shortid.generate()}
                   className="atomikui-range-slider__ticks__tick"
                   {...(!disabled && {
                     onClick: () => {

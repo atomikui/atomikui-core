@@ -1,10 +1,10 @@
 import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import MaskedField from 'react-masked-field';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
-import generateId from '../../utilities/generateId';
 
 const types = [
   'date',
@@ -49,7 +49,7 @@ const FormField = forwardRef(
     },
     ref,
   ) => {
-    const uid = id || generateId();
+    const uid = id || shortid.generate();
     const inputName = name || uid;
     const inputHintId = `${inputName}_hint`;
     const inputErrorId = `${inputName}_error`;

@@ -16,6 +16,7 @@ import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 ### Icon Reference
 
 ```jsx
+import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import * as faIcons from '@fortawesome/free-solid-svg-icons';
 
@@ -24,7 +25,7 @@ const icons = faIcons.fas;
 <div className="icon-list">
   {Object.keys(icons).map((icon) => {
     return (
-      <div key={Math.random()} className="icon-list__item">
+      <div key={shortid.generate()} className="icon-list__item">
         <Icon icon={icons[icon]} color="#444" size="2x" />
         <div className="icon-list__label">{icon}</div>
       </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
-import generateId from '../../utilities/generateId';
 
 const Dropdown = ({
   className,
@@ -21,7 +21,7 @@ const Dropdown = ({
   value,
   ...others
 }) => {
-  const uid = id || generateId();
+  const uid = id || shortid.generate();
   const inputName = name || uid;
   const inputHintId = `${inputName}_hint`;
   const inputErrorId = `${inputName}_error`;
@@ -64,7 +64,7 @@ const Dropdown = ({
             // eslint-disable-next-line no-shadow
           ].map(({ text, value }, index) => {
             return (
-              <option key={`option-${index}`} value={value}>
+              <option key={shortid.generate()} value={value}>
                 {text}
               </option>
             );
