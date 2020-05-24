@@ -50,11 +50,28 @@ describe('<CreditCardField />', () => {
     expect(onCardNumberChangeSpy.called).toBe(true);
   });
 
-  // it('Should put focus on CVC field after expiration date is filled', () => {
-  //   creditCardField
-  //     .find('input#credit-card-expiry')
-  //     .simulate('change', { target: { value: '05/21' } });
+  it('Should show the credit card field when 4 digit preview is clicked', () => {
+    expect(
+      creditCardField.find('input#credit-card-number').hasClass('display-none'),
+    ).toBe(true);
 
-  //   expect(document.activeElement.id === 'credit-card-cvc').toBe(true);
-  // });
+    creditCardField.find('#last-four-digits').simulate('click');
+
+    expect(
+      creditCardField.find('input#credit-card-number').hasClass('display-none'),
+    ).toBe(false);
+  });
+
+  it('Should hide the credit card field when field is blurred', () => {
+    creditCardField.find('#last-four-digits').simulate('click');
+    creditCardField.find('input#credit-card-number').simulate('blur');
+
+    expect(
+      creditCardField.find('input#credit-card-number').hasClass('display-none'),
+    ).toBe(true);
+  });
+
+  it('Should enforce max values', () => {});
+
+  it('Should clear all fields if credit card number is deleted', () => {});
 });

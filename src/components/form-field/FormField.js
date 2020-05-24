@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import MaskedField from 'react-masked-field';
@@ -26,89 +26,100 @@ const types = [
   'week',
 ];
 
-const FormField = ({
-  borderless,
-  className,
-  disabled,
-  errorText,
-  hasError,
-  helpText,
-  id,
-  label,
-  mask,
-  name,
-  onChange,
-  placeholder,
-  readOnly,
-  required,
-  type,
-  value,
-  ...others
-}) => {
-  const uid = id || generateId();
-  const inputName = name || uid;
-  const inputHintId = `${inputName}_hint`;
-  const inputErrorId = `${inputName}_error`;
-  const fieldType = !types.includes(type) ? 'text' : type;
+const FormField = forwardRef(
+  (
+    {
+      borderless,
+      className,
+      disabled,
+      errorText,
+      hasError,
+      helpText,
+      id,
+      label,
+      mask,
+      name,
+      onChange,
+      placeholder,
+      readOnly,
+      required,
+      type,
+      value,
+      ...others
+    },
+    ref,
+  ) => {
+    const uid = id || generateId();
+    const inputName = name || uid;
+    const inputHintId = `${inputName}_hint`;
+    const inputErrorId = `${inputName}_error`;
+    const fieldType = !types.includes(type) ? 'text' : type;
 
-  const Input = mask ? MaskedField : 'input';
+    const Input = mask ? MaskedField : 'input';
 
-  return (
-    <div
-      className={classnames('atomikui-formfield', className, {
-        'has-error': hasError,
-        'atomikui-formfield--borderless': borderless,
-      })}
-    >
-      {label && (
-        <div className="atomikui-formfield__label">
-          <Label htmlFor={uid}>{label}</Label>
-        </div>
-      )}
-      {type === 'textarea' ? (
-        <textarea
-          id={uid}
-          name={inputName}
-          className={classnames('atomikui-formfield__textarea', className, {})}
-          placeholder={placeholder}
-          value={value}
-          aria-describedby={`${inputHintId} ${inputErrorId}`}
-          required={required}
-          readOnly={readOnly}
-          disabled={disabled}
-          onChange={onChange}
-          {...others}
-        />
-      ) : (
-        <Input
-          id={uid}
-          name={inputName}
-          className={classnames('atomikui-formfield__input', className, {})}
-          type={fieldType}
-          mask={mask}
-          placeholder={placeholder}
-          value={value}
-          aria-describedby={`${inputHintId} ${inputErrorId}`}
-          readOnly={readOnly}
-          disabled={disabled}
-          onChange={onChange}
-          required
-          {...others}
-        />
-      )}
-      {(helpText || errorText) && (
-        <div className="atomikui-formfield__hints">
-          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-          {hasError && (
-            <Hint id={inputErrorId} type="error">
-              {errorText}
-            </Hint>
-          )}
-        </div>
-      )}
-    </div>
-  );
-};
+    return (
+      <div
+        className={classnames('atomikui-formfield', className, {
+          'has-error': hasError,
+          'atomikui-formfield--borderless': borderless,
+        })}
+      >
+        {label && (
+          <div className="atomikui-formfield__label">
+            <Label htmlFor={uid}>{label}</Label>
+          </div>
+        )}
+        {type === 'textarea' ? (
+          <textarea
+            ref={ref}
+            id={uid}
+            name={inputName}
+            className={classnames(
+              'atomikui-formfield__textarea',
+              className,
+              {},
+            )}
+            placeholder={placeholder}
+            value={value}
+            aria-describedby={`${inputHintId} ${inputErrorId}`}
+            required={required}
+            readOnly={readOnly}
+            disabled={disabled}
+            onChange={onChange}
+            {...others}
+          />
+        ) : (
+          <Input
+            ref={ref}
+            id={uid}
+            name={inputName}
+            className={classnames('atomikui-formfield__input', className, {})}
+            type={fieldType}
+            mask={mask}
+            placeholder={placeholder}
+            value={value}
+            aria-describedby={`${inputHintId} ${inputErrorId}`}
+            readOnly={readOnly}
+            disabled={disabled}
+            onChange={onChange}
+            required
+            {...others}
+          />
+        )}
+        {(helpText || errorText) && (
+          <div className="atomikui-formfield__hints">
+            {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+            {hasError && (
+              <Hint id={inputErrorId} type="error">
+                {errorText}
+              </Hint>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  },
+);
 
 FormField.propTypes = {
   /** Sets forn field with no border */

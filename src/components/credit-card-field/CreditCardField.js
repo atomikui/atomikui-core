@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import cardValidator from 'card-validator';
@@ -28,6 +28,10 @@ const CreditCardField = ({
   const [cardIsValid, setCardIsValid] = useState(false);
   const [creditCardIsFocused, setCreditCardIsFocused] = useState(false);
 
+  const creditCardRef = useRef();
+  const cvcRef = useRef();
+  const zipRef = useRef();
+
   const stripMask = (str) => {
     return str.replace(/(-|\/|_)/g, '');
   };
@@ -36,11 +40,11 @@ const CreditCardField = ({
     const { name, value } = e.target;
 
     if (name === 'creditCardExpiry' && stripMask(value).length === 4) {
-      document.querySelector('#credit-card-cvc').focus();
+      cvcRef.current.focus();
     }
 
     if (name === 'creditCardCvc' && String(value).length === 3) {
-      document.querySelector('#credit-card-zip').focus();
+      zipRef.current.focus();
     }
 
     onChange(name, value);
@@ -73,6 +77,7 @@ const CreditCardField = ({
     onChange: handleChange,
     value: creditCardNumber,
     pattern: '[0-9]*',
+    ref: creditCardRef,
   };
 
   const cardExpiry = {
@@ -91,6 +96,7 @@ const CreditCardField = ({
     onChange: handleChange,
     value: creditCardCvc,
     pattern: '[0-9]*',
+    ref: cvcRef,
   };
 
   const cardZip = {
@@ -101,6 +107,7 @@ const CreditCardField = ({
     onChange: handleChange,
     value: creditCardZip,
     pattern: '[0-9]*',
+    ref: zipRef,
   };
 
   const errorMessages = {
@@ -143,7 +150,7 @@ const CreditCardField = ({
   useEffect(() => {
     if (cardIsValid) {
       setTimeout(() => {
-        document.querySelector('#credit-card-number').blur();
+        creditCardRef.current.blur();
         document.querySelector('#credit-card-expiry').focus();
       }, 10);
     }
@@ -151,7 +158,7 @@ const CreditCardField = ({
 
   useEffect(() => {
     if (cardFieldHidden === false) {
-      document.querySelector('#credit-card-number').focus();
+      creditCardRef.current.focus();
       setCardPreviewhidden(false);
     }
   }, [cardFieldHidden]);
@@ -180,6 +187,7 @@ const CreditCardField = ({
           />
           {cardPreviewHidden && (
             <div
+              id="last-four-digits"
               className="atomikui-credit-card-field__last-four-digits"
               onClick={() => {
                 return setCardFieldHidden(false);

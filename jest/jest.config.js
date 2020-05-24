@@ -13,6 +13,8 @@ module.exports = {
     '!src/utilities/**/*.js',
     '!src/components/stats/**/*.js',
     '!src/components/toaster/toast-context.js',
+    // Excluding experimental components
+    '!src/components/credit-card-field/CreditCardField.js',
   ],
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
