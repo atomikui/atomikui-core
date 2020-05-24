@@ -14,6 +14,7 @@ module.exports = {
   styleguideDir: './build',
   require: ['./src/styles/main.scss', './styleguide/styles/main.scss'],
   template: {
+    favicon: 'favicon.ico',
     head: {
       links: [
         {

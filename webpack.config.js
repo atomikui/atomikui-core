@@ -4,7 +4,6 @@ const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
 
 const prod = process.env.NODE_ENV === 'production';
 const buildEvent = process.env.npm_lifecycle_event;
@@ -79,7 +78,6 @@ module.exports = {
     minimizer: [new TerserJSPlugin()],
   },
   plugins: [
-    new Dotenv(),
     new FixStyleOnlyEntriesPlugin(),
     new CompressionPlugin(),
     new MiniCssExtractPlugin({
