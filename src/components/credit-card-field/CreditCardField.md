@@ -12,6 +12,7 @@ const [state, setState] = useState({
   creditCardExpiry: '',
   creditCardCvc: '',
   creditCardZip: '',
+  cardType: '',
 });
 
 const onChange = (field, value) => {
@@ -23,7 +24,7 @@ const onChange = (field, value) => {
   });
 };
 
-const handleCardNumberValidation = (cardType, isValid) => {
+const onCardNumberChange = (cardType, isValid) => {
   setState((prevState) => {
     return {
       ...prevState,
@@ -46,7 +47,7 @@ const handleCardNumberValidation = (cardType, isValid) => {
     creditCardCvc={state.creditCardCvc}
     creditCardZip={state.creditCardZip}
     onChange={onChange}
-    onCardNumberChange={handleCardNumberValidation}
+    onCardNumberChange={onCardNumberChange}
   />
 </>;
 ```

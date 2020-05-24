@@ -143,7 +143,7 @@ const CreditCardField = ({
       setCardFieldHidden(false);
       setCardPreviewhidden(false);
       setCardPreview('');
-      onCardNumberChange(false, '');
+      onCardNumberChange('', false);
     }
   }, [creditCardNumber]);
 
