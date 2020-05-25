@@ -46,18 +46,20 @@
   </div>
 </div>
 
-Atomik UI offers a wide array of React component that can be used to kickstart any project. From form controls to information components like modals, alerts and icons, you'll find everything here to build your next React application.
+Atomik UI is a comprehensive library of React components that can be used to kickstart any project. From form controls to informations components like modals, alerts and icons, you'll find everything here to build your next React application.
 
 ### Features
 
-#### Customizable Components and Third-Party Support
+Atomik UI comes with a variety of customizable React components to suit any development need:
 
-Atomik UI comes with a variety of customizable React components as well as integrated third-party support for:
-
-- React Table
-- React Flexbox Grid
-- Formik
-- Yup
+- Containers
+- Content
+- Data Display
+- Form Controls
+- Informational
+- Layout
+- Naviagional
+- Templates
 
 ### Get Started
 
