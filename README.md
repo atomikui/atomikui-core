@@ -58,7 +58,7 @@ Atomik UI comes with a variety of customizable React components to suit any deve
 - Form Controls
 - Informational
 - Layout
-- Naviagional
+- Navigational
 - Templates
 
 ### Get Started
