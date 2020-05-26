@@ -12,11 +12,13 @@ install:
 
 jobs:
   include:
+    # Runs unit tests and lints JS and CSS
     - stage: run-tests
       script:
         - npm run test
         - npm run lint:js
         - npm run lint:css
+    # Builds and publishes Atomik UI Package to npm
     - stage: publish
       script:
         - npm run build:atomik
@@ -28,6 +30,7 @@ jobs:
         api_key: $NPM_API_KEY
         on:
           tags: true
+    # Builds and publishes Atomik UI styleguide to GitHub Pages
     - stage: gihub-pages
       script: npm run build:styleguide
       deploy:
