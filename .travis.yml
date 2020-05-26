@@ -14,27 +14,24 @@ jobs:
   include:
     - stage: run-tests
       script:
-        - echo "Running tests and linting ..."
         - npm run test
         - npm run lint:js
         - npm run lint:css
     - stage: publish
       script:
-        - echo "Deploying to NPM ..."
         - npm run build:atomik
         - npm run build:styles
       deploy:
-        skip_cleanup: true
         provider: npm
+        skip_cleanup: true
         email: '$EMAIL_ADDRESS'
         api_key: $NPM_API_KEY
         on:
           tags: true
     - stage: gihub-pages
-      script:
-        - echo "Deploying to GitHub Pages ..."
-        - npm run build:styleguide
+      script: npm run build:styleguide
       deploy:
+        provider: pages
         skip_cleanup: true
         github_token: $github_token
         local_dir: build
