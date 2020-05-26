@@ -5,8 +5,6 @@ TODOS
 
 # dependencies
 /node_modules
-/.pnp
-.pnp.js
 
 # testing
 /coverage
@@ -25,3 +23,4 @@ TODOS
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
