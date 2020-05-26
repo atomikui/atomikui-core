@@ -15,22 +15,19 @@
   },
   "license": "MIT",
   "scripts": {
-    "prepublish": "npm run test-and-lint && npm run build:atomik",
-    "postpublish": "git push && git push --tags && rm -rf dist",
     "publish:major": "npm version major -m \"Upgrade to %s\" && npm publish --access public",
     "publish:minor": "npm version minor -m \"Upgrade to %s\" && npm publish --access public",
     "publish:patch": "npm version patch -m \"Upgrade to %s\" && npm publish --access public",
-    "lint": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
+    "prepublish": "npm run test-and-lint && npm run build:atomik",
+    "postpublish": "git push && git push --tags && rm -rf dist",
+    "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "lint:css": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc.json --fix",
     "test": "jest --coverage --silent --config=./jest/jest.config.js",
+    "test-and-lint": "npm run test && npm run lint:js && npm run lint:css",
     "start": "NODE_ENV=development styleguidist server",
     "build:atomik": "NODE_ENV=production rm -rf dist && babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && npm run build:styles && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
-    "build": "NODE_ENV=production npm run test-and-lint && styleguidist build",
-    "test-and-lint": "npm run test && npm run lint && npm run lint:css",
-    "git-commit-and-push": "git add . && git commit -m 'test coverage report' && git push",
-    "predeploy": "npm run build && yarn git-commit-and-push",
-    "deploy": "gh-pages -d build"
+    "build:styleguide": "NODE_ENV=production npm run test-and-lint && styleguidist build"
   },
   "browserslist": {
     "production": [
@@ -105,7 +102,6 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-react": "^7.19.0",
     "formik": "^2.1.4",
-    "gh-pages": "^2.2.0",
     "jest": "^26.0.1",
     "jest-html-reporters": "^1.2.1",
     "mini-css-extract-plugin": "^0.9.0",
