@@ -1,18 +1,18 @@
-// .atomikui-tabs {
-//   background: $background-light-gray;
-//   display: flex;
-//   min-height: rem(48);
-//   width: 100%;
+.atomikui-tabs {
+  background: $background-light-gray;
+  display: flex;
+  min-height: rem(48);
+  width: 100%;
 
-//   &--align-center {
-//     justify-content: center;
-//   }
+  &--align-center {
+    justify-content: center;
+  }
 
-//   &--align-right {
-//     justify-content: flex-end;
-//   }
+  &--align-right {
+    justify-content: flex-end;
+  }
 
-//   &--align-stretch > * {
-//     flex: 1;
-//   }
-// }
+  &--align-stretch > * {
+    flex: 1;
+  }
+}
