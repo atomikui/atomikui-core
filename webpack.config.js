@@ -1,6 +1,6 @@
 const path = require('path');
 const AutoPrefixer = require('autoprefixer');
-const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
+// const FixStyleOnlyEntriesPlugin = require('webpack-fix-style-only-entries');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
@@ -78,7 +78,7 @@ module.exports = {
     minimizer: [new TerserJSPlugin()],
   },
   plugins: [
-    new FixStyleOnlyEntriesPlugin(),
+    // new FixStyleOnlyEntriesPlugin(),
     new CompressionPlugin(),
     new MiniCssExtractPlugin({
       filename: cssBuildPath,
