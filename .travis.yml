@@ -1,15 +1,51 @@
 language: node_js
+
 node_js:
   - '12.16.2'
+
 cache:
   directories:
     - node_modules
-script:
-  - npm run build:styleguide
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_token
-  local_dir: build
-  on:
-    branch: master
+
+jobs:
+  include:
+    - stage: run-tests
+      script:
+        - echo "Running tests and linting ..."
+        - npm run test
+        - npm run lint:js
+        - npm run lint:css
+    - stage: publish
+      script: 
+        - echo "Deploying to NPM ..."
+        - npm run build:atomik
+        - npm run build:styles
+      deploy:
+        skip_cleanup: true
+        provider: npm
+        email: "$EMAIL_ADDRESS"
+        api_key: $NPM_API_KEY
+        on: 
+          tags: true
+    - stage: gihub-pages
+      script: 
+        - echo "Deploying to GitHub Pages ..."
+        - npm run build:styleguide
+      - deploy:
+        skip_cleanup: true
+        github_token: $github_token
+        local_dir: build
+        on:
+          tags: true
+
+# deploy:
+#   - provider: npm
+#     email: "YOUR_EMAIL_ADDRESS"
+#     api_key: "YOUR_AUTH_TOKEN"
+#   - provider: pages
+#     script: build:styleguide
+#     skip_cleanup: true
+#     github_token: $github_token
+#     local_dir: build
+#     on:
+#       tags: true

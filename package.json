@@ -13,21 +13,18 @@
     "type": "git",
     "url": "https://github.com/alaneicker1975/atomik-ui"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "scripts": {
-    "publish:major": "npm version major -m \"Upgrade to %s\" && npm publish --access public",
-    "publish:minor": "npm version minor -m \"Upgrade to %s\" && npm publish --access public",
-    "publish:patch": "npm version patch -m \"Upgrade to %s\" && npm publish --access public",
-    "prepublish": "npm run test-and-lint && npm run build:atomik",
-    "postpublish": "git push && git push --tags && rm -rf dist",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "lint:css": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc.json --fix",
     "test": "jest --coverage --silent --config=./jest/jest.config.js",
-    "test-and-lint": "npm run test && npm run lint:js && npm run lint:css",
     "start": "NODE_ENV=development styleguidist server",
-    "build:atomik": "NODE_ENV=production rm -rf dist && babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && npm run build:styles && cp package.json dist/package.json",
+    "build:atomik": "NODE_ENV=production babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
-    "build:styleguide": "NODE_ENV=production npm run test-and-lint && styleguidist build"
+    "build:styleguide": "NODE_ENV=production styleguidist build"
   },
   "browserslist": {
     "production": [
