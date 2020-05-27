@@ -12,33 +12,33 @@ install:
 
 jobs:
   include:
-    # Runs unit tests and lints JS and CSS
-    - stage: run-tests
+    - stage: test
       script:
         - npm run test
         - npm run lint:js
         - npm run lint:css
-    # Builds and publishes Atomik UI Package to npm
+  exclude:
+    - if: type = pull_request
     - stage: publish
-      script:
-        - npm run build:atomik
-        - npm run build:styles
-      if: type = push AND tag IS present
       deploy:
+        script:
+          - npm run build:atomik
+          - npm run build:styles
         provider: npm
         skip_cleanup: true
         email: '$EMAIL_ADDRESS'
         api_key: $NPM_API_KEY
         on:
           tags: true
+          branch: master
     # Builds and publishes Atomik UI styleguide to GitHub Pages branch
     - stage: gihub-pages
-      script: npm run build:styleguide
-      if: type = push AND tag IS present
       deploy:
+        script: npm run build:styleguide
         provider: pages
         skip_cleanup: true
         github_token: $github_token
         local_dir: build
         on:
           tags: true
+          branch: master
