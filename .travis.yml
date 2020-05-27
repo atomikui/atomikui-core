@@ -19,7 +19,6 @@ jobs:
         - npm run lint:css
     # Builds and published Atomik UI to npm
     - stage: publish
-      if: tag IS present
       deploy:
         script:
           - npm run build:atomik
@@ -32,7 +31,6 @@ jobs:
           tags: true
     # Builds and publishes Atomik UI styleguide to GitHub Pages branch
     - stage: gihub-pages
-      if: tag IS present
       deploy:
         script: npm run build:styleguide
         provider: pages
