@@ -14,7 +14,6 @@ script:
   - npm run test
   - npm run lint:js
   - npm run lint:css
-  - npm run build:styleguide
 
 deploy:
   # - provider: npm
@@ -27,6 +26,8 @@ deploy:
   #   on:
   #     tags: true
   - provider: pages
+    script:
+      - npm run build:styleguide
     skip_cleanup: true
     github_token: $github_token
     local_dir: build
