@@ -17,15 +17,6 @@ jobs:
         - npm run test
         - npm run lint:js
         - npm run lint:css
-    - stage: GitHub Pages
-      script: npm run build:styleguide
-      deploy:
-        provider: pages
-        skip_cleanup: true
-        github_token: $github_token
-        local_dir: build
-        on:
-          branch: master
     - stage: Publish NPM
       script:
         - npm run build:atomik
@@ -37,3 +28,12 @@ jobs:
         api_key: $NPM_API_KEY
         on:
           tags: true
+    - stage: GitHub Pages
+      script: npm run build:styleguide
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $github_token
+        local_dir: build
+        on:
+          branch: master
