@@ -26,14 +26,14 @@ jobs:
         local_dir: build
         on:
           branch: master
-
-deploy:
-  # - provider: npm
-  #   script:
-  #     - npm run build:atomik
-  #     - npm run build:styles
-  #   skip_cleanup: true
-  #   email: '$EMAIL_ADDRESS'
-  #   api_key: $NPM_API_KEY
-  #   on:
-  #     tags: true
+    - stage: Publish NPM
+      script:
+        - npm run build:atomik
+        - npm run build:styles
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: '$EMAIL_ADDRESS'
+        api_key: $NPM_API_KEY
+        on:
+          tags: true
