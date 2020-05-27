@@ -10,6 +10,12 @@ cache:
 install:
   - npm install
 
+stages:
+  - publish
+  - gihub-pages
+  - name: deploy
+    if: tag IS present
+
 jobs:
   include:
     # Runs unit tests and lints JS and CSS
@@ -20,7 +26,6 @@ jobs:
         - npm run lint:css
     # Builds and publishes Atomik UI Package to npm
     - stage: publish
-      if: type != pull_request
       deploy:
         script:
           - npm run build:atomik
@@ -34,7 +39,6 @@ jobs:
           branch: master
     # Builds and publishes Atomik UI styleguide to GitHub Pages branch
     - stage: gihub-pages
-      if: type != pull_request
       deploy:
         script: npm run build:styleguide
         provider: pages
