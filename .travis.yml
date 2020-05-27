@@ -12,9 +12,9 @@ install:
 
 jobs:
   include:
-    - stage: test
+    # Lints JS and CSS
+    - stage: lint
       script:
-        - npm run test
         - npm run lint:js
         - npm run lint:css
     # Builds and published Atomik UI to npm
@@ -32,7 +32,8 @@ jobs:
     # Builds and publishes Atomik UI styleguide to GitHub Pages branch
     - stage: gihub-pages
       deploy:
-        script: npm run build:styleguide
+        script:
+          - npm run build:styleguide
         provider: pages
         skip_cleanup: true
         github_token: $github_token
