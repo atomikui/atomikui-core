@@ -23,7 +23,7 @@ jobs:
       script:
         - npm run build:atomik
         - npm run build:styles
-      if: type = push AND branch = master
+      if: type = push AND tag IS present
       deploy:
         provider: npm
         skip_cleanup: true
@@ -31,10 +31,10 @@ jobs:
         api_key: $NPM_API_KEY
         on:
           tags: true
-    # Builds and publishes Atomik UI styleguide to GitHub Pages
+    # Builds and publishes Atomik UI styleguide to GitHub Pages branch
     - stage: gihub-pages
       script: npm run build:styleguide
-      if: type = push AND branch = master
+      if: type = push AND tag IS present
       deploy:
         provider: pages
         skip_cleanup: true
