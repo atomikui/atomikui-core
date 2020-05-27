@@ -1,15 +1,34 @@
 language: node_js
+
 node_js:
   - '12.16.2'
+
 cache:
   directories:
     - node_modules
+
+install:
+  - npm install
+
 script:
+  - npm run test
+  - npm run lint:js
+  - npm run lint:css
   - npm run build:styleguide
+
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $github_token
-  local_dir: build
-  on:
-    branch: master
+  # - provider: npm
+  #   script:
+  #     - npm run build:atomik
+  #     - npm run build:styles
+  #   skip_cleanup: true
+  #   email: '$EMAIL_ADDRESS'
+  #   api_key: $NPM_API_KEY
+  #   on:
+  #     tags: true
+  - provider: pages
+    skip_cleanup: true
+    github_token: $github_token
+    local_dir: build
+    on:
+      branch: master
