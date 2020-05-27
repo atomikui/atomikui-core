@@ -26,8 +26,7 @@ deploy:
   #   on:
   #     tags: true
   - provider: pages
-    script:
-      - npm run build:styleguide
+    script: npm run build:styleguide
     skip_cleanup: true
     github_token: $github_token
     local_dir: build
