@@ -15,6 +15,18 @@ script:
   - npm run lint:js
   - npm run lint:css
 
+jobs:
+  include:
+    - stage: GitHub Pages
+      script: npm run build:styleguide
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $github_token
+        local_dir: build
+        on:
+          branch: master
+
 deploy:
   # - provider: npm
   #   script:
@@ -25,10 +37,3 @@ deploy:
   #   api_key: $NPM_API_KEY
   #   on:
   #     tags: true
-  - provider: pages
-    script: npm run build:styleguide
-    skip_cleanup: true
-    github_token: $github_token
-    local_dir: build
-    on:
-      branch: master
