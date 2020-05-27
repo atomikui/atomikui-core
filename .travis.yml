@@ -17,9 +17,9 @@ jobs:
         - npm run test
         - npm run lint:js
         - npm run lint:css
-  exclude:
-    - if: type = pull_request
+    # Builds and published Atomik UI to npm
     - stage: publish
+      if: tag IS present
       deploy:
         script:
           - npm run build:atomik
@@ -30,9 +30,9 @@ jobs:
         api_key: $NPM_API_KEY
         on:
           tags: true
-          branch: master
     # Builds and publishes Atomik UI styleguide to GitHub Pages branch
     - stage: gihub-pages
+      if: tag IS present
       deploy:
         script: npm run build:styleguide
         provider: pages
@@ -41,4 +41,3 @@ jobs:
         local_dir: build
         on:
           tags: true
-          branch: master
