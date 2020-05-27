@@ -46,8 +46,6 @@
   </div>
 </div>
 
-# TEST UPDATE 6
-
 Atomik UI is a comprehensive library of React components for kickstarting any React based project. From form controls to informational components like modals, alerts and toast notifications, you'll find everything you need here to get your next project off the ground.
 
 ### Features
