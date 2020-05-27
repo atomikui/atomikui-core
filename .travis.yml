@@ -27,6 +27,7 @@ jobs:
         on:
           branch: master
     - stage: Publish NPM
+      if: tag IS present
       script:
         - npm run build:atomik
         - npm run build:styles
