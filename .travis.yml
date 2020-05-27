@@ -10,34 +10,33 @@ cache:
 install:
   - npm install
 
-jobs:
-  include:
-    - stage: test
-      script:
-        - npm run test
-        - npm run lint:js
-        - npm run lint:css
-    # Builds and published Atomik UI to npm
-    - stage: publish
-      if: type != pull_request
-      deploy:
-        script:
-          - npm run build:atomik
-          - npm run build:styles
-        provider: npm
-        skip_cleanup: true
-        email: '$EMAIL_ADDRESS'
-        api_key: $NPM_API_KEY
-        on:
-          tags: true
-    # Builds and publishes Atomik UI styleguide to GitHub Pages branch
-    - stage: gihub-pages
-      if: type != pull_request
-      deploy:
-        script: npm run build:styleguide
-        provider: pages
-        skip_cleanup: true
-        github_token: $github_token
-        local_dir: build
-        on:
-          tags: true
+# Runs unit tests and lints CSS and JS
+- stage: test
+  script:
+    - npm run test
+    - npm run lint:js
+    - npm run lint:css
+# Builds and published Atomik UI to npm
+- stage: publish
+  if: tag IS present
+  deploy:
+    script:
+      - npm run build:atomik
+      - npm run build:styles
+    provider: npm
+    skip_cleanup: true
+    email: '$EMAIL_ADDRESS'
+    api_key: $NPM_API_KEY
+    on:
+      tags: true
+# Builds and publishes Atomik UI styleguide to GitHub Pages branch
+- stage: gihub-pages
+  if: tag IS present
+  deploy:
+    script: npm run build:styleguide
+    provider: pages
+    skip_cleanup: true
+    github_token: $github_token
+    local_dir: build
+    on:
+      tags: true
