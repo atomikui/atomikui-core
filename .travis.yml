@@ -23,6 +23,7 @@ jobs:
       script:
         - npm run build:atomik
         - npm run build:styles
+      if: type != pull_request
       deploy:
         provider: npm
         skip_cleanup: true
@@ -33,6 +34,7 @@ jobs:
     # Builds and publishes Atomik UI styleguide to GitHub Pages
     - stage: gihub-pages
       script: npm run build:styleguide
+      if: type != pull_request
       deploy:
         provider: pages
         skip_cleanup: true
