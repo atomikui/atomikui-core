@@ -31,7 +31,7 @@ jobs:
         api_key: $NPM_API_KEY
         on:
           tags: true
-    # Builds and publishes Atomik UI styleguide to GitHub Pages
+    # Builds and publishes Atomik UI styleguide to GitHub Pages branch
     - stage: gihub-pages
       script: npm run build:styleguide
       if: type = push AND tag IS present
