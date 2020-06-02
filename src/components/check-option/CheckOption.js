@@ -52,7 +52,11 @@ const CheckOption = ({
           {...others}
         />
         <span className="atomikui-check-option__icon">
-          {checked && <Icon icon={faCheck} color="white" />}
+          <Icon
+            className={classnames({ 'is-hidden': !checked })}
+            icon={faCheck}
+            color="white"
+          />
         </span>
         {label}
       </Label>

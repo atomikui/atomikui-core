@@ -3,6 +3,10 @@
   left: rem(-10000);
 }
 
+.is-hidden {
+  visibility: hidden;
+}
+
 @each $value in $display-options {
   .display-#{$value} {
     display: $value;
