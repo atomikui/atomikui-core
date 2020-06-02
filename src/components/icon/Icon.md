@@ -1,4 +1,4 @@
-The component library uses the <a href="https://fontawesome.com/icons?d=gallery&m=free" target="__blank">Font Awesome</a> icon library, however, it does not ship with it as a dependency. If you would like to use Font Awesome icons in your project, There are many free ones available to use.
+Atomik UI comes with the <a href="https://fontawesome.com/icons?d=gallery&m=free" target="__blank">Font Awesome</a> icon library. If you would like to use Font Awesome icons in your project, There are many free ones available to use.
 
 Below demonstrates how to get started with Font Awesome icons.
 
