@@ -63,22 +63,6 @@
     "react-spring": "^8.0.27",
     "shortid": "^2.2.15"
   },
-  "peerDependencies": {
-    "card-validator": "^6.2.0",
-    "classnames": "^2.2.6",
-    "core-js": "^3.0.0",
-    "d3-ease": "^1.0.6",
-    "downshift": "^5.0.6",
-    "focus-trap": "^5.1.0",
-    "moment": "^2.25.3",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.0",
-    "react-calendar": "^3.0.1",
-    "react-dom": "^16.13.1",
-    "react-flexbox-grid": "^2.1.2",
-    "react-masked-field": "^2.0.3",
-    "react-spring": "^8.0.27"
-  },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -129,5 +113,9 @@
     "webpack-fix-style-only-entries": "^0.4.0",
     "whatwg-fetch": "^3.0.0",
     "yup": "^0.28.3"
+  },
+  "peerDependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.1"
   }
 }
