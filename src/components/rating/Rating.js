@@ -41,11 +41,13 @@ const Rating = ({ className, maxStars, onSelect, size, stars, ...others }) => {
             icon={faStar}
             aria-hidden="true"
             size={size}
-            {...(onSelect && {
-              onClick: () => {
-                return handleSelection(index + 1);
-              },
-            })}
+            onClick={
+              onSelect
+                ? () => {
+                    return handleSelection(index + 1);
+                  }
+                : null
+            }
           />
         );
       })}

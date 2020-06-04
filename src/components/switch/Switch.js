@@ -50,7 +50,7 @@ const Switch = ({
         </div>
         <div
           className="atomikui-switch__toggle"
-          {...(!disabled && { onClick: onChange })}
+          onClick={!disabled ? onChange : null}
         ></div>
       </div>
       {(helpText || errorText) && (

@@ -9,7 +9,7 @@ import Overlay from '../overlay';
 const Modal = ({
   className,
   children,
-  closeOnEscape,
+  disableEscapKey,
   disableOverlayclick,
   footer,
   noOverlay,
@@ -53,17 +53,13 @@ const Modal = ({
 
   return (
     <Overlay
-      {...(theme && { theme })}
+      theme={theme}
       isActive={isOpen}
       classes={classnames({
         'overlay--transparent': noOverlay,
       })}
-      {...(!disableOverlayclick && {
-        onClick: onClose,
-      })}
-      {...(closeOnEscape && {
-        onKeyDown: handleKeyDown,
-      })}
+      onClick={!disableOverlayclick ? onClose : null}
+      onKeyDown={!disableEscapKey ? handleKeyDown : null}
       {...others}
     >
       <div
@@ -92,7 +88,7 @@ Modal.propTypes = {
   /** Child elements that will be rendered inside of the modal body. */
   children: PropTypes.node,
   /** Closes the modal when the escape key is pressed. */
-  closeOnEscape: PropTypes.bool,
+  disableEscapKey: PropTypes.bool,
   /** Disables the overlay's clock event. */
   disableOverlayclick: PropTypes.bool,
   /** Content to bre rendered inside of the modal footer. */
@@ -113,7 +109,7 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
   className: '',
-  closeOnEscape: true,
+  disableEscapKey: false,
   children: <></>,
   disableOverlayclick: false,
   footer: null,

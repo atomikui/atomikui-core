@@ -69,16 +69,18 @@ const RangeSlider = ({
         />
         {ticks && (
           <div className="atomikui-range-slider__ticks" aria-hidden="true">
-            {ticks.map(({ text, val }, index) => {
+            {ticks.map(({ text, val }) => {
               return (
                 <div
                   key={shortid.generate()}
                   className="atomikui-range-slider__ticks__tick"
-                  {...(!disabled && {
-                    onClick: () => {
-                      return handleChange(val);
-                    },
-                  })}
+                  onClick={
+                    !disabled
+                      ? () => {
+                          return handleChange(val);
+                        }
+                      : null
+                  }
                 >
                   <div
                     className={classnames(

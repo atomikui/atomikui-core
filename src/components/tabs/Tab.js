@@ -19,7 +19,7 @@ const Tab = ({
         'is-active': active,
         'atomikui-tab--comparison': comparison,
       })}
-      {...(onClick && { onClick })}
+      onClick={onClick}
       {...others}
     >
       {label}
@@ -48,7 +48,7 @@ Tab.defaultProps = {
   children: null,
   className: null,
   comparison: false,
-  onClick() {},
+  onClick: null,
   label: '',
 };
 

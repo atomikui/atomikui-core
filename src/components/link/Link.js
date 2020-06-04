@@ -16,9 +16,9 @@ const Link = ({
       className={classnames('atomikui-link', className, {
         'is-disabled': disabled,
       })}
-      {...(href && { href })}
-      {...(target && { target })}
-      {...(target === '_blank' && { rel: 'noopener noreferrer' })}
+      href={href}
+      target={target}
+      rel={target === '_blank' ? 'noopener noreferrer' : null}
       {...others}
     >
       {children}
@@ -45,9 +45,9 @@ Link.defaultProps = {
   active: false,
   className: '',
   disabled: false,
-  href: '',
+  href: null,
   children: <></>,
-  target: '',
+  target: null,
 };
 
 export default Link;
