@@ -43,10 +43,15 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@alaneicker/atomik-ui';
 
-<Button>
-  <Icon icon={faCloudDownloadAlt} size="lg" className="margin-right-8" />
-  Download
-</Button>;
+<>
+  <Button>
+    <Icon icon={faCloudDownloadAlt} size="lg" className="margin-right-8" />
+    Download
+  </Button>
+  <Button ariaLabel="download">
+    <Icon icon={faCloudDownloadAlt} size="lg" />
+  </Button>
+</>;
 ```
 
 ### Responsive Button
