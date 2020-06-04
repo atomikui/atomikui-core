@@ -35,9 +35,9 @@ describe('<Switch />', () => {
   it('Switch toggle should not have an onClick event if disabled', () => {
     component.setProps({ disabled: true });
 
-    expect(component.find('.atomikui-switch__toggle').prop('onClick')).toBe(
-      undefined,
-    );
+    expect(
+      component.find('.atomikui-switch__toggle').prop('onClick'),
+    ).toBeNull();
   });
 
   it('Should handle an error', () => {
