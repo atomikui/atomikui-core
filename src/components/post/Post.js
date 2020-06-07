@@ -132,29 +132,27 @@ const Post = ({
         </div>
       </div>
       <div className="atomikui-post__bd">{children}</div>
-      <div className="atomikui-post__ft">
-        <List type="horizontal">
-          <ListItem>
-            <Button id="comment-btn" size="md" onClick={onComment}>
-              Leave a Comment
-            </Button>
-          </ListItem>
-          <ListItem>
-            <Button id="report-btn" theme="link" onClick={onReport}>
-              Report
-            </Button>
-          </ListItem>
-        </List>
+      {!hideComments && (
+        <div className="atomikui-post__ft">
+          <List type="horizontal">
+            <ListItem>
+              <Button id="comment-btn" size="md" onClick={onComment}>
+                Leave a Comment
+              </Button>
+            </ListItem>
+            <ListItem>
+              <Button id="report-btn" theme="link" onClick={onReport}>
+                Report
+              </Button>
+            </ListItem>
+          </List>
 
-        {!hideComments && (
-          <>
-            <h3 className="margin-top-36 margin-bottom-24">Comments</h3>
-            <div className="atomikui-post__comments">
-              {comments.length ? comments : 'No comments to show'}
-            </div>
-          </>
-        )}
-      </div>
+          <h3 className="margin-top-36 margin-bottom-24">Comments</h3>
+          <div className="atomikui-post__comments">
+            {comments.length ? comments : 'No comments to show'}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
