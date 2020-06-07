@@ -15,6 +15,7 @@ const Post = ({
   className,
   comments,
   facebookLink,
+  hideComments,
   isBookmarked,
   linkedInLink,
   onBookmark,
@@ -145,10 +146,14 @@ const Post = ({
           </ListItem>
         </List>
 
-        <h3 className="margin-top-36 margin-bottom-24">Comments</h3>
-        <div className="atomikui-post__comments">
-          {comments.length ? comments : 'No comments to show'}
-        </div>
+        {!hideComments && (
+          <>
+            <h3 className="margin-top-36 margin-bottom-24">Comments</h3>
+            <div className="atomikui-post__comments">
+              {comments.length ? comments : 'No comments to show'}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
@@ -169,6 +174,8 @@ Post.propTypes = {
   comments: PropTypes.array,
   /** Facebook link */
   facebookLink: PropTypes.string,
+  /** Hides comments */
+  hideComments: PropTypes.bool,
   /** Post is bookmarked */
   isBookmarked: PropTypes.bool,
   /** Linkedin link */
@@ -195,6 +202,7 @@ Post.defaultProps = {
   className: '',
   comments: [],
   facebookLink: null,
+  hideComments: false,
   isBookmarked: false,
   linkedInLink: null,
   onComment() {},
