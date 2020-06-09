@@ -16,7 +16,7 @@ const CartItem = ({
 
   useEffect(() => {
     setToal(price * quantity);
-  }, []);
+  }, [quantity]);
 
   return (
     <table className={classnames('atomikui-cart-item', className)} {...others}>
@@ -38,15 +38,15 @@ const CartItem = ({
             <FormField
               type="number"
               className="atomikui-cart-item__quantity"
-              value={quantity}
+              value={String(quantity)}
               placeholder="Qty"
               onChange={(e) => {
-                return onQuantityChange(e.target.value);
+                return onQuantityChange(+e.target.value);
               }}
             />
           </td>
-          <td>${price}</td>
-          <td>${total}</td>
+          <td>${price.toLocaleString('en')}</td>
+          <td>${total.toLocaleString('en')}</td>
         </tr>
       </tbody>
     </table>

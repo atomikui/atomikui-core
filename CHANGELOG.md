@@ -1,4 +1,14 @@
-### Adds cart item (HEAD -> master)
+### Updates cart item toal when quantity is changed (HEAD -> master)
+>Tue, 9 Jun 2020 06:35:55 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Adds cart item
 >Tue, 9 Jun 2020 06:24:54 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
