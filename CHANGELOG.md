@@ -1,4 +1,14 @@
-### CartItem styles and layout (HEAD -> develop)
+### Update CartItem.md (HEAD -> develop)
+>Tue, 9 Jun 2020 09:09:37 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### CartItem styles and layout
 >Tue, 9 Jun 2020 09:07:15 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
