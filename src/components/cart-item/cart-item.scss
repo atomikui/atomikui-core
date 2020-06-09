@@ -1,0 +1,25 @@
+.atomikui-cart-item {
+  font-size: rem(14);
+  line-height: 1.3;
+  width: 100%;
+
+  tr > *:not(:last-child) {
+    padding-right: rem(16);
+  }
+
+  &__image {
+    width: rem(48);
+  }
+
+  &__description {
+    font-weight: $font-semibold;
+  }
+
+  &__quantity {
+    width: rem(38);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: rem(16);
+  }
+}
