@@ -1,25 +1,81 @@
 .atomikui-cart-item {
-  font-size: rem(14);
-  line-height: 1.3;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: rem(13);
+  line-height: 1.2;
   width: 100%;
 
-  tr > *:not(:last-child) {
-    padding-right: rem(16);
+  & > * + * {
+    margin-left: rem(16);
+  }
+
+  &__hd {
+    display: none;
+  }
+
+  &__bd {
+    flex: 1;
   }
 
   &__image {
-    width: rem(48);
+    width: rem(56);
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    & > * {
+      flex: 1;
+      text-align: center;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: rem(16);
+    }
   }
 
   &__description {
+    flex: 1;
     font-weight: $font-semibold;
+    text-align: left;
   }
 
   &__quantity {
+    display: inline-flex;
     width: rem(38);
+
+    & > input {
+      height: rem(32);
+    }
+  }
+
+  &__label {
+    font-weight: $font-semibold;
+    margin-bottom: rem(4);
+  }
+
+  &__value {
+    line-height: rem(32);
   }
 
   @media (min-width: $breakpoint-medium) {
-    font-size: rem(16);
+    font-size: inherit;
+
+    &__hd {
+      display: block;
+    }
+
+    &__info {
+      & > * + * {
+        margin-left: rem(24);
+      }
+    }
+
+    &__description {
+      flex: 0 40%;
+      margin-bottom: 0;
+    }
   }
 }

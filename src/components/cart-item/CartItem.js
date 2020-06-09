@@ -19,22 +19,19 @@ const CartItem = ({
   }, [quantity]);
 
   return (
-    <table className={classnames('atomikui-cart-item', className)} {...others}>
-      <tbody>
-        <tr>
-          <td className="display-none display-table-cell@medium">
-            <img
-              className="atomikui-cart-item__image"
-              src={imageUrl}
-              alt="product image"
-            />
-          </td>
-          <td>
-            <span className="atomikui-cart-item__description">
-              {description}
-            </span>
-          </td>
-          <td>
+    <div className={classnames('atomikui-cart-item', className)} {...others}>
+      <div className="atomikui-cart-item__hd">
+        <img
+          className="atomikui-cart-item__image"
+          src={imageUrl}
+          alt="product image"
+        />
+      </div>
+      <div className="atomikui-cart-item__bd">
+        <div className="atomikui-cart-item__info">
+          <div className="atomikui-cart-item__description">{description}</div>
+          <div>
+            <div className="atomikui-cart-item__label">Qty:</div>
             <FormField
               type="number"
               className="atomikui-cart-item__quantity"
@@ -44,12 +41,22 @@ const CartItem = ({
                 return onQuantityChange(+e.target.value);
               }}
             />
-          </td>
-          <td>${price.toLocaleString('en')}</td>
-          <td>${total.toLocaleString('en')}</td>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+          <div>
+            <div className="atomikui-cart-item__label">Price:</div>
+            <div className="atomikui-cart-item__value">{` $${price.toLocaleString(
+              'en',
+            )}`}</div>
+          </div>
+          <div>
+            <div className="atomikui-cart-item__label">Total:</div>
+            <div className="atomikui-cart-item__value">{` $${total.toLocaleString(
+              'en',
+            )}`}</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

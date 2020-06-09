@@ -1,4 +1,14 @@
-### Updates cart item toal when quantity is changed (HEAD -> master)
+### CartItem styles and layout (HEAD -> develop)
+>Tue, 9 Jun 2020 09:07:15 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Updates cart item toal when quantity is changed (origin/develop, master)
 >Tue, 9 Jun 2020 06:35:55 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -668,7 +678,7 @@
 
 
 
-### Build refinement (develop)
+### Build refinement
 >Tue, 26 May 2020 05:56:23 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
