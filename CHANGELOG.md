@@ -1,4 +1,14 @@
-### Car and CartItem components (HEAD -> develop)
+### Fixes subtotal issue when 0 quantity entered. fixes price decimal formatting (HEAD -> develop)
+>Tue, 9 Jun 2020 12:30:48 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Car and CartItem components
 >Tue, 9 Jun 2020 12:19:54 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)

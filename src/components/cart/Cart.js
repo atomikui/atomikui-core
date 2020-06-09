@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
@@ -14,7 +14,7 @@ const Cart = ({
   ...others
 }) => {
   const subtotal = items.reduce((a, b) => {
-    return (a + b.price) * b.quantity;
+    return b.quantity > 0 ? (a + b.price) * b.quantity : a;
   }, 0);
 
   return (
@@ -43,15 +43,17 @@ const Cart = ({
       <div className="atomikui-cart__ft">
         <div>
           <span className="text-weight-semibold">Subtotal:</span> $
-          {subtotal.toFixed(2).toLocaleString('en')}
+          {subtotal.toLocaleString('en', { minimumFractionDigits: 2 })}
         </div>
         <div>
           <span className="text-weight-semibold">Sales Tax:</span> $
-          {(subtotal * tax).toFixed(2).toLocaleString('en')}
+          {(subtotal * tax).toLocaleString('en', { minimumFractionDigits: 2 })}
         </div>
         <div className="atomikui-cart__total">
           <span className="text-weight-semibold">Total:</span> $
-          {(subtotal * tax + subtotal).toFixed(2).toLocaleString('en')}
+          {(subtotal * tax + subtotal).toLocaleString('en', {
+            minimumFractionDigits: 2,
+          })}
         </div>
       </div>
     </div>

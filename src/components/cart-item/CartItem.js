@@ -47,15 +47,17 @@ const CartItem = ({
           </div>
           <div>
             <div className="atomikui-cart-item__label">Price:</div>
-            <div className="atomikui-cart-item__value">{` $${price
-              .toFixed(2)
-              .toLocaleString('en')}`}</div>
+            <div className="atomikui-cart-item__value">{` $${price.toLocaleString(
+              'en',
+              { minimumFractionDigits: 2 },
+            )}`}</div>
           </div>
           <div>
             <div className="atomikui-cart-item__label">Total:</div>
-            <div className="atomikui-cart-item__value">{` $${total
-              .toFixed(2)
-              .toLocaleString('en')}`}</div>
+            <div className="atomikui-cart-item__value">{` $${total.toLocaleString(
+              'en',
+              { minimumFractionDigits: 2 },
+            )}`}</div>
           </div>
         </div>
       </div>
