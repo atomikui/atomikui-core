@@ -1,4 +1,14 @@
-### Fixes subtotal issue when 0 quantity entered. fixes price decimal formatting (HEAD -> develop)
+### Style updates (HEAD -> develop)
+>Tue, 9 Jun 2020 12:32:47 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Fixes subtotal issue when 0 quantity entered. fixes price decimal formatting
 >Tue, 9 Jun 2020 12:30:48 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
