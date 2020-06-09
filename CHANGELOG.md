@@ -1,4 +1,14 @@
-### Update CartItem.md (HEAD -> develop)
+### Car and CartItem components (HEAD -> develop)
+>Tue, 9 Jun 2020 12:19:54 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Update CartItem.md
 >Tue, 9 Jun 2020 09:09:37 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)

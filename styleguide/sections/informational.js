@@ -8,6 +8,7 @@ module.exports = {
     return [
       'src/components/alert/Alert.js',
       'src/components/badge/Badge.js',
+      'src/components/cart/Cart.js',
       'src/components/cart-item/CartItem.js',
       'src/components/hint/Hint.js',
       'src/components/label/Label.js',

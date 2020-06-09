@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import FormField from '../form-field';
@@ -12,11 +12,14 @@ const CartItem = ({
   price,
   ...others
 }) => {
-  const [total, setToal] = useState(0);
+  const [total, setTotal] = useState(price * quantity);
+  const [itemQuantity, setItemQuantity] = useState(quantity);
 
-  useEffect(() => {
-    setToal(price * quantity);
-  }, [quantity]);
+  const handleQuantityChange = (newQuantity) => {
+    setItemQuantity(newQuantity);
+    onQuantityChange(newQuantity);
+    setTotal(price * itemQuantity);
+  };
 
   return (
     <div className={classnames('atomikui-cart-item', className)} {...others}>
@@ -35,24 +38,24 @@ const CartItem = ({
             <FormField
               type="number"
               className="atomikui-cart-item__quantity"
-              value={String(quantity)}
+              value={String(itemQuantity)}
               placeholder="Qty"
               onChange={(e) => {
-                return onQuantityChange(+e.target.value);
+                return handleQuantityChange(+e.target.value);
               }}
             />
           </div>
           <div>
             <div className="atomikui-cart-item__label">Price:</div>
-            <div className="atomikui-cart-item__value">{` $${price.toLocaleString(
-              'en',
-            )}`}</div>
+            <div className="atomikui-cart-item__value">{` $${price
+              .toFixed(2)
+              .toLocaleString('en')}`}</div>
           </div>
           <div>
             <div className="atomikui-cart-item__label">Total:</div>
-            <div className="atomikui-cart-item__value">{` $${total.toLocaleString(
-              'en',
-            )}`}</div>
+            <div className="atomikui-cart-item__value">{` $${total
+              .toFixed(2)
+              .toLocaleString('en')}`}</div>
           </div>
         </div>
       </div>

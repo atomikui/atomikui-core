@@ -1,0 +1,33 @@
+.atomikui-cart {
+  &__hd {
+    font-size: rem(20);
+    font-weight: $font-bold;
+    padding-bottom: rem(4);
+  }
+
+  &__bd {
+    border-bottom: rem(2) solid darken($gray-100, 7%);
+    border-top: rem(2) solid darken($gray-100, 7%);
+    padding: rem(4 0);
+  }
+
+  &__ft {
+    padding: rem(16);
+    text-align: right;
+  }
+
+  &__items {
+    & > * {
+      padding: rem(16 0);
+    }
+
+    & > * + * {
+      border-top: rem(1) solid $gray-100;
+    }
+  }
+
+  &__total {
+    font-size: rem(22);
+    margin-top: rem(8);
+  }
+}
