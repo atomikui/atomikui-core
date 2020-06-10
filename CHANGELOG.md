@@ -1,4 +1,14 @@
-### Upgrade to 0.12.0 (HEAD -> master)
+### Update margin.scss (HEAD -> master)
+>Wed, 10 Jun 2020 18:24:04 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Upgrade to 0.12.0 (tag: v0.12.0, origin/master, origin/HEAD)
 >Wed, 10 Jun 2020 06:25:34 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -108,7 +118,7 @@
 
 
 
-### Upgrade to 0.11.13 (tag: v0.11.13, origin/master, origin/HEAD)
+### Upgrade to 0.11.13 (tag: v0.11.13)
 >Sun, 7 Jun 2020 06:54:53 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -298,7 +308,7 @@
 
 
 
-### Update .travis.yml (feature/update-readme)
+### Update .travis.yml
 >Wed, 27 May 2020 07:07:35 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -408,7 +418,7 @@
 
 
 
-### Update README.md (test-deploy)
+### Update README.md
 >Wed, 27 May 2020 06:07:26 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -458,7 +468,7 @@
 
 
 
-### Update .travis.yml (travis-debugging)
+### Update .travis.yml
 >Tue, 26 May 2020 21:58:46 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -508,7 +518,7 @@
 
 
 
-### Update .travis.yml (travis-build)
+### Update .travis.yml
 >Tue, 26 May 2020 21:30:39 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -558,7 +568,7 @@
 
 
 
-### Update .travis.yml (feature/travis-build-config)
+### Update .travis.yml
 >Tue, 26 May 2020 20:31:18 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -608,7 +618,7 @@
 
 
 
-### Updates .travis.yml with conditional build requirements (feature/update-travis-conditional-config)
+### Updates .travis.yml with conditional build requirements
 >Tue, 26 May 2020 19:48:02 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -618,7 +628,7 @@
 
 
 
-### Adds condionals to oublish and github-pages stage builds (feature/update-travis-config)
+### Adds condionals to oublish and github-pages stage builds
 >Tue, 26 May 2020 19:04:18 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
