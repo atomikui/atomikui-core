@@ -1,4 +1,14 @@
-### CartItem test coverage (HEAD -> develop)
+### CartCart test coverage (HEAD -> develop)
+>Wed, 10 Jun 2020 06:24:23 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### CartItem test coverage (origin/develop)
 >Wed, 10 Jun 2020 05:49:31 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -68,7 +78,7 @@
 
 
 
-### Updates cart item toal when quantity is changed (origin/develop, master)
+### Updates cart item toal when quantity is changed (master)
 >Tue, 9 Jun 2020 06:35:55 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
