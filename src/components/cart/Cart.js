@@ -45,10 +45,14 @@ const Cart = ({
           <span className="text-weight-semibold">Subtotal:</span> $
           {subtotal.toLocaleString('en', { minimumFractionDigits: 2 })}
         </div>
-        <div>
-          <span className="text-weight-semibold">Sales Tax:</span> $
-          {(subtotal * tax).toLocaleString('en', { minimumFractionDigits: 2 })}
-        </div>
+        {tax && (
+          <div>
+            <span className="text-weight-semibold">Sales Tax:</span> $
+            {(subtotal * tax).toLocaleString('en', {
+              minimumFractionDigits: 2,
+            })}
+          </div>
+        )}
         <div className="atomikui-cart__total">
           <span className="text-weight-semibold">Total:</span> $
           {(subtotal * tax + subtotal).toLocaleString('en', {
@@ -84,7 +88,7 @@ Cart.defaultProps = {
   className: '',
   items: [],
   onCartItemUpdate: null,
-  tax: 0,
+  tax: null,
   title: 'Shopping Cart',
 };
 

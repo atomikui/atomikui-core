@@ -1,4 +1,14 @@
-### Style updates (HEAD -> develop)
+### Update Cart.js (HEAD -> develop)
+>Wed, 10 Jun 2020 05:38:29 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Style updates
 >Tue, 9 Jun 2020 12:32:47 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -688,7 +698,7 @@
 
 
 
-### Update README.md (feature/test-feature)
+### Update README.md
 >Tue, 26 May 2020 07:19:36 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -698,7 +708,7 @@
 
 
 
-### Update README.md (feature/another-test-branch)
+### Update README.md
 >Tue, 26 May 2020 06:47:21 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
