@@ -1,4 +1,14 @@
-### Update Cart.js (HEAD -> develop)
+### CartItem test coverage (HEAD -> develop)
+>Wed, 10 Jun 2020 05:49:31 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Update Cart.js
 >Wed, 10 Jun 2020 05:38:29 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
