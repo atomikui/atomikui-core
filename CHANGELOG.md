@@ -1,4 +1,14 @@
-### CartCart test coverage (HEAD -> develop)
+### Upgrade to 0.12.0 (HEAD -> master)
+>Wed, 10 Jun 2020 06:25:34 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### CartCart test coverage (origin/develop, develop)
 >Wed, 10 Jun 2020 06:24:23 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -8,7 +18,7 @@
 
 
 
-### CartItem test coverage (origin/develop)
+### CartItem test coverage
 >Wed, 10 Jun 2020 05:49:31 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -78,7 +88,7 @@
 
 
 
-### Updates cart item toal when quantity is changed (master)
+### Updates cart item toal when quantity is changed
 >Tue, 9 Jun 2020 06:35:55 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
