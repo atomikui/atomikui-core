@@ -1,4 +1,14 @@
-### Update coverage-report.html (HEAD -> master)
+### Upgrade to 0.13.0 (HEAD -> master)
+>Fri, 12 Jun 2020 15:10:42 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Update coverage-report.html
 >Fri, 12 Jun 2020 15:10:23 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
