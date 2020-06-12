@@ -1,0 +1,15 @@
+.atomikui-jumbotron {
+  background: $gray-100;
+  padding: rem(32);
+
+  @each $variant, $map in $background-color-variants {
+    &--#{$variant} {
+      background-color: map-get($map, background-color);
+      color: map-get($map, font-color);
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    padding: rem(72 32);
+  }
+}

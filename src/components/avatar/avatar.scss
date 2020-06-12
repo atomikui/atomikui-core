@@ -15,7 +15,7 @@
     text-transform: uppercase;
     width: rem(40);
 
-    @each $variant, $map in $avatar-variant {
+    @each $variant, $map in $background-color-variants {
       &--#{$variant} {
         background-color: map-get($map, background-color);
         color: map-get($map, font-color);

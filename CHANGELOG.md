@@ -1,4 +1,14 @@
-### Upgrade to 0.12.1 (HEAD -> master)
+### Creates Jumbotron component (HEAD -> master)
+>Fri, 12 Jun 2020 09:17:43 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Upgrade to 0.12.1 (tag: v0.12.1, origin/master, origin/HEAD)
 >Wed, 10 Jun 2020 18:24:20 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -18,7 +28,7 @@
 
 
 
-### Upgrade to 0.12.0 (tag: v0.12.0, origin/master, origin/HEAD)
+### Upgrade to 0.12.0 (tag: v0.12.0)
 >Wed, 10 Jun 2020 06:25:34 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
