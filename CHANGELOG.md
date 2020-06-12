@@ -1,4 +1,14 @@
-### Creates Jumbotron component (HEAD -> master)
+### Update coverage-report.html (HEAD -> master)
+>Fri, 12 Jun 2020 15:10:23 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Creates Jumbotron component
 >Fri, 12 Jun 2020 09:17:43 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
