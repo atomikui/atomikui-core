@@ -37,6 +37,11 @@
       transition: all 0.2s ease-in-out;
       width: 100%;
 
+      & > .atomikui-file-upload__btn {
+        background: transparent;
+        padding: 0;
+      }
+
       & > * + * {
         margin: rem(16 0 0);
       }

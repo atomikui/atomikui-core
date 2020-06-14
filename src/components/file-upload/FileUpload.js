@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 import { List, ListItem } from '../list';
 import Hint from '../hint/Hint';
 
@@ -77,14 +79,23 @@ const FileUpload = ({
         )}
         <span
           className={classnames(
-            'atomikui-btn atomikui-btn--condensed atomikui-btn--nowrap',
+            'atomikui-file-upload__btn atomikui-btn atomikui-btn--condensed atomikui-btn--nowrap',
             {
               [`atomikui-btn--${uploadBtnVariant}`]: uploadBtnVariant,
               'atomikui-btn--no-radius': !dragAndDrop,
             },
           )}
         >
-          {label}
+          {dragAndDrop ? (
+            <Icon
+              icon={faCloudUploadAlt}
+              size="5x"
+              color="#027abf"
+              title={label}
+            />
+          ) : (
+            label
+          )}
         </span>
         {!files.length && (
           <span className="atomikui-file-upload__no-files-label">
@@ -93,7 +104,7 @@ const FileUpload = ({
         )}
         {dragAndDrop ? (
           <>
-            <div className="margin-top-16" />
+            {files.length > 0 && <div className="margin-top-16" />}
             <List className="atomikui-file-upload__file-list">
               {files.map((file, index) => {
                 return <ListItem key={shortid.generate()}>{file}</ListItem>;

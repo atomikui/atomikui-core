@@ -1,6 +1,12 @@
 .is-visibly-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: rem(-1);
+  margin: rem(-1);
+  overflow: hidden;
+  padding: 0;
   position: absolute;
-  left: rem(-10000);
+  width: rem(1);
 }
 
 .is-hidden {
