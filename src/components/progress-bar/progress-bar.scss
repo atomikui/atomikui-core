@@ -11,6 +11,7 @@
     background-color: $blue-300;
     display: flex;
     justify-content: center;
+    transition: width 0.2s linear;
   }
 
   &__label {

@@ -1,4 +1,14 @@
-### Upgrade to 0.13.0 (HEAD -> master)
+### 'Progress Bar in Action' example (origin/develop, develop)
+>Sun, 14 Jun 2020 06:11:15 -0500
+
+>Author: Alan Eicker (alaneicker@gmail.com)
+
+>Commiter: Alan Eicker (alaneicker@gmail.com)
+
+
+
+
+### Upgrade to 0.13.0 (tag: v0.13.0, origin/master, origin/HEAD)
 >Fri, 12 Jun 2020 15:10:42 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -28,7 +38,7 @@
 
 
 
-### Upgrade to 0.12.1 (tag: v0.12.1, origin/master, origin/HEAD)
+### Upgrade to 0.12.1 (tag: v0.12.1)
 >Wed, 10 Jun 2020 18:24:20 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
@@ -58,7 +68,7 @@
 
 
 
-### CartCart test coverage (origin/develop, develop)
+### CartCart test coverage
 >Wed, 10 Jun 2020 06:24:23 -0500
 
 >Author: Alan Eicker (alaneicker@gmail.com)
