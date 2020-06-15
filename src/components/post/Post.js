@@ -102,7 +102,7 @@ const Post = ({
             )}
             <ListItem>
               <Tooltip
-                data-tooltip={bookmarked ? 'Unsave Story' : 'Save Story'}
+                text={bookmarked ? 'Unsave Story' : 'Save Story'}
                 align="bottom-center"
               >
                 <Button

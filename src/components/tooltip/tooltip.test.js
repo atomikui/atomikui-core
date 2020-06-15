@@ -16,11 +16,7 @@ describe('<Tooltip />', () => {
 
   beforeEach(() => {
     tooltip = mount(
-      <Tooltip
-        data-tooltip="This is a tooltip"
-        theme="warning"
-        align="top-left"
-      >
+      <Tooltip text="This is a tooltip" theme="warning" align="top-left">
         <Button size="md">button</Button>
       </Tooltip>,
     );

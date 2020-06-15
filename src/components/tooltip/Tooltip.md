@@ -5,10 +5,10 @@ import { Tooltip, Button, Link } from '@alaneicker/atomik-ui';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-  <Tooltip data-tooltip="This is a tooltip" align="top-center">
+  <Tooltip text="This is a tooltip" align="top-center">
     <Button size="md">Button Trigger</Button>
   </Tooltip>
-  <Tooltip data-tooltip="This is a tooltip" align="top-center">
+  <Tooltip text="This is a tooltip" align="top-center">
     <Link href="#">Link Trigger</Link>
   </Tooltip>
 </div>;
@@ -27,13 +27,13 @@ import { Tooltip, Button } from '@alaneicker/atomik-ui';
       marginBottom: '16px',
     }}
   >
-    <Tooltip data-tooltip="This is a tooltip">
+    <Tooltip text="This is a tooltip">
       <Button size="md">top-left</Button>
     </Tooltip>
-    <Tooltip data-tooltip="This is a tooltip" align="top-center">
+    <Tooltip text="This is a tooltip" align="top-center">
       <Button size="md">top-center</Button>
     </Tooltip>
-    <Tooltip data-tooltip="This is a tooltip" align="top-right">
+    <Tooltip text="This is a tooltip" align="top-right">
       <Button size="md">top-right</Button>
     </Tooltip>
   </div>
@@ -44,10 +44,10 @@ import { Tooltip, Button } from '@alaneicker/atomik-ui';
       marginBottom: '16px',
     }}
   >
-    <Tooltip data-tooltip="This is a tooltip" align="right">
+    <Tooltip text="This is a tooltip" align="right">
       <Button size="md">right</Button>
     </Tooltip>
-    <Tooltip data-tooltip="This is a tooltip" align="left">
+    <Tooltip text="This is a tooltip" align="left">
       <Button size="md">left</Button>
     </Tooltip>
   </div>
@@ -58,13 +58,13 @@ import { Tooltip, Button } from '@alaneicker/atomik-ui';
       marginBottom: '16px',
     }}
   >
-    <Tooltip data-tooltip="This is a tooltip" align="bottom-left">
+    <Tooltip text="This is a tooltip" align="bottom-left">
       <Button size="md">bottom-left</Button>
     </Tooltip>
-    <Tooltip data-tooltip="This is a tooltip" align="bottom-center">
+    <Tooltip text="This is a tooltip" align="bottom-center">
       <Button size="md">bottom-center</Button>
     </Tooltip>
-    <Tooltip data-tooltip="This is a tooltip" align="bottom-right">
+    <Tooltip text="This is a tooltip" align="bottom-right">
       <Button size="md">bottom-right</Button>
     </Tooltip>
   </div>
@@ -77,7 +77,7 @@ import { Tooltip, Button } from '@alaneicker/atomik-ui';
 import { Tooltip, Button } from '@alaneicker/atomik-ui';
 
 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-  <Tooltip data-tooltip="This is a tooltip" align="top-center" triggerOnClick>
+  <Tooltip text="This is a tooltip" align="top-center" triggerOnClick>
     <Button size="md">On Click</Button>
   </Tooltip>
 </div>;
@@ -89,16 +89,16 @@ import { Tooltip, Button } from '@alaneicker/atomik-ui';
 import { Tooltip, Button } from '@alaneicker/atomik-ui';
 
 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-  <Tooltip data-tooltip="This is a tooltip" theme="info" align="top-center">
+  <Tooltip text="This is a tooltip" theme="info" align="top-center">
     <Button size="md">Info</Button>
   </Tooltip>
-  <Tooltip data-tooltip="This is a tooltip" theme="warning" align="top-center">
+  <Tooltip text="This is a tooltip" theme="warning" align="top-center">
     <Button size="md">Warning</Button>
   </Tooltip>
-  <Tooltip data-tooltip="This is a tooltip" theme="error" align="top-center">
+  <Tooltip text="This is a tooltip" theme="error" align="top-center">
     <Button size="md">Error</Button>
   </Tooltip>
-  <Tooltip data-tooltip="This is a tooltip" theme="success" align="top-center">
+  <Tooltip text="This is a tooltip" theme="success" align="top-center">
     <Button size="md">Success</Button>
   </Tooltip>
 </div>;

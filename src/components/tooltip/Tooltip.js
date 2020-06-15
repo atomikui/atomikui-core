@@ -1,22 +1,32 @@
 import React, { Children, cloneElement, useState, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import Portal from '../portal';
 
-const Tooltip = ({ children, align, triggerOnClick, theme, ...props }) => {
+const Tooltip = ({
+  children,
+  align,
+  text,
+  triggerOnClick,
+  theme,
+  ...props
+}) => {
   const [tooltip, setToolTip] = useState(null);
+  const [tooltipText] = useState(text);
+  const [tooltipId, setToolTipId] = useState(`tooltip-${shortid.generate()}`);
 
-  const createTooltipElement = (content) => {
+  const createTooltipElement = () => {
     return (
       <div
-        id="atomikui-tooltip"
+        id={tooltipId}
         className={classnames('atomikui-tooltip', {
           [`atomikui-tooltip--align-${align}`]: align,
           [`atomikui-tooltip--${theme}`]: theme,
         })}
         role="tooltip"
       >
-        <div className="atomikui-tooltip__content">{content}</div>
+        <div className="atomikui-tooltip__content">{tooltipText}</div>
       </div>
     );
   };
@@ -26,15 +36,13 @@ const Tooltip = ({ children, align, triggerOnClick, theme, ...props }) => {
   };
 
   const createTooltip = async (e) => {
-    const content = e.target.getAttribute('data-tooltip');
-
     const {
       target: { offsetTop, offsetLeft, clientWidth, clientHeight },
     } = e;
 
-    await setToolTip(createTooltipElement(content));
+    await setToolTip(createTooltipElement());
 
-    const theTooltip = document.querySelector('#atomikui-tooltip');
+    const theTooltip = document.querySelector(`#${tooltipId}`);
     const coords = theTooltip.getBoundingClientRect();
 
     const tooltipHeight = coords.height;
@@ -112,7 +120,7 @@ const Tooltip = ({ children, align, triggerOnClick, theme, ...props }) => {
 
   useEffect(() => {
     const closeOnDocumentClick = (e) => {
-      if (!e.target.getAttribute('data-tooltip')) {
+      if (!e.target.getAttribute('text')) {
         setToolTip(null);
       }
     };
@@ -143,7 +151,7 @@ const Tooltip = ({ children, align, triggerOnClick, theme, ...props }) => {
             onClick: createTooltip,
           }),
           ...(tooltip && {
-            'aria-describedby': 'atomikui-tooltip',
+            'aria-describedby': tooltipId,
             title: null,
           }),
         });
