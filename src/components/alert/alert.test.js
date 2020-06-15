@@ -35,7 +35,7 @@ describe('<Alert />', () => {
   it('Should render the appropriate aria-live attribute value', () => {
     expect(alert.prop('aria-live')).toBe('polite');
 
-    alert.setProps({ type: 'error' });
+    alert.setProps({ theme: 'error' });
 
     expect(alert.prop('aria-live')).toBe('assertive');
   });
