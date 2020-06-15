@@ -14,7 +14,7 @@ const Tooltip = ({
 }) => {
   const [tooltip, setToolTip] = useState(null);
   const [tooltipText] = useState(text);
-  const [tooltipId, setToolTipId] = useState(`tooltip-${shortid.generate()}`);
+  const [tooltipId] = useState(`tooltip-${shortid.generate()}`);
 
   const createTooltipElement = () => {
     return (
