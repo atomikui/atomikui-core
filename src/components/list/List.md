@@ -90,3 +90,7 @@ import { List, ListItem } from '@alaneicker/atomik-ui';
   </List>
 </>;
 ```
+
+#### Uses:
+
+[`<ListItem />`](/#/Data%20Display/ListItem)
