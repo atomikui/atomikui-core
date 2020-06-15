@@ -42,9 +42,9 @@ describe('<Alert />', () => {
 
   test.each(['success', 'error', 'warning', 'info'])(
     'Should render an %p Icon',
-    (type) => {
-      alert.setProps({ type });
-      expect(alert.find(`#icon-${type}`).length).toBe(1);
+    (theme) => {
+      alert.setProps({ theme });
+      expect(alert.find(`#icon-${theme}`).length).toBe(1);
     },
   );
 });

@@ -69,7 +69,7 @@ describe('<Modal />', () => {
   });
 
   it('Should set the overlay theme class', () => {
-    modal.setProps({ theme: 'white' });
+    modal.setProps({ overlayTheme: 'white' });
 
     expect(
       modal.find('.atomikui-overlay').hasClass('atomikui-overlay--white'),

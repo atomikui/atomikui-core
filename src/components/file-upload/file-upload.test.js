@@ -82,14 +82,6 @@ describe('<FileUpload />', () => {
     ).toBe(fileName);
   });
 
-  it('Should show addition text if `dragAndDrop` prop is `true`', () => {
-    fileUpload.setProps({ dragAndDrop: true });
-
-    expect(
-      fileUpload.find('.atomikui-file-upload__drag-drop-label').text(),
-    ).toBe('Select a file to upload or drag and drop in the box');
-  });
-
   it('Should render a list of files if `dragAndDrop` prop is `true`', () => {
     fileUpload.setProps({ dragAndDrop: true });
     fileUpload

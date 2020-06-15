@@ -24,6 +24,7 @@ const Tooltip = ({
           [`atomikui-tooltip--align-${align}`]: align,
           [`atomikui-tooltip--${theme}`]: theme,
         })}
+        data-testid="tooltip"
         role="tooltip"
       >
         <div className="atomikui-tooltip__content">{tooltipText}</div>
