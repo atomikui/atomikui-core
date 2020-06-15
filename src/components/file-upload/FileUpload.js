@@ -73,9 +73,7 @@ const FileUpload = ({
         })}
       >
         {dragAndDrop && (
-          <span className="atomikui-file-upload__drag-drop-label">
-            Select a file to upload or drag and drop in the box
-          </span>
+          <span className="atomikui-file-upload__drag-drop-label">{label}</span>
         )}
         <span
           className={classnames(
@@ -97,23 +95,17 @@ const FileUpload = ({
             label
           )}
         </span>
-        {!files.length && (
-          <span className="atomikui-file-upload__no-files-label">
-            No files selected
-          </span>
-        )}
-        {dragAndDrop ? (
+        {dragAndDrop && files.length > 0 && (
           <>
-            {files.length > 0 && <div className="margin-top-16" />}
+            <div className="margin-top-16" />
             <List className="atomikui-file-upload__file-list">
               {files.map((file, index) => {
                 return <ListItem key={shortid.generate()}>{file}</ListItem>;
               })}
             </List>
           </>
-        ) : (
-          <span>{files.join(', ')}</span>
         )}
+        {!dragAndDrop && <span>{files.join(', ')}</span>}
       </label>
       {(helpText || errorText) && (
         <div className="atomikui-formfield__hints">
