@@ -137,10 +137,13 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
             onBlur: removeTooltip,
             onMouseEnter: createTooltip,
             onMouseLeave: removeTooltip,
-            ...(tooltip && { 'aria-describedby': 'atomikui-tooltip' }),
           }),
           ...(triggerOnClick && {
             onClick: createTooltip,
+          }),
+          ...(tooltip && {
+            'aria-describedby': 'atomikui-tooltip',
+            title: null,
           }),
         });
       })}
