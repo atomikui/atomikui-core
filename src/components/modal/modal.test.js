@@ -68,7 +68,7 @@ describe('<Modal />', () => {
     expect(onCloseSpy.called).toBe(false);
   });
 
-  it('Should set the overlay theme variant', () => {
+  it('Should set the overlay theme class', () => {
     modal.setProps({ theme: 'white' });
 
     expect(

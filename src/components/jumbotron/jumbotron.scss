@@ -2,7 +2,7 @@
   background: $gray-100;
   padding: rem(32);
 
-  @each $variant, $map in $background-color-variants {
+  @each $variant, $map in $background-color-themes {
     &--#{$variant} {
       background-color: map-get($map, background-color);
       color: map-get($map, font-color);

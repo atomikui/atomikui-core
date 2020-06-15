@@ -37,7 +37,7 @@ describe('<FileUpload />', () => {
     fileUpload = mount(
       <FileUpload
         label="Upload file"
-        uploadBtnVariant="primary"
+        uploadBtnTheme="primary"
         onChange={onChangeSpy}
       />,
     );

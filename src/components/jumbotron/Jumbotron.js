@@ -2,11 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Jumbotron = ({ children, className, variant, ...others }) => {
+const Jumbotron = ({ children, className, theme, ...others }) => {
   return (
     <div
       className={classnames('atomikui-jumbotron', className, {
-        [`atomikui-jumbotron--${variant}`]: variant,
+        [`atomikui-jumbotron--${theme}`]: theme,
       })}
       {...others}
     >
@@ -21,7 +21,7 @@ Jumbotron.propTypes = {
   /** Jumbotron content */
   children: PropTypes.node,
   /** Color theme variant */
-  variant: PropTypes.oneOf([
+  theme: PropTypes.oneOf([
     'red',
     'orange',
     'yellow',
@@ -40,7 +40,7 @@ Jumbotron.propTypes = {
 Jumbotron.defaultProps = {
   className: '',
   children: <></>,
-  variant: null,
+  theme: null,
 };
 
 export default Jumbotron;

@@ -2,18 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const ProgressBar = ({
-  animated,
-  className,
-  label,
-  now,
-  variant,
-  ...others
-}) => {
+const ProgressBar = ({ animated, className, label, now, theme, ...others }) => {
   return (
     <div
       className={classnames('atomikui-progress-bar', className, {
-        [`atomikui-progress-bar--${variant}`]: variant,
+        [`atomikui-progress-bar--${theme}`]: theme,
         'atomikui-progress-bar--animated': animated,
       })}
       {...others}
@@ -41,8 +34,8 @@ ProgressBar.propTypes = {
   label: PropTypes.string,
   /** Specifies the percentage complete. */
   now: PropTypes.number,
-  /** Specifies the theme variant. */
-  variant: PropTypes.string,
+  /** Specifies the color theme. */
+  theme: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
 };
 
 ProgressBar.defaultProps = {
@@ -50,7 +43,7 @@ ProgressBar.defaultProps = {
   className: '',
   label: '',
   now: 0,
-  variant: '',
+  theme: null,
 };
 
 export default ProgressBar;

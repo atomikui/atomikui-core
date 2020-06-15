@@ -16,7 +16,7 @@ const Alert = ({
   className,
   children,
   icon,
-  type,
+  theme,
   onClose,
   ...others
 }) => {
@@ -31,20 +31,20 @@ const Alert = ({
   return (
     <div
       className={classnames('atomikui-alert', className, {
-        [`atomikui-alert--${type}`]: type,
+        [`atomikui-alert--${theme}`]: theme,
         [`atomikui-alert--${align}`]: align,
       })}
       role="alert"
-      aria-live={type === 'error' ? 'assertive' : 'polite'}
+      aria-live={theme === 'error' ? 'assertive' : 'polite'}
       aria-atomic="true"
       {...others}
     >
       {icon || (
         <Icon
-          id={`icon-${type}`}
-          icon={!type ? icons.info : icons[type]}
+          id={`icon-${theme}`}
+          icon={!theme ? icons.info : icons[theme]}
           size="lg"
-          color={!type ? '#027abf' : 'white'}
+          color={!theme ? '#027abf' : 'white'}
         />
       )}
       <div className="atomikui-alert__body">{children}</div>
@@ -60,7 +60,7 @@ const Alert = ({
               id="icon-close"
               icon={faTimes}
               size="lg"
-              color={!type ? '#027abf' : 'white'}
+              color={!theme ? '#027abf' : 'white'}
             />
           </Button>
         </div>
@@ -81,7 +81,7 @@ Alert.propTypes = {
   /** Alert content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the alert theme variation. */
-  type: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
+  theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 
 Alert.defaultProps = {
@@ -91,7 +91,7 @@ Alert.defaultProps = {
   onClose: null,
   children: <></>,
   text: '',
-  type: null,
+  theme: null,
 };
 
 export default Alert;

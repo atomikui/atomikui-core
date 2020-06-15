@@ -48,7 +48,7 @@ a.atomikui-btn {
     }
   }
 
-  @each $variant, $map in $btn-variants {
+  @each $variant, $map in $btn-themes {
     &--#{$variant} {
       background-color: map-get($map, background-color);
       border: 0;

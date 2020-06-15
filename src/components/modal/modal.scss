@@ -62,7 +62,7 @@
     padding: rem(16);
   }
 
-  @each $theme-name, $map in $modal-variants {
+  @each $theme-name, $map in $modal-themes {
     &--#{$theme-name} {
       background-color: map-get($map, background-color);
       color: map-get($map, font-color);

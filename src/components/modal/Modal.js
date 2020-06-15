@@ -13,11 +13,11 @@ const Modal = ({
   disableOverlayclick,
   footer,
   noOverlay,
+  overlayTheme,
   isOpen,
   onClose,
   theme,
   title,
-  type,
   ...others
 }) => {
   const [focusTrap, setFocusTrap] = useState(null);
@@ -53,7 +53,7 @@ const Modal = ({
 
   return (
     <Overlay
-      theme={theme}
+      theme={overlayTheme}
       isActive={isOpen}
       classes={classnames({
         'overlay--transparent': noOverlay,
@@ -64,7 +64,7 @@ const Modal = ({
     >
       <div
         className={classnames('atomikui-modal', className, {
-          [`atomikui-modal--${type}`]: type,
+          [`atomikui-modal--${theme}`]: theme,
           'is-open': isOpen,
         })}
         ref={modal}
@@ -93,18 +93,18 @@ Modal.propTypes = {
   disableOverlayclick: PropTypes.bool,
   /** Content to bre rendered inside of the modal footer. */
   footer: PropTypes.node,
-  /** Specifies if modal has an overlay. */
-  noOverlay: PropTypes.bool,
   /** Toggles modal visibility state. */
   isOpen: PropTypes.bool,
+  /** Specifies if modal has an overlay. */
+  noOverlay: PropTypes.bool,
+  /** Sets the overlay theme color */
+  overlayTheme: PropTypes.oneOf(['blue', 'white']),
   /** Callback triggered on close. */
   onClose: PropTypes.func,
-  /** Sets the color theme variation */
-  theme: PropTypes.oneOf(['white', 'blue']),
   /** title to be displayed in modal header */
   title: PropTypes.string,
   /** Color theme variation */
-  type: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
+  theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 
 Modal.defaultProps = {
@@ -115,10 +115,10 @@ Modal.defaultProps = {
   footer: null,
   isOpen: false,
   noOverlay: false,
+  overlayTheme: null,
   onClose() {},
-  theme: null,
   title: '',
-  type: null,
+  theme: null,
 };
 
 export default Modal;

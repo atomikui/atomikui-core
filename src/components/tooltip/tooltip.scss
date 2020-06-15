@@ -106,7 +106,7 @@
     }
   }
 
-  @each $name, $color in $tooltip-variants {
+  @each $name, $color in $tooltip-themes {
     &--#{$name} {
       .atomikui-tooltip__content {
         background-color: $color;

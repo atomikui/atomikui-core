@@ -13,7 +13,7 @@ describe('<ProgressBar />', () => {
     progressBar = shallow(
       <ProgressBar
         className="atomikui-progress-bar--custom"
-        variant="info"
+        theme="info"
         now={now}
         label={`${now}%`}
         animated
@@ -25,11 +25,11 @@ describe('<ProgressBar />', () => {
     expect(progressBar.length).toBe(1);
   });
 
-  it('Should set the theme based on the `variant prop`', () => {
+  it('Should set the bar color class based on the `theme` prop', () => {
     expect(progressBar.hasClass('atomikui-progress-bar--info')).toBe(true);
   });
 
-  it('Should render as animated based on `animated prop`', () => {
+  it('Should render as animated based on `animated` prop', () => {
     expect(progressBar.hasClass('atomikui-progress-bar--animated')).toBe(true);
   });
 

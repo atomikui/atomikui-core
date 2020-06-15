@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Portal from '../portal';
 
-const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
+const Tooltip = ({ children, align, triggerOnClick, theme, ...props }) => {
   const [tooltip, setToolTip] = useState(null);
 
   const createTooltipElement = (content) => {
@@ -12,7 +12,7 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
         id="atomikui-tooltip"
         className={classnames('atomikui-tooltip', {
           [`atomikui-tooltip--align-${align}`]: align,
-          [`atomikui-tooltip--${variant}`]: variant,
+          [`atomikui-tooltip--${theme}`]: theme,
         })}
       >
         <div className="atomikui-tooltip__content">{content}</div>
@@ -157,15 +157,15 @@ Tooltip.propTypes = {
   children: PropTypes.node,
   /** triggers the tooltip onClick/onTouchStart */
   triggerOnClick: PropTypes.bool,
-  /** Tooltip theme variant */
-  variant: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+  /** Tooltip theme theme */
+  theme: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
 };
 
 Tooltip.defaultProps = {
   align: 'top-left',
   children: <></>,
   triggerOnClick: false,
-  variant: null,
+  theme: null,
 };
 
 export default Tooltip;

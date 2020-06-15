@@ -11,84 +11,84 @@ import { Jumbotron } from '@alaneicker/atomik-ui';
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="red">
+  <Jumbotron theme="red">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="orange">
+  <Jumbotron theme="orange">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="yellow">
+  <Jumbotron theme="yellow">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="gold">
+  <Jumbotron theme="gold">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="green">
+  <Jumbotron theme="green">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="light-blue">
+  <Jumbotron theme="light-blue">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="medium-blue">
+  <Jumbotron theme="medium-blue">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="dark-blue">
+  <Jumbotron theme="dark-blue">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="light-gray">
+  <Jumbotron theme="light-gray">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="medium-gray">
+  <Jumbotron theme="medium-gray">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="dark-gray">
+  <Jumbotron theme="dark-gray">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron variant="black">
+  <Jumbotron theme="black">
     <h1 className="text-size-24 text-size-42@medium">Jumbtron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget

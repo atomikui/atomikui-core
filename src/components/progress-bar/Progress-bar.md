@@ -12,16 +12,16 @@ const now = 60;
 </>;
 ```
 
-### Theme Variants
+### Color Themes
 
 ```jsx
 import { ProgressBar } from '@alaneicker/atomik-ui';
 
 <>
-  <ProgressBar now={60} variant="success" />
-  <ProgressBar now={40} variant="warning" />
-  <ProgressBar now={50} variant="info" />
-  <ProgressBar now={80} variant="error" />
+  <ProgressBar now={60} theme="success" />
+  <ProgressBar now={40} theme="warning" />
+  <ProgressBar now={50} theme="info" />
+  <ProgressBar now={80} theme="error" />
 </>;
 ```
 
@@ -32,10 +32,10 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
 
 <>
   <ProgressBar now={70} animated />
-  <ProgressBar now={60} variant="success" animated />
-  <ProgressBar now={40} variant="warning" animated />
-  <ProgressBar now={50} variant="info" animated />
-  <ProgressBar now={80} variant="error" animated />
+  <ProgressBar now={60} theme="success" animated />
+  <ProgressBar now={40} theme="warning" animated />
+  <ProgressBar now={50} theme="info" animated />
+  <ProgressBar now={80} theme="error" animated />
 </>;
 ```
 

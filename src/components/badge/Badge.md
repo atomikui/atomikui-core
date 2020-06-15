@@ -26,13 +26,13 @@ import { Badge } from '@alaneicker/atomik-ui';
 
 <>
   <Badge>Default</Badge>
-  <Badge variant="light-gray">Light Gray</Badge>
-  <Badge variant="light-blue">Light Blue</Badge>
-  <Badge variant="info">Info</Badge>
-  <Badge variant="warning">Warning</Badge>
-  <Badge variant="error">Error</Badge>
-  <Badge variant="success">Success</Badge>
-  <Badge variant="outline">Outline</Badge>
+  <Badge theme="light-gray">Light Gray</Badge>
+  <Badge theme="light-blue">Light Blue</Badge>
+  <Badge theme="info">Info</Badge>
+  <Badge theme="warning">Warning</Badge>
+  <Badge theme="error">Error</Badge>
+  <Badge theme="success">Success</Badge>
+  <Badge theme="outline">Outline</Badge>
 </>;
 ```
 
@@ -42,12 +42,8 @@ import { Badge } from '@alaneicker/atomik-ui';
 import { Badge } from '@alaneicker/atomik-ui';
 
 <>
-  <Badge variant="info">Default</Badge>
-  <Badge shape="square" variant="info">
-    Square
-  </Badge>
-  <Badge shape="pill" variant="info">
-    Pill
-  </Badge>
+  <Badge>Default</Badge>
+  <Badge shape="square">Square</Badge>
+  <Badge shape="pill">Pill</Badge>
 </>;
 ```

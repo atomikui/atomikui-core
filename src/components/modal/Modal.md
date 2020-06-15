@@ -49,11 +49,11 @@ import { useState } from 'react';
 import { Modal, Button } from '@alaneicker/atomik-ui';
 
 const [isOpen, setIsOpen] = useState(false);
-const [type, setType] = useState(null);
+const [theme, setTheme] = useState(null);
 
-const toggleModal = (type) => {
-  if (type) {
-    setType(type);
+const toggleModal = (theme) => {
+  if (theme) {
+    setTheme(theme);
   }
   setIsOpen(!isOpen);
 };
@@ -76,7 +76,7 @@ const toggleModal = (type) => {
   </Button>
 
   <Modal
-    type={type}
+    theme={theme}
     isOpen={isOpen}
     onClose={toggleModal}
     title="Modal Dialog"

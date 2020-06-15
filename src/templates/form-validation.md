@@ -152,7 +152,7 @@ const {
       <FileUpload
         name="file_upload"
         label="Upload Resume"
-        uploadBtnVariant="primary"
+        uploadBtnTheme="primary"
         onChange={(files) => setFieldValue('file_upload', files[0])}
         helpText="PDF format only"
         errorText={errors.file_upload}

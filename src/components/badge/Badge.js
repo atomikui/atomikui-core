@@ -2,11 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Badge = ({ children, className, shape, variant, ...others }) => {
+const Badge = ({ children, className, shape, theme, ...others }) => {
   return (
     <div
       className={classnames('atomikui-badge', className, {
-        [`atomikui-badge--${variant}`]: variant,
+        [`atomikui-badge--${theme}`]: theme,
         [`atomikui-badge--${shape}`]: shape,
       })}
       {...others}
@@ -21,10 +21,8 @@ Badge.propTypes = {
   className: PropTypes.string,
   /** Content to be displayed inside badge */
   children: PropTypes.node,
-  /** Specifies a badge's shape. */
-  type: PropTypes.oneOf(['pill', 'square']),
   /** Specifies the badge theme variation. */
-  variant: PropTypes.oneOf([
+  theme: PropTypes.oneOf([
     'light-gray',
     'light-blue',
     'info',
@@ -33,13 +31,15 @@ Badge.propTypes = {
     'success',
     'outline',
   ]),
+  /** Specifies a badge's shape. */
+  type: PropTypes.oneOf(['pill', 'square']),
 };
 
 Badge.defaultProps = {
   className: '',
   children: '',
+  theme: null,
   shape: null,
-  variant: null,
 };
 
 export default Badge;

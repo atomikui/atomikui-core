@@ -18,7 +18,7 @@ describe('<Tooltip />', () => {
     tooltip = mount(
       <Tooltip
         data-tooltip="This is a tooltip"
-        variant="warning"
+        theme="warning"
         align="top-left"
       >
         <Button size="md">button</Button>

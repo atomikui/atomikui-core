@@ -1,4 +1,4 @@
-@each $color, $value in $text-colors {
+@each $color, $value in $text-themes {
   .text-color-#{$color} {
     color: $value;
   }

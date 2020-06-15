@@ -26,7 +26,7 @@ describe('<Overlay />', () => {
     expect(overlay.length).toBe(1);
   });
 
-  it('Should set a color variant', () => {
+  it('Should set a color theme class', () => {
     overlay.setProps({ theme: 'blue' });
     expect(overlay.hasClass('atomikui-overlay--blue')).toBe(true);
   });

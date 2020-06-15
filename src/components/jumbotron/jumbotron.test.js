@@ -2,7 +2,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { shallow, configure } from 'enzyme';
 import Jumbotron from './Jumbotron';
-import { TestScheduler } from 'jest';
 
 configure({ adapter: new Adapter() });
 
@@ -38,15 +37,12 @@ describe('<Jumbotron />', () => {
     'medium-gray',
     'dark-gray',
     'black',
-  ])(
-    'Should set the theme variant class as atomikui-jumbotron--%p',
-    (variant) => {
-      jumbotron.setProps({ variant });
-      expect(
-        jumbotron
-          .find('.atomikui-jumbotron')
-          .hasClass(`atomikui-jumbotron--${variant}`),
-      ).toBe(true);
-    },
-  );
+  ])('Should set the theme class as atomikui-jumbotron--%p', (theme) => {
+    jumbotron.setProps({ theme });
+    expect(
+      jumbotron
+        .find('.atomikui-jumbotron')
+        .hasClass(`atomikui-jumbotron--${theme}`),
+    ).toBe(true);
+  });
 });

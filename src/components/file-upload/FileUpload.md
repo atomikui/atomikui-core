@@ -7,7 +7,7 @@ import { FileUpload } from '@alaneicker/atomik-ui';
 
 <FileUpload
   label="Upload file"
-  uploadBtnVariant="primary"
+  uploadBtnTheme="primary"
   onChange={(file) => console.log(file)}
 />;
 ```
@@ -19,7 +19,7 @@ import { FileUpload } from '@alaneicker/atomik-ui';
 
 <FileUpload
   label="Select a file to upload or drag and drop in the box"
-  uploadBtnVariant="primary"
+  uploadBtnTheme="primary"
   onChange={(file) => console.log(file)}
   dragAndDrop
 />;

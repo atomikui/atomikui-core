@@ -16,7 +16,7 @@ const FileUpload = ({
   label,
   name,
   onChange,
-  uploadBtnVariant,
+  uploadBtnTheme,
   ...others
 }) => {
   const [files, setFiles] = useState([]);
@@ -79,7 +79,7 @@ const FileUpload = ({
           className={classnames(
             'atomikui-file-upload__btn atomikui-btn atomikui-btn--condensed atomikui-btn--nowrap',
             {
-              [`atomikui-btn--${uploadBtnVariant}`]: uploadBtnVariant,
+              [`atomikui-btn--${uploadBtnTheme}`]: uploadBtnTheme,
               'atomikui-btn--no-radius': !dragAndDrop,
             },
           )}
@@ -138,8 +138,8 @@ FileUpload.propTypes = {
   name: PropTypes.string,
   /** Triggers onChange callback */
   onChange: PropTypes.func,
-  /** Specifies the upload button variant */
-  uploadBtnVariant: PropTypes.oneOf([
+  /** Specifies the upload button theme variant */
+  uploadBtnTheme: PropTypes.oneOf([
     'primary',
     'secondary',
     'tertiary',
@@ -157,7 +157,7 @@ FileUpload.defaultProps = {
   helpText: '',
   label: 'Select a File',
   onChange() {},
-  uploadBtnVariant: null,
+  uploadBtnTheme: null,
 };
 
 export default FileUpload;

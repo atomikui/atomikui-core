@@ -9,7 +9,7 @@
   text-align: center;
   white-space: nowrap;
 
-  @each $name, $color in $badge-variants {
+  @each $name, $color in $badge-themes {
     &--#{$name} {
       background-color: $color;
       color: $white;

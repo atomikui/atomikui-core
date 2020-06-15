@@ -1,4 +1,4 @@
-$alert-variants: (
+$alert-themes: (
   dark: $gray-500,
   info: $info-blue,
   success: $success-green,
@@ -6,14 +6,14 @@ $alert-variants: (
   warning: $warning-orange,
 ) !default;
 
-$tooltip-variants: (
+$tooltip-themes: (
   info: $info-blue,
   success: $success-green,
   error: $error-red,
   warning: $warning-orange,
 ) !default;
 
-$badge-variants: (
+$badge-themes: (
   'light-gray': $light-gray,
   'light-blue': $blue-000,
   info: $info-blue,
@@ -22,25 +22,14 @@ $badge-variants: (
   warning: $warning-orange,
 ) !default;
 
-$text-colors: (
-  black: $black,
-  white: $white,
-  gray: $gray-300,
-  red: $red-100,
-  orange: $orange-100,
-  green: $green-100,
-  blue: $blue-200,
-  navy: $blue-400,
-) !default;
-
-$price-colors: (
+$price-themes: (
   light-green: $green-000,
   green: $green-100,
   blue: $blue-200,
   red: $red-100,
 );
 
-$btn-variants: (
+$btn-themes: (
   primary: (
     background-color: $color-btn-primary,
     font-color: $white,
@@ -72,7 +61,7 @@ $btn-variants: (
   ),
 ) !default;
 
-$background-color-variants: (
+$background-color-themes: (
   red: (
     background-color: $red-100,
     font-color: $white,
@@ -119,7 +108,7 @@ $background-color-variants: (
   ),
 ) !default;
 
-$statistic-variants: (
+$statistic-themes: (
   red: $red-100,
   orange: $orange-100,
   yellow: $yellow-100,
@@ -133,7 +122,7 @@ $statistic-variants: (
   dark-gray: $gray-400,
 ) !default;
 
-$modal-variants: (
+$modal-themes: (
   dark: (
     background-color: $gray-500,
     font-color: $white,
@@ -154,4 +143,15 @@ $modal-variants: (
     background-color: $warning-orange,
     font-color: $white,
   ),
+) !default;
+
+$text-themes: (
+  black: $black,
+  white: $white,
+  gray: $gray-300,
+  red: $red-100,
+  orange: $orange-100,
+  green: $green-100,
+  blue: $blue-200,
+  navy: $blue-400,
 ) !default;

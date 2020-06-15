@@ -39,7 +39,7 @@
     align-items: flex-end;
   }
 
-  @each $name, $color in $alert-variants {
+  @each $name, $color in $alert-themes {
     &--#{$name} {
       background-color: $color;
       border: 0;

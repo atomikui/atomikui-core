@@ -19,7 +19,7 @@
     line-height: 1;
     text-transform: uppercase;
 
-    @each $color, $value in $statistic-variants {
+    @each $color, $value in $statistic-themes {
       &.atomikui-statistic__value--#{$color} {
         color: $value;
       }
