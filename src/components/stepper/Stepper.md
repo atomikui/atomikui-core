@@ -1,7 +1,5 @@
 The Stepper is used to represent a series of steps that have been or need to be completed.
 
-See the [Step](/#/Navigation/Step) component API documentation for more information.
-
 ### Default Stepper
 
 ```jsx
@@ -64,3 +62,7 @@ import { Stepper, Step } from '@alaneicker/atomik-ui';
   </Step>
 </Stepper>;
 ```
+
+#### Uses:
+
+[`<Step />`](/#/Navigation/Step)

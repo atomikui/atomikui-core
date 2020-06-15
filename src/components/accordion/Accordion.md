@@ -83,3 +83,7 @@ import { Accordion, AccordionItem } from '@alaneicker/atomik-ui';
   </AccordionItem>
 </Accordion>;
 ```
+
+#### Uses:
+
+[`<AccordionItem />`](/#/Content/AccordionItem)
