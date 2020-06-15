@@ -1,9 +1,19 @@
-import React, { useState, Children, cloneElement } from 'react';
+import React, { useEffect, useState, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Accordion = ({ className, children, multipleOpen, ...others }) => {
+const Accordion = ({
+  className,
+  children,
+  defaultOpen,
+  multipleOpen,
+  ...others
+}) => {
   const [isExpanded, setIsExpanded] = useState(null);
+
+  useEffect(() => {
+    setIsExpanded(defaultOpen);
+  }, []);
 
   return (
     <div className={classnames('atomikui-accordion', classnames)} {...others}>
@@ -26,6 +36,8 @@ Accordion.propTypes = {
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Sets the index of a panel thay is open by default */
+  defaultOpen: PropTypes.number,
   /** allow multiple panels to be open */
   multipleOpen: PropTypes.bool,
 };
@@ -33,6 +45,7 @@ Accordion.propTypes = {
 Accordion.defaultProps = {
   children: <></>,
   className: '',
+  defaultOpen: null,
   multipleOpen: false,
 };
 
