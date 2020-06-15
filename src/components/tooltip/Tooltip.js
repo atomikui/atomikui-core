@@ -14,6 +14,7 @@ const Tooltip = ({ children, align, triggerOnClick, theme, ...props }) => {
           [`atomikui-tooltip--align-${align}`]: align,
           [`atomikui-tooltip--${theme}`]: theme,
         })}
+        role="tooltip"
       >
         <div className="atomikui-tooltip__content">{content}</div>
       </div>
