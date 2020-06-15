@@ -20,6 +20,10 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
     );
   };
 
+  const removeTooltip = () => {
+    return setToolTip(null);
+  };
+
   const createTooltip = async (e) => {
     const content = e.target.getAttribute('data-tooltip');
 
@@ -105,19 +109,23 @@ const Tooltip = ({ children, align, triggerOnClick, variant, ...props }) => {
     }
   };
 
-  const removeTooltip = () => {
-    return setToolTip(null);
-  };
-
   useEffect(() => {
-    if (triggerOnClick) {
-      document.addEventListener('click', (e) => {
-        if (!e.target.getAttribute('data-tooltip')) {
-          setToolTip(null);
-        }
-      });
+    const closeOnDocumentClick = (e) => {
+      if (!e.target.getAttribute('data-tooltip')) {
+        setToolTip(null);
+      }
+    };
+
+    if (tooltip && triggerOnClick) {
+      window.addEventListener('resize', removeTooltip);
+      document.addEventListener('click', closeOnDocumentClick);
     }
-  }, []);
+
+    return () => {
+      window.removeEventListener('resize', removeTooltip);
+      document.removeEventListener('click', closeOnDocumentClick);
+    };
+  }, [tooltip]);
 
   return (
     <>
