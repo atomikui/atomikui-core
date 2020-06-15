@@ -11,7 +11,7 @@ const Avatar = ({
   shape,
   size,
   src,
-  variant,
+  theme,
   ...others
 }) => {
   return (
@@ -25,7 +25,7 @@ const Avatar = ({
     >
       <span
         className={classnames('atomikui-avatar__content', className, {
-          [`atomikui-avatar__content--${variant}`]: variant,
+          [`atomikui-avatar__content--${theme}`]: theme,
         })}
       >
         {src && <img className="atomikui-avatar__image" src={src} alt={alt} />}
@@ -54,7 +54,7 @@ Avatar.propTypes = {
   /** Image to be displayed aiside Avatar */
   src: PropTypes.string,
   /** Avatar background color theme variation */
-  variant: PropTypes.oneOf([
+  theme: PropTypes.oneOf([
     'red',
     'orange',
     'yellow',
@@ -79,7 +79,7 @@ Avatar.defaultProps = {
   shape: null,
   size: null,
   src: '',
-  variant: null,
+  theme: null,
 };
 
 export default Avatar;

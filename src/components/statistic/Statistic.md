@@ -34,7 +34,7 @@ import { Statistic } from '@alaneicker/atomik-ui';
 
 ### Statistic With Icon
 
-The `icon` prop can be used to set an icon nex to the calue. Set the icon color with the `iconColor` prop.
+The `icon` prop can be used to set an icon next to the value. Set the icon color with the `iconColor` prop.
 
 ```jsx
 import { Statistic } from '@alaneicker/atomik-ui';
@@ -73,23 +73,23 @@ import { Statistic } from '@alaneicker/atomik-ui';
 </>;
 ```
 
-### Colored
+### Color Themes
 
-The `color` prop can be used to set the color of the statistic value.
+The `theme` prop can be used to set the color of the statistic value.
 
 ```jsx
 import { Statistic } from '@alaneicker/atomik-ui';
 
 <>
-  <Statistic value="27" label="Red" color="red" />
-  <Statistic value="8" label="Orange" color="orange" />
-  <Statistic value="34" label="Gold" color="gold" />
-  <Statistic value="27" label="Green" color="green" />
-  <Statistic value="1" label="Light Blue" color="light-blue" />
-  <Statistic value="11" label="Medium Blue" color="medium-blue" />
-  <Statistic value="22" label="Dark Blue" color="dark-blue" />
-  <Statistic value="3" label="Light Gray" color="light-gray" />
-  <Statistic value="17" label="Medium Gray" color="medium-gray" />
-  <Statistic value="87" label="Dark Gray" color="dark-gray" />
+  <Statistic value="27" label="Red" theme="red" />
+  <Statistic value="8" label="Orange" theme="orange" />
+  <Statistic value="34" label="Gold" theme="gold" />
+  <Statistic value="27" label="Green" theme="green" />
+  <Statistic value="1" label="Light Blue" theme="light-blue" />
+  <Statistic value="11" label="Medium Blue" theme="medium-blue" />
+  <Statistic value="22" label="Dark Blue" theme="dark-blue" />
+  <Statistic value="3" label="Light Gray" theme="light-gray" />
+  <Statistic value="17" label="Medium Gray" theme="medium-gray" />
+  <Statistic value="87" label="Dark Gray" theme="dark-gray" />
 </>;
 ```

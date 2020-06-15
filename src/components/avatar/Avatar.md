@@ -76,18 +76,18 @@ There are many color themes to choose from. simplay pass in a `variant` prop wit
 import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
-  <Avatar variant="red">AE</Avatar>
-  <Avatar variant="orange">P</Avatar>
-  <Avatar variant="yellow">MS</Avatar>
-  <Avatar variant="gold">RJ</Avatar>
-  <Avatar variant="green">AJ</Avatar>
-  <Avatar variant="light-blue">MA</Avatar>
-  <Avatar variant="medium-blue">T</Avatar>
-  <Avatar variant="dark-blue">S</Avatar>
-  <Avatar variant="light-gray">SM</Avatar>
-  <Avatar variant="medium-gray">JD</Avatar>
-  <Avatar variant="dark-gray">M</Avatar>
-  <Avatar variant="black">O</Avatar>
+  <Avatar theme="red">AE</Avatar>
+  <Avatar theme="orange">P</Avatar>
+  <Avatar theme="yellow">MS</Avatar>
+  <Avatar theme="gold">RJ</Avatar>
+  <Avatar theme="green">AJ</Avatar>
+  <Avatar theme="light-blue">MA</Avatar>
+  <Avatar theme="medium-blue">T</Avatar>
+  <Avatar theme="dark-blue">S</Avatar>
+  <Avatar theme="light-gray">SM</Avatar>
+  <Avatar theme="medium-gray">JD</Avatar>
+  <Avatar theme="dark-gray">M</Avatar>
+  <Avatar theme="black">O</Avatar>
 </>;
 ```
 
