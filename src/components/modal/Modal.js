@@ -1,10 +1,12 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
+import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
+import Portal from '../portal';
 
 const Modal = ({
   className,
@@ -21,8 +23,10 @@ const Modal = ({
   ...others
 }) => {
   const [focusTrap, setFocusTrap] = useState(null);
+  const [modal, setModal] = useState(null);
+  const modalId = `modal-${shortid.generate()}`;
 
-  const modal = useRef();
+  const modalRef = useRef();
 
   const handleKeyDown = (e) => {
     if (e.keyCode === 27) {
@@ -30,28 +34,7 @@ const Modal = ({
     }
   };
 
-  useEffect(() => {
-    setFocusTrap(
-      createFocusTrap(modal.current, {
-        allowOutsideClick: () => {
-          return !disableOverlayclick || noOverlay;
-        },
-        clickOutsideDeactivates: noOverlay,
-        escapeDeactivates: false,
-        fallbackFocus: modal,
-      }),
-    );
-  }, [disableOverlayclick, noOverlay]);
-
-  useEffect(() => {
-    if (focusTrap) {
-      setTimeout(() => {
-        focusTrap[isOpen ? 'activate' : 'deactivate']();
-      }, 300);
-    }
-  }, [focusTrap, isOpen]);
-
-  return (
+  const modalWindow = (
     <Overlay
       theme={overlayTheme}
       isActive={isOpen}
@@ -63,11 +46,11 @@ const Modal = ({
       {...others}
     >
       <div
+        ref={modalRef}
         className={classnames('atomikui-modal', className, {
           [`atomikui-modal--${theme}`]: theme,
           'is-open': isOpen,
         })}
-        ref={modal}
       >
         <div className="atomikui-modal__header">
           <div className="atomikui-modal__title">{title}</div>
@@ -80,6 +63,35 @@ const Modal = ({
       </div>
     </Overlay>
   );
+
+  useEffect(() => {
+    if (modal) {
+      setFocusTrap(
+        createFocusTrap(modalRef.current, {
+          allowOutsideClick: () => {
+            return !disableOverlayclick || noOverlay;
+          },
+          clickOutsideDeactivates: noOverlay,
+          escapeDeactivates: false,
+          fallbackFocus: modalRef,
+        }),
+      );
+    }
+  }, [disableOverlayclick, modal, noOverlay]);
+
+  useEffect(() => {
+    if (focusTrap) {
+      setTimeout(() => {
+        focusTrap[isOpen ? 'activate' : 'deactivate']();
+      }, 300);
+    }
+  }, [focusTrap, isOpen]);
+
+  useEffect(() => {
+    setModal(isOpen ? modalWindow : null);
+  }, [isOpen]);
+
+  return modal ? <Portal container={document.body}>{modal}</Portal> : null;
 };
 
 Modal.propTypes = {
