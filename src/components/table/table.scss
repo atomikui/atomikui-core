@@ -1,7 +1,7 @@
-.atomikui-table {
-  $cell-border-color: lighten($gray-200, 10%);
+$cell-border-color: $gray-100;
 
-  border: rem(1) solid $default-border-gray;
+.atomikui-table {
+  border: rem(1) solid darken($gray-100, 10%);
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -20,8 +20,8 @@
   }
 
   tr:first-of-type > td {
-    border-top-width: rem(2);
-    border-top-color: $gray-300;
+    border-top-width: rem(3);
+    border-top-color: $cell-border-color;
   }
 
   tbody > tr:nth-child(even) {
