@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import createFocusTrap from 'focus-trap';
-import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
@@ -24,7 +23,6 @@ const Modal = ({
 }) => {
   const [focusTrap, setFocusTrap] = useState(null);
   const [modal, setModal] = useState(null);
-  const modalId = `modal-${shortid.generate()}`;
 
   const modalRef = useRef();
 

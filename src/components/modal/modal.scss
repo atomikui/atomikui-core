@@ -39,7 +39,7 @@
     width: rem(32);
 
     &:hover {
-      background: rgba(0, 0, 0, 0.1);
+      background: $blue-000;
     }
 
     & > svg {
