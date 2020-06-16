@@ -11,11 +11,16 @@ const Overlay = ({
   theme,
   ...others
 }) => {
+  // TODO: Needs test coverage
+  /* istanbul ignore next */
   useEffect(() => {
-    /* istanbul ignore next */
     if (!allowBodyScroll) {
       document.body.style.overflow = isActive ? 'hidden' : 'visible';
     }
+
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
   }, [isActive]);
 
   return (
