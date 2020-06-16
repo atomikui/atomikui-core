@@ -22,8 +22,6 @@ const Modal = ({
   ...others
 }) => {
   const [focusTrap, setFocusTrap] = useState(null);
-  const [modal, setModal] = useState(null);
-
   const modalRef = useRef();
 
   const handleKeyDown = (e) => {
@@ -32,38 +30,8 @@ const Modal = ({
     }
   };
 
-  const modalWindow = (
-    <Overlay
-      theme={overlayTheme}
-      isActive={isOpen}
-      classes={classnames({
-        'overlay--transparent': noOverlay,
-      })}
-      onClick={!disableOverlayclick ? onClose : null}
-      onKeyDown={!disableEscapKey ? handleKeyDown : null}
-      {...others}
-    >
-      <div
-        ref={modalRef}
-        className={classnames('atomikui-modal', className, {
-          [`atomikui-modal--${theme}`]: theme,
-          'is-open': isOpen,
-        })}
-      >
-        <div className="atomikui-modal__header">
-          <div className="atomikui-modal__title">{title}</div>
-          <button className="atomikui-modal__close-button" onClick={onClose}>
-            <Icon icon={faTimes} size="2x" color="white" />
-          </button>
-        </div>
-        <div className="atomikui-modal__body">{children}</div>
-        {footer && <div className="atomikui-modal__footer">{footer}</div>}
-      </div>
-    </Overlay>
-  );
-
   useEffect(() => {
-    if (modal) {
+    if (isOpen) {
       setFocusTrap(
         createFocusTrap(modalRef.current, {
           allowOutsideClick: () => {
@@ -75,21 +43,45 @@ const Modal = ({
         }),
       );
     }
-  }, [disableOverlayclick, modal, noOverlay]);
+  }, [disableOverlayclick, isOpen, noOverlay]);
 
   useEffect(() => {
     if (focusTrap) {
-      setTimeout(() => {
-        focusTrap[isOpen ? 'activate' : 'deactivate']();
-      }, 300);
+      focusTrap[isOpen ? 'activate' : 'deactivate']();
     }
   }, [focusTrap, isOpen]);
 
-  useEffect(() => {
-    setModal(isOpen ? modalWindow : null);
-  }, [isOpen]);
-
-  return modal ? <Portal container={document.body}>{modal}</Portal> : null;
+  return isOpen ? (
+    <Portal container={document.body}>
+      <Overlay
+        theme={overlayTheme}
+        isActive={isOpen}
+        classes={classnames({
+          'overlay--transparent': noOverlay,
+        })}
+        onClick={!disableOverlayclick ? onClose : null}
+        onKeyDown={!disableEscapKey ? handleKeyDown : null}
+        {...others}
+      >
+        <div
+          ref={modalRef}
+          className={classnames('atomikui-modal', className, {
+            [`atomikui-modal--${theme}`]: theme,
+            'is-open': isOpen,
+          })}
+        >
+          <div className="atomikui-modal__header">
+            <div className="atomikui-modal__title">{title}</div>
+            <button className="atomikui-modal__close-button" onClick={onClose}>
+              <Icon icon={faTimes} size="2x" color="white" />
+            </button>
+          </div>
+          <div className="atomikui-modal__body">{children}</div>
+          {footer && <div className="atomikui-modal__footer">{footer}</div>}
+        </div>
+      </Overlay>
+    </Portal>
+  ) : null;
 };
 
 Modal.propTypes = {
