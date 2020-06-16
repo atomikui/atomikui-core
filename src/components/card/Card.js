@@ -6,7 +6,7 @@ const Card = ({ children, className, footer, title, ...others }) => {
   return (
     <div className="atomikui-card" {...others}>
       {title && <div className="atomikui-card__header">{title}</div>}
-      {children && <div className="atomikui-card__body">{children}</div>}
+      <div className="atomikui-card__body">{children}</div>
       {footer && <div className="atomikui-card__footer">{footer}</div>}
     </div>
   );
@@ -26,8 +26,8 @@ Card.propTypes = {
 Card.defaultProps = {
   children: <></>,
   className: '',
-  footer: <></>,
-  title: '',
+  footer: null,
+  title: null,
 };
 
 export default Card;
