@@ -1,6 +1,11 @@
 ### Basic Table
 
-Atomik UI recommends [React Table](https://react-table.js.org/) for handling tabular data. The `.atomikui-table` class can be used to add basic styles to the table. Subsequently, the `.atomikui-table--dark` modifier class can be added to apply a dark theme to the table.
+Atomik UI recommends [React Table](https://react-table.js.org/) for handling tabular data. The `.atomikui-table` class can be used to add basic styles to the table.
+
+#### Modifier Classes
+
+- `.is-full-width` -- makes the table span 100% width of its parent container.
+- `.is-fixed-layout` -- makes the table columns equal width.
 
 ```jsx
 import { useMemo } from 'react';
@@ -21,7 +26,11 @@ const Table = ({ columns, data, ...others }) => {
   });
 
   return (
-    <table {...getTableProps()} className="atomikui-table" {...others}>
+    <table
+      {...getTableProps()}
+      className="atomikui-table is-full-width"
+      {...others}
+    >
       <thead>
         {headerGroups.map((headerGroup) => {
           return (

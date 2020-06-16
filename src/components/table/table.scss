@@ -4,7 +4,6 @@ $cell-border-color: $gray-100;
   border: rem(1) solid darken($gray-100, 10%);
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
 
   th,
   td {
@@ -28,22 +27,11 @@ $cell-border-color: $gray-100;
     background: lighten($blue-000, 5%);
   }
 
-  &.atomikui-table--dark {
-    $cell-border-color: $gray-400;
+  &.is-full-width {
+    width: 100%;
+  }
 
-    border-color: $gray-400;
-
-    tr > td,
-    tr > * + * {
-      border-color: $gray-400;
-    }
-
-    tr:first-of-type > td {
-      border-color: $gray-400;
-    }
-
-    tbody > tr:nth-child(even) {
-      background: darken($gray-500, 4%);
-    }
+  &.is-fixed-layout {
+    table-layout: fixed;
   }
 }
