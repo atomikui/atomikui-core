@@ -21,7 +21,8 @@ const Tests = () => {
         font-family: 'Lato', Arial, Helvetica, sans-serif !important; 
       }
       .quiet,
-      .footer {
+      .footer,
+      .push {
         display: none;
       }
     `),
