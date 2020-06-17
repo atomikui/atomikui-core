@@ -20,6 +20,7 @@ const Tests = () => {
       body { 
         font-family: 'Lato', Arial, Helvetica, sans-serif !important; 
       }
+      .quiet,
       .footer {
         display: none;
       }
