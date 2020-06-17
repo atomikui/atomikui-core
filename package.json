@@ -24,7 +24,7 @@
     "push-release": "git push && git push --tags",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "lint:css": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc.json --fix",
-    "test": "jest --coverage --silent --config=./jest/jest.config.js",
+    "test": "jest --coverage --silent --config=./jest/jest.config.js && cp -R coverage public",
     "start": "NODE_ENV=development styleguidist server",
     "build:atomik": "NODE_ENV=production babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",

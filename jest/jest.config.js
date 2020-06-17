@@ -46,16 +46,16 @@ module.exports = {
     'jsx',
     'node',
   ],
-  reporters: [
-    'default',
-    [
-      'jest-html-reporters',
-      {
-        filename: 'public/coverage-report.html',
-        pageTitle: 'Test Coverage Report',
-        expand: true,
-        hideIcon: true,
-      },
-    ],
-  ],
+  // reporters: [
+  //   'default',
+  //   [
+  //     'jest-html-reporters',
+  //     {
+  //       filename: 'public/coverage-report.html',
+  //       pageTitle: 'Test Coverage Report',
+  //       expand: true,
+  //       hideIcon: true,
+  //     },
+  //   ],
+  // ],
 };

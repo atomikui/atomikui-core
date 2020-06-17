@@ -9,6 +9,6 @@ module.exports = {
     },
   ],
   components: () => {
-    return ['src/components/stats/Stats.js'];
+    return ['src/components/tests/Tests.js'];
   },
 };
