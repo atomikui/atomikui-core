@@ -7,8 +7,32 @@ const Tests = () => {
   const setIframeContentStyles = () => {
     const iframeDocument = iframeRef.current.contentWindow.document;
     const reportTable = iframeDocument.body.querySelector('table');
+
+    const linkTag = iframeDocument.createElement('link');
+    linkTag.rel = 'stylesheet';
+    linkTag.href =
+      'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap';
+    iframeDocument.head.appendChild(linkTag);
+    const styleTag = iframeDocument.createElement('style');
+    styleTag.type = 'text/css';
+    styleTag.appendChild(
+      document.createTextNode(`
+      body { 
+        font-family: 'Lato', Arial, Helvetica, sans-serif !important; 
+      }
+      h1, h2, h3, h4, h5, h6, .header { 
+        font-family: 'Lato', serif !important; 
+        color: #222;
+        font-weight: 700; 
+        margin-top: 8px; 
+      }
+    `),
+    );
+
+    iframeDocument.head.appendChild(styleTag);
+
     setIframeHeight(
-      `${reportTable.offsetHeight + reportTable.offsetTop + 100}px`,
+      `${reportTable.offsetHeight + reportTable.offsetTop + 50}px`,
     );
   };
 

@@ -8,7 +8,7 @@
   @each $name, $breakpoint in $breakpoints {
     @media (min-width: $breakpoint) {
       .text-align-#{$alignment}\@#{$name} {
-        text-align: $alignment !important;
+        text-align: $alignment;
       }
     }
   }
