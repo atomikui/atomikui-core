@@ -20,11 +20,8 @@ const Tests = () => {
       body { 
         font-family: 'Lato', Arial, Helvetica, sans-serif !important; 
       }
-      h1, h2, h3, h4, h5, h6, .header { 
-        font-family: 'Lato', serif !important; 
-        color: #222;
-        font-weight: 700; 
-        margin-top: 8px; 
+      .footer {
+        display: none;
       }
     `),
     );
@@ -32,7 +29,7 @@ const Tests = () => {
     iframeDocument.head.appendChild(styleTag);
 
     setIframeHeight(
-      `${reportTable.offsetHeight + reportTable.offsetTop + 50}px`,
+      `${reportTable.offsetHeight + reportTable.offsetTop + 20}px`,
     );
   };
 
