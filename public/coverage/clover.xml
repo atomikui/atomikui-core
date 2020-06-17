@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1592402945537" clover="3.2.0">
-  <project timestamp="1592402945537" name="All files">
-    <metrics statements="519" coveredstatements="485" conditionals="296" coveredconditionals="256" methods="164" coveredmethods="128" elements="979" coveredelements="869" complexity="0" loc="519" ncloc="519" packages="46" files="54" classes="54"/>
+<coverage generated="1592407945942" clover="3.2.0">
+  <project timestamp="1592407945942" name="All files">
+    <metrics statements="512" coveredstatements="485" conditionals="294" coveredconditionals="256" methods="162" coveredmethods="128" elements="968" coveredelements="869" complexity="0" loc="512" ncloc="512" packages="44" files="52" classes="52"/>
     <package name="accordion">
       <metrics statements="23" coveredstatements="23" conditionals="8" coveredconditionals="8" methods="7" coveredmethods="7"/>
       <file name="Accordion.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/accordion/Accordion.js">
@@ -240,12 +240,6 @@
         <line num="19" count="12" type="stmt"/>
         <line num="45" count="2" type="stmt"/>
         <line num="64" count="2" type="stmt"/>
-      </file>
-    </package>
-    <package name="credit-card-field">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="credit-card-icons.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/credit-card-field/credit-card-icons.js">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       </file>
     </package>
     <package name="date-picker">
@@ -669,19 +663,6 @@
         <line num="33" count="1" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
         <line num="56" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="tests">
-      <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="Tests.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/tests/Tests.js">
-        <metrics statements="7" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
       </file>
     </package>
     <package name="toaster">

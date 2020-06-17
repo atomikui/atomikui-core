@@ -11,10 +11,10 @@ module.exports = {
     '!src/index.js',
     '!**/index.js',
     '!src/utilities/**/*.js',
-    '!src/components/stats/**/*.js',
+    '!src/components/tests/**/*.js',
     '!src/components/toaster/toast-context.js',
     // Excluding experimental components
-    '!src/components/credit-card-field/CreditCardField.js',
+    '!src/components/credit-card-field/**/*.js',
   ],
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
@@ -46,16 +46,4 @@ module.exports = {
     'jsx',
     'node',
   ],
-  // reporters: [
-  //   'default',
-  //   [
-  //     'jest-html-reporters',
-  //     {
-  //       filename: 'public/coverage-report.html',
-  //       pageTitle: 'Test Coverage Report',
-  //       expand: true,
-  //       hideIcon: true,
-  //     },
-  //   ],
-  // ],
 };
