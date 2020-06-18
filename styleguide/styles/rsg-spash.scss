@@ -9,7 +9,7 @@
   left: 0;
   line-height: 1.5;
   padding: rem(32);
-  position: absolute;
+  position: fixed;
   right: 0;
   text-align: center;
   top: 0;
@@ -20,6 +20,7 @@
     -moz-animation: spin 65s linear 10;
     animation: spin 65s linear 10;
     width: rem(150);
+    margin-top: rem(-40);
   }
 
   & > * {
@@ -91,6 +92,7 @@
   @media (min-width: 600px) {
     svg {
       width: rem(250);
+      margin-top: 0;
     }
 
     &__hd {
