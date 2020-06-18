@@ -16,6 +16,9 @@
   z-index: 900;
 
   svg {
+    -webkit-animation: spin 65s linear 10;
+    -moz-animation: spin 65s linear 10;
+    animation: spin 65s linear 10;
     width: rem(150);
   }
 
@@ -98,5 +101,22 @@
     &__subhead {
       font-size: rem(30);
     }
+  }
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
