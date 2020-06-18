@@ -1,64 +1,87 @@
-.splash-header {
+.splash {
   align-items: center;
   background: $blue-500;
-  border-bottom: 1px solid #ddd;
+  color: $white;
   display: flex;
   flex-direction: column;
-  margin: rem(-53 -16 0);
-  padding: rem(20);
-  padding-bottom: rem(16);
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  line-height: 1.5;
+  padding: rem(32);
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 0;
+  z-index: 900;
 
-  &__text {
-    & > * {
-      margin: 0 !important;
+  svg {
+    width: rem(150);
+  }
+
+  & > * {
+    max-width: rem(1000);
+  }
+
+  &__hd,
+  &__subhead {
+    font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__hd {
+    color: $yellow-100;
+    font-size: rem(70);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__subhead {
+    font-size: rem(20);
+    line-height: 1.4;
+    margin-bottom: rem(24);
+  }
+
+  &__preface {
+    font-size: rem(18);
+    margin-bottom: rem(24);
+  }
+
+  .rsg--link-24.splash__btn {
+    background: $red-100;
+    border-radius: rem(2);
+    color: $white;
+    display: inline-block;
+    min-height: rem(44);
+    padding: rem(10 24);
+    text-transform: uppercase;
+    transition: background 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background: darken($red-100, 10%);
     }
 
-    h1,
-    h2 {
-      text-align: center;
-    }
-
-    h1 {
-      color: $yellow-100;
-    }
-
-    h2 {
-      color: $white;
-      font-weight: 300;
+    &:focus,
+    &:active {
+      box-shadow: rem(0 0 0 2) lighten($red-100, 10%);
+      outline: 0;
     }
   }
 
   @media (min-width: 600px) {
-    flex-direction: row;
-    height: rem(250);
-    padding: rem(32);
-
-    &__text {
-      line-height: 1;
-      padding-left: rem(20);
-
-      h1,
-      h2 {
-        text-align: left;
-      }
+    svg {
+      width: rem(250);
     }
-  }
-}
 
-.splash-main {
-  background: $gray-000;
-  margin: rem(0 -16);
-  padding: rem(32);
+    &__hd {
+      font-size: rem(95);
+      margin: 0;
+    }
 
-  hr {
-    border-bottom-color: $gray-200;
-  }
-
-  h3 {
-    font-size: rem(18);
-  }
-
-  h2 {
-    font-size: rem(24);
+    &__subhead {
+      font-size: rem(30);
+    }
   }
 }

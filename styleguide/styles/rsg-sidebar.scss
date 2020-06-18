@@ -1,5 +1,6 @@
 div[class^='rsg--sidebar'] {
   background: $blue-500;
+  border: 0;
 
   [class^='rsg--logo'] {
     display: flex;

@@ -1,6 +1,6 @@
 module.exports = {
   name: 'Getting Started',
-  content: './README.md',
+  content: './styleguide/docs/Splash.md',
   sectionDepth: 6,
   sections: [
     {
