@@ -43,5 +43,5 @@
   <div class="splash__hd">Atomik UI</div>
   <div class="splash__subhead">A Library of React Components for Rapid Application Development</div>
   <div class="splash__preface">Atomik UI is a comprehensive library of React components for kickstarting any React based project. You'll find everything you need here to get your next project off the ground.</div>
-  <a class="splash__btn" href="/#/Getting%20Started/Installation">Get Started</a>
+  <a class="splash__btn" href="https://alaneicker1975.github.io/atomik-ui/#/Getting%20Started/Installation">Get Started</a>
 </div>
