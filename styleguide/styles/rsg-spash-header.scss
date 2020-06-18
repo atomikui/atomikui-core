@@ -1,0 +1,64 @@
+.splash-header {
+  align-items: center;
+  background: $blue-500;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  margin: rem(-53 -16 0);
+  padding: rem(20);
+  padding-bottom: rem(16);
+
+  &__text {
+    & > * {
+      margin: 0 !important;
+    }
+
+    h1,
+    h2 {
+      text-align: center;
+    }
+
+    h1 {
+      color: $yellow-100;
+    }
+
+    h2 {
+      color: $white;
+      font-weight: 300;
+    }
+  }
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    height: rem(250);
+    padding: rem(32);
+
+    &__text {
+      line-height: 1;
+      padding-left: rem(20);
+
+      h1,
+      h2 {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.splash-main {
+  background: $gray-000;
+  margin: rem(0 -16);
+  padding: rem(32);
+
+  hr {
+    border-bottom-color: $gray-200;
+  }
+
+  h3 {
+    font-size: rem(18);
+  }
+
+  h2 {
+    font-size: rem(24);
+  }
+}
