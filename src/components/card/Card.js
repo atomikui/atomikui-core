@@ -20,14 +20,14 @@ Card.propTypes = {
   /** Card footer */
   footer: PropTypes.node,
   /** Card title */
-  title: PropTypes.string,
+  title: PropTypes.node,
 };
 
 Card.defaultProps = {
   children: <></>,
   className: '',
   footer: null,
-  title: null,
+  title: <></>,
 };
 
 export default Card;
