@@ -24,6 +24,7 @@ switch (buildEvent) {
 module.exports = {
   mode: !prod ? 'development' : 'production',
   entry: {
+    splash: path.resolve(__dirname, 'splash/splash.scss'),
     main: path.resolve(__dirname, 'src/styles/main.scss'),
   },
   output: {

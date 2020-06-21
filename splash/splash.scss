@@ -1,3 +1,5 @@
+@import '../src/styles/shared/main';
+
 .splash {
   align-items: center;
   background: $blue-500;
@@ -53,7 +55,7 @@
     margin-bottom: rem(24);
   }
 
-  .rsg--link-24.splash__btn {
+  .splash__btn {
     background: $red-100;
     border-radius: rem(2);
     color: $white;
@@ -63,6 +65,7 @@
     position: relative;
     text-transform: uppercase;
     transition: background 0.2s ease-in-out;
+    text-decoration: none;
 
     &:hover,
     &:focus {

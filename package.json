@@ -26,9 +26,10 @@
     "lint:css": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc.json --fix",
     "test": "jest --coverage --silent --config=./jest/jest.config.js && cp -R coverage public && rm -rf coverage",
     "start": "NODE_ENV=development styleguidist server",
+    "splash": "node-sass --watch ./splash/ --output ./splash/ --recursive false",
     "build:atomik": "NODE_ENV=production babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
-    "build:styleguide": "NODE_ENV=production styleguidist build"
+    "build:styleguide": "NODE_ENV=production styleguidist build && cp -R splash build"
   },
   "browserslist": {
     "production": [
