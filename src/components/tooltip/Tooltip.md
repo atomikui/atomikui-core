@@ -14,7 +14,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
   <Tooltip text="This is a tooltip" align="top-center">
     <Button size="md">Button Trigger</Button>
   </Tooltip>
-  <p>
+  <p style={{ marginLeft: '16px' }}>
     This is a tooltip nested
     <Tooltip text="This is a tooltip" align="top-center">
       <Button theme="link" href="#">
