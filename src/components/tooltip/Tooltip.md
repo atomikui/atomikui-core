@@ -4,7 +4,13 @@ A Tooltip displays helpful te text when an element is hovered over, focused, or 
 import { Tooltip, Button } from '@alaneicker/atomik-ui';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-<div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+<div
+  style={{
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+  }}
+>
   <Tooltip text="This is a tooltip" align="top-center">
     <Button size="md">Button Trigger</Button>
   </Tooltip>
