@@ -1,16 +1,21 @@
 A Tooltip displays helpful te text when an element is hovered over, focused, or tapped.
 
 ```jsx
-import { Tooltip, Button, Link } from '@alaneicker/atomik-ui';
+import { Tooltip, Button } from '@alaneicker/atomik-ui';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
   <Tooltip text="This is a tooltip" align="top-center">
     <Button size="md">Button Trigger</Button>
   </Tooltip>
-  <Tooltip text="This is a tooltip" align="top-center">
-    <Link href="#">Link Trigger</Link>
-  </Tooltip>
+  <p>
+    This is a tooltip nested
+    <Tooltip text="This is a tooltip" align="top-center">
+      <Button theme="link" href="#">
+        tooltip
+      </Button>
+    </Tooltip> inside of some text content.
+  </p>
 </div>;
 ```
 

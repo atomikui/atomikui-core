@@ -27,7 +27,9 @@ const Tooltip = ({
         data-testid="tooltip"
         role="tooltip"
       >
-        <div className="atomikui-tooltip__content">{tooltipText}</div>
+        <div className="atomikui-tooltip__content" id={`${tooltipId}_text`}>
+          {tooltipText}
+        </div>
       </div>
     );
   };
@@ -142,6 +144,7 @@ const Tooltip = ({
       {Children.map(children, (child) => {
         return cloneElement(child, {
           ...props,
+          'aria-describedby': `${tooltipId}_text`,
           ...(!triggerOnClick && {
             onFocus: createTooltip,
             onBlur: removeTooltip,
