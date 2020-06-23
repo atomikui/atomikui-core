@@ -99,17 +99,47 @@ import { Tooltip, Button } from '@alaneicker/atomik-ui';
 ```jsx
 import { Tooltip, Button } from '@alaneicker/atomik-ui';
 
-<div style={{ display: 'flex', justifyContent: 'space-between' }}>
-  <Tooltip text="This is a tooltip" theme="info" align="top-center">
+<div
+  style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}
+>
+  <Tooltip
+    className="margin-bottom-8"
+    text="This is a tooltip"
+    theme="info"
+    align="top-center"
+  >
     <Button size="md">Info</Button>
   </Tooltip>
-  <Tooltip text="This is a tooltip" theme="warning" align="top-center">
+  <Tooltip
+    className="margin-bottom-8"
+    text="This is a tooltip"
+    theme="light-gray"
+    align="top-center"
+  >
+    <Button size="md">light-gray</Button>
+  </Tooltip>
+  <Tooltip
+    className="margin-bottom-8"
+    text="This is a tooltip"
+    theme="warning"
+    align="top-center"
+  >
     <Button size="md">Warning</Button>
   </Tooltip>
-  <Tooltip text="This is a tooltip" theme="error" align="top-center">
+  <Tooltip
+    className="margin-bottom-8"
+    text="This is a tooltip"
+    theme="error"
+    align="top-center"
+  >
     <Button size="md">Error</Button>
   </Tooltip>
-  <Tooltip text="This is a tooltip" theme="success" align="top-center">
+  <Tooltip
+    className="margin-bottom-8"
+    text="This is a tooltip"
+    theme="success"
+    align="top-center"
+  >
     <Button size="md">Success</Button>
   </Tooltip>
 </div>;

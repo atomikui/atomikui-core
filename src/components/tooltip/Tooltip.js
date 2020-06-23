@@ -144,7 +144,7 @@ const Tooltip = ({
       {Children.map(children, (child) => {
         return cloneElement(child, {
           ...props,
-          'aria-describedby': `${tooltipId}_text`,
+          ...(tooltip && { 'aria-describedby': `${tooltipId}_text` }),
           ...(!triggerOnClick && {
             onFocus: createTooltip,
             onBlur: removeTooltip,
@@ -182,7 +182,7 @@ Tooltip.propTypes = {
   /** triggers the tooltip onClick/onTouchStart */
   triggerOnClick: PropTypes.bool,
   /** Tooltip theme theme */
-  theme: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+  theme: PropTypes.oneOf(['info', 'light-gray', 'warning', 'error', 'success']),
 };
 
 Tooltip.defaultProps = {

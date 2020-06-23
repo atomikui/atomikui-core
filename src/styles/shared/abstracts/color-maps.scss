@@ -7,6 +7,7 @@ $alert-themes: (
 ) !default;
 
 $tooltip-themes: (
+  'light-gray': darken($gray-100, 3%),
   info: $info-blue,
   success: $success-green,
   error: $error-red,

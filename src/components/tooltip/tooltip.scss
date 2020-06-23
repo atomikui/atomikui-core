@@ -112,6 +112,10 @@
         background-color: $color;
         border: 0;
         color: $white;
+
+        @if ($name == 'light-gray') {
+          color: $black;
+        }
       }
 
       &::after {
