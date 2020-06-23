@@ -1,6 +1,6 @@
 module.exports = {
   name: 'Getting Started',
-  content: './styleguide/docs/Installation.md',
+  content: './README.md',
   sectionDepth: 6,
   sections: [
     {
