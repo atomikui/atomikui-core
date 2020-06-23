@@ -31,11 +31,7 @@ import { Truncate, Link } from '@alaneicker/atomik-ui';
 <p>
   <Truncate
     maxWords={50}
-    afterEllipses={
-      <>
-        <Link href="/path/to/article">Read more</Link>
-      </>
-    }
+    afterEllipses={<Link href="/path/to/article">Read more</Link>}
   >
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pretium
     aliquam iaculis. Ut sed dolor non turpis tincidunt varius. Fusce vel arcu
