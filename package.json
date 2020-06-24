@@ -1,6 +1,15 @@
 {
   "name": "@alaneicker/atomik-ui",
   "description": "A Comprehensive Library of React Components",
+  "keywords": [
+    "atomik-ui",
+    "atomik",
+    "ui",
+    "react",
+    "component",
+    "components",
+    "library"
+  ],
   "version": "0.15.0",
   "main": "./dist/index.js",
   "engines": {
