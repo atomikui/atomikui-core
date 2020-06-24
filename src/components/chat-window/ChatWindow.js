@@ -25,14 +25,13 @@ const ChatWindow = ({
 
   const [message, setMessage] = useState('');
   const [focusTrap, setFocusTrap] = useState(null);
-  const [ipAddress, setIpAddress] = useState(null);
 
   const handleChange = (e) => {
     setMessage(e.target.value);
   };
 
   const handleSubmit = () => {
-    onMessageSent({ message, originIpAddress: ipAddress });
+    onMessageSent({ message, isOutgoing: true });
     setMessage('');
   };
 
@@ -57,14 +56,6 @@ const ChatWindow = ({
   };
 
   useEffect(() => {
-    fetch('https://ipinfo.io/json')
-      .then((res) => {
-        return res.json();
-      })
-      .then(({ ip }) => {
-        return setIpAddress(ip);
-      });
-
     setFocusTrap(
       createFocusTrap(chatWindowRef.current, {
         clickOutsideDeactivates: true,
@@ -134,11 +125,11 @@ const ChatWindow = ({
         </button>
       </div>
       <div ref={chatWindowBodyRef} className="atomikui-chat-window__body">
-        {messages.map(({ originIpAddress, ...props }) => {
+        {messages.map(({ isOutgoing, ...props }) => {
           return (
             <ChatMessage
               key={shortid.generate()}
-              isSameOrigin={originIpAddress === ipAddress}
+              isOutgoing={isOutgoing}
               {...props}
             />
           );

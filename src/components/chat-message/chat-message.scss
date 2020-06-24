@@ -36,7 +36,7 @@
     }
   }
 
-  &.is-same-origin {
+  &.is-outgoing {
     .atomikui-chat-message__item {
       justify-content: flex-end;
     }

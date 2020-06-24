@@ -13,7 +13,6 @@ const incomingMessage = {
     {
       message: 'Hello there!',
       dateTimeStamp: 'Tuesday, March 10, 2020 3:36 PM',
-      originIpAddress: '73.247.96.88',
     },
   ],
 };
@@ -23,6 +22,7 @@ const outgoingMessages = {
     {
       message: "Hi!, What's up?",
       dateTimeStamp: 'Tuesday, March 10, 2020 3:36 PM',
+      isOutgoing: true,
     },
   ],
 };

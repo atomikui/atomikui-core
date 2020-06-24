@@ -25,7 +25,7 @@ const [show, setShow] = useState(false);
 </>;
 ```
 
-### Using Portal with a Custom DOM Node
+### Using Portal With a Custom DOM Node
 
 ```jsx
 import React, { useEffect, useState } from 'react';

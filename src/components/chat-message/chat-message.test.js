@@ -12,8 +12,8 @@ describe('<ChatMessage />', () => {
     chatMessage = shallow(
       <ChatMessage
         message="Hello!"
-        isSameOrigin={true}
         dateTimeStamp="Tuesday, March 10, 2020 3:36 PM"
+        isOutgoing
       />,
     );
   });
@@ -29,6 +29,6 @@ describe('<ChatMessage />', () => {
   });
 
   it('Should add a modifier class if same origin', () => {
-    expect(chatMessage.hasClass('is-same-origin')).toBe(true);
+    expect(chatMessage.hasClass('is-outgoing')).toBe(true);
   });
 });

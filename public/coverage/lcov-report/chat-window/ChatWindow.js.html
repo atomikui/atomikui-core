@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.22% </span>
+                <span class="strong">65.85% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>28/45</span>
+                <span class='fraction'>27/41</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">35.29% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/17</span>
+                <span class='fraction'>6/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">63.64% </span>
+                <span class="strong">67.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>28/44</span>
+                <span class='fraction'>27/40</span>
             </div>
         
             
@@ -262,16 +262,7 @@
 <a name='L203'></a><a href='#L203'>203</a>
 <a name='L204'></a><a href='#L204'>204</a>
 <a name='L205'></a><a href='#L205'>205</a>
-<a name='L206'></a><a href='#L206'>206</a>
-<a name='L207'></a><a href='#L207'>207</a>
-<a name='L208'></a><a href='#L208'>208</a>
-<a name='L209'></a><a href='#L209'>209</a>
-<a name='L210'></a><a href='#L210'>210</a>
-<a name='L211'></a><a href='#L211'>211</a>
-<a name='L212'></a><a href='#L212'>212</a>
-<a name='L213'></a><a href='#L213'>213</a>
-<a name='L214'></a><a href='#L214'>214</a>
-<a name='L215'></a><a href='#L215'>215</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L206'></a><a href='#L206'>206</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -296,7 +287,6 @@
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -330,14 +320,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -512,14 +494,13 @@ const ChatWindow = ({
 &nbsp;
   const [message, setMessage] = useState('');
   const [focusTrap, setFocusTrap] = useState(null);
-  const [ipAddress, setIpAddress] = useState(null);
 &nbsp;
   const handleChange = (e) =&gt; {
     setMessage(e.target.value);
   };
 &nbsp;
   const handleSubmit = () =&gt; {
-    onMessageSent({ message, originIpAddress: ipAddress });
+    onMessageSent({ message, isOutgoing: true });
     setMessage('');
   };
 &nbsp;
@@ -544,14 +525,6 @@ const ChatWindow = ({
   };
 &nbsp;
   useEffect(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >    fetch('https://ipinfo.io/json')</span>
-      .then(<span class="fstat-no" title="function not covered" >(r</span>es) =&gt; {
-<span class="cstat-no" title="statement not covered" >        return res.json();</span>
-      })
-      .then(<span class="fstat-no" title="function not covered" >({</span> ip }) =&gt; {
-<span class="cstat-no" title="statement not covered" >        return setIpAddress(ip);</span>
-      });
-&nbsp;
 <span class="cstat-no" title="statement not covered" >    setFocusTrap(</span>
       createFocusTrap(chatWindowRef.current, {
         clickOutsideDeactivates: true,
@@ -621,11 +594,11 @@ const ChatWindow = ({
         &lt;/button&gt;
       &lt;/div&gt;
       &lt;div ref={chatWindowBodyRef} className="atomikui-chat-window__body"&gt;
-        {messages.map(<span class="fstat-no" title="function not covered" >({</span> originIpAddress, ...props }) =&gt; {
+        {messages.map(<span class="fstat-no" title="function not covered" >({</span> isOutgoing, ...props }) =&gt; {
 <span class="cstat-no" title="statement not covered" >          return (</span>
             &lt;ChatMessage
               key={shortid.generate()}
-              isSameOrigin={originIpAddress === ipAddress}
+              isOutgoing={isOutgoing}
               {...props}
             /&gt;
           );
@@ -706,7 +679,7 @@ export default ChatWindow;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Jun 22 2020 20:41:56 GMT-0500 (Central Daylight Time)
+                at Wed Jun 24 2020 08:34:27 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

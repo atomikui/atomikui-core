@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import moment from 'moment';
 
-const ChatMessage = ({ dateTimeStamp, message, isSameOrigin }) => {
+const ChatMessage = ({ dateTimeStamp, message, isOutgoing }) => {
   return (
     <div
       className={classnames('atomikui-chat-message', {
-        'is-same-origin': isSameOrigin,
+        'is-outgoing': isOutgoing,
       })}
     >
       {dateTimeStamp && (
@@ -25,13 +25,13 @@ const ChatMessage = ({ dateTimeStamp, message, isSameOrigin }) => {
 ChatMessage.propTypes = {
   dateTimeStamp: PropTypes.string,
   message: PropTypes.string,
-  isSameOrigin: PropTypes.bool,
+  isOutgoing: PropTypes.bool,
 };
 
 ChatMessage.defaultProps = {
   dateTimeStamp: '',
   message: '',
-  isSameOrigin: false,
+  isOutgoing: false,
 };
 
 export default ChatMessage;
