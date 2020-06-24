@@ -34,18 +34,22 @@ import { Portal, Alert, Button } from '@alaneicker/atomik-ui';
 const [show, setShow] = useState(false);
 
 useEffect(() => {
+  const id = 'alert-container';
   const el = document.createElement('div');
-  el.id = 'alert-container';
-  el.style.maxWidth = '500px';
-  el.style.position = 'fixed';
-  el.style.left = '50%';
-  el.style.top = '20px';
-  el.style.transform = 'translateX(-50%)';
+
+  el.id = id;
+  el.style.cssText = `
+    maxWidth: 500px;
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+  `;
 
   document.body.appendChild(el);
 
   return () => {
-    document.body.removeChild(document.querySelector('#alert-container'));
+    document.body.removeChild(document.getElementById(id));
   };
 }, []);
 
@@ -54,7 +58,7 @@ useEffect(() => {
     {show ? 'Hide' : 'Show'} Alert
   </Button>
   {show && (
-    <Portal container={document.querySelector('#alert-container')}>
+    <Portal container={document.getElementById('alert-container')}>
       <Alert theme="info" onClose={() => setShow(false)}>
         This alert was created with a React portal
       </Alert>
