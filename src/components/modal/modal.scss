@@ -79,12 +79,6 @@
 
         & > svg > path {
           fill: $white;
-
-          &:focus,
-          &:active {
-            border: 3px solid yellow;
-            fill: $white;
-          }
         }
       }
     }
