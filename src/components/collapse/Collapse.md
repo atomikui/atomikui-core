@@ -1,3 +1,7 @@
+The Collapse component allows for the toggling of content visibility.
+
+### Basic Usage
+
 ```jsx
 import { Collapse, List, ListItem } from '@alaneicker/atomik-ui';
 
