@@ -32,7 +32,7 @@ import { Collapse, List, ListItem } from '@alaneicker/atomik-ui';
   <Collapse
     className="margin-bottom-16"
     toggleText="Car Brands"
-    alignTiggerIconRight
+    rightAlignTriggerIcon
   >
     <List>
       <ListItem>Chevrolet</ListItem>
@@ -44,7 +44,7 @@ import { Collapse, List, ListItem } from '@alaneicker/atomik-ui';
   <Collapse
     className="margin-bottom-16"
     toggleText="Car Brands"
-    alignTriggerRight
+    rightAlignTrigger
   >
     <List>
       <ListItem>Chevrolet</ListItem>
@@ -53,7 +53,7 @@ import { Collapse, List, ListItem } from '@alaneicker/atomik-ui';
       <ListItem>Honda</ListItem>
     </List>
   </Collapse>
-  <Collapse toggleText="Car Brands" alignTriggerRight alignTiggerIconRight>
+  <Collapse toggleText="Car Brands" rightAlignTrigger rightAlignTriggerIcon>
     <List>
       <ListItem>Chevrolet</ListItem>
       <ListItem>Ford</ListItem>

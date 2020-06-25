@@ -57,7 +57,7 @@ const AccordionItem = ({
         role="region"
         className="atomikui-accordion-item__body"
         style={{
-          height: isExpanded ? contentHeight : 0,
+          height: isExpanded ? contentHeight : '0px',
         }}
       >
         <div

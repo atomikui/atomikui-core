@@ -4,7 +4,7 @@
     display: flex;
     padding-bottom: rem(16);
 
-    &.is-right-aligned {
+    &--right-aligned {
       justify-content: flex-end;
     }
   }
@@ -29,7 +29,7 @@
       }
     }
 
-    &.is-right-aligned {
+    &--right-aligned-icon {
       flex-direction: row-reverse;
 
       & > svg {

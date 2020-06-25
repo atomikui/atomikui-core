@@ -7,8 +7,8 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
 const Collapse = ({
-  alignTriggerRight,
-  alignTiggerIconRight,
+  rightAlignTrigger,
+  rightAlignTriggerIcon,
   children,
   className,
   isOpen,
@@ -35,12 +35,12 @@ const Collapse = ({
       {!noTrigger && (
         <div
           className={classnames('atomikui-collapse__hd', {
-            'is-right-aligned': alignTriggerRight,
+            'atomikui-collapse__hd--right-aligned': rightAlignTrigger,
           })}
         >
           <Button
             className={classnames('atomikui-collapse__trigger', {
-              'is-right-aligned': alignTiggerIconRight,
+              'atomikui-collapse__trigger--right-aligned-icon': rightAlignTriggerIcon,
               'is-open': open,
             })}
             theme="link"
@@ -59,7 +59,7 @@ const Collapse = ({
         id={id}
         className="atomikui-collapse__bd"
         style={{
-          height: open ? contentHeight : 0,
+          height: open ? contentHeight : '0px',
         }}
       >
         <div ref={collapseRef}>{children}</div>
@@ -70,9 +70,9 @@ const Collapse = ({
 
 Collapse.propTypes = {
   /** Aligns trigger to the right */
-  alignTriggerRight: PropTypes.bool,
+  rightAlignTrigger: PropTypes.bool,
   /** Aligns trigger icon to the right */
-  alignTiggerIconRight: PropTypes.bool,
+  rightAlignTriggerIcon: PropTypes.bool,
   /** Collapse content */
   children: PropTypes.node,
   /** Adds custom component CSS classes */
@@ -86,8 +86,8 @@ Collapse.propTypes = {
 };
 
 Collapse.defaultProps = {
-  alignTriggerRight: false,
-  alignTiggerIconRight: false,
+  rightAlignTrigger: false,
+  rightAlignTriggerIcon: false,
   children: <></>,
   className: '',
   isOpen: false,
