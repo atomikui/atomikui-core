@@ -20,13 +20,13 @@ a.atomikui-btn {
     text-transform: uppercase;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: darken($blue-000, 7%);
   }
 
   &:focus,
   &:active {
-    background-color: $blue-000;
     @include focus-outline();
   }
 
