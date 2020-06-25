@@ -31,7 +31,7 @@ const Statistic = ({
       <div className="atomikui-statistic__hd">
         {icon && (
           <span className="atomikui-statistic__icon">
-            <Icon icon={icon} size="3x" theme={iconColor} />
+            <Icon icon={icon} size="3x" color={iconColor} />
           </span>
         )}
         <span
