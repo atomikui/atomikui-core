@@ -13,6 +13,7 @@ const AccordionItem = ({
   ...others
 }) => {
   const [isExpanded, setIsExpanded] = useState(expanded);
+  const [contentHeight, setContentHeight] = useState('0px');
   const contentRef = useRef();
 
   const headerId = shortid.generate();
@@ -25,6 +26,10 @@ const AccordionItem = ({
 
     return setIsExpanded(!isExpanded);
   };
+
+  useEffect(() => {
+    setContentHeight(`${contentRef.current.scrollHeight}px`);
+  });
 
   useEffect(() => {
     setIsExpanded(expanded);
@@ -52,7 +57,7 @@ const AccordionItem = ({
         role="region"
         className="atomikui-accordion-item__body"
         style={{
-          height: isExpanded ? `${contentRef.current.scrollHeight}px` : 0,
+          height: isExpanded ? contentHeight : 0,
         }}
       >
         <div
