@@ -51,7 +51,7 @@ const Modal = ({
     }
   }, [focusTrap, isOpen]);
 
-  return isOpen ? (
+  return (
     <Portal container={document.body}>
       <Overlay
         theme={overlayTheme}
@@ -81,7 +81,7 @@ const Modal = ({
         </div>
       </Overlay>
     </Portal>
-  ) : null;
+  );
 };
 
 Modal.propTypes = {
