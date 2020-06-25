@@ -8,6 +8,7 @@ module.exports = {
     return [
       'src/components/card/Card.js',
       'src/components/chat-window/ChatWindow.js',
+      'src/components/collapse/Collapse.js',
       'src/components/drawer/Drawer.js',
       'src/components/jumbotron/Jumbotron.js',
       'src/components/modal/Modal.js',

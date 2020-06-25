@@ -1,3 +1,5 @@
+import { from } from 'core-js/fn/array';
+
 export { Accordion, AccordionItem } from './components/accordion';
 export { default as Alert } from './components/alert';
 export { default as AutoComplete } from './components/auto-complete';
@@ -12,6 +14,7 @@ export { default as CartItem } from './components/cart-item';
 export { default as ChatWindow } from './components/chat-window';
 export { default as ChatMessage } from './components/chat-message';
 export { default as CheckOption } from './components/check-option';
+export { default as Collapse } from './components/collapse';
 export { default as Comment } from './components/comment';
 export { default as CreditCardField } from './components/credit-card-field';
 export { default as DatePicker } from './components/date-picker';

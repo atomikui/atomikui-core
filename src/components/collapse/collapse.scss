@@ -1,0 +1,45 @@
+.atomikui-collapse {
+  &__hd {
+    align-items: center;
+    display: flex;
+    padding-bottom: rem(16);
+
+    &.is-right-aligned {
+      justify-content: flex-end;
+    }
+  }
+
+  &__bd {
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+    will-change: height;
+  }
+
+  &__trigger {
+    align-items: center;
+    display: inline-flex;
+    font-weight: $font-semibold;
+
+    & > svg {
+      margin: rem(0 8 0 0);
+
+      & > path {
+        fill: $blue-200;
+      }
+    }
+
+    &.is-right-aligned {
+      flex-direction: row-reverse;
+
+      & > svg {
+        margin: rem(0 0 0 8);
+      }
+    }
+
+    &.is-open {
+      & > svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
