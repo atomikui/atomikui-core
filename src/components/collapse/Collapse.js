@@ -17,8 +17,14 @@ const Collapse = ({
   ...others
 }) => {
   const [open, setOpen] = useState(isOpen);
+  const [contentHeight, setContentHeight] = useState('0px');
+
   const id = `collapes-${shortid.generate()}`;
   const collapseRef = useRef();
+
+  useEffect(() => {
+    setContentHeight(`${collapseRef.current.scrollHeight}px`);
+  }, []);
 
   useEffect(() => {
     setOpen(isOpen);
@@ -53,7 +59,7 @@ const Collapse = ({
         id={id}
         className="atomikui-collapse__bd"
         style={{
-          height: open ? `${collapseRef.current.scrollHeight}px` : 0,
+          height: open ? contentHeight : 0,
         }}
       >
         <div ref={collapseRef}>{children}</div>
