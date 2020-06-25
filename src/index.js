@@ -1,5 +1,3 @@
-import { from } from 'core-js/fn/array';
-
 export { Accordion, AccordionItem } from './components/accordion';
 export { default as Alert } from './components/alert';
 export { default as AutoComplete } from './components/auto-complete';
