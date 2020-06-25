@@ -88,19 +88,6 @@ const [isOpen, setIsOpen] = useState(false);
 </>;
 ```
 
-```jsx
-import { Collapse, List, ListItem } from '@alaneicker/atomik-ui';
-
-<Collapse toggleText="Car Brands">
-  <List>
-    <ListItem>Chevrolet</ListItem>
-    <ListItem>Ford</ListItem>
-    <ListItem>GMC</ListItem>
-    <ListItem>Honda</ListItem>
-  </List>
-</Collapse>;
-```
-
 ### Collapse Wrapped in a Container
 
 ```jsx
