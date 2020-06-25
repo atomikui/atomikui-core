@@ -1,4 +1,6 @@
 *.test.js
 
+src/index.js
+
 build/
 dist/
