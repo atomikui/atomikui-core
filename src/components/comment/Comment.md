@@ -10,7 +10,7 @@ const replies = [
     author="Mary"
     authorLink="/profile/mary"
     metadata="Today at 11:17 AM"
-    replyAction={() => {}}
+    onReply={() => {}}
   >
     I agree. Great post!
   </Comment>,
@@ -20,7 +20,7 @@ const replies = [
     author="Steve Johnson"
     authorLink="/profile/steve-johnson"
     metadata="Yesterday at 3:21 PM"
-    replyAction={() => {}}
+    onReply={() => {}}
   >
     Great content like this is hard to find. I look forward to more posts.
   </Comment>,
@@ -32,7 +32,7 @@ const replies = [
     author="Bob Smith"
     authorLink="/profile/bob-smith"
     metadata="3 days ago at 5:35 PM"
-    replyAction={() => {}}
+    onReply={() => {}}
     replies={replies}
   >
     Awesome post! Keep the content coming!

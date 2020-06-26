@@ -38,7 +38,7 @@ describe('<Post />', () => {
             author="Mary"
             authorLink="/profile/mary"
             metadata="Today at 11:17 AM"
-            replyAction={() => {}}
+            onReply={() => {}}
           >
             Awesome post. This article is right on point!
           </Comment>,

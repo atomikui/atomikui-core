@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 
 describe('<Comment />', () => {
   let comment;
-  const replyActionSpy = sinon.spy();
+  const onReplySpy = sinon.spy();
 
   beforeEach(() => {
     comment = shallow(
@@ -17,14 +17,14 @@ describe('<Comment />', () => {
         author="Bob Smith"
         authorLink="/profile/bob-smith"
         metadata="3 days ago at 5:35pm"
-        replyAction={replyActionSpy}
+        onReply={onReplySpy}
         replies={[
           <Comment
             avatar="mary.png"
             author="Mary"
             authorLink="/profile/mary"
             metadata="Today at 11:17am"
-            replyAction={() => {}}
+            onReply={() => {}}
           >
             I agree. Great post!
           </Comment>,
@@ -52,9 +52,9 @@ describe('<Comment />', () => {
     expect(comment.find('.atomikui-comment__replies').length).toBe(1);
   });
 
-  it('Should trigger replyAction callback', () => {
+  it('Should trigger onReply callback', () => {
     comment.find('.atomikui-comment__reply-btn').simulate('click');
 
-    expect(replyActionSpy.called).toBe(true);
+    expect(onReplySpy.called).toBe(true);
   });
 });

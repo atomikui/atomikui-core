@@ -13,7 +13,7 @@ const Comment = ({
   className,
   metadata,
   replies,
-  replyAction,
+  onReply,
   ...others
 }) => {
   return (
@@ -30,7 +30,7 @@ const Comment = ({
         <Button
           className="atomikui-comment__reply-btn"
           theme="link"
-          onClick={replyAction}
+          onClick={onReply}
         >
           Reply
         </Button>
@@ -55,10 +55,10 @@ Comment.propTypes = {
   className: PropTypes.string,
   /** Comment information. E.g. date or time of comment */
   metadata: PropTypes.string,
+  /** Callback triggered when reply link button is clicked */
+  onReply: PropTypes.func,
   /** Replies to a comment */
   replies: PropTypes.arrayOf(PropTypes.object),
-  /** Callback triggered when reply link button is clicked */
-  replyAction: PropTypes.func,
 };
 
 Comment.defaultProps = {
@@ -68,8 +68,8 @@ Comment.defaultProps = {
   children: <></>,
   className: '',
   metadata: '',
+  onReply() {},
   replies: [],
-  replyAction() {},
 };
 
 export default Comment;
