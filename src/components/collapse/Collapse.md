@@ -15,7 +15,7 @@ import { Collapse, List, ListItem } from '@alaneicker/atomik-ui';
 </Collapse>;
 ```
 
-### Trigger Text ans Icon Alignments
+### Trigger Text and Icon Alignment
 
 ```jsx
 import { Collapse, List, ListItem } from '@alaneicker/atomik-ui';
@@ -64,7 +64,7 @@ import { Collapse, List, ListItem } from '@alaneicker/atomik-ui';
 </>;
 ```
 
-### Collabse With Custom Trigger
+### Collapse With Custom Trigger
 
 ```jsx
 import { useState } from 'react';
