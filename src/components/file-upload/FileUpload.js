@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
-import { List, ListItem } from '../list';
+import List from '../list';
+import ListItem from '../list-item';
 import Hint from '../hint/Hint';
 
 const FileUpload = ({

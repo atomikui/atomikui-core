@@ -2,7 +2,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { mount, configure } from 'enzyme';
 import Accordion from './Accordion';
-import AccordionItem from './AccordionItem';
+import AccordionItem from '../accordion-item';
 
 configure({ adapter: new Adapter() });
 

@@ -5,7 +5,8 @@ import cardValidator from 'card-validator';
 import FormField from '../form-field';
 import creditCardIcons from './credit-card-icons';
 import Hint from '../hint';
-import { List, ListItem } from '../list';
+import List from '../list';
+import ListItem from '../list-item';
 
 const CreditCardField = ({
   className,

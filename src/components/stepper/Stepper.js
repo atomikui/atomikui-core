@@ -1,7 +1,7 @@
 import React, { Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { List } from '../list';
+import List from '../list';
 
 const Stepper = ({ children, className, inline, topLabels, ...others }) => {
   return (

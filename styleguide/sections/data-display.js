@@ -5,6 +5,9 @@ module.exports = {
   exampleMode: 'expand',
   sectionDepth: 6,
   components: () => {
-    return ['src/components/list/List.js', 'src/components/list/ListItem.js'];
+    return [
+      'src/components/list/List.js',
+      'src/components/list-item/ListItem.js',
+    ];
   },
 };

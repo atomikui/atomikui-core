@@ -3,7 +3,8 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import CartItem from '../cart-item';
-import { List, ListItem } from '../list';
+import List from '../list';
+import ListItem from '../list-item';
 
 const Cart = ({
   className,

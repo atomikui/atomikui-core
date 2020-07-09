@@ -2,7 +2,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { mount, configure } from 'enzyme';
 import Stepper from './Stepper';
-import Step from './Step';
+import Step from '../step';
 
 configure({ adapter: new Adapter() });
 

@@ -2,7 +2,8 @@ import React, { Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
-import { List, ListItem } from '../list';
+import List from '../list';
+import ListItem from '../list-item';
 
 const Pagination = ({ children, className, ...others }) => {
   return (

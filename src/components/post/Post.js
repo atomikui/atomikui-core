@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import { List, ListItem } from '../list';
+import List from '../list';
+import ListItem from '../list-item';
 import Link from '../link';
 import Avatar from '../avatar';
 import Button from '../button';
