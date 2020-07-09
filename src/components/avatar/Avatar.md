@@ -37,7 +37,7 @@ A letter avatar can be created simply by passing in one or two initials as child
 ```jsx
 import { Avatar } from '@alaneicker/atomik-ui';
 
-<Avatar variant="medium-blue">AE</Avatar>;
+<Avatar theme="medium-blue">AE</Avatar>;
 ```
 
 ### Icon Avatars
@@ -47,7 +47,7 @@ Add an SVG as a child to create an icon avatar.
 ```jsx
 import { Avatar } from '@alaneicker/atomik-ui';
 
-<Avatar variant="red">
+<Avatar theme="red">
   <svg
     version="1.1"
     id="Layer_1"
