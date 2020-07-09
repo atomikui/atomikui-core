@@ -1,3 +1,34 @@
+$colors: (
+  true-black: #000,
+  black: $black,
+  white: $white,
+  gray-000: $gray-000,
+  gray-100: $gray-100,
+  gray-200: $gray-200,
+  gray-300: $gray-300,
+  gray-400: $gray-400,
+  gray-450: $gray-450,
+  gray-500: $gray-500,
+  red-100: $red-100,
+  red-200: $red-200,
+  orange-100: $orange-100,
+  yellow-100: $yellow-100,
+  yellow-200: $yellow-200,
+  yellow-300: $yellow-300,
+  green-100: $green-100,
+  green-200: $green-200,
+  green-300: $green-300,
+  blue-000: $blue-000,
+  blue-100: $blue-100,
+  blue-200: $blue-200,
+  blue-300: $blue-300,
+  blue-400: $blue-400,
+  blue-500: $blue-500,
+  purple-100: $purple-100,
+  purple-200: $purple-200,
+  purple-300: $purple-300,
+);
+
 $alert-themes: (
   dark: $gray-500,
   info: $info-blue,
@@ -24,8 +55,8 @@ $badge-themes: (
 ) !default;
 
 $price-themes: (
-  light-green: $green-000,
-  green: $green-100,
+  light-green: $green-100,
+  green: $green-200,
   blue: $blue-200,
   red: $red-100,
 );
@@ -78,7 +109,7 @@ $background-color-themes: (
     background-color: $yellow-200,
   ),
   green: (
-    background-color: $green-100,
+    background-color: $green-200,
     font-color: $white,
   ),
   light-blue: (
@@ -114,7 +145,7 @@ $statistic-themes: (
   orange: $orange-100,
   yellow: $yellow-100,
   gold: $yellow-200,
-  green: $green-100,
+  green: $green-200,
   light-blue: $blue-100,
   medium-blue: $blue-200,
   dark-blue: $blue-300,
@@ -152,7 +183,7 @@ $text-themes: (
   gray: $gray-300,
   red: $red-100,
   orange: $orange-100,
-  green: $green-100,
+  green: $green-200,
   blue: $blue-200,
   navy: $blue-400,
 ) !default;

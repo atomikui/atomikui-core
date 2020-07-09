@@ -4,6 +4,10 @@ module.exports = {
   sectionDepth: 6,
   sections: [
     {
+      name: 'Colors',
+      content: './styleguide/docs/Colors.md',
+    },
+    {
       name: 'Spacing',
       content: './styleguide/docs/Spacing.md',
     },
