@@ -6,6 +6,6 @@ import { ListItem } from '@alaneicker/atomik-ui';
 <ListItem>List Item</ListItem>;
 ```
 
-#### Used With:
+#### Demos
 
 [`<List />`](/#/Data%20Display/List)

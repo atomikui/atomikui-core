@@ -42,3 +42,7 @@ import { Post, Comment } from '@alaneicker/atomik-ui';
   </p>
 </Post>;
 ```
+
+### API
+
+[`<Comment />`](/#/Content/Comment)

@@ -91,6 +91,6 @@ import { List, ListItem } from '@alaneicker/atomik-ui';
 </>;
 ```
 
-#### Uses:
+#### API
 
 [`<ListItem />`](/#/Data%20Display/ListItem)

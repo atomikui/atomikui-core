@@ -36,3 +36,7 @@ const updateCart = (quantity, itemIndex) => {
   />
 </>;
 ```
+
+### API
+
+[`<CartItem />`](/#/Informational/CartItem)

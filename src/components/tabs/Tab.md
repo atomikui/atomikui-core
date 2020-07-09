@@ -11,7 +11,7 @@ import { Tab } from '@alaneicker/atomik-ui';
 </>;
 ```
 
-#### Used With:
+#### Demos
 
 [`<Tabs />`](/#/Content/Tabs)
 

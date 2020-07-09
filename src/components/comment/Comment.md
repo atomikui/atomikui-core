@@ -39,3 +39,7 @@ const replies = [
   </Comment>
 </>;
 ```
+
+### Demo
+
+[`<Post />`](/#/Content/Post)

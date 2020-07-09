@@ -1,3 +1,5 @@
+Used in conjunction with the [Cart](/#/Informational/Cart) component.
+
 ```jsx
 import { CartItem } from '@alaneicker/atomik-ui';
 
@@ -9,3 +11,7 @@ import { CartItem } from '@alaneicker/atomik-ui';
   price={6499.99}
 />;
 ```
+
+### Demo
+
+[`<Cart />`](/#/Informational/Cart)

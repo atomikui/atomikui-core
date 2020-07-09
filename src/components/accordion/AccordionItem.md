@@ -15,6 +15,6 @@ import { AccordionItem } from '@alaneicker/atomik-ui';
 </AccordionItem>;
 ```
 
-#### Used With:
+### Demos
 
 [`<Accordion />`](/#/Content/Accordion)
