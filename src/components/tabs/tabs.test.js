@@ -3,7 +3,7 @@ import React from 'react';
 import { mount, configure } from 'enzyme';
 import sinon from 'sinon';
 import Tabs from './Tabs';
-import Tab from './Tab';
+import Tab from '../tab';
 
 configure({ adapter: new Adapter() });
 

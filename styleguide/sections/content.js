@@ -12,8 +12,8 @@ module.exports = {
       'src/components/comment/Comment.js',
       'src/components/post/Post.js',
       'src/components/tabs/Tabs.js',
-      'src/components/tabs/Tab.js',
-      'src/components/tabs/TabPanel.js',
+      'src/components/tab/Tab.js',
+      'src/components/tab-panel/TabPanel.js',
       'src/components/truncate/Truncate.js',
     ];
   },
