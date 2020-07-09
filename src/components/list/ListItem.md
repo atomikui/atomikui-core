@@ -1,4 +1,4 @@
-A ListItem is used with the List component and passed in it as a child.
+A ListItem is used with the [List](/#/Data%20Display/List) component and passed in it as a child.
 
 ```jsx
 import { ListItem } from '@alaneicker/atomik-ui';
