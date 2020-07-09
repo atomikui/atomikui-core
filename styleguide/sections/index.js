@@ -5,7 +5,7 @@ const dataDisplay = require('./data-display');
 const experimental = require('./experimental');
 const dom = require('./dom');
 const gettingStarted = require('./getting-started');
-const form = require('./form');
+const formControls = require('./form-controls');
 const iconography = require('./iconography');
 const informational = require('./informational');
 const layout = require('./layout');
@@ -19,7 +19,7 @@ module.exports = [
   content,
   dataDisplay,
   dom,
-  form,
+  formControls,
   iconography,
   informational,
   layout,

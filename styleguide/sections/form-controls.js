@@ -1,6 +1,6 @@
 module.exports = {
-  content: './styleguide/docs/Controls.md',
-  name: 'Form',
+  content: './styleguide/docs/FormControls.md',
+  name: 'Form Controls',
   usageMode: 'expand',
   exampleMode: 'expand',
   sectionDepth: 6,
