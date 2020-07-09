@@ -23,12 +23,15 @@ Badge.propTypes = {
   children: PropTypes.node,
   /** Specifies the badge theme variation. */
   theme: PropTypes.oneOf([
+    'black',
     'light-gray',
     'light-blue',
+    'medium-blue',
+    'dark-blue',
+    'navy',
     'light-purple',
     'medium-purple',
     'dark-purple',
-    'info',
     'warning',
     'error',
     'success',

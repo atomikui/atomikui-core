@@ -46,8 +46,10 @@ $tooltip-themes: (
 ) !default;
 
 $badge-themes: (
+  'black': $black,
   'light-gray': $light-gray,
   'light-blue': $blue-000,
+  'medium-blue': $blue-100,
   'light-purple': $purple-100,
   'medium-purple': $purple-200,
   'dark-purple': $purple-300,

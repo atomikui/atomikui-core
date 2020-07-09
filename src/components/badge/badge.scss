@@ -19,7 +19,9 @@
         $name ==
         'light-blue' or
         $name ==
-        'light-purple'
+        'light-purple' or
+        $name ==
+        'medium-blue'
       {
         color: $true-black;
       }
