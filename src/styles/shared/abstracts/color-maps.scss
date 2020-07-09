@@ -67,6 +67,20 @@ $price-themes: (
   red: $red-100,
 );
 
+$statistic-themes: (
+  red: $red-100,
+  orange: $orange-100,
+  yellow: $yellow-100,
+  gold: $yellow-200,
+  green: $green-200,
+  light-blue: $blue-100,
+  medium-blue: $blue-200,
+  dark-blue: $blue-300,
+  light-gray: $gray-200,
+  medium-gray: $gray-300,
+  dark-gray: $gray-400,
+) !default;
+
 $btn-themes: (
   primary: (
     background-color: $color-btn-primary,
@@ -95,7 +109,6 @@ $btn-themes: (
   link: (
     background-color: transparent,
     font-color: $color-link,
-    padding: 0,
   ),
 ) !default;
 
@@ -155,20 +168,6 @@ $bg-themes: (
     background-color: $black,
     font-color: $white,
   ),
-) !default;
-
-$statistic-themes: (
-  red: $red-100,
-  orange: $orange-100,
-  yellow: $yellow-100,
-  gold: $yellow-200,
-  green: $green-200,
-  light-blue: $blue-100,
-  medium-blue: $blue-200,
-  dark-blue: $blue-300,
-  light-gray: $gray-200,
-  medium-gray: $gray-300,
-  dark-gray: $gray-400,
 ) !default;
 
 $modal-themes: (

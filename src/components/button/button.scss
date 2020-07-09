@@ -82,6 +82,7 @@ a.atomikui-btn {
         font-size: inherit;
         font-weight: $font-normal;
         min-height: auto;
+        padding: 0;
 
         &:hover {
           text-decoration: underline;
