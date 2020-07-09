@@ -28,6 +28,9 @@ import { Badge } from '@alaneicker/atomik-ui';
   <Badge>Default</Badge>
   <Badge theme="light-gray">Light Gray</Badge>
   <Badge theme="light-blue">Light Blue</Badge>
+  <Badge theme="light-purple">Light Purple</Badge>
+  <Badge theme="medium-purple">Medium Purple</Badge>
+  <Badge theme="dark-purple">Dark Purple</Badge>
   <Badge theme="info">Info</Badge>
   <Badge theme="warning">Warning</Badge>
   <Badge theme="error">Error</Badge>

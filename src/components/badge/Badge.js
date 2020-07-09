@@ -25,6 +25,9 @@ Badge.propTypes = {
   theme: PropTypes.oneOf([
     'light-gray',
     'light-blue',
+    'light-purple',
+    'medium-purple',
+    'dark-purple',
     'info',
     'warning',
     'error',

@@ -13,6 +13,16 @@
     &--#{$name} {
       background-color: $color;
       color: $white;
+
+      @if $name ==
+        'light-gray' or
+        $name ==
+        'light-blue' or
+        $name ==
+        'light-purple'
+      {
+        color: black;
+      }
     }
   }
 
@@ -28,10 +38,5 @@
     background: $white;
     border: rem(1) solid $blue-400;
     color: $blue-400;
-  }
-
-  &--light-gray,
-  &--light-blue {
-    color: inherit;
   }
 }
