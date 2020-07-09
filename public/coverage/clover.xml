@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594295637806" clover="3.2.0">
-  <project timestamp="1594295637807" name="All files">
+<coverage generated="1594325169917" clover="3.2.0">
+  <project timestamp="1594325169917" name="All files">
     <metrics statements="524" coveredstatements="500" conditionals="298" coveredconditionals="261" methods="165" coveredmethods="133" elements="987" coveredelements="894" complexity="0" loc="524" ncloc="524" packages="50" files="53" classes="53"/>
     <package name="accordion">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
@@ -74,7 +74,7 @@
         <line num="5" count="3" type="stmt"/>
         <line num="17" count="17" type="stmt"/>
         <line num="39" count="3" type="stmt"/>
-        <line num="73" count="3" type="stmt"/>
+        <line num="76" count="3" type="stmt"/>
       </file>
     </package>
     <package name="badge">
@@ -84,7 +84,7 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
       </file>
     </package>
     <package name="breadcrumb">
@@ -402,7 +402,7 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="25" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
       </file>
     </package>
     <package name="label">

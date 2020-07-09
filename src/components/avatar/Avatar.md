@@ -70,7 +70,7 @@ import { Avatar } from '@alaneicker/atomik-ui';
 
 ### Avatars Color Themes
 
-There are many color themes to choose from. simplay pass in a `variant` prop with the color of your choice.
+There are many color themes to choose from. simplay pass in a `theme` prop with the color of your choice.
 
 ```jsx
 import { Avatar } from '@alaneicker/atomik-ui';
