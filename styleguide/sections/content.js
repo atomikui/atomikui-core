@@ -7,7 +7,7 @@ module.exports = {
   components: () => {
     return [
       'src/components/accordion/Accordion.js',
-      'src/components/accordion/AccordionItem.js',
+      'src/components/accordion-item/AccordionItem.js',
       'src/components/avatar/Avatar.js',
       'src/components/comment/Comment.js',
       'src/components/post/Post.js',
