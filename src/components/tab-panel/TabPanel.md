@@ -1,4 +1,4 @@
-The TabPanel is used with the Tabs componwnt. The `state` prop is an array consisting of the current selected index and the panel's identifying index and is used to toggle the visibility of the panel.
+The TabPanel is used with the [Tabs](/#/Content/Tabs) componwnt. The `state` prop is an array consisting of the current selected index and the panel's identifying index and is used to toggle the visibility of the panel.
 
 ```jsx
 import { useState } from 'react';
@@ -13,6 +13,6 @@ const [currentIndex, setCurrentIndex] = useState(0);
 </TabPanel>;
 ```
 
-#### Demos
+#### Demo
 
 [`<Tabs />`](/#/Content/Tabs)

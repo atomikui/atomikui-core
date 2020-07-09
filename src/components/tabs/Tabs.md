@@ -117,3 +117,8 @@ const [currentIndex, setCurrentIndex] = useState(0);
   </TabPanel>
 </>;
 ```
+
+### API
+
+[`<Tab />`](/#/Content/Tab)<br />
+[`<TabPanel />`](/#/Content/TabPanel)

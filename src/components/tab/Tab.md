@@ -1,4 +1,4 @@
-A Tab is a child of the Tabs component and is used to toggle the visibility of a TabPanel.
+A Tab is a child of the [Tabs](/#/Content/Tabs) component and is used to toggle the visibility of a TabPanel.
 
 ```jsx
 import { useState } from 'react';
@@ -11,8 +11,6 @@ import { Tab } from '@alaneicker/atomik-ui';
 </>;
 ```
 
-#### Demos
+#### Demo
 
 [`<Tabs />`](/#/Content/Tabs)
-
-[`<TabPanel />`](/#/Content/TabPanel)
