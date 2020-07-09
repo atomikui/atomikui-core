@@ -31,6 +31,7 @@ import { Badge } from '@alaneicker/atomik-ui';
   <Badge theme="light-blue">Light Blue</Badge>
   <Badge theme="medium-blue">Medium Blue</Badge>
   <Badge theme="dark-blue">Dark Blue</Badge>
+  <Badge theme="navy-blue">Navy Blue</Badge>
   <Badge theme="light-purple">Light Purple</Badge>
   <Badge theme="medium-purple">Medium Purple</Badge>
   <Badge theme="dark-purple">Dark Purple</Badge>

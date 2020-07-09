@@ -28,7 +28,7 @@ Badge.propTypes = {
     'light-blue',
     'medium-blue',
     'dark-blue',
-    'navy',
+    'navy-blue',
     'light-purple',
     'medium-purple',
     'dark-purple',
