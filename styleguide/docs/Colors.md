@@ -35,6 +35,7 @@ const colors = [
 <div>
   {colors.map(([className, hex]) => (
     <div
+      key={className}
       style={{
         minWidth: '50%',
         display: 'flex',
