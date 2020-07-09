@@ -93,7 +93,7 @@ $btn-themes: (
   ),
 ) !default;
 
-$background-color-themes: (
+$bg-themes: (
   red: (
     background-color: $red-100,
     font-color: $white,
@@ -121,6 +121,17 @@ $background-color-themes: (
   ),
   dark-blue: (
     background-color: $blue-300,
+    font-color: $white,
+  ),
+  light-purple: (
+    background-color: $purple-100,
+  ),
+  medium-purple: (
+    background-color: $purple-200,
+    font-color: $white,
+  ),
+  dark-purple: (
+    background-color: $purple-300,
     font-color: $white,
   ),
   light-gray: (
@@ -175,15 +186,4 @@ $modal-themes: (
     background-color: $warning-orange,
     font-color: $white,
   ),
-) !default;
-
-$text-themes: (
-  black: $black,
-  white: $white,
-  gray: $gray-300,
-  red: $red-100,
-  orange: $orange-100,
-  green: $green-200,
-  blue: $blue-200,
-  navy: $blue-400,
 ) !default;

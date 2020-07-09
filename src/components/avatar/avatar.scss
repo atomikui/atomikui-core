@@ -15,7 +15,7 @@
     text-transform: uppercase;
     width: rem(40);
 
-    @each $variant, $map in $background-color-themes {
+    @each $variant, $map in $bg-themes {
       &--#{$variant} {
         background-color: map-get($map, background-color);
         color: map-get($map, font-color);

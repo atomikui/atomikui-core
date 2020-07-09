@@ -84,6 +84,9 @@ import { Avatar } from '@alaneicker/atomik-ui';
   <Avatar theme="light-blue">MA</Avatar>
   <Avatar theme="medium-blue">T</Avatar>
   <Avatar theme="dark-blue">S</Avatar>
+  <Avatar theme="light-purple">CM</Avatar>
+  <Avatar theme="medium-purple">DT</Avatar>
+  <Avatar theme="dark-purple">A</Avatar>
   <Avatar theme="light-gray">SM</Avatar>
   <Avatar theme="medium-gray">JD</Avatar>
   <Avatar theme="dark-gray">M</Avatar>

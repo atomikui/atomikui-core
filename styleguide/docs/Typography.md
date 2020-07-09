@@ -42,27 +42,52 @@ All text alignment classes have responsive modifiers that can be used to change 
 
 ```jsx
 const colors = [
-  { hex: '#222', name: 'black' },
-  { hex: 'white', name: 'white' },
-  { hex: '#999', name: 'gray' },
-  { hex: '#f44336', name: 'red' },
-  { hex: '#ff8400', name: 'orange' },
-  { hex: '#4fa009', name: 'green' },
-  { hex: '#027abf', name: 'blue' },
-  { hex: '#2c607f', name: 'navy' },
+  ['text-color-true-black', '#000000'],
+  ['text-color-black', '#222222'],
+  ['text-color-white', '#ffffff'],
+  ['text-color-gray-000', '#f5f5f5'],
+  ['text-color-gray-100', '#eeeeee'],
+  ['text-color-gray-200', '#bbbbbb'],
+  ['text-color-gray-300', '#999999'],
+  ['text-color-gray-400', '#666666'],
+  ['text-color-gray-450', '#444444'],
+  ['text-color-gray-500', '#323232'],
+  ['text-color-red-100', '#f44336'],
+  ['text-color-red-200', '#d0191f'],
+  ['text-color-orange-100', '#ff8400'],
+  ['text-color-yellow-100', '#ffebaf'],
+  ['text-color-yellow-200', '#faca1b'],
+  ['text-color-yellow-300', '#fab01b'],
+  ['text-color-green-100', '#bae60e'],
+  ['text-color-green-200', '#4fa009'],
+  ['text-color-green-300', '#307c01'],
+  ['text-color-blue-000', '#dbeefc'],
+  ['text-color-blue-100', '#88ccfc'],
+  ['text-color-blue-200', '#027abf'],
+  ['text-color-blue-300', '#01547f'],
+  ['text-color-blue-400', '#2c607f'],
+  ['text-color-blue-500', '#002d4a'],
+  ['text-color-purple-100', '#d7a3ff'],
+  ['text-color-purple-200', '#9003fc'],
+  ['text-color-purple-300', '#4c0b7d'],
 ];
 
 <>
-  {colors.map(({ name, hex }) => {
+  {colors.map(([className, hex]) => {
     return (
-      <div key={name}>
+      <div key={className}>
         <span
           style={{
             color: hex,
-            ...(hex === 'white' && { background: '#333', padding: '2px' }),
+            ...(className.match(
+              /(white|gray-000|gray-100|yellow-100|blue-000)/,
+            ) && {
+              background: '#333',
+              padding: '2px',
+            }),
           }}
         >
-          .text-color-{name}
+          .{className}
         </span>
       </div>
     );
