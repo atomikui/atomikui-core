@@ -12,6 +12,7 @@ const layout = require('./layout');
 const navigation = require('./navigation');
 const providers = require('./providers');
 const templates = require('./templates');
+const wallet = require('./wallet');
 
 module.exports = [
   gettingStarted,
@@ -25,6 +26,7 @@ module.exports = [
   layout,
   navigation,
   providers,
+  wallet,
   experimental,
   templates,
   cssUtilities,
