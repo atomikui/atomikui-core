@@ -24,7 +24,14 @@ Import the Atomik UI library core CSS. This will provide the default light theme
 <br /><br />
 
 ```html
-import '@alaneicker/atomik-ui/dist/styles/main.mim.css';
+import '@alaneicker/atomik-ui/dist/styles/main.min.css';
+```
+
+Atomik UI comes with ready to use Sass variables, mixins, and functions which can imported into your main Sass file and used them as needed.
+<br /><br />
+
+```html
+@import 'node_modules/@alaneicker/atomik-ui/dist/styles/sass/main.scss';
 ```
 
 #### 3. Begin Importing Components
