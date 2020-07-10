@@ -1,4 +1,4 @@
-The AccordionItem is used in conjunction with the [Accordion](/#/Content/Accordion) component and passed in as a child.
+The AccordionItem is used in conjunction with the Accordion component and passed in as a child.
 
 ```jsx
 import { AccordionItem } from '@alaneicker/atomik-ui';
@@ -15,6 +15,6 @@ import { AccordionItem } from '@alaneicker/atomik-ui';
 </AccordionItem>;
 ```
 
-### Demos
+### Demo
 
-[`<Accordion />`](/#/Content/Accordion)
+[`<Accordion />`](https://alaneicker1975.github.io/atomik-ui/#/Content/Accordion)

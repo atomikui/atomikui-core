@@ -45,4 +45,4 @@ import { Post, Comment } from '@alaneicker/atomik-ui';
 
 ### API
 
-[`<Comment />`](/#/Content/Comment)
+[`<Comment />`](https://alaneicker1975.github.io/atomik-ui/#/Content/Comment)

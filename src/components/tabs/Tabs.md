@@ -120,5 +120,5 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
 ### API
 
-[`<Tab />`](/#/Content/Tab)<br />
-[`<TabPanel />`](/#/Content/TabPanel)
+[`<Tab />`](https://alaneicker1975.github.io/atomik-ui/#/Content/Tab)<br />
+[`<TabPanel />`](https://alaneicker1975.github.io/atomik-ui/#/Content/TabPanel)

@@ -86,4 +86,4 @@ import { Accordion, AccordionItem } from '@alaneicker/atomik-ui';
 
 ### API
 
-[`<AccordionItem />`](/#/Content/AccordionItem)
+[`<AccordionItem />`](https://alaneicker1975.github.io/atomik-ui/#/Content/AccordionItem)

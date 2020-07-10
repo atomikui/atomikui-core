@@ -16,6 +16,6 @@ import { Step } from '@alaneicker/atomik-ui';
 </>;
 ```
 
-#### Demos
+#### Demo
 
-[`<Stepper />`](/#/Navigation/Stepper)
+[`<Stepper />`](https://alaneicker1975.github.io/atomik-ui/#/Navigation/Stepper)

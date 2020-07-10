@@ -1,4 +1,4 @@
-Used in conjunction with the [Cart](/#/Informational/Cart) component.
+Used in conjunction with the Cart component.
 
 ```jsx
 import { CartItem } from '@alaneicker/atomik-ui';
@@ -14,4 +14,4 @@ import { CartItem } from '@alaneicker/atomik-ui';
 
 ### Demo
 
-[`<Cart />`](/#/Informational/Cart)
+[`<Cart />`](https://alaneicker1975.github.io/atomik-ui/#/Informational/Cart)
