@@ -46,7 +46,7 @@ const colors = [
           style={Object.assign(
             {
               backgroundColor: hex,
-              width: '80px',
+              minWidth: '80px',
               height: '80px',
               borderRadius: '3px',
               marginRight: '16px',
@@ -54,7 +54,7 @@ const colors = [
             variable === 'white' ? { border: '1px solid #ccc' } : null,
           )}
         />
-        <div>
+        <div className="text-size-14 text-size-16@medium">
           <b>Sass Variable:</b> ${variable}
           <br />
           <b>Hexidecimal:</b> {hex}
