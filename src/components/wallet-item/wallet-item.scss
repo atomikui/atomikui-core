@@ -1,2 +1,22 @@
 .atomikui-wallet-item {
+  align-items: center;
+  align-items: center;
+  border: rem(1) solid darken($gray-100, 10%);
+  border-radius: rem($border-radius);
+  display: flex;
+  padding: rem(8);
+
+  &__icon {
+    border: 1px solid darken($gray-100, 10%);
+    width: rem(80);
+  }
+
+  &__label {
+    flex: 1;
+    padding: rem(0 16);
+  }
+
+  &.is-default {
+    border-color: $blue-200;
+  }
 }

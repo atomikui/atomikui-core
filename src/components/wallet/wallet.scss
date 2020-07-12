@@ -1,2 +1,5 @@
 .atomikui-wallet {
+  & > * + * {
+    margin-top: rem(8);
+  }
 }
