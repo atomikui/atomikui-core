@@ -6,12 +6,12 @@ import { WalletItem } from '@alaneicker/atomik-ui';
 <WalletItem type="MasterCard" endsIn="5555" />;
 ```
 
-### Set as Default Payment Method
+### Selected Payment Method
 
 ```jsx
 import { WalletItem } from '@alaneicker/atomik-ui';
 
-<WalletItem type="MasterCard" endsIn="5555" isDefault />;
+<WalletItem type="MasterCard" endsIn="5555" isSelected />;
 ```
 
 ### Payment Method `type`

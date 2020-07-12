@@ -2,9 +2,8 @@
 import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
 
 <Wallet addNewCard addNewBank>
-  <WalletItem type="MasterCard" endsIn="5555" isDefault />
-  <WalletItem type="PayPal" endsIn="5555" />
-  <WalletItem type="Visa" endsIn="5555" />
+  <WalletItem type="MasterCard" endsIn="5432" isSelected />
+  <WalletItem type="Visa" endsIn="1234" />
   <WalletItem
     type={{
       name: 'Apple Pay',
@@ -17,7 +16,6 @@ import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
         </svg>
       ),
     }}
-    endsIn="5555"
   />
 </Wallet>;
 ```

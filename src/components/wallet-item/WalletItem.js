@@ -13,7 +13,7 @@ import discoverIcon from './images/discover.png';
 import paypalIcon from './images/paypal.png';
 import visaIcon from './images/visa.png';
 
-const WalletItem = ({ className, endsIn, isDefault, type, ...others }) => {
+const WalletItem = ({ className, endsIn, isSelected, type, ...others }) => {
   const cardIcons = {
     amazon: amazonIcon,
     americanexpress: americanexpressIcon,
@@ -37,7 +37,7 @@ const WalletItem = ({ className, endsIn, isDefault, type, ...others }) => {
   return (
     <div
       className={classnames('atomikui-wallet-item', className, {
-        'is-default': isDefault,
+        'is-selected': isSelected,
       })}
       {...others}
     >
@@ -50,10 +50,14 @@ const WalletItem = ({ className, endsIn, isDefault, type, ...others }) => {
       </div>
       <div className="atomikui-wallet-item__label">
         <b>{paymentLabel}</b>
-        <br />
-        {endsIn}
+        {endsIn && (
+          <>
+            <br />
+            {endsIn}
+          </>
+        )}
       </div>
-      {isDefault && <Icon icon={faCheckCircle} size="lg" color="#027abf" />}
+      {isSelected && <Icon icon={faCheckCircle} size="lg" color="#027abf" />}
     </div>
   );
 };
@@ -64,7 +68,7 @@ WalletItem.propTypes = {
   /** Last 4 digits od account number */
   endsIn: PropTypes.string,
   /** Sets payment method as default */
-  isDefault: PropTypes.bool,
+  isSelected: PropTypes.bool,
   /** Payment method type */
   type: PropTypes.oneOfType([
     PropTypes.oneOf([
@@ -89,7 +93,7 @@ WalletItem.propTypes = {
 WalletItem.defaultProps = {
   className: '',
   endsIn: '',
-  isDefault: false,
+  isSelected: false,
   type: 'card',
 };
 
