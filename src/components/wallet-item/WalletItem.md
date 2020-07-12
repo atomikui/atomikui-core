@@ -1,3 +1,5 @@
+A payment item represents is used in conjunction with the Wallet component and represents an available payment method.
+
 ```jsx
 import { WalletItem } from '@alaneicker/atomik-ui';
 
@@ -29,7 +31,7 @@ The following strings values are supported:
 - `PayPal`
 - `Visa`
 
-A custom payment type can also be passed in to the `type` prop as an object:
+A custom payment type can also be passed in to the `type` prop as an object. <br /><br />
 
 ```jsx
 import { WalletItem } from '@alaneicker/atomik-ui';

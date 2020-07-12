@@ -10,9 +10,12 @@
     border: 1px solid darken($gray-100, 10%);
     width: rem(80);
 
-    & > img,
-    & > svg {
+    & > img {
       width: 100%;
+    }
+
+    & > svg {
+      margin: rem(8);
     }
   }
 
