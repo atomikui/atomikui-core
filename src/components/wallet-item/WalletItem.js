@@ -3,22 +3,36 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
-import visaIcon from './images/visa.png';
-import masterCardIcon from './images/mastercard.png';
-import discoverIcon from './images/discover.png';
 import americanexpressIcon from './images/americanexpress.png';
+import amazonIcon from './images/amazon.png';
+import dinersclubIcon from './images/dinersclub.png';
+import jcbIcon from './images/jcb.png';
+import masterCardIcon from './images/mastercard.png';
+import maestroIcon from './images/maestro.png';
+import discoverIcon from './images/discover.png';
 import paypalIcon from './images/paypal.png';
+import visaIcon from './images/visa.png';
 
 const WalletItem = ({ className, endsIn, isDefault, type, ...others }) => {
   const cardIcons = {
+    amazon: amazonIcon,
     americanexpress: americanexpressIcon,
+    dinersclub: dinersclubIcon,
     discover: discoverIcon,
+    jcb: jcbIcon,
     mastercard: masterCardIcon,
+    maestro: maestroIcon,
     paypal: paypalIcon,
     visa: visaIcon,
   };
 
-  const cardType = type.toLowerCase().replace(' ', '');
+  const isCustomType = typeof type === 'object';
+
+  const paymentType = isCustomType
+    ? type.name
+    : type.toLowerCase().replace(' ', '');
+
+  const paymentLabel = isCustomType ? type.name : type;
 
   return (
     <div
@@ -27,13 +41,15 @@ const WalletItem = ({ className, endsIn, isDefault, type, ...others }) => {
       })}
       {...others}
     >
-      <img
-        className="atomikui-wallet-item__icon"
-        src={cardIcons[cardType]}
-        alt={`${type} icon`}
-      />
+      <div className="atomikui-wallet-item__icon">
+        {isCustomType ? (
+          type.icon
+        ) : (
+          <img src={cardIcons[paymentType]} alt={`${paymentLabel} icon`} />
+        )}
+      </div>
       <div className="atomikui-wallet-item__label">
-        <b>{type}</b>
+        <b>{paymentLabel}</b>
         <br />
         {endsIn}
       </div>
@@ -50,13 +66,23 @@ WalletItem.propTypes = {
   /** Sets payment method as default */
   isDefault: PropTypes.bool,
   /** Payment method type */
-  type: PropTypes.oneOf([
-    'Bank',
-    'Visa',
-    'MasterCard',
-    'Discover',
-    'American Express',
-    'PayPal',
+  type: PropTypes.oneOfType([
+    PropTypes.oneOf([
+      'Amazon',
+      'American Express',
+      'Bank',
+      'Discover',
+      'Diners Club',
+      'JCB',
+      'MasterCard',
+      'Maestro',
+      'PayPal',
+      'Visa',
+    ]),
+    PropTypes.shape({
+      name: PropTypes.string,
+      icon: PropTypes.node,
+    }),
   ]),
 };
 

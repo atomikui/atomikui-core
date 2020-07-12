@@ -1,14 +1,19 @@
 .atomikui-wallet-item {
   align-items: center;
-  align-items: center;
   border: rem(1) solid darken($gray-100, 10%);
   border-radius: rem($border-radius);
   display: flex;
   padding: rem(8);
 
   &__icon {
+    background: #f8f8f8;
     border: 1px solid darken($gray-100, 10%);
     width: rem(80);
+
+    & > img,
+    & > svg {
+      width: 100%;
+    }
   }
 
   &__label {
