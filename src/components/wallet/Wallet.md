@@ -1,5 +1,9 @@
 ```jsx
-import { Wallet } from '@alaneicker/atomik-ui';
+import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
 
-<Wallet></Wallet>;
+<Wallet addNewCard addNewBank>
+  <WalletItem type="mastercard" endsIn="5555" isDefault />
+  <WalletItem type="Visa" endsIn="5555" />
+  <WalletItem type="Bank" endsIn="5555" />
+</Wallet>;
 ```
