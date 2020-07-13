@@ -50,8 +50,6 @@ The following strings values are supported:
 
 A custom payment type can also be passed in to the `type` prop as an object.
 
-_Note:To ensure SVG icons display properly, make sure there is no extra white space around the final exported SVG, and specify a height attribute when defining the SVG. _
-
 <br />
 
 ```jsx
