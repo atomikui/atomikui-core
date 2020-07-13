@@ -5,7 +5,8 @@ import { WalletItem } from '@alaneicker/atomik-ui';
 
 <WalletItem
   type="MasterCard"
-  endsIn="5555"
+  endsIn="4321"
+  expiry="04/2025"
   onSelect={() => console.log('MasterCard Selected')}
 />;
 ```
@@ -17,7 +18,8 @@ import { WalletItem } from '@alaneicker/atomik-ui';
 
 <WalletItem
   type="MasterCard"
-  endsIn="5555"
+  endsIn="1234"
+  expiry="06/2021"
   onSelect={() => console.log('MasterCard Selected')}
   isSelected
 />;

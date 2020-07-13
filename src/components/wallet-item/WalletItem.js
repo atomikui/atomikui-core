@@ -16,6 +16,7 @@ import visaIcon from './images/visa.png';
 const WalletItem = ({
   className,
   endsIn,
+  expiry,
   isSelected,
   onSelect,
   type,
@@ -60,12 +61,19 @@ const WalletItem = ({
       </div>
       <div className="atomikui-wallet-item__label">
         <b>{paymentLabel}</b>
-        {endsIn && (
-          <>
-            <br />
-            {endsIn}
-          </>
-        )}
+        <div className="atomikui-wallet-item__info">
+          {endsIn && (
+            <>
+              <span>**** **** ****</span> {endsIn}
+            </>
+          )}
+          {expiry && (
+            <>
+              <br />
+              Valid Thru: {expiry}
+            </>
+          )}
+        </div>
       </div>
       {isSelected && <Icon icon={faCheckCircle} size="lg" color="#027abf" />}
     </button>
@@ -77,6 +85,8 @@ WalletItem.propTypes = {
   className: PropTypes.string,
   /** Last 4 digits od account number */
   endsIn: PropTypes.string,
+  /** Expiration Date */
+  expiry: PropTypes.string,
   /** Sets payment method as default */
   isSelected: PropTypes.bool,
   /** Callback triggered when item WalletItem is selected */
@@ -104,7 +114,8 @@ WalletItem.propTypes = {
 
 WalletItem.defaultProps = {
   className: '',
-  endsIn: '',
+  endsIn: null,
+  expiry: null,
   isSelected: false,
   onSelect: null,
   type: 'card',

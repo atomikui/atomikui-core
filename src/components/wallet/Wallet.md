@@ -5,12 +5,14 @@ import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
   <WalletItem
     type="MasterCard"
     endsIn="5432"
+    expiry="06/2021"
     onSelect={() => console.log('MasterCard Selected')}
     isSelected
   />
   <WalletItem
     type="Visa"
     endsIn="1234"
+    expiry="04/2025"
     onSelect={() => console.log('Visa Selected')}
   />
   <WalletItem
