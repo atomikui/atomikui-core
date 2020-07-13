@@ -1,7 +1,7 @@
 ```jsx
 import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
 
-<Wallet addNewCard addNewBank>
+<Wallet>
   <WalletItem
     type="MasterCard"
     endsIn="5432"

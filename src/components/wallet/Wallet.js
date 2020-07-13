@@ -2,15 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Wallet = ({
-  addNewBank,
-  addNewCard,
-  children,
-  className,
-  onAddNewBank,
-  onAddNewCard,
-  ...others
-}) => {
+const Wallet = ({ addNewBank, addNewCard, children, className, ...others }) => {
   return (
     <div className={classnames('atomikui-wallet', className)} {...others}>
       {children}
@@ -27,10 +19,6 @@ Wallet.propTypes = {
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
-  /** Callback when add bank button is clicked */
-  onAddNewBank: PropTypes.func,
-  /** Callback when add card button is clicked */
-  onAddNewCard: PropTypes.func,
 };
 
 Wallet.defaultProps = {
@@ -38,8 +26,6 @@ Wallet.defaultProps = {
   addNewCard: false,
   children: <></>,
   className: '',
-  onAddNewBank: null,
-  onAddNewCard: null,
 };
 
 export default Wallet;
