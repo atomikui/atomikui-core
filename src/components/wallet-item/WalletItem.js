@@ -3,15 +3,19 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faUniversity } from '@fortawesome/free-solid-svg-icons';
-import americanexpressIcon from './images/americanexpress.png';
-import amazonIcon from './images/amazon.png';
-import dinersclubIcon from './images/dinersclub.png';
-import jcbIcon from './images/jcb.png';
-import masterCardIcon from './images/mastercard.png';
-import maestroIcon from './images/maestro.png';
-import discoverIcon from './images/discover.png';
-import paypalIcon from './images/paypal.png';
-import visaIcon from './images/visa.png';
+
+// icons
+import AmazonPayIcon from './images/amazonpay.svg';
+import AmericanExpressIcon from './images/americanexpress.svg';
+import ApplePay from './images/applepay.svg';
+import DinersClubIcon from './images/dinersclub.svg';
+import GooglePay from './images/googlepay.svg';
+import JcbIcon from './images/jcb.svg';
+import MasterCardIcon from './images/mastercard.svg';
+import MaestroIcon from './images/maestro.svg';
+import DiscoverIcon from './images/discover.svg';
+import PayPalIcon from './images/paypal.svg';
+import VisaIcon from './images/visa.svg';
 
 const WalletItem = ({
   className,
@@ -23,15 +27,17 @@ const WalletItem = ({
   ...others
 }) => {
   const cardIcons = {
-    amazon: amazonIcon,
-    americanexpress: americanexpressIcon,
-    dinersclub: dinersclubIcon,
-    discover: discoverIcon,
-    jcb: jcbIcon,
-    mastercard: masterCardIcon,
-    maestro: maestroIcon,
-    paypal: paypalIcon,
-    visa: visaIcon,
+    amazonpay: <AmazonPayIcon />,
+    americanexpress: <AmericanExpressIcon />,
+    applepay: <ApplePay />,
+    dinersclub: <DinersClubIcon />,
+    discover: <DiscoverIcon />,
+    googlepay: <GooglePay />,
+    jcb: <JcbIcon />,
+    mastercard: <MasterCardIcon />,
+    maestro: <MaestroIcon />,
+    paypal: <PayPalIcon />,
+    visa: <VisaIcon />,
   };
 
   const isCustomType = typeof type === 'object';
@@ -54,9 +60,9 @@ const WalletItem = ({
         {isCustomType ? (
           type.icon
         ) : type === 'Bank' ? (
-          <Icon icon={faUniversity} size="2x" />
+          <Icon icon={faUniversity} size="3x" />
         ) : (
-          <img src={cardIcons[paymentType]} alt={`${paymentLabel} icon`} />
+          cardIcons[paymentType]
         )}
       </div>
       <div className="atomikui-wallet-item__label">
@@ -94,11 +100,13 @@ WalletItem.propTypes = {
   /** Payment method type */
   type: PropTypes.oneOfType([
     PropTypes.oneOf([
-      'Amazon',
+      'Amazon Pay',
       'American Express',
+      'Apple Pay',
       'Bank',
       'Discover',
       'Diners Club',
+      'Google Pay',
       'JCB',
       'MasterCard',
       'Maestro',

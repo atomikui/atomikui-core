@@ -39,12 +39,8 @@ module.exports = {
         use: [{ loader: 'babel-loader' }],
       },
       {
-        test: /\.(jpg|jpeg|png)$/,
-        use: [
-          {
-            loader: 'url-loader',
-          },
-        ],
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       },
       {
         test: /\.css$/,
