@@ -29,3 +29,7 @@ import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
   />
 </Wallet>;
 ```
+
+### API
+
+[`<WalletItem />`](https://alaneicker1975.github.io/atomik-ui/#/Payment%20Wallet/WalletItem)
