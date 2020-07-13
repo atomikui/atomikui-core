@@ -1,9 +1,15 @@
 .atomikui-wallet-item {
+  background: $white;
   align-items: center;
   border: rem(1) solid darken($gray-100, 10%);
   border-radius: rem($border-radius);
+  cursor: pointer;
   display: flex;
+  font-size: inherit;
+  font-family: inherit;
   padding: rem(8);
+  text-align: left;
+  width: 100%;
 
   &__icon {
     background: #f8f8f8;

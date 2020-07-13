@@ -2,9 +2,19 @@
 import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
 
 <Wallet addNewCard addNewBank>
-  <WalletItem type="MasterCard" endsIn="5432" isSelected />
-  <WalletItem type="Visa" endsIn="1234" />
   <WalletItem
+    type="MasterCard"
+    endsIn="5432"
+    onSelect={() => console.log('MasterCard Selected')}
+    isSelected
+  />
+  <WalletItem
+    type="Visa"
+    endsIn="1234"
+    onSelect={() => console.log('Visa Selected')}
+  />
+  <WalletItem
+    onSelect={() => console.log('Apple Pay Selected')}
     type={{
       name: 'Apple Pay',
       icon: (

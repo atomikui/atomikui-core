@@ -3,7 +3,11 @@ A payment item represents is used in conjunction with the Wallet component and r
 ```jsx
 import { WalletItem } from '@alaneicker/atomik-ui';
 
-<WalletItem type="MasterCard" endsIn="5555" />;
+<WalletItem
+  type="MasterCard"
+  endsIn="5555"
+  onSelect={() => console.log('MasterCard Selected')}
+/>;
 ```
 
 ### Selected Payment Method
@@ -11,7 +15,12 @@ import { WalletItem } from '@alaneicker/atomik-ui';
 ```jsx
 import { WalletItem } from '@alaneicker/atomik-ui';
 
-<WalletItem type="MasterCard" endsIn="5555" isSelected />;
+<WalletItem
+  type="MasterCard"
+  endsIn="5555"
+  onSelect={() => console.log('MasterCard Selected')}
+  isSelected
+/>;
 ```
 
 ### Payment Method `type`
@@ -37,6 +46,7 @@ A custom payment type can also be passed in to the `type` prop as an object. <br
 import { WalletItem } from '@alaneicker/atomik-ui';
 
 <WalletItem
+  onSelect={() => console.log('Apple Pay Selected')}
   type={{
     name: 'Apple Pay',
     icon: (
