@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faUniversity } from '@fortawesome/free-solid-svg-icons';
 import americanexpressIcon from './images/americanexpress.png';
 import amazonIcon from './images/amazon.png';
 import dinersclubIcon from './images/dinersclub.png';
@@ -52,6 +52,8 @@ const WalletItem = ({
       <div className="atomikui-wallet-item__icon">
         {isCustomType ? (
           type.icon
+        ) : type === 'Bank' ? (
+          <Icon icon={faUniversity} size="2x" />
         ) : (
           <img src={cardIcons[paymentType]} alt={`${paymentLabel} icon`} />
         )}

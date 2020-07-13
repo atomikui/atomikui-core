@@ -27,5 +27,10 @@ import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
       ),
     }}
   />
+  <WalletItem
+    type="Bank"
+    endsIn="4444"
+    onSelect={() => console.log('Bank Selected')}
+  />
 </Wallet>;
 ```
