@@ -9,6 +9,7 @@
   font-size: inherit;
   height: rem(70);
   padding: rem(8 16);
+  position: relative;
   text-align: left;
   width: 100%;
 
@@ -31,7 +32,7 @@
 
   &__label {
     flex: 1;
-    padding: rem(0 16);
+    padding: rem(0 32 0 16);
   }
 
   &__info {
@@ -45,6 +46,12 @@
     }
   }
 
+  &__selected-icon {
+    position: absolute;
+    top: rem(16);
+    right: rem(16);
+  }
+
   &--grid {
     flex-direction: column;
     height: auto;
@@ -53,6 +60,7 @@
     text-align: center;
 
     .atomikui-wallet-item__icon {
+      margin-bottom: rem(8);
       text-align: center;
       width: auto;
 
@@ -63,10 +71,10 @@
 
     .atomikui-wallet-item__label {
       flex: 0;
+      padding: 0;
     }
 
     .atomikui-wallet-item__selected-icon {
-      margin-top: rem(8);
     }
   }
 }
