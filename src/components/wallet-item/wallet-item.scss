@@ -35,6 +35,10 @@
     padding: rem(0 32 0 16);
   }
 
+  &__label-text {
+    font-weight: $font-bold;
+  }
+
   &__info {
     color: $gray-400;
     font-size: rem(14);
@@ -52,6 +56,10 @@
     right: rem(16);
   }
 
+  .atomikui-wallet-item__default-icon {
+    width: 100%;
+  }
+
   &--grid {
     flex-direction: column;
     height: auto;
@@ -65,8 +73,12 @@
       width: auto;
 
       & > svg {
-        min-width: rem(70);
+        width: rem(70);
       }
+    }
+
+    .atomikui-wallet-item__default-icon {
+      width: rem(70);
     }
 
     .atomikui-wallet-item__label {

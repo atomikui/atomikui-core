@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import numeral from 'numeral';
 
 const Price = ({
   amount,
@@ -20,7 +21,9 @@ const Price = ({
       {...others}
     >
       <span className="atomikui-price__currency">{currencySymbol}</span>
-      <span className="atomikui-price__amount">{amount}</span>
+      <span className="atomikui-price__amount">
+        {numeral(amount).format(`0,0[.]00`)}
+      </span>
       <span className="atomikui-price__label">{label}</span>
     </span>
   );

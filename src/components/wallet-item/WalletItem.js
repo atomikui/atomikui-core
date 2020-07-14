@@ -2,7 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faUniversity } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCheckCircle,
+  faUniversity,
+  faCreditCard,
+} from '@fortawesome/free-solid-svg-icons';
 
 // icons
 import AmazonPayIcon from './images/amazonpay.svg';
@@ -50,9 +54,16 @@ const WalletItem = ({
 
   const icon =
     type === 'Bank' ? (
-      <Icon icon={faUniversity} size="3x" />
+      <Icon icon={faUniversity} size="3x" color="#444444" />
     ) : (
-      cardIcons[paymentType]
+      cardIcons[paymentType] || (
+        <Icon
+          className="atomikui-wallet-item__default-icon"
+          icon={faCreditCard}
+          size="2x"
+          color="#444444"
+        />
+      )
     );
 
   return (
@@ -67,7 +78,7 @@ const WalletItem = ({
         {isCustomType ? type.icon : icon}
       </div>
       <div className="atomikui-wallet-item__label">
-        <b>{paymentLabel}</b>
+        <div className="atomikui-wallet-item__label-text">{paymentLabel}</div>
         <div className="atomikui-wallet-item__info">
           {endsIn && (
             <>

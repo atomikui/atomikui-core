@@ -36,4 +36,28 @@ describe('<WalletItem />', () => {
     walletItem.simulate('click');
     expect(walletItemSpy.called).toBe(true);
   });
+
+  it('Should render a default payment method icon if one does not exist', () => {
+    walletItem.setProps({ type: 'Foobar' });
+    expect(
+      walletItem.find('.atomikui-wallet-item__icon').children(),
+    ).toHaveLength(1);
+  });
+
+  it('Sgould render a custom type', () => {
+    const customWalletItem = shallow(
+      <WalletItem
+        type={{
+          name: 'My Piggy Bank',
+          icon: <svg></svg>,
+        }}
+        endsIn="5432"
+        expiry="06/2021"
+      />,
+    );
+
+    expect(
+      customWalletItem.find('.atomikui-wallet-item__label-text').text(),
+    ).toBe('My Piggy Bank');
+  });
 });

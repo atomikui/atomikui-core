@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1594747046657" clover="3.2.0">
-  <project timestamp="1594747046657" name="All files">
-    <metrics statements="538" coveredstatements="514" conditionals="314" coveredconditionals="273" methods="168" coveredmethods="136" elements="1020" coveredelements="923" complexity="0" loc="538" ncloc="538" packages="52" files="55" classes="55"/>
+<coverage generated="1594752522380" clover="3.2.0">
+  <project timestamp="1594752522380" name="All files">
+    <metrics statements="538" coveredstatements="514" conditionals="316" coveredconditionals="278" methods="168" coveredmethods="136" elements="1022" coveredelements="928" complexity="0" loc="538" ncloc="538" packages="52" files="55" classes="55"/>
     <package name="accordion">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
       <file name="Accordion.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/accordion/Accordion.js">
@@ -532,10 +532,10 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Price.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/price/Price.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
       </file>
     </package>
     <package name="progress-bar">
@@ -847,18 +847,18 @@
       </file>
     </package>
     <package name="wallet-item">
-      <metrics statements="9" coveredstatements="9" conditionals="14" coveredconditionals="10" methods="1" coveredmethods="1"/>
+      <metrics statements="9" coveredstatements="9" conditionals="16" coveredconditionals="15" methods="1" coveredmethods="1"/>
       <file name="WalletItem.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/wallet-item/WalletItem.js">
-        <metrics statements="9" coveredstatements="9" conditionals="14" coveredconditionals="10" methods="1" coveredmethods="1"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="43" count="3" type="stmt"/>
-        <line num="45" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="49" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="52" count="3" type="cond" truecount="1" falsecount="1"/>
-        <line num="58" count="3" type="stmt"/>
-        <line num="97" count="1" type="stmt"/>
-        <line num="131" count="1" type="stmt"/>
+        <metrics statements="9" coveredstatements="9" conditionals="16" coveredconditionals="15" methods="1" coveredmethods="1"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="33" count="7" type="stmt"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="49" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="53" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="56" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="69" count="7" type="stmt"/>
+        <line num="108" count="1" type="stmt"/>
+        <line num="142" count="1" type="stmt"/>
       </file>
     </package>
   </project>
