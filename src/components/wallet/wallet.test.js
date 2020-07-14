@@ -6,7 +6,13 @@ import Wallet from './Wallet';
 configure({ adapter: new Adapter() });
 
 describe('<Wallet />', () => {
-  beforeEach(() => {});
+  let wallet;
 
-  it('Should render without errors', () => {});
+  beforeEach(() => {
+    wallet = shallow(<Wallet />);
+  });
+
+  it('Should render without errors', () => {
+    expect(wallet).toHaveLength(1);
+  });
 });

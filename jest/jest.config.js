@@ -33,6 +33,7 @@ module.exports = {
   ],
   moduleNameMapper: {
     '\\.(css|scss)$': '<rootDir>/jest/css-mock.js',
+    '\\.svg': '<rootDir>/jest/svg-mock.js',
   },
   moduleFileExtensions: [
     'web.js',

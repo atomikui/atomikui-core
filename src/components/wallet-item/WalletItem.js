@@ -48,6 +48,13 @@ const WalletItem = ({
 
   const paymentLabel = isCustomType ? type.name : type;
 
+  const icon =
+    type === 'Bank' ? (
+      <Icon icon={faUniversity} size="3x" />
+    ) : (
+      cardIcons[paymentType]
+    );
+
   return (
     <button
       className={classnames('atomikui-wallet-item', className, {
@@ -57,13 +64,7 @@ const WalletItem = ({
       {...others}
     >
       <div className="atomikui-wallet-item__icon">
-        {isCustomType ? (
-          type.icon
-        ) : type === 'Bank' ? (
-          <Icon icon={faUniversity} size="3x" />
-        ) : (
-          cardIcons[paymentType]
-        )}
+        {isCustomType ? type.icon : icon}
       </div>
       <div className="atomikui-wallet-item__label">
         <b>{paymentLabel}</b>
