@@ -2,4 +2,23 @@
   & > * + * {
     margin-top: rem(8);
   }
+
+  &--grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(0 -4);
+
+    & > * {
+      margin: rem(4);
+      flex: 1 0 48%;
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    &--grid {
+      & > * {
+        flex: 1 0 24%;
+      }
+    }
+  }
 }

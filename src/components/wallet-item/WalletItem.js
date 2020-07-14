@@ -82,7 +82,14 @@ const WalletItem = ({
           )}
         </div>
       </div>
-      {isSelected && <Icon icon={faCheckCircle} size="lg" color="#027abf" />}
+      {isSelected && (
+        <Icon
+          className="atomikui-wallet-item__selected-icon"
+          icon={faCheckCircle}
+          size="lg"
+          color="#027abf"
+        />
+      )}
     </button>
   );
 };
