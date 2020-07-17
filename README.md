@@ -53,6 +53,8 @@ Atomik UI is a comprehensive library of React components for kickstarting any Re
 
 ![Travis CI Status Image](https://travis-ci.com/alaneicker1975/atomik-ui.svg?branch=master)
 
+<br />
+
 ### Features
 
 Atomik UI comes with a variety of customizable React components to suit any development need:
