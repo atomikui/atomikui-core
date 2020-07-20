@@ -16,10 +16,4 @@
   &__footer {
     padding: rem(0 16 16);
   }
-
-  // Override default hollow button styles
-  .atomikui-btn--hollow:hover,
-  .atomikui-btn--hollow:focus {
-    background: darken($gray-100, 8%);
-  }
 }
