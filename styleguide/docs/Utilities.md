@@ -2,7 +2,7 @@
 
 The following utility classes can be used to set the display proprty of an element.
 
-```jsx
+```jsx noeditor
 const displayOptions = [
   'inline',
   'inline-block',

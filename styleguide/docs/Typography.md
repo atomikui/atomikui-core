@@ -111,6 +111,8 @@ textSizes.map((size) => {
 
 All text size classes have responsive modifiers that can be used to change the font size at specific breakpoints. Breakpoint modifiers include `@small`, `@medium` and `@large`;
 
+<br />
+
 ```jsx
 <p className="text-size-24 text-size-48@medium">
   This text is 24px on small devices and 40px on medium size and larger devices

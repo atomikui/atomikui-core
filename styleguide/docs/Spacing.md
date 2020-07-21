@@ -2,7 +2,7 @@ Vertical and horizontal rhythm can be achieved with margin and padding utility c
 
 ### Margin and Padding Utilities
 
-```jsx
+```jsx noeditor
 import shortid from 'shortid';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
@@ -73,7 +73,7 @@ const Column = ({ children, className, transparent, ...props }) => {
   );
 };
 
-<Grid fluid>
+<Grid>
   {units.map((unit) => {
     return (
       <Row key={shortid.generate()}>

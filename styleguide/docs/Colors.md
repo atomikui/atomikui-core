@@ -1,6 +1,6 @@
 ### Sass Color Variables & Classes
 
-```jsx
+```jsx noeditor
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const colors = [

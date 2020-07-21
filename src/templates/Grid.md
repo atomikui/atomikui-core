@@ -21,7 +21,7 @@ const Column = ({ children, ...props }) => {
   );
 };
 
-<Grid fluid>
+<Grid>
   <Row>
     <Column md={6}>Six Column</Column>
     <Column md={6}>Six Column</Column>
