@@ -54,7 +54,8 @@
   &__selected-icon {
     position: absolute;
     right: rem(16);
-    top: rem(16);
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .atomikui-wallet-item__default-icon {
@@ -80,6 +81,11 @@
 
     .atomikui-wallet-item__default-icon {
       width: rem(70);
+    }
+
+    .atomikui-wallet-item__selected-icon {
+      top: rem(16);
+      transform: none;
     }
 
     .atomikui-wallet-item__label {
