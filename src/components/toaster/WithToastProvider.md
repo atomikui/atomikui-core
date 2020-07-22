@@ -15,18 +15,18 @@ const RandomToastGenerator = withToastProvider(() => {
 
   const toastMessages = [
     { content: 'This is a default toast message!' },
-    { type: 'dark', content: 'This is an dark toast message!' },
-    { type: 'info', content: 'This is an informational toast message!' },
-    { type: 'warning', content: 'This is a warning toast message!' },
-    { type: 'error', content: 'This is an error toast message!' },
-    { type: 'success', content: 'This is a success toast message!' },
+    { theme: 'dark', content: 'This is an dark toast message!' },
+    { theme: 'info', content: 'This is an informational toast message!' },
+    { theme: 'warning', content: 'This is a warning toast message!' },
+    { theme: 'error', content: 'This is an error toast message!' },
+    { theme: 'success', content: 'This is a success toast message!' },
   ];
 
   const setRandomToast = () => {
     const newToast =
       toastMessages[Math.floor(Math.random() * toastMessages.length)];
 
-    toast.add(newToast.type, newToast.content);
+    toast.add(newToast.theme, newToast.content);
   };
 
   // Show random toast on initial mount

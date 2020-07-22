@@ -9,10 +9,10 @@ const withToastProvider = (Component) => {
   const WithToastProvider = (props) => {
     const [toasts, setToasts] = useState([]);
 
-    const add = (type, content) => {
+    const add = (theme, content) => {
       const id = shortid.generate();
 
-      setToasts([...toasts, { id, type, content }]);
+      setToasts([...toasts, { id, theme, content }]);
     };
 
     const remove = (id) => {
@@ -34,11 +34,11 @@ const withToastProvider = (Component) => {
         <Component {...props} />
         <Portal container={document.body}>
           <Toaster position={position}>
-            {toasts.map(({ id, content, type }, i) => {
+            {toasts.map(({ id, content, theme }, i) => {
               return (
                 <Toast
                   key={id}
-                  type={type}
+                  theme={theme}
                   duration={duration}
                   remove={() => {
                     return remove(id);

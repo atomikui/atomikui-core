@@ -4,7 +4,7 @@ import * as easings from 'd3-ease';
 import PropTypes from 'prop-types';
 import Alert from '../alert';
 
-const Toast = ({ children, className, duration, remove, type, ...others }) => {
+const Toast = ({ children, className, duration, remove, theme, ...others }) => {
   const toastRef = useRef();
 
   const styleProps = useSpring({
@@ -32,10 +32,10 @@ const Toast = ({ children, className, duration, remove, type, ...others }) => {
 
     return undefined;
   }, []);
-
+  console.log(theme);
   return (
     <animated.div style={styleProps} className={className} {...others}>
-      <Alert classes="atomikui-toaster__toast" type={type} onClose={remove}>
+      <Alert classes="atomikui-toaster__toast" theme={theme} onClose={remove}>
         {children}
       </Alert>
     </animated.div>
@@ -52,7 +52,7 @@ Toast.propTypes = {
   /** Removes a toast */
   remove: PropTypes.func,
   /** Type of toast - oneOf: info, warning, error, success */
-  type: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
+  theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 
 Toast.defaultProps = {
@@ -60,7 +60,7 @@ Toast.defaultProps = {
   className: '',
   duration: 7000,
   remove() {},
-  type: null,
+  theme: null,
 };
 
 export default Toast;
