@@ -11,6 +11,7 @@
   padding: rem(8 16);
   position: relative;
   text-align: left;
+  transition: background 0.2s linear;
   width: 100%;
 
   &:hover,
@@ -52,8 +53,8 @@
 
   &__selected-icon {
     position: absolute;
-    top: rem(16);
     right: rem(16);
+    top: rem(16);
   }
 
   .atomikui-wallet-item__default-icon {
