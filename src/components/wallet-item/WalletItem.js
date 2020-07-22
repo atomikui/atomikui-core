@@ -60,7 +60,7 @@ const WalletItem = ({
         <Icon
           className="atomikui-wallet-item__default-icon"
           icon={faCreditCard}
-          size="2x"
+          size="3x"
           color="#444444"
         />
       )
@@ -145,7 +145,7 @@ WalletItem.defaultProps = {
   expiry: null,
   isSelected: false,
   onSelect: null,
-  type: 'card',
+  type: 'Card',
 };
 
 export default WalletItem;
