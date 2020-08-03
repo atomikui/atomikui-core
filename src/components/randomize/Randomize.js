@@ -28,7 +28,7 @@ const Randomize = ({ children, duration }) => {
     });
   });
 
-  const [child, setChild] = useState(getRandomItem(content));
+  const [child, setChild] = useState(null);
 
   let timer;
 
@@ -45,6 +45,10 @@ const Randomize = ({ children, duration }) => {
       return clearInterval(timer);
     };
   }, [isPaused]);
+
+  useEffect(() => {
+    setChild(getRandomItem(content));
+  }, []);
 
   return <>{child}</>;
 };
