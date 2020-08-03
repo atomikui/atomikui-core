@@ -1,11 +1,13 @@
 import React, { Children, cloneElement, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import sample from 'lodash.sample';
+import shuffle from 'lodash.shuffle';
 
 const Randomize = ({ children, duration }) => {
   const [isPaused, setIsPaused] = useState(false);
 
   const getRandomItem = (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)];
+    return sample(shuffle(arr));
   };
 
   const content = Children.map(children, (child) => {
@@ -32,11 +34,9 @@ const Randomize = ({ children, duration }) => {
 
   useEffect(() => {
     if (isPaused) {
-      console.log('timer stopped');
       clearInterval(timer);
     } else {
       timer = setInterval(() => {
-        console.log('timer started');
         setChild(getRandomItem(content));
       }, duration);
     }

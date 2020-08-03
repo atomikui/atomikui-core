@@ -63,6 +63,8 @@
     "d3-ease": "^1.0.6",
     "downshift": "^5.0.6",
     "focus-trap": "^5.1.0",
+    "lodash.sample": "^4.2.1",
+    "lodash.shuffle": "^4.2.0",
     "moment": "^2.25.3",
     "numeral": "^2.0.6",
     "prop-types": "^15.7.2",
