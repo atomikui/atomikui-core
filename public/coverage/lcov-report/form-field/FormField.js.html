@@ -30,9 +30,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">95.65% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>19/19</span>
+                <span class='fraction'>22/23</span>
             </div>
         
             
@@ -235,7 +235,20 @@
 <a name='L176'></a><a href='#L176'>176</a>
 <a name='L177'></a><a href='#L177'>177</a>
 <a name='L178'></a><a href='#L178'>178</a>
-<a name='L179'></a><a href='#L179'>179</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -286,6 +299,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">157x</span>
 <span class="cline-any cline-yes">157x</span>
 <span class="cline-any cline-yes">157x</span>
@@ -295,6 +309,8 @@
 <span class="cline-any cline-yes">157x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">157x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -359,6 +375,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -446,6 +472,7 @@ const FormField = forwardRef(
     {
       borderless,
       className,
+      defaultValue,
       disabled,
       errorText,
       hasError,
@@ -496,6 +523,7 @@ const FormField = forwardRef(
             )}
             placeholder={placeholder}
             value={value}
+            defaultValue={defaultValue}
             aria-describedby={`${inputHintId} ${inputErrorId}`}
             required={required}
             readOnly={readOnly}
@@ -512,7 +540,8 @@ const FormField = forwardRef(
             type={fieldType}
             mask={mask}
             placeholder={placeholder}
-            value={value}
+            {...(value &amp;&amp; { value })}
+            {...(defaultValue &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >{ defaultValue })</span>}
             aria-describedby={`${inputHintId} ${inputErrorId}`}
             readOnly={readOnly}
             disabled={disabled}
@@ -541,6 +570,12 @@ FormField.propTypes = {
   borderless: PropTypes.bool,
   /** Specifies custom component classes. */
   className: PropTypes.string,
+  /** Sets the defaultValue for uncontrolled form fields */
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.instanceOf(Date),
+  ]),
   /** Disables a form field. */
   disabled: PropTypes.bool,
   /** Text to be displayed when there is an error. */
@@ -568,7 +603,11 @@ FormField.propTypes = {
   /** Specifies the type of input. */
   type: PropTypes.oneOf(types),
   /** Specifies the inputs value. */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.instanceOf(Date),
+  ]),
 };
 &nbsp;
 FormField.defaultProps = {
@@ -598,7 +637,7 @@ export default FormField;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Tue Jul 14 2020 13:48:42 GMT-0500 (Central Daylight Time)
+                at Mon Aug 31 2020 11:15:36 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

@@ -35,7 +35,7 @@ export { default as Portal } from './components/portal';
 export { default as Post } from './components/post';
 export { default as Price } from './components/price';
 export { default as ProgressBar } from './components/progress-bar';
-export { default as Randomize } from './components/randomize';
+// export { default as Randomize } from './components/randomize';
 export { default as RangeSlider } from './components/range-slider';
 export { default as Rating } from './components/rating';
 export { default as Spinner } from './components/spinner';

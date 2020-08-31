@@ -31,6 +31,7 @@ const FormField = forwardRef(
     {
       borderless,
       className,
+      defaultValue,
       disabled,
       errorText,
       hasError,
@@ -81,6 +82,7 @@ const FormField = forwardRef(
             )}
             placeholder={placeholder}
             value={value}
+            defaultValue={defaultValue}
             aria-describedby={`${inputHintId} ${inputErrorId}`}
             required={required}
             readOnly={readOnly}
@@ -97,7 +99,8 @@ const FormField = forwardRef(
             type={fieldType}
             mask={mask}
             placeholder={placeholder}
-            value={value}
+            {...(value && { value })}
+            {...(defaultValue && { defaultValue })}
             aria-describedby={`${inputHintId} ${inputErrorId}`}
             readOnly={readOnly}
             disabled={disabled}
@@ -126,6 +129,12 @@ FormField.propTypes = {
   borderless: PropTypes.bool,
   /** Specifies custom component classes. */
   className: PropTypes.string,
+  /** Sets the defaultValue for uncontrolled form fields */
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.instanceOf(Date),
+  ]),
   /** Disables a form field. */
   disabled: PropTypes.bool,
   /** Text to be displayed when there is an error. */
@@ -137,7 +146,7 @@ FormField.propTypes = {
   /** A unique id. */
   id: PropTypes.string,
   /** Specifies label text. */
-  label: PropTypes.string,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Optional form field mask */
   mask: PropTypes.string,
   /** onChange callback. */
@@ -153,7 +162,11 @@ FormField.propTypes = {
   /** Specifies the type of input. */
   type: PropTypes.oneOf(types),
   /** Specifies the inputs value. */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.instanceOf(Date)]),
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.instanceOf(Date),
+  ]),
 };
 
 FormField.defaultProps = {

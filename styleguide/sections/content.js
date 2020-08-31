@@ -11,7 +11,7 @@ module.exports = {
       'src/components/avatar/Avatar.js',
       'src/components/comment/Comment.js',
       'src/components/post/Post.js',
-      'src/components/randomize/Randomize.js',
+      // 'src/components/randomize/Randomize.js',
       'src/components/tab/Tab.js',
       'src/components/tab-panel/TabPanel.js',
       'src/components/tabs/Tabs.js',
