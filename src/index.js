@@ -1,3 +1,5 @@
+import { from } from 'core-js/fn/array';
+
 export { default as Accordion } from './components/accordion';
 export { default as AccordionItem } from './components/accordion-item';
 export { default as Alert } from './components/alert';
@@ -21,6 +23,7 @@ export { default as Drawer } from './components/drawer';
 export { default as Dropdown } from './components/dropdown';
 export { default as FileUpload } from './components/file-upload';
 export { default as FormField } from './components/form-field';
+export { default as FormGenerator } from './components/form-generator';
 export { default as Hint } from './components/hint';
 export { default as Jumbotron } from './components/jumbotron';
 export { default as Label } from './components/label';

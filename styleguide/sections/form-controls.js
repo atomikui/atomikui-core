@@ -14,6 +14,7 @@ module.exports = {
       'src/components/dropdown/Dropdown.js',
       'src/components/file-upload/FileUpload.js',
       'src/components/form-field/FormField.js',
+      'src/components/form-generator/FormGenerator.js',
       'src/components/range-slider/RangeSlider.js',
       'src/components/switch/Switch.js',
       'src/components/switch-panel/SwitchPanel.js',
