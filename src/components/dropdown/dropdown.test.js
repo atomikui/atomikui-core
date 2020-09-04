@@ -33,6 +33,11 @@ describe('<Dropdown />', () => {
     expect(dropdown.find('select').children().length).toBe(7);
   });
 
+  it('Should render a default value', () => {
+    dropdown.setProps({ value: null, defaultValue: 'Blue' });
+    expect(dropdown.find('select').props().defaultValue).toBe('Blue');
+  });
+
   it('Should handle an error', () => {
     dropdown.setProps({ hasError: true, errorText: 'This field is required' });
 

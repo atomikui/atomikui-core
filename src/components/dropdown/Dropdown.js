@@ -19,6 +19,7 @@ const Dropdown = ({
   options,
   required,
   value,
+  defaultValue,
   ...others
 }) => {
   const uid = id || shortid.generate();
@@ -50,7 +51,8 @@ const Dropdown = ({
           )}
           required={required}
           aria-describedby={`${inputHintId} ${inputErrorId}`}
-          value={value}
+          {...(value && { value })}
+          {...(defaultValue && !value && { defaultValue })}
           disabled={disabled}
           onChange={onChange}
           {...others}
@@ -64,7 +66,7 @@ const Dropdown = ({
             // eslint-disable-next-line no-shadow
           ].map(({ text, value }, index) => {
             return (
-              <option key={shortid.generate()} value={value}>
+              <option key={`option-${text}-${index}`} value={value}>
                 {text}
               </option>
             );
@@ -88,6 +90,8 @@ const Dropdown = ({
 Dropdown.propTypes = {
   /** Specifies custom component classes. */
   className: PropTypes.string,
+  /** Sets the default value for an uncontrolled dropdown */
+  defaultValue: PropTypes.string,
   /** Disables a form field. */
   disabled: PropTypes.bool,
   /** Text to be displayed when there is an error. */
@@ -123,6 +127,7 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   className: '',
+  defaultValue: '',
   disabled: false,
   errorText: '',
   hasError: false,

@@ -38,11 +38,11 @@ const validationSchema = yup.object().shape({
 });
 
 const initialValues = {
-  first_name: '',
+  first_name: 'Alan',
   last_name: '',
   email: '',
   phone: '',
-  level_of_experience: '',
+  level_of_experience: 'Mid Level',
   salary_range: '100000',
 };
 
@@ -74,7 +74,7 @@ const {
       <FormField
         name="first_name"
         label="First Name"
-        value={values.first_name}
+        defaultValue={values.first_name}
         onChange={handleChange}
         hasError={!!(errors.first_name && touched.first_name)}
         errorText={errors.first_name}
@@ -84,7 +84,7 @@ const {
       <FormField
         name="last_name"
         label="Last Name"
-        value={values.last_name}
+        defaultValue={values.last_name}
         onChange={handleChange}
         hasError={!!(errors.last_name && touched.last_name)}
         errorText={errors.last_name}
@@ -94,7 +94,7 @@ const {
       <FormField
         name="email"
         label="Email address"
-        value={values.email}
+        defaultValue={values.email}
         onChange={handleChange}
         hasError={!!(errors.email && touched.email)}
         errorText={errors.email}
@@ -105,7 +105,7 @@ const {
         name="phone"
         label="Phone Number"
         mask="(999) 999-9999"
-        value={values.phone}
+        defaultValue={values.phone}
         onChange={handleChange}
         hasError={!!(errors.phone && touched.phone)}
         errorText={errors.phone}
@@ -116,7 +116,7 @@ const {
         name="level_of_experience"
         label="Level of Experience"
         errorText="Please select a color"
-        value={values.level_of_experience}
+        defaultValue={values.level_of_experience}
         onChange={handleChange}
         hasError={!!(errors.level_of_experience && touched.level_of_experience)}
         errorText={errors.level_of_experience}

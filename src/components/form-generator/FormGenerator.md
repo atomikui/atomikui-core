@@ -79,6 +79,8 @@ const personalInfo = [
 
 The FormGenerator is a presentational component, thus validation needs to be handled separately. the examplee below demonstrates how to integrate [Formik](https://jaredpalmer.com/formik) and [Yup](https://www.npmjs.com/package/yup) with the FormGenerator.
 
+**NOTE:** If you are using a third-party validator like Formik to handle your form's state, you must use `defaultValue` or `defaultChecked` to set the values of your form fields since React considers them uncontrolled.
+
 ```jsx
 import { FormGenerator, FormField, Button } from '@alaneicker/atomik-ui';
 import * as yup from 'yup';
