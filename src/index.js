@@ -1,5 +1,3 @@
-import { from } from 'core-js/fn/array';
-
 export { default as Accordion } from './components/accordion';
 export { default as AccordionItem } from './components/accordion-item';
 export { default as Alert } from './components/alert';
