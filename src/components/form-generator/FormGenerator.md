@@ -10,7 +10,6 @@ const personalInfo = [
     {
       Component: FormField,
       colsProps: { sm: 12, md: 6, lg: 6 },
-      id: 'first-name',
       name: 'firstName',
       label: 'First Name',
       onChange: (e) => console.log(e.target.value),
@@ -20,7 +19,6 @@ const personalInfo = [
     {
       Component: FormField,
       colsProps: { sm: 12, md: 6, lg: 6 },
-      id: 'last-name',
       name: 'lastName',
       label: 'Last Name',
       onChange: (e) => console.log(e.target.value),
@@ -86,6 +84,8 @@ import { FormGenerator, FormField, Button } from '@alaneicker/atomik-ui';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 
+const [submittedFormData, setSubmittedFormData] = React.useState(null);
+
 const initialValues = {
   firstName: '',
   lastName: '',
@@ -100,7 +100,7 @@ const { handleSubmit, handleChange, values, errors, touched } = useFormik({
   initialValues,
   validationSchema,
   onSubmit: (formData) => {
-    console.log(formData);
+    setSubmittedFormData(formData);
   },
 });
 
@@ -109,7 +109,6 @@ const formfields = [
     {
       Component: FormField,
       colsProps: { sm: 12, md: 6, lg: 6 },
-      id: 'first-name',
       name: 'firstName',
       label: 'First Name',
       defaultValue: values.firstName,
@@ -122,7 +121,6 @@ const formfields = [
     {
       Component: FormField,
       colsProps: { sm: 12, md: 6, lg: 6 },
-      id: 'last-name',
       name: 'lastName',
       label: 'Last Name',
       defaultValue: values.lastName,
@@ -142,7 +140,17 @@ const formfields = [
   ],
 ];
 
-<form onSubmit={handleSubmit} autoComplete="off" noValidate>
-  <FormGenerator fieldsets={formfields} rowSpacing="8" />
-</form>;
+<>
+  {submittedFormData && (
+    <div className="margin-bottom-16">
+      <div className="text-color-green-200 text-weight-semibold">
+        Form Submitted!
+      </div>
+      {JSON.stringify(submittedFormData)}
+    </div>
+  )}
+  <form onSubmit={handleSubmit} autoComplete="off" noValidate>
+    <FormGenerator fieldsets={formfields} rowSpacing="8" />
+  </form>
+</>;
 ```

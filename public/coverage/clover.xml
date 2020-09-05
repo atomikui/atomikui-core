@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1598890537094" clover="3.2.0">
-  <project timestamp="1598890537094" name="All files">
-    <metrics statements="562" coveredstatements="534" conditionals="322" coveredconditionals="283" methods="179" coveredmethods="143" elements="1063" coveredelements="960" complexity="0" loc="562" ncloc="562" packages="53" files="56" classes="56"/>
+<coverage generated="1599335951890" clover="3.2.0">
+  <project timestamp="1599335951891" name="All files">
+    <metrics statements="568" coveredstatements="540" conditionals="328" coveredconditionals="289" methods="182" coveredmethods="146" elements="1078" coveredelements="975" complexity="0" loc="568" ncloc="568" packages="54" files="57" classes="57"/>
     <package name="accordion">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
       <file name="Accordion.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/accordion/Accordion.js">
@@ -102,10 +102,10 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Button.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/button/Button.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="15" type="stmt"/>
-        <line num="18" count="127" type="stmt"/>
-        <line num="37" count="15" type="stmt"/>
-        <line num="69" count="15" type="stmt"/>
+        <line num="5" count="16" type="stmt"/>
+        <line num="18" count="129" type="stmt"/>
+        <line num="37" count="16" type="stmt"/>
+        <line num="69" count="16" type="stmt"/>
       </file>
     </package>
     <package name="button-group">
@@ -325,18 +325,18 @@
       </file>
     </package>
     <package name="dropdown">
-      <metrics statements="9" coveredstatements="9" conditionals="13" coveredconditionals="13" methods="3" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="9" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="2"/>
       <file name="Dropdown.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/dropdown/Dropdown.js">
-        <metrics statements="9" coveredstatements="9" conditionals="13" coveredconditionals="13" methods="3" coveredmethods="2"/>
+        <metrics statements="9" coveredstatements="9" conditionals="18" coveredconditionals="18" methods="3" coveredmethods="2"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="24" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="25" count="6" type="cond" truecount="2" falsecount="0"/>
-        <line num="26" count="6" type="stmt"/>
-        <line num="27" count="6" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="66" count="42" type="stmt"/>
-        <line num="88" count="1" type="stmt"/>
-        <line num="124" count="1" type="stmt"/>
+        <line num="25" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="8" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="30" count="8" type="stmt"/>
+        <line num="68" count="56" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="128" count="1" type="stmt"/>
       </file>
     </package>
     <package name="file-upload">
@@ -372,27 +372,39 @@
       <metrics statements="11" coveredstatements="11" conditionals="23" coveredconditionals="22" methods="2" coveredmethods="2"/>
       <file name="FormField.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/form-field/FormField.js">
         <metrics statements="11" coveredstatements="11" conditionals="23" coveredconditionals="22" methods="2" coveredmethods="2"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="29" count="6" type="stmt"/>
-        <line num="53" count="157" type="cond" truecount="2" falsecount="0"/>
-        <line num="54" count="157" type="cond" truecount="2" falsecount="0"/>
-        <line num="55" count="157" type="stmt"/>
-        <line num="56" count="157" type="stmt"/>
-        <line num="57" count="157" type="cond" truecount="2" falsecount="0"/>
-        <line num="59" count="157" type="cond" truecount="2" falsecount="0"/>
-        <line num="61" count="157" type="stmt"/>
-        <line num="127" count="6" type="stmt"/>
-        <line num="172" count="6" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="53" count="159" type="cond" truecount="2" falsecount="0"/>
+        <line num="54" count="159" type="cond" truecount="2" falsecount="0"/>
+        <line num="55" count="159" type="stmt"/>
+        <line num="56" count="159" type="stmt"/>
+        <line num="57" count="159" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="159" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="159" type="stmt"/>
+        <line num="127" count="7" type="stmt"/>
+        <line num="172" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="form-generator">
+      <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <file name="FormGenerator.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/form-generator/FormGenerator.js">
+        <metrics statements="6" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
       </file>
     </package>
     <package name="hint">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Hint.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/hint/Hint.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="14" type="stmt"/>
+        <line num="5" count="15" type="stmt"/>
         <line num="6" count="42" type="stmt"/>
-        <line num="18" count="14" type="stmt"/>
-        <line num="27" count="14" type="stmt"/>
+        <line num="18" count="15" type="stmt"/>
+        <line num="27" count="15" type="stmt"/>
       </file>
     </package>
     <package name="jumbotron">
@@ -409,10 +421,10 @@
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Label.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/label/Label.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="13" type="stmt"/>
-        <line num="6" count="96" type="stmt"/>
-        <line num="13" count="13" type="stmt"/>
-        <line num="20" count="13" type="stmt"/>
+        <line num="5" count="14" type="stmt"/>
+        <line num="6" count="100" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="20" count="14" type="stmt"/>
       </file>
     </package>
     <package name="link">
