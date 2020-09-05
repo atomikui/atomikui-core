@@ -9,7 +9,7 @@ const personalInfo = [
   [
     {
       Component: FormField,
-      colsProps: { sm: 12, md: 6, lg: 6 },
+      colProps: { sm: 12, md: 6, lg: 6 },
       name: 'firstName',
       label: 'First Name',
       onChange: (e) => console.log(e.target.value),
@@ -18,7 +18,7 @@ const personalInfo = [
   [
     {
       Component: FormField,
-      colsProps: { sm: 12, md: 6, lg: 6 },
+      colProps: { sm: 12, md: 6, lg: 6 },
       name: 'lastName',
       label: 'Last Name',
       onChange: (e) => console.log(e.target.value),
@@ -27,7 +27,7 @@ const personalInfo = [
   [
     {
       Component: FormField,
-      colsProps: { sm: 12, md: 2, lg: 2 },
+      colProps: { sm: 12, md: 2, lg: 2 },
       id: 'mi',
       name: 'mi',
       label: 'Middle Initial',
@@ -37,7 +37,7 @@ const personalInfo = [
   [
     {
       Component: FormField,
-      colsProps: { sm: 12, md: 6, lg: 6 },
+      colProps: { sm: 12, md: 6, lg: 6 },
       id: 'email',
       name: 'email',
       label: 'Email Address',
@@ -47,7 +47,7 @@ const personalInfo = [
   [
     {
       Component: FormField,
-      colsProps: { sm: 12, md: 6, lg: 6 },
+      colProps: { sm: 12, md: 6, lg: 6 },
       id: 'phone',
       name: 'phone',
       label: 'Phone Number',
@@ -73,11 +73,21 @@ const personalInfo = [
 </form>;
 ```
 
+### Layout
+
+The FormGenerator uses [React-Flexbox-Grid](http://roylee0704.github.io/react-flexbox-grid/) to handle the layout of the form. Each form field is wrapped in a column whose width can be controlled by the `colProps` property.
+
+For example, `colProps: { sm: 12, md: 6, lg: 6 }` will set a form fields column to 12 on small devices and 6 on medium and large devices.
+
+By default, `colProps` is set to `12` for all breakpoints if otherwise not specified.
+<br /><br />
+
 ### Validation
 
-The FormGenerator is a presentational component, thus validation needs to be handled separately. the examplee below demonstrates how to integrate [Formik](https://jaredpalmer.com/formik) and [Yup](https://www.npmjs.com/package/yup) with the FormGenerator.
+The FormGenerator is a presentational component, thus validation needs to be handled separately. The example below demonstrates how to integrate [Formik](https://jaredpalmer.com/formik) and [Yup](https://www.npmjs.com/package/yup) with the FormGenerator.
 
 **NOTE:** If you are using a third-party validator like Formik to handle your form's state, you must use `defaultValue` or `defaultChecked` to set the values of your form fields since React considers them uncontrolled.
+<br /><br />
 
 ```jsx
 import { FormGenerator, FormField, Button } from '@alaneicker/atomik-ui';
@@ -108,7 +118,7 @@ const formfields = [
   [
     {
       Component: FormField,
-      colsProps: { sm: 12, md: 6, lg: 6 },
+      colProps: { sm: 12, md: 6, lg: 6 },
       name: 'firstName',
       label: 'First Name',
       defaultValue: values.firstName,
@@ -120,7 +130,7 @@ const formfields = [
   [
     {
       Component: FormField,
-      colsProps: { sm: 12, md: 6, lg: 6 },
+      colProps: { sm: 12, md: 6, lg: 6 },
       name: 'lastName',
       label: 'Last Name',
       defaultValue: values.lastName,

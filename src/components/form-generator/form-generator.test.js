@@ -12,7 +12,7 @@ describe('<FormGenerator />', () => {
     [
       {
         Component: FormField,
-        colsProps: { sm: 12, md: 6, lg: 6 },
+        colProps: { sm: 12, md: 6, lg: 6 },
         name: 'firstName',
         label: 'First Name',
         onChange: (e) => console.log(e.target.value),

@@ -19,13 +19,13 @@ const FormGenerator = ({ rowSpacing, fieldsets }) => {
                 (
                   {
                     Component,
-                    colsProps = { sm: 12, md: 12, lg: 12 },
+                    colProps = { sm: 12, md: 12, lg: 12 },
                     ...props
                   },
                   colIndex,
                 ) => {
                   return (
-                    <Col key={`col-${colIndex}`} {...colsProps}>
+                    <Col key={`col-${colIndex}`} {...colProps}>
                       <Component {...props} />
                     </Col>
                   );
