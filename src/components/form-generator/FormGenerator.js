@@ -47,7 +47,7 @@ FormGenerator.propTypes = {
 };
 
 FormGenerator.defaultProps = {
-  className: '',
+  rowSpacing: null,
   fieldsets: [],
 };
 
