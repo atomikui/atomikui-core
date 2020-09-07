@@ -82,7 +82,7 @@ const FormField = forwardRef(
             )}
             placeholder={placeholder}
             {...(value && { value })}
-            {...(defaultValue && { defaultValue })}
+            {...(defaultValue && !value && { defaultValue })}
             defaultValue={defaultValue}
             aria-describedby={`${inputHintId} ${inputErrorId}`}
             required={required}
@@ -101,7 +101,7 @@ const FormField = forwardRef(
             mask={mask}
             placeholder={placeholder}
             {...(value && { value })}
-            {...(defaultValue && { defaultValue })}
+            {...(defaultValue && !value && { defaultValue })}
             aria-describedby={`${inputHintId} ${inputErrorId}`}
             readOnly={readOnly}
             disabled={disabled}

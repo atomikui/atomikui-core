@@ -54,7 +54,7 @@ const CheckOption = forwardRef(
             aria-describedby={`${inputHintId} ${inputErrorId}`}
             onChange={onChange}
             {...(checked && { checked })}
-            {...(defaultChecked && { defaultChecked })}
+            {...(defaultChecked && !checked && { defaultChecked })}
             required
             {...others}
           />

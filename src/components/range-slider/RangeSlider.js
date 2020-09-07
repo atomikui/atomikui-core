@@ -1,121 +1,131 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, forwardRef } from 'react';
+import mergeRefs from 'react-merge-refs';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import Hint from '../hint';
 import Label from '../label';
 
-const RangeSlider = ({
-  className,
-  disabled,
-  errorText,
-  hasError,
-  helpText,
-  hideLabelsOnMobile,
-  id,
-  label,
-  max,
-  min,
-  name,
-  onChange,
-  required,
-  step,
-  type,
-  ticks,
-  value,
-  ...others
-}) => {
-  const sliderRef = useRef();
-  const [rangeValue, setRangeValue] = useState(value);
+const RangeSlider = forwardRef(
+  (
+    {
+      className,
+      defaultValue,
+      disabled,
+      errorText,
+      hasError,
+      helpText,
+      hideLabelsOnMobile,
+      id,
+      label,
+      max,
+      min,
+      name,
+      onChange,
+      required,
+      step,
+      type,
+      ticks,
+      value,
+      ...others
+    },
+    ref,
+  ) => {
+    const sliderRef = useRef();
+    const [rangeValue, setRangeValue] = useState(value || defaultValue);
 
-  const uid = id || shortid.generate();
-  const inputName = name || uid;
-  const inputHintId = `${inputName}_hint`;
-  const inputErrorId = `${inputName}_error`;
+    const uid = id || shortid.generate();
+    const inputName = name || uid;
+    const inputHintId = `${inputName}_hint`;
+    const inputErrorId = `${inputName}_error`;
 
-  const handleChange = (updateValue) => {
-    setRangeValue(updateValue);
-    onChange(updateValue);
-    sliderRef.current.focus();
-  };
+    const handleChange = (updateValue) => {
+      setRangeValue(updateValue);
+      onChange(updateValue);
+      sliderRef.current.focus();
+    };
 
-  return (
-    <>
-      {label && <Label>{label}</Label>}
-      <div
-        className={classnames('atomikui-range-slider', className, {
-          'has-error': hasError,
-          'is-disabled': disabled,
-        })}
-      >
-        <input
-          ref={sliderRef}
-          id={uid}
-          aria-valuemin={min}
-          aria-valuemax={max}
-          aria-valuetext={`$${rangeValue}`}
-          aria-describedby={`${inputErrorId} ${inputHintId}`}
-          min={min}
-          max={max}
-          step={step}
-          value={rangeValue}
-          type="range"
-          onChange={(e) => {
-            return handleChange(e.target.value);
-          }}
-          required={required}
-          disabled={disabled}
-          {...others}
-        />
-        {ticks && (
-          <div className="atomikui-range-slider__ticks" aria-hidden="true">
-            {ticks.map(({ text, val }) => {
-              return (
-                <div
-                  key={shortid.generate()}
-                  className="atomikui-range-slider__ticks__tick"
-                  onClick={
-                    !disabled
-                      ? () => {
-                          return handleChange(val);
-                        }
-                      : null
-                  }
-                >
+    return (
+      <>
+        {label && <Label>{label}</Label>}
+        <div
+          className={classnames('atomikui-range-slider', className, {
+            'has-error': hasError,
+            'is-disabled': disabled,
+          })}
+        >
+          <input
+            ref={mergeRefs([sliderRef, ref])}
+            id={uid}
+            aria-valuemin={min}
+            aria-valuemax={max}
+            aria-valuetext={`$${rangeValue}`}
+            aria-describedby={`${inputErrorId} ${inputHintId}`}
+            min={min}
+            max={max}
+            step={step}
+            {...(value && { value: rangeValue })}
+            {...(defaultValue && !value && { defaultValue: rangeValue })}
+            type="range"
+            onChange={(e) => {
+              return handleChange(e.target.value);
+            }}
+            required={required}
+            disabled={disabled}
+            {...others}
+          />
+          {ticks && (
+            <div className="atomikui-range-slider__ticks" aria-hidden="true">
+              {ticks.map(({ text, val }) => {
+                return (
                   <div
-                    className={classnames(
-                      'atomikui-range-slider__ticks__label',
-                      {
-                        'is-selected': val === rangeValue,
-                        'is-hidden-on-mobile': hideLabelsOnMobile,
-                      },
-                    )}
+                    key={shortid.generate()}
+                    className="atomikui-range-slider__ticks__tick"
+                    onClick={
+                      !disabled
+                        ? () => {
+                            return handleChange(val);
+                          }
+                        : null
+                    }
                   >
-                    {text}
+                    <div
+                      className={classnames(
+                        'atomikui-range-slider__ticks__label',
+                        {
+                          'is-selected': val === rangeValue,
+                          'is-hidden-on-mobile': hideLabelsOnMobile,
+                        },
+                      )}
+                    >
+                      {text}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
-      {(helpText || errorText) && (
-        <div className="margin-top-2">
-          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-          {hasError && (
-            <Hint id={inputErrorId} type="error">
-              {errorText}
-            </Hint>
+                );
+              })}
+            </div>
           )}
         </div>
-      )}
-    </>
-  );
-};
+        {(helpText || errorText) && (
+          <div className="margin-top-2">
+            {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+            {hasError && (
+              <Hint id={inputErrorId} type="error">
+                {errorText}
+              </Hint>
+            )}
+          </div>
+        )}
+      </>
+    );
+  },
+);
 
 RangeSlider.propTypes = {
   /** Specifies custom component classes. */
   className: PropTypes.string,
+  /** Sets the defaultValue for uncontrolled range slider */
+  defaultValue: PropTypes.string,
   /** Specifies range slider disabled state. */
   disabled: PropTypes.bool,
   /** Text to be displayed when there is an error. */
@@ -155,6 +165,7 @@ RangeSlider.propTypes = {
 
 RangeSlider.defaultProps = {
   className: '',
+  defaultValue: null,
   disabled: false,
   errorText: '',
   hasError: false,
