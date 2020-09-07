@@ -90,7 +90,12 @@ The FormGenerator is a presentational component, thus validation needs to be han
 <br /><br />
 
 ```jsx
-import { FormGenerator, FormField, Button } from '@alaneicker/atomik-ui';
+import {
+  FormGenerator,
+  FormField,
+  Button,
+  DatePicker,
+} from '@alaneicker/atomik-ui';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 
@@ -99,14 +104,23 @@ const [submittedFormData, setSubmittedFormData] = React.useState(null);
 const initialValues = {
   firstName: '',
   lastName: '',
+  date: '',
 };
 
 const validationSchema = yup.object().shape({
   firstName: yup.string().required('First name is required'),
   lastName: yup.string().required('Last name is required'),
+  date: yup.string().required('Date is required'),
 });
 
-const { handleSubmit, handleChange, values, errors, touched } = useFormik({
+const {
+  handleSubmit,
+  handleChange,
+  setFieldValue,
+  values,
+  errors,
+  touched,
+} = useFormik({
   initialValues,
   validationSchema,
   onSubmit: (formData) => {
@@ -137,6 +151,18 @@ const formfields = [
       hasError: !!errors.lastName && touched.lastName,
       errorText: errors.lastName,
       onChange: handleChange,
+    },
+  ],
+  [
+    {
+      Component: DatePicker,
+      colProps: { sm: 12, md: 6, lg: 6 },
+      name: 'date',
+      label: 'Select a Date',
+      defaultValue: values.date,
+      hasError: !!errors.date && touched.date,
+      errorText: errors.date,
+      onChange: (date) => setFieldValue('date', date),
     },
   ],
   [
