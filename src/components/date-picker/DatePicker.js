@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
@@ -11,112 +11,110 @@ import Label from '../label';
 import validateDate from '../../utilities/validate-date';
 import Overlay from '../overlay';
 
-const DatePicker = ({
-  className,
-  disabled,
-  label,
-  onChange,
-  onDateChange,
-  value,
-  ...others
-}) => {
-  const calendar = useRef();
-  const [focusTrap, setFocusTrap] = useState(null);
-  const [theValue, setTheValue] = useState(validateDate(value) || new Date());
-  const [isOpen, setIsOpen] = useState(false);
+const DatePicker = forwardRef(
+  (
+    { className, disabled, label, onChange, onDateChange, value, ...others },
+    ref,
+  ) => {
+    const calendar = useRef();
+    const [focusTrap, setFocusTrap] = useState(null);
+    const [theValue, setTheValue] = useState(validateDate(value) || new Date());
+    const [isOpen, setIsOpen] = useState(false);
 
-  const cancel = () => {
-    setIsOpen(false);
-  };
+    const cancel = () => {
+      setIsOpen(false);
+    };
 
-  const handleDateChange = (details) => {
-    const date = new Date(details)
-      .toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-      })
-      .toString();
+    const handleDateChange = (details) => {
+      const date = new Date(details)
+        .toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+        })
+        .toString();
 
-    if (date === 'Invalid Date') {
+      if (date === 'Invalid Date') {
+        onChange(date);
+        return;
+      }
+
+      setTheValue(date);
       onChange(date);
-      return;
-    }
+      setIsOpen(false);
+    };
 
-    setTheValue(date);
-    onChange(date);
-    setIsOpen(false);
-  };
+    const handleKeyDown = (e) => {
+      if (e.keyCode === 27) {
+        cancel();
+      }
+    };
 
-  const handleKeyDown = (e) => {
-    if (e.keyCode === 27) {
-      cancel();
-    }
-  };
+    useEffect(() => {
+      setFocusTrap(
+        createFocusTrap(calendar.current, {
+          allowOutsideClick: () => {
+            return true;
+          },
+          clickOutsideDeactivates: false,
+          escapeDeactivates: true,
+          fallbackFocus: calendar,
+        }),
+      );
+    }, [calendar]);
 
-  useEffect(() => {
-    setFocusTrap(
-      createFocusTrap(calendar.current, {
-        allowOutsideClick: () => {
-          return true;
-        },
-        clickOutsideDeactivates: false,
-        escapeDeactivates: true,
-        fallbackFocus: calendar,
-      }),
-    );
-  }, [calendar]);
+    useEffect(() => {
+      if (focusTrap) {
+        setTimeout(() => {
+          focusTrap[isOpen ? 'activate' : 'deactivate']();
+        }, 200);
+      }
+    }, [focusTrap, isOpen]);
 
-  useEffect(() => {
-    if (focusTrap) {
-      setTimeout(() => {
-        focusTrap[isOpen ? 'activate' : 'deactivate']();
-      }, 200);
-    }
-  }, [focusTrap, isOpen]);
-
-  return (
-    <div className={classnames('atomikui-date-picker', className)}>
-      {label && (
-        <div className="atomikui-date-picker__label">
-          <Label>{label}</Label>
-        </div>
-      )}
-      <div className="atomikui-date-picker__input">
-        <FormField
-          mask="99/99/9999"
-          onBlur={(e) => {
-            return handleDateChange(e.target.value);
-          }}
-          value={theValue}
-          disabled={disabled}
-          {...others}
-        />
-        <Button
-          className="atomikui-date-picker__input__btn"
-          theme="hollow"
-          size="md"
-          onClick={() => {
-            return setIsOpen(!isOpen);
-          }}
-          disabled={disabled}
-        >
-          <Icon icon={faCalendarAlt} size="lg" />
-        </Button>
-      </div>
-      <Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}>
-        <div className="atomikui-date-picker__calendar" ref={calendar}>
-          <Calendar
-            onChange={(details) => {
-              return handleDateChange(details);
+    return (
+      <div className={classnames('atomikui-date-picker', className)}>
+        {label && (
+          <div className="atomikui-date-picker__label">
+            <Label>{label}</Label>
+          </div>
+        )}
+        <div className="atomikui-date-picker__input">
+          <FormField
+            ref={ref}
+            mask="99/99/9999"
+            onBlur={(e) => {
+              return handleDateChange(e.target.value);
             }}
-            value={new Date(theValue)}
+            value={theValue}
+            disabled={disabled}
+            {...others}
           />
+          <Button
+            className="atomikui-date-picker__input__btn"
+            theme="hollow"
+            size="md"
+            onClick={() => {
+              return setIsOpen(!isOpen);
+            }}
+            disabled={disabled}
+          >
+            <Icon icon={faCalendarAlt} size="lg" />
+          </Button>
         </div>
-      </Overlay>
-    </div>
-  );
-};
+        <Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}>
+          <div className="atomikui-date-picker__calendar" ref={calendar}>
+            <Calendar
+              onChange={(details) => {
+                return handleDateChange(details);
+              }}
+              value={new Date(theValue)}
+            />
+          </div>
+        </Overlay>
+      </div>
+    );
+  },
+);
 
 DatePicker.propTypes = {
   /** Adds custom component CSS classes */

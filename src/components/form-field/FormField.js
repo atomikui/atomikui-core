@@ -72,7 +72,7 @@ const FormField = forwardRef(
         )}
         {type === 'textarea' ? (
           <textarea
-            ref={ref}
+            {...(!mask && { ref })}
             id={uid}
             name={inputName}
             className={classnames(
@@ -93,7 +93,7 @@ const FormField = forwardRef(
           />
         ) : (
           <Input
-            ref={ref}
+            {...(!mask && { ref })}
             id={uid}
             name={inputName}
             className={classnames('atomikui-formfield__input', className, {})}
