@@ -1,71 +1,76 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
 
-const Switch = ({
-  className,
-  checked,
-  disabled,
-  errorText,
-  hasError,
-  helpText,
-  id,
-  label,
-  layout,
-  name,
-  onChange,
-  required,
-}) => {
-  const uid = id || shortid.generate();
-  const inputName = name || uid;
-  const inputHintId = `${inputName}_hint`;
-  const inputErrorId = `${inputName}_error`;
+const Switch = forwardRef(
+  (
+    {
+      className,
+      checked,
+      disabled,
+      errorText,
+      hasError,
+      helpText,
+      id,
+      label,
+      layout,
+      name,
+      onChange,
+      required,
+    },
+    ref,
+  ) => {
+    const uid = id || shortid.generate();
+    const inputName = name || uid;
+    const inputHintId = `${inputName}_hint`;
+    const inputErrorId = `${inputName}_error`;
 
-  return (
-    <>
-      <div
-        htmlFor={uid}
-        className={classnames('atomikui-switch', className, {
-          'is-checked': checked,
-          'is-disabled': disabled,
-          'is-stacked': layout === 'stacked',
-          'has-error': hasError,
-        })}
-      >
-        <input
-          id={uid}
-          name={inputName}
-          className="atomikui-switch__input"
-          type="checkbox"
-          checked={checked}
-          required={required}
-          aria-describedby={`${inputHintId} ${inputErrorId}`}
-          onChange={onChange}
-        />
-        <div className="atomikui-switch__label">
-          <Label htmlFor={uid}>{label}</Label>
-        </div>
+    return (
+      <>
         <div
-          className="atomikui-switch__toggle"
-          onClick={!disabled ? onChange : null}
-        ></div>
-      </div>
-      {(helpText || errorText) && (
-        <div className="margin-top-2">
-          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-          {hasError && (
-            <Hint id={inputErrorId} type="error">
-              {errorText}
-            </Hint>
-          )}
+          htmlFor={uid}
+          className={classnames('atomikui-switch', className, {
+            'is-checked': checked,
+            'is-disabled': disabled,
+            'is-stacked': layout === 'stacked',
+            'has-error': hasError,
+          })}
+        >
+          <input
+            id={uid}
+            name={inputName}
+            className="atomikui-switch__input"
+            type="checkbox"
+            checked={checked}
+            required={required}
+            aria-describedby={`${inputHintId} ${inputErrorId}`}
+            onChange={onChange}
+          />
+          <div className="atomikui-switch__label">
+            <Label htmlFor={uid}>{label}</Label>
+          </div>
+          <div
+            className="atomikui-switch__toggle"
+            onClick={!disabled ? onChange : null}
+          ></div>
         </div>
-      )}
-    </>
-  );
-};
+        {(helpText || errorText) && (
+          <div className="margin-top-2">
+            {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+            {hasError && (
+              <Hint id={inputErrorId} type="error">
+                {errorText}
+              </Hint>
+            )}
+          </div>
+        )}
+      </>
+    );
+  },
+);
 
 Switch.propTypes = {
   /** Specifies custom component classes. */
