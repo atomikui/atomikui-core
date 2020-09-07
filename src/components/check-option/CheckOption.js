@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
@@ -9,76 +9,88 @@ import Label from '../label/Label';
 
 const types = ['checkbox', 'radio'];
 
-const CheckOption = ({
-  className,
-  checked,
-  disabled,
-  errorText,
-  hasError,
-  helpText,
-  id,
-  label,
-  name,
-  onChange,
-  required,
-  type,
-  ...others
-}) => {
-  const uid = id || shortid.generate();
-  const inputName = name || uid;
-  const inputHintId = `${inputName}_hint`;
-  const inputErrorId = `${inputName}_error`;
-  const fieldType = !types.includes(type) ? 'checkbox' : type;
+const CheckOption = forwardRef(
+  (
+    {
+      className,
+      checked,
+      defaultChecked,
+      disabled,
+      errorText,
+      hasError,
+      helpText,
+      id,
+      label,
+      name,
+      onChange,
+      required,
+      type,
+      ...others
+    },
+    ref,
+  ) => {
+    const uid = id || shortid.generate();
+    const inputName = name || uid;
+    const inputHintId = `${inputName}_hint`;
+    const inputErrorId = `${inputName}_error`;
+    const fieldType = !types.includes(type) ? 'checkbox' : type;
 
-  return (
-    <>
-      <Label
-        htmlFor={uid}
-        className={classnames('atomikui-check-option', className, {
-          'has-error': hasError,
-          'is-disabled': disabled,
-          'atomikui-check-option--radio': type === 'radio',
-        })}
-      >
-        <input
-          id={uid}
-          type={fieldType}
-          name={inputName}
-          checked={checked}
-          disabled={disabled}
-          aria-describedby={`${inputHintId} ${inputErrorId}`}
-          onChange={onChange}
-          required
-          {...others}
-        />
-        <span className="atomikui-check-option__icon">
-          <Icon
-            className={classnames({ 'is-hidden': !checked })}
-            icon={faCheck}
-            color="white"
+    return (
+      <>
+        <Label
+          htmlFor={uid}
+          className={classnames('atomikui-check-option', className, {
+            'has-error': hasError,
+            'is-disabled': disabled,
+            'atomikui-check-option--radio': type === 'radio',
+          })}
+        >
+          <input
+            ref={ref}
+            id={uid}
+            type={fieldType}
+            name={inputName}
+            disabled={disabled}
+            aria-describedby={`${inputHintId} ${inputErrorId}`}
+            onChange={onChange}
+            {...(checked && { checked })}
+            {...(defaultChecked && { defaultChecked })}
+            required
+            {...others}
           />
-        </span>
-        {label}
-      </Label>
-      {(helpText || errorText) && (
-        <div className="margin-top-2">
-          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-          {hasError && (
-            <Hint id={inputErrorId} type="error">
-              {errorText}
-            </Hint>
-          )}
-        </div>
-      )}
-    </>
-  );
-};
+          <span className="atomikui-check-option__icon">
+            <Icon
+              className={classnames({
+                'is-hidden': !checked && !defaultChecked,
+              })}
+              icon={faCheck}
+              color="white"
+            />
+          </span>
+          {label}
+        </Label>
+        {(helpText || errorText) && (
+          <div className="margin-top-2">
+            {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+            {hasError && (
+              <Hint id={inputErrorId} type="error">
+                {errorText}
+              </Hint>
+            )}
+          </div>
+        )}
+      </>
+    );
+  },
+);
 
 CheckOption.propTypes = {
   /** Specifies custom component classes. */
   className: PropTypes.string,
   /** Specifies the form option checked state. */
   checked: PropTypes.bool,
+  /** Adds initial  default checked state for uncontrolled CheckOption */
+  defaultChecked: PropTypes.bool,
   /** Specifies form option disabled state. */
   disabled: PropTypes.bool,
   /** Text to be displayed when there is an error. */
@@ -104,6 +116,7 @@ CheckOption.propTypes = {
 CheckOption.defaultProps = {
   className: '',
   checked: false,
+  defaultChecked: false,
   disabled: false,
   errorText: '',
   hasError: false,
