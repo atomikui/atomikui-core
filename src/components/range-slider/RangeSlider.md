@@ -12,7 +12,7 @@ import { RangeSlider } from '@alaneicker/atomik-ui';
   min="100"
   max="1000"
   step="100"
-  defaultValue="400"
+  value="400"
   onChange={(value) => console.log(value)}
 />;
 ```
