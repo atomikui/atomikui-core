@@ -29,7 +29,7 @@ const Avatar = ({
         })}
       >
         {src && <img className="atomikui-avatar__image" src={src} alt={alt} />}
-        {children && children}
+        {children}
       </span>
       {label && <span className="atomikui-avatar__label">{label}</span>}
     </span>
