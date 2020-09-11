@@ -19,6 +19,27 @@
     font-size: rem(12);
   }
 
+  &--thin {
+    height: rem(10);
+  }
+
+  &--thick {
+    height: rem(30);
+  }
+
+  &--extra-thick {
+    height: rem(40);
+  }
+
+  &--pill,
+  &--pill > &__bar {
+    border-radius: rem(40);
+  }
+
+  &--square {
+    border-radius: 0;
+  }
+
   &--error > &__bar {
     background: $red-100;
   }

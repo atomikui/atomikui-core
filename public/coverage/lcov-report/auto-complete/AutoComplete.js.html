@@ -154,13 +154,16 @@
 <a name='L95'></a><a href='#L95'>95</a>
 <a name='L96'></a><a href='#L96'>96</a>
 <a name='L97'></a><a href='#L97'>97</a>
-<a name='L98'></a><a href='#L98'>98</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
@@ -229,19 +232,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -251,80 +241,96 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState, forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Downshift from 'downshift';
 import FormField from '../form-field';
 &nbsp;
-const AutoComplete = ({ className, items, onChange, value, ...others }) =&gt; {
-  const [itemList] = useState(items);
+const AutoComplete = forwardRef(
+  ({ className, items, onChange, value, ...others }, ref) =&gt; {
+    const [itemList] = useState(items);
 &nbsp;
-  return (
-    &lt;Downshift
-      onChange={(selection) =&gt; {
-        return onChange(selection ? selection.value : '');
-      }}
-      itemToString={(item) =&gt; {
-        return item ? item.value : <span class="branch-1 cbranch-no" title="branch not covered" >'';</span>
-      }}
-      initialInputValue={value}
-      initialSelectedItem={{ value }}
-    &gt;
-      {({
-        getInputProps,
-        getItemProps,
-        getMenuProps,
-        highlightedIndex,
-        isOpen,
-        inputValue,
-        getRootProps,
-        selectedItem,
-      }) =&gt; {
-        return (
-          &lt;div
-            className={classnames('atomikui-auto-complete', className)}
-            {...getRootProps({}, { suppressRefError: true })}
-          &gt;
-            &lt;FormField {...getInputProps()} {...others} /&gt;
-            &lt;ul className="atomikui-auto-complete__list" {...getMenuProps()}&gt;
-              {isOpen
-                ? itemList
-                    .filter((item) =&gt; {
-                      return (
-                        !inputValue ||
-                        item.value
-                          .toLowerCase()
-                          .includes(inputValue.toLowerCase())
-                      );
-                    })
-                    .map((item, index) =&gt; {
-                      return (
-                        &lt;li
-                          className={classnames({
-                            'is-selected': selectedItem
-                              ? selectedItem.value === item.value
-                              : <span class="branch-1 cbranch-no" title="branch not covered" >false,</span>
-                            'is-highlighted': highlightedIndex === index,
-                          })}
-                          {...getItemProps({
-                            key: item.value,
-                            index,
-                            item,
-                          })}
-                        &gt;
-                          {item.value}
-                        &lt;/li&gt;
-                      );
-                    })
-                : null}
-            &lt;/ul&gt;
-          &lt;/div&gt;
-        );
-      }}
-    &lt;/Downshift&gt;
-  );
-};
+    return (
+      &lt;Downshift
+        onChange={(selection) =&gt; {
+          return onChange(selection ? selection.value : '');
+        }}
+        itemToString={(item) =&gt; {
+          return item ? item.value : <span class="branch-1 cbranch-no" title="branch not covered" >'';</span>
+        }}
+        initialInputValue={value}
+        initialSelectedItem={{ value }}
+      &gt;
+        {({
+          getInputProps,
+          getItemProps,
+          getMenuProps,
+          highlightedIndex,
+          isOpen,
+          inputValue,
+          getRootProps,
+          selectedItem,
+        }) =&gt; {
+          return (
+            &lt;div
+              className={classnames('atomikui-auto-complete', className)}
+              {...getRootProps({}, { suppressRefError: true })}
+            &gt;
+              &lt;FormField ref={ref} {...getInputProps()} {...others} /&gt;
+              &lt;ul className="atomikui-auto-complete__list" {...getMenuProps()}&gt;
+                {isOpen
+                  ? itemList
+                      .filter((item) =&gt; {
+                        return (
+                          !inputValue ||
+                          item.value
+                            .toLowerCase()
+                            .includes(inputValue.toLowerCase())
+                        );
+                      })
+                      .map((item, index) =&gt; {
+                        return (
+                          &lt;li
+                            className={classnames({
+                              'is-selected': selectedItem
+                                ? selectedItem.value === item.value
+                                : <span class="branch-1 cbranch-no" title="branch not covered" >false,</span>
+                              'is-highlighted': highlightedIndex === index,
+                            })}
+                            {...getItemProps({
+                              key: item.value,
+                              index,
+                              item,
+                            })}
+                          &gt;
+                            {item.value}
+                          &lt;/li&gt;
+                        );
+                      })
+                  : null}
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          );
+        }}
+      &lt;/Downshift&gt;
+    );
+  },
+);
 &nbsp;
 AutoComplete.propTypes = {
   /** Adds custom component CSS classes */
@@ -355,7 +361,7 @@ export default AutoComplete;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Sep 05 2020 14:59:11 GMT-0500 (Central Daylight Time)
+                at Fri Sep 11 2020 12:05:40 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

@@ -25,6 +25,31 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
 </>;
 ```
 
+### Shapes
+
+```jsx
+import { ProgressBar } from '@alaneicker/atomik-ui';
+
+<>
+  <ProgressBar now={60} />
+  <ProgressBar now={60} shape="pill" />
+  <ProgressBar now={60} shape="square" />
+</>;
+```
+
+### Thickness
+
+```jsx
+import { ProgressBar } from '@alaneicker/atomik-ui';
+
+<>
+  <ProgressBar now={60} thickness="thin" />
+  <ProgressBar now={60} />
+  <ProgressBar now={60} thickness="thick" />
+  <ProgressBar now={60} thickness="extra-thick" />
+</>;
+```
+
 ### Animated Progress Bar
 
 ```jsx

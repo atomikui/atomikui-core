@@ -200,9 +200,7 @@
 <a name='L141'></a><a href='#L141'>141</a>
 <a name='L142'></a><a href='#L142'>142</a>
 <a name='L143'></a><a href='#L143'>143</a>
-<a name='L144'></a><a href='#L144'>144</a>
-<a name='L145'></a><a href='#L145'>145</a>
-<a name='L146'></a><a href='#L146'>146</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L144'></a><a href='#L144'>144</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -216,10 +214,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -290,6 +284,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -322,20 +317,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -347,7 +328,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState, useEffect, useRef } from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
@@ -360,112 +356,110 @@ import Label from '../label';
 import validateDate from '../../utilities/validate-date';
 import Overlay from '../overlay';
 &nbsp;
-const DatePicker = ({
-  className,
-  disabled,
-  label,
-  onChange,
-  onDateChange,
-  value,
-  ...others
-}) =&gt; {
-  const calendar = useRef();
-  const [focusTrap, setFocusTrap] = useState(null);
-  const [theValue, setTheValue] = useState(validateDate(value) || new Date());
-  const [isOpen, setIsOpen] = useState(false);
+const DatePicker = forwardRef(
+  (
+    { className, disabled, label, onChange, onDateChange, value, ...others },
+    ref,
+  ) =&gt; {
+    const calendar = useRef();
+    const [focusTrap, setFocusTrap] = useState(null);
+    const [theValue, setTheValue] = useState(validateDate(value) || new Date());
+    const [isOpen, setIsOpen] = useState(false);
 &nbsp;
-  const cancel = () =&gt; {
-    setIsOpen(false);
-  };
+    const cancel = () =&gt; {
+      setIsOpen(false);
+    };
 &nbsp;
-  const handleDateChange = (details) =&gt; {
-    const date = new Date(details)
-      .toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-      })
-      .toString();
+    const handleDateChange = (details) =&gt; {
+      const date = new Date(details)
+        .toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+        })
+        .toString();
 &nbsp;
-    if (date === 'Invalid Date') {
+      if (date === 'Invalid Date') {
+        onChange(date);
+        return;
+      }
+&nbsp;
+      setTheValue(date);
       onChange(date);
-      return;
-    }
+      setIsOpen(false);
+    };
 &nbsp;
-    setTheValue(date);
-    onChange(date);
-    setIsOpen(false);
-  };
+    const handleKeyDown = (e) =&gt; {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (e.keyCode === 27) {
+        cancel();
+      }
+    };
 &nbsp;
-  const handleKeyDown = (e) =&gt; {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (e.keyCode === 27) {
-      cancel();
-    }
-  };
+    useEffect(() =&gt; {
+      setFocusTrap(
+        createFocusTrap(calendar.current, {
+          allowOutsideClick: <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+          },
+          clickOutsideDeactivates: false,
+          escapeDeactivates: true,
+          fallbackFocus: calendar,
+        }),
+      );
+    }, [calendar]);
 &nbsp;
-  useEffect(() =&gt; {
-    setFocusTrap(
-      createFocusTrap(calendar.current, {
-        allowOutsideClick: <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >          return true;</span>
-        },
-        clickOutsideDeactivates: false,
-        escapeDeactivates: true,
-        fallbackFocus: calendar,
-      }),
-    );
-  }, [calendar]);
+    useEffect(() =&gt; {
+      if (focusTrap) {
+        setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >          focusTrap[isOpen ? 'activate' : 'deactivate']();</span>
+        }, 200);
+      }
+    }, [focusTrap, isOpen]);
 &nbsp;
-  useEffect(() =&gt; {
-    if (focusTrap) {
-      setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >        focusTrap[isOpen ? 'activate' : 'deactivate']();</span>
-      }, 200);
-    }
-  }, [focusTrap, isOpen]);
-&nbsp;
-  return (
-    &lt;div className={classnames('atomikui-date-picker', className)}&gt;
-      {label &amp;&amp; (
-        &lt;div className="atomikui-date-picker__label"&gt;
-          &lt;Label&gt;{label}&lt;/Label&gt;
-        &lt;/div&gt;
-      )}
-      &lt;div className="atomikui-date-picker__input"&gt;
-        &lt;FormField
-          mask="99/99/9999"
-          onBlur={(e) =&gt; {
-            return handleDateChange(e.target.value);
-          }}
-          value={theValue}
-          disabled={disabled}
-          {...others}
-        /&gt;
-        &lt;Button
-          className="atomikui-date-picker__input__btn"
-          theme="hollow"
-          size="md"
-          onClick={() =&gt; {
-            return setIsOpen(!isOpen);
-          }}
-          disabled={disabled}
-        &gt;
-          &lt;Icon icon={faCalendarAlt} size="lg" /&gt;
-        &lt;/Button&gt;
-      &lt;/div&gt;
-      &lt;Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}&gt;
-        &lt;div className="atomikui-date-picker__calendar" ref={calendar}&gt;
-          &lt;Calendar
-            onChange={(details) =&gt; {
-              return handleDateChange(details);
+    return (
+      &lt;div className={classnames('atomikui-date-picker', className)}&gt;
+        {label &amp;&amp; (
+          &lt;div className="atomikui-date-picker__label"&gt;
+            &lt;Label&gt;{label}&lt;/Label&gt;
+          &lt;/div&gt;
+        )}
+        &lt;div className="atomikui-date-picker__input"&gt;
+          &lt;FormField
+            ref={ref}
+            mask="99/99/9999"
+            onBlur={(e) =&gt; {
+              return handleDateChange(e.target.value);
             }}
-            value={new Date(theValue)}
+            value={theValue}
+            disabled={disabled}
+            {...others}
           /&gt;
+          &lt;Button
+            className="atomikui-date-picker__input__btn"
+            theme="hollow"
+            size="md"
+            onClick={() =&gt; {
+              return setIsOpen(!isOpen);
+            }}
+            disabled={disabled}
+          &gt;
+            &lt;Icon icon={faCalendarAlt} size="lg" /&gt;
+          &lt;/Button&gt;
         &lt;/div&gt;
-      &lt;/Overlay&gt;
-    &lt;/div&gt;
-  );
-};
+        &lt;Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}&gt;
+          &lt;div className="atomikui-date-picker__calendar" ref={calendar}&gt;
+            &lt;Calendar
+              onChange={(details) =&gt; {
+                return handleDateChange(details);
+              }}
+              value={new Date(theValue)}
+            /&gt;
+          &lt;/div&gt;
+        &lt;/Overlay&gt;
+      &lt;/div&gt;
+    );
+  },
+);
 &nbsp;
 DatePicker.propTypes = {
   /** Adds custom component CSS classes */
@@ -499,7 +493,7 @@ export default DatePicker;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Sep 05 2020 14:59:11 GMT-0500 (Central Daylight Time)
+                at Fri Sep 11 2020 12:05:40 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

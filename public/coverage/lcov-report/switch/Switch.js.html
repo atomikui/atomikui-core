@@ -169,7 +169,12 @@
 <a name='L110'></a><a href='#L110'>110</a>
 <a name='L111'></a><a href='#L111'>111</a>
 <a name='L112'></a><a href='#L112'>112</a>
-<a name='L113'></a><a href='#L113'>113</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,6 +195,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
@@ -213,32 +222,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -281,74 +264,106 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
 &nbsp;
-const Switch = ({
-  className,
-  checked,
-  disabled,
-  errorText,
-  hasError,
-  helpText,
-  id,
-  label,
-  layout,
-  name,
-  onChange,
-  required,
-}) =&gt; {
-  const uid = id || shortid.generate();
-  const inputName = name || uid;
-  const inputHintId = `${inputName}_hint`;
-  const inputErrorId = `${inputName}_error`;
+const Switch = forwardRef(
+  (
+    {
+      className,
+      checked,
+      disabled,
+      errorText,
+      hasError,
+      helpText,
+      id,
+      label,
+      layout,
+      name,
+      onChange,
+      required,
+    },
+    ref,
+  ) =&gt; {
+    const uid = id || shortid.generate();
+    const inputName = name || uid;
+    const inputHintId = `${inputName}_hint`;
+    const inputErrorId = `${inputName}_error`;
 &nbsp;
-  return (
-    &lt;&gt;
-      &lt;div
-        htmlFor={uid}
-        className={classnames('atomikui-switch', className, {
-          'is-checked': checked,
-          'is-disabled': disabled,
-          'is-stacked': layout === 'stacked',
-          'has-error': hasError,
-        })}
-      &gt;
-        &lt;input
-          id={uid}
-          name={inputName}
-          className="atomikui-switch__input"
-          type="checkbox"
-          checked={checked}
-          required={required}
-          aria-describedby={`${inputHintId} ${inputErrorId}`}
-          onChange={onChange}
-        /&gt;
-        &lt;div className="atomikui-switch__label"&gt;
-          &lt;Label htmlFor={uid}&gt;{label}&lt;/Label&gt;
-        &lt;/div&gt;
+    return (
+      &lt;&gt;
         &lt;div
-          className="atomikui-switch__toggle"
-          onClick={!disabled ? onChange : null}
-        &gt;&lt;/div&gt;
-      &lt;/div&gt;
-      {(helpText || errorText) &amp;&amp; (
-        &lt;div className="margin-top-2"&gt;
-          {helpText &amp;&amp; &lt;Hint id={inputHintId}&gt;{helpText}&lt;/Hint&gt;}
-          {hasError &amp;&amp; (
-            &lt;Hint id={inputErrorId} type="error"&gt;
-              {errorText}
-            &lt;/Hint&gt;
-          )}
+          htmlFor={uid}
+          className={classnames('atomikui-switch', className, {
+            'is-checked': checked,
+            'is-disabled': disabled,
+            'is-stacked': layout === 'stacked',
+            'has-error': hasError,
+          })}
+        &gt;
+          &lt;input
+            id={uid}
+            name={inputName}
+            className="atomikui-switch__input"
+            type="checkbox"
+            checked={checked}
+            required={required}
+            aria-describedby={`${inputHintId} ${inputErrorId}`}
+            onChange={onChange}
+          /&gt;
+          &lt;div className="atomikui-switch__label"&gt;
+            &lt;Label htmlFor={uid}&gt;{label}&lt;/Label&gt;
+          &lt;/div&gt;
+          &lt;div
+            className="atomikui-switch__toggle"
+            onClick={!disabled ? onChange : null}
+          &gt;&lt;/div&gt;
         &lt;/div&gt;
-      )}
-    &lt;/&gt;
-  );
-};
+        {(helpText || errorText) &amp;&amp; (
+          &lt;div className="margin-top-2"&gt;
+            {helpText &amp;&amp; &lt;Hint id={inputHintId}&gt;{helpText}&lt;/Hint&gt;}
+            {hasError &amp;&amp; (
+              &lt;Hint id={inputErrorId} type="error"&gt;
+                {errorText}
+              &lt;/Hint&gt;
+            )}
+          &lt;/div&gt;
+        )}
+      &lt;/&gt;
+    );
+  },
+);
 &nbsp;
 Switch.propTypes = {
   /** Specifies custom component classes. */
@@ -400,7 +415,7 @@ export default Switch;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sat Sep 05 2020 14:59:11 GMT-0500 (Central Daylight Time)
+                at Fri Sep 11 2020 12:05:40 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>
