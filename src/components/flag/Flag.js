@@ -5,8 +5,8 @@ import Flags from 'country-flag-icons/react/3x2';
 import getUnicodeFlagIcon from 'country-flag-icons/unicode';
 
 const Flag = ({ country, title, unicode }) => {
-  const TheFlag = Flags[country];
-  return unicode ? getUnicodeFlagIcon(country) : <TheFlag title={title} />;
+  const FlagIcon = Flags[country];
+  return unicode ? getUnicodeFlagIcon(country) : <FlagIcon title={title} />;
 };
 
 Flag.propTypes = {

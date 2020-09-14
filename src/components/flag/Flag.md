@@ -14,7 +14,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
           sm={3}
           md={2}
           lg={1}
-          className="text-align-center"
+          className="text-align-center padding-bottom-8"
         >
           <Flag country={country} title={country} />
           <div>{country}</div>
