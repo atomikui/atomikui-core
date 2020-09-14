@@ -14,7 +14,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
           sm={3}
           md={2}
           lg={1}
-          className="text-align-center padding-bottom-8"
+          className="text-align-center padding-bottom-8 line-height-flush"
         >
           <Flag country={country} title={country} />
           <div>{country}</div>
@@ -39,7 +39,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
           key={`unicode-${country}`}
           xs={1}
           md={1}
-          className="text-align-center"
+          className="text-align-center padding-bottom-8"
         >
           <Flag country={country} unicode />
           <div>{country}</div>
