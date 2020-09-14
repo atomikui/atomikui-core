@@ -12,4 +12,7 @@ module.exports = {
       exampleMode: 'expand',
     },
   ],
+  components: () => {
+    return ['src/components/flag/Flag.js'];
+  },
 };
