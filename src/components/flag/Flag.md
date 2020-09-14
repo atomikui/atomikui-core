@@ -8,7 +8,14 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
   <Row>
     {Flag.countries.map((country) => {
       return (
-        <Col xs={3} sm={3} md={2} lg={1} className="text-align-center">
+        <Col
+          key={`svg-${country}`}
+          xs={3}
+          sm={3}
+          md={2}
+          lg={1}
+          className="text-align-center"
+        >
           <Flag country={country} title={country} />
           <div>{country}</div>
         </Col>
@@ -28,7 +35,12 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
   <Row>
     {Flag.countries.map((country) => {
       return (
-        <Col xs={1} md={1} className="text-align-center">
+        <Col
+          key={`unicode-${country}`}
+          xs={1}
+          md={1}
+          className="text-align-center"
+        >
           <Flag country={country} unicode />
           <div>{country}</div>
         </Col>

@@ -6,7 +6,15 @@ import Flag from './Flag';
 configure({ adapter: new Adapter() });
 
 describe('<Flag />', () => {
-  beforeEach(() => {});
+  let flag;
+  beforeEach(() => {
+    flag = shallow(<Flag country="US" title="US" />);
+  });
 
-  it('Should render without errors', () => {});
+  it('Should render without errors', () => {
+    expect(flag).toHaveLength(1);
+
+    flag.setProps({ unicode: true });
+    expect(flag).toHaveLength(1);
+  });
 });
