@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1599843940174" clover="3.2.0">
-  <project timestamp="1599843940174" name="All files">
-    <metrics statements="545" coveredstatements="521" conditionals="348" coveredconditionals="300" methods="171" coveredmethods="139" elements="1064" coveredelements="960" complexity="0" loc="545" ncloc="545" packages="53" files="56" classes="56"/>
+<coverage generated="1600110130459" clover="3.2.0">
+  <project timestamp="1600110130460" name="All files">
+    <metrics statements="552" coveredstatements="528" conditionals="352" coveredconditionals="304" methods="173" coveredmethods="141" elements="1077" coveredelements="973" complexity="0" loc="552" ncloc="552" packages="54" files="57" classes="57"/>
     <package name="accordion">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
       <file name="Accordion.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/accordion/Accordion.js">
@@ -368,6 +368,18 @@
         <line num="161" count="1" type="stmt"/>
       </file>
     </package>
+    <package name="flag">
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+      <file name="Flag.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/flag/Flag.js">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="form-field">
       <metrics statements="11" coveredstatements="11" conditionals="33" coveredconditionals="28" methods="2" coveredmethods="2"/>
       <file name="FormField.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/form-field/FormField.js">
@@ -551,13 +563,14 @@
       </file>
     </package>
     <package name="progress-bar">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
       <file name="ProgressBar.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/progress-bar/ProgressBar.js">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="5" count="1" type="stmt"/>
         <line num="15" count="8" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="56" count="1" type="stmt"/>
+        <line num="21" count="32" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
       </file>
     </package>
     <package name="range-slider">
