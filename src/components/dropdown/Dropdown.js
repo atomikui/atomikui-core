@@ -1,91 +1,97 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
 
-const Dropdown = ({
-  className,
-  disabled,
-  errorText,
-  hasError,
-  helpText,
-  id,
-  label,
-  labelless,
-  name,
-  onChange,
-  options,
-  required,
-  value,
-  defaultValue,
-  ...others
-}) => {
-  const uid = id || shortid.generate();
-  const inputName = name || uid;
-  const inputHintId = `${inputName}_hint`;
-  const inputErrorId = `${inputName}_error`;
+const Dropdown = forwardRef(
+  (
+    {
+      className,
+      disabled,
+      errorText,
+      hasError,
+      helpText,
+      id,
+      label,
+      labelless,
+      name,
+      onChange,
+      options,
+      required,
+      value,
+      defaultValue,
+      ...others
+    },
+    ref,
+  ) => {
+    const uid = id || shortid.generate();
+    const inputName = name || uid;
+    const inputHintId = `${inputName}_hint`;
+    const inputErrorId = `${inputName}_error`;
 
-  return (
-    <div
-      className={classnames('atomikui-dropdown', className, {
-        'has-error': hasError,
-        'is-disabled': disabled,
-      })}
-      {...others}
-    >
-      {!labelless && (
-        <div className="atomikui-dropdown__label">
-          <Label htmlFor={uid}>{label}</Label>
+    return (
+      <div
+        className={classnames('atomikui-dropdown', className, {
+          'has-error': hasError,
+          'is-disabled': disabled,
+        })}
+        {...others}
+      >
+        {!labelless && (
+          <div className="atomikui-dropdown__label">
+            <Label htmlFor={uid}>{label}</Label>
+          </div>
+        )}
+        <div className="atomikui-dropdown__select">
+          <select
+            ref={ref}
+            id={uid}
+            name={inputName}
+            className={classnames(
+              'atomikui-dropdown__select__menu',
+              className,
+              {},
+            )}
+            required={required}
+            aria-describedby={`${inputHintId} ${inputErrorId}`}
+            {...(value && { value })}
+            {...(defaultValue && !value && { defaultValue })}
+            disabled={disabled}
+            onChange={onChange}
+            {...others}
+          >
+            {[
+              {
+                text: 'Select One',
+                value: '',
+              },
+              ...options,
+              // eslint-disable-next-line no-shadow
+            ].map(({ text, value }, index) => {
+              return (
+                <option key={`option-${text}-${index}`} value={value}>
+                  {text}
+                </option>
+              );
+            })}
+          </select>
         </div>
-      )}
-      <div className="atomikui-dropdown__select">
-        <select
-          id={uid}
-          name={inputName}
-          className={classnames(
-            'atomikui-dropdown__select__menu',
-            className,
-            {},
-          )}
-          required={required}
-          aria-describedby={`${inputHintId} ${inputErrorId}`}
-          {...(value && { value })}
-          {...(defaultValue && !value && { defaultValue })}
-          disabled={disabled}
-          onChange={onChange}
-          {...others}
-        >
-          {[
-            {
-              text: 'Select One',
-              value: '',
-            },
-            ...options,
-            // eslint-disable-next-line no-shadow
-          ].map(({ text, value }, index) => {
-            return (
-              <option key={`option-${text}-${index}`} value={value}>
-                {text}
-              </option>
-            );
-          })}
-        </select>
+        {(helpText || errorText) && (
+          <div className="margin-top-2">
+            {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+            {hasError && (
+              <Hint id={inputErrorId} type="error">
+                {errorText}
+              </Hint>
+            )}
+          </div>
+        )}
       </div>
-      {(helpText || errorText) && (
-        <div className="margin-top-2">
-          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
-          {hasError && (
-            <Hint id={inputErrorId} type="error">
-              {errorText}
-            </Hint>
-          )}
-        </div>
-      )}
-    </div>
-  );
-};
+    );
+  },
+);
 
 Dropdown.propTypes = {
   /** Specifies custom component classes. */
