@@ -47,13 +47,14 @@
 
 </div>
 
-Atomik UI is a comprehensive library of React components for kickstarting any React based project. From form controls to informational components like modals, alerts and toast notifications, you'll find everything you need here to get your next project off the ground.
-
-### Travis CI Status
-
 ![Travis CI Status Image](https://travis-ci.com/alaneicker1975/atomik-ui.svg?branch=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alaneicker1975_alaneicker.com&metric=alert_status)](https://sonarcloud.io/dashboard?id=alaneicker1975_alaneicker.com)
+![Package Version Image](https://badgen.net/npm/v/@alaneicker/atomik-ui)
+![GitHub repo size](https://img.shields.io/github/repo-size/alaneicker1975/atomik-ui)
+![GitHub issues](https://img.shields.io/github/issues-raw/alaneicker1975/atomik-ui)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/alaneicker1975/atomik-ui)
 
-<br />
+Atomik UI is a comprehensive library of React components for kickstarting any React based project. From form controls to informational components like modals, alerts and toast notifications, you'll find everything you need here to get your next project off the ground.
 
 ### Features
 
