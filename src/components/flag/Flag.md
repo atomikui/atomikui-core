@@ -10,8 +10,8 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
       return (
         <Col
           key={`svg-${country}`}
-          xs={3}
-          sm={3}
+          xs={2}
+          sm={2}
           md={2}
           lg={1}
           className="text-align-center padding-bottom-8 line-height-flush"
