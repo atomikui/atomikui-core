@@ -1,7 +1,7 @@
 # ATOMIK UI
 
 ![Travis CI Status Image](https://travis-ci.com/alaneicker1975/atomik-ui.svg?branch=master)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alaneicker1975_alaneicker.com&metric=alert_status)](https://sonarcloud.io/dashboard?id=alaneicker1975_alaneicker.com)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alaneicker1975_atomik-ui&metric=alert_status)](https://sonarcloud.io/dashboard?id=alaneicker1975_atomik-ui)
 ![Package Version Image](https://badgen.net/npm/v/@alaneicker/atomik-ui)
 ![GitHub repo size](https://img.shields.io/github/repo-size/alaneicker1975/atomik-ui)
 ![GitHub issues](https://img.shields.io/github/issues-raw/alaneicker1975/atomik-ui)

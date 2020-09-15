@@ -11,14 +11,12 @@ const buildEvent = process.env.npm_lifecycle_event;
 let buildDir;
 let cssBuildPath;
 
-switch (buildEvent) {
-  case 'build:styles':
-    buildDir = './dist/styles';
-    cssBuildPath = '[name].min.css';
-    break;
-  default:
-    buildDir = './styles';
-    cssBuildPath = 'styles/[name].css';
+if (buildEvent === 'build:styles') {
+  buildDir = './dist/styles';
+  cssBuildPath = '[name].min.css';
+} else {
+  buildDir = './styles';
+  cssBuildPath = 'styles/[name].css';
 }
 
 module.exports = {

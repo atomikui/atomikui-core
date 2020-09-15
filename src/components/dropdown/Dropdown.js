@@ -68,11 +68,13 @@ const Dropdown = forwardRef(
                 value: '',
               },
               ...options,
-              // eslint-disable-next-line no-shadow
-            ].map(({ text, value }, index) => {
+            ].map((option, index) => {
               return (
-                <option key={`option-${text}-${index}`} value={value}>
-                  {text}
+                <option
+                  key={`option-${option.text}-${index}`}
+                  value={option.value}
+                >
+                  {option.text}
                 </option>
               );
             })}
