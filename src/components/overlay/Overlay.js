@@ -25,6 +25,7 @@ const Overlay = ({
 
   return (
     <div
+      role="dialog"
       className={classnames('atomikui-overlay', className, {
         [`atomikui-overlay--${theme}`]: theme,
         [`atomikui-overlay--align-${align}`]: align,

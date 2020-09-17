@@ -72,7 +72,11 @@ const Modal = ({
         >
           <div className="atomikui-modal__header">
             <div className="atomikui-modal__title">{title}</div>
-            <button className="atomikui-modal__close-button" onClick={onClose}>
+            <button
+              className="atomikui-modal__close-button"
+              aria-label="close-button"
+              onClick={onClose}
+            >
               <Icon icon={faTimes} size="2x" color="white" />
             </button>
           </div>

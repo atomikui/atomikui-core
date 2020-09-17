@@ -15,16 +15,16 @@ import {
     title="Default Card"
     footer={
       <div className="text-align-center">
-        <Button theme="hollow" condensed>
+        <Button theme="hollow" aria-label="like button" condensed>
           <Icon icon={faThumbsUp} size="lg" color="#444" />
         </Button>
-        <Button theme="hollow" condensed>
+        <Button theme="hollow" aria-label="comment button" condensed>
           <Icon icon={faComment} size="lg" color="#444" />
         </Button>
-        <Button theme="hollow" condensed>
+        <Button theme="hollow" aria-label="bookmark Button" condensed>
           <Icon icon={faBookmark} size="lg" color="#444" />
         </Button>
-        <Button theme="hollow" condensed>
+        <Button theme="hollow" aria-label="watch Button" condensed>
           <Icon icon={faEye} size="lg" color="#444" />
         </Button>
       </div>
