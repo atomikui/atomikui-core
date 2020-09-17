@@ -2,6 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import AutoComplete from '../auto-complete';
+import Button from '../button';
+import ButtonGroup from '../button-group';
+import CheckOption from '../check-option';
+import DatePicker from '../date-picker';
+import Dropdown from '../dropdown';
+import FileUpload from '../file-upload';
+import FormField from '../form-field';
+import RangeSlider from '../range-slider';
+import Switch from '../switch';
+
+const components = {
+  AutoComplete,
+  Button,
+  ButtonGroup,
+  CheckOption,
+  DatePicker,
+  Dropdown,
+  FileUpload,
+  FormField,
+  RangeSlider,
+  Switch,
+};
 
 const FormGenerator = ({ rowSpacing, fieldsets }) => {
   return (
@@ -18,12 +41,13 @@ const FormGenerator = ({ rowSpacing, fieldsets }) => {
               {fieldset.map(
                 (
                   {
-                    Component,
+                    component,
                     colProps = { sm: 12, md: 12, lg: 12 },
                     ...props
                   },
                   colIndex,
                 ) => {
+                  const Component = components[component];
                   return (
                     <Col key={`col-${colIndex}`} {...colProps}>
                       <Component {...props} />

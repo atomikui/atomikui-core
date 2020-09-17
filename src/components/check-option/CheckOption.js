@@ -25,6 +25,7 @@ const CheckOption = forwardRef(
       onChange,
       required,
       type,
+      value,
       ...others
     },
     ref,
@@ -53,6 +54,7 @@ const CheckOption = forwardRef(
             disabled={disabled}
             aria-describedby={`${inputHintId} ${inputErrorId}`}
             onChange={onChange}
+            value={value}
             {...(checked && { checked })}
             {...(defaultChecked && !checked && { defaultChecked })}
             required
@@ -111,6 +113,8 @@ CheckOption.propTypes = {
   required: PropTypes.bool,
   /** Specifies the type of input. */
   type: PropTypes.oneOf(types),
+  /** Check Option value */
+  value: PropTypes.string,
 };
 
 CheckOption.defaultProps = {
@@ -127,6 +131,7 @@ CheckOption.defaultProps = {
   onChange() {},
   required: false,
   type: 'checkbox',
+  value: '',
 };
 
 export default CheckOption;

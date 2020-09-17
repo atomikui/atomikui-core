@@ -202,14 +202,26 @@
 <a name='L143'></a><a href='#L143'>143</a>
 <a name='L144'></a><a href='#L144'>144</a>
 <a name='L145'></a><a href='#L145'>145</a>
-<a name='L146'></a><a href='#L146'>146</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -291,7 +303,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -329,7 +345,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -347,94 +363,102 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
 &nbsp;
-const Dropdown = ({
-  className,
-  disabled,
-  errorText,
-  hasError,
-  helpText,
-  id,
-  label,
-  labelless,
-  name,
-  onChange,
-  options,
-  required,
-  value,
-  defaultValue,
-  ...others
-}) =&gt; {
-  const uid = id || shortid.generate();
-  const inputName = name || uid;
-  const inputHintId = `${inputName}_hint`;
-  const inputErrorId = `${inputName}_error`;
+const Dropdown = forwardRef(
+  (
+    {
+      className,
+      disabled,
+      errorText,
+      hasError,
+      helpText,
+      id,
+      label,
+      labelless,
+      name,
+      onChange,
+      options,
+      required,
+      value,
+      defaultValue,
+      ...others
+    },
+    ref,
+  ) =&gt; {
+    const uid = id || shortid.generate();
+    const inputName = name || uid;
+    const inputHintId = `${inputName}_hint`;
+    const inputErrorId = `${inputName}_error`;
 &nbsp;
-  return (
-    &lt;div
-      className={classnames('atomikui-dropdown', className, {
-        'has-error': hasError,
-        'is-disabled': disabled,
-      })}
-      {...others}
-    &gt;
-      {!labelless &amp;&amp; (
-        &lt;div className="atomikui-dropdown__label"&gt;
-          &lt;Label htmlFor={uid}&gt;{label}&lt;/Label&gt;
+    return (
+      &lt;div
+        className={classnames('atomikui-dropdown', className, {
+          'has-error': hasError,
+          'is-disabled': disabled,
+        })}
+        {...others}
+      &gt;
+        {!labelless &amp;&amp; (
+          &lt;div className="atomikui-dropdown__label"&gt;
+            &lt;Label htmlFor={uid}&gt;{label}&lt;/Label&gt;
+          &lt;/div&gt;
+        )}
+        &lt;div className="atomikui-dropdown__select"&gt;
+          &lt;select
+            ref={ref}
+            id={uid}
+            name={inputName}
+            className={classnames(
+              'atomikui-dropdown__select__menu',
+              className,
+              {},
+            )}
+            required={required}
+            aria-describedby={`${inputHintId} ${inputErrorId}`}
+            {...(value &amp;&amp; { value })}
+            {...(defaultValue &amp;&amp; !value &amp;&amp; { defaultValue })}
+            disabled={disabled}
+            onChange={onChange}
+            {...others}
+          &gt;
+            {[
+              {
+                text: 'Select One',
+                value: '',
+              },
+              ...options,
+            ].map((option, index) =&gt; {
+              return (
+                &lt;option
+                  key={`option-${option.text}-${index}`}
+                  value={option.value}
+                &gt;
+                  {option.text}
+                &lt;/option&gt;
+              );
+            })}
+          &lt;/select&gt;
         &lt;/div&gt;
-      )}
-      &lt;div className="atomikui-dropdown__select"&gt;
-        &lt;select
-          id={uid}
-          name={inputName}
-          className={classnames(
-            'atomikui-dropdown__select__menu',
-            className,
-            {},
-          )}
-          required={required}
-          aria-describedby={`${inputHintId} ${inputErrorId}`}
-          {...(value &amp;&amp; { value })}
-          {...(defaultValue &amp;&amp; !value &amp;&amp; { defaultValue })}
-          disabled={disabled}
-          onChange={onChange}
-          {...others}
-        &gt;
-          {[
-            {
-              text: 'Select One',
-              value: '',
-            },
-            ...options,
-            // eslint-disable-next-line no-shadow
-          ].map(({ text, value }, index) =&gt; {
-            return (
-              &lt;option key={`option-${text}-${index}`} value={value}&gt;
-                {text}
-              &lt;/option&gt;
-            );
-          })}
-        &lt;/select&gt;
+        {(helpText || errorText) &amp;&amp; (
+          &lt;div className="margin-top-2"&gt;
+            {helpText &amp;&amp; &lt;Hint id={inputHintId}&gt;{helpText}&lt;/Hint&gt;}
+            {hasError &amp;&amp; (
+              &lt;Hint id={inputErrorId} type="error"&gt;
+                {errorText}
+              &lt;/Hint&gt;
+            )}
+          &lt;/div&gt;
+        )}
       &lt;/div&gt;
-      {(helpText || errorText) &amp;&amp; (
-        &lt;div className="margin-top-2"&gt;
-          {helpText &amp;&amp; &lt;Hint id={inputHintId}&gt;{helpText}&lt;/Hint&gt;}
-          {hasError &amp;&amp; (
-            &lt;Hint id={inputErrorId} type="error"&gt;
-              {errorText}
-            &lt;/Hint&gt;
-          )}
-        &lt;/div&gt;
-      )}
-    &lt;/div&gt;
-  );
-};
+    );
+  },
+);
 &nbsp;
 Dropdown.propTypes = {
   /** Specifies custom component classes. */
@@ -499,7 +523,7 @@ export default Dropdown;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Sep 14 2020 14:02:10 GMT-0500 (Central Daylight Time)
+                at Wed Sep 16 2020 21:40:54 GMT-0500 (Central Daylight Time)
             </div>
         </div>
         <script src="../prettify.js"></script>

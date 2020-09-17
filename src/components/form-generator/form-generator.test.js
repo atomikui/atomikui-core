@@ -2,8 +2,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { mount, configure } from 'enzyme';
 import FormGenerator from './FormGenerator';
-import FormField from '../form-field';
-import Button from '../button';
 
 configure({ adapter: new Adapter() });
 
@@ -11,7 +9,7 @@ describe('<FormGenerator />', () => {
   const fields = [
     [
       {
-        Component: FormField,
+        component: 'FormField',
         colProps: { sm: 12, md: 6, lg: 6 },
         name: 'firstName',
         label: 'First Name',
@@ -20,7 +18,7 @@ describe('<FormGenerator />', () => {
     ],
     [
       {
-        Component: Button,
+        component: 'Button',
         theme: 'primary',
         children: 'Submit',
         className: 'margin-top-8',

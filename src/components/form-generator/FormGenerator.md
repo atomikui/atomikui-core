@@ -1,5 +1,18 @@
 The FormGenerator is a presentational component that builds a form layout from data. It can be used once to create an entire form, or it can be used mulitple times to build out each section of a form (fieldsets).
 
+#### The following form fields are supported:
+
+- AutoComplete
+- Button
+- ButtonGroup
+- CheckOption
+- DatePicker
+- Dropdown
+- FileUpload
+- FormField
+- RangeSlider
+- Switch
+
 ### Basic Usage
 
 ```jsx
@@ -8,7 +21,7 @@ import { FormGenerator, FormField, Button } from '@alaneicker/atomik-ui';
 const personalInfo = [
   [
     {
-      Component: FormField,
+      component: 'FormField',
       colProps: { sm: 12, md: 6, lg: 6 },
       name: 'firstName',
       label: 'First Name',
@@ -17,7 +30,7 @@ const personalInfo = [
   ],
   [
     {
-      Component: FormField,
+      component: 'FormField',
       colProps: { sm: 12, md: 6, lg: 6 },
       name: 'lastName',
       label: 'Last Name',
@@ -26,7 +39,7 @@ const personalInfo = [
   ],
   [
     {
-      Component: FormField,
+      component: 'FormField',
       colProps: { sm: 12, md: 2, lg: 2 },
       id: 'mi',
       name: 'mi',
@@ -36,7 +49,7 @@ const personalInfo = [
   ],
   [
     {
-      Component: FormField,
+      component: 'FormField',
       colProps: { sm: 12, md: 6, lg: 6 },
       id: 'email',
       name: 'email',
@@ -46,7 +59,7 @@ const personalInfo = [
   ],
   [
     {
-      Component: FormField,
+      component: 'FormField',
       colProps: { sm: 12, md: 6, lg: 6 },
       id: 'phone',
       name: 'phone',
@@ -57,7 +70,7 @@ const personalInfo = [
   ],
   [
     {
-      Component: Button,
+      component: 'Button',
       theme: 'primary',
       children: 'Submit',
       className: 'margin-top-8',
@@ -99,8 +112,6 @@ import {
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 
-const [submittedFormData, setSubmittedFormData] = React.useState(null);
-
 const initialValues = {
   firstName: '',
   lastName: '',
@@ -124,14 +135,14 @@ const {
   initialValues,
   validationSchema,
   onSubmit: (formData) => {
-    setSubmittedFormData(formData);
+    console.log(formData);
   },
 });
 
 const formfields = [
   [
     {
-      Component: FormField,
+      component: 'FormField',
       colProps: { sm: 12, md: 6, lg: 6 },
       name: 'firstName',
       label: 'First Name',
@@ -143,7 +154,7 @@ const formfields = [
   ],
   [
     {
-      Component: FormField,
+      component: 'FormField',
       colProps: { sm: 12, md: 6, lg: 6 },
       name: 'lastName',
       label: 'Last Name',
@@ -155,7 +166,7 @@ const formfields = [
   ],
   [
     {
-      Component: DatePicker,
+      component: 'DatePicker',
       colProps: { sm: 12, md: 6, lg: 6 },
       name: 'date',
       label: 'Select a Date',
@@ -167,7 +178,7 @@ const formfields = [
   ],
   [
     {
-      Component: Button,
+      component: 'Button',
       type: 'submit',
       theme: 'primary',
       children: 'Submit',
@@ -177,16 +188,83 @@ const formfields = [
 ];
 
 <>
-  {submittedFormData && (
-    <div className="margin-bottom-16">
-      <div className="text-color-green-200 text-weight-semibold">
-        Form Submitted!
-      </div>
-      {JSON.stringify(submittedFormData)}
-    </div>
-  )}
   <form onSubmit={handleSubmit} autoComplete="off" noValidate>
     <FormGenerator fieldsets={formfields} rowSpacing="8" />
   </form>
 </>;
+```
+
+### Conditional Form Fields
+
+The following example demonstrates how a form can be set up to have condtional form fields and validation.
+
+```jsx
+import {
+  FormGenerator,
+  FormField,
+  Button,
+  DatePicker,
+} from '@alaneicker/atomik-ui';
+import * as yup from 'yup';
+import { useFormik } from 'formik';
+
+const initialValues = {
+  leaveComment: false,
+  comment: '',
+};
+
+const validationSchema = yup.object().shape({
+  comment: yup.string().when('leaveComment', {
+    is: true,
+    then: yup.string().required('Please enter your comment'),
+  }),
+});
+
+const { handleSubmit, handleChange, values, errors, touched } = useFormik({
+  initialValues,
+  validationSchema,
+  onSubmit: (formData) => {
+    console.log(formData);
+  },
+});
+
+const formfields = [
+  [
+    {
+      component: 'CheckOption',
+      colProps: { sm: 12, md: 6, lg: 6 },
+      name: 'leaveComment',
+      label: 'Leave a Comment?',
+      defaultChecked: values.leaveComment,
+      onChange: handleChange,
+    },
+  ],
+  values.leaveComment === true
+    ? [
+        {
+          component: 'FormField',
+          colProps: { sm: 12, md: 12, lg: 12 },
+          name: 'comment',
+          label: 'Comment',
+          defaultValue: values.comment,
+          hasError: !!errors.comment && touched.comment,
+          errorText: errors.comment,
+          onChange: handleChange,
+        },
+      ]
+    : [],
+  [
+    {
+      component: 'Button',
+      type: 'submit',
+      theme: 'primary',
+      children: 'Submit',
+      className: 'margin-top-8',
+    },
+  ],
+];
+
+<form onSubmit={handleSubmit} autoComplete="off" noValidate>
+  <FormGenerator fieldsets={formfields} rowSpacing="8" />
+</form>;
 ```
