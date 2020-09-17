@@ -66,6 +66,12 @@ a.atomikui-btn {
         box-shadow: rem(0 0 0 3) lighten(map-get($map, background-color), 15%);
       }
 
+      @if (
+        $variant == secondary or $variant == tertiary or $variant == warning
+      ) {
+        text-shadow: rem(0 0 2) darken(map-get($map, background-color), 30%);
+      }
+
       @if ($variant == hollow) {
         &:hover {
           background-color: $blue-000;

@@ -51,10 +51,9 @@ const AccordionItem = ({
           size="lg"
         />
       </button>
-      <div
+      <section
         id={panelId}
         arial-labelledby={headerId}
-        role="region"
         className="atomikui-accordion-item__body"
         style={{
           height: isExpanded ? contentHeight : '0px',
@@ -66,7 +65,7 @@ const AccordionItem = ({
         >
           {children}
         </div>
-      </div>
+      </section>
     </div>
   );
 };

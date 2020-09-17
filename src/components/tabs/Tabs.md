@@ -51,28 +51,24 @@ The Tabs children can be aligned with the `align` prop. It accepts a value of `c
 import { Tabs, Tab } from '@alaneicker/atomik-ui';
 
 <>
-  {/* Left aligned - default */}
   <Tabs>
     <Tab label="Tab One" />
     <Tab label="Tab Two" />
     <Tab label="Tab Three" />
   </Tabs>
   <br />
-  {/* Center aligned */}
   <Tabs align="center">
     <Tab label="Tab One" />
     <Tab label="Tab Two" />
     <Tab label="Tab Three" />
   </Tabs>
   <br />
-  {/* Right aligned */}
   <Tabs align="right">
     <Tab label="Tab One" />
     <Tab label="Tab Two" />
     <Tab label="Tab Three" />
   </Tabs>
   <br />
-  {/* Children fill parent */}
   <Tabs align="stretch">
     <Tab label="Tab One" />
     <Tab label="Tab Two" />
