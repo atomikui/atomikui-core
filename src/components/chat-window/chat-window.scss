@@ -83,6 +83,12 @@
     padding: rem(16);
   }
 
+  &__label {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
   &__input {
     background: #fff;
     border: 1px solid #bbb;

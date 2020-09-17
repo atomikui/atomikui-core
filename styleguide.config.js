@@ -12,7 +12,11 @@ module.exports = {
   },
   assetsDir: './public',
   styleguideDir: './build',
-  require: ['./src/styles/main.scss', './styleguide/styles/main.scss'],
+  require: [
+    './src/styles/main.scss',
+    './styleguide/styles/main.scss',
+    './scripts/react-axe.js',
+  ],
   template: {
     favicon: 'favicon.ico',
     head: {
