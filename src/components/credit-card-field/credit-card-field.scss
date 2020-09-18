@@ -11,11 +11,6 @@
     display: flex;
     position: relative;
 
-    label {
-      position: absolute;
-      left: rem(-10000);
-    }
-
     & > :first-child {
       flex: rem(0 0 40);
     }

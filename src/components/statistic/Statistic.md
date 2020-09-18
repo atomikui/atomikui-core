@@ -69,7 +69,7 @@ import { Statistic } from '@alaneicker/atomik-ui';
   <Statistic value="33,000" label="Downloads" size="sm" />
   <Statistic value="33,000" label="Downloads" size="md" />
   <Statistic value="33,000" label="Downloads" size="lg" />
-  <Statistic value="33,000" label="Downloads" /> {/* Default */}
+  <Statistic value="33,000" label="Downloads" />
 </>;
 ```
 

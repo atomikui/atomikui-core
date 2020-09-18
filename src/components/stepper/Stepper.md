@@ -5,7 +5,7 @@ The Stepper is used to represent a series of steps that have been or need to be 
 ```jsx
 import { Stepper, Step } from '@alaneicker/atomik-ui';
 
-<Stepper>
+<Stepper title="stepper 1">
   <Step label="Personal Info" href="/personal-info" isComplete={true}>
     1
   </Step>
@@ -26,7 +26,7 @@ import { Stepper, Step } from '@alaneicker/atomik-ui';
 ```jsx
 import { Stepper, Step } from '@alaneicker/atomik-ui';
 
-<Stepper topLabels>
+<Stepper title="stepper 2" topLabels>
   <Step label="Personal Info" href="/personal-info" isComplete={true}>
     1
   </Step>
@@ -47,7 +47,7 @@ import { Stepper, Step } from '@alaneicker/atomik-ui';
 ```jsx
 import { Stepper, Step } from '@alaneicker/atomik-ui';
 
-<Stepper inline>
+<Stepper title="stepper 3" inline>
   <Step label="Personal Info" href="/personal-info" isComplete={true}>
     1
   </Step>

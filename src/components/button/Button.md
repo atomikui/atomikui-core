@@ -48,7 +48,7 @@ import { Button } from '@alaneicker/atomik-ui';
     <Icon icon={faCloudDownloadAlt} size="lg" className="margin-right-8" />
     Download
   </Button>
-  <Button ariaLabel="download">
+  <Button aria-label="download">
     <Icon icon={faCloudDownloadAlt} size="lg" />
   </Button>
 </>;

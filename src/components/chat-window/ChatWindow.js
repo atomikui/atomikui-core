@@ -136,13 +136,8 @@ const ChatWindow = ({
         })}
       </div>
       <div className="atomikui-chat-window__footer">
-        <label
-          className="atomikui-chat-window__label"
-          htmlFor="chat-message-input"
-        >
-          Enter a Message
-        </label>
         <textarea
+          aria-label="Enter a Message"
           id="chat-message-input"
           ref={userInputRef}
           className="atomikui-chat-window__input"

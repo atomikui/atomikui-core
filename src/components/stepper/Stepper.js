@@ -1,11 +1,19 @@
 import React, { Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import List from '../list';
 
-const Stepper = ({ children, className, inline, topLabels, ...others }) => {
+const Stepper = ({
+  children,
+  className,
+  inline,
+  topLabels,
+  title,
+  ...others
+}) => {
   return (
-    <nav>
+    <nav title={title || `stepper ${shortid.generate()}`}>
       <List
         className={classnames('atomikui-stepper', className, {
           'atomikui-stepper--inline': inline,
@@ -29,6 +37,8 @@ Stepper.propTypes = {
   inline: PropTypes.bool,
   /** Specifies stepper to have labels above step number */
   topLabels: PropTypes.bool,
+  /** Title that gets assigned to breadcrumb <nav /> */
+  title: PropTypes.string,
 };
 
 Stepper.defaultProps = {
@@ -36,6 +46,7 @@ Stepper.defaultProps = {
   className: '',
   inline: false,
   topLabels: false,
+  title: '',
 };
 
 export default Stepper;

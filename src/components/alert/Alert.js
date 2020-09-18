@@ -54,7 +54,7 @@ const Alert = ({
             className="atomikui-alert__btn"
             theme="hollow"
             onClick={onClose}
-            aria-hidden="true"
+            aria-label="close button"
           >
             <Icon
               id="icon-close"

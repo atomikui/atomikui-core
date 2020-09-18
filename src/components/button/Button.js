@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Button = ({
-  ariaLabel,
   block,
   className,
   children,
@@ -26,7 +25,6 @@ const Button = ({
       })}
       type={type}
       disabled={disabled}
-      aria-label={ariaLabel}
       {...others}
     >
       {children}
@@ -35,8 +33,6 @@ const Button = ({
 };
 
 Button.propTypes = {
-  /** Aria label attribute */
-  ariaLabel: PropTypes.string,
   /** Displays button as a block elment. */
   block: PropTypes.bool,
   /** Specifies custom component classes. */
@@ -67,7 +63,6 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  ariaLabel: null,
   block: false,
   className: '',
   children: '',

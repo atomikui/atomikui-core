@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
 import createFocusTrap from 'focus-trap';
+import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import FormField from '../form-field';
@@ -13,9 +14,19 @@ import Overlay from '../overlay';
 
 const DatePicker = forwardRef(
   (
-    { className, disabled, label, onChange, onDateChange, value, ...others },
+    {
+      className,
+      disabled,
+      id,
+      label,
+      onChange,
+      onDateChange,
+      value,
+      ...others
+    },
     ref,
   ) => {
+    const uid = `datepicker-${shortid.generate()}`;
     const calendar = useRef();
     const [focusTrap, setFocusTrap] = useState(null);
     const [theValue, setTheValue] = useState(validateDate(value) || new Date());
@@ -75,12 +86,13 @@ const DatePicker = forwardRef(
       <div className={classnames('atomikui-date-picker', className)}>
         {label && (
           <div className="atomikui-date-picker__label">
-            <Label>{label}</Label>
+            <Label htmlFor={uid}>{label}</Label>
           </div>
         )}
         <div className="atomikui-date-picker__input">
           <FormField
             ref={ref}
+            id={uid}
             mask="99/99/9999"
             onBlur={(e) => {
               return handleDateChange(e.target.value);
@@ -97,6 +109,7 @@ const DatePicker = forwardRef(
               return setIsOpen(!isOpen);
             }}
             disabled={disabled}
+            aria-label="show calendar button"
           >
             <Icon icon={faCalendarAlt} size="lg" />
           </Button>
@@ -121,6 +134,8 @@ DatePicker.propTypes = {
   className: PropTypes.string,
   /** Disables a date picker form field and calandar. */
   disabled: PropTypes.bool,
+  /** Id attribute */
+  id: PropTypes.string,
   /** Specifies label text. */
   label: PropTypes.string,
   /** Triggers callback when date picker input value changes */
@@ -134,6 +149,7 @@ DatePicker.propTypes = {
 DatePicker.defaultProps = {
   className: '',
   disabled: false,
+  id: '',
   label: '',
   onChange() {},
   onDateChange() {},

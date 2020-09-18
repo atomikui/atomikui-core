@@ -23,6 +23,7 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
       <StepNumber
         className="atomikui-step__number"
         href={isComplete ? href : null}
+        aria-label={isComplete ? 'step complete' : children}
       >
         {isComplete && <Icon icon={faCheck} color="white" />}
         {!isComplete && children}

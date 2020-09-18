@@ -47,7 +47,7 @@ const RangeSlider = forwardRef(
 
     return (
       <>
-        {label && <Label>{label}</Label>}
+        {label && <Label htmlFor={uid}>{label}</Label>}
         <div
           className={classnames('atomikui-range-slider', className, {
             'has-error': hasError,

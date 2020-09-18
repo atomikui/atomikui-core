@@ -3,15 +3,15 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
-const Breadcrumb = ({ children, className, ...others }) => {
+const Breadcrumb = ({ children, className, title, ...others }) => {
   return (
-    <nav>
+    <nav title={title || `breadcrumb ${shortid.generate()}`}>
       <ol
         className={classnames('atomikui-breadcrumb', className, {})}
         {...others}
       >
-        {Children.map(children, (child) => {
-          return <li key={shortid.generate()}>{child}</li>;
+        {Children.map(children, (child, i) => {
+          return <li key={`breadcumb-${i}`}>{child}</li>;
         })}
       </ol>
     </nav>
@@ -23,11 +23,14 @@ Breadcrumb.propTypes = {
   className: PropTypes.string,
   /** Breadcrumb content. A list of Links */
   children: PropTypes.node,
+  /** Title that gets assigned to breadcrumb <nav /> */
+  title: PropTypes.string,
 };
 
 Breadcrumb.defaultProps = {
   className: '',
   children: <></>,
+  title: '',
 };
 
 export default Breadcrumb;

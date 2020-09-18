@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import FormField from '../form-field';
 
 const CartItem = ({
@@ -21,6 +22,8 @@ const CartItem = ({
     setTotal(price * itemQuantity);
   };
 
+  const quantityLabel = `qty-${shortid.generate()}`;
+
   return (
     <div className={classnames('atomikui-cart-item', className)} {...others}>
       <div className="atomikui-cart-item__hd">
@@ -34,12 +37,15 @@ const CartItem = ({
         <div className="atomikui-cart-item__info">
           <div className="atomikui-cart-item__description">{description}</div>
           <div>
-            <div className="atomikui-cart-item__label">Qty:</div>
+            <div id={quantityLabel} className="atomikui-cart-item__label">
+              Qty:
+            </div>
             <FormField
               type="number"
               className="atomikui-cart-item__quantity"
               value={String(itemQuantity)}
               placeholder="Qty"
+              aria-labelledby={quantityLabel}
               onChange={(e) => {
                 return handleQuantityChange(+e.target.value);
               }}

@@ -175,9 +175,9 @@ const CreditCardField = ({
         <legend className="atomikui-label">{label}</legend>
         <div className="atomikui-credit-card-field__fields">
           {creditCardIcons[cardType]}
-          <label>Credit Card Number</label>
           <FormField
             {...cardNumber}
+            aria-label="Credit Card Number"
             className={classnames({
               'display-none': cardFieldHidden,
             })}
@@ -204,8 +204,12 @@ const CreditCardField = ({
                 (creditCardIsFocused && !errors.includes('creditCardExpiry')),
             })}
           >
-            <label>Expiration Date</label>
-            <FormField {...cardExpiry} mask="99/99" borderless />
+            <FormField
+              aria-label="Expiration Date"
+              {...cardExpiry}
+              mask="99/99"
+              borderless
+            />
           </div>
           {!hideCvc && (
             <>
@@ -216,9 +220,9 @@ const CreditCardField = ({
                     (creditCardIsFocused && !errors.includes('creditCardCvc')),
                 })}
               >
-                <label>CVC</label>
                 <FormField
                   {...cardCvc}
+                  aria-label="CVC"
                   onKeyDown={(e) => {
                     return enforceMaxLength(3, e);
                   }}
@@ -236,9 +240,9 @@ const CreditCardField = ({
                     (creditCardIsFocused && !errors.includes('creditCardZip')),
                 })}
               >
-                <label>ZIP Code</label>
                 <FormField
                   {...cardZip}
+                  aria-label="ZIP Code"
                   onKeyDown={(e) => {
                     return enforceMaxLength(5, e);
                   }}
