@@ -213,20 +213,30 @@ $color-palette: (
   blue-gray-900: #263238,
   // BLACK AND WHITE
   black: #000000,
-  white: #ffffff
+  white: #ffffff,
+  // LEGACY COLORS
+  legacy-red-100: #f44336,
+  legacy-red-200: #d0191f,
+  legacy-orange-100: #ff8400,
+  legacy-yellow-100: #ffebaf,
+  legacy-yellow-200: #faca1b,
+  legacy-yellow-300: #fab01b,
+  legacy-green-100: #bae60e,
+  legacy-green-200: #4fa009,
+  legacy-green-300: #307c01,
+  legacy-blue-000: #dbeefc,
+  legacy-blue-100: #88ccfc,
+  legacy-blue-200: #027abf,
+  legacy-blue-300: #01547f,
+  legacy-blue-400: #2c607f,
+  legacy-blue-500: #002d4a,
+  legacy-purple-100: #d7a3ff,
+  legacy-purple-200: #9003fc,
+  legacy-purple-300: #50008c
 );
 
 // COMMON USE COLOR MAPPINGS
 // ----------------------------------------------------------------
-
-$informational-colors: (
-  default: map-get($color-palette, 'sky-blue-50'),
-  dark: map-get($color-palette, 'gray-800'),
-  info: map-get($color-palette, 'sky-blue-700'),
-  warning: map-get($color-palette, 'orange-800'),
-  error: map-get($color-palette, 'red-800'),
-  success: map-get($color-palette, 'light-green-700'),
-);
 
 $border-colors: (
   default: map-get($color-palette, 'gray-400'),
@@ -243,7 +253,7 @@ $link-colors: (
   default: map-get($color-palette, 'sky-blue-800'),
 );
 
-$dark-buttons: (
+$background-dark-colors: (
   red: map-get($color-palette, 'red-800'),
   pink: map-get($color-palette, 'pink-500'),
   purple: map-get($color-palette, 'purple-600'),
@@ -266,7 +276,7 @@ $dark-buttons: (
   black: map-get($color-palette, 'black'),
 );
 
-$light-buttons: (
+$background-light-colors: (
   red: map-get($color-palette, 'red-100'),
   pink: map-get($color-palette, 'pink-100'),
   purple: map-get($color-palette, 'purple-100'),
@@ -288,6 +298,24 @@ $light-buttons: (
   blue-gray: map-get($color-palette, 'blue-gray-100'),
   white: map-get($color-palette, 'white'),
 );
+
+$informational-colors: (
+  default: map-get($color-palette, 'sky-blue-50'),
+  dark: map-get($color-palette, 'gray-800'),
+  info: map-get($color-palette, 'sky-blue-700'),
+  warning: map-get($color-palette, 'orange-800'),
+  error: map-get($color-palette, 'red-800'),
+  success: map-get($color-palette, 'light-green-700'),
+);
+
+$price-colors: (
+  light-green: map-get($color-palette, 'legacy-green-200'),
+  green: map-get($color-palette, 'light-green-700'),
+  info: map-get($color-palette, 'sky-blue-700'),
+  error: map-get($color-palette, 'red-800'),
+);
+
+$statistic-colors: ();
 
 // OLD COLORS
 $true-black: #000;
