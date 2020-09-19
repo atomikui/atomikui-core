@@ -233,7 +233,7 @@ $color-palette: (
   legacy-purple-100: #d7a3ff,
   legacy-purple-200: #9003fc,
   legacy-purple-300: #50008c
-);
+) !default;
 
 // COMMON USE COLOR MAPPINGS
 // ----------------------------------------------------------------
@@ -241,17 +241,17 @@ $color-palette: (
 $border-colors: (
   default: map-get($color-palette, 'gray-400'),
   error: map-get($color-palette, 'red-800'),
-);
+) !default;
 
 $focus-colors: (
   error: map-get($color-palette, 'red-800'),
   blue: map-get($color-palette, 'sky-blue-700'),
   sky-blue: map-get($color-palette, 'sky-blue-200'),
-);
+) !default;
 
 $link-colors: (
   default: map-get($color-palette, 'sky-blue-800'),
-);
+) !default;
 
 $background-dark-colors: (
   red: map-get($color-palette, 'red-800'),
@@ -274,7 +274,7 @@ $background-dark-colors: (
   gray: map-get($color-palette, 'gray-800'),
   blue-gray: map-get($color-palette, 'blue-gray-800'),
   black: map-get($color-palette, 'black'),
-);
+) !default;
 
 $background-light-colors: (
   red: map-get($color-palette, 'red-100'),
@@ -297,7 +297,7 @@ $background-light-colors: (
   gray: map-get($color-palette, 'gray-200'),
   blue-gray: map-get($color-palette, 'blue-gray-100'),
   white: map-get($color-palette, 'white'),
-);
+) !default;
 
 $informational-colors: (
   default: map-get($color-palette, 'sky-blue-50'),
@@ -306,16 +306,16 @@ $informational-colors: (
   warning: map-get($color-palette, 'orange-800'),
   error: map-get($color-palette, 'red-800'),
   success: map-get($color-palette, 'light-green-700'),
-);
+) !default;
 
 $price-colors: (
   light-green: map-get($color-palette, 'legacy-green-200'),
   green: map-get($color-palette, 'light-green-700'),
   info: map-get($color-palette, 'sky-blue-700'),
   error: map-get($color-palette, 'red-800'),
-);
+) !default;
 
-$statistic-colors: ();
+$statistic-colors: () !default;
 
 // OLD COLORS
 $true-black: #000;
