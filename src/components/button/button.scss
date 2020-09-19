@@ -1,6 +1,6 @@
 $button-dark-colors: (
   red: $red-800,
-  pink: $pink-500,
+  pink: $pink-600,
   purple: $purple-600,
   deep-purple: $deep-purple-700,
   indigo: $indigo-600,
@@ -8,12 +8,12 @@ $button-dark-colors: (
   sky-blue: $sky-blue-900,
   cyan: $cyan-800,
   teal: $teal-700,
-  green: $green-700,
+  green: $green-800,
   light-green: $light-green-700,
-  pickle: $pickle-800,
-  yellow: $yellow-800,
-  light-orange: $yellow-900,
-  orange: $orange-900,
+  pickle: $pickle-700,
+  yellow: $yellow-700,
+  light-orange: $yellow-800,
+  orange: $orange-800,
   deep-orange: $deep-orange-900,
   amber: $amber-900,
   brown: $brown-600,
@@ -121,6 +121,22 @@ a.atomikui-btn {
     &--#{$name} {
       background-color: $color;
       color: $white;
+
+      @if $name ==
+        yellow or
+        $name ==
+        pickle or
+        $name ==
+        light-green or
+        $name ==
+        orange or
+        $name ==
+        light-orange or
+        $name ==
+        amber
+      {
+        color: $black;
+      }
 
       &:hover {
         background-color: darken($color, 10%);
