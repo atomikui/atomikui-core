@@ -253,7 +253,7 @@ $link-colors: (
   default: map-get($color-palette, 'sky-blue-800'),
 ) !default;
 
-$background-dark-colors: (
+$button-dark-colors: (
   red: map-get($color-palette, 'red-800'),
   pink: map-get($color-palette, 'pink-500'),
   purple: map-get($color-palette, 'purple-600'),
@@ -276,7 +276,7 @@ $background-dark-colors: (
   black: map-get($color-palette, 'black'),
 ) !default;
 
-$background-light-colors: (
+$button-light-colors: (
   red: map-get($color-palette, 'red-100'),
   pink: map-get($color-palette, 'pink-100'),
   purple: map-get($color-palette, 'purple-100'),
