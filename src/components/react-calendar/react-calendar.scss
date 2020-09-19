@@ -36,11 +36,11 @@
 
   .react-calendar__tile--now,
   .react-calendar__tile--active.react-calendar__tile--now {
-    background: $blue-000;
+    background: $gray-100;
     color: $black;
   }
 
   .react-calendar__tile--active.react-calendar__tile--now:hover {
-    background: darken($blue-000, 5%);
+    background: darken($gray-100, 5%);
   }
 }

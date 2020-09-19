@@ -24,7 +24,7 @@ $cell-border-color: $gray-100;
   }
 
   tbody > tr:nth-child(even) {
-    background: lighten($blue-000, 5%);
+    background: lighten($gray-100, 5%);
   }
 
   &.is-full-width {

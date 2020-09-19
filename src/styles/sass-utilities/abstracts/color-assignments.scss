@@ -3,7 +3,7 @@ $default-border-gray: $gray-200;
 $dark-border-gray: $gray-400;
 
 // Background colors
-$default-background-lightest-gray: $gray-000;
+$default-background-lightest-gray: $gray-100;
 $background-light-gray: $gray-100;
 $disabled-background-gray: $gray-200;
 $dark-background-gray: $gray-500;
@@ -29,4 +29,4 @@ $color-btn-tertiary: $red-100;
 $color-btn-warning: $orange-100;
 
 // Link colors
-$color-link: darken($blue-200, 5%);
+$color-link: $blue-900;

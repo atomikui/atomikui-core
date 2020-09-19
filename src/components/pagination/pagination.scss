@@ -21,12 +21,12 @@
 
     &:focus,
     &:active {
-      background: $blue-000;
+      background: $gray-100;
       @include focus-outline();
     }
 
     &:hover {
-      background: $blue-000;
+      background: $gray-100;
       text-decoration: none;
     }
   }

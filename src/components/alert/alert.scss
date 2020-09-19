@@ -1,6 +1,6 @@
 .atomikui-alert {
   align-items: top;
-  background: $blue-000;
+  background: $blue-100;
   border-radius: rem($border-radius);
   color: $black;
   display: flex;
@@ -27,7 +27,7 @@
 
     &:hover,
     &:focus {
-      background-color: rgba(0, 0, 0, 0.15);
+      background-color: rgba(172, 164, 164, 0.15);
     }
   }
 
@@ -39,11 +39,15 @@
     align-items: flex-end;
   }
 
-  @each $name, $color in $alert-themes {
+  @each $name, $color in $informational-colors {
     &--#{$name} {
       background-color: $color;
       border: 0;
       color: $white;
+
+      @if $name == success or $name == warning {
+        color: $black;
+      }
     }
   }
 }

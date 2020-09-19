@@ -1,41 +1,35 @@
-$colors: (
-  true-black: $true-black,
-  black: $black,
-  white: $white,
-  gray-000: $gray-000,
-  gray-100: $gray-100,
-  gray-200: $gray-200,
-  gray-300: $gray-300,
-  gray-400: $gray-400,
-  gray-450: $gray-450,
-  gray-500: $gray-500,
-  red-100: $red-100,
-  red-200: $red-200,
-  orange-100: $orange-100,
-  yellow-100: $yellow-100,
-  yellow-200: $yellow-200,
-  yellow-300: $yellow-300,
-  green-100: $green-100,
-  green-200: $green-200,
-  green-300: $green-300,
-  blue-000: $blue-000,
-  blue-100: $blue-100,
-  blue-200: $blue-200,
-  blue-300: $blue-300,
-  blue-400: $blue-400,
-  blue-500: $blue-500,
-  purple-100: $purple-100,
-  purple-200: $purple-200,
-  purple-300: $purple-300,
-);
-
-$alert-themes: (
-  dark: $gray-500,
-  info: $info-blue,
-  success: $success-green,
-  error: $error-red,
-  warning: $warning-orange,
+$border-colors: (
+  default: $gray-400,
+  error: $red-800,
 ) !default;
+
+$focus-colors: (
+  error: $red-800,
+  blue: $sky-blue-700,
+  sky-blue: $sky-blue-200,
+) !default;
+
+$link-colors: (
+  default: $sky-blue-900,
+) !default;
+
+$informational-colors: (
+  default: $sky-blue-50,
+  dark: $gray-800,
+  info: $sky-blue-800,
+  warning: $amber-800,
+  error: $red-800,
+  success: $light-green-500,
+) !default;
+
+$price-colors: (
+  light-green: $light-green-700,
+  green: $light-green-900,
+  info: $sky-blue-700,
+  error: $red-800,
+) !default;
+
+$statistic-colors: () !default;
 
 $tooltip-themes: (
   'light-gray': darken($gray-100, 3%),
@@ -47,8 +41,8 @@ $tooltip-themes: (
 
 $badge-themes: (
   'black': $black,
-  'light-gray': $light-gray,
-  'light-blue': $blue-000,
+  'light-gray': $gray-300,
+  'light-blue': $gray-100,
   'medium-blue': $blue-100,
   'dark-blue': $blue-200,
   'navy-blue': $blue-300,
