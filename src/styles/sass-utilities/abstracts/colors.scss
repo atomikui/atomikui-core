@@ -219,7 +219,9 @@ $color-palette: (
 // COMMON USE COLOR MAPPINGS
 // ----------------------------------------------------------------
 
-$state-colors: (
+$informational-colors: (
+  default: map-get($color-palette, 'sky-blue-50'),
+  dark: map-get($color-palette, 'gray-800'),
   info: map-get($color-palette, 'sky-blue-700'),
   warning: map-get($color-palette, 'orange-800'),
   error: map-get($color-palette, 'red-800'),
@@ -286,12 +288,6 @@ $light-buttons: (
   blue-gray: map-get($color-palette, 'blue-gray-100'),
   white: map-get($color-palette, 'white'),
 );
-
-// COLOR LISTS
-// ----------------------------------------------------------------
-$buttons: 'red' 'pink' 'purple' 'deep-purple' 'indigo' 'blue' 'sky-blue' 'cyan'
-  'teal' 'green' 'light-green' 'pickle' 'yellow' 'amber' 'orange' 'deep-orange'
-  'brown' 'gray' 'blue-gray' 'black';
 
 // OLD COLORS
 $true-black: #000;
