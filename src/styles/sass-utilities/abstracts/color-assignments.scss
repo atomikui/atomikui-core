@@ -21,7 +21,8 @@ $info-blue: $blue-200;
 $success-green: $green-200;
 
 // Button colors
-$color-btn-default: $blue-000;
+$color-btn-default: $sky-blue-50;
+$color-btn-default-hover: darken($sky-blue-50, 5%);
 $color-btn-primary: $blue-200;
 $color-btn-secondary: $green-200;
 $color-btn-tertiary: $red-100;

@@ -1,3 +1,50 @@
+$button-dark-colors: (
+  red: $red-800,
+  pink: $pink-500,
+  purple: $purple-600,
+  deep-purple: $deep-purple-700,
+  indigo: $indigo-600,
+  blue: $blue-800,
+  sky-blue: $sky-blue-900,
+  cyan: $cyan-800,
+  teal: $teal-700,
+  green: $green-700,
+  light-green: $light-green-700,
+  pickle: $pickle-800,
+  yellow: $yellow-800,
+  light-orange: $yellow-900,
+  orange: $orange-900,
+  deep-orange: $deep-orange-900,
+  amber: $amber-900,
+  brown: $brown-600,
+  gray: $gray-800,
+  blue-gray: $blue-gray-800,
+);
+
+$button-light-colors: (
+  red: $red-50,
+  pink: $pink-100,
+  purple: $purple-100,
+  deep-purple: $deep-purple-100,
+  indigo: $indigo-100,
+  blue: $blue-100,
+  sky-blue: $sky-blue-100,
+  cyan: $cyan-100,
+  teal: $teal-100,
+  green: $green-100,
+  light-green: $light-green-100,
+  pickle: $pickle-100,
+  yellow: $yellow-100,
+  light-orange: $yellow-100,
+  orange: $orange-50,
+  deep-orange: $deep-orange-100,
+  amber: $amber-100,
+  brown: $brown-100,
+  gray: $gray-100,
+  blue-gray: $blue-gray-100,
+  hollow: transparent,
+);
+
 .atomikui-btn,
 a.atomikui-btn {
   background-color: $color-btn-default;
@@ -22,7 +69,7 @@ a.atomikui-btn {
 
   &:hover,
   &:focus {
-    background-color: darken($blue-000, 7%);
+    background-color: $color-btn-default-hover;
   }
 
   &:focus,
@@ -40,54 +87,63 @@ a.atomikui-btn {
     cursor: default;
   }
 
+  &--white {
+    background-color: $white;
+
+    &:hover {
+      background-color: $color-btn-default;
+    }
+  }
+
+  &--black {
+    background-color: $black;
+    color: $white;
+
+    &:hover {
+      background-color: $gray-900;
+    }
+  }
+
+  &--link {
+    background-color: transparent;
+    font-size: inherit;
+    font-weight: $font-normal;
+    min-height: auto;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+
+  @each $name, $color in $button-dark-colors {
+    &--#{$name} {
+      background-color: $color;
+      color: $white;
+
+      &:hover {
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
+  @each $name, $color in $button-light-colors {
+    &--#{$name}-light {
+      background-color: $color;
+      color: $black;
+
+      &:hover {
+        background-color: darken($color, 10%);
+      }
+    }
+  }
+
   @each $name, $map in $button-sizes {
     &--#{$name} {
       font-size: rem(map-get($map, font-size));
       min-height: rem(map-get($map, min-height));
       padding: rem(map-get($map, padding));
-    }
-  }
-
-  @each $variant, $map in $btn-themes {
-    &--#{$variant} {
-      background-color: map-get($map, background-color);
-      border: 0;
-      color: map-get($map, font-color);
-      padding: map-get($map, padding);
-
-      &:active,
-      &:focus,
-      &:hover {
-        background-color: darken(map-get($map, background-color), 10%);
-      }
-
-      &:focus,
-      &:active {
-        box-shadow: rem(0 0 0 3) lighten(map-get($map, background-color), 15%);
-      }
-
-      @if ($variant == hollow) {
-        &:hover {
-          background-color: $blue-000;
-        }
-
-        &:focus,
-        &:active {
-          background-color: $blue-000;
-          @include focus-outline();
-        }
-      }
-
-      @if ($variant == link) {
-        font-size: inherit;
-        font-weight: $font-normal;
-        min-height: auto;
-        padding: 0;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
     }
   }
 
