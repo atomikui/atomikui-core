@@ -1,70 +1,252 @@
-### Sass Color Variables & Classes
-
 ```jsx noeditor
-import { Grid, Row, Col } from 'react-flexbox-grid';
-
 const colors = [
-  ['true-black', '#000000'],
-  ['black', '#222222'],
+  ['red-50', '#ffebee'],
+  ['red-100', '#ffcdd2'],
+  ['red-200', '#ef9a9a'],
+  ['red-300', '#e57373'],
+  ['red-400', '#ef5350'],
+  ['red-500', '#f44336'],
+  ['red-600', '#e53935'],
+  ['red-700', '#d32f2f'],
+  ['red-800', '#c62828'],
+  ['red-900', '#b71c1c'],
+  ['pink-50', '#fce4ec'],
+  ['pink-100', '#f8bbd0'],
+  ['pink-200', '#f48fb1'],
+  ['pink-300', '#f06292'],
+  ['pink-400', '#ec407a'],
+  ['pink-500', '#e91e63'],
+  ['pink-600', '#d81b60'],
+  ['pink-700', '#c2185b'],
+  ['pink-800', '#ad1457'],
+  ['pink-900', '#880e4f'],
+  ['purple-50', '#f3e5f5'],
+  ['purple-100', '#e1bee7'],
+  ['purple-200', '#ce93d8'],
+  ['purple-300', '#ba68c8'],
+  ['purple-400', '#ab47bc'],
+  ['purple-500', '#9c27b0'],
+  ['purple-600', '#8e24aa'],
+  ['purple-700', '#7b1fa2'],
+  ['purple-800', '#6a1b9a'],
+  ['purple-900', '#4a148c'],
+  ['deep-purple-50', '#ede7f6'],
+  ['deep-purple-100', '#d1c4e9'],
+  ['deep-purple-200', '#b39ddb'],
+  ['deep-purple-300', '#9575cd'],
+  ['deep-purple-400', '#7e57c2'],
+  ['deep-purple-500', '#673ab7'],
+  ['deep-purple-600', '#5e35b1'],
+  ['deep-purple-700', '#512da8'],
+  ['deep-purple-800', '#4527a0'],
+  ['deep-purple-900', '#311b92'],
+  ['indigo-50', '#e8eaf6'],
+  ['indigo-100', '#c5cae9'],
+  ['indigo-200', '#9fa8da'],
+  ['indigo-300', '#7986cb'],
+  ['indigo-400', '#5c6bc0'],
+  ['indigo-500', '#3f51b5'],
+  ['indigo-600', '#3949ab'],
+  ['indigo-700', '#303f9f'],
+  ['indigo-800', '#283593'],
+  ['indigo-900', '#1a237e'],
+  ['blue-50', '#e3f2fd'],
+  ['blue-100', '#bbdefb'],
+  ['blue-200', '#90caf9'],
+  ['blue-300', '#64b5f6'],
+  ['blue-400', '#42a5f5'],
+  ['blue-500', '#2196f3'],
+  ['blue-600', '#1e88e5'],
+  ['blue-700', '#1976d2'],
+  ['blue-800', '#1565c0'],
+  ['blue-900', '#0d47a1'],
+  ['sky-blue-50', '#e1f5fe'],
+  ['sky-blue-100', '#b3e5fc'],
+  ['sky-blue-200', '#81d4fa'],
+  ['sky-blue-300', '#4fc3f7'],
+  ['sky-blue-400', '#29b6f6'],
+  ['sky-blue-500', '#03a9f4'],
+  ['sky-blue-600', '#039be5'],
+  ['sky-blue-700', '#0288d1'],
+  ['sky-blue-800', '#0277bd'],
+  ['sky-blue-900', '#01579b'],
+  ['cyan-50', '#e0f7fa'],
+  ['cyan-100', '#b2ebf2'],
+  ['cyan-200', '#80deea'],
+  ['cyan-300', '#4dd0e1'],
+  ['cyan-400', '#26c6da'],
+  ['cyan-500', '#00bcd4'],
+  ['cyan-600', '#00acc1'],
+  ['cyan-700', '#0097a7'],
+  ['cyan-800', '#00838f'],
+  ['cyan-900', '#006064'],
+  ['teal-50', '#e0f2f1'],
+  ['teal-100', '#b2dfdb'],
+  ['teal-200', '#80cbc4'],
+  ['teal-300', '#4db6ac'],
+  ['teal-400', '#26a69a'],
+  ['teal-500', '#009688'],
+  ['teal-600', '#00897b'],
+  ['teal-700', '#00796b'],
+  ['teal-800', '#00695c'],
+  ['teal-900', '#004d40'],
+  ['green-50', '#e8f5e9'],
+  ['green-100', '#c8e6c9'],
+  ['green-200', '#a5d6a7'],
+  ['green-300', '#81c784'],
+  ['green-400', '#66bb6a'],
+  ['green-500', '#4caf50'],
+  ['green-600', '#43a047'],
+  ['green-700', '#388e3c'],
+  ['green-800', '#2e7d32'],
+  ['green-900', '#1b5e20'],
+  ['light-green-50', '#f1f8e9'],
+  ['light-green-100', '#dcedc8'],
+  ['light-green-200', '#c5e1a5'],
+  ['light-green-300', '#aed581'],
+  ['light-green-400', '#9ccc65'],
+  ['light-green-500', '#8bc34a'],
+  ['light-green-600', '#7cb342'],
+  ['light-green-700', '#689f38'],
+  ['light-green-800', '#558b2f'],
+  ['light-green-900', '#33691e'],
+  ['pickle-50', '#f9fbe7'],
+  ['pickle-100', '#f0f4c3'],
+  ['pickle-200', '#e6ee9c'],
+  ['pickle-300', '#dce775'],
+  ['pickle-400', '#d4e157'],
+  ['pickle-500', '#cddc39'],
+  ['pickle-600', '#c0ca33'],
+  ['pickle-700', '#afb42b'],
+  ['pickle-800', '#9e9d24'],
+  ['pickle-900', '#827717'],
+  ['yellow-50', '#fffde7'],
+  ['yellow-100', '#fff9c4'],
+  ['yellow-200', '#fff59d'],
+  ['yellow-300', '#fff176'],
+  ['yellow-400', '#ffee58'],
+  ['yellow-500', '#ffeb3b'],
+  ['yellow-600', '#fdd835'],
+  ['yellow-700', '#fbc02d'],
+  ['yellow-800', '#f9a825'],
+  ['yellow-900', '#f57f17'],
+  ['amber-50', '#fff8e1'],
+  ['amber-100', '#ffecb3'],
+  ['amber-200', '#ffe082'],
+  ['amber-300', '#ffd54f'],
+  ['amber-400', '#ffca28'],
+  ['amber-500', '#ffc107'],
+  ['amber-600', '#ffb300'],
+  ['amber-700', '#ffa000'],
+  ['amber-800', '#ff8f00'],
+  ['amber-900', '#ff6f00'],
+  ['orange-50', '#fff3e0'],
+  ['orange-100', '#ffe0b2'],
+  ['orange-200', '#ffcc80'],
+  ['orange-300', '#ffb74d'],
+  ['orange-400', '#ffa726'],
+  ['orange-500', '#ff9800'],
+  ['orange-600', '#fb8c00'],
+  ['orange-700', '#f57c00'],
+  ['orange-800', '#ef6c00'],
+  ['orange-900', '#e65100'],
+  ['deep-orange-50', '#fbe9e7'],
+  ['deep-orange-100', '#ffccbc'],
+  ['deep-orange-200', '#ffab91'],
+  ['deep-orange-300', '#ff8a65'],
+  ['deep-orange-400', '#ff7043'],
+  ['deep-orange-500', '#ff5722'],
+  ['deep-orange-600', '#f4511e'],
+  ['deep-orange-700', '#e64a19'],
+  ['deep-orange-800', '#d84315'],
+  ['deep-orange-900', '#bf360c'],
+  ['brown-50', '#efebe9'],
+  ['brown-100', '#d7ccc8'],
+  ['brown-200', '#bcaaa4'],
+  ['brown-300', '#a1887f'],
+  ['brown-400', '#8d6e63'],
+  ['brown-500', '#795548'],
+  ['brown-600', '#6d4c41'],
+  ['brown-700', '#5d4037'],
+  ['brown-800', '#4e342e'],
+  ['brown-900', '#3e2723'],
+  ['gray-50', '#fafafa'],
+  ['gray-100', '#f5f5f5'],
+  ['gray-200', '#eeeeee'],
+  ['gray-300', '#e0e0e0'],
+  ['gray-400', '#bdbdbd'],
+  ['gray-500', '#9e9e9e'],
+  ['gray-600', '#757575'],
+  ['gray-700', '#616161'],
+  ['gray-800', '#424242'],
+  ['gray-900', '#212121'],
+  ['blue-gray-50', '#eceff1'],
+  ['blue-gray-100', '#cfd8dc'],
+  ['blue-gray-200', '#b0bec5'],
+  ['blue-gray-300', '#90a4ae'],
+  ['blue-gray-400', '#78909c'],
+  ['blue-gray-500', '#607d8b'],
+  ['blue-gray-600', '#546e7a'],
+  ['blue-gray-700', '#455a64'],
+  ['blue-gray-800', '#37474f'],
+  ['blue-gray-900', '#263238'],
+  ['black', '#000000'],
   ['white', '#ffffff'],
-  ['gray-000', '#f5f5f5'],
-  ['gray-100', '#eeeeee'],
-  ['gray-200', '#bbbbbb'],
-  ['gray-300', '#999999'],
-  ['gray-400', '#666666'],
-  ['gray-450', '#444444'],
-  ['gray-500', '#323232'],
-  ['red-100', '#f44336'],
-  ['red-200', '#d0191f'],
-  ['orange-100', '#ff8400'],
-  ['yellow-100', '#ffebaf'],
-  ['yellow-200', '#faca1b'],
-  ['yellow-300', '#fab01b'],
-  ['green-100', '#bae60e'],
-  ['green-200', '#4fa009'],
-  ['green-300', '#307c01'],
-  ['blue-000', '#dbeefc'],
-  ['blue-100', '#88ccfc'],
-  ['blue-200', '#027abf'],
-  ['blue-300', '#01547f'],
-  ['blue-400', '#2c607f'],
-  ['blue-500', '#002d4a'],
-  ['purple-100', '#d7a3ff'],
-  ['purple-200', '#9003fc'],
-  ['purple-300', '#4c0b7d'],
 ];
 
-<Grid>
-  <Row>
-    {colors.map(([variable, hex]) => (
-      <Col
-        key={variable}
-        md={6}
-        style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}
-      >
-        <div
-          style={Object.assign(
-            {
-              backgroundColor: hex,
-              minWidth: '80px',
-              height: '80px',
-              borderRadius: '3px',
-              marginRight: '16px',
-            },
-            variable === 'white' ? { border: '1px solid #ccc' } : null,
-          )}
-        />
-        <div className="text-size-14 text-size-16@medium">
-          <b>Sass Variable:</b> ${variable}
-          <br />
-          <b>Hexidecimal:</b> {hex}
-          <br />
-          <b>Bachground Color:</b> .bg-color-{variable}
-          <br />
-          <b>Text Color:</b> .text-color-{variable}
-        </div>
-      </Col>
-    ))}
-  </Row>
-</Grid>;
+const legacyColors = [
+  ['legacy-red-100', '#f44336'],
+  ['legacy-red-200', '#d0191f'],
+  ['legacy-orange-100', '#ff8400'],
+  ['legacy-yellow-100', '#ffebaf'],
+  ['legacy-yellow-200', '#faca1b'],
+  ['legacy-yellow-300', '#fab01b'],
+  ['legacy-green-100', '#bae60e'],
+  ['legacy-green-200', '#4fa009'],
+  ['legacy-green-300', '#307c01'],
+  ['legacy-blue-000', '#dbeefc'],
+  ['legacy-blue-100', '#88ccfc'],
+  ['legacy-blue-200', '#027abf'],
+  ['legacy-blue-300', '#01547f'],
+  ['legacy-blue-400', '#2c607f'],
+  ['legacy-blue-500', '#002d4a'],
+  ['legacy-purple-100', '#d7a3ff'],
+  ['legacy-purple-200', '#9003fc'],
+  ['legacy-purple-300', '#50008c'],
+];
+
+const ColorChart = (props) => {
+  return (
+    <>
+      <h3 className="text-size-24 margin-bottom-16">{props.title}</h3>
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        {props.colors.map(([name, hex]) => (
+          <div key={name} style={{ width: '20%' }}>
+            <div
+              style={{
+                width: '100%',
+                ...(name === 'white' && { border: '1px solid #ccc' }),
+              }}
+              className={`bg-color-${name} padding-16`}
+            ></div>
+            <div
+              className="text-align-center padding-4"
+              style={{ fontSize: '15px' }}
+            >
+              {hex}
+              <br />
+              {name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+<>
+  <ColorChart colors={colors} title="Sass Color Variables & Classes" />
+  <div className="margin-top-32"></div>
+  <ColorChart colors={legacyColors} title="Legacy Colors" />
+</>;
 ```
