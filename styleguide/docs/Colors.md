@@ -230,8 +230,8 @@ const ColorChart = (props) => {
               className={`bg-color-${name} padding-16`}
             ></div>
             <div
-              className="text-align-center padding-4"
-              style={{ fontSize: '15px' }}
+              className="text-align-center padding-top-4 padding-bottom-16"
+              style={{ fontSize: '15px', lineHeight: 1.3 }}
             >
               {hex}
               <br />
