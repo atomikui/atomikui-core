@@ -213,6 +213,28 @@ $color-palette: (
   white: #ffffff
 );
 
+$state-colors: (
+  info: map-get($color-palette, 'light-blue-700'),
+  warning: map-get($color-palette, 'orange-800'),
+  error: map-get($color-palette, 'red-800'),
+  success: map-get($color-palette, 'light-green-700'),
+);
+
+$border-colors: (
+  default: map-get($color-palette, 'gray-400'),
+  error: map-get($color-palette, 'red-800'),
+);
+
+$focus-colors: (
+  error: map-get($color-palette, 'red-800'),
+  blue: map-get($color-palette, 'light-blue-700'),
+  light-blue: map-get($color-palette, 'light-blue-200'),
+);
+
+$link-colors: (
+  default: map-get($color-palette, 'light-blue-800'),
+);
+
 // OLD COLORS
 $true-black: #000;
 $black: #222;
