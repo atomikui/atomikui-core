@@ -9,7 +9,7 @@ $button-dark-colors: (
   cyan: $cyan-800,
   teal: $teal-700,
   green: $green-800,
-  light-green: $light-green-700,
+  light-green: $light-green-600,
   pickle: $pickle-700,
   yellow: $yellow-700,
   light-orange: $yellow-800,
@@ -139,7 +139,7 @@ a.atomikui-btn {
       }
 
       &:hover {
-        background-color: darken($color, 10%);
+        background-color: darken($color, 5%);
       }
     }
   }
@@ -150,7 +150,7 @@ a.atomikui-btn {
       color: $black;
 
       &:hover {
-        background-color: darken($color, 10%);
+        background-color: darken($color, 5%);
       }
     }
   }

@@ -1,12 +1,19 @@
 The Button component is a form control that triggers an action when clicked.
 
+### Default Button
+
+```jsx
+import { Button } from '@alaneicker/atomik-ui';
+
+<Button>Default</Button>;
+```
+
 ### Dark Themed Buttons
 
 ```jsx
 import { Button } from '@alaneicker/atomik-ui';
 
 <>
-  <Button>Default</Button>
   <Button theme="red">red</Button>
   <Button theme="pink">pink</Button>
   <Button theme="purple">purple</Button>
@@ -37,7 +44,6 @@ import { Button } from '@alaneicker/atomik-ui';
 import { Button } from '@alaneicker/atomik-ui';
 
 <>
-  <Button>Default</Button>
   <Button theme="red" light>
     red
   </Button>
