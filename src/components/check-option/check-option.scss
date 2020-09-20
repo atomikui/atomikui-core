@@ -5,7 +5,7 @@
   &__icon {
     align-items: center;
     background-image: $white;
-    border: rem(1) solid $default-border-gray;
+    border: rem(1) solid $input-border;
     border-radius: rem($border-radius);
     display: flex;
     height: rem(20);
@@ -20,12 +20,12 @@
   }
 
   &.has-error > .atomikui-check-option__icon {
-    border-color: $error-red;
+    border-color: $input-border-error;
   }
 
   &.is-disabled + .atomikui-check-option__icon {
     background: $background-light-gray;
-    border-color: $default-border-gray;
+    border-color: $input-border;
     border: 0;
   }
 

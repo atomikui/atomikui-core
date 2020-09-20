@@ -32,6 +32,7 @@ const ButtonGroup = ({
         className={classnames('atomikui-button-group', className, {
           [`atomikui-button-group--${size}`]: size,
           'atomikui-button-group--stretch': stretch,
+          'has-error': hasError,
         })}
         role="group"
         {...others}

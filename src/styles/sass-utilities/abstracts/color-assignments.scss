@@ -1,7 +1,3 @@
-// Form Vield border colors
-$default-border-gray: $gray-200;
-$dark-border-gray: $gray-400;
-
 // Background colors
 $default-background-lightest-gray: $gray-100;
 $background-light-gray: $gray-100;
@@ -33,3 +29,7 @@ $hint-color-error: $error-red;
 $hint-color-info: $info-blue;
 $hint-color-warning: $warning-orange;
 $hint-color-success: $success-green;
+
+// Borders
+$input-border: $blue-gray-200;
+$input-border-error: $error-red;

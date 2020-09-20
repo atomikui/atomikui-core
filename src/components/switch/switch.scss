@@ -62,7 +62,7 @@
 
   &.has-error {
     & > .atomikui-switch__toggle {
-      background: $red-100;
+      background: $error-red;
     }
 
     & > &__input:focus ~ &__toggle {

@@ -47,8 +47,8 @@
   -moz-appearance: none;
   appearance: none;
   background-color: $white;
-  border: rem(1) solid $gray-200;
-  border-radius: rem($base-border-radius);
+  border: rem(1) solid $input-border;
+  border-radius: rem($default-border-radius);
   font-family: inherit;
   font-size: inherit;
   height: rem($input-height);
