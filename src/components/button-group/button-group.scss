@@ -47,6 +47,10 @@
       background: $formfield-active-bg;
       color: $white;
     }
+
+    &:disabled.is-selected {
+      background: darken($disabled-background-gray, 10%);
+    }
   }
 
   &.has-error {
