@@ -4,6 +4,8 @@ A flexible component to showcase key content on your site.
 
 The Jumbotron offers 20 dark and 20 light color themes.
 
+<br />
+
 #### Dark Themes
 
 ```jsx
