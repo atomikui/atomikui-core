@@ -107,64 +107,6 @@ $statistic-themes: (
   dark-gray: $gray-400,
 ) !default;
 
-$bg-themes: (
-  red: (
-    background-color: $red-100,
-    font-color: $white,
-  ),
-  orange: (
-    background-color: $orange-100,
-    font-color: $white,
-  ),
-  yellow: (
-    background-color: $yellow-100,
-  ),
-  gold: (
-    background-color: $yellow-200,
-  ),
-  green: (
-    background-color: $green-200,
-    font-color: $white,
-  ),
-  light-blue: (
-    background-color: $blue-100,
-  ),
-  medium-blue: (
-    background-color: $blue-200,
-    font-color: $white,
-  ),
-  dark-blue: (
-    background-color: $blue-300,
-    font-color: $white,
-  ),
-  light-purple: (
-    background-color: $purple-100,
-  ),
-  medium-purple: (
-    background-color: $purple-200,
-    font-color: $white,
-  ),
-  dark-purple: (
-    background-color: $purple-300,
-    font-color: $white,
-  ),
-  light-gray: (
-    background-color: $gray-100,
-  ),
-  medium-gray: (
-    background-color: $gray-300,
-    font-color: $white,
-  ),
-  dark-gray: (
-    background-color: $gray-400,
-    font-color: $white,
-  ),
-  black: (
-    background-color: $black,
-    font-color: $white,
-  ),
-) !default;
-
 $modal-themes: (
   dark: (
     background-color: $gray-500,

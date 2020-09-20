@@ -2,11 +2,13 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Jumbotron = ({ children, className, theme, ...others }) => {
+const Jumbotron = ({ children, className, theme, themeVariant, ...others }) => {
   return (
     <div
       className={classnames('atomikui-jumbotron', className, {
-        [`atomikui-jumbotron--${theme}`]: theme,
+        [`atomikui-jumbotron--${theme}${
+          themeVariant ? `-${themeVariant}` : ''
+        }`]: theme,
       })}
       {...others}
     >
@@ -23,27 +25,37 @@ Jumbotron.propTypes = {
   /** Color theme variant */
   theme: PropTypes.oneOf([
     'red',
-    'orange',
-    'yellow',
-    'gold',
+    'pink',
+    'purple',
+    'deep-purple',
+    'indigo',
+    'blue',
+    'sky-blue',
+    'cyan',
+    'teal',
     'green',
-    'light-blue',
-    'medium-blue',
-    'dark-blue',
-    'light-purple',
-    'medium-purple',
-    'dark-purple',
-    'light-gray',
-    'medium-gray',
-    'dark-gray',
+    'light-green',
+    'pickle',
+    'yellow',
+    'light-orange',
+    'orange',
+    'deep-orange',
+    'amber',
+    'brown',
+    'gray',
+    'blue-gray',
     'black',
+    'white',
   ]),
+  /** The theme variant */
+  themeVariant: PropTypes.oneOf(['light']),
 };
 
 Jumbotron.defaultProps = {
   className: '',
   children: <></>,
   theme: null,
+  themeVariant: null,
 };
 
 export default Jumbotron;

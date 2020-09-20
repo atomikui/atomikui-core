@@ -2,10 +2,33 @@
   background: $gray-100;
   padding: rem(32);
 
-  @each $variant, $map in $bg-themes {
-    &--#{$variant} {
-      background-color: map-get($map, background-color);
-      color: map-get($map, font-color);
+  @each $name, $color in $background-dark-colors {
+    &--#{$name} {
+      background-color: $color;
+      color: $white;
+
+      @if $name ==
+        yellow or
+        $name ==
+        pickle or
+        $name ==
+        light-green or
+        $name ==
+        orange or
+        $name ==
+        light-orange or
+        $name ==
+        amber
+      {
+        color: $black;
+      }
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      background-color: $color;
+      color: $black;
     }
   }
 
