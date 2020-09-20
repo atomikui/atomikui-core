@@ -75,7 +75,7 @@ $button-sizes: (
 $input-height: 38;
 $switch-height: 30;
 $text-area-height: 120 !default;
-$input-border: 1px solid $gray-400;
+$formfield-border: 1px solid $gray-400;
 
 $formfield-focus: rem(0 0 0 2) $blue-100;
 $formfield-error-focus: rem(0 0 0 2) lighten($red-100, 20%);

@@ -1,6 +1,6 @@
 .atomikui-button-group {
   align-items: stretch;
-  border: rem(1) solid $input-border;
+  border: rem(1) solid $formfield-border;
   border-radius: rem($border-radius);
   display: inline-flex;
   height: rem($input-height);
@@ -10,7 +10,7 @@
     background: $white;
     border: 0;
     border-radius: 0;
-    color: $blue-400;
+    color: $default-control-text-color;
     cursor: pointer;
     font-size: rem(13);
     font-weight: $font-semibold;
@@ -26,7 +26,7 @@
 
     &:hover,
     &:focus {
-      background: $background-light-gray;
+      background: $default-btn-color;
     }
 
     &:focus {
@@ -44,13 +44,13 @@
     &.is-selected,
     &.is-selected:hover,
     &.is-selected:focus {
-      background: $blue-200;
+      background: $formfield-active-bg;
       color: $white;
     }
   }
 
   &.has-error {
-    border-color: $input-border-error;
+    border-color: $formfield-border-error;
   }
 
   &--sm {

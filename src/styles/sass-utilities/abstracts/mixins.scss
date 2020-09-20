@@ -36,7 +36,7 @@
 
 @mixin form-option {
   background-color: $white;
-  border: $input-border;
+  border: $formfield-border;
   height: rem(22);
   outline: 0;
   width: rem(22);
@@ -47,7 +47,7 @@
   -moz-appearance: none;
   appearance: none;
   background-color: $white;
-  border: rem(1) solid $input-border;
+  border: rem(1) solid $formfield-border;
   border-radius: rem($default-border-radius);
   font-family: inherit;
   font-size: inherit;

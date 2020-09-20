@@ -17,8 +17,8 @@ $info-blue: $sky-blue-800;
 $success-green: $light-green-900;
 
 // Button colors
-$color-btn-default: $sky-blue-50;
-$color-btn-default-hover: darken($sky-blue-50, 5%);
+$default-btn-color: $sky-blue-50;
+$default-btn-color-hover: darken($sky-blue-50, 5%);
 
 // Link colors
 $color-link: $blue-900;
@@ -30,6 +30,11 @@ $hint-color-info: $info-blue;
 $hint-color-warning: $warning-orange;
 $hint-color-success: $success-green;
 
-// Borders
-$input-border: $blue-gray-200;
-$input-border-error: $error-red;
+// Form fields
+$formfield-border: $blue-gray-200;
+$formfield-border-error: $error-red;
+
+$formfield-active-bg: $sky-blue-900;
+
+// Text colors
+$default-control-text-color: $blue-gray-800;

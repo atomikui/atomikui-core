@@ -1,9 +1,9 @@
 .atomikui-btn,
 a.atomikui-btn {
-  background-color: $color-btn-default;
+  background-color: $default-btn-color;
   border: 0;
   border-radius: rem($default-border-radius);
-  color: $blue-gray-800;
+  color: $default-control-text-color;
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
@@ -22,7 +22,7 @@ a.atomikui-btn {
 
   &:hover,
   &:focus {
-    background-color: $color-btn-default-hover;
+    background-color: $default-btn-color-hover;
   }
 
   &:focus,
@@ -44,7 +44,7 @@ a.atomikui-btn {
     background-color: transparent;
 
     &:hover {
-      background-color: $color-btn-default-hover;
+      background-color: $default-btn-color-hover;
     }
   }
 
@@ -52,7 +52,7 @@ a.atomikui-btn {
     background-color: $white;
 
     &:hover {
-      background-color: $color-btn-default;
+      background-color: $default-btn-color;
     }
   }
 

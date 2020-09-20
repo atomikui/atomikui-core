@@ -26,7 +26,7 @@
   }
 
   &.has-error > &__input {
-    border-color: $input-border-error;
+    border-color: $formfield-border-error;
   }
 
   &.has-error > &__input:focus,
