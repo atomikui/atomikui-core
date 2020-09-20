@@ -21,7 +21,9 @@ import { Badge } from '@alaneicker/atomik-ui';
 
 ### Badge Color Themes
 
-#### Dark
+The Badge offers 20 dark and 20 light color themes.
+
+#### Dark Themes
 
 ```jsx
 import { Badge } from '@alaneicker/atomik-ui';
@@ -51,7 +53,7 @@ import { Badge } from '@alaneicker/atomik-ui';
 </>;
 ```
 
-#### Light
+#### Light Themes
 
 ```jsx
 import { Badge } from '@alaneicker/atomik-ui';

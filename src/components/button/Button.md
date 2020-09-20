@@ -8,7 +8,11 @@ import { Button } from '@alaneicker/atomik-ui';
 <Button>Default</Button>;
 ```
 
-### Dark Themed Buttons
+### Button Color Themes
+
+The Button offers 20 dark and 20 light color themes.
+
+#### Dark Themes
 
 ```jsx
 import { Button } from '@alaneicker/atomik-ui';
@@ -38,7 +42,7 @@ import { Button } from '@alaneicker/atomik-ui';
 </>;
 ```
 
-### Light Themed Buttons
+#### Light Themes
 
 ```jsx
 import { Button } from '@alaneicker/atomik-ui';
