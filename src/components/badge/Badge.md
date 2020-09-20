@@ -19,26 +19,107 @@ import { Badge } from '@alaneicker/atomik-ui';
 </>;
 ```
 
-### Badge Themes
+### Badge Color Themes
+
+#### Dark
 
 ```jsx
 import { Badge } from '@alaneicker/atomik-ui';
 
 <>
-  <Badge>Default</Badge>
-  <Badge theme="black">Black</Badge>
-  <Badge theme="light-gray">Light Gray</Badge>
-  <Badge theme="light-blue">Light Blue</Badge>
-  <Badge theme="medium-blue">Medium Blue</Badge>
-  <Badge theme="dark-blue">Dark Blue</Badge>
-  <Badge theme="navy-blue">Navy Blue</Badge>
-  <Badge theme="light-purple">Light Purple</Badge>
-  <Badge theme="medium-purple">Medium Purple</Badge>
-  <Badge theme="dark-purple">Dark Purple</Badge>
-  <Badge theme="warning">Warning</Badge>
-  <Badge theme="error">Error</Badge>
-  <Badge theme="success">Success</Badge>
-  <Badge theme="outline">Outline</Badge>
+  <Badge theme="red">red</Badge>
+  <Badge theme="pink">pink</Badge>
+  <Badge theme="purple">purple</Badge>
+  <Badge theme="deep-purple">deep-purple</Badge>
+  <Badge theme="indigo">indigo</Badge>
+  <Badge theme="blue">blue</Badge>
+  <Badge theme="sky-blue">sky-blue</Badge>
+  <Badge theme="cyan">cyan</Badge>
+  <Badge theme="teal">teal</Badge>
+  <Badge theme="green">NE</Badge>
+  <Badge theme="light-green">light-green</Badge>
+  <Badge theme="pickle">pickle</Badge>
+  <Badge theme="yellow">yellow</Badge>
+  <Badge theme="light-orange">light-orange</Badge>
+  <Badge theme="orange">orange</Badge>
+  <Badge theme="deep-orange">deep-orange</Badge>
+  <Badge theme="amber">amber</Badge>
+  <Badge theme="brown">brown</Badge>
+  <Badge theme="gray">gray</Badge>
+  <Badge theme="blue-gray">blue-gray</Badge>
+  <Badge theme="black">black</Badge>
+</>;
+```
+
+#### Light
+
+```jsx
+import { Badge } from '@alaneicker/atomik-ui';
+
+<>
+  <Badge theme="red" light>
+    red
+  </Badge>
+  <Badge theme="pink" light>
+    pink
+  </Badge>
+  <Badge theme="purple" light>
+    purple
+  </Badge>
+  <Badge theme="deep-purple" light>
+    deep-purple
+  </Badge>
+  <Badge theme="indigo" light>
+    indigo
+  </Badge>
+  <Badge theme="blue" light>
+    blue
+  </Badge>
+  <Badge theme="sky-blue" light>
+    sky-blue
+  </Badge>
+  <Badge theme="cyan" light>
+    cyan
+  </Badge>
+  <Badge theme="teal" light>
+    teal
+  </Badge>
+  <Badge theme="green" light>
+    NE
+  </Badge>
+  <Badge theme="light-green" light>
+    light-green
+  </Badge>
+  <Badge theme="pickle" light>
+    pickle
+  </Badge>
+  <Badge theme="yellow" light>
+    yellow
+  </Badge>
+  <Badge theme="light-orange" light>
+    light-orange
+  </Badge>
+  <Badge theme="orange" light>
+    orange
+  </Badge>
+  <Badge theme="deep-orange" light>
+    deep-orange
+  </Badge>
+  <Badge theme="amber" light>
+    amber
+  </Badge>
+  <Badge theme="brown" light>
+    brown
+  </Badge>
+  <Badge theme="gray" light>
+    gray
+  </Badge>
+  <Badge theme="blue-gray" light>
+    blue-gray
+  </Badge>
+  <Badge theme="black" light>
+    black
+  </Badge>
 </>;
 ```
 

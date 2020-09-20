@@ -62,7 +62,6 @@ $link-colors: (
 ) !default;
 
 $informational-colors: (
-  default: $sky-blue-50,
   dark: $gray-800,
   info: $sky-blue-800,
   warning: $amber-800,
@@ -82,21 +81,6 @@ $statistic-colors: () !default;
 $tooltip-themes: (
   'light-gray': darken($gray-100, 3%),
   info: $info-blue,
-  success: $success-green,
-  error: $error-red,
-  warning: $warning-orange,
-) !default;
-
-$badge-themes: (
-  'black': $black,
-  'light-gray': $gray-300,
-  'light-blue': $gray-100,
-  'medium-blue': $blue-100,
-  'dark-blue': $blue-200,
-  'navy-blue': $blue-300,
-  'light-purple': $purple-100,
-  'medium-purple': $purple-200,
-  'dark-purple': $purple-300,
   success: $success-green,
   error: $error-red,
   warning: $warning-orange,

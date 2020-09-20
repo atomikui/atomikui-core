@@ -1,7 +1,7 @@
 .atomikui-badge {
-  background-color: $gray-400;
+  background-color: $default-badge-bg;
   border-radius: rem($border-radius);
-  color: $white;
+  color: $default-control-text-color;
   display: inline-block;
   font-size: 75%;
   line-height: 1;
@@ -9,22 +9,33 @@
   text-align: center;
   white-space: nowrap;
 
-  @each $name, $color in $badge-themes {
+  @each $name, $color in $background-dark-colors {
     &--#{$name} {
       background-color: $color;
       color: $white;
 
       @if $name ==
-        'light-gray' or
+        yellow or
         $name ==
-        'light-blue' or
+        pickle or
         $name ==
-        'light-purple' or
+        light-green or
         $name ==
-        'medium-blue'
+        orange or
+        $name ==
+        light-orange or
+        $name ==
+        amber
       {
         color: $black;
       }
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      background-color: $color;
+      color: $black;
     }
   }
 
