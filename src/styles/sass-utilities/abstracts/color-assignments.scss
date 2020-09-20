@@ -10,9 +10,9 @@ $focus-blue-medium: $blue-200;
 $focus-red: $red-800;
 $focus-orange: lighten($orange-100, 20%);
 
-// DEPRECATED: State colors
+// State colors
 $error-red: $red-800;
-$warning-orange: $orange-900;
+$warning-orange: $orange-800;
 $info-blue: $sky-blue-800;
 $success-green: $light-green-900;
 
@@ -33,8 +33,28 @@ $hint-color-success: $success-green;
 // Form fields
 $formfield-border: $blue-gray-200;
 $formfield-border-error: $error-red;
+$formfield-border-light: $gray-100;
 
 $formfield-active-bg: $sky-blue-900;
 
 // Text colors
 $default-control-text-color: $blue-gray-800;
+
+// Chat window
+$chat-window-bg: $gray-300;
+$chat-window-header-bg: $sky-blue-800;
+$chat-window-close-btn: $sky-blue-700;
+$chat-window-send-btn: $sky-blue-800;
+$chat-window-send-btn-text-color: $white;
+$chat-window-header-text-color: $white;
+$chat-window-header-avatar-border: $white;
+$chat-window-user-status-available: $light-green-400;
+$chat-window-user-status-away: $yellow-500;
+$chat-window-user-status-offline: $red-400;
+
+// Chat message
+$chat-message-bg: $white;
+$chat-message-text-color: $black;
+$chat-message-outgoing-bg: $sky-blue-800;
+$chat-message-outgoing-text-color: $white;
+$chat-message-timestamp: $blue-gray-700;

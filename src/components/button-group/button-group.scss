@@ -21,7 +21,7 @@
     text-transform: uppercase;
 
     &:not(:first-child) {
-      border-left: rem(1) solid darken($gray-100, 10%);
+      border-left: rem(1) solid darken($formfield-border-light, 10%);
     }
 
     &:hover,

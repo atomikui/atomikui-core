@@ -1,5 +1,5 @@
 .atomikui-chat-window {
-  background: $gray-100;
+  background: $chat-window-bg;
   bottom: 0;
   box-shadow: rem(-10 10 20) rgba(0, 0, 0, 0.2);
   display: flex;
@@ -20,8 +20,8 @@
 
   &__header {
     align-items: center;
-    background: $blue-500;
-    color: $white;
+    background: $chat-window-header-bg;
+    color: $chat-window-header-text-color;
     display: flex;
     justify-content: space-between;
     padding: rem(12 16);
@@ -34,7 +34,7 @@
   }
 
   &__avatar {
-    border: rem(1) solid $gray-100;
+    border: rem(1) solid $chat-window-header-avatar-border;
     border-radius: 50%;
     height: rem(40);
     margin-right: rem(8);
@@ -55,15 +55,15 @@
     width: rem(8);
 
     &.atomikui-chat-window__sender-status--available {
-      background: $green-100;
+      background: $chat-window-user-status-available;
     }
 
     &.atomikui-chat-window__sender-status--away {
-      background: $yellow-200;
+      background: $chat-window-user-status-away;
     }
 
     &.atomikui-chat-window__sender-status--offline {
-      background: $red-100;
+      background: $chat-window-user-status-offline;
     }
   }
 
@@ -84,8 +84,7 @@
   }
 
   &__input {
-    background: #fff;
-    border: 1px solid #bbb;
+    border: 0;
     border-radius: rem(4);
     flex: 1;
     font-family: inherit;
@@ -102,15 +101,18 @@
   }
 
   &__send-btn {
-    border: rem(1) solid $blue-200;
+    background-color: $chat-window-send-btn;
+    color: $chat-window-send-btn-text-color;
+    border: 0;
     margin-left: rem(16);
     min-height: rem($input-height);
     padding: rem(0 16);
 
     &:disabled,
     &:disabled:hover {
-      background: darken($gray-100, 6%);
-      border-color: darken($gray-100, 6%);
+      background: $gray-400;
+      border-color: $gray-400;
+      color: $gray-500;
     }
   }
 
@@ -129,7 +131,7 @@
 
     &:hover,
     &:focus {
-      background: $blue-400;
+      background: $chat-window-close-btn;
     }
 
     &:focus {
