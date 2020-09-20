@@ -13,7 +13,7 @@ const toggleModal = () => {
 };
 
 <>
-  <Button theme="blue" size="md" onClick={() => toggleModal()}>
+  <Button theme="blue" onClick={() => toggleModal()}>
     Toggle Modal
   </Button>
   <Modal
@@ -22,7 +22,7 @@ const toggleModal = () => {
     title="Modal Dialog"
     footer={
       <div className="text-align-right">
-        <Button theme="blue" size="md" onClick={() => toggleModal()}>
+        <Button theme="blue" onClick={() => toggleModal()}>
           OK
         </Button>
       </div>
@@ -59,20 +59,20 @@ const toggleModal = (theme) => {
 };
 
 <>
-  <Button size="md" onClick={() => toggleModal('dark')}>
-    Dark Modal
+  <Button theme="gray" onClick={() => toggleModal('dark')}>
+    Dark
   </Button>
-  <Button theme="blue" size="md" onClick={() => toggleModal('info')}>
-    Info Modal
+  <Button theme="blue" onClick={() => toggleModal('info')}>
+    Info
   </Button>
-  <Button theme="amber" size="md" onClick={() => toggleModal('warning')}>
-    Warning Modal
+  <Button theme="amber" onClick={() => toggleModal('warning')}>
+    Warning
   </Button>
-  <Button theme="red" size="md" onClick={() => toggleModal('error')}>
-    Error Modal
+  <Button theme="red" onClick={() => toggleModal('error')}>
+    Error
   </Button>
-  <Button theme="green" size="md" onClick={() => toggleModal('success')}>
-    Success Modal
+  <Button theme="green" onClick={() => toggleModal('success')}>
+    Success
   </Button>
 
   <Modal
@@ -82,7 +82,7 @@ const toggleModal = (theme) => {
     title="Modal Dialog"
     footer={
       <div className="text-align-right">
-        <Button theme="white" size="md" onClick={() => toggleModal()}>
+        <Button theme="white" onClick={() => toggleModal()}>
           OK
         </Button>
       </div>
