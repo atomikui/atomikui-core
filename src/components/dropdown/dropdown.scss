@@ -29,36 +29,20 @@
   }
 
   &__select__menu {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    border: 0;
-    flex: 1;
-    font-family: inherit;
-    font-size: inherit;
-    height: rem($input-height);
-    outline: 0;
-    padding: rem(0 $input-height 0 8);
-    width: 100%;
+    @include input();
 
     &:focus {
       @include focus-outline();
-    }
-
-    &:disabled {
-      color: $gray-300;
     }
   }
 
   &.is-disabled {
     .atomikui-dropdown__select {
-      background: $default-background-lightest-gray;
       border: 0;
     }
 
     .atomikui-dropdown__select::after {
-      background-color: lighten($gray-200, 13%);
+      background-color: darken($disabled-background-gray, 5%);
     }
   }
 

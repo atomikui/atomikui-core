@@ -57,12 +57,12 @@
   width: 100%;
 
   &:disabled {
-    background: $default-background-lightest-gray;
+    background: $disabled-background-gray;
     border: 0;
-    color: $gray-300;
+    color: darken($gray-400, 5%);
   }
 
-  &:read-only {
+  &:read-only:not(.atomikui-dropdown__select__menu) {
     border: 0;
     padding: 0;
   }
