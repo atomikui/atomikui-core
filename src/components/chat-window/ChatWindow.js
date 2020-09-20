@@ -152,6 +152,7 @@ const ChatWindow = ({
           onClick={() => {
             return handleSubmit();
           }}
+          theme="sky-blue"
           disabled={!message}
         >
           Send
