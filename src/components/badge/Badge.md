@@ -59,68 +59,68 @@ import { Badge } from '@alaneicker/atomik-ui';
 import { Badge } from '@alaneicker/atomik-ui';
 
 <>
-  <Badge theme="red" light>
+  <Badge theme="red" themeVariant="light">
     red
   </Badge>
-  <Badge theme="pink" light>
+  <Badge theme="pink" themeVariant="light">
     pink
   </Badge>
-  <Badge theme="purple" light>
+  <Badge theme="purple" themeVariant="light">
     purple
   </Badge>
-  <Badge theme="deep-purple" light>
+  <Badge theme="deep-purple" themeVariant="light">
     deep-purple
   </Badge>
-  <Badge theme="indigo" light>
+  <Badge theme="indigo" themeVariant="light">
     indigo
   </Badge>
-  <Badge theme="blue" light>
+  <Badge theme="blue" themeVariant="light">
     blue
   </Badge>
-  <Badge theme="sky-blue" light>
+  <Badge theme="sky-blue" themeVariant="light">
     sky-blue
   </Badge>
-  <Badge theme="cyan" light>
+  <Badge theme="cyan" themeVariant="light">
     cyan
   </Badge>
-  <Badge theme="teal" light>
+  <Badge theme="teal" themeVariant="light">
     teal
   </Badge>
-  <Badge theme="green" light>
+  <Badge theme="green" themeVariant="light">
     NE
   </Badge>
-  <Badge theme="light-green" light>
+  <Badge theme="light-green" themeVariant="light">
     light-green
   </Badge>
-  <Badge theme="pickle" light>
+  <Badge theme="pickle" themeVariant="light">
     pickle
   </Badge>
-  <Badge theme="yellow" light>
+  <Badge theme="yellow" themeVariant="light">
     yellow
   </Badge>
-  <Badge theme="light-orange" light>
+  <Badge theme="light-orange" themeVariant="light">
     light-orange
   </Badge>
-  <Badge theme="orange" light>
+  <Badge theme="orange" themeVariant="light">
     orange
   </Badge>
-  <Badge theme="deep-orange" light>
+  <Badge theme="deep-orange" themeVariant="light">
     deep-orange
   </Badge>
-  <Badge theme="amber" light>
+  <Badge theme="amber" themeVariant="light">
     amber
   </Badge>
-  <Badge theme="brown" light>
+  <Badge theme="brown" themeVariant="light">
     brown
   </Badge>
-  <Badge theme="gray" light>
+  <Badge theme="gray" themeVariant="light">
     gray
   </Badge>
-  <Badge theme="blue-gray" light>
+  <Badge theme="blue-gray" themeVariant="light">
     blue-gray
   </Badge>
-  <Badge theme="black" light>
-    black
+  <Badge theme="white" themeVariant="light">
+    white
   </Badge>
 </>;
 ```

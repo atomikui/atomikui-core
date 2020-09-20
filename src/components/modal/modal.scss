@@ -62,10 +62,13 @@
     padding: rem(16);
   }
 
-  @each $theme-name, $map in $modal-themes {
-    &--#{$theme-name} {
-      background-color: map-get($map, background-color);
-      color: map-get($map, font-color);
+  @each $name, $color in $informational-colors {
+    &--#{$name} {
+      background-color: $color;
+
+      @if $name == dark or $name == error or $name == info {
+        color: $white;
+      }
 
       .atomikui-modal__header,
       .atomikui-modal__footer {

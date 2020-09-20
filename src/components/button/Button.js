@@ -8,17 +8,19 @@ const Button = ({
   children,
   condensed,
   disabled,
-  light,
   shape,
   size,
   type,
   theme,
+  themeVariant,
   ...others
 }) => {
   return (
     <button
       className={classnames('atomikui-btn', className, {
-        [`atomikui-btn--${theme}${light ? '-light' : ''}`]: theme,
+        [`atomikui-btn--${theme}${
+          themeVariant ? `-${themeVariant}` : ''
+        }`]: theme,
         [`atomikui-btn--${shape}`]: shape,
         [`atomikui-btn--${size}`]: size,
         'atomikui-btn--condensed': condensed,
@@ -44,8 +46,6 @@ Button.propTypes = {
   condensed: PropTypes.bool,
   /** Specifies if button is diabled. */
   disabled: PropTypes.bool,
-  /** Tapplies light theme */
-  light: PropTypes.bool,
   /** Specifies a button's shape. */
   shape: PropTypes.oneOf(['pill', 'square']),
   /** Specifies the size of a button. */
@@ -82,6 +82,8 @@ Button.propTypes = {
     'link',
     'block',
   ]),
+  /** Theme color cariant */
+  themeVariant: PropTypes.oneOf(['light']),
 };
 
 Button.defaultProps = {
@@ -90,11 +92,11 @@ Button.defaultProps = {
   children: '',
   condensed: false,
   disabled: false,
-  light: false,
   shape: null,
   size: null,
   type: 'button',
   theme: null,
+  themeVariant: null,
 };
 
 export default Button;

@@ -10,7 +10,7 @@ import { Button } from '@alaneicker/atomik-ui';
 
 ### Button Color Themes
 
-The Button offers 20 dark and 20 light color themes.
+The Button offers 20 dark and 20 themeVariant="light" color themes.
 
 #### Dark Themes
 
@@ -48,64 +48,64 @@ import { Button } from '@alaneicker/atomik-ui';
 import { Button } from '@alaneicker/atomik-ui';
 
 <>
-  <Button theme="red" light>
+  <Button theme="red" themeVariant="light">
     red
   </Button>
-  <Button theme="pink" light>
+  <Button theme="pink" themeVariant="light">
     pink
   </Button>
-  <Button theme="purple" light>
+  <Button theme="purple" themeVariant="light">
     purple
   </Button>
-  <Button theme="deep-purple" light>
+  <Button theme="deep-purple" themeVariant="light">
     deep-purple
   </Button>
-  <Button theme="indigo" light>
+  <Button theme="indigo" themeVariant="light">
     indigo
   </Button>
-  <Button theme="blue" light>
+  <Button theme="blue" themeVariant="light">
     blue
   </Button>
-  <Button theme="sky-blue" light>
+  <Button theme="sky-blue" themeVariant="light">
     sky-blue
   </Button>
-  <Button theme="cyan" light>
+  <Button theme="cyan" themeVariant="light">
     cyan
   </Button>
-  <Button theme="teal" light>
+  <Button theme="teal" themeVariant="light">
     teal
   </Button>
-  <Button theme="green" light>
+  <Button theme="green" themeVariant="light">
     green
   </Button>
-  <Button theme="light-green" light>
-    light-green
+  <Button theme="light-green" themeVariant="light">
+    themeVariant="light"-green
   </Button>
-  <Button theme="pickle" light>
+  <Button theme="pickle" themeVariant="light">
     pickle
   </Button>
-  <Button theme="yellow" light>
+  <Button theme="yellow" themeVariant="light">
     yellow
   </Button>
-  <Button theme="light-orange" light>
-    light-orange
+  <Button theme="light-orange" themeVariant="light">
+    themeVariant="light"-orange
   </Button>
-  <Button theme="orange" light>
+  <Button theme="orange" themeVariant="light">
     orange
   </Button>
-  <Button theme="deep-orange" light>
+  <Button theme="deep-orange" themeVariant="light">
     deep-orange
   </Button>
-  <Button theme="amber" light>
+  <Button theme="amber" themeVariant="light">
     amber
   </Button>
-  <Button theme="brown" light>
+  <Button theme="brown" themeVariant="light">
     brown
   </Button>
-  <Button theme="gray" light>
+  <Button theme="gray" themeVariant="light">
     gray
   </Button>
-  <Button theme="blue-gray" light>
+  <Button theme="blue-gray" themeVariant="light">
     blue-gray
   </Button>
   <Button theme="white">white</Button>
