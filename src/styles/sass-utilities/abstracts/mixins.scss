@@ -7,7 +7,6 @@
 }
 
 @mixin label {
-  color: $label-color;
   font-family: inherit;
   font-size: rem(12);
   font-weight: $font-bold;
