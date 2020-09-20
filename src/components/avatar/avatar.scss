@@ -6,7 +6,7 @@
     align-items: center;
     background-color: $gray-100;
     border-radius: 50%;
-    color: $gray-500;
+    color: $blue-gray-800;
     display: inline-flex;
     font-size: rem(18);
     height: rem(40);
@@ -15,11 +15,45 @@
     text-transform: uppercase;
     width: rem(40);
 
-    @each $variant, $map in $bg-themes {
-      &--#{$variant} {
-        background-color: map-get($map, background-color);
-        color: map-get($map, font-color);
+    @each $name, $color in $background-dark-colors {
+      &--#{$name} {
+        background-color: $color;
+        color: $white;
+
+        @if $name ==
+          yellow or
+          $name ==
+          pickle or
+          $name ==
+          light-green or
+          $name ==
+          orange or
+          $name ==
+          light-orange or
+          $name ==
+          amber
+        {
+          color: $black;
+        }
+
+        &:hover {
+          background-color: darken($color, 5%);
+        }
       }
+    }
+
+    @each $name, $color in $background-light-colors {
+      &--#{$name}-light {
+        background-color: $color;
+        color: $black;
+      }
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      background-color: $color;
+      color: $black;
     }
   }
 
@@ -29,7 +63,7 @@
   }
 
   &__label {
-    color: $gray-400;
+    color: $label-color;
     font-size: rem(16);
     padding: rem(0 8);
     text-transform: uppercase;

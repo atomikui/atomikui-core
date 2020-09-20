@@ -8,6 +8,7 @@ const Avatar = ({
   children,
   flipLabel,
   label,
+  light,
   shape,
   size,
   src,
@@ -25,7 +26,7 @@ const Avatar = ({
     >
       <span
         className={classnames('atomikui-avatar__content', className, {
-          [`atomikui-avatar__content--${theme}`]: theme,
+          [`atomikui-avatar__content--${theme}${light ? '-light' : ''}`]: theme,
         })}
       >
         {src && <img className="atomikui-avatar__image" src={src} alt={alt} />}
@@ -45,6 +46,8 @@ Avatar.propTypes = {
   children: PropTypes.node,
   /** Aligns label to the left of the avatar */
   flipLabel: PropTypes.bool,
+  /** Applies the light color theme */
+  light: PropTypes.bool,
   /** Label to be displayed to the right or left of the avatar */
   label: PropTypes.string,
   /** Avatar shape variation - default is round */
@@ -56,20 +59,27 @@ Avatar.propTypes = {
   /** Avatar background color theme variation */
   theme: PropTypes.oneOf([
     'red',
-    'orange',
-    'yellow',
-    'gold',
+    'pink',
+    'purple',
+    'deep-purple',
+    'indigo',
+    'blue',
+    'sky-blue',
+    'cyan',
+    'teal',
     'green',
-    'light-blue',
-    'medium-blue',
-    'dark-blue',
-    'light-purple',
-    'medium-purple',
-    'dark-purple',
-    'light-gray',
-    'medium-gray',
-    'dark-gray',
+    'light-green',
+    'pickle',
+    'yellow',
+    'light-orange',
+    'orange',
+    'deep-orange',
+    'amber',
+    'brown',
+    'gray',
+    'blue-gray',
     'black',
+    'white',
   ]),
 };
 
@@ -78,6 +88,7 @@ Avatar.defaultProps = {
   className: '',
   children: <></>,
   flipLabel: false,
+  light: false,
   label: '',
   shape: null,
   size: null,

@@ -17,5 +17,6 @@ import { Hint } from '@alaneicker/atomik-ui';
   <Hint type="error">This is an error hint</Hint>
   <Hint type="warning">This is a warning hint</Hint>
   <Hint type="success">This is a success hint</Hint>
+  <Hint type="info">This is an informational hint</Hint>
 </>;
 ```

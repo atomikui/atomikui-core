@@ -1,16 +1,20 @@
 .atomikui-hint {
-  color: $gray-400;
-  font-size: rem(12);
+  color: $hint-color;
+  font-size: rem(13);
 
   &--error {
-    color: $red-100;
+    color: $hint-color-error;
   }
 
   &--warning {
-    color: $orange-100;
+    color: $hint-color-warning;
   }
 
   &--success {
-    color: $green-200;
+    color: $hint-color-success;
+  }
+
+  &--info {
+    color: $hint-color-info;
   }
 }

@@ -11,22 +11,28 @@ $dark-background-gray: $gray-500;
 // Focus state colors
 $focus-blue-light: $blue-100;
 $focus-blue-medium: $blue-200;
-$focus-red: lighten($red-100, 20%);
+$focus-red: $red-800;
 $focus-orange: lighten($orange-100, 20%);
 
-// State colors
-$error-red: $red-100;
-$warning-orange: $orange-100;
-$info-blue: $blue-200;
-$success-green: $green-200;
+// DEPRECATED: State colors
+$error-red: $red-800;
+$warning-orange: $orange-900;
+$info-blue: $sky-blue-800;
+$success-green: $light-green-900;
 
 // Button colors
 $color-btn-default: $sky-blue-50;
 $color-btn-default-hover: darken($sky-blue-50, 5%);
-$color-btn-primary: $blue-200;
-$color-btn-secondary: $green-200;
-$color-btn-tertiary: $red-100;
-$color-btn-warning: $orange-100;
 
 // Link colors
 $color-link: $blue-900;
+
+// hint colors
+$hint-color: $gray-700;
+$hint-color-error: $error-red;
+$hint-color-info: $info-blue;
+$hint-color-warning: $warning-orange;
+$hint-color-success: $success-green;
+
+// Label color
+$label-color: $gray-900;

@@ -1,3 +1,51 @@
+$background-dark-colors: (
+  red: $red-800,
+  pink: $pink-600,
+  purple: $purple-600,
+  deep-purple: $deep-purple-700,
+  indigo: $indigo-600,
+  blue: $blue-800,
+  sky-blue: $sky-blue-900,
+  cyan: $cyan-800,
+  teal: $teal-700,
+  green: $green-800,
+  light-green: $light-green-600,
+  pickle: $pickle-700,
+  yellow: $yellow-700,
+  light-orange: $yellow-800,
+  orange: $orange-800,
+  deep-orange: $deep-orange-900,
+  amber: $amber-900,
+  brown: $brown-600,
+  gray: $gray-800,
+  blue-gray: $blue-gray-800,
+  black: $black,
+);
+
+$background-light-colors: (
+  red: $red-50,
+  pink: $pink-100,
+  purple: $purple-100,
+  deep-purple: $deep-purple-100,
+  indigo: $indigo-100,
+  blue: $blue-100,
+  sky-blue: $sky-blue-100,
+  cyan: $cyan-100,
+  teal: $teal-100,
+  green: $green-100,
+  light-green: $light-green-100,
+  pickle: $pickle-100,
+  yellow: $yellow-100,
+  light-orange: $yellow-100,
+  orange: $orange-50,
+  deep-orange: $deep-orange-100,
+  amber: $amber-100,
+  brown: $brown-100,
+  gray: $gray-100,
+  blue-gray: $blue-gray-100,
+  white: $white,
+);
+
 $border-colors: (
   default: $gray-400,
   error: $red-800,
@@ -73,37 +121,6 @@ $statistic-themes: (
   light-gray: $gray-200,
   medium-gray: $gray-300,
   dark-gray: $gray-400,
-) !default;
-
-$btn-themes: (
-  primary: (
-    background-color: $color-btn-primary,
-    font-color: $white,
-  ),
-  secondary: (
-    background-color: $color-btn-secondary,
-    font-color: $white,
-  ),
-  tertiary: (
-    background-color: $color-btn-tertiary,
-    font-color: $white,
-  ),
-  warning: (
-    background-color: $warning-orange,
-    font-color: $white,
-  ),
-  white: (
-    background-color: $white,
-    font-color: $blue-400,
-  ),
-  hollow: (
-    background-color: transparent,
-    font-color: $blue-400,
-  ),
-  link: (
-    background-color: transparent,
-    font-color: $color-link,
-  ),
 ) !default;
 
 $bg-themes: (

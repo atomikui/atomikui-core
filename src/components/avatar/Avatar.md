@@ -37,7 +37,7 @@ A letter avatar can be created simply by passing in one or two initials as child
 ```jsx
 import { Avatar } from '@alaneicker/atomik-ui';
 
-<Avatar theme="medium-blue">AE</Avatar>;
+<Avatar theme="red">AE</Avatar>;
 ```
 
 ### Icon Avatars
@@ -68,29 +68,109 @@ import { Avatar } from '@alaneicker/atomik-ui';
 </Avatar>;
 ```
 
-### Avatars Color Themes
+### Color Themes
 
 There are many color themes to choose from. simplay pass in a `theme` prop with the color of your choice.
+
+#### Dark
 
 ```jsx
 import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
   <Avatar theme="red">AE</Avatar>
-  <Avatar theme="orange">P</Avatar>
-  <Avatar theme="yellow">MS</Avatar>
-  <Avatar theme="gold">RJ</Avatar>
-  <Avatar theme="green">AJ</Avatar>
-  <Avatar theme="light-blue">MA</Avatar>
-  <Avatar theme="medium-blue">T</Avatar>
-  <Avatar theme="dark-blue">S</Avatar>
-  <Avatar theme="light-purple">CM</Avatar>
-  <Avatar theme="medium-purple">DT</Avatar>
-  <Avatar theme="dark-purple">A</Avatar>
-  <Avatar theme="light-gray">SM</Avatar>
-  <Avatar theme="medium-gray">JD</Avatar>
-  <Avatar theme="dark-gray">M</Avatar>
-  <Avatar theme="black">O</Avatar>
+  <Avatar theme="pink">T</Avatar>
+  <Avatar theme="purple">M</Avatar>
+  <Avatar theme="deep-purple">LP</Avatar>
+  <Avatar theme="indigo">MJ</Avatar>
+  <Avatar theme="blue">JJ</Avatar>
+  <Avatar theme="sky-blue">A</Avatar>
+  <Avatar theme="cyan">O</Avatar>
+  <Avatar theme="teal">LF</Avatar>
+  <Avatar theme="green">NE</Avatar>
+  <Avatar theme="light-green">Z</Avatar>
+  <Avatar theme="pickle">WG</Avatar>
+  <Avatar theme="yellow">S</Avatar>
+  <Avatar theme="light-orange">TC</Avatar>
+  <Avatar theme="orange">C</Avatar>
+  <Avatar theme="deep-orange">N</Avatar>
+  <Avatar theme="amber">AJ</Avatar>
+  <Avatar theme="brown">WY</Avatar>
+  <Avatar theme="gray">TC</Avatar>
+  <Avatar theme="blue-gray">B</Avatar>
+  <Avatar theme="black">BD</Avatar>
+</>;
+```
+
+#### Light
+
+```jsx
+import { Avatar } from '@alaneicker/atomik-ui';
+
+<>
+  <Avatar theme="red" light>
+    AE
+  </Avatar>
+  <Avatar theme="pink" light>
+    T
+  </Avatar>
+  <Avatar theme="purple" light>
+    M
+  </Avatar>
+  <Avatar theme="deep-purple" light>
+    LP
+  </Avatar>
+  <Avatar theme="indigo" light>
+    MJ
+  </Avatar>
+  <Avatar theme="blue" light>
+    JJ
+  </Avatar>
+  <Avatar theme="sky-blue" light>
+    A
+  </Avatar>
+  <Avatar theme="cyan" light>
+    O
+  </Avatar>
+  <Avatar theme="teal" light>
+    LF
+  </Avatar>
+  <Avatar theme="green" light>
+    NE
+  </Avatar>
+  <Avatar theme="light-green" light>
+    Z
+  </Avatar>
+  <Avatar theme="pickle" light>
+    WG
+  </Avatar>
+  <Avatar theme="yellow" light>
+    S
+  </Avatar>
+  <Avatar theme="light-orange" light>
+    TC
+  </Avatar>
+  <Avatar theme="orange" light>
+    C
+  </Avatar>
+  <Avatar theme="deep-orange" light>
+    N
+  </Avatar>
+  <Avatar theme="amber" light>
+    AJ
+  </Avatar>
+  <Avatar theme="brown" light>
+    WY
+  </Avatar>
+  <Avatar theme="gray" light>
+    TC
+  </Avatar>
+  <Avatar theme="blue-gray" light>
+    B
+  </Avatar>
+  <Avatar theme="white" light>
+    BD
+  </Avatar>
 </>;
 ```
 
@@ -102,7 +182,7 @@ Avatar shapes include `bevel` and `square`. The default shape is round.
 import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
-  <Avatar src="mary.png" alt="Mary" /> {/* default */}
+  <Avatar src="mary.png" alt="Mary" />
   <Avatar src="steve.png" shape="square" alt="Steve" />
   <Avatar src="bob.png" shape="bevel" alt="Bob" />
 </>;
