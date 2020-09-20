@@ -1,6 +1,6 @@
 .atomikui-tab {
   position: relative;
-  color: $gray-500;
+  color: $default-control-text-color;
 
   &__content {
     display: inline-block;
@@ -11,13 +11,13 @@
   &:not(.is-active) {
     .atomikui-tab__content {
       * {
-        color: $gray-500;
+        color: $default-control-text-color;
       }
     }
   }
 
   &::before {
-    background: $blue-200;
+    background: $active-bg-color;
     bottom: 0;
     content: '';
     display: block;
@@ -50,7 +50,7 @@
 
   &.atomikui-tab--comparison {
     &.is-active {
-      background: $gray-500;
+      background: $blue-gray-900;
       color: $white;
 
       &::before {
@@ -60,7 +60,7 @@
       &::after {
         border-left: rem(10) solid transparent;
         border-right: rem(10) solid transparent;
-        border-top: rem(10) solid $gray-500;
+        border-top: rem(10) solid $blue-gray-900;
         content: '';
         display: block;
         left: 50%;

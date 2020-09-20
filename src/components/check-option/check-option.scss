@@ -35,8 +35,8 @@
   }
 
   & > input:checked + .atomikui-check-option__icon {
-    background: $formfield-active-bg;
-    border-color: $formfield-active-bg;
+    background: $active-bg-color;
+    border-color: $active-bg-color;
   }
 
   & > input:checked:focus + .atomikui-check-option__icon {

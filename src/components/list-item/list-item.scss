@@ -19,7 +19,7 @@
 
       &:active,
       &:focus {
-        background: $menu-list-item-active;
+        background: $active-bg-color;
         box-shadow: none;
         color: $white;
       }

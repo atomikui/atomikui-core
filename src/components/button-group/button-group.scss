@@ -44,7 +44,7 @@
     &.is-selected,
     &.is-selected:hover,
     &.is-selected:focus {
-      background: $formfield-active-bg;
+      background: $active-bg-color;
       color: $white;
     }
 
