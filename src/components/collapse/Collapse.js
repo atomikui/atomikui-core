@@ -50,7 +50,7 @@ const Collapse = ({
               return setOpen(!open);
             }}
           >
-            <Icon icon={faChevronRight} size="lg" color="#444" />
+            <Icon icon={faChevronRight} size="lg" />
             <span>{toggleText}</span>
           </Button>
         </div>
