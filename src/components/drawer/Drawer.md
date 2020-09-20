@@ -9,7 +9,7 @@ import { Drawer, Button, Link, List, ListItem } from '@alaneicker/atomik-ui';
 const [isOpen, setIsOpen] = useState(false);
 
 <>
-  <Button theme="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
+  <Button theme="blue" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
@@ -43,7 +43,7 @@ import { Drawer, Button, Link, List, ListItem } from '@alaneicker/atomik-ui';
 const [isOpen, setIsOpen] = useState(false);
 
 <>
-  <Button theme="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
+  <Button theme="blue" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right">
@@ -77,7 +77,7 @@ import { Drawer, Button, Link, List, ListItem } from '@alaneicker/atomik-ui';
 const [isOpen, setIsOpen] = useState(false);
 
 <>
-  <Button theme="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
+  <Button theme="blue" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="top">
@@ -111,7 +111,7 @@ import { Drawer, Button, Link, List, ListItem } from '@alaneicker/atomik-ui';
 const [isOpen, setIsOpen] = useState(false);
 
 <>
-  <Button theme="primary" size="md" onClick={() => setIsOpen(!isOpen)}>
+  <Button theme="blue" size="md" onClick={() => setIsOpen(!isOpen)}>
     Toggle Drawer
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="bottom">

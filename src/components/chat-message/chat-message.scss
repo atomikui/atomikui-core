@@ -4,15 +4,15 @@
   }
 
   &__item__timestamp {
-    color: $chat-message-timestamp;
+    color: $timestamp-color;
     font-size: rem(12);
     margin-bottom: rem(4);
   }
 
   &__item__text {
-    background: $chat-message-bg;
+    background: $gray-300;
     border-radius: rem(8);
-    color: $chat-message-text-color;
+    color: $black;
     font-size: rem(14);
     line-height: 1.2;
     max-width: 65%;
@@ -46,11 +46,11 @@
     }
 
     .atomikui-chat-message__item__text {
-      background: $chat-message-outgoing-bg;
-      color: $chat-message-outgoing-text-color;
+      background: $sky-blue-800;
+      color: $white;
 
       &::after {
-        border-top-color: $chat-message-outgoing-bg;
+        border-top-color: $sky-blue-800;
         left: auto;
         right: rem(-6);
         transform: rotate(-45deg);

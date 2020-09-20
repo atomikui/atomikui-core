@@ -18,7 +18,7 @@ import { Media, Button } from '@alaneicker/atomik-ui';
   footer={
     <div className="text-align-center">
       <h4 className="margin-bottom-8">$1.49/LB</h4>
-      <Button size="md" theme="primary">
+      <Button size="md" theme="blue">
         Add to Cart
       </Button>
     </div>
@@ -47,7 +47,7 @@ import { Media, Button } from '@alaneicker/atomik-ui';
   footer={
     <div className="text-align-center">
       <h4 className="margin-bottom-8">$1.49/LB</h4>
-      <Button size="md" theme="primary">
+      <Button size="md" theme="blue">
         Add to Cart
       </Button>
     </div>

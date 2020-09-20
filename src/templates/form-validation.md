@@ -167,7 +167,7 @@ const {
         checked={sendNotifications}
       />
     </div>
-    <Button theme="primary" type="submit">
+    <Button theme="blue" type="submit">
       Submit
     </Button>
   </fieldset>

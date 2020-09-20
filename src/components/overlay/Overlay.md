@@ -7,7 +7,7 @@ import { Overlay, Button } from '@alaneicker/atomik-ui';
 const [isActive, setIsActive] = useState(false);
 
 <>
-  <Button theme="primary" onClick={() => setIsActive(true)}>
+  <Button theme="blue" onClick={() => setIsActive(true)}>
     Show Overlay
   </Button>
 
@@ -24,7 +24,7 @@ import { Overlay, Button, Spinner } from '@alaneicker/atomik-ui';
 const [isActive, setIsActive] = useState(false);
 
 <>
-  <Button theme="primary" onClick={() => setIsActive(true)}>
+  <Button theme="blue" onClick={() => setIsActive(true)}>
     Show Overlay
   </Button>
 

@@ -1,5 +1,5 @@
 .atomikui-chat-window {
-  background: $chat-window-bg;
+  background: $white;
   bottom: 0;
   box-shadow: rem(-10 10 20) rgba(0, 0, 0, 0.4);
   display: flex;
@@ -20,8 +20,8 @@
 
   &__header {
     align-items: center;
-    background: $chat-window-header-bg;
-    color: $chat-window-header-text-color;
+    background: $sky-blue-800;
+    color: $white;
     display: flex;
     justify-content: space-between;
     padding: rem(12 16);
@@ -34,7 +34,7 @@
   }
 
   &__avatar {
-    border: rem(1) solid $chat-window-header-avatar-border;
+    border: rem(1) solid $white;
     border-radius: 50%;
     height: rem(40);
     margin-right: rem(8);
@@ -55,15 +55,15 @@
     width: rem(8);
 
     &.atomikui-chat-window__sender-status--available {
-      background: $chat-window-user-status-available;
+      background: $light-green-400;
     }
 
     &.atomikui-chat-window__sender-status--away {
-      background: $chat-window-user-status-away;
+      background: $yellow-500;
     }
 
     &.atomikui-chat-window__sender-status--offline {
-      background: $chat-window-user-status-offline;
+      background: $red-400;
     }
   }
 
@@ -84,7 +84,7 @@
   }
 
   &__input {
-    background-color: $chat-window-input;
+    background-color: $gray-200;
     border: 0;
     border-radius: rem(4);
     flex: 1;
@@ -123,7 +123,7 @@
 
     &:hover,
     &:focus {
-      background: $chat-window-close-btn;
+      background: $sky-blue-700;
     }
 
     &:focus {

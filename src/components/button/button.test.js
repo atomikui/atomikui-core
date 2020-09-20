@@ -13,7 +13,7 @@ describe('<Button />', () => {
       <Button
         className="atomikui-btn--custom"
         size="lg"
-        theme="primary"
+        theme="blue"
         type="submit"
         block
         disabled
