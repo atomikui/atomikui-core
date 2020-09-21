@@ -194,27 +194,6 @@ const colors = [
   ['white', '#ffffff'],
 ];
 
-const legacyColors = [
-  ['legacy-red-100', '#f44336'],
-  ['legacy-red-200', '#d0191f'],
-  ['legacy-orange-100', '#ff8400'],
-  ['legacy-yellow-100', '#ffebaf'],
-  ['legacy-yellow-200', '#faca1b'],
-  ['legacy-yellow-300', '#fab01b'],
-  ['legacy-green-100', '#bae60e'],
-  ['legacy-green-200', '#4fa009'],
-  ['legacy-green-300', '#307c01'],
-  ['legacy-blue-000', '#dbeefc'],
-  ['legacy-blue-100', '#88ccfc'],
-  ['legacy-blue-200', '#027abf'],
-  ['legacy-blue-300', '#01547f'],
-  ['legacy-blue-400', '#2c607f'],
-  ['legacy-blue-500', '#002d4a'],
-  ['legacy-purple-100', '#d7a3ff'],
-  ['legacy-purple-200', '#9003fc'],
-  ['legacy-purple-300', '#50008c'],
-];
-
 const ColorChart = (props) => {
   return (
     <>
@@ -246,7 +225,5 @@ const ColorChart = (props) => {
 
 <>
   <ColorChart colors={colors} title="Sass Color Variables & Classes" />
-  <div className="margin-top-32"></div>
-  <ColorChart colors={legacyColors} title="Legacy Colors" />
 </>;
 ```
