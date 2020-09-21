@@ -10,8 +10,8 @@
 
   &__wrapper {
     align-items: center;
-    background: $white;
-    border: rem(1) solid $formfield-border;
+    background: $background-light-gray;
+    border: rem(1) solid transparent;
     border-radius: rem($border-radius);
     display: flex;
     overflow: hidden;

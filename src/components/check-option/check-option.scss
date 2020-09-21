@@ -4,14 +4,14 @@
 
   &__icon {
     align-items: center;
-    background-image: $white;
-    border: rem(1) solid $formfield-border;
+    background: $background-light-gray;
+    border: rem(1) solid transparent;
     border-radius: rem($border-radius);
     display: flex;
-    height: rem(20);
+    height: rem(22);
     justify-content: center;
     margin-right: rem(7);
-    width: rem(20);
+    width: rem(22);
   }
 
   &--radio > .atomikui-check-option__icon,

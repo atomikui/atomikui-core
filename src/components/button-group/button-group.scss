@@ -1,13 +1,13 @@
 .atomikui-button-group {
   align-items: stretch;
-  border: rem(1) solid $formfield-border;
+  border: rem(1) solid transparent;
   border-radius: rem($border-radius);
   display: inline-flex;
   height: rem($input-height);
 
   & > * {
     align-items: center;
-    background: $white;
+    background: $background-light-gray;
     border: 0;
     border-radius: 0;
     color: $default-control-text-color;
@@ -21,12 +21,12 @@
     text-transform: uppercase;
 
     &:not(:first-child) {
-      border-left: rem(1) solid darken($formfield-border-light, 10%);
+      border-left: rem(1) solid darken($formfield-border-light, 12%);
     }
 
     &:hover,
     &:focus {
-      background: $default-btn-color;
+      background: darken($background-light-gray, 10%);
     }
 
     &:focus {

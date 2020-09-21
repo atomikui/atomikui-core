@@ -46,8 +46,8 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: $white;
-  border: rem(1) solid $formfield-border;
+  background-color: $background-light-gray;
+  border: rem(1) solid transparent;
   border-radius: rem($default-border-radius);
   font-family: inherit;
   font-size: inherit;
