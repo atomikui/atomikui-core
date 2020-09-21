@@ -66,7 +66,6 @@ const CheckOption = forwardRef(
                 'is-hidden': !checked && !defaultChecked,
               })}
               icon={faCheck}
-              color="white"
             />
           </span>
           {label}

@@ -37,6 +37,12 @@
   & > input:checked + .atomikui-check-option__icon {
     background: $active-bg-color;
     border-color: $active-bg-color;
+
+    & > svg {
+      & > path {
+        fill: $white;
+      }
+    }
   }
 
   & > input:checked:focus + .atomikui-check-option__icon {
