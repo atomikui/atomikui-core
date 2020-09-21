@@ -12,7 +12,11 @@ const now = 60;
 </>;
 ```
 
-### Color Themes
+### Progress Bar Color Themes
+
+There are 20 dark and 20 light themes. to choose from. simplay pass in a `theme` prop with the color of your choice.
+
+#### Dark Themes
 
 ```jsx
 import { ProgressBar } from '@alaneicker/atomik-ui';
@@ -39,6 +43,36 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
   <ProgressBar now={50} theme="gray" />
   <ProgressBar now={80} theme="blue-gray" />
   <ProgressBar now={80} theme="black" />
+</>;
+```
+
+#### Light Themes
+
+```jsx
+import { ProgressBar } from '@alaneicker/atomik-ui';
+
+<>
+  <ProgressBar now={60} theme="red" themeVariant="light" />
+  <ProgressBar now={40} theme="pink" themeVariant="light" />
+  <ProgressBar now={50} theme="purple" themeVariant="light" />
+  <ProgressBar now={80} theme="deep-purple" themeVariant="light" />
+  <ProgressBar now={60} theme="indigo" themeVariant="light" />
+  <ProgressBar now={40} theme="blue" themeVariant="light" />
+  <ProgressBar now={50} theme="sky-blue" themeVariant="light" />
+  <ProgressBar now={80} theme="cyan" themeVariant="light" />
+  <ProgressBar now={60} theme="teal" themeVariant="light" />
+  <ProgressBar now={40} theme="green" themeVariant="light" />
+  <ProgressBar now={50} theme="light-green" themeVariant="light" />
+  <ProgressBar now={80} theme="pickle" themeVariant="light" />
+  <ProgressBar now={60} theme="yellow" themeVariant="light" />
+  <ProgressBar now={40} theme="light-orange" themeVariant="light" />
+  <ProgressBar now={50} theme="orange" themeVariant="light" />
+  <ProgressBar now={80} theme="deep-orange" themeVariant="light" />
+  <ProgressBar now={60} theme="amber" themeVariant="light" />
+  <ProgressBar now={40} theme="brown" themeVariant="light" />
+  <ProgressBar now={50} theme="gray" themeVariant="light" />
+  <ProgressBar now={80} theme="blue-gray" themeVariant="light" />
+  <ProgressBar now={80} theme="white" themeVariant="light" />
 </>;
 ```
 

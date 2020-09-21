@@ -9,6 +9,7 @@ const ProgressBar = ({
   now,
   shape,
   theme,
+  themeVariant,
   thickness,
   ...others
 }) => {
@@ -17,8 +18,13 @@ const ProgressBar = ({
       className={classnames(
         'atomikui-progress-bar',
         className,
-        [animated && 'animated', shape, theme, thickness].map((prop) => {
-          return { [`atomikui-progress-bar--${prop}`]: prop };
+        [animated && 'animated', shape, thickness].map((prop) => {
+          return {
+            [`atomikui-progress-bar--${prop}`]: prop,
+            [`atomikui-progress-bar--${theme}${
+              themeVariant ? `-${themeVariant}` : ''
+            }`]: theme,
+          };
         }),
       )}
       {...others}
@@ -73,6 +79,8 @@ ProgressBar.propTypes = {
     'black',
     'white',
   ]),
+  /** The theme color variant */
+  themeVariant: PropTypes.oneOf(['light']),
   /** Progress bar thickness */
   thickness: PropTypes.oneOf(['thin', 'thick', 'extra-thick']),
 };
@@ -84,6 +92,7 @@ ProgressBar.defaultProps = {
   now: 0,
   shape: null,
   theme: null,
+  themeVariant: null,
   thickness: null,
 };
 

@@ -69,6 +69,17 @@
     }
   }
 
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      background: $blue-gray-800;
+
+      & > .atomikui-progress-bar__bar {
+        background-color: $color;
+        color: $black;
+      }
+    }
+  }
+
   &--animated > &__bar {
     animation: move 2s linear infinite;
     background-image: linear-gradient(
