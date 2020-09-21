@@ -57,6 +57,50 @@
     border-color: $formfield-border-error;
   }
 
+  @each $name, $color in $background-dark-colors {
+    &--#{$name} {
+      & > * {
+        &.is-selected,
+        &.is-selected:hover,
+        &.is-selected:focus {
+          background-color: $color;
+          color: $white;
+
+          @if $name ==
+            yellow or
+            $name ==
+            pickle or
+            $name ==
+            light-green or
+            $name ==
+            orange or
+            $name ==
+            light-orange or
+            $name ==
+            amber
+          {
+            &:not(:disabled) {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      & > * {
+        &.is-selected,
+        &.is-selected:hover,
+        &.is-selected:focus {
+          background-color: $color;
+          color: $default-control-text-color;
+        }
+      }
+    }
+  }
+
   &--sm {
     height: rem($input-height - 14);
 
