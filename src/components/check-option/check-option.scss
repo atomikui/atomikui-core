@@ -57,4 +57,48 @@
     background: $disabled-background-gray;
     border-color: $disabled-background-gray;
   }
+
+  @each $name, $color in $background-dark-colors {
+    &--#{$name} {
+      & > input:checked:checked + .atomikui-check-option__icon {
+        background-color: $color;
+        border-color: $color;
+
+        @if $name ==
+          yellow or
+          $name ==
+          pickle or
+          $name ==
+          light-green or
+          $name ==
+          orange or
+          $name ==
+          light-orange or
+          $name ==
+          amber
+        {
+          & > svg {
+            & > path {
+              fill: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      & > input:checked:checked + .atomikui-check-option__icon {
+        background-color: $color;
+        border-color: $color;
+
+        & > svg {
+          & > path {
+            fill: $black;
+          }
+        }
+      }
+    }
+  }
 }

@@ -24,6 +24,8 @@ const CheckOption = forwardRef(
       name,
       onChange,
       required,
+      theme,
+      themeVariant,
       type,
       value,
       ...others
@@ -44,6 +46,9 @@ const CheckOption = forwardRef(
             'has-error': hasError,
             'is-disabled': disabled,
             'atomikui-check-option--radio': type === 'radio',
+            [`atomikui-check-option--${theme}${
+              themeVariant ? `-${themeVariant}` : ''
+            }`]: theme,
           })}
         >
           <input
@@ -110,6 +115,33 @@ CheckOption.propTypes = {
   onChange: PropTypes.func,
   /** Specifies if a field is required. */
   required: PropTypes.bool,
+  /** Avatar background color theme variation */
+  theme: PropTypes.oneOf([
+    'red',
+    'pink',
+    'purple',
+    'deep-purple',
+    'indigo',
+    'blue',
+    'sky-blue',
+    'cyan',
+    'teal',
+    'green',
+    'light-green',
+    'pickle',
+    'yellow',
+    'light-orange',
+    'orange',
+    'deep-orange',
+    'amber',
+    'brown',
+    'gray',
+    'blue-gray',
+    'black',
+    'white',
+  ]),
+  /** The theme color variant */
+  themeVariant: PropTypes.oneOf(['light']),
   /** Specifies the type of input. */
   type: PropTypes.oneOf(types),
   /** Check Option value */
@@ -129,6 +161,8 @@ CheckOption.defaultProps = {
   name: '',
   onChange() {},
   required: false,
+  theme: null,
+  themeVariant: null,
   type: 'checkbox',
   value: '',
 };

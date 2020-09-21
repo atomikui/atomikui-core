@@ -1,5 +1,5 @@
 [data-preview='CheckOption'] > * {
   & > * + * {
-    margin-top: rem(8);
+    margin: rem(8 8 0 0);
   }
 }
