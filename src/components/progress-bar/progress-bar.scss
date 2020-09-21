@@ -1,5 +1,5 @@
 .atomikui-progress-bar {
-  background: $background-light-gray;
+  background: $blue-gray-50;
   border-radius: rem($border-radius);
   display: flex;
   height: rem(20);
@@ -71,7 +71,7 @@
 
   @each $name, $color in $background-light-colors {
     &--#{$name}-light {
-      background: $blue-gray-800;
+      background: $blue-gray-50;
 
       & > .atomikui-progress-bar__bar {
         background-color: $color;

@@ -28,7 +28,8 @@
     }
 
     &--drag-and-drop {
-      border: rem(2) dashed $gray-200;
+      background: $background-light-gray;
+      border: rem(2) dashed darken($background-light-gray, 7%);
       border-radius: rem($border-radius);
       display: flex;
       flex-direction: column;
@@ -49,10 +50,6 @@
       & > :last-child {
         overflow: visible;
         white-space: normal;
-      }
-
-      &:hover {
-        border-color: $blue-200;
       }
     }
   }

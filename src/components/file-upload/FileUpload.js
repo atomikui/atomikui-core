@@ -96,7 +96,7 @@ const FileUpload = forwardRef(
               <Icon
                 icon={faCloudUploadAlt}
                 size="5x"
-                color="#027abf"
+                color="#546e7a"
                 title={label}
               />
             ) : (
