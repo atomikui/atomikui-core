@@ -1,6 +1,7 @@
+$pagination-hover-bg: darken($background-light-gray, 10%);
+
 .atomikui-pagination {
-  background: $white;
-  border: rem(1) solid $formfield-border;
+  background: $background-light-gray;
   border-radius: rem($border-radius);
   display: inline-flex;
   list-style: none;
@@ -12,27 +13,32 @@
   }
 
   &__item > a {
+    color: $default-control-text-color;
     cursor: pointer;
     display: block;
+    line-height: 1;
     outline: 0;
     padding: rem(8);
-    line-height: 1;
     transition: background 0.2s linear;
 
     &:focus,
     &:active {
-      background: $gray-100;
+      background: $pagination-hover-bg;
       @include focus-outline();
     }
 
     &:hover {
-      background: $gray-100;
+      background: $pagination-hover-bg;
       text-decoration: none;
+    }
+
+    &.is-disabled {
+      color: lighten($default-control-text-color, 40%);
     }
   }
 
   &__item.is-active > a {
-    background: $blue-200;
+    background: $active-bg-color;
     color: $white;
   }
 }

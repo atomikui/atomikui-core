@@ -23,14 +23,24 @@ import { Pagination, Link } from '@alaneicker/atomik-ui';
 import { Pagination, Link } from '@alaneicker/atomik-ui';
 
 <Pagination>
-  <Link onClick={() => {}}>Previous</Link>
-  <Link onClick={() => {}}>1</Link>
-  <Link onClick={() => {}} active>
+  <Link onClick={() => {}} role="button">
+    Previous
+  </Link>
+  <Link onClick={() => {}} role="button">
+    1
+  </Link>
+  <Link onClick={() => {}} role="button" active>
     2
   </Link>
-  <Link onClick={() => {}}>3</Link>
-  <Link onClick={() => {}}>4</Link>
-  <Link onClick={() => {}}>Next</Link>
+  <Link onClick={() => {}} role="button">
+    3
+  </Link>
+  <Link onClick={() => {}} role="button">
+    4
+  </Link>
+  <Link onClick={() => {}} role="button">
+    Next
+  </Link>
 </Pagination>;
 ```
 
