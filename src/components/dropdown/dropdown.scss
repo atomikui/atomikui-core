@@ -16,14 +16,14 @@
       align-items: center;
       background-color: $active-bg-color;
       border-radius: rem(0 $default-border-radius $default-border-radius 0);
-      bottom: rem(1);
+      bottom: rem(0);
       content: '';
       display: flex;
       justify-content: center;
       pointer-events: none;
       position: absolute;
-      right: rem(1);
-      top: rem(1);
+      right: rem(0);
+      top: rem(0);
       width: rem($input-height);
 
       & > svg {
