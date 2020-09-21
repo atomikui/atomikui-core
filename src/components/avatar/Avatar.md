@@ -108,67 +108,67 @@ import { Avatar } from '@alaneicker/atomik-ui';
 import { Avatar } from '@alaneicker/atomik-ui';
 
 <>
-  <Avatar theme="red" light>
+  <Avatar theme="red" themeVariant="light">
     AE
   </Avatar>
-  <Avatar theme="pink" light>
+  <Avatar theme="pink" themeVariant="light">
     T
   </Avatar>
-  <Avatar theme="purple" light>
+  <Avatar theme="purple" themeVariant="light">
     M
   </Avatar>
-  <Avatar theme="deep-purple" light>
+  <Avatar theme="deep-purple" themeVariant="light">
     LP
   </Avatar>
-  <Avatar theme="indigo" light>
+  <Avatar theme="indigo" themeVariant="light">
     MJ
   </Avatar>
-  <Avatar theme="blue" light>
+  <Avatar theme="blue" themeVariant="light">
     JJ
   </Avatar>
-  <Avatar theme="sky-blue" light>
+  <Avatar theme="sky-blue" themeVariant="light">
     A
   </Avatar>
-  <Avatar theme="cyan" light>
+  <Avatar theme="cyan" themeVariant="light">
     O
   </Avatar>
-  <Avatar theme="teal" light>
+  <Avatar theme="teal" themeVariant="light">
     LF
   </Avatar>
-  <Avatar theme="green" light>
+  <Avatar theme="green" themeVariant="light">
     NE
   </Avatar>
-  <Avatar theme="light-green" light>
+  <Avatar theme="light-green" themeVariant="light">
     Z
   </Avatar>
-  <Avatar theme="pickle" light>
+  <Avatar theme="pickle" themeVariant="light">
     WG
   </Avatar>
-  <Avatar theme="yellow" light>
+  <Avatar theme="yellow" themeVariant="light">
     S
   </Avatar>
-  <Avatar theme="light-orange" light>
+  <Avatar theme="light-orange" themeVariant="light">
     TC
   </Avatar>
-  <Avatar theme="orange" light>
+  <Avatar theme="orange" themeVariant="light">
     C
   </Avatar>
-  <Avatar theme="deep-orange" light>
+  <Avatar theme="deep-orange" themeVariant="light">
     N
   </Avatar>
-  <Avatar theme="amber" light>
+  <Avatar theme="amber" themeVariant="light">
     AJ
   </Avatar>
-  <Avatar theme="brown" light>
+  <Avatar theme="brown" themeVariant="light">
     WY
   </Avatar>
-  <Avatar theme="gray" light>
+  <Avatar theme="gray" themeVariant="light">
     TC
   </Avatar>
-  <Avatar theme="blue-gray" light>
+  <Avatar theme="blue-gray" themeVariant="light">
     B
   </Avatar>
-  <Avatar theme="white" light>
+  <Avatar theme="white" themeVariant="light">
     BD
   </Avatar>
 </>;

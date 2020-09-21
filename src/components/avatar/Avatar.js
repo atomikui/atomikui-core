@@ -13,6 +13,7 @@ const Avatar = ({
   size,
   src,
   theme,
+  themeVariant,
   ...others
 }) => {
   return (
@@ -26,7 +27,9 @@ const Avatar = ({
     >
       <span
         className={classnames('atomikui-avatar__content', className, {
-          [`atomikui-avatar__content--${theme}${light ? '-light' : ''}`]: theme,
+          [`atomikui-avatar__content--${theme}${
+            themeVariant ? `-${themeVariant}` : ''
+          }`]: theme,
         })}
       >
         {src && <img className="atomikui-avatar__image" src={src} alt={alt} />}
@@ -81,6 +84,8 @@ Avatar.propTypes = {
     'black',
     'white',
   ]),
+  /** The theme color variant */
+  themeVariant: PropTypes.oneOf(['light']),
 };
 
 Avatar.defaultProps = {
@@ -88,12 +93,12 @@ Avatar.defaultProps = {
   className: '',
   children: <></>,
   flipLabel: false,
-  light: false,
   label: '',
   shape: null,
   size: null,
   src: '',
   theme: null,
+  themeVariant: null,
 };
 
 export default Avatar;
