@@ -77,7 +77,7 @@ ButtonGroup.propTypes = {
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   /** Makes button group fill width of parent */
   stretch: PropTypes.bool,
-  /** Avatar background color theme variation */
+  /** Background color theme variation */
   theme: PropTypes.oneOf([
     'red',
     'pink',

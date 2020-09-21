@@ -13,18 +13,25 @@
     border-radius: rem($default-border-radius);
     position: relative;
 
-    &::after {
-      background: $active-bg-color no-repeat center/50%
-        url('data:image/svg+xml;base64,PHN2ZyBpZD0iU29saWQiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGZpbGw9IndoaXRlIiBkPSJtNDAwIDIxNmEyMy45MjggMjMuOTI4IDAgMCAxIC0xNi45NzEtNy4wMjlsLTEyNy4wMjktMTI3LjAzLTEyNy4wMjkgMTI3LjAzYTI0IDI0IDAgMCAxIC0zMy45NDItMzMuOTQybDE0NC0xNDRhMjQgMjQgMCAwIDEgMzMuOTQyIDBsMTQ0IDE0NGEyNCAyNCAwIDAgMSAtMTYuOTcxIDQwLjk3MXptLTEyNy4wMjkgMjY0Ljk3MSAxNDQtMTQ0YTI0IDI0IDAgMCAwIC0zMy45NDItMzMuOTQybC0xMjcuMDI5IDEyNy4wMy0xMjcuMDI5LTEyNy4wM2EyNCAyNCAwIDAgMCAtMzMuOTQyIDMzLjk0MmwxNDQgMTQ0YTI0IDI0IDAgMCAwIDMzLjk0MiAweiIvPjwvc3ZnPg==');
+    &__trigger {
+      align-items: center;
+      background-color: $active-bg-color;
       border-radius: rem(0 $default-border-radius $default-border-radius 0);
+      bottom: rem(1);
       content: '';
-      display: block;
-      height: rem($input-height);
+      display: flex;
+      justify-content: center;
       pointer-events: none;
       position: absolute;
-      right: 0;
-      top: 0;
+      right: rem(1);
+      top: rem(1);
       width: rem($input-height);
+
+      & > svg {
+        & > path {
+          fill: $white;
+        }
+      }
     }
   }
 
@@ -41,7 +48,7 @@
       border: 0;
     }
 
-    .atomikui-dropdown__select::after {
+    .atomikui-dropdown__select__trigger {
       background-color: darken($disabled-background-gray, 5%);
     }
   }
@@ -56,7 +63,51 @@
     }
   }
 
-  &.has-error &__select::after {
+  &.has-error &__select__trigger {
     background-color: $error-red;
+  }
+
+  @each $name, $color in $background-dark-colors {
+    &--#{$name} {
+      .atomikui-dropdown__select__trigger {
+        background-color: $color;
+        border-color: $color;
+
+        @if $name ==
+          yellow or
+          $name ==
+          pickle or
+          $name ==
+          light-green or
+          $name ==
+          orange or
+          $name ==
+          light-orange or
+          $name ==
+          amber
+        {
+          & > svg {
+            & > path {
+              fill: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      .atomikui-dropdown__select__trigger {
+        background-color: $color;
+        border-color: $color;
+
+        & > svg {
+          & > path {
+            fill: $black;
+          }
+        }
+      }
+    }
   }
 }

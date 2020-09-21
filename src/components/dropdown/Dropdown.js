@@ -1,6 +1,8 @@
 import React, { forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import shortid from 'shortid';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
@@ -9,6 +11,7 @@ const Dropdown = forwardRef(
   (
     {
       className,
+      defaultValue,
       disabled,
       errorText,
       hasError,
@@ -20,8 +23,9 @@ const Dropdown = forwardRef(
       onChange,
       options,
       required,
+      theme,
+      themeVariant,
       value,
-      defaultValue,
       ...others
     },
     ref,
@@ -36,6 +40,9 @@ const Dropdown = forwardRef(
         className={classnames('atomikui-dropdown', className, {
           'has-error': hasError,
           'is-disabled': disabled,
+          [`atomikui-dropdown--${theme}${
+            themeVariant ? `-${themeVariant}` : ''
+          }`]: theme,
         })}
         {...others}
       >
@@ -79,6 +86,9 @@ const Dropdown = forwardRef(
               );
             })}
           </select>
+          <div className="atomikui-dropdown__select__trigger">
+            <Icon icon={faCaretDown} />
+          </div>
         </div>
         {(helpText || errorText) && (
           <div className="margin-top-2">
@@ -129,6 +139,33 @@ Dropdown.propTypes = {
   ),
   /** Specifies if a field is required. */
   required: PropTypes.bool,
+  /** Avatar background color theme variation */
+  theme: PropTypes.oneOf([
+    'red',
+    'pink',
+    'purple',
+    'deep-purple',
+    'indigo',
+    'blue',
+    'sky-blue',
+    'cyan',
+    'teal',
+    'green',
+    'light-green',
+    'pickle',
+    'yellow',
+    'light-orange',
+    'orange',
+    'deep-orange',
+    'amber',
+    'brown',
+    'gray',
+    'blue-gray',
+    'black',
+    'white',
+  ]),
+  /** The theme color variant */
+  themeVariant: PropTypes.oneOf(['light']),
   /** Dropdown value. */
   value: PropTypes.string,
 };
@@ -147,6 +184,8 @@ Dropdown.defaultProps = {
   onChange() {},
   options: [],
   required: false,
+  theme: null,
+  themeVariant: null,
   value: '',
 };
 
