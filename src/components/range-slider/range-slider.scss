@@ -20,7 +20,7 @@
 
   ::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background-color: $blue-200;
+    background-color: $active-bg-color;
     border-radius: 50%;
     cursor: pointer;
     height: rem(28);
@@ -34,7 +34,7 @@
   ::-moz-range-thumb {
     appearance: none;
     -moz-appearance: none;
-    background-color: $blue-200;
+    background-color: $active-bg-color;
     border-radius: 50%;
     cursor: pointer;
     height: rem(28);
@@ -46,7 +46,7 @@
   }
 
   ::-ms-thumb {
-    background-color: $blue-200;
+    background-color: $active-bg-color;
     border-radius: 50%;
     cursor: pointer;
     height: rem(8);
@@ -78,8 +78,8 @@
   }
 
   ::-ms-fill-lower {
-    background: $blue-200;
-    border-color: $blue-200;
+    background: $active-bg-color;
+    border-color: $active-bg-color;
     border-width: rem(20 0);
     height: rem(20);
     margin-left: rem(-2);
@@ -115,7 +115,7 @@
       padding-top: rem(30);
 
       &.is-selected {
-        color: $blue-200;
+        color: $active-bg-color;
         font-weight: $font-semibold;
       }
 
