@@ -52,7 +52,7 @@
 
   &.is-checked {
     .atomikui-switch__toggle {
-      background: $blue-200;
+      background: $active-bg-color;
 
       &::after {
         left: calc(100% - #{$switch-height}px + 5px);
@@ -73,11 +73,11 @@
   &.is-disabled,
   &.is-checked.is-disabled {
     & > .atomikui-switch__toggle {
-      background: $background-light-gray;
+      background: $disabled-background-gray;
       cursor: default;
 
       &::after {
-        background: $disabled-background-gray;
+        background: darken($disabled-background-gray, 10%);
         box-shadow: none;
       }
     }
