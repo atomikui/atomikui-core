@@ -18,10 +18,27 @@ const now = 60;
 import { ProgressBar } from '@alaneicker/atomik-ui';
 
 <>
-  <ProgressBar now={60} theme="success" />
-  <ProgressBar now={40} theme="warning" />
-  <ProgressBar now={50} theme="info" />
-  <ProgressBar now={80} theme="error" />
+  <ProgressBar now={60} theme="red" />
+  <ProgressBar now={40} theme="pink" />
+  <ProgressBar now={50} theme="purple" />
+  <ProgressBar now={80} theme="deep-purple" />
+  <ProgressBar now={60} theme="indigo" />
+  <ProgressBar now={40} theme="blue" />
+  <ProgressBar now={50} theme="sky-blue" />
+  <ProgressBar now={80} theme="cyan" />
+  <ProgressBar now={60} theme="teal" />
+  <ProgressBar now={40} theme="green" />
+  <ProgressBar now={50} theme="light-green" />
+  <ProgressBar now={80} theme="pickle" />
+  <ProgressBar now={60} theme="yellow" />
+  <ProgressBar now={40} theme="light-orange" />
+  <ProgressBar now={50} theme="orange" />
+  <ProgressBar now={80} theme="deep-orange" />
+  <ProgressBar now={60} theme="amber" />
+  <ProgressBar now={40} theme="brown" />
+  <ProgressBar now={50} theme="gray" />
+  <ProgressBar now={80} theme="blue-gray" />
+  <ProgressBar now={80} theme="black" />
 </>;
 ```
 
@@ -57,10 +74,10 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
 
 <>
   <ProgressBar now={70} animated />
-  <ProgressBar now={60} theme="success" animated />
-  <ProgressBar now={40} theme="warning" animated />
-  <ProgressBar now={50} theme="info" animated />
-  <ProgressBar now={80} theme="error" animated />
+  <ProgressBar now={60} theme="red" animated />
+  <ProgressBar now={40} theme="orange" animated />
+  <ProgressBar now={50} theme="purple" animated />
+  <ProgressBar now={80} theme="light-green" animated />
 </>;
 ```
 

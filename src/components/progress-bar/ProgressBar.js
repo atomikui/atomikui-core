@@ -49,7 +49,30 @@ ProgressBar.propTypes = {
   /** Progress bar shape */
   shape: PropTypes.oneOf(['pill', 'square']),
   /** Specifies the color theme. */
-  theme: PropTypes.oneOf(['info', 'warning', 'error', 'success']),
+  theme: PropTypes.oneOf([
+    'red',
+    'pink',
+    'purple',
+    'deep-purple',
+    'indigo',
+    'blue',
+    'sky-blue',
+    'cyan',
+    'teal',
+    'green',
+    'light-green',
+    'pickle',
+    'yellow',
+    'light-orange',
+    'orange',
+    'deep-orange',
+    'amber',
+    'brown',
+    'gray',
+    'blue-gray',
+    'black',
+    'white',
+  ]),
   /** Progress bar thickness */
   thickness: PropTypes.oneOf(['thin', 'thick', 'extra-thick']),
 };

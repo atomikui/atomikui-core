@@ -8,7 +8,7 @@
 
   &__bar {
     align-items: center;
-    background-color: $blue-300;
+    background-color: $sky-blue-900;
     display: flex;
     justify-content: center;
     transition: width 0.2s linear;
@@ -40,20 +40,33 @@
     border-radius: 0;
   }
 
-  &--error > &__bar {
-    background: $red-100;
-  }
+  @each $name, $color in $background-dark-colors {
+    &--#{$name} {
+      & > .atomikui-progress-bar__bar {
+        background-color: $color;
+        color: $white;
 
-  &--warning > &__bar {
-    background: $orange-100;
-  }
+        @if $name ==
+          yellow or
+          $name ==
+          pickle or
+          $name ==
+          light-green or
+          $name ==
+          orange or
+          $name ==
+          light-orange or
+          $name ==
+          amber
+        {
+          color: $black;
+        }
 
-  &--success > &__bar {
-    background: $green-200;
-  }
-
-  &--info > &__bar {
-    background: $blue-200;
+        &:hover {
+          background-color: darken($color, 5%);
+        }
+      }
+    }
   }
 
   &--animated > &__bar {

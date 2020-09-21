@@ -50,13 +50,6 @@
     }
   }
 
-  @each $name, $color in $background-light-colors {
-    &--#{$name}-light {
-      background-color: $color;
-      color: $black;
-    }
-  }
-
   &__image {
     height: 100%;
     width: 100%;

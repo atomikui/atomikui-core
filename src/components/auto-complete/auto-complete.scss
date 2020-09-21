@@ -30,7 +30,8 @@
       }
 
       &.is-selected {
-        background: $gray-100;
+        background: $active-bg-color;
+        color: $white;
       }
     }
   }

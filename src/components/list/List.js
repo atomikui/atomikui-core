@@ -1,14 +1,23 @@
 import React, { Fragment, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 
-const List = ({ align, children, className, loose, type, ...others }) => {
+const List = ({
+  align,
+  children,
+  className,
+  loose,
+  title,
+  type,
+  ...others
+}) => {
   const Ul = type === 'ordered' ? 'ol' : 'ul';
   const isMenu = type === 'menu';
   const Wrapper = isMenu ? 'nav' : Fragment;
 
   return (
-    <Wrapper>
+    <Wrapper {...(isMenu && { title: `list-${shortid.generate()}` })}>
       <Ul
         className={classnames('atomikui-list', className, {
           [`atomikui-list--${type}`]: type,
@@ -34,6 +43,8 @@ List.propTypes = {
   children: PropTypes.node,
   /** Adds 8px of spacing between list items */
   loose: PropTypes.bool,
+  /** Title attribute for List <nav /> wrapper if `type` is `menu` */
+  title: PropTypes.string,
   /** Defines the type of list */
   type: PropTypes.oneOf([
     'bulleted',
@@ -49,6 +60,7 @@ List.defaultProps = {
   className: '',
   children: <></>,
   loose: false,
+  title: null,
   type: null,
 };
 
