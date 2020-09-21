@@ -36,6 +36,7 @@ $formfield-border-error: $error-red;
 $formfield-border-light: $gray-100;
 
 $active-bg-color: $sky-blue-900;
+$active-bg-color-hover: darken($sky-blue-900, 5%);
 
 // Text colors
 $default-control-text-color: $blue-gray-800;
