@@ -5,26 +5,26 @@
 
   &__star {
     & > path {
-      fill: $yellow-200;
+      fill: $yellow-800;
     }
 
     &--selectable {
       cursor: pointer;
 
       & > path {
-        fill: $gray-200;
+        fill: $blue-gray-100;
       }
 
       &:hover {
         & > path {
-          fill: $gray-300;
+          fill: $blue-gray-200;
         }
       }
     }
 
     &.is-selected {
       & > path {
-        fill: $yellow-200;
+        fill: $yellow-800;
       }
 
       &:hover {
