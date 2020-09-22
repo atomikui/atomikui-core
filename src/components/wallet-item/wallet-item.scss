@@ -1,6 +1,6 @@
 .atomikui-wallet-item {
   align-items: center;
-  background: $gray-100;
+  background: $background-light-gray;
   border: 0;
   border-radius: rem($border-radius);
   cursor: pointer;
@@ -16,7 +16,7 @@
 
   &:hover,
   &.is-selected {
-    background: $gray-100;
+    background: $blue-50;
   }
 
   &__icon {
@@ -41,7 +41,7 @@
   }
 
   &__info {
-    color: $gray-500;
+    color: $default-control-text-color;
     font-size: rem(14);
     line-height: 1.3;
 
