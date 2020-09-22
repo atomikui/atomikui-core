@@ -30,9 +30,9 @@
 
   &__number {
     align-items: center;
-    background: $gray-400;
+    background: $background-light-gray;
     border-radius: 50%;
-    color: $white;
+    color: $default-control-text-color;
     display: flex;
     height: rem(32);
     justify-content: center;
@@ -64,11 +64,12 @@
   }
 
   &.is-active > &__number {
-    background: $blue-200;
+    background: $active-bg-color;
+    color: $white;
   }
 
   &.is-complete > &__number {
-    background: $green-200;
+    background: map-get($informational-colors, 'success');
 
     &:focus,
     &:hover {

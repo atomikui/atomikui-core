@@ -273,14 +273,6 @@ $price-colors: (
 
 $statistic-colors: () !default;
 
-$tooltip-themes: (
-  'light-gray': darken($gray-100, 3%),
-  info: $info-blue,
-  success: $success-green,
-  error: $error-red,
-  warning: $warning-orange,
-) !default;
-
 $price-themes: (
   light-green: $green-100,
   green: $green-200,
