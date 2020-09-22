@@ -1,5 +1,5 @@
 div[class^='rsg--sidebar'] {
-  background: $blue-gray-900;
+  background: #1b2b33;
   border: 0;
 
   [class^='rsg--logo'] {
@@ -44,7 +44,7 @@ div[class^='rsg--sidebar'] {
   }
 
   [class^='rsg--search'] > * {
-    background: darken($blue-gray-900, 5%);
+    background: darken(#1b2b33, 7%);
     border: 0;
     color: $white;
 
