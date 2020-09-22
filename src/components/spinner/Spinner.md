@@ -21,7 +21,7 @@ import { Spinner } from '@alaneicker/atomik-ui';
   <Spinner theme="teal" />
   <Spinner theme="green" />
   <Spinner theme="light-green" />
-  <Spinner theme="pickle" />
+  <Spinner theme="lime" />
   <Spinner theme="yellow" />
   <Spinner theme="light-orange" />
   <Spinner theme="orange" />
@@ -50,7 +50,7 @@ import { Spinner } from '@alaneicker/atomik-ui';
   <Spinner theme="teal" themeVariant="light" />
   <Spinner theme="green" themeVariant="light" />
   <Spinner theme="light-green" themeVariant="light" />
-  <Spinner theme="pickle" themeVariant="light" />
+  <Spinner theme="lime" themeVariant="light" />
   <Spinner theme="yellow" themeVariant="light" />
   <Spinner theme="light-orange" themeVariant="light" />
   <Spinner theme="orange" themeVariant="light" />

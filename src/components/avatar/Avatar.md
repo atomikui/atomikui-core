@@ -89,7 +89,7 @@ import { Avatar } from '@alaneicker/atomik-ui';
   <Avatar theme="teal">LF</Avatar>
   <Avatar theme="green">NE</Avatar>
   <Avatar theme="light-green">Z</Avatar>
-  <Avatar theme="pickle">WG</Avatar>
+  <Avatar theme="lime">WG</Avatar>
   <Avatar theme="yellow">S</Avatar>
   <Avatar theme="light-orange">TC</Avatar>
   <Avatar theme="orange">C</Avatar>
@@ -141,7 +141,7 @@ import { Avatar } from '@alaneicker/atomik-ui';
   <Avatar theme="light-green" themeVariant="light">
     Z
   </Avatar>
-  <Avatar theme="pickle" themeVariant="light">
+  <Avatar theme="lime" themeVariant="light">
     WG
   </Avatar>
   <Avatar theme="yellow" themeVariant="light">

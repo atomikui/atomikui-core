@@ -19,12 +19,6 @@
     line-height: 1;
     text-transform: uppercase;
 
-    @each $color, $value in $statistic-themes {
-      &.atomikui-statistic__value--#{$color} {
-        color: $value;
-      }
-    }
-
     &--sm {
       font-size: rem(18);
     }
@@ -80,6 +74,26 @@
 
     & > .atomikui-statistic__hd {
       margin: 0;
+    }
+  }
+
+  @each $name, $color in $background-dark-colors {
+    &--#{$name} {
+      .atomikui-statistic__value {
+        color: $color;
+      }
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      .atomikui-statistic__value {
+        color: $color;
+      }
+
+      .atomikui-statistic__ft {
+        color: $white;
+      }
     }
   }
 }

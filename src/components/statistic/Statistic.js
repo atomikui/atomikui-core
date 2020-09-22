@@ -12,6 +12,7 @@ const Statistic = ({
   label,
   size,
   theme,
+  themeVariant,
   topLabel,
   ...others
 }) => {
@@ -25,6 +26,9 @@ const Statistic = ({
       className={classnames('atomikui-statistic', className, {
         'atomikui-statistic--top-label': topLabel && !horizontal,
         'atomikui-statistic--horizontal': horizontal,
+        [`atomikui-statistic--${theme}${
+          themeVariant ? `-${themeVariant}` : ''
+        }`]: theme,
       })}
       {...others}
     >
@@ -38,7 +42,6 @@ const Statistic = ({
           className={classnames('atomikui-statistic__value', {
             'atomikui-statistic__value--number': isNumber,
             [`atomikui-statistic__value--${size}`]: size,
-            [`atomikui-statistic__value--${theme}`]: theme,
           })}
         >
           {value}
@@ -67,17 +70,30 @@ Statistic.propTypes = {
   /** Sets the color theme of the statistic value */
   theme: PropTypes.oneOf([
     'red',
-    'orange',
-    'gold',
-    'yellow',
+    'pink',
+    'purple',
+    'deep-purple',
+    'indigo',
+    'blue',
+    'sky-blue',
+    'cyan',
+    'teal',
     'green',
-    'light-blue',
-    'medium-blue',
-    'dark-blue',
-    'light-gray',
-    'medium-gray',
-    'dark-gray',
+    'light-green',
+    'lime',
+    'yellow',
+    'light-orange',
+    'orange',
+    'deep-orange',
+    'amber',
+    'brown',
+    'gray',
+    'blue-gray',
+    'black',
+    'white',
   ]),
+  /** The theme color variant */
+  themeVariant: PropTypes.oneOf(['light']),
   /** Statistic value */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
 };
@@ -90,6 +106,7 @@ Statistic.defaultProps = {
   label: '',
   size: null,
   theme: null,
+  themeVariant: null,
   topLabel: false,
   value: '',
 };

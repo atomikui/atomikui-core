@@ -172,8 +172,8 @@ import { Dropdown } from '@alaneicker/atomik-ui';
     ]}
   />
   <Dropdown
-    theme="pickle"
-    label="pickle"
+    theme="lime"
+    label="lime"
     options={[
       { text: 'Red', value: 'Red' },
       { text: 'Orange', value: 'Orange' },
@@ -360,9 +360,9 @@ import { Dropdown } from '@alaneicker/atomik-ui';
     ]}
   />
   <Dropdown
-    theme="pickle"
+    theme="lime"
     themeVariant="light"
-    label="pickle"
+    label="lime"
     options={[
       { text: 'Red', value: 'Red' },
       { text: 'Orange', value: 'Orange' },

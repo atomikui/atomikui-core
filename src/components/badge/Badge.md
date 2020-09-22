@@ -40,7 +40,7 @@ import { Badge } from '@alaneicker/atomik-ui';
   <Badge theme="teal">teal</Badge>
   <Badge theme="green">NE</Badge>
   <Badge theme="light-green">light-green</Badge>
-  <Badge theme="pickle">pickle</Badge>
+  <Badge theme="lime">lime</Badge>
   <Badge theme="yellow">yellow</Badge>
   <Badge theme="light-orange">light-orange</Badge>
   <Badge theme="orange">orange</Badge>
@@ -92,8 +92,8 @@ import { Badge } from '@alaneicker/atomik-ui';
   <Badge theme="light-green" themeVariant="light">
     light-green
   </Badge>
-  <Badge theme="pickle" themeVariant="light">
-    pickle
+  <Badge theme="lime" themeVariant="light">
+    lime
   </Badge>
   <Badge theme="yellow" themeVariant="light">
     yellow

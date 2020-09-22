@@ -33,7 +33,7 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
   <ProgressBar now={60} theme="teal" />
   <ProgressBar now={40} theme="green" />
   <ProgressBar now={50} theme="light-green" />
-  <ProgressBar now={80} theme="pickle" />
+  <ProgressBar now={80} theme="lime" />
   <ProgressBar now={60} theme="yellow" />
   <ProgressBar now={40} theme="light-orange" />
   <ProgressBar now={50} theme="orange" />
@@ -63,7 +63,7 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
   <ProgressBar now={60} theme="teal" themeVariant="light" />
   <ProgressBar now={40} theme="green" themeVariant="light" />
   <ProgressBar now={50} theme="light-green" themeVariant="light" />
-  <ProgressBar now={80} theme="pickle" themeVariant="light" />
+  <ProgressBar now={80} theme="lime" themeVariant="light" />
   <ProgressBar now={60} theme="yellow" themeVariant="light" />
   <ProgressBar now={40} theme="light-orange" themeVariant="light" />
   <ProgressBar now={50} theme="orange" themeVariant="light" />

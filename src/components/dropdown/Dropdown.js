@@ -152,7 +152,7 @@ Dropdown.propTypes = {
     'teal',
     'green',
     'light-green',
-    'pickle',
+    'lime',
     'yellow',
     'light-orange',
     'orange',

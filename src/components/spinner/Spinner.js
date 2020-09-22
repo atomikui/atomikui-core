@@ -58,7 +58,7 @@ Spinner.propTypes = {
     'teal',
     'green',
     'light-green',
-    'pickle',
+    'lime',
     'yellow',
     'light-orange',
     'orange',
@@ -71,7 +71,7 @@ Spinner.propTypes = {
     'white',
   ]),
   /** The theme color variant */
-  themeVariant: PropTypes.oneOf('light'),
+  themeVariant: PropTypes.oneOf(['light']),
   /** Spinner size */
   size: PropTypes.oneOf(['sm', 'md', 'lg', 'xlg']),
 };

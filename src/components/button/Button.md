@@ -29,7 +29,7 @@ import { Button } from '@alaneicker/atomik-ui';
   <Button theme="teal">teal</Button>
   <Button theme="green">green</Button>
   <Button theme="light-green">light-green</Button>
-  <Button theme="pickle">pickle</Button>
+  <Button theme="lime">lime</Button>
   <Button theme="yellow">yellow</Button>
   <Button theme="light-orange">light-orange</Button>
   <Button theme="orange">orange</Button>
@@ -81,8 +81,8 @@ import { Button } from '@alaneicker/atomik-ui';
   <Button theme="light-green" themeVariant="light">
     themeVariant="light"-green
   </Button>
-  <Button theme="pickle" themeVariant="light">
-    pickle
+  <Button theme="lime" themeVariant="light">
+    lime
   </Button>
   <Button theme="yellow" themeVariant="light">
     yellow

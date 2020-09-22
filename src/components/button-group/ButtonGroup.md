@@ -162,7 +162,7 @@ import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
     <Button>GMC</Button>
     <Button>Honda</Button>
   </ButtonGroup>
-  <ButtonGroup theme="pickle" label="pickle">
+  <ButtonGroup theme="lime" label="lime">
     <Button>Chevrolet</Button>
     <Button className="is-selected">Ford</Button>
     <Button>GMC</Button>
@@ -297,7 +297,7 @@ import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
     <Button>GMC</Button>
     <Button>Honda</Button>
   </ButtonGroup>
-  <ButtonGroup theme="pickle" themeVariant="light" label="pickle">
+  <ButtonGroup theme="lime" themeVariant="light" label="lime">
     <Button>Chevrolet</Button>
     <Button className="is-selected">Ford</Button>
     <Button>GMC</Button>

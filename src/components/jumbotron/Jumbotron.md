@@ -89,7 +89,7 @@ import { Jumbotron } from '@alaneicker/atomik-ui';
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron theme="pickle">
+  <Jumbotron theme="lime">
     <h1 className="text-size-24 text-size-42@medium">Jumbotron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
@@ -245,7 +245,7 @@ import { Jumbotron } from '@alaneicker/atomik-ui';
       ligula id nibh finibus semper. Donec cursus in lacus a commodo.
     </p>
   </Jumbotron>
-  <Jumbotron theme="pickle" themeVariant="light">
+  <Jumbotron theme="lime" themeVariant="light">
     <h1 className="text-size-24 text-size-42@medium">Jumbotron Headline</h1>
     <p className="text-size-14 text-size-16@medium">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget

@@ -143,7 +143,7 @@ const [checked, setChecked] = useState(false);
   <CheckOption theme="teal" label="teal" checked={true} />
   <CheckOption theme="green" label="green" checked={true} />
   <CheckOption theme="light-green" label="light-green" checked={true} />
-  <CheckOption theme="pickle" label="pickle" checked={true} />
+  <CheckOption theme="lime" label="lime" checked={true} />
   <CheckOption theme="yellow" label="yellow" checked={true} />
   <CheckOption theme="light-orange" label="light-orange" checked={true} />
   <CheckOption theme="orange" label="orange" checked={true} />
@@ -206,12 +206,7 @@ const [checked, setChecked] = useState(false);
     label="light-green"
     checked={true}
   />
-  <CheckOption
-    theme="pickle"
-    themeVariant="light"
-    label="pickle"
-    checked={true}
-  />
+  <CheckOption theme="lime" themeVariant="light" label="lime" checked={true} />
   <CheckOption
     theme="yellow"
     themeVariant="light"
