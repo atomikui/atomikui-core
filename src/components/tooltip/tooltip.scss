@@ -7,7 +7,7 @@
   z-index: 1000;
 
   &__content {
-    background: $dark-background-gray;
+    background: $default-tooltip-color;
     border-radius: rem($default-border-radius);
     color: $white;
     font-size: rem(14);
@@ -18,7 +18,7 @@
   &::after {
     border-left: rem(8) solid transparent;
     border-right: rem(8) solid transparent;
-    border-top: rem(8) solid $gray-500;
+    border-top: rem(8) solid $default-tooltip-color;
     content: '';
     height: 0;
     width: 0;
@@ -84,7 +84,7 @@
 
     &::after {
       border-bottom: rem(8) solid transparent;
-      border-left: rem(8) solid $gray-500;
+      border-left: rem(8) solid $default-tooltip-color;
       border-top: rem(8) solid transparent;
       height: 0;
       margin-left: rem(-1);
@@ -98,7 +98,7 @@
 
     &::after {
       border-bottom: rem(8) solid transparent;
-      border-right: rem(8) solid $gray-500;
+      border-right: rem(8) solid $default-tooltip-color;
       border-top: rem(8) solid transparent;
       height: 0;
       margin-right: rem(-1);
@@ -113,7 +113,7 @@
         border: 0;
         color: $white;
 
-        @if ($name == 'light-gray') {
+        @if ($name == warning or $name == success) {
           color: $black;
         }
       }
@@ -131,6 +131,27 @@
         border-right-color: $color;
         border-top-color: transparent;
       }
+    }
+  }
+
+  &--light-gray {
+    .atomikui-tooltip__content {
+      background-color: $background-light-gray;
+      color: $default-tooltip-color;
+    }
+
+    &::after {
+      border-top-color: $background-light-gray;
+    }
+
+    &.atomikui-tooltip--align-left::after {
+      border-left-color: $background-light-gray;
+      border-top-color: transparent;
+    }
+
+    &.atomikui-tooltip--align-right::after {
+      border-right-color: $background-light-gray;
+      border-top-color: transparent;
     }
   }
 }
