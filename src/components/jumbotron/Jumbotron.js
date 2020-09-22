@@ -22,7 +22,7 @@ Jumbotron.propTypes = {
   className: PropTypes.string,
   /** Jumbotron content */
   children: PropTypes.node,
-  /** Color theme variant */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
     'pink',

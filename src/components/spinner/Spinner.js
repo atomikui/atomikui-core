@@ -45,7 +45,7 @@ const Spinner = ({ className, theme, themeVariant, size, ...others }) => {
 Spinner.propTypes = {
   /** Specifies custom component classes. */
   className: PropTypes.string,
-  /** Spinner color variant */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
     'pink',

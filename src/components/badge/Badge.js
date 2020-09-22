@@ -30,7 +30,7 @@ Badge.propTypes = {
   className: PropTypes.string,
   /** Content to be displayed inside badge */
   children: PropTypes.node,
-  /** Specifies the badge theme variation. */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
     'pink',

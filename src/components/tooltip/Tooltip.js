@@ -181,7 +181,7 @@ Tooltip.propTypes = {
   children: PropTypes.node,
   /** triggers the tooltip onClick/onTouchStart */
   triggerOnClick: PropTypes.bool,
-  /** Tooltip theme theme */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf(['info', 'light-gray', 'warning', 'error', 'success']),
 };
 

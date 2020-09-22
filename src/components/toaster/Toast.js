@@ -50,7 +50,7 @@ Toast.propTypes = {
   duration: PropTypes.number,
   /** Removes a toast */
   remove: PropTypes.func,
-  /** Type of toast - oneOf: info, warning, error, success */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 

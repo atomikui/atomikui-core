@@ -55,7 +55,7 @@ Overlay.propTypes = {
   children: PropTypes.node,
   /** Specifies if overlay is active */
   isActive: PropTypes.bool,
-  /** Color theme variant */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf(['blue', 'white']),
 };
 

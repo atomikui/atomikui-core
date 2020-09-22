@@ -52,7 +52,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   /** Specifies the type of button. */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
-  /** Specifies the button variation. */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     // Primary colors
     'red',

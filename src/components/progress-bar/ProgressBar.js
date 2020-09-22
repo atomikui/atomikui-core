@@ -54,7 +54,7 @@ ProgressBar.propTypes = {
   now: PropTypes.number,
   /** Progress bar shape */
   shape: PropTypes.oneOf(['pill', 'square']),
-  /** Specifies the color theme. */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
     'pink',

@@ -139,7 +139,7 @@ Dropdown.propTypes = {
   ),
   /** Specifies if a field is required. */
   required: PropTypes.bool,
-  /** Avatar background color theme variation */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
     'pink',

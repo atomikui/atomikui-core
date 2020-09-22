@@ -115,7 +115,7 @@ CheckOption.propTypes = {
   onChange: PropTypes.func,
   /** Specifies if a field is required. */
   required: PropTypes.bool,
-  /** Background color theme variation */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
     'pink',

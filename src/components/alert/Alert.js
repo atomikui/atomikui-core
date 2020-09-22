@@ -80,7 +80,7 @@ Alert.propTypes = {
   onClose: PropTypes.func,
   /** Alert content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  /** Specifies the alert theme variation. */
+  /** Specifies the  theme variation. */
   theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 

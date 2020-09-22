@@ -10,13 +10,16 @@ const Price = ({
   label,
   size,
   theme,
+  themeVariant,
   ...others
 }) => {
   return (
     <span
       className={classnames('atomikui-price', className, {
         [`atomikui-price--${size}`]: size,
-        [`atomikui-price--${theme}`]: theme,
+        [`atomikui-price--${theme}${
+          themeVariant ? `-${themeVariant}` : ''
+        }`]: theme,
       })}
       {...others}
     >
@@ -40,8 +43,33 @@ Price.propTypes = {
   label: PropTypes.string,
   /** Specifies the price size */
   size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
-  /** Price color theme */
-  theme: PropTypes.oneOf(['light-green', 'green', 'red']),
+  /** Specifies the color variation. */
+  theme: PropTypes.oneOf([
+    'red',
+    'pink',
+    'purple',
+    'deep-purple',
+    'indigo',
+    'blue',
+    'sky-blue',
+    'cyan',
+    'teal',
+    'green',
+    'light-green',
+    'lime',
+    'yellow',
+    'light-orange',
+    'orange',
+    'deep-orange',
+    'amber',
+    'brown',
+    'gray',
+    'blue-gray',
+    'black',
+    'white',
+  ]),
+  /** The theme color variant */
+  themeVariant: PropTypes.oneOf(['light']),
 };
 
 Price.defaultProps = {

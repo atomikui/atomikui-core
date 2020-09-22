@@ -77,7 +77,7 @@ ButtonGroup.propTypes = {
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
   /** Makes button group fill width of parent */
   stretch: PropTypes.bool,
-  /** Background color theme variation */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
     'pink',

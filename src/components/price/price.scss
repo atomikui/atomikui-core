@@ -15,9 +15,10 @@
 
   &__label {
     align-self: flex-end;
-    font-size: 55%;
-    position: relative;
     bottom: rem(1);
+    font-size: 55%;
+    font-weight: $font-semibold;
+    position: relative;
   }
 
   &--sm {
@@ -36,9 +37,15 @@
     font-size: rem(40);
   }
 
-  @each $color, $value in $price-themes {
-    &--#{$color} {
-      color: $value;
+  @each $name, $color in $background-dark-colors {
+    &--#{$name} {
+      color: $color;
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      color: $color;
     }
   }
 }

@@ -67,7 +67,7 @@ Statistic.propTypes = {
   topLabel: PropTypes.bool,
   /** Sets the size of the value text */
   size: PropTypes.oneOf(['sm', 'md', 'lg']),
-  /** Sets the color theme of the statistic value */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
     'pink',

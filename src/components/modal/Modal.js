@@ -109,7 +109,7 @@ Modal.propTypes = {
   onClose: PropTypes.func,
   /** title to be displayed in modal header */
   title: PropTypes.string,
-  /** Color theme variation */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
 };
 

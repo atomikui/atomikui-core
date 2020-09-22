@@ -59,7 +59,7 @@ Avatar.propTypes = {
   size: PropTypes.oneOf(['sm', 'lg']),
   /** Image to be displayed aiside Avatar */
   src: PropTypes.string,
-  /** Avatar background color theme variation */
+  /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
     'pink',
