@@ -35,7 +35,7 @@ const RandomToastGenerator = withToastProvider(() => {
   }, []);
 
   return (
-    <Button theme="blue" size="md" onClick={setRandomToast}>
+    <Button theme="blue" onClick={setRandomToast}>
       Add Random Toast
     </Button>
   );

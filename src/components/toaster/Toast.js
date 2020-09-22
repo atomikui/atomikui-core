@@ -32,7 +32,6 @@ const Toast = ({ children, className, duration, remove, theme, ...others }) => {
 
     return undefined;
   }, []);
-  console.log(theme);
   return (
     <animated.div style={styleProps} className={className} {...others}>
       <Alert classes="atomikui-toaster__toast" theme={theme} onClose={remove}>
