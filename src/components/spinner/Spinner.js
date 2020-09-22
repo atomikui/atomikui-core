@@ -2,20 +2,14 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Spinner = ({ className, theme, size, ...others }) => {
-  const themes = {
-    default: '#333',
-    white: '#fff',
-    red: '#D0191F',
-    orange: '#ff8400',
-    green: '#4fa009',
-    blue: '#027abf',
-  };
-
+const Spinner = ({ className, theme, themeVariant, size, ...others }) => {
   return (
     <div
       className={classnames('atomikui-spinner', className, {
         [`atomikui-spinner--${size}`]: size,
+        [`atomikui-spinner--${theme}${
+          themeVariant ? `-${themeVariant}` : ''
+        }`]: theme,
       })}
       {...others}
     >
@@ -29,7 +23,6 @@ const Spinner = ({ className, theme, size, ...others }) => {
           cx="50"
           cy="50"
           fill="none"
-          stroke={themes[theme]}
           strokeWidth="10"
           r="35"
           strokeDasharray="164.93361431346415 56.97787143782138"
@@ -54,20 +47,39 @@ Spinner.propTypes = {
   className: PropTypes.string,
   /** Spinner color variant */
   theme: PropTypes.oneOf([
-    'default',
     'red',
-    'orange',
-    'green',
+    'pink',
+    'purple',
+    'deep-purple',
+    'indigo',
     'blue',
+    'sky-blue',
+    'cyan',
+    'teal',
+    'green',
+    'light-green',
+    'pickle',
+    'yellow',
+    'light-orange',
+    'orange',
+    'deep-orange',
+    'amber',
+    'brown',
+    'gray',
+    'blue-gray',
+    'black',
     'white',
   ]),
+  /** The theme color variant */
+  themeVariant: PropTypes.oneOf('light'),
   /** Spinner size */
   size: PropTypes.oneOf(['sm', 'md', 'lg', 'xlg']),
 };
 
 Spinner.defaultProps = {
   className: '',
-  theme: 'default',
+  theme: null,
+  themeVariant: null,
   size: null,
 };
 

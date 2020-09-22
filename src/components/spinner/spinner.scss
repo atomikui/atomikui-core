@@ -21,4 +21,30 @@
     height: rem(48);
     width: rem(48);
   }
+
+  svg {
+    & > circle {
+      stroke: $blue-gray-800;
+    }
+  }
+
+  @each $name, $color in $background-dark-colors {
+    &--#{$name} {
+      svg {
+        & > circle {
+          stroke: $color;
+        }
+      }
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      svg {
+        & > circle {
+          stroke: $color;
+        }
+      }
+    }
+  }
 }

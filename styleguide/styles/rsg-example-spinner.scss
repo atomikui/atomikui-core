@@ -1,0 +1,9 @@
+[data-preview='Spinner'] > * {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+[data-testid='Spinner-example-3'] {
+  background: #111 !important;
+}
