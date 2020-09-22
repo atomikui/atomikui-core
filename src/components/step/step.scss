@@ -69,7 +69,7 @@
   }
 
   &.is-complete > &__number {
-    background: map-get($informational-colors, 'success');
+    background: $success-green;
 
     &:focus,
     &:hover {
