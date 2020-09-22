@@ -13,7 +13,7 @@ const styles = {
   },
   box: {
     padding: '12px',
-    background: '#027abf',
+    background: '#1565c0',
     color: 'white',
     textAlign: 'center',
     fontSize: '15px',
