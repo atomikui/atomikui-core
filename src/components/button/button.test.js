@@ -13,7 +13,7 @@ describe('<Button />', () => {
       <Button
         className="atomikui-btn--custom"
         size="lg"
-        theme="blue"
+        theme="red"
         type="submit"
         block
         disabled
@@ -33,7 +33,7 @@ describe('<Button />', () => {
   });
 
   it('Should render theme based on `theme prop`', () => {
-    expect(button.hasClass('atomikui-btn--primary')).toBe(true);
+    expect(button.hasClass('atomikui-btn--red')).toBe(true);
   });
 
   it('Should accept custom classes', () => {

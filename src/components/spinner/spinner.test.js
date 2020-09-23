@@ -8,33 +8,26 @@ configure({ adapter: new Adapter() });
 describe('<Spinner />', () => {
   let spinner;
   const sizes = ['sm', 'md', 'lg', 'xlg'];
-  const themes = [
-    ['default', '#333'],
-    ['red', '#D0191F'],
-    ['orange', '#ff8400'],
-    ['green', '#4fa009'],
-    ['blue', '#027abf'],
-    ['white', '#fff'],
-  ];
 
   beforeEach(() => {
-    spinner = shallow(<Spinner />);
+    spinner = shallow(<Spinner theme="red" />);
   });
 
   it('Should render without errors', () => {
     expect(spinner.length).toBe(1);
   });
 
+  it('Should set a dark theme class', () => {
+    expect(spinner.hasClass('atomikui-spinner--red')).toBe(true);
+  });
+
+  it('Should set a light theme class', () => {
+    spinner.setProps({ themeVariant: 'light' });
+    expect(spinner.hasClass('atomikui-spinner--red-light')).toBe(true);
+  });
+
   test.each(sizes)('Should set the size modifier .spinner--%p', (size) => {
     spinner.setProps({ size });
     expect(spinner.hasClass(`atomikui-spinner--${size}`)).toBe(true);
   });
-
-  test.each(themes)(
-    'If color prop is %p it should set spinner svg stroke to %p',
-    (theme, stroke) => {
-      spinner.setProps({ theme });
-      expect(spinner.find('svg > circle').prop('stroke')).toBe(stroke);
-    },
-  );
 });
