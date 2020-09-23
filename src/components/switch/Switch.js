@@ -110,7 +110,7 @@ Switch.defaultProps = {
   label: '',
   layout: null,
   name: '',
-  onChange() {},
+  onChange: null,
   required: false,
 };
 
