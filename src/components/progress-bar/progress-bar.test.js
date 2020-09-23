@@ -58,4 +58,14 @@ describe('<ProgressBar />', () => {
       progressBar.find('.atomikui-progress-bar__bar').prop('style'),
     ).toHaveProperty('width', '60%');
   });
+
+  it('Should render dark theme', () => {
+    progressBar.setProps({ theme: 'red' });
+    expect(progressBar.hasClass('atomikui-progress-bar--red')).toBe(true);
+  });
+
+  it('Should render light theme', () => {
+    progressBar.setProps({ theme: 'red', themeVariant: 'light' });
+    expect(progressBar.hasClass('atomikui-progress-bar--red-light')).toBe(true);
+  });
 });
