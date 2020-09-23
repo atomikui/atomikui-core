@@ -32,8 +32,13 @@ describe('<Button />', () => {
     expect(button.children().text()).toBe('Submit');
   });
 
-  it('Should render theme based on `theme prop`', () => {
+  it('Should render dark theme class', () => {
     expect(button.hasClass('atomikui-btn--red')).toBe(true);
+  });
+
+  it('Should render light theme class', () => {
+    button.setProps({ themeVariant: 'light' });
+    expect(button.hasClass('atomikui-btn--red-light')).toBe(true);
   });
 
   it('Should accept custom classes', () => {
