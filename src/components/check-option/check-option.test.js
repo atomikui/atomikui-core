@@ -47,6 +47,11 @@ describe('<CheckOption />', () => {
     expect(checkOptionSpy.called).toBe(true);
   });
 
+  it('Should set as checked if defaultChecked is true', () => {
+    checkOption.setProps({ defaultChecked: true });
+    expect(checkOption.find('input').props().defaultChecked).toBe(true);
+  });
+
   it('Should handle an error', () => {
     checkOption.setProps({
       hasError: true,
@@ -73,5 +78,19 @@ describe('<CheckOption />', () => {
     expect(
       checkOption.find('.atomikui-check-option__icon').find('svg').length,
     ).toBe(1);
+  });
+
+  it('Should render dark theme', () => {
+    checkOption.setProps({ theme: 'red' });
+    expect(
+      checkOption.find('Label').hasClass('atomikui-check-option--red'),
+    ).toBe(true);
+  });
+
+  it('Should render light theme', () => {
+    checkOption.setProps({ theme: 'red', themeVariant: 'light' });
+    expect(
+      checkOption.find('Label').hasClass('atomikui-check-option--red-light'),
+    ).toBe(true);
   });
 });
