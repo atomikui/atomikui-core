@@ -53,7 +53,7 @@ Jumbotron.propTypes = {
 
 Jumbotron.defaultProps = {
   className: '',
-  children: <></>,
+  children: null,
   theme: null,
   themeVariant: null,
 };
