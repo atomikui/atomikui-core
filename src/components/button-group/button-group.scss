@@ -20,6 +20,39 @@
     text-align: center;
     text-transform: uppercase;
 
+    &--sm {
+      height: rem($input-height - 14);
+
+      & > * {
+        font-size: rem(10);
+      }
+    }
+
+    &--md {
+      height: rem($input-height - 8);
+
+      & > * {
+        font-size: rem(13);
+      }
+    }
+
+    &--lg {
+      height: rem($input-height + 8);
+
+      & > * {
+        font-size: rem(18);
+      }
+    }
+
+    &--stretch {
+      display: flex;
+      width: 100%;
+
+      & > * {
+        flex: 1;
+      }
+    }
+
     &:not(:first-child) {
       border-left: rem(1) solid darken($formfield-border-light, 12%);
     }
@@ -99,39 +132,6 @@
           color: $default-control-text-color;
         }
       }
-    }
-  }
-
-  &--sm {
-    height: rem($input-height - 14);
-
-    & > * {
-      font-size: rem(10);
-    }
-  }
-
-  &--md {
-    height: rem($input-height - 8);
-
-    & > * {
-      font-size: rem(13);
-    }
-  }
-
-  &--lg {
-    height: rem($input-height + 8);
-
-    & > * {
-      font-size: rem(18);
-    }
-  }
-
-  &--stretch {
-    display: flex;
-    width: 100%;
-
-    & > * {
-      flex: 1;
     }
   }
 }
