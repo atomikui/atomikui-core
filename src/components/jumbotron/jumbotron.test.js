@@ -20,6 +20,16 @@ describe('<Jumbotron />', () => {
     );
   });
 
+  it('Should render dark theme', () => {
+    jumbotron.setProps({ theme: 'red' });
+    expect(jumbotron.hasClass('atomikui-jumbotron--red')).toBe(true);
+  });
+
+  it('Should render light theme', () => {
+    jumbotron.setProps({ theme: 'red', themeVariant: 'light' });
+    expect(jumbotron.hasClass('atomikui-jumbotron--red-light')).toBe(true);
+  });
+
   it('Should render without errors', () => {
     expect(jumbotron.length).toBe(1);
   });
