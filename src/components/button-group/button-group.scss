@@ -55,6 +55,7 @@
 
   &.has-error {
     border-color: $formfield-border-error;
+    border-width: rem(2);
   }
 
   @each $name, $color in $background-dark-colors {

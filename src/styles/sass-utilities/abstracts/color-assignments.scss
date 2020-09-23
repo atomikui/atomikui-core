@@ -3,16 +3,16 @@ $background-light-gray: $blue-gray-50;
 $disabled-background-gray: $gray-200;
 $dark-background-gray: $gray-500;
 
-// Focus state colors
-$focus-blue: $sky-blue-600;
-$focus-red: $red-400;
-$focus-orange: $amber-600;
-
 // State colors
 $error-red: $red-800;
 $warning-orange: $orange-800;
 $info-blue: $sky-blue-800;
 $success-green: $light-green-500;
+
+// Focus state colors
+$focus-blue: $sky-blue-600;
+$focus-red: $error-red;
+$focus-orange: $amber-600;
 
 // Button colors
 $default-btn-color: $sky-blue-50;
