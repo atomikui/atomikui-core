@@ -55,10 +55,10 @@ Toast.propTypes = {
 };
 
 Toast.defaultProps = {
-  children: <></>,
+  children: null,
   className: '',
   duration: 7000,
-  remove() {},
+  remove: null,
   theme: null,
 };
 

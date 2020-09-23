@@ -187,7 +187,7 @@ Tooltip.propTypes = {
 
 Tooltip.defaultProps = {
   align: 'top-left',
-  children: <></>,
+  children: null,
   triggerOnClick: false,
   theme: null,
 };

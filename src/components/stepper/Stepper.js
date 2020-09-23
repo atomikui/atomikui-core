@@ -42,7 +42,7 @@ Stepper.propTypes = {
 };
 
 Stepper.defaultProps = {
-  children: <></>,
+  children: null,
   className: '',
   inline: false,
   topLabels: false,

@@ -23,7 +23,7 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  children: <></>,
+  children: null,
   className: '',
   footer: null,
   title: <></>,

@@ -84,7 +84,7 @@ AccordionItem.propTypes = {
 };
 
 AccordionItem.defaultProps = {
-  children: <></>,
+  children: null,
   className: '',
   label: '',
   expanded: false,

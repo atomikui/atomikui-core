@@ -31,7 +31,7 @@ Wallet.propTypes = {
 };
 
 Wallet.defaultProps = {
-  children: <></>,
+  children: null,
   className: '',
   isGrid: false,
 };

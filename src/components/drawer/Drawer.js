@@ -87,7 +87,7 @@ Drawer.propTypes = {
 };
 
 Drawer.defaultProps = {
-  children: <></>,
+  children: null,
   className: '',
   isOpen: false,
   onClose: null,

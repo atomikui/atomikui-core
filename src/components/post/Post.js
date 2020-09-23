@@ -200,7 +200,7 @@ Post.defaultProps = {
   author: '',
   authorLink: '',
   avatar: '',
-  children: <></>,
+  children: null,
   className: '',
   comments: [],
   facebookLink: null,

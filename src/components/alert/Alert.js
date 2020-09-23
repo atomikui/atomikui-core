@@ -89,7 +89,7 @@ Alert.defaultProps = {
   className: '',
   icon: null,
   onClose: null,
-  children: <></>,
+  children: null,
   text: '',
   theme: null,
 };

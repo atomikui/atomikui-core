@@ -65,7 +65,7 @@ Comment.defaultProps = {
   author: '',
   authorLink: '',
   avatar: '',
-  children: <></>,
+  children: null,
   className: '',
   metadata: '',
   onReply() {},

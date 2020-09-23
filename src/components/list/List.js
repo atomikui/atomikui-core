@@ -58,7 +58,7 @@ List.propTypes = {
 List.defaultProps = {
   align: null,
   className: '',
-  children: <></>,
+  children: null,
   loose: false,
   title: null,
   type: null,

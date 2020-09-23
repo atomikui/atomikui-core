@@ -31,7 +31,7 @@ Toaster.propTypes = {
 };
 
 Toaster.defaultProps = {
-  children: <></>,
+  children: null,
   className: '',
   position: null,
 };

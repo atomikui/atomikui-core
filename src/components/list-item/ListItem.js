@@ -26,7 +26,7 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
   className: '',
-  children: <></>,
+  children: null,
   isMenu: false,
 };
 

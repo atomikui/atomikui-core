@@ -88,7 +88,7 @@ Collapse.propTypes = {
 Collapse.defaultProps = {
   rightAlignTrigger: false,
   rightAlignTriggerIcon: false,
-  children: <></>,
+  children: null,
   className: '',
   isOpen: false,
   noTrigger: false,

@@ -53,7 +53,7 @@ Step.propTypes = {
 };
 
 Step.defaultProps = {
-  children: <></>,
+  children: null,
   isActive: false,
   isComplete: false,
   href: null,

@@ -116,7 +116,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   className: '',
   disableEscapKey: false,
-  children: <></>,
+  children: null,
   disableOverlayclick: false,
   footer: null,
   isOpen: false,

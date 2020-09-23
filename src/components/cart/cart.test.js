@@ -41,6 +41,10 @@ describe('<Cart />', () => {
     expect(cart.length).toBe(1);
   });
 
+  it('Should calculate subtotal', () => {
+    expect(cart.find('.atomikui-cart__total').text()).toBe('Total: $9179.98');
+  });
+
   it('Should trigger onCartItemUpdate whencart item is updated', () => {
     cart
       .find('input')

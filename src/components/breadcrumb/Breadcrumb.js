@@ -29,7 +29,7 @@ Breadcrumb.propTypes = {
 
 Breadcrumb.defaultProps = {
   className: '',
-  children: <></>,
+  children: null,
   title: '',
 };
 

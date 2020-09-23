@@ -16,7 +16,7 @@ Portal.propTypes = {
 };
 
 Portal.defaultProps = {
-  children: <></>,
+  children: null,
   container: null,
   disabled: false,
 };

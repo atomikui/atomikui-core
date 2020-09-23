@@ -55,7 +55,7 @@ Tabs.propTypes = {
 
 Tabs.defaultProps = {
   align: null,
-  children: <></>,
+  children: null,
   className: '',
   comparison: false,
   initialActiveTab: 0,
