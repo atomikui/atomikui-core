@@ -3,11 +3,12 @@
   border-radius: rem($border-radius);
 
   &__trigger__label {
+    color: $default-control-text-color;
     font-weight: $font-medium;
   }
 
   &__trigger__icon {
-    fill: $gray-500;
+    fill: $default-control-text-color;
     height: rem(18);
     transition: transform 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
     width: rem(18);
@@ -31,12 +32,12 @@
     border: 0;
     cursor: pointer;
     display: flex;
-    font-size: rem(18);
+    font-size: rem(16);
     justify-content: space-between;
     outline: 0;
     padding: rem(12 16);
-    width: 100%;
     transition: background 0.2s linear;
+    width: 100%;
 
     &:hover,
     &:focus {
@@ -57,10 +58,6 @@
   }
 
   &.is-open {
-    .atomikui-accordion-item__trigger__label {
-      text-shadow: rem(0 0 1) $black;
-    }
-
     .atomikui-accordion-item__trigger__icon {
       transform: rotate(180deg);
     }
