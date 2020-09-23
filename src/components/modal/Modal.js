@@ -122,7 +122,7 @@ Modal.defaultProps = {
   isOpen: false,
   noOverlay: false,
   overlayTheme: null,
-  onClose() {},
+  onClose: null,
   title: '',
   theme: null,
 };
