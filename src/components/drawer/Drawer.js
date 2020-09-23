@@ -90,7 +90,7 @@ Drawer.defaultProps = {
   children: <></>,
   className: '',
   isOpen: false,
-  onClose() {},
+  onClose: null,
   position: 'left',
 };
 
