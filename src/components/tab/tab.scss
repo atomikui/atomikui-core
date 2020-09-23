@@ -18,7 +18,7 @@
 
   &::before {
     background: $active-bg-color;
-    bottom: 0;
+    top: 0;
     content: '';
     display: block;
     height: rem(3);
@@ -33,7 +33,7 @@
 
   &:hover,
   &:focus {
-    background: darken($gray-100, 4%);
+    background: $background-light-gray;
   }
 
   &:focus,
@@ -42,6 +42,7 @@
   }
 
   &.is-active {
+    background: $background-light-gray;
     &::before {
       opacity: 1;
       width: 100%;
