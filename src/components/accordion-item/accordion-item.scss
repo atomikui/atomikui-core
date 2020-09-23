@@ -36,9 +36,11 @@
     outline: 0;
     padding: rem(12 16);
     width: 100%;
+    transition: background 0.2s linear;
 
+    &:hover,
     &:focus {
-      background: $gray-100;
+      background: darken($background-light-gray, 5%);
     }
 
     &[aria-expanded='true'] {
