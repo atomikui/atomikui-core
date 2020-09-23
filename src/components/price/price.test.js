@@ -20,4 +20,14 @@ describe('<Price />', () => {
     price.setProps({ theme: 'green' });
     expect(price.hasClass('atomikui-price--green')).toBe(true);
   });
+
+  it('Should render dark theme', () => {
+    price.setProps({ theme: 'red' });
+    expect(price.hasClass('atomikui-price--red')).toBe(true);
+  });
+
+  it('Should render light theme', () => {
+    price.setProps({ theme: 'red', themeVariant: 'light' });
+    expect(price.hasClass('atomikui-price--red-light')).toBe(true);
+  });
 });
