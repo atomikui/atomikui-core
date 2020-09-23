@@ -1,0 +1,21 @@
+[data-preview='Tag'] > * {
+  & > * {
+    margin: rem(0 8 8 0);
+  }
+
+  h1 {
+    font-size: rem(40);
+  }
+
+  h2 {
+    font-size: rem(32);
+  }
+
+  h3 {
+    font-size: rem(24);
+  }
+
+  h4 {
+    font-size: rem(16);
+  }
+}

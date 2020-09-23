@@ -1,55 +1,50 @@
 .atomikui-badge {
-  background-color: $gray-300;
+  background: $blue-gray-900;
   border-radius: rem($border-radius);
-  color: $default-control-text-color;
-  display: inline-block;
-  font-size: 75%;
-  line-height: 1;
-  padding: rem(4 8);
-  text-align: center;
-  white-space: nowrap;
+  color: $white;
+  display: inline-flex;
+  font-size: rem(13);
+  overflow: hidden;
+
+  &__label,
+  &__value {
+    padding: rem(4 8);
+  }
+
+  &__value {
+    background: $blue-800;
+  }
 
   @each $name, $color in $background-dark-colors {
     &--#{$name} {
-      background-color: $color;
-      color: $white;
+      .atomikui-badge__value {
+        background: $color;
 
-      @if $name ==
-        yellow or
-        $name ==
-        lime or
-        $name ==
-        light-green or
-        $name ==
-        orange or
-        $name ==
-        light-orange or
-        $name ==
-        amber
-      {
-        color: $black;
+        @if $name ==
+          yellow or
+          $name ==
+          lime or
+          $name ==
+          light-green or
+          $name ==
+          orange or
+          $name ==
+          light-orange or
+          $name ==
+          amber
+        {
+          color: $black;
+        }
       }
     }
   }
 
   @each $name, $color in $background-light-colors {
     &--#{$name}-light {
-      background-color: $color;
-      color: $black;
+      .atomikui-badge__value {
+        background: $color;
+        color: $black;
+      }
     }
-  }
-
-  &--pill {
-    border-radius: rem(100);
-  }
-
-  &--square {
-    border-radius: 0;
-  }
-
-  &--outline {
-    background: $white;
-    border: rem(1) solid $blue-400;
-    color: $blue-400;
   }
 }

@@ -13,6 +13,7 @@ $text-alignment-options: left right center !default;
 // Font sizes
 $font-sizes: 12 14 16 20 24 30 36 42 48 !default;
 
+// Default border radius
 $border-radius: 3;
 
 // Font weights
@@ -83,9 +84,6 @@ $formfield-sizes: (
   lg: 200,
   xl: 250,
 ) !default;
-
-// Border radii
-$default-border-radius: 2 !default;
 
 // Header
 $header-height: 60 !default;

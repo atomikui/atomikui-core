@@ -48,6 +48,7 @@ export { default as SwitchPanel } from './components/switch-panel';
 export { default as Tab } from './components/tab';
 export { default as TabPanel } from './components/tab-panel';
 export { default as Tabs } from './components/tabs';
+export { default as Tag } from './components/tag';
 export { default as Tooltip } from './components/tooltip';
 export { default as Truncate } from './components/truncate';
 export { withToastProvider, useToast } from './components/toaster';

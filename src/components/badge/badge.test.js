@@ -9,10 +9,20 @@ describe('<Badge />', () => {
   let badge;
 
   beforeEach(() => {
-    badge = shallow(<Badge>New</Badge>);
+    badge = shallow(<Badge label="Downloads" value="500k" />);
   });
 
   it('Should render without errors', () => {
-    expect(badge.length).toBe(1);
+    expect(badge).toHaveLength(1);
+  });
+
+  it('Should render theme variants', () => {
+    badge.setProps({ theme: 'red' });
+    expect(badge.hasClass('atomikui-badge--red')).toBe(true);
+  });
+
+  it('Should render theme variants', () => {
+    badge.setProps({ theme: 'red', themeVariant: 'light' });
+    expect(badge.hasClass('atomikui-badge--red-light')).toBe(true);
   });
 });

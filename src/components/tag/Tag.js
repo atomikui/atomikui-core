@@ -2,29 +2,34 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Badge = ({ className, label, value, theme, themeVariant, ...others }) => {
+const Tag = ({
+  children,
+  className,
+  shape,
+  theme,
+  themeVariant,
+  ...others
+}) => {
   return (
     <div
-      className={classnames('atomikui-badge', className, {
-        [`atomikui-badge--${theme}${
+      className={classnames('atomikui-tag', className, {
+        [`atomikui-tag--${theme}${
           themeVariant ? `-${themeVariant}` : ''
         }`]: theme,
+        [`atomikui-tag--${shape}`]: shape,
       })}
       {...others}
     >
-      <div className="atomikui-badge__label">{label}</div>
-      <div className="atomikui-badge__value">{value}</div>
+      {children}
     </div>
   );
 };
 
-Badge.propTypes = {
+Tag.propTypes = {
   /** Adds custom component CSS classes */
   className: PropTypes.string,
-  /** Describes the badge */
-  label: PropTypes.string,
-  /** The data value associated with the badge */
-  value: PropTypes.string,
+  /** Content to be displayed inside badge */
+  children: PropTypes.node,
   /** Specifies the color variation. */
   theme: PropTypes.oneOf([
     'red',
@@ -50,16 +55,18 @@ Badge.propTypes = {
     'black',
     'white',
   ]),
-  /** The theme color variant */
+  /** Theme color cariant */
   themeVariant: PropTypes.oneOf(['light']),
+  /** Specifies a badge's shape. */
+  type: PropTypes.oneOf(['pill', 'square']),
 };
 
-Badge.defaultProps = {
+Tag.defaultProps = {
   className: '',
-  label: '',
-  value: '',
+  children: '',
   theme: null,
+  shape: null,
   themeVariant: null,
 };
 
-export default Badge;
+export default Tag;
