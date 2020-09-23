@@ -151,8 +151,8 @@ DatePicker.defaultProps = {
   disabled: false,
   id: '',
   label: '',
-  onChange() {},
-  onDateChange() {},
+  onChange: null,
+  onDateChange: null,
   value: '',
 };
 
