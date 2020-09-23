@@ -141,7 +141,12 @@ const Post = ({
         <div className="atomikui-post__ft">
           <List type="horizontal">
             <ListItem>
-              <Button id="comment-btn" size="md" onClick={onComment}>
+              <Button
+                theme="blue"
+                id="comment-btn"
+                size="md"
+                onClick={onComment}
+              >
                 Leave a Comment
               </Button>
             </ListItem>
