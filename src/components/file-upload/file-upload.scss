@@ -5,7 +5,7 @@
   }
 
   & > input:focus + &__input {
-    box-shadow: $formfield-focus;
+    box-shadow: $focus-blue;
   }
 
   &__wrapper {

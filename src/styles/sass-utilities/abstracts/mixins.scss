@@ -14,7 +14,7 @@
 }
 
 @mixin focus-outline {
-  box-shadow: rem(0 0 0 2) $focus-blue-light;
+  box-shadow: rem(0 0 0 2) $focus-blue;
 }
 
 @mixin focus-error-outline {
@@ -26,12 +26,11 @@
 }
 
 @mixin radio-button-focus-outline {
-  box-shadow: rem(0 0 0 2) $focus-blue-light,
-    inset 0 0 0 rem(6) $focus-blue-medium;
+  box-shadow: rem(0 0 0 2) $focus-blue, inset 0 0 0 rem(6) $focus-blue;
 }
 
 @mixin radio-button-checked-outline {
-  box-shadow: inset 0 0 0 rem(6) $focus-blue-medium;
+  box-shadow: inset 0 0 0 rem(6) $focus-blue;
 }
 
 @mixin form-option {

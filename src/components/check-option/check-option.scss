@@ -46,11 +46,11 @@
   }
 
   & > input:checked:focus + .atomikui-check-option__icon {
-    box-shadow: $formfield-focus;
+    @include focus-outline();
   }
 
   &.has-error > input:focus + .atomikui-check-option__icon {
-    box-shadow: $formfield-error-focus;
+    @include focus-error-outline();
   }
 
   &.is-disabled > input:checked + .atomikui-check-option__icon {

@@ -39,7 +39,7 @@
   }
 
   &__input:focus ~ &__toggle {
-    box-shadow: $formfield-focus;
+    box-shadow: $focus-blue;
   }
 
   &.is-stacked {
@@ -66,7 +66,7 @@
     }
 
     & > &__input:focus ~ &__toggle {
-      box-shadow: $formfield-error-focus;
+      box-shadow: $focus-red;
     }
   }
 
