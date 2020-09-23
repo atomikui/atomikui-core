@@ -46,7 +46,7 @@ const Post = ({
             </div>
           </div>
           <List type="horizontal-flush" className="atomikui-post__actions">
-            {facebookLink ? (
+            {facebookLink && (
               <ListItem>
                 <Link
                   className="atomikui-post__action-item"
@@ -60,10 +60,8 @@ const Post = ({
                   </svg>
                 </Link>
               </ListItem>
-            ) : (
-              <></>
             )}
-            {twitterLink ? (
+            {twitterLink && (
               <ListItem>
                 <Link
                   className="atomikui-post__action-item"
@@ -80,10 +78,8 @@ const Post = ({
                   </svg>
                 </Link>
               </ListItem>
-            ) : (
-              <></>
             )}
-            {linkedInLink ? (
+            {linkedInLink && (
               <ListItem>
                 <Link
                   className="atomikui-post__action-item"
@@ -101,8 +97,6 @@ const Post = ({
                   </svg>
                 </Link>
               </ListItem>
-            ) : (
-              <></>
             )}
             <ListItem>
               <Tooltip
@@ -213,10 +207,10 @@ Post.defaultProps = {
   hideComments: false,
   isBookmarked: false,
   linkedInLink: null,
-  onComment() {},
-  onBookmark() {},
+  onComment: null,
+  onBookmark: null,
   metadata: '',
-  onReport() {},
+  onReport: null,
   title: '',
   twitterLink: null,
 };
