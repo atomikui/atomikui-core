@@ -68,3 +68,9 @@ It is recommended to import components as needed instead of importing the whole 
 ```html
 import { FormField, CheckOption, Dropdown } from '@alaneicker/atomik-ui';
 ```
+
+<br />
+
+### Atomik UI Maintainers
+
+- Alan Eicker [alaneicker@gmail.com](mailto:alaneicker@gmail.com)

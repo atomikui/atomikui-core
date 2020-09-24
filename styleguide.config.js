@@ -15,7 +15,7 @@ module.exports = {
   require: [
     './src/styles/main.scss',
     './styleguide/styles/main.scss',
-    './scripts/react-axe.js',
+    './scripts/app.js',
   ],
   template: {
     favicon: 'favicon.ico',
