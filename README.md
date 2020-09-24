@@ -48,7 +48,7 @@ Import the Atomik UI library core CSS. This will provide the default light theme
 <br /><br />
 
 ```html
-import '@alaneicker/atomik-ui/dist/styles/main.mim.css';
+import '@alaneicker/atomik-ui/dist/styles/main.min.css';
 ```
 
 #### 3. Begin Importing Components
