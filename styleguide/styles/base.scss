@@ -3,16 +3,15 @@ body {
   color: $blue-gray-900;
 }
 
-#brand-heading,
-#brand-subheading {
-  font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
-}
-
 #brand-heading {
+  font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
   font-size: rem(56);
   text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
 }
 
 #brand-subheading {
-  font-size: rem(28);
+  font-size: rem(24);
+  line-height: 1.3;
 }
