@@ -1,6 +1,6 @@
 module.exports = {
   name: 'CSS Utilities',
-  content: './styleguide/docs/CssUtilities.md',
+  content: './styleguide/docs/SassUtilities.md',
   sectionDepth: 6,
   sections: [
     {

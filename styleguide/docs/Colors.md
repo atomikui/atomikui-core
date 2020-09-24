@@ -213,8 +213,7 @@ const ColorChart = (props) => {
               style={{ fontSize: '15px', lineHeight: 1.3 }}
             >
               {hex}
-              <br />
-              {name}
+              <br />${name}
             </div>
           </div>
         ))}

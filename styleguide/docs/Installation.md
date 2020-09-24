@@ -20,21 +20,23 @@ yarn add @alaneicker/atomik-ui
 
 #### 2. Import the Component library CSS
 
-Import the Atomik UI library core CSS. This will provide the default light theme and dark theme.
+Import the Atomik UI library core CSS.
 <br /><br />
 
 ```html
 import '@alaneicker/atomik-ui/dist/styles/main.min.css';
 ```
 
-Atomik UI comes with ready to use Sass variables, mixins, and functions which can imported into your main Sass file and used them as needed.
+#### 3. Import Sass Utilities (Optional)
+
+Import the Atomik UI Sass Utilities. This will provide the entire color palette as well as a variety of utility classes. Check out the CSS Utilties section for more information.
 <br /><br />
 
 ```html
-@import 'node_modules/@alaneicker/atomik-ui/dist/styles/sass/main.scss';
+import '@alaneicker/atomik-ui/dist/styles/sass-utilities/main.scss';
 ```
 
-#### 3. Begin Importing Components
+#### 4. Begin Importing Components
 
 It is recommended to import components as needed instead of importing the whole Atomik UI.
 <br /><br />

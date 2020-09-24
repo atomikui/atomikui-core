@@ -1,6 +1,6 @@
 const containers = require('./containers');
 const content = require('./content');
-const cssUtilities = require('./css-utilities');
+const sassUtilities = require('./sass-utilities');
 const dataDisplay = require('./data-display');
 const experimental = require('./experimental');
 const dom = require('./dom');
@@ -29,5 +29,5 @@ module.exports = [
   providers,
   experimental,
   templates,
-  cssUtilities,
+  sassUtilities,
 ];
