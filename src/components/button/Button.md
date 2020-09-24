@@ -79,7 +79,7 @@ import { Button } from '@alaneicker/atomik-ui';
     green
   </Button>
   <Button theme="light-green" themeVariant="light">
-    themeVariant="light"-green
+    light-green
   </Button>
   <Button theme="lime" themeVariant="light">
     lime
@@ -88,7 +88,7 @@ import { Button } from '@alaneicker/atomik-ui';
     yellow
   </Button>
   <Button theme="light-orange" themeVariant="light">
-    themeVariant="light"-orange
+    light-orange
   </Button>
   <Button theme="orange" themeVariant="light">
     orange

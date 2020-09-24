@@ -38,7 +38,7 @@ import { Tag } from '@alaneicker/atomik-ui';
   <Tag theme="sky-blue">sky-blue</Tag>
   <Tag theme="cyan">cyan</Tag>
   <Tag theme="teal">teal</Tag>
-  <Tag theme="green">NE</Tag>
+  <Tag theme="green">green</Tag>
   <Tag theme="light-green">light-green</Tag>
   <Tag theme="lime">lime</Tag>
   <Tag theme="yellow">yellow</Tag>
@@ -87,7 +87,7 @@ import { Tag } from '@alaneicker/atomik-ui';
     teal
   </Tag>
   <Tag theme="green" themeVariant="light">
-    NE
+    green
   </Tag>
   <Tag theme="light-green" themeVariant="light">
     light-green

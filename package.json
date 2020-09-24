@@ -38,7 +38,7 @@
     "splash": "node-sass --watch ./splash/ --output ./splash/ --recursive false",
     "build:atomik": "NODE_ENV=production babel --copy-files --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js && cp -R src/styles/sass-utilities/abstracts dist/styles/sass",
-    "build:styleguide": "NODE_ENV=production styleguidist build && cp -R splash build"
+    "build:styleguide": "NODE_ENV=production styleguidist build && cp -R splash build && cp src/CNAME build"
   },
   "browserslist": {
     "production": [
