@@ -1,11 +1,17 @@
-h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
   &[class^='rsg--'] {
     font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+}
+
+h2 {
+  &[class^='rsg--']:not([class^='rsg--logo']) {
+    font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif;
+    font-size: rem(48);
     font-weight: 700;
   }
 }
