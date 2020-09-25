@@ -47,9 +47,9 @@ Import the Atomik UI library core CSS.
 import '@alaneicker/atomik-ui/dist/styles/main.min.css';
 ```
 
-#### 3. Install and Import the Sass Utilities Package (Optional)
+#### 3. Install and Import the Sass Utilities Abstracts (Optional)
 
-The Sass Utilities package contains utility classes, functions, mixins, variables, and colors that can be used in you project.
+The Sass Utilities package contains functions, mixins, variables, and 192 colors that can be used in you project.
 
 [https://www.npmjs.com/package/@alaneicker/sass-utilities](https://www.npmjs.com/package/@alaneicker/sass-utilities)
 
@@ -60,7 +60,7 @@ npm install @alaneicker/sass-utilities;
 ```
 
 ```css
-@import 'node_modules/@alaneicker/sass-utilities/main';
+@import 'node_modules/@alaneicker/sass-utilities/abstracts';
 ```
 
 #### 4. Begin Importing Components
