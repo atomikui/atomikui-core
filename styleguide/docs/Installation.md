@@ -11,13 +11,6 @@ Install the core Atomik UI module as a production dependency.
 npm install --save @alaneicker/atomik-ui
 ```
 
-Or, if you're using Yarn.
-<br /><br />
-
-```html
-yarn add @alaneicker/atomik-ui
-```
-
 #### 2. Import the Component library CSS
 
 Import the Atomik UI library core CSS.
@@ -27,13 +20,20 @@ Import the Atomik UI library core CSS.
 import '@alaneicker/atomik-ui/dist/styles/main.min.css';
 ```
 
-#### 3. Import Sass Utilities (Optional)
+#### 3. Install and Import the Sass Utilities Package (Optional)
 
-Import the Atomik UI Sass Utilities. This will provide the entire color palette as well as a variety of utility classes. Check out the CSS Utilties section for more information.
-<br /><br />
+The Sass Utilities package contains utility classes, functions, mixins, variables, and colors that can be used in you project.
+
+[https://www.npmjs.com/package/@alaneicker/sass-utilities](https://www.npmjs.com/package/@alaneicker/sass-utilities)
+
+<br />
 
 ```html
-import '@alaneicker/atomik-ui/dist/styles/sass-utilities/main.scss';
+npm install @alaneicker/sass-utilities;
+```
+
+```html
+@import 'node_modules/@alaneicker/sass-utilities/main';
 ```
 
 #### 4. Begin Importing Components

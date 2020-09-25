@@ -36,7 +36,7 @@
     "test": "jest --coverage --silent --config=./jest/jest.config.js && cp -R coverage public && rm -rf coverage",
     "start": "NODE_ENV=development styleguidist server",
     "splash": "node-sass --watch ./splash/ --output ./splash/ --recursive false",
-    "build:atomik": "NODE_ENV=production babel --copy-files --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json && cp -R src/styles/sass-utilities dist/styles",
+    "build:atomik": "NODE_ENV=production babel --copy-files --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js && cp -R src/styles/sass-utilities/abstracts dist/styles/sass",
     "build:styleguide": "NODE_ENV=production styleguidist build && cp -R splash build && cp src/CNAME build"
   },
@@ -77,6 +77,7 @@
     "shortid": "^2.2.15"
   },
   "devDependencies": {
+    "@alaneicker/sass-utilities": "^0.1.0",
     "@babel/cli": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.6",
