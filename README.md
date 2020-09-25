@@ -59,7 +59,7 @@ The Sass Utilities package contains utility classes, functions, mixins, variable
 npm install @alaneicker/sass-utilities;
 ```
 
-```html
+```css
 @import 'node_modules/@alaneicker/sass-utilities/main';
 ```
 
