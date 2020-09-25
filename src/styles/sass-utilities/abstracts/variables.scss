@@ -5,16 +5,13 @@ $base-font-family: 'Lato', arial, helvetica, sans-serif !default;
 $root-font-size: 16 !default;
 
 // Default line-height
-$default-line-height: 1.8 !default;
+$default-line-height: 1.5 !default;
 
 // Text alignment
 $text-alignment-options: left right center !default;
 
 // Font sizes
 $font-sizes: 12 14 16 20 24 30 36 42 48 !default;
-
-// Default border radius
-$border-radius: 3;
 
 // Font weights
 $font-light: 300 !default;
@@ -85,13 +82,8 @@ $formfield-sizes: (
   xl: 250,
 ) !default;
 
-// Header
-$header-height: 60 !default;
-
-$border-radii-sm: rem(2) !default;
-$border-radii-md: rem(4) !default;
-$border-radii-lg: rem(6) !default;
-$border-radii-round: 50% !default;
+// Default border radius
+$border-radius: 3;
 
 // Breakpoints
 $breakpoint-small: 576px !default;
