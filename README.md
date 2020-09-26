@@ -60,7 +60,7 @@ npm install @atomikui/core-sass;
 ```
 
 ```css
-@import 'node_modules/@alaneicker/sass-utilities/abstracts';
+@import 'node_modules/@atomikui/core-sass/abstracts';
 ```
 
 #### 4. Begin Importing Components
