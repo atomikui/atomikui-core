@@ -51,7 +51,7 @@ import '@atomikui/core/dist/styles/main.min.css';
 
 The Sass Utilities package contains functions, mixins, variables, and 192 colors that can be used in you project.
 
-[https://www.npmjs.com/package/@alaneicker/sass-utilities](https://www.npmjs.com/package/@alaneicker/sass-utilities)
+[https://www.npmjs.com/package/@atomikui/core-sass](https://www.npmjs.com/package/@atomikui/core-sass)
 
 <br />
 
