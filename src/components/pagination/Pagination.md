@@ -3,7 +3,7 @@ The Pagination component is used to indicate a series of related content exists 
 ### Pagination as Links
 
 ```jsx
-import { Pagination, Link } from '@alaneicker/atomik-ui';
+import { Pagination, Link } from '@atomikui/core';
 
 <Pagination>
   <Link href="#">Previous</Link>
@@ -20,7 +20,7 @@ import { Pagination, Link } from '@alaneicker/atomik-ui';
 ### Pagination as Buttons
 
 ```jsx
-import { Pagination, Link } from '@alaneicker/atomik-ui';
+import { Pagination, Link } from '@atomikui/core';
 
 <Pagination>
   <Link onClick={() => {}} role="button">
@@ -49,7 +49,7 @@ import { Pagination, Link } from '@alaneicker/atomik-ui';
 Simply pass the `disabled` prop to the Link to disable it.
 
 ```jsx
-import { Pagination, Link } from '@alaneicker/atomik-ui';
+import { Pagination, Link } from '@atomikui/core';
 
 <Pagination>
   <Link href="#">Previous</Link>

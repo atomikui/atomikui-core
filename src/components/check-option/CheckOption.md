@@ -4,7 +4,7 @@ The CheckOption component is a form control that renders a checkbox and radio bu
 
 ```jsx
 import { useState } from 'react';
-import { CheckOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@atomikui/core';
 
 const [checked, setChecked] = useState(false);
 
@@ -21,7 +21,7 @@ const [checked, setChecked] = useState(false);
 ```jsx
 import shortid from 'shortid';
 import { useState } from 'react';
-import { CheckOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@atomikui/core';
 
 const [checkOptions, setCheckOptions] = useState([
   { label: 'Option 1', name: 'radio1', checked: true },
@@ -56,7 +56,7 @@ const onChange = (index) => {
 
 ```jsx
 import { useState } from 'react';
-import { CheckOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@atomikui/core';
 
 const [checkBoxChecked, setCheckboxChecked] = useState(true);
 const [radioChecked, setRadioChecked] = useState(true);
@@ -85,7 +85,7 @@ const [radioChecked, setRadioChecked] = useState(true);
 ### Disabled State
 
 ```jsx
-import { CheckOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@atomikui/core';
 
 <>
   <CheckOption
@@ -127,7 +127,7 @@ There are many color themes to choose from. simplay pass in a `theme` prop with 
 
 ```jsx
 import { useState } from 'react';
-import { CheckOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@atomikui/core';
 
 const [checked, setChecked] = useState(false);
 
@@ -160,7 +160,7 @@ const [checked, setChecked] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { CheckOption } from '@alaneicker/atomik-ui';
+import { CheckOption } from '@atomikui/core';
 
 const [checked, setChecked] = useState(false);
 

@@ -1,7 +1,7 @@
 A Breadcrumb indicates the current page’s location in relation to a navigational hierarchy.
 
 ```jsx
-import { Breadcrumb, Link } from '@alaneicker/atomik-ui';
+import { Breadcrumb, Link } from '@atomikui/core';
 
 <Breadcrumb title="breadcrumb list">
   <Link href="/home">Home</Link>

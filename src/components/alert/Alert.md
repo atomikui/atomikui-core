@@ -3,7 +3,7 @@ The Alert component is used to provide the user with an important message withou
 ### States (default, info, warning, error, success)
 
 ```jsx
-import { Alert } from '@alaneicker/atomik-ui';
+import { Alert } from '@atomikui/core';
 
 <>
   <Alert>This is a default alert</Alert>
@@ -18,7 +18,7 @@ import { Alert } from '@alaneicker/atomik-ui';
 ### Alert With Custom Icon
 
 ```jsx
-import { Alert, Spinner } from '@alaneicker/atomik-ui';
+import { Alert, Spinner } from '@atomikui/core';
 
 <Alert theme="dark" align="middle" icon={<Spinner theme="blue" />}>
   Please wait while we load your content
@@ -30,7 +30,7 @@ import { Alert, Spinner } from '@alaneicker/atomik-ui';
 Simply add an `onClose` prop with a callback and a close button will be added to the alert.
 
 ```jsx
-import { Alert } from '@alaneicker/atomik-ui';
+import { Alert } from '@atomikui/core';
 
 <>
   <Alert theme="info" onClose={() => console.log('closed')}>

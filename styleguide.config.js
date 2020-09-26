@@ -8,7 +8,7 @@ module.exports = {
   pagePerSection: true,
   sections: [...sections],
   moduleAliases: {
-    '@alaneicker/atomik-ui': path.resolve(__dirname, 'src'),
+    '@atomikui/core': path.resolve(__dirname, 'src'),
   },
   assetsDir: './public',
   styleguideDir: './build',

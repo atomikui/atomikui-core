@@ -1,7 +1,7 @@
 A card contains content and actions related to a single subject.
 
 ```jsx
-import { Card, Link, Button } from '@alaneicker/atomik-ui';
+import { Card, Link, Button } from '@atomikui/core';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import {
   faThumbsUp,

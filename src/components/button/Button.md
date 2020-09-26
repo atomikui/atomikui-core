@@ -3,7 +3,7 @@ The Button component is a form control that triggers an action when clicked.
 ### Default Button
 
 ```jsx
-import { Button } from '@alaneicker/atomik-ui';
+import { Button } from '@atomikui/core';
 
 <Button>Default</Button>;
 ```
@@ -15,7 +15,7 @@ The Button offers 20 dark and 20 themeVariant="light" color themes.
 #### Dark Themes
 
 ```jsx
-import { Button } from '@alaneicker/atomik-ui';
+import { Button } from '@atomikui/core';
 
 <>
   <Button theme="red">red</Button>
@@ -45,7 +45,7 @@ import { Button } from '@alaneicker/atomik-ui';
 #### Light Themes
 
 ```jsx
-import { Button } from '@alaneicker/atomik-ui';
+import { Button } from '@atomikui/core';
 
 <>
   <Button theme="red" themeVariant="light">
@@ -115,7 +115,7 @@ import { Button } from '@alaneicker/atomik-ui';
 ### Link Button
 
 ```jsx
-import { Button } from '@alaneicker/atomik-ui';
+import { Button } from '@atomikui/core';
 
 <Button theme="link">Link</Button>;
 ```
@@ -123,7 +123,7 @@ import { Button } from '@alaneicker/atomik-ui';
 ### Button Shapes
 
 ```jsx
-import { Button } from '@alaneicker/atomik-ui';
+import { Button } from '@atomikui/core';
 
 <>
   <Button>Default</Button>
@@ -135,7 +135,7 @@ import { Button } from '@alaneicker/atomik-ui';
 ### Disabled Button
 
 ```jsx
-import { Button } from '@alaneicker/atomik-ui';
+import { Button } from '@atomikui/core';
 
 <Button disabled>Disabled</Button>;
 ```
@@ -145,7 +145,7 @@ import { Button } from '@alaneicker/atomik-ui';
 ```jsx
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '@alaneicker/atomik-ui';
+import { Button } from '@atomikui/core';
 
 <>
   <Button>
@@ -161,7 +161,7 @@ import { Button } from '@alaneicker/atomik-ui';
 ### Responsive Button
 
 ```jsx
-import { Button } from '@alaneicker/atomik-ui';
+import { Button } from '@atomikui/core';
 
 <Button block>Block Button</Button>;
 ```
@@ -169,7 +169,7 @@ import { Button } from '@alaneicker/atomik-ui';
 ### Button Sizes
 
 ```jsx
-import { Button } from '@alaneicker/atomik-ui';
+import { Button } from '@atomikui/core';
 
 <>
   <Button size="sm">Small</Button>

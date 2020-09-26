@@ -2,7 +2,7 @@ The TabPanel is used with the Tabs component. The `state` prop is an array consi
 
 ```jsx
 import { useState } from 'react';
-import { TabPanel } from '@alaneicker/atomik-ui';
+import { TabPanel } from '@atomikui/core';
 
 const [currentIndex, setCurrentIndex] = useState(0);
 

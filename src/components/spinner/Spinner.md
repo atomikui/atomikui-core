@@ -7,7 +7,7 @@ There are many color themes to choose from. simplay pass in a `theme` prop with 
 #### Dark
 
 ```jsx
-import { Spinner } from '@alaneicker/atomik-ui';
+import { Spinner } from '@atomikui/core';
 
 <>
   <Spinner />
@@ -37,7 +37,7 @@ import { Spinner } from '@alaneicker/atomik-ui';
 #### Light
 
 ```jsx
-import { Spinner } from '@alaneicker/atomik-ui';
+import { Spinner } from '@atomikui/core';
 
 <>
   <Spinner theme="red" themeVariant="light" />

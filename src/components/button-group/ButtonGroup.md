@@ -3,7 +3,7 @@ The ButtonGroup is a series of buttons together on a single line, representing s
 It is a stateless component, therefore the selected state must be managed externally.
 
 ```jsx
-import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
+import { ButtonGroup, Button } from '@atomikui/core';
 
 <ButtonGroup
   label="Favorite Car Brand"
@@ -19,7 +19,7 @@ import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
 ### Error state
 
 ```jsx
-import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
+import { ButtonGroup, Button } from '@atomikui/core';
 
 <ButtonGroup
   label="Favorite Car Brand"
@@ -38,7 +38,7 @@ import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
 Sizes include `sm`, `md`, and `lg`.
 
 ```jsx
-import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
+import { ButtonGroup, Button } from '@atomikui/core';
 
 <>
   <ButtonGroup label="Button Group (Small)" size="sm">
@@ -76,7 +76,7 @@ import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
 A `ButtonGroup` with many options do not work well on smaller devices. In this case, it is recommended to use a `DropDown` menu to convey the list of options.
 
 ```jsx
-import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
+import { ButtonGroup, Button } from '@atomikui/core';
 
 <ButtonGroup label="Button Group (Medium)" stretch>
   <Button>Chevrolet</Button>
@@ -93,7 +93,7 @@ There are many color themes to choose from. simplay pass in a `theme` prop with 
 #### Dark Themes
 
 ```jsx
-import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
+import { ButtonGroup, Button } from '@atomikui/core';
 
 <>
   <ButtonGroup theme="red" label="red">
@@ -228,7 +228,7 @@ import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
 #### Light Themes
 
 ```jsx
-import { ButtonGroup, Button } from '@alaneicker/atomik-ui';
+import { ButtonGroup, Button } from '@atomikui/core';
 
 <>
   <ButtonGroup theme="red" themeVariant="light" label="red">

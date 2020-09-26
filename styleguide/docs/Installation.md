@@ -8,7 +8,7 @@ Install the core Atomik UI module as a production dependency.
 <br /><br />
 
 ```html
-npm install --save @alaneicker/atomik-ui
+npm install --save @atomikui/core
 ```
 
 #### 2. Import the Component library CSS
@@ -17,23 +17,23 @@ Import the Atomik UI library core CSS.
 <br /><br />
 
 ```html
-import '@alaneicker/atomik-ui/dist/styles/main.min.css';
+import '@atomikui/core/dist/styles/main.min.css';
 ```
 
 #### 3. Install and Import the Sass Utilities Abstracts (Optional)
 
 The Sass Utilities package contains functions, mixins, variables, and 192 colors that can be used in you project.
 
-[https://www.npmjs.com/package/@alaneicker/sass-utilities](https://www.npmjs.com/package/@alaneicker/sass-utilities)
+[https://www.npmjs.com/package/@atomikui/core-sass](https://www.npmjs.com/package/@atomikui/core-sass)
 
 <br />
 
 ```html
-npm install @alaneicker/sass-utilities;
+npm install @atomikui/core-sass;
 ```
 
 ```css
-@import 'node_modules/@alaneicker/sass-utilities/abstracts';
+@import 'node_modules/@atomikui/core-sass/abstracts';
 ```
 
 #### 4. Begin Importing Components
@@ -42,5 +42,5 @@ It is recommended to import components as needed instead of importing the whole 
 <br /><br />
 
 ```html
-import { FormField, CheckOption, Dropdown } from '@alaneicker/atomik-ui';
+import { FormField, CheckOption, Dropdown } from '@atomikui/core';
 ```

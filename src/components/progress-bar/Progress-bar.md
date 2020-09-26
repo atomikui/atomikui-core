@@ -3,7 +3,7 @@ The ProgressBar component is used as an indicator quantitative progress.
 ### Basic Progress Bar
 
 ```jsx
-import { ProgressBar } from '@alaneicker/atomik-ui';
+import { ProgressBar } from '@atomikui/core';
 
 const now = 60;
 
@@ -19,7 +19,7 @@ There are 20 dark and 20 light themes. to choose from. simplay pass in a `theme`
 #### Dark Themes
 
 ```jsx
-import { ProgressBar } from '@alaneicker/atomik-ui';
+import { ProgressBar } from '@atomikui/core';
 
 <>
   <ProgressBar now={60} theme="red" />
@@ -49,7 +49,7 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
 #### Light Themes
 
 ```jsx
-import { ProgressBar } from '@alaneicker/atomik-ui';
+import { ProgressBar } from '@atomikui/core';
 
 <>
   <ProgressBar now={60} theme="red" themeVariant="light" />
@@ -79,7 +79,7 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
 ### Shapes
 
 ```jsx
-import { ProgressBar } from '@alaneicker/atomik-ui';
+import { ProgressBar } from '@atomikui/core';
 
 <>
   <ProgressBar now={60} />
@@ -91,7 +91,7 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
 ### Thickness
 
 ```jsx
-import { ProgressBar } from '@alaneicker/atomik-ui';
+import { ProgressBar } from '@atomikui/core';
 
 <>
   <ProgressBar now={60} thickness="thin" />
@@ -104,7 +104,7 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
 ### Animated Progress Bar
 
 ```jsx
-import { ProgressBar } from '@alaneicker/atomik-ui';
+import { ProgressBar } from '@atomikui/core';
 
 <>
   <ProgressBar now={70} animated />
@@ -119,7 +119,7 @@ import { ProgressBar } from '@alaneicker/atomik-ui';
 
 ```jsx
 import { useState, useEffect, useRef } from 'react';
-import { ProgressBar, Button } from '@alaneicker/atomik-ui';
+import { ProgressBar, Button } from '@atomikui/core';
 
 const [start, setStart] = useState(false);
 const [now, setNow] = useState(0);

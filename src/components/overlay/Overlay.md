@@ -2,7 +2,7 @@ The `Overlay` component is used to block user interaction while processes are ta
 
 ```jsx
 import { useState } from 'react';
-import { Overlay, Button } from '@alaneicker/atomik-ui';
+import { Overlay, Button } from '@atomikui/core';
 
 const [isActive, setIsActive] = useState(false);
 
@@ -19,7 +19,7 @@ const [isActive, setIsActive] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Overlay, Button, Spinner } from '@alaneicker/atomik-ui';
+import { Overlay, Button, Spinner } from '@atomikui/core';
 
 const [isActive, setIsActive] = useState(false);
 

@@ -1,7 +1,7 @@
 The Price component can be used to create a stylized version of a price
 
 ```jsx
-import { Price } from '@alaneicker/atomik-ui';
+import { Price } from '@atomikui/core';
 
 <Price amount={124.99} label="/ month" />;
 ```
@@ -9,7 +9,7 @@ import { Price } from '@alaneicker/atomik-ui';
 ### Sizes
 
 ```jsx
-import { Price } from '@alaneicker/atomik-ui';
+import { Price } from '@atomikui/core';
 
 <>
   <Price amount={124.99} label="/ month" size="sm" />
@@ -27,7 +27,7 @@ There are many color themes to choose from. simplay pass in a `theme` prop with 
 #### Dark
 
 ```jsx
-import { Price } from '@alaneicker/atomik-ui';
+import { Price } from '@atomikui/core';
 
 <>
   <Price amount={124.99} label="/ month" theme="red" />
@@ -57,7 +57,7 @@ import { Price } from '@alaneicker/atomik-ui';
 #### Light
 
 ```jsx
-import { Price } from '@alaneicker/atomik-ui';
+import { Price } from '@atomikui/core';
 
 <>
   <Price amount={124.99} label="/ month" theme="red" themeVariant="light" />

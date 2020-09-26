@@ -1,7 +1,7 @@
 A payment item represents is used in conjunction with the Wallet component and represents an available payment method.
 
 ```jsx
-import { WalletItem } from '@alaneicker/atomik-ui';
+import { WalletItem } from '@atomikui/core';
 
 <WalletItem
   type="MasterCard"
@@ -14,7 +14,7 @@ import { WalletItem } from '@alaneicker/atomik-ui';
 ### Selected Payment Method
 
 ```jsx
-import { WalletItem } from '@alaneicker/atomik-ui';
+import { WalletItem } from '@atomikui/core';
 
 <WalletItem
   type="MasterCard"
@@ -53,7 +53,7 @@ A custom payment type can also be passed in to the `type` prop as an object.
 <br />
 
 ```jsx
-import { WalletItem } from '@alaneicker/atomik-ui';
+import { WalletItem } from '@atomikui/core';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faPiggyBank } from '@fortawesome/free-solid-svg-icons';
 

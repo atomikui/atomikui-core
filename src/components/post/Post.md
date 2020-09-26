@@ -2,7 +2,7 @@ Content displayed for public viewing, such as a blog post.
 
 ```jsx
 import shortid from 'shortid';
-import { Post, Comment } from '@alaneicker/atomik-ui';
+import { Post, Comment } from '@atomikui/core';
 
 <Post
   title="Getting Started With React Functional Components"

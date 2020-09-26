@@ -4,7 +4,7 @@ The Dropdown component is a form control that displays a list of selectable opti
 
 ```jsx
 import { useState } from 'react';
-import { Dropdown } from '@alaneicker/atomik-ui';
+import { Dropdown } from '@atomikui/core';
 
 const [value, setValue] = useState('');
 
@@ -28,7 +28,7 @@ const [value, setValue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { Dropdown } from '@alaneicker/atomik-ui';
+import { Dropdown } from '@atomikui/core';
 
 const [value, setValue] = useState('');
 
@@ -54,7 +54,7 @@ const [value, setValue] = useState('');
 
 ```jsx
 import { useState } from 'react';
-import { Dropdown } from '@alaneicker/atomik-ui';
+import { Dropdown } from '@atomikui/core';
 
 <Dropdown
   label="Select a Color"
@@ -80,7 +80,7 @@ There are many color themes to choose from. simplay pass in a `theme` prop with 
 #### Dark Themes
 
 ```jsx
-import { Dropdown } from '@alaneicker/atomik-ui';
+import { Dropdown } from '@atomikui/core';
 
 <>
   <Dropdown
@@ -257,7 +257,7 @@ import { Dropdown } from '@alaneicker/atomik-ui';
 #### Light Themes
 
 ```jsx
-import { Dropdown } from '@alaneicker/atomik-ui';
+import { Dropdown } from '@atomikui/core';
 
 <>
   <Dropdown

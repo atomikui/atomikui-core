@@ -11,7 +11,7 @@ import {
   FormField,
   CheckOption,
   RangeSlider,
-} from '@alaneicker/atomik-ui';
+} from '@atomikui/core';
 
 const [sendNotifications, setSendNotifications] = useState(false);
 

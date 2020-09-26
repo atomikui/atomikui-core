@@ -1,6 +1,6 @@
 {
-  "name": "@atomikui-ui/core",
-  "version": "2.1.0",
+  "name": "@atomikui/core",
+  "version": "0.0.0",
   "description": "A Comprehensive Library of React Components",
   "keywords": [
     "atomik-ui",
@@ -18,7 +18,7 @@
   "homepage": "https://www.atomikui.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alaneicker1975/atomik-ui"
+    "url": "https://github.com/atomikui/atomikui-core"
   },
   "publishConfig": {
     "access": "public"
@@ -75,7 +75,7 @@
     "shortid": "^2.2.15"
   },
   "devDependencies": {
-    "@alaneicker/sass-utilities": "^0.1.0",
+    "@atomikui/core-sass": "^0.1.0",
     "@babel/cli": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.9.6",

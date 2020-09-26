@@ -16,7 +16,7 @@ The FormGenerator is a presentational component that builds a form layout from d
 ### Basic Usage
 
 ```jsx
-import { FormGenerator, FormField, Button } from '@alaneicker/atomik-ui';
+import { FormGenerator, FormField, Button } from '@atomikui/core';
 
 const personalInfo = [
   [
@@ -103,12 +103,7 @@ The FormGenerator is a presentational component, thus validation needs to be han
 <br /><br />
 
 ```jsx
-import {
-  FormGenerator,
-  FormField,
-  Button,
-  DatePicker,
-} from '@alaneicker/atomik-ui';
+import { FormGenerator, FormField, Button, DatePicker } from '@atomikui/core';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 
@@ -199,12 +194,7 @@ const formfields = [
 The following example demonstrates how a form can be set up to have condtional form fields and validation.
 
 ```jsx
-import {
-  FormGenerator,
-  FormField,
-  Button,
-  DatePicker,
-} from '@alaneicker/atomik-ui';
+import { FormGenerator, FormField, Button, DatePicker } from '@atomikui/core';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 

@@ -5,7 +5,7 @@ An avatar is a graphical representation of something.
 An image avatar can be created by passing in a `src` and `alt` prop.
 
 ```jsx
-import { Avatar } from '@alaneicker/atomik-ui';
+import { Avatar } from '@atomikui/core';
 
 <Avatar src="bob.png" alt="Bob Smith" />;
 ```
@@ -17,7 +17,7 @@ A label can be added to an avatar with `label` prop.
 By default the label is positioned to the right of the avatar. Use the `flipLabel` prop to align it to the left.
 
 ```jsx
-import { Avatar } from '@alaneicker/atomik-ui';
+import { Avatar } from '@atomikui/core';
 
 <>
   <Avatar src="bob.png" alt="Some alt text" label="Right Aligned Label" />
@@ -35,7 +35,7 @@ import { Avatar } from '@alaneicker/atomik-ui';
 A letter avatar can be created simply by passing in one or two initials as children.
 
 ```jsx
-import { Avatar } from '@alaneicker/atomik-ui';
+import { Avatar } from '@atomikui/core';
 
 <Avatar theme="red">AE</Avatar>;
 ```
@@ -45,7 +45,7 @@ import { Avatar } from '@alaneicker/atomik-ui';
 Add an SVG as a child to create an icon avatar.
 
 ```jsx
-import { Avatar } from '@alaneicker/atomik-ui';
+import { Avatar } from '@atomikui/core';
 
 <Avatar theme="red">
   <svg
@@ -75,7 +75,7 @@ There are many color themes to choose from. simplay pass in a `theme` prop with 
 #### Dark
 
 ```jsx
-import { Avatar } from '@alaneicker/atomik-ui';
+import { Avatar } from '@atomikui/core';
 
 <>
   <Avatar theme="red">AE</Avatar>
@@ -105,7 +105,7 @@ import { Avatar } from '@alaneicker/atomik-ui';
 #### Light
 
 ```jsx
-import { Avatar } from '@alaneicker/atomik-ui';
+import { Avatar } from '@atomikui/core';
 
 <>
   <Avatar theme="red" themeVariant="light">
@@ -179,7 +179,7 @@ import { Avatar } from '@alaneicker/atomik-ui';
 Avatar shapes include `bevel` and `square`. The default shape is round.
 
 ```jsx
-import { Avatar } from '@alaneicker/atomik-ui';
+import { Avatar } from '@atomikui/core';
 
 <>
   <Avatar src="mary.png" alt="Mary" />
@@ -193,7 +193,7 @@ import { Avatar } from '@alaneicker/atomik-ui';
 The `size` prop can be used to change the size of the avatar
 
 ```jsx
-import { Avatar } from '@alaneicker/atomik-ui';
+import { Avatar } from '@atomikui/core';
 
 <>
   <Avatar src="mary.png" alt="Mary" size="sm" />

@@ -8,7 +8,7 @@ Below is an example of how we can use the withToastProvider and useToast hook to
 
 ```jsx
 import { useEffect } from 'react';
-import { withToastProvider, useToast, Button } from '@alaneicker/atomik-ui';
+import { withToastProvider, useToast, Button } from '@atomikui/core';
 
 const RandomToastGenerator = withToastProvider(() => {
   const toast = useToast();

@@ -1,7 +1,7 @@
 The Tag component scales to match the size of the parent element by using relative font sizing.
 
 ```jsx
-import { Tag } from '@alaneicker/atomik-ui';
+import { Tag } from '@atomikui/core';
 
 <>
   <h1>
@@ -26,7 +26,7 @@ The Tag offers 20 dark and 20 light color themes.
 #### Dark Themes
 
 ```jsx
-import { Tag } from '@alaneicker/atomik-ui';
+import { Tag } from '@atomikui/core';
 
 <>
   <Tag theme="red">red</Tag>
@@ -56,7 +56,7 @@ import { Tag } from '@alaneicker/atomik-ui';
 #### Light Themes
 
 ```jsx
-import { Tag } from '@alaneicker/atomik-ui';
+import { Tag } from '@atomikui/core';
 
 <>
   <Tag theme="red" themeVariant="light">
@@ -128,7 +128,7 @@ import { Tag } from '@alaneicker/atomik-ui';
 ### Tag Shapes
 
 ```jsx
-import { Tag } from '@alaneicker/atomik-ui';
+import { Tag } from '@atomikui/core';
 
 <>
   <Tag>Default</Tag>

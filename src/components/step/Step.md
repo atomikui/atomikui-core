@@ -1,7 +1,7 @@
 The Step component accompanies the Stepper to represent a series of steps that have been or need to be completed.
 
 ```jsx
-import { Step } from '@alaneicker/atomik-ui';
+import { Step } from '@atomikui/core';
 
 <>
   <Step label="Complete" href="/personal-info" isComplete={true}>

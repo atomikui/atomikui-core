@@ -1,7 +1,7 @@
 ```jsx
 import { useState } from 'react';
 import moment from 'moment';
-import { ChatWindow, Button } from '@alaneicker/atomik-ui';
+import { ChatWindow, Button } from '@atomikui/core';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 

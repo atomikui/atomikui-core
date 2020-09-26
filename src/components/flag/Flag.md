@@ -1,7 +1,7 @@
 ### SVG Flags
 
 ```jsx
-import { Flag } from '@alaneicker/atomik-ui';
+import { Flag } from '@atomikui/core';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 <Grid>
@@ -28,7 +28,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 ### Unicode Flags
 
 ```jsx
-import { Flag } from '@alaneicker/atomik-ui';
+import { Flag } from '@atomikui/core';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 <Grid>

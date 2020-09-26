@@ -4,7 +4,7 @@ _Please note: the CreditCardField only performs client-side validation. Server-s
 
 ```jsx
 import { useState } from 'react';
-import { CreditCardField } from '@alaneicker/atomik-ui';
+import { CreditCardField } from '@atomikui/core';
 
 const [state, setState] = useState({
   creditCardNumber: '',

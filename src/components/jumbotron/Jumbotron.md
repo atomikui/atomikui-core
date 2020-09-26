@@ -9,7 +9,7 @@ The Jumbotron offers 20 dark and 20 light color themes.
 #### Dark Themes
 
 ```jsx
-import { Jumbotron } from '@alaneicker/atomik-ui';
+import { Jumbotron } from '@atomikui/core';
 
 <>
   <Jumbotron theme="red">
@@ -165,7 +165,7 @@ import { Jumbotron } from '@alaneicker/atomik-ui';
 #### Light Themes
 
 ```jsx
-import { Jumbotron } from '@alaneicker/atomik-ui';
+import { Jumbotron } from '@atomikui/core';
 
 <>
   <Jumbotron theme="red" themeVariant="light">

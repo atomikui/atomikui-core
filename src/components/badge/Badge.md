@@ -1,7 +1,7 @@
 The Badge component can be used to convey informational data in an unobtusive manner.
 
 ```jsx
-import { Badge } from '@alaneicker/atomik-ui';
+import { Badge } from '@atomikui/core';
 
 <Badge label="Downloads" value="500k" />;
 ```
@@ -13,7 +13,7 @@ There are many color themes to choose from. simplay pass in a `theme` prop with 
 #### Dark
 
 ```jsx
-import { Badge } from '@alaneicker/atomik-ui';
+import { Badge } from '@atomikui/core';
 
 <>
   <Badge label="Downloads" value="500k" theme="red" />
@@ -42,7 +42,7 @@ import { Badge } from '@alaneicker/atomik-ui';
 #### Light
 
 ```jsx
-import { Badge } from '@alaneicker/atomik-ui';
+import { Badge } from '@atomikui/core';
 
 <>
   <Badge label="Downloads" value="500k" theme="red" themeVariant="light" />

@@ -2,7 +2,7 @@ The Tabs component can be used to simplify switching between different views.
 
 ```jsx
 import { useState } from 'react';
-import { Tabs, Tab, TabPanel } from '@alaneicker/atomik-ui';
+import { Tabs, Tab, TabPanel } from '@atomikui/core';
 
 const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -24,7 +24,7 @@ Use the `initialActiveTab` prop to set an initial active tab.
 
 ```jsx
 import { useState } from 'react';
-import { Tabs, Tab, TabPanel } from '@alaneicker/atomik-ui';
+import { Tabs, Tab, TabPanel } from '@atomikui/core';
 
 const [currentIndex, setCurrentIndex] = useState(2);
 
@@ -48,7 +48,7 @@ const [currentIndex, setCurrentIndex] = useState(2);
 The Tabs children can be aligned with the `align` prop. It accepts a value of `center`, `right` or `stretch`.
 
 ```jsx
-import { Tabs, Tab } from '@alaneicker/atomik-ui';
+import { Tabs, Tab } from '@atomikui/core';
 
 <>
   <Tabs>
@@ -81,7 +81,7 @@ import { Tabs, Tab } from '@alaneicker/atomik-ui';
 
 ```jsx
 import { useState } from 'react';
-import { Tabs, Tab, TabPanel, Price } from '@alaneicker/atomik-ui';
+import { Tabs, Tab, TabPanel, Price } from '@atomikui/core';
 
 const [currentIndex, setCurrentIndex] = useState(0);
 

@@ -3,7 +3,7 @@ The Wallet component is used to display saved payment options to the user.
 ### Default Stacked Layout
 
 ```jsx
-import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
+import { Wallet, WalletItem } from '@atomikui/core';
 
 <Wallet>
   <WalletItem
@@ -39,7 +39,7 @@ import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
 Use the `isGrid` prop to set the layout in a grid format. The grid is responsive and will stack at screen sizes below 768px.
 
 ```jsx
-import { Wallet, WalletItem } from '@alaneicker/atomik-ui';
+import { Wallet, WalletItem } from '@atomikui/core';
 
 <Wallet isGrid>
   <WalletItem

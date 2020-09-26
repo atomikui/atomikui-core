@@ -1,6 +1,6 @@
 ```jsx
 import { useState } from 'react';
-import { Cart } from '@alaneicker/atomik-ui';
+import { Cart } from '@atomikui/core';
 
 const [cartItems, setCartItems] = useState([
   {

@@ -1,7 +1,7 @@
 Used in conjunction with the Cart component.
 
 ```jsx
-import { CartItem } from '@alaneicker/atomik-ui';
+import { CartItem } from '@atomikui/core';
 
 <CartItem
   imageUrl="product-les-paul.jpg"

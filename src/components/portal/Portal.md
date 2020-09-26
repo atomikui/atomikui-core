@@ -4,7 +4,7 @@ This can come in handy when creating a DOM node inside of one component, but it 
 
 ```jsx
 import React, { useEffect, useRef, useState } from 'react';
-import { Portal, Alert, Button } from '@alaneicker/atomik-ui';
+import { Portal, Alert, Button } from '@atomikui/core';
 
 const containerRef = useRef(null);
 const [show, setShow] = useState(false);
@@ -34,7 +34,7 @@ useEffect(() => {
 
 ```jsx
 import React, { useEffect, useState } from 'react';
-import { Portal, Alert, Button } from '@alaneicker/atomik-ui';
+import { Portal, Alert, Button } from '@atomikui/core';
 
 const [show, setShow] = useState(false);
 const [container, setContainer] = useState(null);
