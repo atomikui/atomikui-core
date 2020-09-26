@@ -16,7 +16,7 @@ jobs:
       script:
         - npm run test
         - npm run lint:js
-        - npm run lint:css
+        - npm run lint:sass
     - stage: Publish NPM
       script:
         - npm run build:atomik

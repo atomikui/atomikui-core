@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1600902315205" clover="3.2.0">
-  <project timestamp="1600902315206" name="All files">
+<coverage generated="1601122804802" clover="3.2.0">
+  <project timestamp="1601122804802" name="All files">
     <metrics statements="558" coveredstatements="533" conditionals="384" coveredconditionals="337" methods="163" coveredmethods="141" elements="1105" coveredelements="1011" complexity="0" loc="558" ncloc="558" packages="55" files="58" classes="58"/>
     <package name="accordion">
       <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-      <file name="Accordion.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/accordion/Accordion.js">
+      <file name="Accordion.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/accordion/Accordion.js">
         <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="5" count="1" type="stmt"/>
         <line num="12" count="5" type="stmt"/>
@@ -19,7 +19,7 @@
     </package>
     <package name="accordion-item">
       <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-      <file name="AccordionItem.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/accordion-item/AccordionItem.js">
+      <file name="AccordionItem.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/accordion-item/AccordionItem.js">
         <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="7" count="2" type="stmt"/>
         <line num="15" count="27" type="stmt"/>
@@ -42,7 +42,7 @@
     </package>
     <package name="alert">
       <metrics statements="5" coveredstatements="5" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
-      <file name="Alert.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/alert/Alert.js">
+      <file name="Alert.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/alert/Alert.js">
         <metrics statements="5" coveredstatements="5" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
         <line num="14" count="4" type="stmt"/>
         <line num="23" count="16" type="stmt"/>
@@ -53,7 +53,7 @@
     </package>
     <package name="auto-complete">
       <metrics statements="10" coveredstatements="10" conditionals="10" coveredconditionals="8" methods="7" coveredmethods="6"/>
-      <file name="AutoComplete.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/auto-complete/AutoComplete.js">
+      <file name="AutoComplete.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/auto-complete/AutoComplete.js">
         <metrics statements="10" coveredstatements="10" conditionals="10" coveredconditionals="8" methods="7" coveredmethods="6"/>
         <line num="7" count="2" type="stmt"/>
         <line num="9" count="4" type="stmt"/>
@@ -69,7 +69,7 @@
     </package>
     <package name="avatar">
       <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
-      <file name="Avatar.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/avatar/Avatar.js">
+      <file name="Avatar.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/avatar/Avatar.js">
         <metrics statements="4" coveredstatements="4" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="5" count="3" type="stmt"/>
         <line num="19" count="17" type="stmt"/>
@@ -79,7 +79,7 @@
     </package>
     <package name="badge">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Badge.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/badge/Badge.js">
+      <file name="Badge.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/badge/Badge.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="5" type="stmt"/>
@@ -89,7 +89,7 @@
     </package>
     <package name="breadcrumb">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="Breadcrumb.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/breadcrumb/Breadcrumb.js">
+      <file name="Breadcrumb.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/breadcrumb/Breadcrumb.js">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="3" type="stmt"/>
@@ -100,7 +100,7 @@
     </package>
     <package name="button">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Button.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/button/Button.js">
+      <file name="Button.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/button/Button.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="16" type="stmt"/>
         <line num="18" count="131" type="stmt"/>
@@ -110,7 +110,7 @@
     </package>
     <package name="button-group">
       <metrics statements="7" coveredstatements="7" conditionals="11" coveredconditionals="10" methods="1" coveredmethods="1"/>
-      <file name="ButtonGroup.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/button-group/ButtonGroup.js">
+      <file name="ButtonGroup.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/button-group/ButtonGroup.js">
         <metrics statements="7" coveredstatements="7" conditionals="11" coveredconditionals="10" methods="1" coveredmethods="1"/>
         <line num="8" count="2" type="stmt"/>
         <line num="22" count="5" type="stmt"/>
@@ -123,7 +123,7 @@
     </package>
     <package name="card">
       <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
-      <file name="Card.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/card/Card.js">
+      <file name="Card.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/card/Card.js">
         <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
@@ -133,7 +133,7 @@
     </package>
     <package name="cart">
       <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="4"/>
-      <file name="Cart.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/cart/Cart.js">
+      <file name="Cart.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/cart/Cart.js">
         <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="4"/>
         <line num="9" count="1" type="stmt"/>
         <line num="17" count="5" type="stmt"/>
@@ -147,7 +147,7 @@
     </package>
     <package name="cart-item">
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="CartItem.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/cart-item/CartItem.js">
+      <file name="CartItem.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/cart-item/CartItem.js">
         <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="7" count="2" type="stmt"/>
         <line num="16" count="15" type="stmt"/>
@@ -165,7 +165,7 @@
     </package>
     <package name="chat-message">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="ChatMessage.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/chat-message/ChatMessage.js">
+      <file name="ChatMessage.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/chat-message/ChatMessage.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="2" type="stmt"/>
         <line num="6" count="3" type="stmt"/>
@@ -175,7 +175,7 @@
     </package>
     <package name="chat-window">
       <metrics statements="40" coveredstatements="27" conditionals="10" coveredconditionals="3" methods="13" coveredmethods="6"/>
-      <file name="ChatWindow.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/chat-window/ChatWindow.js">
+      <file name="ChatWindow.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/chat-window/ChatWindow.js">
         <metrics statements="40" coveredstatements="27" conditionals="10" coveredconditionals="3" methods="13" coveredmethods="6"/>
         <line num="11" count="1" type="stmt"/>
         <line num="22" count="11" type="stmt"/>
@@ -221,7 +221,7 @@
     </package>
     <package name="check-option">
       <metrics statements="10" coveredstatements="10" conditionals="22" coveredconditionals="22" methods="2" coveredmethods="1"/>
-      <file name="CheckOption.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/check-option/CheckOption.js">
+      <file name="CheckOption.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/check-option/CheckOption.js">
         <metrics statements="10" coveredstatements="10" conditionals="22" coveredconditionals="22" methods="2" coveredmethods="1"/>
         <line num="10" count="2" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
@@ -237,7 +237,7 @@
     </package>
     <package name="collapse">
       <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
-      <file name="Collapse.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/collapse/Collapse.js">
+      <file name="Collapse.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/collapse/Collapse.js">
         <metrics statements="13" coveredstatements="13" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
         <line num="9" count="1" type="stmt"/>
         <line num="19" count="5" type="stmt"/>
@@ -256,7 +256,7 @@
     </package>
     <package name="comment">
       <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="1"/>
-      <file name="Comment.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/comment/Comment.js">
+      <file name="Comment.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/comment/Comment.js">
         <metrics statements="4" coveredstatements="4" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="1"/>
         <line num="8" count="2" type="stmt"/>
         <line num="19" count="12" type="stmt"/>
@@ -266,7 +266,7 @@
     </package>
     <package name="date-picker">
       <metrics statements="32" coveredstatements="30" conditionals="12" coveredconditionals="9" methods="11" coveredmethods="9"/>
-      <file name="DatePicker.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/date-picker/DatePicker.js">
+      <file name="DatePicker.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/date-picker/DatePicker.js">
         <metrics statements="32" coveredstatements="30" conditionals="12" coveredconditionals="9" methods="11" coveredmethods="9"/>
         <line num="15" count="2" type="stmt"/>
         <line num="29" count="24" type="stmt"/>
@@ -304,7 +304,7 @@
     </package>
     <package name="drawer">
       <metrics statements="18" coveredstatements="16" conditionals="10" coveredconditionals="4" methods="6" coveredmethods="4"/>
-      <file name="Drawer.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/drawer/Drawer.js">
+      <file name="Drawer.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/drawer/Drawer.js">
         <metrics statements="18" coveredstatements="16" conditionals="10" coveredconditionals="4" methods="6" coveredmethods="4"/>
         <line num="7" count="1" type="stmt"/>
         <line num="15" count="12" type="stmt"/>
@@ -328,7 +328,7 @@
     </package>
     <package name="dropdown">
       <metrics statements="9" coveredstatements="9" conditionals="20" coveredconditionals="19" methods="3" coveredmethods="2"/>
-      <file name="Dropdown.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/dropdown/Dropdown.js">
+      <file name="Dropdown.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/dropdown/Dropdown.js">
         <metrics statements="9" coveredstatements="9" conditionals="20" coveredconditionals="19" methods="3" coveredmethods="2"/>
         <line num="10" count="2" type="stmt"/>
         <line num="33" count="8" type="cond" truecount="2" falsecount="0"/>
@@ -343,7 +343,7 @@
     </package>
     <package name="file-upload">
       <metrics statements="23" coveredstatements="23" conditionals="20" coveredconditionals="20" methods="6" coveredmethods="5"/>
-      <file name="FileUpload.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/file-upload/FileUpload.js">
+      <file name="FileUpload.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/file-upload/FileUpload.js">
         <metrics statements="23" coveredstatements="23" conditionals="20" coveredconditionals="20" methods="6" coveredmethods="5"/>
         <line num="11" count="2" type="stmt"/>
         <line num="27" count="17" type="stmt"/>
@@ -372,7 +372,7 @@
     </package>
     <package name="flag">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Flag.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/flag/Flag.js">
+      <file name="Flag.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/flag/Flag.js">
         <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
@@ -384,7 +384,7 @@
     </package>
     <package name="form-field">
       <metrics statements="11" coveredstatements="11" conditionals="33" coveredconditionals="28" methods="2" coveredmethods="2"/>
-      <file name="FormField.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/form-field/FormField.js">
+      <file name="FormField.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/form-field/FormField.js">
         <metrics statements="11" coveredstatements="11" conditionals="33" coveredconditionals="28" methods="2" coveredmethods="2"/>
         <line num="9" count="7" type="stmt"/>
         <line num="29" count="7" type="stmt"/>
@@ -401,7 +401,7 @@
     </package>
     <package name="form-generator">
       <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
-      <file name="FormGenerator.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/form-generator/FormGenerator.js">
+      <file name="FormGenerator.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/form-generator/FormGenerator.js">
         <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="16" count="1" type="stmt"/>
         <line num="29" count="1" type="stmt"/>
@@ -415,7 +415,7 @@
     </package>
     <package name="hint">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Hint.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/hint/Hint.js">
+      <file name="Hint.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/hint/Hint.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="15" type="stmt"/>
         <line num="6" count="42" type="stmt"/>
@@ -425,7 +425,7 @@
     </package>
     <package name="jumbotron">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Jumbotron.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/jumbotron/Jumbotron.js">
+      <file name="Jumbotron.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/jumbotron/Jumbotron.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="29" type="stmt"/>
@@ -435,7 +435,7 @@
     </package>
     <package name="label">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="Label.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/label/Label.js">
+      <file name="Label.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/label/Label.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="14" type="stmt"/>
         <line num="6" count="106" type="stmt"/>
@@ -445,7 +445,7 @@
     </package>
     <package name="link">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Link.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/link/Link.js">
+      <file name="Link.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/link/Link.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="8" type="stmt"/>
         <line num="14" count="50" type="stmt"/>
@@ -455,7 +455,7 @@
     </package>
     <package name="list">
       <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
-      <file name="List.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/list/List.js">
+      <file name="List.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/list/List.js">
         <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
         <line num="6" count="8" type="stmt"/>
         <line num="15" count="44" type="cond" truecount="2" falsecount="0"/>
@@ -469,7 +469,7 @@
     </package>
     <package name="list-item">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="ListItem.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/list-item/ListItem.js">
+      <file name="ListItem.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/list-item/ListItem.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="10" type="stmt"/>
         <line num="6" count="85" type="stmt"/>
@@ -479,7 +479,7 @@
     </package>
     <package name="media">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Media.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/media/Media.js">
+      <file name="Media.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/media/Media.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
@@ -489,7 +489,7 @@
     </package>
     <package name="modal">
       <metrics statements="16" coveredstatements="15" conditionals="16" coveredconditionals="10" methods="5" coveredmethods="4"/>
-      <file name="Modal.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/modal/Modal.js">
+      <file name="Modal.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/modal/Modal.js">
         <metrics statements="16" coveredstatements="15" conditionals="16" coveredconditionals="10" methods="5" coveredmethods="4"/>
         <line num="10" count="1" type="stmt"/>
         <line num="24" count="19" type="stmt"/>
@@ -511,7 +511,7 @@
     </package>
     <package name="overlay">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="Overlay.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/overlay/Overlay.js">
+      <file name="Overlay.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/overlay/Overlay.js">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="5" count="5" type="stmt"/>
         <line num="26" count="60" type="stmt"/>
@@ -523,7 +523,7 @@
     </package>
     <package name="pagination">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-      <file name="Pagination.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/pagination/Pagination.js">
+      <file name="Pagination.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/pagination/Pagination.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
@@ -534,7 +534,7 @@
     </package>
     <package name="portal">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="Portal.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/portal/Portal.js">
+      <file name="Portal.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/portal/Portal.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="5" count="6" type="stmt"/>
         <line num="6" count="72" type="cond" truecount="1" falsecount="1"/>
@@ -544,7 +544,7 @@
     </package>
     <package name="post">
       <metrics statements="8" coveredstatements="8" conditionals="14" coveredconditionals="14" methods="3" coveredmethods="3"/>
-      <file name="Post.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/post/Post.js">
+      <file name="Post.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/post/Post.js">
         <metrics statements="8" coveredstatements="8" conditionals="14" coveredconditionals="14" methods="3" coveredmethods="3"/>
         <line num="11" count="1" type="stmt"/>
         <line num="30" count="8" type="stmt"/>
@@ -558,7 +558,7 @@
     </package>
     <package name="price">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Price.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/price/Price.js">
+      <file name="Price.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/price/Price.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
         <line num="16" count="7" type="stmt"/>
@@ -568,7 +568,7 @@
     </package>
     <package name="progress-bar">
       <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-      <file name="ProgressBar.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/progress-bar/ProgressBar.js">
+      <file name="ProgressBar.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/progress-bar/ProgressBar.js">
         <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="5" count="1" type="stmt"/>
         <line num="16" count="12" type="stmt"/>
@@ -579,7 +579,7 @@
     </package>
     <package name="range-slider">
       <metrics statements="17" coveredstatements="17" conditionals="24" coveredconditionals="21" methods="6" coveredmethods="5"/>
-      <file name="RangeSlider.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/range-slider/RangeSlider.js">
+      <file name="RangeSlider.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/range-slider/RangeSlider.js">
         <metrics statements="17" coveredstatements="17" conditionals="24" coveredconditionals="21" methods="6" coveredmethods="5"/>
         <line num="9" count="2" type="stmt"/>
         <line num="34" count="15" type="stmt"/>
@@ -602,7 +602,7 @@
     </package>
     <package name="rating">
       <metrics statements="16" coveredstatements="16" conditionals="13" coveredconditionals="13" methods="5" coveredmethods="5"/>
-      <file name="Rating.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/rating/Rating.js">
+      <file name="Rating.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/rating/Rating.js">
         <metrics statements="16" coveredstatements="16" conditionals="13" coveredconditionals="13" methods="5" coveredmethods="5"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="9" type="cond" truecount="2" falsecount="0"/>
@@ -624,7 +624,7 @@
     </package>
     <package name="spinner">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Spinner.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/spinner/Spinner.js">
+      <file name="Spinner.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/spinner/Spinner.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="12" type="stmt"/>
@@ -634,7 +634,7 @@
     </package>
     <package name="statistic">
       <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
-      <file name="Statistic.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/statistic/Statistic.js">
+      <file name="Statistic.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/statistic/Statistic.js">
         <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="6" count="1" type="stmt"/>
         <line num="20" count="7" type="stmt"/>
@@ -645,7 +645,7 @@
     </package>
     <package name="step">
       <metrics statements="5" coveredstatements="5" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
-      <file name="Step.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/step/Step.js">
+      <file name="Step.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/step/Step.js">
         <metrics statements="5" coveredstatements="5" conditionals="14" coveredconditionals="14" methods="1" coveredmethods="1"/>
         <line num="10" count="2" type="stmt"/>
         <line num="11" count="28" type="cond" truecount="4" falsecount="0"/>
@@ -656,7 +656,7 @@
     </package>
     <package name="stepper">
       <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-      <file name="Stepper.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/stepper/Stepper.js">
+      <file name="Stepper.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/stepper/Stepper.js">
         <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="7" count="1" type="stmt"/>
         <line num="15" count="6" type="stmt"/>
@@ -667,7 +667,7 @@
     </package>
     <package name="switch">
       <metrics statements="8" coveredstatements="8" conditionals="13" coveredconditionals="13" methods="1" coveredmethods="1"/>
-      <file name="Switch.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/switch/Switch.js">
+      <file name="Switch.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/switch/Switch.js">
         <metrics statements="8" coveredstatements="8" conditionals="13" coveredconditionals="13" methods="1" coveredmethods="1"/>
         <line num="8" count="3" type="stmt"/>
         <line num="26" count="8" type="cond" truecount="2" falsecount="0"/>
@@ -681,7 +681,7 @@
     </package>
     <package name="switch-panel">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="SwitchPanel.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/switch-panel/SwitchPanel.js">
+      <file name="SwitchPanel.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/switch-panel/SwitchPanel.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
@@ -691,7 +691,7 @@
     </package>
     <package name="tab">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Tab.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/tab/Tab.js">
+      <file name="Tab.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/tab/Tab.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="6" count="2" type="stmt"/>
         <line num="15" count="10" type="stmt"/>
@@ -701,7 +701,7 @@
     </package>
     <package name="tab-panel">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <file name="TabPanel.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/tab-panel/TabPanel.js">
+      <file name="TabPanel.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/tab-panel/TabPanel.js">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -712,7 +712,7 @@
     </package>
     <package name="tabs">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
-      <file name="Tabs.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/tabs/Tabs.js">
+      <file name="Tabs.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/tabs/Tabs.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
         <line num="5" count="1" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
@@ -728,7 +728,7 @@
     </package>
     <package name="tag">
       <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="Tag.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/tag/Tag.js">
+      <file name="Tag.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/tag/Tag.js">
         <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="13" count="5" type="stmt"/>
@@ -738,7 +738,7 @@
     </package>
     <package name="toaster">
       <metrics statements="36" coveredstatements="34" conditionals="2" coveredconditionals="1" methods="14" coveredmethods="13"/>
-      <file name="Toast.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/toaster/Toast.js">
+      <file name="Toast.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/toaster/Toast.js">
         <metrics statements="14" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="3"/>
         <line num="7" count="3" type="stmt"/>
         <line num="8" count="5" type="stmt"/>
@@ -755,14 +755,14 @@
         <line num="44" count="3" type="stmt"/>
         <line num="57" count="3" type="stmt"/>
       </file>
-      <file name="Toaster.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/toaster/Toaster.js">
+      <file name="Toaster.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/toaster/Toaster.js">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="3" type="stmt"/>
         <line num="6" count="10" type="stmt"/>
         <line num="18" count="3" type="stmt"/>
         <line num="33" count="3" type="stmt"/>
       </file>
-      <file name="WithToastProvider.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/toaster/WithToastProvider.js">
+      <file name="WithToastProvider.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/toaster/WithToastProvider.js">
         <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
@@ -781,7 +781,7 @@
         <line num="44" count="1" type="stmt"/>
         <line num="57" count="2" type="stmt"/>
       </file>
-      <file name="use-toast.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/toaster/use-toast.js">
+      <file name="use-toast.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/toaster/use-toast.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="5" count="7" type="stmt"/>
         <line num="7" count="7" type="stmt"/>
@@ -789,7 +789,7 @@
     </package>
     <package name="tooltip">
       <metrics statements="64" coveredstatements="60" conditionals="27" coveredconditionals="20" methods="8" coveredmethods="7"/>
-      <file name="Tooltip.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/tooltip/Tooltip.js">
+      <file name="Tooltip.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/tooltip/Tooltip.js">
         <metrics statements="64" coveredstatements="60" conditionals="27" coveredconditionals="20" methods="8" coveredmethods="7"/>
         <line num="7" count="2" type="stmt"/>
         <line num="15" count="47" type="stmt"/>
@@ -859,7 +859,7 @@
     </package>
     <package name="truncate">
       <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
-      <file name="Truncate.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/truncate/Truncate.js">
+      <file name="Truncate.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/truncate/Truncate.js">
         <metrics statements="10" coveredstatements="10" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="6" type="stmt"/>
@@ -875,7 +875,7 @@
     </package>
     <package name="wallet">
       <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
-      <file name="Wallet.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/wallet/Wallet.js">
+      <file name="Wallet.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/wallet/Wallet.js">
         <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="3" type="stmt"/>
@@ -886,7 +886,7 @@
     </package>
     <package name="wallet-item">
       <metrics statements="9" coveredstatements="9" conditionals="16" coveredconditionals="15" methods="1" coveredmethods="1"/>
-      <file name="WalletItem.js" path="/Users/alaneicker/Desktop/atomik-ui/src/components/wallet-item/WalletItem.js">
+      <file name="WalletItem.js" path="/Users/alaneicker/Desktop/atomikui-core/src/components/wallet-item/WalletItem.js">
         <metrics statements="9" coveredstatements="9" conditionals="16" coveredconditionals="15" methods="1" coveredmethods="1"/>
         <line num="24" count="1" type="stmt"/>
         <line num="33" count="7" type="stmt"/>

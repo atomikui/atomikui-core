@@ -30,13 +30,19 @@
     "release:patch": "npm version patch -m \"Upgrade to %s\" && npm run push-release",
     "push-release": "git push && git push --tags",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
-    "lint:css": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc.json --fix",
-    "test": "jest --coverage --silent --config=./jest/jest.config.js && cp -R coverage public && rm -rf coverage",
+    "lint:sass": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc.json --fix",
+    "test": "jest --coverage --silent --config=./jest/jest.config.js",
+    "test:coverage-report": "yarn test && cp -R coverage public && rm -rf coverage",
     "start": "NODE_ENV=development styleguidist server",
     "splash": "node-sass --watch ./splash/ --output ./splash/ --recursive false",
     "build:atomik": "NODE_ENV=production babel --ignore src/components/stats,src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
-    "build:styleguide": "NODE_ENV=production styleguidist build && cp -R splash build && cp src/CNAME build"
+    "build:styleguide": "NODE_ENV=production yarn test:coverage-report && styleguidist build && cp -R splash build && cp src/CNAME build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn lint:js && yarn lint:sass && yarn test"
+    }
   },
   "browserslist": {
     "production": [
@@ -97,6 +103,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-react": "^7.19.0",
     "formik": "^2.1.4",
+    "husky": "^4.3.0",
     "jest": "^26.0.1",
     "jest-html-reporters": "^1.2.1",
     "mini-css-extract-plugin": "^0.9.0",
