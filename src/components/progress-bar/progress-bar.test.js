@@ -31,11 +31,11 @@ describe('<ProgressBar />', () => {
     expect(progressBar.hasClass('atomikui-progress-bar--info')).toBe(true);
   });
 
-  it('Should set the bar color class based on the `shape` prop', () => {
+  it('Should set the bar shape class based on the `shape` prop', () => {
     expect(progressBar.hasClass('atomikui-progress-bar--pill')).toBe(true);
   });
 
-  it('Should set the bar color class based on the `thickness` prop', () => {
+  it('Should set the bar thickness class based on the `thickness` prop', () => {
     expect(progressBar.hasClass('atomikui-progress-bar--thin')).toBe(true);
   });
 
