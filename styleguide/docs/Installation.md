@@ -20,11 +20,13 @@ Import the Atomik UI library core CSS.
 import '@atomikui/core/dist/styles/main.min.css';
 ```
 
-#### 3. Install and Import the Sass Utilities Abstracts (Optional)
+#### 3. Install and Import @atomikui/core-sass (Optional)
 
-The Sass Utilities package contains functions, mixins, variables, and 192 colors that can be used in you project.
+The Atomik UI Core Sass package is the backbone of the Atomik UI Component library theme. It contains functions, mixins, variables, and 192 colors that can be used in you project.
 
-[https://www.npmjs.com/package/@atomikui/core-sass](https://www.npmjs.com/package/@atomikui/core-sass)
+More information is available under the [Sass Utilities](https://www.atomikui.com/#/Sass%20Utilities) Section.
+
+To use the [@atomikui/core-sass](https://www.npmjs.com/package/@atomikui/core-sass) package in your projects CSS:
 
 <br />
 
