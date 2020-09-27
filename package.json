@@ -36,7 +36,8 @@
     "splash": "node-sass --watch ./splash/ --output ./splash/ --recursive false",
     "build:atomik": "NODE_ENV=production babel --ignore src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
-    "build:styleguide": "NODE_ENV=production yarn styleguidist build && cp -R splash build && cp src/CNAME build"
+    "build:styleguide": "NODE_ENV=production yarn styleguidist build && cp -R splash build && cp src/CNAME build",
+    "deploy:styleguide": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -97,6 +98,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-react": "^7.19.0",
     "formik": "^2.1.4",
+    "gh-pages": "^3.1.0",
     "jest": "^26.0.1",
     "jest-html-reporters": "^1.2.1",
     "mini-css-extract-plugin": "^0.9.0",
