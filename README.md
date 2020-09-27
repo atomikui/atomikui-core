@@ -1,12 +1,12 @@
 <h1 id="brand-heading">Atomik UI</h1>
 <h2 id="brand-subheading">A Library of Accessible React Components for Rapid Application Development</h2>
 
-![Travis CI Status Image](https://travis-ci.com/alaneicker1975/atomik-ui.svg?branch=master)
+![Travis CI Status Image](https://api.travis-ci.com/atomikui/atomikui-core.svg?branch=master)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=atomikui_atomikui-core&metric=alert_status)](https://sonarcloud.io/dashboard?id=atomikui_atomikui-core)
 ![Package Version Image](https://badgen.net/npm/v/@atomikui/core)
 ![GitHub repo size](https://img.shields.io/github/repo-size/alaneicker1975/atomik-ui)
 ![GitHub issues](https://img.shields.io/github/issues-raw/alaneicker1975/atomik-ui)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/alaneicker1975/atomik-ui)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/atomikui/atomikui-core)
 
 <hr />
 
