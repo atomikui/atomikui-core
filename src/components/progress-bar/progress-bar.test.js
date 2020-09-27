@@ -27,21 +27,12 @@ describe('<ProgressBar />', () => {
     expect(progressBar.length).toBe(1);
   });
 
-  it('Should set the bar color class based on the `theme` prop', () => {
-    expect(progressBar.hasClass('atomikui-progress-bar--info')).toBe(true);
-  });
-
-  it('Should set the bar shape class based on the `shape` prop', () => {
-    expect(progressBar.hasClass('atomikui-progress-bar--pill')).toBe(true);
-  });
-
-  it('Should set the bar thickness class based on the `thickness` prop', () => {
-    expect(progressBar.hasClass('atomikui-progress-bar--thin')).toBe(true);
-  });
-
-  it('Should render as animated based on `animated` prop', () => {
-    expect(progressBar.hasClass('atomikui-progress-bar--animated')).toBe(true);
-  });
+  test.each(['info', 'pill', 'thin', 'animated'])(
+    'Should set ProgressBar theme based on prop value: %p',
+    (prop) => {
+      expect(progressBar.hasClass(`atomikui-progress-bar--${prop}`)).toBe(true);
+    },
+  );
 
   it('Should set a custom class', () => {
     expect(progressBar.hasClass('atomikui-progress-bar--custom')).toBe(true);
