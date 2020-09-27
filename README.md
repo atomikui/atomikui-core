@@ -1,4 +1,4 @@
-<h1 id="brand-heading">Atomik UI</h1>
+<h1 id="brand-heading">Atomik UI Core</h1>
 <h2 id="brand-subheading">A Library of Accessible React Components for Rapid Application Development</h2>
 
 ![Travis CI Status Image](https://travis-ci.com/alaneicker1975/atomik-ui.svg?branch=master)
