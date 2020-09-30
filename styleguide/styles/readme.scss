@@ -11,8 +11,12 @@
   font-size: rem(24) !important;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: rem(16);
 }
 
-.readme-header > p {
-  text-align: center;
+#status-images {
+  text-align: center !important;
+  & > * > * + * {
+    margin-left: rem(4);
+  }
 }
