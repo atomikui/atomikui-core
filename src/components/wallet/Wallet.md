@@ -72,4 +72,4 @@ import { Wallet, WalletItem } from '@atomikui/core';
 
 ### API
 
-[`<WalletItem />`](https://alaneicker1975.github.io/atomik-ui/#/Payment%20Wallet/WalletItem)
+[`<WalletItem />`](https://www.atomikui.com/#/Payment%20Wallet/WalletItem)

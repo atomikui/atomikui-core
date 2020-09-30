@@ -33,7 +33,7 @@ $pagination-hover-bg: darken($background-light-gray, 5%);
     }
 
     &.is-disabled {
-      color: lighten($default-control-text-color, 40%);
+      color: $default-control-text-color;
     }
   }
 

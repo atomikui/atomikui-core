@@ -39,4 +39,4 @@ const updateCart = (quantity, itemIndex) => {
 
 ### API
 
-[`<CartItem />`](https://alaneicker1975.github.io/atomik-ui/#/Informational/CartItem)
+[`<CartItem />`](https://www.atomikui.com/#/Informational/CartItem)

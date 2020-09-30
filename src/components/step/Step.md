@@ -18,4 +18,4 @@ import { Step } from '@atomikui/core';
 
 #### Demo
 
-[`<Stepper />`](https://alaneicker1975.github.io/atomik-ui/#/Navigation/Stepper)
+[`<Stepper />`](https://www.atomikui.com/#/Navigation/Stepper)

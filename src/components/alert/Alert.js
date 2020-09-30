@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import shortid from 'shortid';
 import {
   faExclamationCircle,
   faInfoCircle,
@@ -41,7 +42,8 @@ const Alert = ({
     >
       {icon || (
         <Icon
-          id={`icon-${theme}`}
+          data-testid={`icon-${theme}`}
+          id={`icon-${shortid.generate()}`}
           icon={!theme ? icons.info : icons[theme]}
           size="lg"
           color={!theme ? '#027abf' : 'white'}

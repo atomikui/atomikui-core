@@ -16,10 +16,7 @@ module.exports = {
     // Excluding experimental components
     '!src/components/credit-card-field/**/*.js',
   ],
-  testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}',
-  ],
+  testMatch: ['<rootDir>/src/**/?(*.)(test).{js,jsx,ts,tsx}'],
   testEnvironment: 'jsdom',
   testURL: 'http://localhost',
   transform: {
