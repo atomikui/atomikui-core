@@ -21,8 +21,8 @@
     -webkit-animation: spin 65s linear 10;
     -moz-animation: spin 65s linear 10;
     animation: spin 65s linear 10;
-    width: rem(150);
     margin-top: rem(-40);
+    width: rem(150);
   }
 
   & > * {
@@ -57,15 +57,15 @@
 
   .splash__btn {
     background: $red-100;
-    border-radius: rem(2);
+    border-radius: rem(44);
     color: $white;
     display: inline-block;
     min-height: rem(44);
     padding: rem(10 24);
     position: relative;
+    text-decoration: none;
     text-transform: uppercase;
     transition: background 0.2s ease-in-out;
-    text-decoration: none;
 
     &:hover,
     &:focus {
@@ -94,8 +94,8 @@
 
   @media (min-width: 600px) {
     svg {
-      width: rem(250);
       margin-top: 0;
+      width: rem(250);
     }
 
     &__hd {
