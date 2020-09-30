@@ -1,3 +1,10 @@
+## v0.1.4
+
+**September 30, 2020**
+
+- Updates README.md
+- Adds LICENSE
+
 ## v0.1.3
 
 **September 30, 2020**
