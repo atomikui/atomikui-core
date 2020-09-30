@@ -1,5 +1,7 @@
 ## v0.1.2
 
+**September 30, 2020**
+
 - Branding updates
 - Integrates Puppeteer accessiblity testing
 
