@@ -15,4 +15,4 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
 #### Demo
 
-[`<Tabs />`](https://alaneicker1975.github.io/atomik-ui/#/Content/Tabs)
+[`<Tabs />`](https://www.atomikui.com/#/Content/Tabs)

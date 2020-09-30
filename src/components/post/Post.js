@@ -151,7 +151,7 @@ const Post = ({
             </ListItem>
           </List>
 
-          <h3 className="margin-top-36 margin-bottom-24">Comments</h3>
+          <h2 className="margin-top-36 margin-bottom-24">Comments</h2>
           <div className="atomikui-post__comments">
             {comments.length ? comments : 'No comments to show'}
           </div>

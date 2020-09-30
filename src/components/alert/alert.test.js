@@ -44,7 +44,7 @@ describe('<Alert />', () => {
     'Should render an %p Icon',
     (theme) => {
       alert.setProps({ theme });
-      expect(alert.find(`#icon-${theme}`).length).toBe(1);
+      expect(alert.find(`[data-testid="icon-${theme}"]`).length).toBe(1);
     },
   );
 });

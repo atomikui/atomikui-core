@@ -14,4 +14,4 @@ import { CartItem } from '@atomikui/core';
 
 ### Demo
 
-[`<Cart />`](https://alaneicker1975.github.io/atomik-ui/#/Informational/Cart)
+[`<Cart />`](https://www.atomikui.com/#/Informational/Cart)

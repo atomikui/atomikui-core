@@ -14,6 +14,7 @@ module.exports = {
       'src/components/post/Post.js',
       'src/components/tab-panel/TabPanel.js',
       'src/components/tabs/Tabs.js',
+      'src/components/tab/Tab.js',
       'src/components/tag/Tag.js',
       'src/components/truncate/Truncate.js',
     ];

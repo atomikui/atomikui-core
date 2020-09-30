@@ -1,16 +1,27 @@
 A Tab is a child of the Tabs component and is used to toggle the visibility of a TabPanel.
 
+### Inactive Tab
+
 ```jsx
 import { useState } from 'react';
 import { Tab } from '@atomikui/core';
 
-<>
-  <Tab label="Tab One" />
-  <Tab label="Tab Two" className="is-active" />
-  <Tab label="Tab Three" />
-</>;
+<Tab label="Tab One" />;
+```
+
+### Active Tab
+
+```jsx
+import { useState } from 'react';
+import { Tab } from '@atomikui/core';
+
+<Tab label="Tab One" active />;
 ```
 
 #### Demo
 
-[`<Tabs />`](https://alaneicker1975.github.io/atomik-ui/#/Content/Tabs)
+[`<Tabs />`](https://www.atomikui.com/#/Content/Tabs)
+
+```
+
+```
