@@ -31,13 +31,19 @@
     "push-release": "git push origin master",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "lint:sass": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc.json --fix",
-    "test": "jest --coverage --silent --config=./jest/jest.config.js",
+    "test:unit": "jest --coverage --silent --config=./jest/jest.config.js",
+    "test:accessibility": "URL=http://localhost:6060 npx jest --testTimeout 60000 --testRegex \\(__test__/.*\\|\\(\\.\\|/\\)\\(spec\\)\\)\\.[jt]sx?$",
     "start": "NODE_ENV=development styleguidist server",
     "splash": "node-sass --watch ./splash/ --output ./splash/ --recursive false",
     "build:atomik": "NODE_ENV=production babel --ignore src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
     "build:styleguide": "NODE_ENV=production yarn styleguidist build && cp -R splash build && cp src/CNAME build",
     "deploy:styleguide": "gh-pages -d build"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "@wordpress/jest-puppeteer-axe"
+    ]
   },
   "browserslist": {
     "production": [
@@ -83,6 +89,7 @@
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
     "@svgr/webpack": "^5.4.0",
+    "@wordpress/jest-puppeteer-axe": "^1.9.0",
     "autoprefixer": "^9.7.6",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.3.0",
@@ -107,6 +114,7 @@
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
     "prop-types": "^15.7.2",
+    "puppeteer": "^5.3.1",
     "react": "^16.13.0",
     "react-axe": "^3.5.3",
     "react-dom": "^16.13.1",

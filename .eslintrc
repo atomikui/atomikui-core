@@ -24,7 +24,8 @@
     "max-len": [
       "warn",
       {
-        "ignoreComments": true
+        "ignoreComments": true,
+        "code": 100
       }
     ],
     "no-alert": 0,
