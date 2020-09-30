@@ -1,3 +1,9 @@
+## v0.1.3
+
+**September 30, 2020**
+
+- Updates build to exclude .spec and .test files from dist build
+
 ## v0.1.2
 
 **September 30, 2020**

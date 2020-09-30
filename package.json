@@ -35,7 +35,7 @@
     "test:accessibility": "URL=http://localhost:6060 npx jest --testTimeout 60000 --testRegex \\(__test__/.*\\|\\(\\.\\|/\\)\\(spec\\)\\)\\.[jt]sx?$",
     "start": "NODE_ENV=development styleguidist server",
     "splash": "node-sass --watch ./splash/ --output ./splash/ --recursive false",
-    "build:atomik": "NODE_ENV=production babel --ignore src/components/**/*.test.js -d ./dist ./src -s && cp package.json dist/package.json",
+    "build:atomik": "NODE_ENV=production babel src --out-dir dist --ignore '**/*.test.js,**/*.spec.js' && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
     "build:styleguide": "NODE_ENV=production yarn styleguidist build && cp -R splash build && cp src/CNAME build",
     "deploy:styleguide": "gh-pages -d build"
