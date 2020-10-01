@@ -1,6 +1,4 @@
-<h1 id="brand-heading" align="center">
-  <a href="https://www.atomikui.com/">ATOMIK UI</a>
-</h1>
+<h1 id="brand-heading" align="center">ATOMIK UI</h1>
 
 <div id="status-images">
   <p align="center">
