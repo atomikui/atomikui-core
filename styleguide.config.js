@@ -10,6 +10,10 @@ module.exports = {
   moduleAliases: {
     '@atomikui/core': path.resolve(__dirname, 'src'),
   },
+  getComponentPathLine(componentPath) {
+    const name = path.basename(componentPath, '.js');
+    return `import { ${name} } from '@atomikui/core';`;
+  },
   assetsDir: './public',
   styleguideDir: './build',
   require: [
