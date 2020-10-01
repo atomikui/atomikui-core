@@ -1,6 +1,6 @@
 import generateAccessibilityTests from '../../../scripts/generateAccessibilityTests';
 
-const component = 'BlockQuote';
+const component = 'Quotation';
 
 generateAccessibilityTests({
   path: `Content/${component}`,

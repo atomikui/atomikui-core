@@ -1,6 +1,6 @@
 .atomikui-quotation {
   border-left: rem(2) solid $blue-gray-300;
-  margin-left: rem(32);
+  margin-left: 5%;
   padding-left: rem(16);
 
   & > p {
@@ -14,10 +14,15 @@
   }
 
   &--pullquote {
-    border: 0;
+    border-left: 0;
+    border-top: rem(1) solid $gray-300;
+    border-bottom: rem(1) solid $gray-300;
     font-size: rem(20);
     margin: 0;
-    padding: 0;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    padding-left: 10%;
+    padding-right: 10%;
 
     & > p {
       clear: both;

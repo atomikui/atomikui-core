@@ -38,11 +38,29 @@ Pull quotes are used to pull a text passage out of the reader’s flow and give 
 ```jsx
 import { Quotation } from '@atomikui/core';
 
-<div style={{ width: '300px', margin: '0 auto' }}>
-  <Quotation pullquote>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus
-    velit, vehicula eget orci in, scelerisque gravida enim. Quisque finibus mi
-    sed accumsan vulputate. Sed lacinia, sapien vitae varius tincidunt.
-  </Quotation>
-</div>;
+<article>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit amet
+    pulvinar lorem. In a quam lorem. Donec rutrum elit iaculis massa pretium,
+    vitae pulvinar ex hendrerit. Curabitur pretium ac lectus nec convallis.
+    Vestibulum tincidunt sodales nulla et dignissim. Aliquam tempus mauris non
+    leo scelerisque tincidunt. Cras dapibus est eu arcu ultricies, in tristique
+    nibh semper. Cras sollicitudin viverra est, vel faucibus risus.
+  </p>
+  <div className="margin-top-20 margin-bottom-20">
+    <Quotation pullquote>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus
+      velit, vehicula eget orci in, scelerisque gravida enim. Quisque finibus mi
+      sed accumsan vulputate. Sed lacinia, sapien vitae varius tincidunt.
+    </Quotation>
+  </div>
+  <p>
+    Nam vulputate massa erat, a tincidunt justo elementum quis. Phasellus auctor
+    imperdiet aliquam. Sed feugiat nunc et enim elementum, at cursus est
+    accumsan. Nunc aliquet suscipit sapien vitae vehicula. Pellentesque nunc
+    sem, porta at mattis ut, lacinia et velit. Duis sed lectus euismod, dapibus
+    mi pulvinar, tristique neque. Sed id purus dignissim, mattis lacus sit amet,
+    luctus neque. Donec vulputate accumsan eleifend.
+  </p>
+</article>;
 ```
