@@ -1,6 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Quotation = ({
   bordered,
@@ -17,7 +19,10 @@ const Quotation = ({
       })}
       {...others}
     >
-      <p>{children}</p>
+      <p>
+        {pullquote && <Icon icon={faQuoteLeft} size="4x" />}
+        {children}
+      </p>
       {footer && <footer>{footer}</footer>}
     </blockquote>
   );

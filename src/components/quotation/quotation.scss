@@ -14,30 +14,19 @@
   }
 
   &--pullquote {
-    border-left: 0;
-    margin-left: 0;
-    padding-left: 0;
+    border: 0;
+    font-size: rem(20);
+    margin: 0;
+    padding: 0;
 
     & > p {
-      padding: rem(0 24 0 26);
+      clear: both;
+      padding: 0;
       position: relative;
 
-      &::before,
-      &::after {
-        content: '"';
-        display: inline-block;
-        font-size: rem(50);
-        font-weight: $font-bold;
-        line-height: 0.9;
-        position: absolute;
-      }
-
-      &::before {
-        left: rem(0);
-      }
-
-      &::after {
-        margin-left: rem(2);
+      & > svg {
+        float: left;
+        margin: rem(0 16 0 0);
       }
     }
   }
