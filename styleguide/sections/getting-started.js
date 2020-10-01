@@ -7,5 +7,9 @@ module.exports = {
       name: 'Installation',
       content: './styleguide/docs/Installation.md',
     },
+    {
+      name: 'Changelog',
+      content: './CHANGELOG.md',
+    },
   ],
 };
