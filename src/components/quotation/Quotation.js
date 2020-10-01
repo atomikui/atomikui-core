@@ -13,7 +13,7 @@ const Quotation = ({
   return (
     <blockquote
       className={classnames('atomikui-quotation', className, {
-        'atomikui-blockquote--bordered': bordered,
+        'atomikui-quotation--pullquote': pullquote,
       })}
       {...others}
     >

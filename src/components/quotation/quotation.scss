@@ -3,6 +3,10 @@
   margin-left: rem(32);
   padding-left: rem(16);
 
+  & > p {
+    font-style: italic;
+  }
+
   & > footer {
     font-style: italic;
     margin-top: rem(8);
@@ -10,9 +14,12 @@
   }
 
   &--pullquote {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+
     & > p {
-      font-style: italic;
-      padding: rem(24 65);
+      padding: rem(0 24 0 26);
       position: relative;
 
       &::before,
@@ -26,7 +33,7 @@
       }
 
       &::before {
-        left: rem(38);
+        left: rem(0);
       }
 
       &::after {
