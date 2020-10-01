@@ -4,6 +4,10 @@
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
+
+  & > a {
+    color: $gray-900;
+  }
 }
 
 #brand-subheading {
@@ -16,7 +20,12 @@
 
 #status-images {
   text-align: center !important;
-  & > * > * + * {
+
+  p {
+    text-align: center !important;
+  }
+
+  p > * + * {
     margin-left: rem(4);
   }
 }

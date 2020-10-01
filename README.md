@@ -1,16 +1,16 @@
-<h1 id="brand-heading" align="center">ATOMIK UI</h1>
+<h1 id="brand-heading" align="center">
+  <a href="https://www.atomikui.com/">ATOMIK UI</a>
+</h1>
 
 <div id="status-images">
   <p align="center">
-      <img src="https://travis-ci.com/alaneicker1975/atomik-ui.svg?branch=master" alt="Travis CI Status Image" />
+      <img src="https://travis-ci.com/atomikui/atomikui-core.svg?branch=master" alt="Travis CI Status Image" />
     <a href="https://sonarcloud.io/dashboard?id=atomikui_atomikui-core">
       <img src="https://sonarcloud.io/api/project_badges/measure?project=atomikui_atomikui-core&metric=alert_status" alt="Quality Gate Status" />
     </a>
     <img src="https://badgen.net/npm/v/@atomikui/core" alt="Package Version Image" />
-    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/alaneicker1975/atomik-ui" />
-    <img alt="GitHub Issues" src="https://img.shields.io/github/issues-raw/alaneicker1975/atomik-ui" />
-    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/alaneicker1975/atomik-ui" />
-    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/atomikui/atomikui-core" />
+    <img alt="GitHub Issues" src="https://img.shields.io/github/issues-raw/atomikui/atomikui-core" />
+    <img alt="License" src="https://img.shields.io/github/license/atomikui/atomikui-core" />
   </p>
 </div>
 
@@ -90,10 +90,14 @@ Recently updated? Check out the [Release Notes](https://github.com/atomikui/atom
 
 ### License
 
-Atomik UI is licensed under the terms of the [MIT license](https://github.com/atomikui/atomikui-core/LICENSE).
+Atomik UI is licensed under the terms of the [MIT license](https://github.com/atomikui/atomikui-core/blob/master/LICENSE).
 
 <br />
 
 ### Atomik UI Maintainers
 
 - Alan Eicker [alaneicker@gmail.com](mailto:alaneicker@gmail.com)
+
+### Credit
+
+- Atomik UI Logo - atom by Marta Ambrosetti from the Noun Project
