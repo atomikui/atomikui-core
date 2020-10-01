@@ -1,3 +1,10 @@
+## v0.2.0
+
+**October 1, 2020**
+
+- BlockQuote component
+- Updates README.md
+
 ## v0.1.5
 
 **September 30, 2020**

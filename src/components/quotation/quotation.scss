@@ -1,0 +1,37 @@
+.atomikui-quotation {
+  border-left: rem(2) solid $blue-gray-300;
+  margin-left: rem(32);
+  padding-left: rem(16);
+
+  & > footer {
+    font-style: italic;
+    margin-top: rem(8);
+    text-align: right;
+  }
+
+  &--pullquote {
+    & > p {
+      font-style: italic;
+      padding: rem(24 65);
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '"';
+        display: inline-block;
+        font-size: rem(50);
+        font-weight: $font-bold;
+        line-height: 0.9;
+        position: absolute;
+      }
+
+      &::before {
+        left: rem(38);
+      }
+
+      &::after {
+        margin-left: rem(2);
+      }
+    }
+  }
+}

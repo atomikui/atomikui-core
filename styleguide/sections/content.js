@@ -10,6 +10,7 @@ module.exports = {
       'src/components/accordion-item/AccordionItem.js',
       'src/components/avatar/Avatar.js',
       'src/components/badge/Badge.js',
+      'src/components/quotation/Quotation.js',
       'src/components/comment/Comment.js',
       'src/components/post/Post.js',
       'src/components/tab-panel/TabPanel.js',

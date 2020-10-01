@@ -4,6 +4,7 @@ export { default as Alert } from './components/alert';
 export { default as AutoComplete } from './components/auto-complete';
 export { default as Avatar } from './components/avatar';
 export { default as Badge } from './components/badge';
+export { default as Quotation } from './components/quotation';
 export { default as Breadcrumb } from './components/breadcrumb';
 export { default as Button } from './components/button';
 export { default as ButtonGroup } from './components/button-group';
