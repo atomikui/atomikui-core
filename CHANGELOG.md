@@ -2,7 +2,7 @@
 
 **October 1, 2020**
 
-- BlockQuote component
+- Quotation component
 - Updates README.md
 
 ## v0.1.5

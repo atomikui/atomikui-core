@@ -4,7 +4,7 @@ The default style variant is a block quotation.
 
 <br />
 
-### Block Quote Example
+### Block Quote
 
 Block quotes should inclue a cite URL to the extenal source, and if applicable, provide a name and source in the footer.
 
@@ -27,7 +27,7 @@ import { Quotation } from '@atomikui/core';
 </Quotation>;
 ```
 
-### Pull Quote Example
+### Pull Quote
 
 Pull quotes are used to pull a text passage out of the reader’s flow and give it a more dominant position in the post or the article. They do not require any citation.
 
