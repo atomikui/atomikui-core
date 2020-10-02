@@ -1,8 +1,8 @@
-@import '../src/styles/shared/main';
+@import '../node_modules/@atomikui/core-sass/main';
 
 .splash {
   align-items: center;
-  background: $blue-500;
+  background: #002d4a;
   color: $white;
   display: flex;
   flex-direction: column;
@@ -56,7 +56,7 @@
   }
 
   .splash__btn {
-    background: $red-100;
+    background: $red-800;
     border-radius: rem(44);
     color: $white;
     display: inline-block;
@@ -69,12 +69,12 @@
 
     &:hover,
     &:focus {
-      background: darken($red-100, 10%);
+      background: darken($red-800, 10%);
     }
 
     &:focus,
     &:active {
-      box-shadow: rem(0 0 0 2) lighten($red-100, 10%);
+      box-shadow: rem(0 0 0 2) lighten($red-800, 10%);
       outline: 0;
     }
   }
