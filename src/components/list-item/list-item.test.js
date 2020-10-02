@@ -13,7 +13,7 @@ describe('<ListItem />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(listItem.length).toBe(1);
+    expect(listItem).toBeTruthy();
   });
 
   it('Should set a custom class', () => {

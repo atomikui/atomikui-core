@@ -19,7 +19,7 @@ describe('<FormField />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(formField.length).toBe(1);
+    expect(formField).toBeTruthy();
   });
 
   it('Should render form field based on the type', () => {
@@ -29,7 +29,7 @@ describe('<FormField />', () => {
 
     formField.setProps({ type: 'textarea' });
 
-    expect(formField.find('textarea').length).toBe(1);
+    expect(formField.find('textarea')).toBeTruthy();
   });
 
   it('Should trigger onChange callback when form field value changes', () => {
@@ -41,7 +41,7 @@ describe('<FormField />', () => {
   it('Should render help hint with text', () => {
     formField.setProps({ helpText: 'Help text' });
 
-    expect(formField.find('Hint').length).toBe(1);
+    expect(formField.find('Hint')).toBeTruthy();
     expect(formField.find('Hint').text()).toBe('Help text');
   });
 
@@ -56,7 +56,7 @@ describe('<FormField />', () => {
   it('Should render error hint with text', () => {
     formField.setProps({ errorText: 'Error text', hasError: true });
 
-    expect(formField.find('Hint').length).toBe(1);
+    expect(formField.find('Hint')).toBeTruthy();
     expect(formField.find('Hint').text()).toBe('Error text');
   });
 

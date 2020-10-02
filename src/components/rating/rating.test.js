@@ -14,7 +14,7 @@ describe('<Rating />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(rating.length).toBe(1);
+    expect(rating).toBeTruthy();
   });
 
   it('Should render 4 stars', () => {

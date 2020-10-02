@@ -29,7 +29,7 @@ describe('<CreditCardField />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(creditCardField.length).toBe(1);
+    expect(creditCardField).toBeTruthy();
   });
 
   test.each([

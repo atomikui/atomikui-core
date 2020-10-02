@@ -17,11 +17,11 @@ describe('<Link />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(link.length).toBe(1);
+    expect(link).toBeTruthy();
   });
 
   it('Should render children', () => {
-    expect(link.length).toBe(1);
+    expect(link).toBeTruthy();
     expect(link.text()).toBe('This is a link');
   });
 

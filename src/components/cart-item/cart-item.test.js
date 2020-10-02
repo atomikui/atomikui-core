@@ -25,7 +25,7 @@ describe('<CartItem />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(cartItem.length).toBe(1);
+    expect(cartItem).toBeTruthy();
   });
 
   it('Should trigger onQuantityChange when quantity is updated', () => {

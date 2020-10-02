@@ -13,7 +13,7 @@ describe('<Toast />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(toast.length).toBe(1);
+    expect(toast).toBeTruthy();
   });
 
   it('Should render content', () => {

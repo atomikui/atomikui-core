@@ -38,7 +38,7 @@ describe('<RangeSlider />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(rangeSlider.length).toBe(1);
+    expect(rangeSlider).toBeTruthy();
   });
 
   it('Should render 10 ticks', () => {
@@ -101,14 +101,14 @@ describe('<RangeSlider />', () => {
     expect(
       rangeSlider.find('.atomikui-range-slider').hasClass('has-error'),
     ).toBe(true);
-    expect(rangeSlider.find('Hint').length).toBe(1);
+    expect(rangeSlider.find('Hint')).toBeTruthy();
     expect(rangeSlider.find('Hint').text()).toBe('This field is required');
   });
 
   it('Should render a hint', () => {
     rangeSlider.setProps({ helpText: 'Some helpful text' });
 
-    expect(rangeSlider.find('Hint').length).toBe(1);
+    expect(rangeSlider.find('Hint')).toBeTruthy();
     expect(rangeSlider.find('Hint').text()).toBe('Some helpful text');
   });
 });

@@ -17,15 +17,15 @@ describe('<Step />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(step.length).toBe(1);
+    expect(step).toBeTruthy();
   });
 
   it('Should render a Link if isComplete is true', () => {
-    expect(step.find('Link').length).toBe(1);
+    expect(step.find('Link')).toBeTruthy();
   });
 
   it('Should render a span if isComplete is false', () => {
     step.setProps({ isComplete: false });
-    expect(step.find('span.atomikui-step__number').length).toBe(1);
+    expect(step.find('span.atomikui-step__number')).toBeTruthy();
   });
 });

@@ -14,7 +14,7 @@ describe('<Spinner />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(spinner.length).toBe(1);
+    expect(spinner).toBeTruthy();
   });
 
   it('Should set a dark theme class', () => {

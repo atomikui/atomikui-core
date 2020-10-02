@@ -28,7 +28,7 @@ describe('<Tooltip />', () => {
 
   it('Should create and remove tooltip', () => {
     tooltip.find('Button').simulate('focus');
-    expect(tooltip.find('[data-testid="tooltip"]').length).toBe(1);
+    expect(tooltip.find('[data-testid="tooltip"]')).toBeTruthy();
 
     tooltip.find('Button').simulate('blur');
     expect(tooltip.find('[data-testid="tooltip"]').length).toBe(0);

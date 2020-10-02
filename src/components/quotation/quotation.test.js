@@ -26,12 +26,12 @@ describe('<Quotation />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(quotation).toHaveLength(1);
+    expect(quotation).toBeTruthy();
   });
 
   it('Should render "left quote" icon svg for pullquote variant', () => {
     quotation.setProps({ pullquote: true });
     console.log(quotation.debug());
-    expect(quotation.find('svg.fa-quote-left')).toHaveLength(1);
+    expect(quotation.find('svg.fa-quote-left')).toBeTruthy();
   });
 });

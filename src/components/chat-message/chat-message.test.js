@@ -19,7 +19,7 @@ describe('<ChatMessage />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(chatMessage.length).toBe(1);
+    expect(chatMessage).toBeTruthy();
   });
 
   it('Should render the timestamp', () => {

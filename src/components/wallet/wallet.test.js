@@ -13,7 +13,7 @@ describe('<Wallet />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(wallet).toHaveLength(1);
+    expect(wallet).toBeTruthy();
   });
 
   it('Should set Wallet layout as grid', () => {

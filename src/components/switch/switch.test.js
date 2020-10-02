@@ -23,7 +23,7 @@ describe('<Switch />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(component.length).toBe(1);
+    expect(component).toBeTruthy();
   });
 
   it('Should trigger onChange callback', () => {
@@ -44,14 +44,14 @@ describe('<Switch />', () => {
     component.setProps({ hasError: true, errorText: 'This field is required' });
 
     expect(component.find('.atomikui-switch').hasClass('has-error')).toBe(true);
-    expect(component.find('Hint').length).toBe(1);
+    expect(component.find('Hint')).toBeTruthy();
     expect(component.find('Hint').text()).toBe('This field is required');
   });
 
   it('Should render a hint', () => {
     component.setProps({ helpText: 'Some helpful text' });
 
-    expect(component.find('Hint').length).toBe(1);
+    expect(component.find('Hint')).toBeTruthy();
     expect(component.find('Hint').text()).toBe('Some helpful text');
   });
 });

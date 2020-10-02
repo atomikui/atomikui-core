@@ -19,11 +19,11 @@ describe('<Alert />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(alert.length).toBe(1);
+    expect(alert).toBeTruthy();
   });
 
   it('Should render children', () => {
-    expect(alert.find('span').length).toBe(1);
+    expect(alert.find('span')).toBeTruthy();
     expect(alert.find('span').text()).toBe('This is an alert');
   });
 
@@ -44,7 +44,7 @@ describe('<Alert />', () => {
     'Should render an %p Icon',
     (theme) => {
       alert.setProps({ theme });
-      expect(alert.find(`[data-testid="icon-${theme}"]`).length).toBe(1);
+      expect(alert.find(`[data-testid="icon-${theme}"]`)).toBeTruthy();
     },
   );
 });

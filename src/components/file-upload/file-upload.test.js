@@ -44,7 +44,7 @@ describe('<FileUpload />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(fileUpload.length).toBe(1);
+    expect(fileUpload).toBeTruthy();
   });
 
   it('Should trigger onChange callback when file input value changes', () => {
@@ -88,7 +88,7 @@ describe('<FileUpload />', () => {
       .find('.atomikui-file-upload__wrapper')
       .simulate('drop', onDropEvent);
 
-    expect(fileUpload.find('List').children().length).toBe(1);
+    expect(fileUpload.find('List').children()).toBeTruthy();
   });
 
   it('Should render error class', () => {
@@ -102,14 +102,14 @@ describe('<FileUpload />', () => {
   it('Should render error hint with text', () => {
     fileUpload.setProps({ errorText: 'Error text', hasError: true });
 
-    expect(fileUpload.find('Hint').length).toBe(1);
+    expect(fileUpload.find('Hint')).toBeTruthy();
     expect(fileUpload.find('Hint').text()).toBe('Error text');
   });
 
   it('Should render help hint with text', () => {
     fileUpload.setProps({ helpText: 'Help text' });
 
-    expect(fileUpload.find('Hint').length).toBe(1);
+    expect(fileUpload.find('Hint')).toBeTruthy();
     expect(fileUpload.find('Hint').text()).toBe('Help text');
   });
 });

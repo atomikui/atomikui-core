@@ -21,7 +21,7 @@ describe('<List />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(list.length).toBe(1);
+    expect(list).toBeTruthy();
   });
 
   it('Should render children', () => {
@@ -31,7 +31,7 @@ describe('<List />', () => {
   it('Should render an <ol /> if type is "ordered"', () => {
     list.setProps({ type: 'ordered' });
 
-    expect(list.find('ol').length).toBe(1);
+    expect(list.find('ol')).toBeTruthy();
   });
 
   test.each(['bulleted', 'ordered', 'horizontal'])(
@@ -61,6 +61,6 @@ describe('<List />', () => {
   it('Should render inside of a <nav /> element if type id menu', () => {
     list.setProps({ type: 'menu' });
 
-    expect(list.find('nav').length).toBe(1);
+    expect(list.find('nav')).toBeTruthy();
   });
 });

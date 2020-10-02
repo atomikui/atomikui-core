@@ -22,7 +22,7 @@ describe('<CheckOption />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(checkOption.length).toBe(1);
+    expect(checkOption).toBeTruthy();
   });
 
   it('Should render checkbox by default', () => {
@@ -61,14 +61,14 @@ describe('<CheckOption />', () => {
     expect(
       checkOption.find('label.atomikui-check-option').hasClass('has-error'),
     ).toBe(true);
-    expect(checkOption.find('Hint').length).toBe(1);
+    expect(checkOption.find('Hint')).toBeTruthy();
     expect(checkOption.find('Hint').text()).toBe('This field is required');
   });
 
   it('Should render a hint', () => {
     checkOption.setProps({ helpText: 'Some helpful text' });
 
-    expect(checkOption.find('Hint').length).toBe(1);
+    expect(checkOption.find('Hint')).toBeTruthy();
     expect(checkOption.find('Hint').text()).toBe('Some helpful text');
   });
 

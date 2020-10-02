@@ -36,11 +36,11 @@ describe('<Comment />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(comment.length).toBe(1);
+    expect(comment).toBeTruthy();
   });
 
   it('Should display an author link', () => {
-    expect(comment.find('Link').length).toBe(1);
+    expect(comment.find('Link')).toBeTruthy();
   });
 
   it('Should not display an author link if authorLink is null', () => {
@@ -49,7 +49,7 @@ describe('<Comment />', () => {
   });
 
   it('Should display comment replies', () => {
-    expect(comment.find('.atomikui-comment__replies').length).toBe(1);
+    expect(comment.find('.atomikui-comment__replies')).toBeTruthy();
   });
 
   it('Should trigger onReply callback', () => {

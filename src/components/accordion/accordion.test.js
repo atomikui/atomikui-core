@@ -32,7 +32,7 @@ describe('<Accordion />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(accordion.length).toBe(1);
+    expect(accordion).toBeTruthy();
   });
 
   it('Should should render 3 children', () => {

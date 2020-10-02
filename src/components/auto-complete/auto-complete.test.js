@@ -35,7 +35,7 @@ describe('<AutoComplete />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(autocomplete.length).toBe(1);
+    expect(autocomplete).toBeTruthy();
   });
 
   it('Should trigger onChange callback with selected item', () => {

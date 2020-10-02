@@ -22,7 +22,7 @@ describe('<Breadcrumb />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(breadcrumb.length).toBe(1);
+    expect(breadcrumb).toBeTruthy();
   });
 
   it('Should render 4 children', () => {

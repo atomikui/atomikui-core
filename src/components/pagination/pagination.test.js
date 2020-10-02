@@ -23,7 +23,7 @@ describe('<Pagination />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(pagination.length).toBe(1);
+    expect(pagination).toBeTruthy();
   });
 
   it('Should render 6 PageItems', () => {

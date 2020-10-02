@@ -11,7 +11,7 @@ describe('<Avatar />', () => {
       <Avatar src="/profile-image.png" alt="Alan Smith" />,
     );
 
-    expect(avatar.length).toBe(1);
+    expect(avatar).toBeTruthy();
   });
 
   it('Should render a label', () => {
@@ -21,7 +21,7 @@ describe('<Avatar />', () => {
 
     const label = avatar.find('.atomikui-avatar__label');
 
-    expect(label.length).toBe(1);
+    expect(label).toBeTruthy();
   });
 
   it('Should render children', () => {
@@ -30,6 +30,6 @@ describe('<Avatar />', () => {
         <svg />
       </Avatar>,
     );
-    expect(avatar.children().length).toBe(1);
+    expect(avatar.children()).toBeTruthy();
   });
 });

@@ -38,7 +38,7 @@ describe('<Cart />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(cart.length).toBe(1);
+    expect(cart).toBeTruthy();
   });
 
   it('Should calculate subtotal', () => {

@@ -28,7 +28,7 @@ describe('<Truncate />', () => {
   });
 
   it('Chould render without errors', () => {
-    expect(truncate.length).toBe(1);
+    expect(truncate).toBeTruthy();
   });
 
   it('Should render with custom ellipses content', () => {
@@ -38,7 +38,7 @@ describe('<Truncate />', () => {
 
     const anchor = truncate.find('a');
 
-    expect(anchor.length).toBe(1);
+    expect(anchor).toBeTruthy();
     expect(anchor.text()).toBe('Read More');
     expect(anchor.prop('href')).toBe('/path/to/article');
   });

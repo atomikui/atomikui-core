@@ -23,7 +23,7 @@ describe('<DatePicker />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(datepicker.length).toBe(1);
+    expect(datepicker).toBeTruthy();
   });
 
   it('Should open calendar', () => {

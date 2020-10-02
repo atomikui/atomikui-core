@@ -12,16 +12,16 @@ describe('<Tab />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(tab.length).toBe(1);
+    expect(tab).toBeTruthy();
   });
 
   it('Should render a button with text', () => {
-    expect(tab.find('Button').length).toBe(1);
+    expect(tab.find('Button')).toBeTruthy();
     expect(tab.find('Button').children().text()).toBe('Tab One');
   });
 
   it('Should render child content', () => {
     tab.setProps({ children: <span>Child</span> });
-    expect(tab.find('.atomikui-tab__content').length).toBe(1);
+    expect(tab.find('.atomikui-tab__content')).toBeTruthy();
   });
 });

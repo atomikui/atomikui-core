@@ -26,7 +26,7 @@ describe('<Dropdown />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(dropdown.length).toBe(1);
+    expect(dropdown).toBeTruthy();
   });
 
   it('Should render with 7 options', () => {
@@ -44,14 +44,14 @@ describe('<Dropdown />', () => {
     expect(dropdown.find('.atomikui-dropdown').hasClass('has-error')).toBe(
       true,
     );
-    expect(dropdown.find('Hint').length).toBe(1);
+    expect(dropdown.find('Hint')).toBeTruthy();
     expect(dropdown.find('Hint').text()).toBe('This field is required');
   });
 
   it('Should render a hint', () => {
     dropdown.setProps({ helpText: 'Some helpful text' });
 
-    expect(dropdown.find('Hint').length).toBe(1);
+    expect(dropdown.find('Hint')).toBeTruthy();
     expect(dropdown.find('Hint').text()).toBe('Some helpful text');
   });
 });

@@ -37,7 +37,7 @@ describe('<ChatWindow />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(chatWindow.length).toBe(1);
+    expect(chatWindow).toBeTruthy();
   });
 
   it('Should trigger onClose callback', () => {

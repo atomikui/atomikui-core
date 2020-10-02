@@ -30,7 +30,7 @@ describe('<Modal />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(modal.length).toBe(1);
+    expect(modal).toBeTruthy();
   });
 
   it('Should call onClose when modal close button is clicked', () => {

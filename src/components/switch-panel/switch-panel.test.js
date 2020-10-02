@@ -24,7 +24,7 @@ describe('<SwitchPanel />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(switchPanel.length).toBe(1);
+    expect(switchPanel).toBeTruthy();
   });
 
   it('Should render children', () => {

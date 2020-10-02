@@ -20,6 +20,6 @@ describe('<TabPanel />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(tabPanel.length).toBe(1);
+    expect(tabPanel).toBeTruthy();
   });
 });

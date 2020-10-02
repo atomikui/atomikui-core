@@ -29,7 +29,7 @@ describe('<Stepper />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(stepper.length).toBe(1);
+    expect(stepper).toBeTruthy();
   });
 
   it('Should render 4 children', () => {
@@ -48,7 +48,7 @@ describe('<Stepper />', () => {
 
   it('Should render first child with an anchor tag', () => {
     const link = stepper.find('.atomikui-step').find('Link');
-    expect(link.length).toBe(1);
+    expect(link).toBeTruthy();
   });
 
   it('Should render as inline', () => {

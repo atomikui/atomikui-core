@@ -13,7 +13,7 @@ describe('<Tag />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(tag.length).toBe(1);
+    expect(tag).toBeTruthy();
   });
 
   it('Should render dark theme', () => {

@@ -16,7 +16,7 @@ describe('<Drawer />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(drawer.length).toBe(1);
+    expect(drawer).toBeTruthy();
   });
 
   it('Should call onClose when escape key is pressed', () => {

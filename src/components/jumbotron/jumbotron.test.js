@@ -31,7 +31,7 @@ describe('<Jumbotron />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(jumbotron.length).toBe(1);
+    expect(jumbotron).toBeTruthy();
   });
 
   test.each([

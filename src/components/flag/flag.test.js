@@ -12,9 +12,9 @@ describe('<Flag />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(flag).toHaveLength(1);
+    expect(flag).toBeTruthy();
 
     flag.setProps({ unicode: true });
-    expect(flag).toHaveLength(1);
+    expect(flag).toBeTruthy();
   });
 });

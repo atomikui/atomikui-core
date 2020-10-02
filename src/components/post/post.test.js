@@ -61,7 +61,7 @@ describe('<Post />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(post.length).toBe(1);
+    expect(post).toBeTruthy();
   });
 
   it('Should render comments', () => {

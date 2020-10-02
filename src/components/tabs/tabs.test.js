@@ -26,7 +26,7 @@ describe('<Tabs />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(tabs.length).toBe(1);
+    expect(tabs).toBeTruthy();
   });
 
   it('Should trigger onChange when a tab is clicked', () => {

@@ -24,7 +24,7 @@ describe('<ProgressBar />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(progressBar.length).toBe(1);
+    expect(progressBar).toBeTruthy();
   });
 
   test.each(['info', 'pill', 'thin', 'animated'])(

@@ -25,7 +25,7 @@ describe('<WalletItem />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(walletItem).toHaveLength(1);
+    expect(walletItem).toBeTruthy();
   });
 
   it('Should set the item as selected', () => {
@@ -41,7 +41,7 @@ describe('<WalletItem />', () => {
     walletItem.setProps({ type: 'Foobar' });
     expect(
       walletItem.find('.atomikui-wallet-item__icon').children(),
-    ).toHaveLength(1);
+    ).toBeTruthy();
   });
 
   it('Sgould render a custom type', () => {

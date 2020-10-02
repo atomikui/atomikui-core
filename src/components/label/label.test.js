@@ -15,7 +15,7 @@ describe('<Label />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(label.length).toBe(1);
+    expect(label).toBeTruthy();
   });
 
   it('Should render text', () => {

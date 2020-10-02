@@ -20,20 +20,20 @@ describe('<ButtonGroup />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(buttonGroup.length).toBe(1);
+    expect(buttonGroup).toBeTruthy();
   });
 
   it('Should render help hint with text', () => {
     buttonGroup.setProps({ helpText: 'Help text' });
 
-    expect(buttonGroup.find('Hint').length).toBe(1);
+    expect(buttonGroup.find('Hint')).toBeTruthy();
     expect(buttonGroup.find('Hint').text()).toBe('Help text');
   });
 
   it('Should render error hint with text', () => {
     buttonGroup.setProps({ errorText: 'Error text', hasError: true });
 
-    expect(buttonGroup.find('Hint').length).toBe(1);
+    expect(buttonGroup.find('Hint')).toBeTruthy();
     expect(buttonGroup.find('Hint').text()).toBe('Error text');
   });
 });

@@ -17,11 +17,11 @@ describe('<Toaster />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(toaster.length).toBe(1);
+    expect(toaster).toBeTruthy();
   });
 
   it('Should render children', () => {
-    expect(toaster.children().length).toBe(1);
+    expect(toaster.children()).toBeTruthy();
   });
 
   it('Should set a position modifier class', () => {

@@ -14,7 +14,7 @@ describe('<Statistic />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(statistic.length).toBe(1);
+    expect(statistic).toBeTruthy();
   });
 
   it('Should render with the label on the top', () => {
@@ -31,6 +31,6 @@ describe('<Statistic />', () => {
 
   it('Should render with an icon', () => {
     statistic.setProps({ icon: faUsers });
-    expect(statistic.find('.atomikui-statistic__icon').length).toBe(1);
+    expect(statistic.find('.atomikui-statistic__icon')).toBeTruthy();
   });
 });

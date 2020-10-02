@@ -33,11 +33,11 @@ describe('<FormGenerator />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(formGenerator).toHaveLength(1);
+    expect(formGenerator).toBeTruthy();
   });
 
   it('Should render a input and a button', () => {
-    expect(formGenerator.find('input')).toHaveLength(1);
-    expect(formGenerator.find('button')).toHaveLength(1);
+    expect(formGenerator.find('input')).toBeTruthy();
+    expect(formGenerator.find('button')).toBeTruthy();
   });
 });

@@ -13,7 +13,7 @@ describe('<Badge />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(badge).toHaveLength(1);
+    expect(badge).toBeTruthy();
   });
 
   it('Should render theme variants', () => {

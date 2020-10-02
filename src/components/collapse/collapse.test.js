@@ -13,7 +13,7 @@ describe('<Collapse />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(collapse).toHaveLength(1);
+    expect(collapse).toBeTruthy();
   });
 
   it('Should set the initial height of the collapse body', () => {

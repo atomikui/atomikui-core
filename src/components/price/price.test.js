@@ -13,7 +13,7 @@ describe('<Price />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(price.length).toBe(1);
+    expect(price).toBeTruthy();
   });
 
   it('Should set the color theme class', () => {

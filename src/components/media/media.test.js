@@ -19,6 +19,6 @@ describe('<Component />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(media.length).toBe(1);
+    expect(media).toBeTruthy();
   });
 });

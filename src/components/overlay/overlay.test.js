@@ -23,7 +23,7 @@ describe('<Overlay />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(overlay.length).toBe(1);
+    expect(overlay).toBeTruthy();
   });
 
   it('Should set a color theme class', () => {

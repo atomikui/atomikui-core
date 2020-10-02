@@ -21,7 +21,7 @@ describe('<AccordionItem />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(accordionItem.length).toBe(1);
+    expect(accordionItem).toBeTruthy();
   });
 
   it('Should render without errors', () => {
