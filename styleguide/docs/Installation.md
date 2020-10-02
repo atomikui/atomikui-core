@@ -7,8 +7,12 @@ Adding Atomik UI to your project is simple.
 Install the core Atomik UI module as a production dependency.
 <br /><br />
 
-```html
+```shell
+// NPM
 npm install --save @atomikui/core
+
+// Yarn
+yarn add @atomikui/core
 ```
 
 #### 2. Import the Component library CSS
@@ -16,7 +20,7 @@ npm install --save @atomikui/core
 Import the Atomik UI library core CSS.
 <br /><br />
 
-```html
+```shell
 import '@atomikui/core/dist/styles/main.min.css';
 ```
 
@@ -30,8 +34,12 @@ To use the [@atomikui/core-sass](https://www.npmjs.com/package/@atomikui/core-sa
 
 <br />
 
-```html
+```shell
+// npm
 npm install @atomikui/core-sass;
+
+// Yarn
+yarn add @atomikui/core-sass;
 ```
 
 ```css
@@ -43,6 +51,6 @@ npm install @atomikui/core-sass;
 It is recommended to import components as needed instead of importing the whole Atomik UI.
 <br /><br />
 
-```html
+```shell
 import { FormField, CheckOption, Dropdown } from '@atomikui/core';
 ```
