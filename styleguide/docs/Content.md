@@ -1,5 +1,7 @@
 Content components are used to control how content is formatted and displayed.
 
+### Components
+
 - [Accordion](/#/Content/Accordion)
 - [AccordionItem](/#/Content/AccordionItem)
 - [Avatar](/#/Content/Avatar)

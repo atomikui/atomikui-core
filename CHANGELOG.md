@@ -1,3 +1,10 @@
+### v0.3.0
+
+**October 2, 2020**
+
+- Updates SwitchPanel styling
+- Updates README.md and documentation
+
 ### v0.2.0
 
 **October 1, 2020**
