@@ -1,11 +1,11 @@
 .atomikui-switch-panel {
   background: $white;
-  border: rem(1) solid $formfield-border;
   border-radius: rem($border-radius);
+  border: rem(1) solid $background-light-gray;
   overflow: hidden;
 
   &__hd {
-    background: $gray-100;
+    background: $background-light-gray;
     font-weight: $font-semibold;
     padding: rem(12 16);
     text-transform: uppercase;
@@ -17,7 +17,7 @@
     }
 
     & > * + * {
-      border-top: rem(1) solid $gray-100;
+      border-top: rem(1) solid $background-light-gray;
     }
   }
 }
