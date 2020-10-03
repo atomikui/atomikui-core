@@ -27,7 +27,11 @@ const Search = ({ className, shape, onSubmit, ...others }) => {
       })}
       {...others}
     >
-      <FormField ref={inputRef} onKeyUp={handleKeyPress} />
+      <FormField
+        ref={inputRef}
+        onKeyUp={handleKeyPress}
+        aria-label="Enter search query"
+      />
       <Button aria-label="submit" onClick={handleSubmit}>
         <Icon icon={faSearch} theme="hollow" />
       </Button>
