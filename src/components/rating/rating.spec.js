@@ -1,8 +1,8 @@
 import generateAccessibilityTests from '../../../scripts/generateAccessibilityTests';
 
-const component = 'Rating';
+const component = 'Search';
 
 generateAccessibilityTests({
-  path: `Informational/${component}`,
+  path: `Form%20Controls/${component}`,
   component,
 });

@@ -40,6 +40,7 @@ export { default as Price } from './components/price';
 export { default as ProgressBar } from './components/progress-bar';
 export { default as RangeSlider } from './components/range-slider';
 export { default as Rating } from './components/rating';
+export { default as Search } from './components/search';
 export { default as Spinner } from './components/spinner';
 export { default as Statistic } from './components/statistic';
 export { default as Stepper } from './components/stepper';
