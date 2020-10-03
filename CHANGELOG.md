@@ -1,4 +1,13 @@
 <br />
+
+### [v0.3.1](https://github.com/atomikui/atomikui-core/compare/v0.3.0...v0.3.1) - 2020-10-03
+
+#### Commits
+
+- Integrates auto-changelog to auto generate changelog [`4553281`](https://github.com/atomikui/atomikui-core/commit/4553281c9d5cee1df70d4f8ab9192dd76dd1382a)
+- Updates MIT License [`5b4620e`](https://github.com/atomikui/atomikui-core/commit/5b4620ebad79c873945b4f2e5c0403f86876ea45)
+- Package.json - removes instances of "npm run" and replaces with "yarn" [`9ccc1eb`](https://github.com/atomikui/atomikui-core/commit/9ccc1ebd1aff1e5894f0d17a07d5c7e1c012ff09)
+
 ### [v0.3.0](https://github.com/atomikui/atomikui-core/compare/v0.2.0...v0.3.0) - 2020-10-02
 
 #### Commits
