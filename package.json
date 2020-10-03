@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "release:major": "npm version major -m \"Upgrade to %s\" && npm run changelog && npm run push-release",
-    "release:minor": "npm version minor -m \"Upgrade to %s\" && npm run changelog && npm run push-release",
-    "release:patch": "npm version patch -m \"Upgrade to %s\" && npm run changelog && npm run push-release",
+    "release:major": "npm version major -m \"Upgrade to %s\" && yarn changelog && yarn push-release",
+    "release:minor": "npm version minor -m \"Upgrade to %s\" && yarn changelog && yarn push-release",
+    "release:patch": "npm version patch -m \"Upgrade to %s\" && yarn changelog && yarn push-release",
     "changelog": "auto-changelog --output CHANGELOG.md --template changelog.hbs",
     "push-release": "git push origin master",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
@@ -39,7 +39,8 @@
     "build:atomik": "NODE_ENV=production babel src --out-dir dist --ignore '**/*.test.js,**/*.spec.js' && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
     "build:styleguide": "NODE_ENV=production yarn styleguidist build && cp -R splash build && cp src/CNAME build",
-    "deploy:styleguide": "gh-pages -d build"
+    "deploy:styleguide": "gh-pages -d build",
+    "foo": "yarn build:atomik"
   },
   "jest": {
     "setupFilesAfterEnv": [
