@@ -1,5 +1,13 @@
 <br />
 
+### [v0.3.2](https://github.com/atomikui/atomikui-core/compare/v0.3.1...v0.3.2) - 2020-10-03
+
+#### Commits
+
+- Updates release scripts to run changelog script after version bump [`16d7e53`](https://github.com/atomikui/atomikui-core/commit/16d7e53fbd4e66cf7c7c1ac301cc56e903e136c8)
+- Update CHANGELOG.md [`04800d9`](https://github.com/atomikui/atomikui-core/commit/04800d946bcc541f8e24fe66c0d7cd04a2f6dba8)
+- Removes changelog command from release scripts [`20a2656`](https://github.com/atomikui/atomikui-core/commit/20a26564882ffd5840d62dd191efa110d6508202)
+
 ### [v0.3.1](https://github.com/atomikui/atomikui-core/compare/v0.3.0...v0.3.1) - 2020-10-03
 
 #### Commits
