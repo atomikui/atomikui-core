@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "release:major": "npm version major -m \"Upgrade to %s\" && yarn changelog && yarn push-release",
-    "release:minor": "npm version minor -m \"Upgrade to %s\" && yarn changelog && yarn push-release",
-    "release:patch": "npm version patch -m \"Upgrade to %s\" && yarn changelog && yarn push-release",
+    "release:major": "npm version major -m \"Upgrade to %s\" && yarn push-release",
+    "release:minor": "npm version minor -m \"Upgrade to %s\" && yarn push-release",
+    "release:patch": "npm version patch -m \"Upgrade to %s\" && yarn push-release",
     "changelog": "auto-changelog --output CHANGELOG.md --template changelog.hbs",
     "push-release": "git push origin master",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
