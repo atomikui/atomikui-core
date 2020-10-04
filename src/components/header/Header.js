@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faGripLines } from '@fortawesome/free-solid-svg-icons';
-import lightOrDark from '../../utilities/color-darkness-checker';
+import hexColorChecker from '../../utilities/hexColorChecker';
 
 const Header = ({
   backgroundColor,
@@ -23,7 +23,7 @@ const Header = ({
 
   const LogoElement = logoLink ? 'a' : 'span';
 
-  const hasDarkBackground = lightOrDark(backgroundColor) === 'dark';
+  const hasDarkBackground = hexColorChecker(backgroundColor) === 'dark';
 
   return (
     <header

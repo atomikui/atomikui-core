@@ -1,5 +1,5 @@
 /* eslint-disable no-bitwise */
-const lightOrDark = (color) => {
+const hexColorChecker = (color) => {
   let red;
   let green;
   let blue;
@@ -37,4 +37,4 @@ const lightOrDark = (color) => {
   return 'dark';
 };
 
-export default lightOrDark;
+export default hexColorChecker;
