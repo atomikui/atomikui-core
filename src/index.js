@@ -24,6 +24,7 @@ export { default as FileUpload } from './components/file-upload';
 export { default as Flag } from './components/flag';
 export { default as FormField } from './components/form-field';
 export { default as FormGenerator } from './components/form-generator';
+export { default as Header } from './components/header';
 export { default as Hint } from './components/hint';
 export { default as Jumbotron } from './components/jumbotron';
 export { default as Label } from './components/label';

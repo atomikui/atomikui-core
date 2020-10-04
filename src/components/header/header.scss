@@ -1,0 +1,32 @@
+.atomikui-header {
+  align-items: center;
+  display: flex;
+  padding: rem(16);
+
+  &__logo {
+    align-items: center;
+    display: flex;
+
+    & > * + * {
+      margin-left: rem(8);
+    }
+  }
+
+  &__logo-text {
+    font-weight: $font-bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__nav {
+    flex: 1;
+    text-align: right;
+
+    a {
+      text-transform: uppercase;
+      color: $black;
+      font-weight: $font-semibold;
+      font-size: rem(15);
+    }
+  }
+}
