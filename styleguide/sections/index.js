@@ -8,6 +8,7 @@ const gettingStarted = require('./getting-started');
 const formControls = require('./form-controls');
 const iconography = require('./iconography');
 const informational = require('./informational');
+const landmarks = require('./landmarks');
 const layout = require('./layout');
 const navigation = require('./navigation');
 const providers = require('./providers');
@@ -23,6 +24,7 @@ module.exports = [
   formControls,
   iconography,
   informational,
+  landmarks,
   layout,
   navigation,
   wallet,

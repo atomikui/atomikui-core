@@ -12,5 +12,6 @@ Form Controls are simple UI elements such as buttons and form fields. They are i
 - [FormField](/#/Form%20Controls/FormField)
 - [FormGenerator](/#/Form%20Controls/FormGenerator)
 - [RangeSlider](/#/Form%20Controls/RangeSlider)
+- [Search](/#/Form%20Controls/Search)
 - [Switch](/#/Form%20Controls/Switch)
 - [SwitchPanel](/#/Form%20Controls/SwitchPanel)

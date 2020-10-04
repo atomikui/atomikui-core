@@ -1,0 +1,106 @@
+$button-hover-color-light: rgba(255, 255, 255, 0.15);
+$button-hover-color-dark: rgba(0, 0, 0, 0.1);
+
+.atomikui-header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: rem(16);
+
+  &__logo {
+    flex: 1;
+
+    & > * {
+      align-items: center;
+      display: flex;
+      white-space: nowrap;
+
+      & > * {
+        margin-right: rem(8);
+      }
+    }
+  }
+
+  &__logo-content {
+    font-weight: $font-bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__menu-toggle {
+    background: transparent;
+    border: 0;
+    padding: rem(8);
+    transition: background 0.2s linear;
+
+    &:hover,
+    &:focus {
+      background: $button-hover-color-dark;
+      border-radius: $border-radius;
+    }
+  }
+
+  &__nav {
+    display: none;
+    width: 100%;
+
+    &.is-open {
+      display: block;
+    }
+
+    ul {
+      margin-top: rem(16);
+      text-align: center;
+
+      & > * {
+        a {
+          border-radius: rem($border-radius);
+          color: $black;
+          display: inline-flex;
+          font-size: rem(15);
+          font-weight: $font-semibold;
+          justify-content: center;
+          padding: rem(10 12);
+          text-transform: uppercase;
+          transition: background 0.2s linear;
+          width: 100%;
+
+          &:hover {
+            background: $button-hover-color-dark;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.has-dark-bg {
+    .atomikui-header__nav a:hover,
+    .atomikui-header__menu-toggle:hover {
+      background: $button-hover-color-light;
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    &__logo {
+      flex: 0;
+    }
+
+    &__menu-toggle {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+      flex: 1;
+
+      ul {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: rem(0);
+        text-align: right;
+      }
+    }
+  }
+}

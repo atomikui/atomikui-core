@@ -1,0 +1,45 @@
+.atomikui-search {
+  background-color: $background-light-gray;
+  border-radius: rem($border-radius);
+  display: flex;
+  width: 100%;
+
+  & > :first-child {
+    flex: 1;
+  }
+
+  input {
+    background: transparent;
+  }
+
+  &--pill {
+    border-radius: rem($input-height);
+
+    button {
+      border-radius: rem(0 $input-height $input-height 0);
+    }
+
+    input {
+      border-radius: rem($input-height 0 0 $input-height);
+      padding-left: rem(16);
+    }
+  }
+
+  &--square {
+    border-radius: 0;
+
+    button,
+    input {
+      border-radius: 0;
+    }
+  }
+
+  button {
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      background: darken($background-light-gray, 5%);
+    }
+  }
+}

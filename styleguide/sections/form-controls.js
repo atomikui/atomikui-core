@@ -16,6 +16,7 @@ module.exports = {
       'src/components/form-field/FormField.js',
       'src/components/form-generator/FormGenerator.js',
       'src/components/range-slider/RangeSlider.js',
+      'src/components/search/Search.js',
       'src/components/switch/Switch.js',
       'src/components/switch-panel/SwitchPanel.js',
     ];
