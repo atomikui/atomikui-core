@@ -8,17 +8,20 @@ $button-hover-color-dark: rgba(0, 0, 0, 0.1);
   padding: rem(16);
 
   &__logo {
-    align-items: center;
-    display: flex;
     flex: 1;
-    white-space: nowrap;
 
-    & > * + * {
-      margin-left: rem(8);
+    & > * {
+      align-items: center;
+      display: flex;
+      white-space: nowrap;
+
+      & > * {
+        margin-right: rem(8);
+      }
     }
   }
 
-  &__logo-text {
+  &__logo-content {
     font-weight: $font-bold;
     text-decoration: none;
     text-transform: uppercase;
@@ -54,9 +57,9 @@ $button-hover-color-dark: rgba(0, 0, 0, 0.1);
           border-radius: rem($border-radius);
           color: $black;
           display: inline-flex;
-          justify-content: center;
           font-size: rem(15);
           font-weight: $font-semibold;
+          justify-content: center;
           padding: rem(10 12);
           text-transform: uppercase;
           transition: background 0.2s linear;
@@ -94,9 +97,9 @@ $button-hover-color-dark: rgba(0, 0, 0, 0.1);
       ul {
         align-items: center;
         display: flex;
+        justify-content: flex-end;
         margin-top: rem(0);
         text-align: right;
-        justify-content: flex-end;
       }
     }
   }

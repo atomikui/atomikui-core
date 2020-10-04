@@ -15,6 +15,7 @@ module.exports = {
     '!src/components/toaster/toast-context.js',
     // Excluding experimental components
     '!src/components/credit-card-field/**/*.js',
+    '!src/components/**/*.spec.js',
   ],
   testMatch: ['<rootDir>/src/**/?(*.)(test).{js,jsx,ts,tsx}'],
   testEnvironment: 'jsdom',

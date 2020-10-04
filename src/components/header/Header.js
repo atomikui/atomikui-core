@@ -34,16 +34,16 @@ const Header = ({
       {...others}
     >
       <div className="atomikui-header__logo">
-        {logo}
         <LogoElement
           {...(logoLink && { href: logoLink })}
-          className="atomikui-header__logo-text"
+          className="atomikui-header__logo-content"
           style={{
             fontFamily: logoFont,
             fontSize: `${logoFontSize}px`,
             color: logoFontColor,
           }}
         >
+          {logo}
           {logoText}
         </LogoElement>
       </div>
@@ -58,7 +58,9 @@ const Header = ({
       </button>
       {children && (
         <nav
-          title={`main navigation ${document.querySelectorAll('nav').length}`}
+          aria-label={`main navigation ${
+            document.querySelectorAll('nav').length
+          }`}
           className={classnames('atomikui-header__nav', {
             'is-open': isOpen,
           })}

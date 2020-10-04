@@ -28,7 +28,7 @@ const logo = (
   </svg>
 );
 
-<Header logo={logo} logoLink="/" logoText="Atomik UI" logoFontSize={30}>
+<Header logo={logo} logoLink="/" logoText="Atomik UI">
   <Link href="/about">About</Link>
   <Link href="/products">Products</Link>
   <Link href="/blog">Blog</Link>
@@ -78,7 +78,7 @@ const logo = (
   <Link href="/about">About</Link>
   <Link href="/products">Products</Link>
   <Link href="/blog">Blog</Link>
-  <Link href="/contact" aria-label="profile">
+  <Link href="/profile" aria-label="profile">
     <Avatar src="steve.png" alt="Steve" />
   </Link>
 </Header>;
