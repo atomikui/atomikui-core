@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faGripLines } from '@fortawesome/free-solid-svg-icons';
+import lightOrDark from '../../utilities/color-darkness-checker';
 
 const Header = ({
   backgroundColor,
@@ -22,9 +23,13 @@ const Header = ({
 
   const LogoElement = logoLink ? 'a' : 'span';
 
+  const hasDarkBackground = lightOrDark(backgroundColor) === 'dark';
+
   return (
     <header
-      className={classnames('atomikui-header', className)}
+      className={classnames('atomikui-header', className, {
+        'has-dark-bg': hasDarkBackground,
+      })}
       style={{ backgroundColor }}
       {...others}
     >
@@ -116,7 +121,7 @@ Header.defaultProps = {
   logoLink: '',
   logoFontColor: 'black',
   logoFontSize: 24,
-  menuToggleColor: 'white',
+  menuToggleColor: 'black',
 };
 
 export default Header;

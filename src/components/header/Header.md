@@ -73,6 +73,7 @@ const logo = (
   logoFont="'Barlow Condensed', Arial, Helvetica, sans-serif"
   logoFontColor="#fff"
   linkColor="#fff"
+  menuToggleColor="#fff"
 >
   <Link href="/about">About</Link>
   <Link href="/products">Products</Link>

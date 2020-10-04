@@ -12,15 +12,6 @@
     background: transparent;
   }
 
-  button {
-    background: transparent;
-
-    &:hover,
-    &:focus {
-      background: darken($background-light-gray, 5%);
-    }
-  }
-
   &--pill {
     border-radius: rem($input-height);
 
@@ -40,6 +31,15 @@
     button,
     input {
       border-radius: 0;
+    }
+  }
+
+  button {
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      background: darken($background-light-gray, 5%);
     }
   }
 }
