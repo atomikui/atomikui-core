@@ -1,8 +1,8 @@
-import React, { Children, cloneElement } from 'react';
+import React, { Children, cloneElement, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import List from '../list';
-import ListItem from '../list-item';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faGripLines } from '@fortawesome/free-solid-svg-icons';
 
 const Header = ({
   backgroundColor,
@@ -15,9 +15,13 @@ const Header = ({
   logoLink,
   logoFontColor,
   logoFontSize,
+  menuToggleColor,
   ...others
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const LogoElement = logoLink ? 'a' : 'span';
+
   return (
     <header
       className={classnames('atomikui-header', className)}
@@ -25,7 +29,7 @@ const Header = ({
       {...others}
     >
       <div className="atomikui-header__logo">
-        {logo}{' '}
+        {logo}
         <LogoElement
           {...(logoLink && { href: logoLink })}
           className="atomikui-header__logo-text"
@@ -38,17 +42,38 @@ const Header = ({
           {logoText}
         </LogoElement>
       </div>
+      <button
+        className="atomikui-header__menu-toggle"
+        aria-label="menu toggle button"
+        onClick={() => {
+          return setIsOpen(!isOpen);
+        }}
+      >
+        <Icon icon={faGripLines} size="2x" color={menuToggleColor} />
+      </button>
       {children && (
-        <nav title="main navigation" className="atomikui-header__nav">
-          <List type="horizontal">
+        <nav
+          title={`main navigation ${document.querySelectorAll('nav').length}`}
+          className={classnames('atomikui-header__nav', {
+            'is-open': isOpen,
+          })}
+        >
+          <ul>
             {Children.map(children, (child, index) => {
               return (
-                <ListItem key={`nav-item-${index}`}>
-                  {cloneElement(child, { style: { color: linkColor } })}
-                </ListItem>
+                <li key={`nav-item-${index}`}>
+                  {cloneElement(child, {
+                    onClick: () => {
+                      return setIsOpen(!isOpen);
+                    },
+                    style: {
+                      color: linkColor,
+                    },
+                  })}
+                </li>
               );
             })}
-          </List>
+          </ul>
         </nav>
       )}
     </header>
@@ -75,7 +100,9 @@ Header.propTypes = {
   /** Logo font color */
   logoFontColor: PropTypes.string,
   /** Logo text font size */
-  logoFontSize: PropTypes.string,
+  logoFontSize: PropTypes.number,
+  /** Menu toggle icon color */
+  menuToggleColor: PropTypes.string,
 };
 
 Header.defaultProps = {
@@ -89,6 +116,7 @@ Header.defaultProps = {
   logoLink: '',
   logoFontColor: 'black',
   logoFontSize: 24,
+  menuToggleColor: 'white',
 };
 
 export default Header;
