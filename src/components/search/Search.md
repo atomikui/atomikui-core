@@ -3,5 +3,9 @@ The Search component is a styled form field that takes user input and returns a 
 ```jsx
 import { Search } from '@atomikui/core';
 
-<Search onSubmit={(value) => console.log(value)} shape="pill" />;
+<Search
+  onSubmit={(value) => console.log(value)}
+  shape="pill"
+  placeholder="Search"
+/>;
 ```

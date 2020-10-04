@@ -25,12 +25,12 @@ const Search = ({ className, shape, onSubmit, ...others }) => {
       className={classnames('atomikui-search', className, {
         [`atomikui-search--${shape}`]: shape,
       })}
-      {...others}
     >
       <FormField
         ref={inputRef}
         onKeyUp={handleKeyPress}
         aria-label="Enter search query"
+        {...others}
       />
       <Button aria-label="submit" onClick={handleSubmit}>
         <Icon icon={faSearch} theme="hollow" />
