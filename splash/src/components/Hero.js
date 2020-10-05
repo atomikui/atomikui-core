@@ -7,7 +7,7 @@ const Hero = ({ title, subtitle }) => {
   return (
     <div className="hero">
       <div className="hero__content">
-        <AtomikUILogo size={170} />
+        <AtomikUILogo size={125} />
         <div>
           <h1 className="hero__title">{title}</h1>
           <h2 className="hero__subtitle">{subtitle}</h2>
