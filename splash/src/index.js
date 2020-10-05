@@ -9,6 +9,11 @@ import AtomikUILogo from './components/AtomikUILogo';
 import './styles/main.scss';
 import 'prismjs/themes/prism-okaidia.css';
 
+if (process.env.NODE_ENV !== 'production') {
+  const axe = require('react-axe');
+  axe(React, ReactDOM, 1000);
+}
+
 const { version } = require('../../package.json');
 
 const versionNumber = `Version: ${version}`;
@@ -39,76 +44,77 @@ const App = () => {
           {versionNumber}
         </Link>
       </Header>
-      <Hero
-        title="Atomik UI"
-        subtitle="A Library of Accessible React Components for Rapid Application Development"
-      />
       <main>
-        <Grid>
-          <Row>
-            <Col md={6}>
-              <Card
-                title={<h3>Installation</h3>}
-                footer={
-                  <Link
-                    className="link"
-                    href="/#/Getting%20Started/Installation"
-                  >
-                    Read Installation Docs
-                  </Link>
-                }
-              >
-                <div style={{ height: '380px' }}>
-                  <p>1. Install the Atomik UI package from npm.</p>
-                  <div className="margin-top-16 margin-bottom-8">
-                    <pre>
-                      <code className="language-javascript">
-                        npm install @atomikui/core
-                      </code>
-                    </pre>
+        <Hero
+          title="Atomik UI"
+          subtitle="A Library of Accessible React Components for Rapid Application Development"
+        />
+        <div className="main-content">
+          <Grid>
+            <Row>
+              <Col md={6}>
+                <Card
+                  title={<h3>Installation</h3>}
+                  footer={
+                    <Link
+                      className="link"
+                      href="/#/Getting%20Started/Installation"
+                    >
+                      Read Installation Docs
+                    </Link>
+                  }
+                >
+                  <div style={{ height: '380px' }}>
+                    <p>1. Install the Atomik UI package from npm.</p>
+                    <div className="margin-top-16 margin-bottom-8">
+                      <pre>
+                        <code className="language-javascript">
+                          npm install @atomikui/core
+                        </code>
+                      </pre>
+                    </div>
+                    <p>2. Import the supporting CSS into your project.</p>
+                    <div className="margin-top-16 margin-bottom-8">
+                      <pre>
+                        <code className="language-javascript">
+                          import '@atomikui/core/dist/styles/main.min.css';
+                        </code>
+                      </pre>
+                    </div>
+                    <p>3. Optional: Import the Atomik UI Core Sass Library.</p>
+                    <div className="margin-top-16 margin-bottom-8">
+                      <pre>
+                        <code className="language-javascript">
+                          npm install @atomikui/core-sass
+                        </code>
+                      </pre>
+                    </div>
+                    <div className="margin-top-16 margin-bottom-8">
+                      <pre>
+                        <code className="language-css">
+                          @import
+                          'node_modules/@atomikui/core-sass/abstracts/main';
+                        </code>
+                      </pre>
+                    </div>
                   </div>
-                  <p>2. Import the supporting CSS into your project.</p>
-                  <div className="margin-top-16 margin-bottom-8">
-                    <pre>
-                      <code className="language-javascript">
-                        import '@atomikui/core/dist/styles/main.min.css';
-                      </code>
-                    </pre>
-                  </div>
-                  <p>3. Optional: Import the Atomik UI Core Sass Library.</p>
-                  <div className="margin-top-16 margin-bottom-8">
-                    <pre>
-                      <code className="language-javascript">
-                        npm install @atomikui/core-sass
-                      </code>
-                    </pre>
-                  </div>
-                  <div className="margin-top-16 margin-bottom-8">
-                    <pre>
-                      <code className="language-css">
-                        @import
-                        'node_modules/@atomikui/core-sass/abstracts/main';
-                      </code>
-                    </pre>
-                  </div>
-                </div>
-              </Card>
-            </Col>
-            <Col md={6}>
-              <Card
-                title={<h3>Usage</h3>}
-                footer={
-                  <Link className="link" href="/styleguide">
-                    Explore Component Docs
-                  </Link>
-                }
-              >
-                <div style={{ height: '380px' }}>
-                  <p>Import components as needed into your project.</p>
-                  <div className="margin-top-16 margin-bottom-8">
-                    <pre>
-                      <code className="language-javascript">
-                        {`import { RangeSlider } from '@atomikui/core';
+                </Card>
+              </Col>
+              <Col md={6}>
+                <Card
+                  title={<h3>Usage</h3>}
+                  footer={
+                    <Link className="link" href="/styleguide">
+                      Explore Component Docs
+                    </Link>
+                  }
+                >
+                  <div style={{ height: '380px' }}>
+                    <p>Import components as needed into your project.</p>
+                    <div className="margin-top-16 margin-bottom-8">
+                      <pre>
+                        <code className="language-javascript">
+                          {`import { RangeSlider } from '@atomikui/core';
     
 <RangeSlider
   label="Select Amount"
@@ -120,14 +126,15 @@ const App = () => {
   value="400"
   onChange={(value) => console.log(value)}
 />`}
-                      </code>
-                    </pre>
+                        </code>
+                      </pre>
+                    </div>
                   </div>
-                </div>
-              </Card>
-            </Col>
-          </Row>
-        </Grid>
+                </Card>
+              </Col>
+            </Row>
+          </Grid>
+        </div>
       </main>
       <Footer
         copyrightEntity="Atomik UI"
