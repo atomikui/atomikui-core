@@ -36,6 +36,7 @@
     "test:unit": "jest --coverage --silent --config=./jest/jest.config.js",
     "test:accessibility": "URL=http://localhost:6060 npx jest --testTimeout 60000 --testRegex \\(__test__/.*\\|\\(\\.\\|/\\)\\(spec\\)\\)\\.[jt]sx?$",
     "start": "NODE_ENV=development styleguidist server",
+    "start:splash": "yarn --cwd splash start",
     "build:splash": "yarn --cwd splash build",
     "build:atomik": "NODE_ENV=production babel src --out-dir dist --copy-files --no-copy-ignored --ignore '**/*.test.js,**/*.spec.js' && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
