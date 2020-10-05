@@ -22,6 +22,7 @@ export { default as Drawer } from './components/drawer';
 export { default as Dropdown } from './components/dropdown';
 export { default as FileUpload } from './components/file-upload';
 export { default as Flag } from './components/flag';
+export { default as Footer } from './components/footer';
 export { default as FormField } from './components/form-field';
 export { default as FormGenerator } from './components/form-generator';
 export { default as Header } from './components/header';
