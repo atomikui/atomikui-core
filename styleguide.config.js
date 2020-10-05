@@ -15,7 +15,7 @@ module.exports = {
     return `import { ${name} } from '@atomikui/core';`;
   },
   assetsDir: './public',
-  styleguideDir: './build',
+  styleguideDir: './build/styleguide',
   require: [
     './src/styles/main.scss',
     './styleguide/styles/main.scss',

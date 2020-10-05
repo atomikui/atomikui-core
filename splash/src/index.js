@@ -52,7 +52,7 @@ const App = () => {
                 footer={
                   <Link
                     className="link"
-                    hrek="#/Getting%20Started/Installation"
+                    href="/#/Getting%20Started/Installation"
                   >
                     Read Installation Docs
                   </Link>
@@ -98,7 +98,7 @@ const App = () => {
               <Card
                 title={<h3>Usage</h3>}
                 footer={
-                  <Link className="link" href="#/component-library">
+                  <Link className="link" href="/styleguide">
                     Explore Component Docs
                   </Link>
                 }

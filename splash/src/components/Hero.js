@@ -11,7 +11,7 @@ const Hero = ({ title, subtitle }) => {
         <div>
           <h1 className="hero__title">{title}</h1>
           <h2 className="hero__subtitle">{subtitle}</h2>
-          <Link className="hero__btn" href="/#/component-library">
+          <Link className="hero__btn" href="/styleguide">
             Get Started
           </Link>
         </div>
