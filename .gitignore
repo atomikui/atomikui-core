@@ -5,6 +5,7 @@ TODOS
 
 # dependencies
 /node_modules
+splash/node_modules
 
 # testing
 /coverage
