@@ -5,7 +5,10 @@ TODOS
 
 # dependencies
 /node_modules
-splash/node_modules
+
+# Splash
+splash/node_modules/
+splash/.cache
 
 # testing
 /coverage

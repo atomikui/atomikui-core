@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '@atomikui/core/dist/styles/main.min.css';
-import { Header } from '@atomikui/core';
+import { Header, Link } from '@atomikui/core';
+
+const { version } = require('../../package.json');
+
+console.log('version:', version);
 
 const App = () => {
   const logo = (
@@ -9,7 +13,7 @@ const App = () => {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       version="1.1"
-      width="48"
+      width="40"
       x="0px"
       y="0px"
       viewBox="0 0 100 100"
@@ -42,9 +46,6 @@ const App = () => {
         <Link href="/about">About</Link>
         <Link href="/products">Products</Link>
         <Link href="/blog">Blog</Link>
-        <Link href="/profile" aria-label="profile">
-          <Avatar src="steve.png" alt="Steve" />
-        </Link>
       </Header>
     </div>
   );
