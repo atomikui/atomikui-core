@@ -1,5 +1,15 @@
 <br />
 
+### [v0.4.1](https://github.com/atomikui/atomikui-core/compare/v0.4.0...v0.4.1) - 2020-10-05
+
+#### Commits
+
+- Updates CHANGELOG.md [`a1f93e7`](https://github.com/atomikui/atomikui-core/commit/a1f93e77f0c43ff593ed48c705d3835442c378b2)
+- Upgrade to 0.4.1 [`7cb5163`](https://github.com/atomikui/atomikui-core/commit/7cb516363b8459d7cf9da607341da2e27193c3d9)
+- Fixes babel configuration inbuild to copy images [`88333eb`](https://github.com/atomikui/atomikui-core/commit/88333eb0403c2301b6cb35f040ae8191eb068056)
+
+<hr />
+
 ### [v0.4.0](https://github.com/atomikui/atomikui-core/compare/v0.3.2...v0.4.0) - 2020-10-04
 
 #### Merged
