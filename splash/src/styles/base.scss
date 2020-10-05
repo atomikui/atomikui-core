@@ -1,9 +1,15 @@
 main {
+  margin: 0 auto;
   max-width: rem($site-width);
   padding: rem(20);
-  margin: 0 auto;
 
   @media (min-width: $breakpoint-medium) {
     padding: rem(40 20);
   }
+}
+
+.link {
+  font-size: rem(15);
+  font-weight: $font-semibold;
+  text-transform: uppercase;
 }
