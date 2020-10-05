@@ -30,7 +30,9 @@ jobs:
           branch: master
           repo: atomikui/atomikui-core
     - stage: GitHub Pages
-      script: npm run build:styleguide
+      script:
+        - npm run build:splash
+        - npm run build:styleguide
       deploy:
         provider: pages
         skip_cleanup: true
