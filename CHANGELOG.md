@@ -1,19 +1,5 @@
 <br />
 
-### [v0.4.0](https://github.com/atomikui/atomikui-core/compare/v0.3.2...v0.4.0) - 2020-10-04
-
-#### Merged
-
-- Feature/header - Adds Header Component [`#37`](https://github.com/atomikui/atomikui-core/pull/37)
-
-#### Commits
-
-- [Header] Header component, styles and documentation [`9b1a585`](https://github.com/atomikui/atomikui-core/commit/9b1a5854b2059c56b213624b1322ea3aa9db2f55)
-- [Header] - Header mobile styles, documentation examples [`f8fb63a`](https://github.com/atomikui/atomikui-core/commit/f8fb63a62e175821f2eef76f6573178eca732adb)
-- [Footer] - component setup, documentation, CSS [`bad8a5f`](https://github.com/atomikui/atomikui-core/commit/bad8a5f891590942d0f1ba2eafafe837d367e19f)
-
-<hr />
-
 ### [v0.3.2](https://github.com/atomikui/atomikui-core/compare/v0.3.1...v0.3.2) - 2020-10-03
 
 #### Commits
