@@ -1,0 +1,34 @@
+.atomikui-footer {
+  font-size: rem(14);
+  text-align: center;
+
+  nav {
+    margin-bottom: rem(16);
+    padding: rem(0 16);
+
+    & > ul {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: rem(8);
+
+      & > * > a {
+        display: inline-block;
+        padding: rem(10);
+      }
+    }
+  }
+
+  p {
+    padding: rem(0 16 16);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    nav {
+      & > ul {
+        flex-direction: row;
+      }
+    }
+  }
+}

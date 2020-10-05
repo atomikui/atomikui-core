@@ -5,6 +5,9 @@ module.exports = {
   exampleMode: 'expand',
   sectionDepth: 6,
   components: () => {
-    return ['src/components/header/Header.js'];
+    return [
+      'src/components/footer/Footer.js',
+      'src/components/header/Header.js',
+    ];
   },
 };
