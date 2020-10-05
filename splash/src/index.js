@@ -75,10 +75,7 @@ const App = () => {
                       </code>
                     </pre>
                   </div>
-                  <p>
-                    3. Optional: Import and import the Atomik UI Core Sass
-                    Library.
-                  </p>
+                  <p>3. Optional: Import the Atomik UI Core Sass Library.</p>
                   <div className="margin-top-16 margin-bottom-8">
                     <pre>
                       <code className="language-javascript">
@@ -107,20 +104,22 @@ const App = () => {
                 }
               >
                 <div style={{ height: '380px' }}>
-                  <p>Import components as needed.</p>
+                  <p>Import components as needed into your project.</p>
                   <div className="margin-top-16 margin-bottom-8">
                     <pre>
                       <code className="language-javascript">
-                        {`import { Button } from '@atomikui/core';
+                        {`import { RangeSlider } from '@atomikui/core';
     
-<Pagination>
-  <Link href="#">Previous</Link>
-  <Link href="#">1</Link>
-  <Link href="#" active>2</Link>
-  <Link href="#">3</Link>
-  <Link href="#">4</Link>
-  <Link href="#">Next</Link>
-</Pagination>`}
+<RangeSlider
+  label="Select Amount"
+  errorText="This field is required"
+  hasError={false}
+  min="100"
+  max="1000"
+  step="100"
+  value="400"
+  onChange={(value) => console.log(value)}
+/>`}
                       </code>
                     </pre>
                   </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button, Link } from '@atomikui/core';
 import AtomikUILogo from './AtomikUILogo';
 
 const Hero = ({ title, subtitle }) => {
@@ -10,6 +11,9 @@ const Hero = ({ title, subtitle }) => {
         <div>
           <h1 className="hero__title">{title}</h1>
           <h2 className="hero__subtitle">{subtitle}</h2>
+          <Link className="hero__btn" href="/#/component-library">
+            Get Started
+          </Link>
         </div>
       </div>
     </div>

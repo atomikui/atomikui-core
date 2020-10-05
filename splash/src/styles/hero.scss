@@ -2,28 +2,60 @@
   align-items: center;
   background: #1b282e;
   display: flex;
-  height: rem(425);
   justify-content: center;
+  min-height: rem(425);
 
   &__content {
     margin: 0 auto;
     max-width: rem(1024);
-    padding: rem(20);
+    padding: rem(48 20);
     text-align: center;
   }
 
   &__title {
     color: $yellow-100;
     font-family: 'Barlow Condensed', 'Lato', Arial, sans-serif;
-    font-size: rem(75);
-    margin-bottom: rem(16);
+    font-size: rem(60);
+    margin-bottom: rem(8);
     text-transform: uppercase;
   }
 
   &__subtitle {
     color: $white;
-    font-size: rem(36);
+    font-size: rem(24);
     font-weight: $font-normal;
     line-height: 1.2;
+    margin-bottom: rem(16);
+  }
+
+  &__btn {
+    background: $red-900;
+    border-radius: rem(44);
+    color: $white;
+    display: inline-block;
+    line-height: rem(44);
+    padding: rem(0 32);
+    text-transform: uppercase;
+    transition: background 0.2s linear;
+
+    &:hover,
+    &:focus {
+      background: lighten($red-900, 5%);
+      text-decoration: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 rem(2) $sky-blue-300;
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    &__title {
+      font-size: rem(75);
+    }
+
+    &__subtitle {
+      font-size: rem(36);
+    }
   }
 }
