@@ -9,6 +9,8 @@ TODOS
 # Splash
 splash/node_modules/
 splash/.cache
+splash/dist/
+splash/build/
 
 # testing
 /coverage

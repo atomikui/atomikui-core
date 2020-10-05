@@ -1,0 +1,29 @@
+.hero {
+  align-items: center;
+  background: #1b282e;
+  display: flex;
+  height: rem(425);
+  justify-content: center;
+
+  &__content {
+    margin: 0 auto;
+    max-width: rem(1024);
+    padding: rem(20);
+    text-align: center;
+  }
+
+  &__title {
+    color: $yellow-100;
+    font-family: 'Barlow Condensed', 'Lato', Arial, sans-serif;
+    font-size: rem(75);
+    margin-bottom: rem(16);
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    color: $white;
+    font-size: rem(36);
+    font-weight: $font-normal;
+    line-height: 1.2;
+  }
+}
