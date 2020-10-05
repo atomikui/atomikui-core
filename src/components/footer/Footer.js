@@ -11,6 +11,7 @@ const Footer = ({
   copyrightEntity,
   linkColor,
   logo,
+  navBackgroundColor,
   textColor,
   ...others
 }) => {
@@ -22,6 +23,7 @@ const Footer = ({
     >
       <nav
         aria-label={`auxiliary nav ${document.querySelectorAll('nav').length}`}
+        style={{ backgroundColor: navBackgroundColor }}
       >
         <ul>
           {Children.map(children, (link, index) => {
@@ -57,6 +59,8 @@ Footer.propTypes = {
   copyrightEntity: PropTypes.string,
   /** Navigation link color */
   linkColor: PropTypes.string,
+  /** Nav menu background coloe */
+  navBackgroundColor: PropTypes.string,
   /** Logo image */
   logo: PropTypes.node,
   /** Footer text color */
@@ -71,6 +75,7 @@ Footer.defaultProps = {
   copyrightEntity: '',
   linkColor: '',
   logo: null,
+  navBackgroundColor: 'transparent',
   textColor: '',
 };
 

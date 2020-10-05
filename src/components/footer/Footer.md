@@ -1,3 +1,5 @@
+The Footer component is used at the bottom of every page on a website, below the main body content.
+
 ### Basic Footer
 
 ```jsx
@@ -66,6 +68,7 @@ const logo = (
 <Footer
   copyrightEntity="Atomik UI"
   backgroundColor="#263238"
+  navBackgroundColor="#1b282e"
   linkColor="#fff9c4"
   textColor="#fff"
   logo={logo}

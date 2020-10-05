@@ -1,9 +1,11 @@
 .atomikui-footer {
   font-size: rem(14);
-  padding: rem(16);
   text-align: center;
 
   nav {
+    margin-bottom: rem(16);
+    padding: rem(0 16);
+
     & > ul {
       align-items: center;
       display: flex;
@@ -16,6 +18,10 @@
         padding: rem(10);
       }
     }
+  }
+
+  p {
+    padding: rem(0 16 16);
   }
 
   @media (min-width: $breakpoint-medium) {
