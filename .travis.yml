@@ -31,6 +31,7 @@ jobs:
           repo: atomikui/atomikui-core
     - stage: GitHub Pages
       script:
+        - npm run splash:install
         - npm run build:splash
         - npm run build:styleguide
       deploy:
