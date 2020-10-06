@@ -49,4 +49,11 @@ module.exports = {
       base: '"Lato", Arial, Helvetica, sans-serif',
     },
   },
+  dangerouslyUpdateWebpackConfig(webpackConfig, env) {
+    const isProd = env === 'production';
+    if (!isProd) return webpackConfig;
+
+    webpackConfig.output.publicPath = 'styleguide/';
+    return webpackConfig;
+  },
 };
