@@ -1,5 +1,5 @@
 <h1 id="brand-heading" align="center">
-  ATOMIK UI
+  ATOMIK UI TEST
 </h1>
 
 <div id="status-images">
