@@ -1,5 +1,15 @@
 <br />
 
+### [v0.4.2](https://github.com/atomikui/atomikui-core/compare/v0.4.1...v0.4.2) - 2020-10-06
+
+#### Commits
+
+- Adds flexbox-grid. Removes dist [`95d430a`](https://github.com/atomikui/atomikui-core/commit/95d430a95a1af0415b355ed10aab5ab38b00db58)
+- Project setup [`ea26b5b`](https://github.com/atomikui/atomikui-core/commit/ea26b5b183b9930346699eb09240027ac467c926)
+- Splash page setup [`305eb9b`](https://github.com/atomikui/atomikui-core/commit/305eb9b4ae6e30e44d0bdfdcc1bbbf2ac0ae9f8d)
+
+<hr />
+
 ### [v0.4.1](https://github.com/atomikui/atomikui-core/compare/v0.4.0...v0.4.1) - 2020-10-05
 
 #### Commits
