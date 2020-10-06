@@ -48,6 +48,7 @@ const App = () => {
         <Hero
           title="Atomik UI"
           subtitle="A Library of Accessible React Components for Rapid Application Development"
+          btnLink="/styleguide"
         />
         <div className="main-content">
           <Grid>
@@ -58,7 +59,7 @@ const App = () => {
                   footer={
                     <Link
                       className="link"
-                      href="/#/Getting%20Started/Installation"
+                      href="/styleguide#/Getting%20Started/Installation"
                     >
                       Read Installation Docs
                     </Link>

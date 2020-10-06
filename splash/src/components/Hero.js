@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button, Link } from '@atomikui/core';
 import AtomikUILogo from './AtomikUILogo';
 
-const Hero = ({ title, subtitle }) => {
+const Hero = ({ title, subtitle, btnLink }) => {
   return (
     <div className="hero">
       <div className="hero__content">
@@ -11,7 +11,7 @@ const Hero = ({ title, subtitle }) => {
         <div>
           <h1 className="hero__title">{title}</h1>
           <h2 className="hero__subtitle">{subtitle}</h2>
-          <Link className="hero__btn" href="/styleguide">
+          <Link className="hero__btn" href={btnLink}>
             Get Started
           </Link>
         </div>
@@ -21,6 +21,7 @@ const Hero = ({ title, subtitle }) => {
 };
 
 Hero.propTypes = {
+  btnLink: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
 };
