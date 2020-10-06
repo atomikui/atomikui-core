@@ -10,7 +10,7 @@ header {
 .main-content {
   margin: 0 auto;
   max-width: rem($site-width);
-  padding: rem(20);
+  padding: rem(16 8);
 
   @media (min-width: $breakpoint-medium) {
     padding: rem(40 20);
