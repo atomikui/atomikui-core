@@ -43,7 +43,7 @@ yarn add @atomikui/core-sass;
 ```
 
 ```css
-@import 'node_modules/@atomikui/core-sass/abstracts';
+@import 'node_modules/@atomikui/core-sass/abstracts/main';
 ```
 
 #### 4. Begin Importing Components
