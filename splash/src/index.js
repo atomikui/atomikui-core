@@ -47,7 +47,7 @@ const App = () => {
       <main>
         <Hero
           title="Atomik UI"
-          subtitle="A Library of Accessible React Components for Rapid Application Development"
+          subtitle="A Library of Accessible React Components for Rapid Application Development."
           btnLink="/styleguide"
         />
         <div className="main-content">
