@@ -13,3 +13,9 @@
   font-weight: $font-semibold;
   text-transform: uppercase;
 }
+
+// Overrides prismjs `pre` styles
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: #1b282e !important;
+}
