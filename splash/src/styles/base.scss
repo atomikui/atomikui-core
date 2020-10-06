@@ -30,11 +30,18 @@ footer {
 }
 
 .status-badges {
-  text-align: center;
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin-top: rem(16);
 
   & > * + * {
     margin-left: rem(8);
+  }
+
+  & > * {
+    margin-bottom: rem(8);
   }
 }
 
