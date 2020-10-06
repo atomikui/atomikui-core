@@ -7,6 +7,12 @@ header {
   width: 100%;
 }
 
+footer {
+  & > svg {
+    margin-bottom: rem(4);
+  }
+}
+
 .main-content {
   margin: 0 auto;
   max-width: rem($site-width);
