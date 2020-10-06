@@ -93,8 +93,7 @@ const App = () => {
                     <div className="margin-top-16 margin-bottom-8">
                       <pre>
                         <code className="language-css">
-                          @import
-                          'node_modules/@atomikui/core-sass/abstracts/main';
+                          @import 'node_modules/@atomikui/core-sass/main';
                         </code>
                       </pre>
                     </div>
