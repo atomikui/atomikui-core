@@ -52,7 +52,7 @@ const App = () => {
         <div className="main-content">
           <Grid>
             <Row>
-              <Col md={6}>
+              <Col md={6} className="margin-bottom-16">
                 <Card
                   title={<h3>Installation</h3>}
                   footer={
