@@ -65,12 +65,19 @@ const App = () => {
                     </Link>
                   }
                 >
-                  <div style={{ height: '380px' }}>
+                  <div style={{ height: '320px' }}>
                     <p>1. Install the Atomik UI package from npm.</p>
                     <div className="margin-top-16 margin-bottom-8">
+                      npm
                       <pre>
                         <code className="language-javascript">
                           npm install @atomikui/core
+                        </code>
+                      </pre>
+                      yarn
+                      <pre>
+                        <code className="language-javascript">
+                          yarn add @atomikui/core
                         </code>
                       </pre>
                     </div>
@@ -79,21 +86,6 @@ const App = () => {
                       <pre>
                         <code className="language-javascript">
                           import '@atomikui/core/dist/styles/main.min.css';
-                        </code>
-                      </pre>
-                    </div>
-                    <p>3. Optional: Import the Atomik UI Core Sass Library.</p>
-                    <div className="margin-top-16 margin-bottom-8">
-                      <pre>
-                        <code className="language-javascript">
-                          npm install @atomikui/core-sass
-                        </code>
-                      </pre>
-                    </div>
-                    <div className="margin-top-16 margin-bottom-8">
-                      <pre>
-                        <code className="language-css">
-                          @import 'node_modules/@atomikui/core-sass/main';
                         </code>
                       </pre>
                     </div>
@@ -109,7 +101,7 @@ const App = () => {
                     </Link>
                   }
                 >
-                  <div style={{ height: '380px' }}>
+                  <div style={{ height: '320px' }}>
                     <p>Import components as needed into your project.</p>
                     <div className="margin-top-16 margin-bottom-8">
                       <pre>
@@ -118,12 +110,10 @@ const App = () => {
     
 <RangeSlider
   label="Select Amount"
-  errorText="This field is required"
-  hasError={false}
   min="100"
   max="1000"
   step="100"
-  value="400"
+  errorText="Please select an amount"
   onChange={(value) => console.log(value)}
 />`}
                         </code>
@@ -134,6 +124,30 @@ const App = () => {
               </Col>
             </Row>
           </Grid>
+          <div className="status-badges">
+            <img
+              src="https://travis-ci.com/atomikui/atomikui-core.svg?branch=master"
+              alt="Travis CI Status Image"
+            />
+            <a href="https://sonarcloud.io/dashboard?id=atomikui_atomikui-core">
+              <img
+                src="https://sonarcloud.io/api/project_badges/measure?project=atomikui_atomikui-core&metric=alert_status"
+                alt="Quality Gate Status"
+              />
+            </a>
+            <img
+              src="https://badgen.net/npm/v/@atomikui/core"
+              alt="Package Version Image"
+            />
+            <img
+              alt="GitHub Issues"
+              src="https://img.shields.io/github/issues-raw/atomikui/atomikui-core"
+            />
+            <img
+              alt="License"
+              src="https://img.shields.io/github/license/atomikui/atomikui-core"
+            />
+          </div>
         </div>
       </main>
       <Footer

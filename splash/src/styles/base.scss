@@ -23,6 +23,15 @@ header {
   text-transform: uppercase;
 }
 
+.status-badges {
+  text-align: center;
+  margin-top: rem(16);
+
+  & > * + * {
+    margin-left: rem(8);
+  }
+}
+
 // Overrides prismjs `pre` styles
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {

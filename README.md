@@ -55,9 +55,9 @@ Import the Atomik UI library core CSS.
 import '@atomikui/core/dist/styles/main.min.css';
 ```
 
-#### 3. Install and Import @atomikui/core-sass (Optional)
+#### 3. Install and Import @atomikui/core-sass abstracts (Optional)
 
-The Atomik UI Core Sass package is the backbone of the Atomik UI Component library theme. It contains functions, mixins, variables, utility classes and 192 colors that can be used in you project.
+The Atomik UI Core Sass package is the backbone of the Atomik UI Component library theme. It contains functions, mixins, variables and 192 colors that can be used in you project.
 
 More information is available under the [Sass Utilities](https://www.atomikui.com/#/Sass%20Utilities) Section.
 
@@ -74,7 +74,7 @@ yarn add @atomikui/core-sass;
 ```
 
 ```css
-@import 'node_modules/@atomikui/core-sass/main';
+@import 'node_modules/@atomikui/core-sass/abstracts';
 ```
 
 #### 4. Begin Importing Components
