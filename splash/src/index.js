@@ -28,7 +28,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Header
         backgroundColor="#263238"
         logo={logo}
@@ -146,7 +146,7 @@ const App = () => {
       >
         <Link href={npmPath}>{versionNumber}</Link>
       </Footer>
-    </div>
+    </>
   );
 };
 

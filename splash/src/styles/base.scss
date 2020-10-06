@@ -1,3 +1,13 @@
+main {
+  padding-top: rem(72);
+}
+
+header {
+  height: rem(72);
+  position: fixed;
+  width: 100%;
+}
+
 .main-content {
   margin: 0 auto;
   max-width: rem($site-width);
