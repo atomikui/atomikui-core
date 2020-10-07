@@ -1,5 +1,9 @@
 The table is used to display tabular data.
 
+_Note: Be sure to memoize table data to prevent unnecessary rerenders. Rendering tables with many rows can become quite expense._
+
+<br />
+
 ```jsx
 import { Table } from '@atomikui/core';
 
