@@ -15,11 +15,5 @@ module.exports = {
       usageMode: 'expand',
       exampleMode: 'expand',
     },
-    {
-      name: 'Table',
-      content: 'src/templates/Table.md',
-      usageMode: 'expand',
-      exampleMode: 'expand',
-    },
   ],
 };

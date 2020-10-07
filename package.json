@@ -83,6 +83,7 @@
     "react-masked-field": "^2.0.3",
     "react-merge-refs": "^1.1.0",
     "react-spring": "^8.0.27",
+    "react-table": "^7.5.2",
     "shortid": "^2.2.15"
   },
   "devDependencies": {
@@ -125,7 +126,6 @@
     "react-axe": "^3.5.3",
     "react-dom": "^16.13.1",
     "react-styleguidist": "9.2.0",
-    "react-table": "^7.0.4",
     "sass-loader": "7.3.0",
     "sinon": "^9.0.1",
     "style-loader": "^1.2.1",
