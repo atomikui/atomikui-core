@@ -1,4 +1,4 @@
-### Basic Table
+The table is used to display tabular data.
 
 ```jsx
 import { Table } from '@atomikui/core';
@@ -175,5 +175,5 @@ const data = React.useMemo(
   [],
 );
 
-<Table columns={columns} data={data} isPaginated isStriped isFullWidth />;
+<Table columns={columns} data={data} isStriped isFullWidth isPaginated />;
 ```

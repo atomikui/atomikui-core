@@ -46,6 +46,7 @@ const Table = ({
     getTableBodyProps,
     headerGroups,
     page,
+    rows,
     prepareRow,
     canPreviousPage,
     canNextPage,
@@ -66,7 +67,7 @@ const Table = ({
   );
 
   return (
-    <>
+    <div style={{ width: '100%', overflow: 'auto' }}>
       <table
         {...getTableProps()}
         className={classnames('atomikui-table', className, {
@@ -92,7 +93,7 @@ const Table = ({
           })}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {page.map((row) => {
+          {(isPaginated ? page : rows).map((row) => {
             prepareRow(row);
             return (
               <tr {...row.getRowProps()}>
@@ -201,7 +202,7 @@ const Table = ({
           />
         </div>
       )}
-    </>
+    </div>
   );
 };
 
