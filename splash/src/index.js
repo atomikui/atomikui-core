@@ -68,14 +68,18 @@ const App = () => {
                   <div style={{ height: '320px' }}>
                     <p>1. Install the Atomik UI package from npm.</p>
                     <div className="margin-top-16 margin-bottom-8">
-                      npm
                       <pre>
+                        <code className="language-javascript">// with npm</code>
+                        <br />
                         <code className="language-javascript">
                           npm install @atomikui/core
                         </code>
-                      </pre>
-                      yarn
-                      <pre>
+                        <br />
+                        <br />
+                        <code className="language-javascript">
+                          // with yarn
+                        </code>
+                        <br />
                         <code className="language-javascript">
                           yarn add @atomikui/core
                         </code>
