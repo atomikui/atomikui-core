@@ -13,17 +13,16 @@ import Button from '../button';
 import Dropdown from '../dropdown';
 import FormField from '../form-field';
 
-const creategGotToPageOptions = (numRows) => {
+const creategGotToPageOptions = (numRows, numRowsPerPage) => {
   let next = 0;
-  const perView = 10;
-  const numViews = numRows / 10;
+  const numViews = numRows / numRowsPerPage;
   const increments =
-    numViews % 2 === 0 ? Math.floor(numViews) : Math.floor(numViews) + 1;
+    numViews % 2 === 0 ? Math.floor(numViews) : Math.ceil(numViews);
   const optionsArray = [];
 
   for (let i = 0; i < increments; i += 1) {
-    next += perView;
-    optionsArray.push(next);
+    next += numRowsPerPage;
+    optionsArray.push(next > numRows ? numRows : next);
   }
 
   return optionsArray;
@@ -39,6 +38,7 @@ const Table = ({
   isFullWidth,
   isPaginated,
   isStriped,
+  numRowsPerPage,
   ...others
 }) => {
   const {
@@ -61,7 +61,7 @@ const Table = ({
     {
       columns,
       data,
-      initialState: { pageIndex: 0 },
+      initialState: { pageIndex: 0, pageSize: numRowsPerPage },
     },
     usePagination,
   );
@@ -108,7 +108,7 @@ const Table = ({
         </tbody>
       </table>
       {isPaginated && (
-        <div className="margin-top-16 flex flex--alighn-middle flex--hr-8">
+        <div className="margin-top-16 margin-bottom-2 flex flex--alighn-middle flex--hr-8">
           <Button
             theme="blue"
             size="md"
@@ -196,9 +196,11 @@ const Table = ({
                 setPageSize(Number(value));
               }
             }}
-            options={creategGotToPageOptions(data.length).map((pSize) => {
-              return { text: `Show ${pSize}`, value: pSize };
-            })}
+            options={creategGotToPageOptions(data.length, numRowsPerPage).map(
+              (pSize) => {
+                return { text: `Show ${pSize}`, value: pSize };
+              },
+            )}
           />
         </div>
       )}
@@ -226,6 +228,8 @@ Table.propTypes = {
   isStriped: PropTypes.bool,
   /** Shows pagination */
   isPaginated: PropTypes.bool,
+  /** If paginated, the number of rows per page */
+  numRowsPerPage: PropTypes.number,
 };
 
 Table.defaultProps = {
@@ -234,6 +238,7 @@ Table.defaultProps = {
   isFullWidth: false,
   isStriped: false,
   isPaginated: false,
+  numRowsPerPage: 10,
 };
 
 export default Table;

@@ -175,5 +175,12 @@ const data = React.useMemo(
   [],
 );
 
-<Table columns={columns} data={data} isStriped isFullWidth isPaginated />;
+<Table
+  columns={columns}
+  data={data}
+  numRowsPerPage={5}
+  isStriped
+  isFullWidth
+  isPaginated
+/>;
 ```
