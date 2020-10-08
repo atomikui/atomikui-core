@@ -108,7 +108,7 @@ const Table = ({
         </tbody>
       </table>
       {isPaginated && (
-        <div className="margin-top-16 margin-bottom-2 flex flex--alighn-middle flex--hr-8">
+        <div className="margin-top-16 margin-bottom-2 flex flex--align-middle flex--justify-flex-end flex--hr-8">
           <Button
             theme="blue"
             size="md"
