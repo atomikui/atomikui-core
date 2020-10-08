@@ -110,7 +110,7 @@ const Table = ({
       {isPaginated && (
         <div className="margin-top-16 margin-bottom-2 flex flex--align-middle flex--justify-flex-end flex--hr-8">
           <Button
-            theme="blue"
+            theme="sky-blue"
             size="md"
             onClick={() => {
               return gotoPage(0);
@@ -124,7 +124,7 @@ const Table = ({
             />
           </Button>
           <Button
-            theme="blue"
+            theme="sky-blue"
             size="md"
             onClick={() => {
               return previousPage();
@@ -138,7 +138,7 @@ const Table = ({
             />
           </Button>
           <Button
-            theme="blue"
+            theme="sky-blue"
             size="md"
             onClick={() => {
               return nextPage();
@@ -152,7 +152,7 @@ const Table = ({
             />
           </Button>
           <Button
-            theme="blue"
+            theme="sky-blue"
             size="md"
             onClick={() => {
               return gotoPage(pageCount - 1);
