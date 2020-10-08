@@ -1,8 +1,8 @@
-$cell-border-color: darken($background-light-gray, 3%);
+$cell-border-color: darken($background-light-gray, 5%);
 $table-background-color: lighten($background-light-gray, 2%);
 
 .atomikui-table {
-  border: rem(1) solid $table-background-color;
+  border: rem(1) solid $cell-border-color;
   border-collapse: collapse;
   border-spacing: 0;
 
