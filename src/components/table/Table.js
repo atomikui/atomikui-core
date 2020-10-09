@@ -108,8 +108,12 @@ const Table = ({
         </tbody>
       </table>
       {isPaginated && (
-        <div className="margin-top-16 margin-bottom-2 flex flex--align-middle flex--justify-flex-end flex--hr-8">
+        <div
+          id="pagination"
+          className="margin-top-16 margin-bottom-2 flex flex--align-middle flex--justify-flex-end flex--hr-8"
+        >
           <Button
+            id="to-first"
             theme="sky-blue"
             size="md"
             onClick={() => {
@@ -124,6 +128,7 @@ const Table = ({
             />
           </Button>
           <Button
+            id="to-previous"
             theme="sky-blue"
             size="md"
             onClick={() => {
@@ -138,6 +143,7 @@ const Table = ({
             />
           </Button>
           <Button
+            id="to-next"
             theme="sky-blue"
             size="md"
             onClick={() => {
@@ -152,6 +158,7 @@ const Table = ({
             />
           </Button>
           <Button
+            id="to-last"
             theme="sky-blue"
             size="md"
             onClick={() => {
@@ -174,6 +181,7 @@ const Table = ({
           <span className="flex flex--align-middle">
             <span>| Go to page:</span>
             <FormField
+              id="go-to-page-textbox"
               aria-label="Enter page number"
               className="margin-left-4"
               style={{ width: '50px' }}
@@ -187,6 +195,7 @@ const Table = ({
             />
           </span>
           <Dropdown
+            id="go-to-page-dropdown"
             aria-label="Select page range"
             style={{ width: '130px' }}
             value={pageSize}

@@ -1,7 +1,8 @@
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import { shallow, configure } from 'enzyme';
+import { mount, configure } from 'enzyme';
 import Table from './Table';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 configure({ adapter: new Adapter() });
 
@@ -103,84 +104,15 @@ describe('<Table />', () => {
         email: 'clementina_d@email.com',
         phone: '024-648-3804',
       },
-      {
-        id: 11,
-        name: 'Mary Jane',
-        username: 'Mary',
-        email: 'mary_jane@email.com',
-        phone: '1-770-736-8031 x56442',
-      },
-      {
-        id: 12,
-        name: 'Terry Smith',
-        username: 'terry1234',
-        email: 'tsmith@pemailrovider.com',
-        phone: '010-692-6593 x09125',
-      },
-      {
-        id: 13,
-        name: 'Tom Thumb',
-        username: 'tthumb1234',
-        email: 'tthumb@email.com',
-        phone: '1-463-123-4447',
-      },
-      {
-        id: 14,
-        name: 'Patricia McMahon',
-        username: 'patm4567',
-        email: 'pat.mcmahon@email.com',
-        phone: '493-170-9623 x156',
-      },
-      {
-        id: 15,
-        name: 'Dick Dietrich',
-        username: 'dicky123',
-        email: 'dick.d@email.com',
-        phone: '(254)954-1289',
-      },
-      {
-        id: 16,
-        name: 'Dennis Murphy',
-        username: 'dennis_m1998',
-        email: 'dennis_murphy@email.com',
-        phone: '1-477-935-8478 x6430',
-      },
-      {
-        id: 17,
-        name: 'Kurtis Wilson',
-        username: 'kwilson9872',
-        email: 'kurt.wilson@email.com',
-        phone: '210.067.6132',
-      },
-      {
-        id: 18,
-        name: 'Nicholas Johnson',
-        username: 'nickjohn333',
-        email: 'njohn@email.com',
-        phone: '586.493.6943 x140',
-      },
-      {
-        id: 19,
-        name: 'Bob Roberts',
-        username: 'robrob123',
-        email: 'broberts@email.com',
-        phone: '(775)976-6794 x41206',
-      },
-      {
-        id: 20,
-        name: 'Colt Luger',
-        username: 'lugercolt',
-        email: 'colt.luger@email.com',
-        phone: '024-648-3804',
-      },
     ];
 
-    table = shallow(
+    table = mount(
       <Table
         columns={columns}
         data={data}
         numRowsPerPage={5}
         isStriped
+        isFixedLayout
         isFullWidth
         isPaginated
       />,
@@ -188,6 +120,98 @@ describe('<Table />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(table).toBeTruthy();
+    expect(table).toHaveLength(1);
+  });
+
+  it('Should have pagination', () => {
+    expect(table.find('#pagination')).toHaveLength(1);
+  });
+
+  it('Should not have pagination is `isPaginated` is false', () => {
+    table.setProps({ isPaginated: false });
+    expect(table.find('#pagination')).toHaveLength(0);
+  });
+
+  test.each(['is-full-width', 'is-fixed-layout', 'is-striped'])(
+    'Should set the table modifier: %p',
+    (claaaName) => {
+      expect(table.find('.atomikui-table').hasClass(claaaName)).toBeTruthy();
+    },
+  );
+
+  it('Should only render 5 rows', () => {
+    expect(table.find('tbody').children()).toHaveLength(5);
+  });
+
+  it('Should show next and previous pages', () => {
+    table.find('button#to-next').simulate('click');
+
+    expect(
+      table.find('tbody').children().first().children().first().text(),
+    ).toBe('6');
+
+    table.find('button#to-previous').simulate('click');
+
+    expect(
+      table.find('tbody').children().first().children().first().text(),
+    ).toBe('1');
+  });
+
+  it('Should show first and last pages', () => {
+    table.find('button#to-last').simulate('click');
+
+    expect(
+      table.find('tbody').children().first().children().first().text(),
+    ).toBe('6');
+
+    table.find('button#to-first').simulate('click');
+
+    expect(
+      table.find('tbody').children().first().children().first().text(),
+    ).toBe('1');
+  });
+
+  it('Should advance when page number is entered in text field', () => {
+    table
+      .find('input#go-to-page')
+      .simulate('change', { target: { value: '2' } });
+
+    expect(
+      table.find('tbody').children().first().children().first().text(),
+    ).toBe('6');
+  });
+
+  it('Should advance when page number is entered in text field', () => {
+    table
+      .find('input#go-to-page-textbox')
+      .simulate('change', { target: { value: '2' } });
+
+    expect(
+      table.find('tbody').children().first().children().first().text(),
+    ).toBe('6');
+  });
+
+  it('Should show more rows when option is selected from dropdown', () => {
+    table
+      .find('select#go-to-page-dropdown')
+      .simulate('change', { target: { value: '10' } });
+
+    expect(table.find('tbody').children()).toHaveLength(10);
+  });
+
+  it('Should not show more rows if dropdown value is empty', () => {
+    table
+      .find('select#go-to-page-dropdown')
+      .simulate('change', { target: { value: '' } });
+
+    expect(table.find('tbody').children()).toHaveLength(5);
+  });
+
+  it('Should set dropdown options based on number of rows', () => {
+    table.setProps({ numRowsPerPage: 4 });
+
+    expect(table.find('select#go-to-page-dropdown').childAt(3).text()).toBe(
+      'Show 8',
+    );
   });
 });
