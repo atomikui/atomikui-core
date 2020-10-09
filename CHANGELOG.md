@@ -1,5 +1,19 @@
 <br />
 
+### [v0.5.0](https://github.com/atomikui/atomikui-core/compare/v0.4.2...v0.5.0) - 2020-10-09
+
+#### Merged
+
+- Feature/table component [`#44`](https://github.com/atomikui/atomikui-core/pull/44)
+
+#### Commits
+
+- [Table] - Adds table component and documentation [`b45d629`](https://github.com/atomikui/atomikui-core/commit/b45d6297cbd8d42a5ceb1622e8753a930f8096d5)
+- [Table] - Test coverage setup [`7e8242e`](https://github.com/atomikui/atomikui-core/commit/7e8242e63e547cfd1060e8c0ff31def8ef318fc2)
+- [Table] - Test coverage [`8bbcf66`](https://github.com/atomikui/atomikui-core/commit/8bbcf66ac7e2f8727d7ffdef97c6531bf03dcf97)
+
+<hr />
+
 ### [v0.4.2](https://github.com/atomikui/atomikui-core/compare/v0.4.1...v0.4.2) - 2020-10-06
 
 #### Commits
