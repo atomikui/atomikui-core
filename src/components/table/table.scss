@@ -1,9 +1,14 @@
-$cell-border-color: $gray-100;
+$cell-border-color: darken($background-light-gray, 5%);
+$table-background-color: lighten($background-light-gray, 2%);
 
 .atomikui-table {
-  border: rem(1) solid darken($gray-100, 10%);
+  border: rem(1) solid $cell-border-color;
   border-collapse: collapse;
   border-spacing: 0;
+
+  th {
+    background: $table-background-color;
+  }
 
   th,
   td {
@@ -18,13 +23,12 @@ $cell-border-color: $gray-100;
     border-left: rem(1) solid $cell-border-color;
   }
 
-  tr:first-of-type > td {
-    border-top-width: rem(3);
-    border-top-color: $cell-border-color;
-  }
-
-  tbody > tr:nth-child(even) {
-    background: lighten($gray-100, 5%);
+  &.is-striped {
+    & > tbody {
+      & > tr:nth-child(even) {
+        background: $table-background-color;
+      }
+    }
   }
 
   &.is-full-width {
@@ -33,5 +37,6 @@ $cell-border-color: $gray-100;
 
   &.is-fixed-layout {
     table-layout: fixed;
+    width: 100%;
   }
 }

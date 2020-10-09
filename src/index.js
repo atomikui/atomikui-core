@@ -49,6 +49,7 @@ export { default as Stepper } from './components/stepper';
 export { default as Step } from './components/step';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
+export { default as Table } from './components/table';
 export { default as Tab } from './components/tab';
 export { default as TabPanel } from './components/tab-panel';
 export { default as Tabs } from './components/tabs';

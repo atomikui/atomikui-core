@@ -8,6 +8,7 @@ module.exports = {
     return [
       'src/components/list/List.js',
       'src/components/list-item/ListItem.js',
+      'src/components/table/Table.js',
     ];
   },
 };
