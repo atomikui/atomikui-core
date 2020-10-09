@@ -173,7 +173,7 @@ describe('<Table />', () => {
 
   it('Should advance when page number is entered in text field', () => {
     table
-      .find('input#go-to-page')
+      .find('input#go-to-page-textbox')
       .simulate('change', { target: { value: '2' } });
 
     expect(
@@ -208,10 +208,23 @@ describe('<Table />', () => {
   });
 
   it('Should set dropdown options based on number of rows', () => {
+    expect(table.find('select#go-to-page-dropdown').childAt(1).text()).toBe(
+      'Show 5',
+    );
+    expect(table.find('select#go-to-page-dropdown').childAt(2).text()).toBe(
+      'Show 10',
+    );
+
     table.setProps({ numRowsPerPage: 4 });
 
-    expect(table.find('select#go-to-page-dropdown').childAt(3).text()).toBe(
+    expect(table.find('select#go-to-page-dropdown').childAt(1).text()).toBe(
+      'Show 4',
+    );
+    expect(table.find('select#go-to-page-dropdown').childAt(2).text()).toBe(
       'Show 8',
+    );
+    expect(table.find('select#go-to-page-dropdown').childAt(3).text()).toBe(
+      'Show 10',
     );
   });
 });
