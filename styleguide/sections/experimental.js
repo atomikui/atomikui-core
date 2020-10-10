@@ -5,6 +5,6 @@ module.exports = {
   exampleMode: 'expand',
   sectionDepth: 6,
   components: () => {
-    return ['src/components/credit-card-field/CreditCardField.js'];
+    return ['src/components/credit-card-field/CreditCardField.jsx'];
   },
 };

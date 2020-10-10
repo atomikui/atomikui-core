@@ -281,7 +281,7 @@ export default {
       viewBox="0 0 192.756 192.756"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g fill-rule="evenodd" clipRule="evenodd">
+      <g fillRule="evenodd" clipRule="evenodd">
         <path fill="#fff" d="M0 0h192.756v192.756H0V0z" />
         <path fill="#1b3771" d="M8.504 151.977h175.748V40.78H8.504v111.197z" />
         <path

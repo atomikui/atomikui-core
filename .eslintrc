@@ -1,37 +1,8 @@
 {
   "parser": "babel-eslint",
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
-  "extends": ["airbnb-base", "prettier"],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": false
-    },
-    "ecmaVersion": 2018,
-    "sourceType": "module"
-  },
-  "plugins": ["react"],
+  "extends": "atomikui",
   "rules": {
-    "arrow-body-style": ["error", "always"],
-    "implicit-arrow-linebreak": 0,
-    "max-len": [
-      "warn",
-      {
-        "ignoreComments": true,
-        "code": 100
-      }
-    ],
-    "no-alert": 0,
-    "no-console": 0,
-    "no-unused-vars": 0,
-    "object-curly-newline": 0,
-    "object-property-newline": 2
+    "react/jsx-props-no-spreading": 0,
+    "react/button-has-type": 0
   }
 }

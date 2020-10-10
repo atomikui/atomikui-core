@@ -6,13 +6,13 @@ module.exports = {
   sectionDepth: 6,
   components: () => {
     return [
-      'src/components/card/Card.js',
-      'src/components/chat-window/ChatWindow.js',
-      'src/components/collapse/Collapse.js',
-      'src/components/drawer/Drawer.js',
-      'src/components/jumbotron/Jumbotron.js',
-      'src/components/modal/Modal.js',
-      'src/components/overlay/Overlay.js',
+      'src/components/card/Card.jsx',
+      'src/components/chat-window/ChatWindow.jsx',
+      'src/components/collapse/Collapse.jsx',
+      'src/components/drawer/Drawer.jsx',
+      'src/components/jumbotron/Jumbotron.jsx',
+      'src/components/modal/Modal.jsx',
+      'src/components/overlay/Overlay.jsx',
     ];
   },
 };

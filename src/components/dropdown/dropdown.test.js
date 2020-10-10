@@ -13,6 +13,7 @@ describe('<Dropdown />', () => {
       <Dropdown
         label="Select a Color"
         value="Orange"
+        theme="red"
         options={[
           { text: 'Red', value: 'Red' },
           { text: 'Orange', value: 'Orange' },
@@ -53,5 +54,19 @@ describe('<Dropdown />', () => {
 
     expect(dropdown.find('Hint')).toBeTruthy();
     expect(dropdown.find('Hint').text()).toBe('Some helpful text');
+  });
+
+  it('Should set color themes', () => {
+    expect(
+      dropdown.find('.atomikui-dropdown').hasClass('atomikui-dropdown--red'),
+    ).toBeTruthy();
+
+    dropdown.setProps({ themeVariant: 'light' });
+
+    expect(
+      dropdown
+        .find('.atomikui-dropdown')
+        .hasClass('atomikui-dropdown--red-light'),
+    ).toBeTruthy();
   });
 });

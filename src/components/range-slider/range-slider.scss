@@ -108,6 +108,10 @@
       justify-content: center;
       position: relative;
       width: rem(15);
+
+      &:focus {
+        outline: 0;
+      }
     }
 
     .atomikui-range-slider__ticks__label {

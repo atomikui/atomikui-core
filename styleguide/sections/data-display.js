@@ -6,9 +6,9 @@ module.exports = {
   sectionDepth: 6,
   components: () => {
     return [
-      'src/components/list/List.js',
-      'src/components/list-item/ListItem.js',
-      'src/components/table/Table.js',
+      'src/components/list/List.jsx',
+      'src/components/list-item/ListItem.jsx',
+      'src/components/table/Table.jsx',
     ];
   },
 };

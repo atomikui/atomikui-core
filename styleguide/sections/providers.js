@@ -5,6 +5,6 @@ module.exports = {
   exampleMode: 'expand',
   sectionDepth: 6,
   components: () => {
-    return ['src/components/toaster/WithToastProvider.js'];
+    return ['src/components/toaster/WithToastProvider.jsx'];
   },
 };

@@ -5,6 +5,6 @@ module.exports = {
   exampleMode: 'expand',
   sectionDepth: 6,
   components: () => {
-    return ['src/components/media/Media.js'];
+    return ['src/components/media/Media.jsx'];
   },
 };

@@ -6,11 +6,11 @@ module.exports = {
   sectionDepth: 6,
   components: () => {
     return [
-      'src/components/breadcrumb/Breadcrumb.js',
-      'src/components/link/Link.js',
-      'src/components/pagination/Pagination.js',
-      'src/components/step/Step.js',
-      'src/components/stepper/Stepper.js',
+      'src/components/breadcrumb/Breadcrumb.jsx',
+      'src/components/link/Link.jsx',
+      'src/components/pagination/Pagination.jsx',
+      'src/components/step/Step.jsx',
+      'src/components/stepper/Stepper.jsx',
     ];
   },
 };

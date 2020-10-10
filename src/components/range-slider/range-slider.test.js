@@ -64,7 +64,7 @@ describe('<RangeSlider />', () => {
         .find('.atomikui-range-slider__ticks__tick')
         .first()
         .prop('onClick'),
-    ).toBeNull();
+    ).toBeUndefined();
   });
 
   it('Should update the tick label when the value changes', () => {
