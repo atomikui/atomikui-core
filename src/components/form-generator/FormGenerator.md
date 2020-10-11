@@ -71,7 +71,7 @@ const personalInfo = [
   [
     {
       component: 'Button',
-      theme: 'primary',
+      theme: 'sky-blue',
       children: 'Submit',
       className: 'margin-top-8',
     },
@@ -175,7 +175,7 @@ const formfields = [
     {
       component: 'Button',
       type: 'submit',
-      theme: 'primary',
+      theme: 'sky-blue',
       children: 'Submit',
       className: 'margin-top-8',
     },
@@ -247,7 +247,7 @@ const formfields = [
     {
       component: 'Button',
       type: 'submit',
-      theme: 'primary',
+      theme: 'sky-blue',
       children: 'Submit',
       className: 'margin-top-8',
     },

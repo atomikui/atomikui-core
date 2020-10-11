@@ -6,8 +6,8 @@ module.exports = {
   sectionDepth: 6,
   components: () => {
     return [
-      'src/components/footer/Footer.js',
-      'src/components/header/Header.js',
+      'src/components/footer/Footer.jsx',
+      'src/components/header/Header.jsx',
     ];
   },
 };

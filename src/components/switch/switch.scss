@@ -14,6 +14,7 @@
 
   &__toggle {
     background: $background-light-gray;
+    border: 0;
     border-radius: rem($switch-height);
     cursor: pointer;
     display: block;
@@ -21,6 +22,10 @@
     position: relative;
     transition: all 0.1s ease-in-out;
     width: rem(50);
+
+    &:focus {
+      outline: 0;
+    }
 
     &::after {
       background: $white;

@@ -13,6 +13,6 @@ module.exports = {
     },
   ],
   components: () => {
-    return ['src/components/flag/Flag.js'];
+    return ['src/components/flag/Flag.jsx'];
   },
 };

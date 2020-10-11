@@ -52,7 +52,7 @@ describe('<RangeSlider />', () => {
       rangeSlider
         .find('.atomikui-range-slider__ticks__tick')
         .first()
-        .prop('onClick'),
+        .prop('onFocus'),
     ).toBeDefined();
   });
 
@@ -63,8 +63,8 @@ describe('<RangeSlider />', () => {
       rangeSlider
         .find('.atomikui-range-slider__ticks__tick')
         .first()
-        .prop('onClick'),
-    ).toBeNull();
+        .prop('onFocus'),
+    ).toBeUndefined();
   });
 
   it('Should update the tick label when the value changes', () => {
@@ -87,7 +87,7 @@ describe('<RangeSlider />', () => {
     rangeSlider
       .find('.atomikui-range-slider__ticks__label')
       .first()
-      .simulate('click');
+      .simulate('focus');
 
     expect(onChangeSpy.withArgs('100').called).toBe(true);
   });

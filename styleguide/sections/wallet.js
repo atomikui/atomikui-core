@@ -6,8 +6,8 @@ module.exports = {
   sectionDepth: 6,
   components: () => {
     return [
-      'src/components/wallet/Wallet.js',
-      'src/components/wallet-item/WalletItem.js',
+      'src/components/wallet/Wallet.jsx',
+      'src/components/wallet-item/WalletItem.jsx',
     ];
   },
 };
