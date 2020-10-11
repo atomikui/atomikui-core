@@ -117,7 +117,6 @@
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
-    "prop-types": "^15.7.2",
     "puppeteer": "^5.3.1",
     "react": "^16.13.0",
     "react-axe": "^3.5.3",
