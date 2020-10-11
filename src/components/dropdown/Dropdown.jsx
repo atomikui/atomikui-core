@@ -67,12 +67,14 @@ const Dropdown = forwardRef(
             {...(defaultValue && !value && { defaultValue })}
             disabled={disabled}
             onBlur={onChange}
+            onChange={onChange}
             {...others}
           >
             {[
               {
                 text: 'Select One',
                 value: '',
+                onBlur: onChange,
               },
               ...options,
             ].map((option, index) => {

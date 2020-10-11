@@ -37,7 +37,7 @@ describe('<Switch />', () => {
 
     expect(
       component.find('.atomikui-switch__toggle').prop('onClick'),
-    ).toBeNull();
+    ).toBeFalsy();
   });
 
   it('Should handle an error', () => {

@@ -67,57 +67,59 @@ const Table = ({
   );
 
   return (
-    <div style={{ width: '100%', overflow: 'auto' }}>
-      <table
-        {...getTableProps()}
-        className={classnames('atomikui-table', className, {
-          'is-full-width': isFullWidth,
-          'is-fixed-layout': isFixedLayout,
-          'is-striped': isStriped,
-        })}
-        {...others}
-      >
-        <thead>
-          {headerGroups.map((headerGroup, rowIndex) => {
-            return (
-              <tr
-                key={`row-${rowIndex + 1}`}
-                {...headerGroup.getHeaderGroupProps()}
-              >
-                {headerGroup.headers.map((column, colIndex) => {
-                  return (
-                    <th
-                      key={`col-${colIndex + 1}`}
-                      {...column.getHeaderProps()}
-                    >
-                      {column.render('Header')}
-                    </th>
-                  );
-                })}
-              </tr>
-            );
+    <>
+      <div style={{ width: '100%', overflow: 'auto' }}>
+        <table
+          {...getTableProps()}
+          className={classnames('atomikui-table', className, {
+            'is-full-width': isFullWidth,
+            'is-fixed-layout': isFixedLayout,
+            'is-striped': isStriped,
           })}
-        </thead>
-        <tbody {...getTableBodyProps()}>
-          {(isPaginated ? page : rows).map((row, bodyRowIndex) => {
-            prepareRow(row);
-            return (
-              <tr key={`body-row-${bodyRowIndex + 1}`} {...row.getRowProps()}>
-                {row.cells.map((cell, bodyCellIndex) => {
-                  return (
-                    <td
-                      key={`body-cell-${bodyCellIndex + 1}`}
-                      {...cell.getCellProps()}
-                    >
-                      {cell.render('Cell')}
-                    </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+          {...others}
+        >
+          <thead>
+            {headerGroups.map((headerGroup, rowIndex) => {
+              return (
+                <tr
+                  key={`row-${rowIndex + 1}`}
+                  {...headerGroup.getHeaderGroupProps()}
+                >
+                  {headerGroup.headers.map((column, colIndex) => {
+                    return (
+                      <th
+                        key={`col-${colIndex + 1}`}
+                        {...column.getHeaderProps()}
+                      >
+                        {column.render('Header')}
+                      </th>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </thead>
+          <tbody {...getTableBodyProps()}>
+            {(isPaginated ? page : rows).map((row, bodyRowIndex) => {
+              prepareRow(row);
+              return (
+                <tr key={`body-row-${bodyRowIndex + 1}`} {...row.getRowProps()}>
+                  {row.cells.map((cell, bodyCellIndex) => {
+                    return (
+                      <td
+                        key={`body-cell-${bodyCellIndex + 1}`}
+                        {...cell.getCellProps()}
+                      >
+                        {cell.render('Cell')}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
       {isPaginated && (
         <div
           id="pagination"
@@ -209,7 +211,7 @@ const Table = ({
             id="go-to-page-dropdown"
             aria-label="Select page range"
             style={{ width: '130px' }}
-            value={pageSize}
+            value={String(pageSize)}
             onChange={(e) => {
               const { value } = e.target;
               if (value !== '') {
@@ -218,13 +220,13 @@ const Table = ({
             }}
             options={creategGotToPageOptions(data.length, numRowsPerPage).map(
               (pSize) => {
-                return { text: `Show ${pSize}`, value: pSize };
+                return { text: `Show ${pSize}`, value: String(pSize) };
               },
             )}
           />
         </div>
       )}
-    </div>
+    </>
   );
 };
 
