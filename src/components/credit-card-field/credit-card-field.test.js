@@ -55,7 +55,7 @@ describe('<CreditCardField />', () => {
       creditCardField.find('input#credit-card-number').hasClass('display-none'),
     ).toBe(true);
 
-    creditCardField.find('#last-four-digits').simulate('click');
+    creditCardField.find('#last-four-digits-btn').simulate('focus');
 
     expect(
       creditCardField.find('input#credit-card-number').hasClass('display-none'),
@@ -63,7 +63,7 @@ describe('<CreditCardField />', () => {
   });
 
   it('Should hide the credit card field when field is blurred', () => {
-    creditCardField.find('#last-four-digits').simulate('click');
+    creditCardField.find('#last-four-digits-btn').simulate('focus');
     creditCardField.find('input#credit-card-number').simulate('blur');
 
     expect(

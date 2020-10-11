@@ -52,7 +52,7 @@ describe('<RangeSlider />', () => {
       rangeSlider
         .find('.atomikui-range-slider__ticks__tick')
         .first()
-        .prop('onClick'),
+        .prop('onFocus'),
     ).toBeDefined();
   });
 
@@ -63,7 +63,7 @@ describe('<RangeSlider />', () => {
       rangeSlider
         .find('.atomikui-range-slider__ticks__tick')
         .first()
-        .prop('onClick'),
+        .prop('onFocus'),
     ).toBeUndefined();
   });
 
@@ -87,7 +87,7 @@ describe('<RangeSlider />', () => {
     rangeSlider
       .find('.atomikui-range-slider__ticks__label')
       .first()
-      .simulate('click');
+      .simulate('focus');
 
     expect(onChangeSpy.withArgs('100').called).toBe(true);
   });

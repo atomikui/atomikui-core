@@ -187,20 +187,17 @@ const CreditCardField = ({
             borderless
           />
           {cardPreviewHidden && (
-            <div
-              role="button"
-              id="last-four-digits"
-              className="atomikui-credit-card-field__last-four-digits"
+            <button
+              type="button"
+              id="last-four-digits-btn"
+              className="atomikui-credit-card-field__last-four-digits-btn"
               tabIndex="0"
-              onKeyUp={() => {
-                return setCardFieldHidden(false);
-              }}
-              onClick={() => {
+              onFocus={() => {
                 return setCardFieldHidden(false);
               }}
             >
               {cardPreview}
-            </div>
+            </button>
           )}
           <div
             className={classnames({

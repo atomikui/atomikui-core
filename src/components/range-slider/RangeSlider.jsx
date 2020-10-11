@@ -81,21 +81,17 @@ const RangeSlider = forwardRef(
             <div className="atomikui-range-slider__ticks" aria-hidden="true">
               {ticks.map(({ text, val }) => {
                 return (
-                  <div
-                    role="button"
+                  <button
+                    type="button"
                     key={shortid.generate()}
                     className="atomikui-range-slider__ticks__tick"
-                    tabIndex="0"
                     {...(!disabled && {
-                      onKeyUp: () => {
-                        return handleTickClick(val);
-                      },
-                      onClick: () => {
+                      onFocus: () => {
                         return handleTickClick(val);
                       },
                     })}
                   >
-                    <div
+                    <span
                       className={classnames(
                         'atomikui-range-slider__ticks__label',
                         {
@@ -105,8 +101,8 @@ const RangeSlider = forwardRef(
                       )}
                     >
                       {text}
-                    </div>
-                  </div>
+                    </span>
+                  </button>
                 );
               })}
             </div>
