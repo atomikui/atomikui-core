@@ -3,24 +3,20 @@ language: node_js
 node_js:
   - '12.16.2'
 
-cache:
-  directories:
-    - node_modules
-
 install:
-  - npm install
+  - yarn install
 
 jobs:
   include:
     - stage: Test
       script:
-        - npm run test:unit
-        - npm run lint:js
-        - npm run lint:sass
+        - yarn test:unit
+        - yarn lint:js
+        - yarn lint:sass
     - stage: Publish NPM
       script:
-        - npm run build:atomik
-        - npm run build:styles
+        - yarn build:atomik
+        - yarn build:styles
       deploy:
         provider: npm
         skip_cleanup: true
@@ -31,9 +27,9 @@ jobs:
           repo: atomikui/atomikui-core
     - stage: GitHub Pages
       script:
-        - npm run splash:install
-        - npm run build:splash
-        - npm run build:styleguide
+        - yarn splash:install
+        - yarn build:splash
+        - yarn build:styleguide
       deploy:
         provider: pages
         skip_cleanup: true
