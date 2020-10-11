@@ -9,6 +9,7 @@ cache:
 
 install:
   - npm install
+  - npm install eslint-plugin-import --save-dev
 
 jobs:
   include:
