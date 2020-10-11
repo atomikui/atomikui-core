@@ -48,16 +48,17 @@ const Switch = forwardRef(
             required={required}
             aria-describedby={`${inputHintId} ${inputErrorId}`}
             onChange={onChange}
+            {...(disabled && { readOnly: true })}
           />
           <div className="atomikui-switch__label">
             <Label htmlFor={uid}>{label}</Label>
           </div>
-          <div
-            role="button"
+          <button
+            type="button"
+            aria-label="toggle switch"
             className="atomikui-switch__toggle"
             tabIndex="0"
-            onKeyUp={!disabled && onChange}
-            onClick={!disabled && onChange}
+            onClick={!disabled ? onChange : undefined}
           />
         </div>
         {(helpText || errorText) && (

@@ -67,7 +67,7 @@ const withToastProvider = (Component) => {
   };
 
   WithToastProvider.defaultProps = {
-    position: '',
+    position: null,
     duration: 5000,
   };
 

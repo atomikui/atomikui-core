@@ -22,7 +22,7 @@ Toaster.propTypes = {
   className: PropTypes.string,
   /** Specifies the position of the toaster */
   position: PropTypes.oneOf([
-    'top=left',
+    'top-left',
     'bottom-left',
     'bottom-right',
     'top-center',

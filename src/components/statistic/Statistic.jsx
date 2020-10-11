@@ -58,7 +58,8 @@ Statistic.propTypes = {
   /** Sets layout as horizontal */
   horizontal: PropTypes.bool,
   /** Icon to be displayed next to statistic */
-  icon: PropTypes.node,
+  // eslint-disable-next-line react/forbid-prop-types
+  icon: PropTypes.object,
   /** Color of the icon */
   iconColor: PropTypes.string,
   /** Label for statistic value */
