@@ -1,5 +1,18 @@
 <br />
 
+### [v0.5.2](https://github.com/atomikui/atomikui-core/compare/v0.5.1...v0.5.2) - 2020-10-12
+
+#### Merged
+
+- [Babel config Atomik UI] - Integrates babel-config-atomikui [`#49`](https://github.com/atomikui/atomikui-core/pull/49)
+
+#### Commits
+
+- Updates CHANGELOG.md [`17ab29a`](https://github.com/atomikui/atomikui-core/commit/17ab29a2eabf248f7ccfc53744e962cbe3f696f4)
+- Upgrade to 0.5.2 [`55bf1a6`](https://github.com/atomikui/atomikui-core/commit/55bf1a66fcdeb7dfb3a601dafca42b39cf02b23b)
+
+<hr />
+
 ### [v0.5.1](https://github.com/atomikui/atomikui-core/compare/v0.5.0...v0.5.1) - 2020-10-12
 
 #### Merged
