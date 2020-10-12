@@ -30,6 +30,7 @@
 
     &:focus {
       @include focus-outline();
+
       outline: 0;
     }
   }
