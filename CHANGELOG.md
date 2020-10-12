@@ -1,3 +1,18 @@
+<br />
+
+### [v0.5.1](https://github.com/atomikui/atomikui-core/compare/v0.5.0...v0.5.1) - 2020-10-12
+
+#### Merged
+
+- [Stylelint Atomik UI] - replaces local stylelint with stylelint-config [`#48`](https://github.com/atomikui/atomikui-core/pull/48)
+- Feature/integrate eslint config atomikui [`#47`](https://github.com/atomikui/atomikui-core/pull/47)
+
+#### Commits
+
+- Integrates eslit-config-atomikui. Fixes lint errors [`e8438a5`](https://github.com/atomikui/atomikui-core/commit/e8438a552681fbebc3d700ac8ac54dcb516ba403)
+- [ESLint Atomikui] - Fiexs broken unit tests [`5dfbdf2`](https://github.com/atomikui/atomikui-core/commit/5dfbdf2389294616a62fb49f064bcc815f2a156a)
+- [ESLint Atomilk UI] - Replaces non-interactive element buttons with buttons. Updates corresponding unit tests [`3343da6`](https://github.com/atomikui/atomikui-core/commit/3343da6d6f02d5afc700e2be88aaf0d672fa0065)
+
 <hr />
 
 ### [v0.5.0](https://github.com/atomikui/atomikui-core/compare/v0.4.2...v0.5.0) - 2020-10-09
