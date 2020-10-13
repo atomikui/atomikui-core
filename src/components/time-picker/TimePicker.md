@@ -12,7 +12,7 @@ const [time, setTime] = React.useState(null);
 
   <TimePicker
     hour="4"
-    minute="30"
+    minutes="30"
     meridiem="PM"
     onChange={(time) => setTime(time)}
   />

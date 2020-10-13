@@ -3,30 +3,30 @@ import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const hours = [...Array(13).keys()].slice(1, 13).map((hour) => {
+const hoursOptions = [...Array(13).keys()].slice(1, 13).map((hour) => {
   return String(hour);
 });
 
-const minutes = [...Array(60).keys()].map((minute) => {
+const minutesOptions = [...Array(60).keys()].map((minute) => {
   return minute < 10 ? `0${minute}` : String(minute);
 });
 
 const TimePicker = ({
   className,
   hour,
-  minute,
+  minutes,
   meridiem,
   onChange,
   ...others
 }) => {
   const [theHour, setTheHour] = useState(hour);
-  const [theMinute, setTheMinute] = useState(hour);
+  const [theMinute, setTheMinute] = useState(minutes);
   const [theMeridiem, setTheMeridiem] = useState(meridiem);
 
   useEffect(() => {
     onChange({
       hour: theHour,
-      minute: theMinute,
+      minutes: theMinute,
       meridiem: theMeridiem,
       timeString: `${theHour}:${theMinute} ${theMeridiem}`,
     });
@@ -40,7 +40,7 @@ const TimePicker = ({
           return setTheHour(e.target.value);
         }}
       >
-        {hours.map((h) => {
+        {hoursOptions.map((h) => {
           return (
             <option key={`hour-${h}`} value={h}>
               {h}
@@ -55,7 +55,7 @@ const TimePicker = ({
           return setTheMinute(e.target.value);
         }}
       >
-        {minutes.map((m) => {
+        {minutesOptions.map((m) => {
           return (
             <option key={`minute-${m}`} value={m}>
               {m}
@@ -80,11 +80,11 @@ TimePicker.propTypes = {
   /** Adds custom component CSS classes */
   className: PropTypes.string,
   /** The hour of the day */
-  hour: PropTypes.oneOf(hours),
+  hour: PropTypes.oneOf(hoursOptions),
   /** AM or PM */
   meridiem: PropTypes.oneOf(['AM', 'PM']),
   /** The minute of the current hout of the day */
-  minute: PropTypes.oneOf(minutes),
+  minutes: PropTypes.oneOf(minutesOptions),
   /** Callback to trigger on time change */
   onChange: PropTypes.func.isRequired,
 };
@@ -93,7 +93,7 @@ TimePicker.defaultProps = {
   className: '',
   hour: '12',
   meridiem: 'AM',
-  minute: '00',
+  minutes: '00',
 };
 
 export default TimePicker;
