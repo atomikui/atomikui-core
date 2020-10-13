@@ -1,13 +1,14 @@
 .atomikui-time-picker {
   background-color: $background-light-gray;
   display: inline-block;
+  border: rem(1) solid transparent;
 
   & > select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     background-color: $background-light-gray;
-    border: rem(1) solid transparent;
+    border: 0;
     font-family: inherit;
     font-size: inherit;
     height: rem($input-height);
@@ -24,5 +25,15 @@
 
   & > :last-child {
     width: rem(45);
+  }
+
+  &.has-error {
+    border-color: $formfield-border-error;
+
+    & > select {
+      &:focus {
+        box-shadow: rem(0 0 0 2) $focus-red;
+      }
+    }
   }
 }

@@ -11,8 +11,10 @@ const [time, setTime] = React.useState(null);
   </pre>
 
   <TimePicker
-    hour="4"
-    minutes="30"
+    errorText="Please select a time"
+    label="Select Appointment Time"
+    hour="12"
+    minutes="00"
     meridiem="PM"
     onChange={(time) => setTime(time)}
   />

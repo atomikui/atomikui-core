@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import Hint from '../hint';
 
 const hoursOptions = [...Array(13).keys()].slice(1, 13).map((hour) => {
   return String(hour);
@@ -13,8 +14,11 @@ const minutesOptions = [...Array(60).keys()].map((minute) => {
 
 const TimePicker = ({
   className,
+  errorText,
+  hasError,
   hour,
   minutes,
+  label,
   meridiem,
   onChange,
   ...others
@@ -33,57 +37,84 @@ const TimePicker = ({
   }, [theHour, theMinute, theMeridiem]);
 
   return (
-    <div className={classnames('atomikui-time-picker', className)} {...others}>
-      <select
-        id="hour-dropdown"
-        value={theHour}
-        onChange={(e) => {
-          return setTheHour(e.target.value);
-        }}
-      >
-        {hoursOptions.map((h) => {
-          return (
-            <option key={`hour-${h}`} value={h}>
-              {h}
-            </option>
-          );
+    <fieldset>
+      <legend className="atomikui-label" style={{ marginBottom: '3px' }}>
+        {label}
+      </legend>
+      <div
+        className={classnames('atomikui-time-picker', className, {
+          'has-error': hasError,
         })}
-      </select>
-      <span>:</span>
-      <select
-        id="minutes-dropdown"
-        value={theMinute}
-        onChange={(e) => {
-          return setTheMinute(e.target.value);
-        }}
+        {...others}
       >
-        {minutesOptions.map((m) => {
-          return (
-            <option key={`minute-${m}`} value={m}>
-              {m}
-            </option>
-          );
-        })}
-      </select>
-      <select
-        id="meridiem-dropdown"
-        value={theMeridiem}
-        onChange={(e) => {
-          return setTheMeridiem(e.target.value);
-        }}
-      >
-        <option value="AM">AM</option>
-        <option value="PM">PM</option>
-      </select>
-    </div>
+        <select
+          id="hour-dropdown"
+          aria-label="select the hour of the day"
+          aria-describedby="time-picker-error"
+          value={theHour}
+          onChange={(e) => {
+            return setTheHour(e.target.value);
+          }}
+        >
+          {hoursOptions.map((h) => {
+            return (
+              <option key={`hour-${h}`} value={h}>
+                {h}
+              </option>
+            );
+          })}
+        </select>
+        <span>:</span>
+        <select
+          id="minutes-dropdown"
+          aria-label="select the minute of the hour"
+          aria-describedby="time-picker-error"
+          value={theMinute}
+          onChange={(e) => {
+            return setTheMinute(e.target.value);
+          }}
+        >
+          {minutesOptions.map((m) => {
+            return (
+              <option key={`minute-${m}`} value={m}>
+                {m}
+              </option>
+            );
+          })}
+        </select>
+        <select
+          id="meridiem-dropdown"
+          aria-label="select AM or PM"
+          aria-describedby="time-picker-error"
+          value={theMeridiem}
+          onChange={(e) => {
+            return setTheMeridiem(e.target.value);
+          }}
+        >
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </div>
+      {hasError && (
+        <Hint id="time-picker-error" type="error" style={{ marginTop: '3px' }}>
+          {errorText}
+        </Hint>
+      )}
+    </fieldset>
   );
 };
 
 TimePicker.propTypes = {
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Text to be displayed if error */
+  errorText: PropTypes.string,
+  /** Set the error state */
+  hasError: PropTypes.bool,
   /** The hour of the day */
   hour: PropTypes.oneOf(hoursOptions),
+  /** Label to be displayed with time picker */
+  label: PropTypes.string,
   /** AM or PM */
   meridiem: PropTypes.oneOf(['AM', 'PM']),
   /** The minute of the current hout of the day */
@@ -94,7 +125,10 @@ TimePicker.propTypes = {
 
 TimePicker.defaultProps = {
   className: '',
+  errorText: 'Error',
+  hasError: false,
   hour: '12',
+  label: 'Select a Time',
   meridiem: 'AM',
   minutes: '00',
 };
