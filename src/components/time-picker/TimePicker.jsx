@@ -35,6 +35,7 @@ const TimePicker = ({
   return (
     <div className={classnames('atomikui-time-picker', className)} {...others}>
       <select
+        id="hour-dropdown"
         value={theHour}
         onChange={(e) => {
           return setTheHour(e.target.value);
@@ -50,6 +51,7 @@ const TimePicker = ({
       </select>
       <span>:</span>
       <select
+        id="minutes-dropdown"
         value={theMinute}
         onChange={(e) => {
           return setTheMinute(e.target.value);
@@ -64,6 +66,7 @@ const TimePicker = ({
         })}
       </select>
       <select
+        id="meridiem-dropdown"
         value={theMeridiem}
         onChange={(e) => {
           return setTheMeridiem(e.target.value);
