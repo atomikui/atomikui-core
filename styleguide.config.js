@@ -11,7 +11,7 @@ module.exports = {
     '@atomikui/core': path.resolve(__dirname, 'src'),
   },
   getComponentPathLine(componentPath) {
-    const name = path.basename(componentPath, '.js');
+    const name = path.basename(componentPath, '.jsx');
     return `import { ${name} } from '@atomikui/core';`;
   },
   assetsDir: './public',

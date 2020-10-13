@@ -1,0 +1,28 @@
+.atomikui-time-picker {
+  background-color: $background-light-gray;
+  display: inline-block;
+
+  & > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: $background-light-gray;
+    border: rem(1) solid transparent;
+    font-family: inherit;
+    font-size: inherit;
+    height: rem($input-height);
+    outline: 0;
+    padding: rem(0 8);
+    position: relative;
+    width: rem(38);
+    z-index: 10;
+
+    &:focus {
+      @include focus-outline();
+    }
+  }
+
+  & > :last-child {
+    width: rem(45);
+  }
+}

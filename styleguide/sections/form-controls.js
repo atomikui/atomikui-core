@@ -19,6 +19,7 @@ module.exports = {
       'src/components/search/Search.jsx',
       'src/components/switch/Switch.jsx',
       'src/components/switch-panel/SwitchPanel.jsx',
+      'src/components/time-picker/TimePicker.jsx',
     ];
   },
 };
