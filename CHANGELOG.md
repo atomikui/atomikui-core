@@ -1,5 +1,19 @@
 <br />
 
+### [v0.6.0](https://github.com/atomikui/atomikui-core/compare/v0.5.2...v0.6.0) - 2020-10-13
+
+#### Merged
+
+- Feature/time picker component [`#52`](https://github.com/atomikui/atomikui-core/pull/52)
+
+#### Commits
+
+- [TimePicker] - Component logic, styles and documentation [`9892441`](https://github.com/atomikui/atomikui-core/commit/98924413d3053290739bcad8355d9e50e030f057)
+- [TimePicker] - Adds error styling and fieldset legend [`e3a691d`](https://github.com/atomikui/atomikui-core/commit/e3a691debe8b8faddd300d261869e47c54852643)
+- [TimePicker] - test coverage [`d8db4ec`](https://github.com/atomikui/atomikui-core/commit/d8db4ec7050b859e2d48f9e60d32e853be8d6664)
+
+<hr />
+
 ### [v0.5.2](https://github.com/atomikui/atomikui-core/compare/v0.5.1...v0.5.2) - 2020-10-12
 
 #### Merged
