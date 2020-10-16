@@ -110,12 +110,14 @@ a.atomikui-btn {
       background-color: $color;
       color: $black;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: darken($color, 5%);
       }
 
       @if $name == white {
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: $gray-900;
         }
       }
