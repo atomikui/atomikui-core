@@ -12,10 +12,6 @@ describe('<Collapse />', () => {
     collapse = mount(<Collapse toggleText="Car Brands">Content...</Collapse>);
   });
 
-  it('Should render without errors', () => {
-    expect(collapse).toBeTruthy();
-  });
-
   it('Should set the initial height of the collapse body', () => {
     expect(collapse.find('.atomikui-collapse__bd').prop('style').height).toBe(
       '0px',

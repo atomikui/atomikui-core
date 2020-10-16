@@ -21,10 +21,6 @@ describe('<CheckOption />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(checkOption).toBeTruthy();
-  });
-
   it('Should render checkbox by default', () => {
     checkOption.setProps({ type: 'text' });
 

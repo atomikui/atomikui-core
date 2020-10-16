@@ -21,10 +21,6 @@ describe('<Breadcrumb />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(breadcrumb).toBeTruthy();
-  });
-
   it('Should render 4 children', () => {
     expect(breadcrumb.find('Link').length).toBe(3);
   });

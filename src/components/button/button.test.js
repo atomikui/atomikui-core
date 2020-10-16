@@ -23,10 +23,6 @@ describe('<Button />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(button).toBeTruthy();
-  });
-
   it('Should render children', () => {
     expect(button.children()).toBeTruthy();
     expect(button.children().text()).toBe('Submit');

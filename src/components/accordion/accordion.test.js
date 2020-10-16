@@ -31,10 +31,6 @@ describe('<Accordion />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(accordion).toBeTruthy();
-  });
-
   it('Should should render 3 children', () => {
     expect(accordion.find('.atomikui-accordion').children().length).toBe(3);
   });

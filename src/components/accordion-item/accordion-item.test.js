@@ -20,17 +20,6 @@ describe('<AccordionItem />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(accordionItem).toBeTruthy();
-  });
-
-  it('Should render without errors', () => {
-    expect(
-      accordionItem.find('.atomikui-accordion-item__body__content').children()
-        .length,
-    ).toBe(1);
-  });
-
   it('Should render a label', () => {
     expect(
       accordionItem.find('.atomikui-accordion-item__trigger__label').text(),

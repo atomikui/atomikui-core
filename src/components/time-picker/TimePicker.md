@@ -15,7 +15,7 @@ const [time, setTime] = React.useState(null);
     label="Select Appointment Time"
     hour="12"
     minutes="00"
-    meridiem="PM"
+    amOrPm="PM"
     onChange={(time) => setTime(time)}
   />
 </>;

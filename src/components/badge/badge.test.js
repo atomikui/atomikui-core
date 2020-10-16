@@ -12,10 +12,6 @@ describe('<Badge />', () => {
     badge = shallow(<Badge label="Downloads" value="500k" />);
   });
 
-  it('Should render without errors', () => {
-    expect(badge).toBeTruthy();
-  });
-
   it('Should render theme variants', () => {
     badge.setProps({ theme: 'red' });
     expect(badge.hasClass('atomikui-badge--red')).toBe(true);

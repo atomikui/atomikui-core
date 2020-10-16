@@ -37,10 +37,6 @@ describe('<Cart />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(cart).toBeTruthy();
-  });
-
   it('Should calculate subtotal', () => {
     expect(cart.find('.atomikui-cart__total').text()).toBe('Total: $9179.98');
   });

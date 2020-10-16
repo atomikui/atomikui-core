@@ -6,14 +6,6 @@ import Avatar from './Avatar';
 configure({ adapter: new Adapter() });
 
 describe('<Avatar />', () => {
-  it('Should render without errors', () => {
-    const avatar = shallow(
-      <Avatar src="/profile-image.png" alt="Alan Smith" />,
-    );
-
-    expect(avatar).toBeTruthy();
-  });
-
   it('Should render a label', () => {
     const avatar = shallow(
       <Avatar src="/profile-image.png" alt="Alan Smith" label="Avatar Label" />,
@@ -31,5 +23,40 @@ describe('<Avatar />', () => {
       </Avatar>,
     );
     expect(avatar.children()).toBeTruthy();
+  });
+
+  it('Should render a theme', () => {
+    const avatar = shallow(
+      <Avatar
+        src="/profile-image.png"
+        alt="Alan Smith"
+        label="Avatar Label"
+        theme="red"
+      />,
+    );
+
+    expect(
+      avatar
+        .find('.atomikui-avatar__content')
+        .hasClass('atomikui-avatar__content--red'),
+    ).toBeTruthy();
+  });
+
+  it('Should render a light theme variant', () => {
+    const avatar = shallow(
+      <Avatar
+        src="/profile-image.png"
+        alt="Alan Smith"
+        label="Avatar Label"
+        theme="red"
+        themeVariant="light"
+      />,
+    );
+
+    expect(
+      avatar
+        .find('.atomikui-avatar__content')
+        .hasClass('atomikui-avatar__content--red-light'),
+    ).toBeTruthy();
   });
 });

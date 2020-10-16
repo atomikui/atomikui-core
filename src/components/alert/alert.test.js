@@ -18,10 +18,6 @@ describe('<Alert />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(alert).toBeTruthy();
-  });
-
   it('Should render children', () => {
     expect(alert.find('span')).toBeTruthy();
     expect(alert.find('span').text()).toBe('This is an alert');

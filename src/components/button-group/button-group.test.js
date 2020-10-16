@@ -19,10 +19,6 @@ describe('<ButtonGroup />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(buttonGroup).toBeTruthy();
-  });
-
   it('Should render help hint with text', () => {
     buttonGroup.setProps({ helpText: 'Help text' });
 
@@ -35,5 +31,23 @@ describe('<ButtonGroup />', () => {
 
     expect(buttonGroup.find('Hint')).toBeTruthy();
     expect(buttonGroup.find('Hint').text()).toBe('Error text');
+  });
+
+  it('Should render themes', () => {
+    buttonGroup.setProps({ theme: 'red' });
+
+    expect(
+      buttonGroup
+        .find('.atomikui-button-group')
+        .hasClass('atomikui-button-group--red'),
+    ).toBeTruthy();
+
+    buttonGroup.setProps({ themeVariant: 'light' });
+
+    expect(
+      buttonGroup
+        .find('.atomikui-button-group')
+        .hasClass('atomikui-button-group--red-light'),
+    ).toBeTruthy();
   });
 });

@@ -18,10 +18,6 @@ describe('<ChatMessage />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(chatMessage).toBeTruthy();
-  });
-
   it('Should render the timestamp', () => {
     expect(
       chatMessage.find('.atomikui-chat-message__item__timestamp').text(),

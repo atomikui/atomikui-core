@@ -26,10 +26,6 @@ describe('<Dropdown />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(dropdown).toBeTruthy();
-  });
-
   it('Should render with 7 options', () => {
     expect(dropdown.find('select').children().length).toBe(7);
   });

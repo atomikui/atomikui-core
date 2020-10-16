@@ -15,10 +15,6 @@ describe('<Drawer />', () => {
     drawer = mount(<Drawer onClose={onCloseSpy} isOpen={true} />);
   });
 
-  it('Should render without errors', () => {
-    expect(drawer).toBeTruthy();
-  });
-
   it('Should call onClose when escape key is pressed', () => {
     drawer
       .find('.atomikui-drawer')

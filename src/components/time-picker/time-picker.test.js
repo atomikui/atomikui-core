@@ -12,12 +12,14 @@ describe('<TimePicker />', () => {
 
   beforeEach(() => {
     timepicker = mount(
-      <TimePicker hour="4" minutes="30" meridiem="PM" onChange={onChangeSpy} />,
+      <TimePicker
+        hasError
+        hour="4"
+        minutes="30"
+        amOrPm="PM"
+        onChange={onChangeSpy}
+      />,
     );
-  });
-
-  it('Should render without errors', () => {
-    expect(timepicker).toBeTruthy();
   });
 
   it('Should trigger onChange callback', () => {
@@ -27,7 +29,11 @@ describe('<TimePicker />', () => {
     timepicker.find('select#minutes-dropdown').simulate('change');
     expect(onChangeSpy.called).toBeTruthy();
 
-    timepicker.find('select#meridiem-dropdown').simulate('change');
+    timepicker.find('select#amOrPm-dropdown').simulate('change');
     expect(onChangeSpy.called).toBeTruthy();
+  });
+
+  it('Should display the error text', () => {
+    expect(timepicker.find('div#time-picker-error')).toHaveLength(1);
   });
 });

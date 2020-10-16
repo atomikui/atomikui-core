@@ -24,10 +24,6 @@ describe('<CartItem />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(cartItem).toBeTruthy();
-  });
-
   it('Should trigger onQuantityChange when quantity is updated', () => {
     cartItem.find('input').simulate('change', { target: { value: 2 } });
     expect(onQuantityChangeSpy.withArgs(2).called).toBe(true);

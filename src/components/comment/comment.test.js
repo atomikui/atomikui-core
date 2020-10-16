@@ -35,10 +35,6 @@ describe('<Comment />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(comment).toBeTruthy();
-  });
-
   it('Should display an author link', () => {
     expect(comment.find('Link')).toBeTruthy();
   });

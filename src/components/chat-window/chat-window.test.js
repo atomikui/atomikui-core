@@ -36,10 +36,6 @@ describe('<ChatWindow />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(chatWindow).toBeTruthy();
-  });
-
   it('Should trigger onClose callback', () => {
     chatWindow.setProps({ isOpen: true });
     chatWindow.find('.atomikui-chat-window__close-btn').simulate('click');

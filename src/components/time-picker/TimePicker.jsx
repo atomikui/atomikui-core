@@ -19,22 +19,22 @@ const TimePicker = ({
   hour,
   minutes,
   label,
-  meridiem,
+  amOrPm,
   onChange,
   ...others
 }) => {
-  const [theHour, setTheHour] = useState(hour);
-  const [theMinute, setTheMinute] = useState(minutes);
-  const [theMeridiem, setTheMeridiem] = useState(meridiem);
+  const [hourValue, setHourValue] = useState(hour);
+  const [minuteValue, setMinuteValue] = useState(minutes);
+  const [amOrPmValue, setAmOrPmValue] = useState(amOrPm);
 
   useEffect(() => {
     onChange({
-      hour: theHour,
-      minutes: theMinute,
-      meridiem: theMeridiem,
-      timeString: `${theHour}:${theMinute} ${theMeridiem}`,
+      hour: hourValue,
+      minutes: minuteValue,
+      amOrPM: amOrPmValue,
+      timeString: `${hourValue}:${minuteValue} ${amOrPmValue}`,
     });
-  }, [theHour, theMinute, theMeridiem]);
+  }, [hourValue, minuteValue, amOrPmValue]);
 
   return (
     <fieldset>
@@ -51,9 +51,9 @@ const TimePicker = ({
           id="hour-dropdown"
           aria-label="select the hour of the day"
           aria-describedby="time-picker-error"
-          value={theHour}
+          value={hourValue}
           onChange={(e) => {
-            return setTheHour(e.target.value);
+            return setHourValue(e.target.value);
           }}
         >
           {hoursOptions.map((h) => {
@@ -69,9 +69,9 @@ const TimePicker = ({
           id="minutes-dropdown"
           aria-label="select the minute of the hour"
           aria-describedby="time-picker-error"
-          value={theMinute}
+          value={minuteValue}
           onChange={(e) => {
-            return setTheMinute(e.target.value);
+            return setMinuteValue(e.target.value);
           }}
         >
           {minutesOptions.map((m) => {
@@ -83,12 +83,12 @@ const TimePicker = ({
           })}
         </select>
         <select
-          id="meridiem-dropdown"
+          id="amOrPm-dropdown"
           aria-label="select AM or PM"
           aria-describedby="time-picker-error"
-          value={theMeridiem}
+          value={amOrPmValue}
           onChange={(e) => {
-            return setTheMeridiem(e.target.value);
+            return setAmOrPmValue(e.target.value);
           }}
         >
           <option value="AM">AM</option>
@@ -105,6 +105,8 @@ const TimePicker = ({
 };
 
 TimePicker.propTypes = {
+  /** AM or PM */
+  amOrPm: PropTypes.oneOf(['AM', 'PM']),
   /** Adds custom component CSS classes */
   className: PropTypes.string,
   /** Text to be displayed if error */
@@ -115,8 +117,6 @@ TimePicker.propTypes = {
   hour: PropTypes.oneOf(hoursOptions),
   /** Label to be displayed with time picker */
   label: PropTypes.string,
-  /** AM or PM */
-  meridiem: PropTypes.oneOf(['AM', 'PM']),
   /** The minute of the current hout of the day */
   minutes: PropTypes.oneOf(minutesOptions),
   /** Callback to trigger on time change */
@@ -124,12 +124,12 @@ TimePicker.propTypes = {
 };
 
 TimePicker.defaultProps = {
+  amOrPm: 'AM',
   className: '',
   errorText: 'Error',
   hasError: false,
   hour: '12',
   label: 'Select a Time',
-  meridiem: 'AM',
   minutes: '00',
 };
 

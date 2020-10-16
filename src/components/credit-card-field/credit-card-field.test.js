@@ -28,10 +28,6 @@ describe('<CreditCardField />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(creditCardField).toBeTruthy();
-  });
-
   test.each([
     ['input#credit-card-number', '6011111111111117'],
     ['input#credit-card-expiry', '06/22'],

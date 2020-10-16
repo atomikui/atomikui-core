@@ -22,10 +22,6 @@ describe('<DatePicker />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(datepicker).toBeTruthy();
-  });
-
   it('Should open calendar', () => {
     datepicker
       .find('button.atomikui-date-picker__input__btn')

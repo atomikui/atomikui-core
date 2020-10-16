@@ -17,10 +17,6 @@ describe('<Card />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(card).toBeTruthy();
-  });
-
   it('Should render a header', () => {
     expect(card.find('.atomikui-card__header')).toBeTruthy();
   });
