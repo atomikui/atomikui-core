@@ -127,7 +127,7 @@ const Table = ({
         >
           <Button
             id="to-first"
-            theme="sky-blue"
+            theme="blue"
             size="md"
             onClick={() => {
               return gotoPage(0);
@@ -142,7 +142,7 @@ const Table = ({
           </Button>
           <Button
             id="to-previous"
-            theme="sky-blue"
+            theme="blue"
             size="md"
             onClick={() => {
               return previousPage();
@@ -157,7 +157,7 @@ const Table = ({
           </Button>
           <Button
             id="to-next"
-            theme="sky-blue"
+            theme="blue"
             size="md"
             onClick={() => {
               return nextPage();
@@ -172,7 +172,7 @@ const Table = ({
           </Button>
           <Button
             id="to-last"
-            theme="sky-blue"
+            theme="blue"
             size="md"
             onClick={() => {
               return gotoPage(pageCount - 1);
@@ -210,6 +210,7 @@ const Table = ({
           <Dropdown
             id="go-to-page-dropdown"
             aria-label="Select page range"
+            theme="blue"
             style={{ width: '130px' }}
             value={String(pageSize)}
             onChange={(e) => {
