@@ -21,5 +21,11 @@
     &:not(:disabled) {
       color: $black;
     }
+
+    & > svg {
+      & > path {
+        fill: $black;
+      }
+    }
   }
 }
