@@ -75,27 +75,7 @@ a.atomikui-btn {
       background-color: $color;
       color: $white;
 
-      @if $name ==
-        pink or
-        $name ==
-        cyan or
-        $name ==
-        sky-blue or
-        $name ==
-        yellow or
-        $name ==
-        lime or
-        $name ==
-        light-green or
-        $name ==
-        orange or
-        $name ==
-        light-orange or
-        $name ==
-        amber
-      {
-        color: $black;
-      }
+      @include altFontColor($name);
 
       &:hover,
       &:focus {

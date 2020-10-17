@@ -20,21 +20,7 @@
       .atomikui-badge__value {
         background: $color;
 
-        @if $name ==
-          yellow or
-          $name ==
-          lime or
-          $name ==
-          light-green or
-          $name ==
-          orange or
-          $name ==
-          light-orange or
-          $name ==
-          amber
-        {
-          color: $black;
-        }
+        @include altFontColor($name);
       }
     }
   }

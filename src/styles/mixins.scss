@@ -1,0 +1,25 @@
+@mixin altFontColor($name) {
+  @if $name ==
+    pink or
+    $name ==
+    cyan or
+    $name ==
+    sky-blue or
+    $name ==
+    yellow or
+    $name ==
+    lime or
+    $name ==
+    light-green or
+    $name ==
+    orange or
+    $name ==
+    light-orange or
+    $name ==
+    amber
+  {
+    &:not(:disabled) {
+      color: $black;
+    }
+  }
+}
