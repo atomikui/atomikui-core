@@ -18,10 +18,6 @@ describe('<FormField />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(formField).toBeTruthy();
-  });
-
   it('Should render form field based on the type', () => {
     formField.setProps({ type: 'radio' });
 

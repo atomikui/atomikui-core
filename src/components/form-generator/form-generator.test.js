@@ -32,12 +32,8 @@ describe('<FormGenerator />', () => {
     formGenerator = mount(<FormGenerator fieldsets={fields} rowSpacing="8" />);
   });
 
-  it('Should render without errors', () => {
-    expect(formGenerator).toBeTruthy();
-  });
-
   it('Should render a input and a button', () => {
-    expect(formGenerator.find('input')).toBeTruthy();
-    expect(formGenerator.find('button')).toBeTruthy();
+    expect(formGenerator.find('input')).toHaveLength(1);
+    expect(formGenerator.find('button')).toHaveLength(1);
   });
 });

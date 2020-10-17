@@ -29,10 +29,6 @@ describe('<Header />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(header).toBeTruthy();
-  });
-
   it('Should toggle .is-open class when menu button is clicked', () => {
     header.find('button.atomikui-header__menu-toggle').simulate('click');
     expect(

@@ -43,10 +43,6 @@ describe('<FileUpload />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(fileUpload).toBeTruthy();
-  });
-
   it('Should trigger onChange callback when file input value changes', () => {
     fileUpload.find('input').simulate('change');
 
