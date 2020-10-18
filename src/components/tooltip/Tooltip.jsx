@@ -1,4 +1,4 @@
-import React, { Children, cloneElement, useState, useEffect } from 'react';
+import React, { cloneElement, useState, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
@@ -8,13 +8,13 @@ const Tooltip = ({
   children,
   align,
   hasPointerEvents,
-  text,
+  trigger,
   triggerOnClick,
   theme,
   ...props
 }) => {
   const [tooltip, setToolTip] = useState(null);
-  const [tooltipText] = useState(text);
+  const [tooltipContent] = useState(children);
   const [tooltipId] = useState(`tooltip-${shortid.generate()}`);
 
   const createTooltipElement = () => {
@@ -30,7 +30,7 @@ const Tooltip = ({
         role="tooltip"
       >
         <div className="atomikui-tooltip__content" id={`${tooltipId}_text`}>
-          {tooltipText}
+          {tooltipContent}
         </div>
       </div>
     );
@@ -143,24 +143,22 @@ const Tooltip = ({
 
   return (
     <>
-      {Children.map(children, (child) => {
-        return cloneElement(child, {
-          ...props,
-          ...(tooltip && { 'aria-describedby': `${tooltipId}_text` }),
-          ...(!triggerOnClick && {
-            onFocus: createTooltip,
-            onBlur: removeTooltip,
-            onMouseEnter: createTooltip,
-            onMouseLeave: removeTooltip,
-          }),
-          ...(triggerOnClick && {
-            onClick: createTooltip,
-          }),
-          ...(tooltip && {
-            'aria-describedby': tooltipId,
-            title: null,
-          }),
-        });
+      {cloneElement(trigger, {
+        ...props,
+        ...(tooltip && { 'aria-describedby': `${tooltipId}_text` }),
+        ...(!triggerOnClick && {
+          onFocus: createTooltip,
+          onBlur: removeTooltip,
+          onMouseEnter: createTooltip,
+          onMouseLeave: removeTooltip,
+        }),
+        ...(triggerOnClick && {
+          onClick: createTooltip,
+        }),
+        ...(tooltip && {
+          'aria-describedby': tooltipId,
+          title: null,
+        }),
       })}
       <Portal container={document.body}>{tooltip}</Portal>
     </>
@@ -180,22 +178,20 @@ Tooltip.propTypes = {
     'top-right',
   ]),
   /** The child element that will recieve a tooltip */
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   /** Allows pointer click inside tooltip */
   hasPointerEvents: PropTypes.bool,
   /** triggers the tooltip onClick/onTouchStart */
   triggerOnClick: PropTypes.bool,
-  /** Tooltip content */
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  /** Tooltip trigger element */
+  trigger: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   /** Specifies the color variation. */
   theme: PropTypes.oneOf(['info', 'light-gray', 'warning', 'error', 'success']),
 };
 
 Tooltip.defaultProps = {
   align: 'top-left',
-  children: null,
   hasPointerEvents: false,
-  text: '',
   triggerOnClick: false,
   theme: null,
 };
