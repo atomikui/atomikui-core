@@ -7,6 +7,7 @@ import Portal from '../portal';
 const Tooltip = ({
   children,
   align,
+  hasPointerEvents,
   text,
   triggerOnClick,
   theme,
@@ -23,6 +24,7 @@ const Tooltip = ({
         className={classnames('atomikui-tooltip', {
           [`atomikui-tooltip--align-${align}`]: align,
           [`atomikui-tooltip--${theme}`]: theme,
+          'has-pointer-events': hasPointerEvents,
         })}
         data-testid="tooltip"
         role="tooltip"
@@ -179,6 +181,8 @@ Tooltip.propTypes = {
   ]),
   /** The child element that will recieve a tooltip */
   children: PropTypes.node,
+  /** Allows pointer click inside tooltip */
+  hasPointerEvents: PropTypes.bool,
   /** triggers the tooltip onClick/onTouchStart */
   triggerOnClick: PropTypes.bool,
   /** Tooltip content */
@@ -190,6 +194,7 @@ Tooltip.propTypes = {
 Tooltip.defaultProps = {
   align: 'top-left',
   children: null,
+  hasPointerEvents: false,
   text: '',
   triggerOnClick: false,
   theme: null,
