@@ -14,10 +14,6 @@ describe('<Label />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(label).toBeTruthy();
-  });
-
   it('Should render text', () => {
     expect(label.text()).toBe('This is a label');
   });

@@ -60,10 +60,6 @@ describe('<Post />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(post).toBeTruthy();
-  });
-
   it('Should render comments', () => {
     expect(post.find('.atomikui-post__comments').find('Comment').length).toBe(
       1,

@@ -118,10 +118,6 @@ describe('<Table />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(table).toHaveLength(1);
-  });
-
   it('Should have pagination', () => {
     expect(table.find('#pagination')).toHaveLength(1);
   });

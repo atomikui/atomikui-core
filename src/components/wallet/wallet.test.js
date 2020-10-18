@@ -12,10 +12,6 @@ describe('<Wallet />', () => {
     wallet = shallow(<Wallet />);
   });
 
-  it('Should render without errors', () => {
-    expect(wallet).toBeTruthy();
-  });
-
   it('Should set Wallet layout as grid', () => {
     wallet.setProps({ isGrid: true });
     expect(wallet.hasClass('atomikui-wallet--grid')).toBe(true);

@@ -23,10 +23,6 @@ describe('<SwitchPanel />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(switchPanel).toBeTruthy();
-  });
-
   it('Should render children', () => {
     expect(
       switchPanel.find('.atomikui-switch-panel__bd').children().length,

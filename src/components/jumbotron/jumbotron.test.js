@@ -30,10 +30,6 @@ describe('<Jumbotron />', () => {
     expect(jumbotron.hasClass('atomikui-jumbotron--red-light')).toBe(true);
   });
 
-  it('Should render without errors', () => {
-    expect(jumbotron).toBeTruthy();
-  });
-
   test.each([
     'red',
     'orange',

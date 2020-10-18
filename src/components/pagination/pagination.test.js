@@ -22,10 +22,6 @@ describe('<Pagination />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(pagination).toBeTruthy();
-  });
-
   it('Should render 6 PageItems', () => {
     expect(pagination.find('Link').length).toBe(6);
   });

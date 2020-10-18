@@ -20,10 +20,6 @@ describe('<List />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(list).toBeTruthy();
-  });
-
   it('Should render children', () => {
     expect(list.find('ul').children().length).toBe(4);
   });

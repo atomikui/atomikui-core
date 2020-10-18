@@ -12,10 +12,6 @@ describe('<ListItem />', () => {
     listItem = shallow(<ListItem className="custom-class">Item 1</ListItem>);
   });
 
-  it('Should render without errors', () => {
-    expect(listItem).toBeTruthy();
-  });
-
   it('Should set a custom class', () => {
     expect(listItem.hasClass('custom-class')).toBe(true);
   });

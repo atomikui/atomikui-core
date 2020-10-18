@@ -24,10 +24,6 @@ describe('<WalletItem />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(walletItem).toBeTruthy();
-  });
-
   it('Should set the item as selected', () => {
     expect(walletItem.hasClass('is-selected')).toBe(true);
   });

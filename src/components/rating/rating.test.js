@@ -13,10 +13,6 @@ describe('<Rating />', () => {
     rating = mount(<Rating stars={4} />);
   });
 
-  it('Should render without errors', () => {
-    expect(rating).toBeTruthy();
-  });
-
   it('Should render 4 stars', () => {
     expect(rating.find('.atomikui-rating').children().length).toBe(4);
   });

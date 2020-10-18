@@ -16,10 +16,6 @@ describe('<Hint />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(hint).toBeTruthy();
-  });
-
   it('Should render children', () => {
     expect(hint).toBeTruthy();
     expect(hint.text()).toBe('This is a hint');

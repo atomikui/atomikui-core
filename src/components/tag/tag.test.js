@@ -12,10 +12,6 @@ describe('<Tag />', () => {
     tag = shallow(<Tag>New</Tag>);
   });
 
-  it('Should render without errors', () => {
-    expect(tag).toBeTruthy();
-  });
-
   it('Should render dark theme', () => {
     tag.setProps({ theme: 'red' });
     expect(tag.hasClass('atomikui-tag--red')).toBe(true);

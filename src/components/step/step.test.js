@@ -16,10 +16,6 @@ describe('<Step />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(step).toBeTruthy();
-  });
-
   it('Should render a Link if isComplete is true', () => {
     expect(step.find('Link')).toBeTruthy();
   });

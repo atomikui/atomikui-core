@@ -23,10 +23,6 @@ describe('<ProgressBar />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(progressBar).toBeTruthy();
-  });
-
   test.each(['info', 'pill', 'thin', 'animated'])(
     'Should set ProgressBar theme based on prop value: %p',
     (prop) => {

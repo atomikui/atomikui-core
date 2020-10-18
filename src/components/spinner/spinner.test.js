@@ -13,10 +13,6 @@ describe('<Spinner />', () => {
     spinner = shallow(<Spinner theme="red" />);
   });
 
-  it('Should render without errors', () => {
-    expect(spinner).toBeTruthy();
-  });
-
   it('Should set a dark theme class', () => {
     expect(spinner.hasClass('atomikui-spinner--red')).toBe(true);
   });

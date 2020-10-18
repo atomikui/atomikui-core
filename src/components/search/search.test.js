@@ -15,10 +15,6 @@ describe('<Search />', () => {
     search = mount(<Search onSubmit={onSubmitSpy} shape="pill" />);
   });
 
-  it('Should render without errors', () => {
-    expect(search).toBeTruthy();
-  });
-
   it('Should trigger onSubmit callback on submit button click', () => {
     search.find('button').simulate('click');
     expect(onSubmitSpy.called).toBeTruthy();

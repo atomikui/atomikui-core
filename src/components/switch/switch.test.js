@@ -22,10 +22,6 @@ describe('<Switch />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(component).toBeTruthy();
-  });
-
   it('Should trigger onChange callback', () => {
     component.find('input').simulate('change', { target: { checked: false } });
 

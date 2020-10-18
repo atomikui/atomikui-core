@@ -25,10 +25,6 @@ describe('<Quotation />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(quotation).toBeTruthy();
-  });
-
   it('Should render "left quote" icon svg for pullquote variant', () => {
     quotation.setProps({ pullquote: true });
     console.log(quotation.debug());

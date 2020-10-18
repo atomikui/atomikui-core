@@ -28,10 +28,6 @@ describe('<Stepper />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(stepper).toBeTruthy();
-  });
-
   it('Should render 4 children', () => {
     expect(stepper.find('Step').length).toBe(4);
   });

@@ -12,10 +12,6 @@ describe('<Price />', () => {
     price = shallow(<Price amount={124.99} label="/ month" />);
   });
 
-  it('Should render without errors', () => {
-    expect(price).toBeTruthy();
-  });
-
   it('Should set the color theme class', () => {
     price.setProps({ theme: 'green' });
     expect(price.hasClass('atomikui-price--green')).toBe(true);

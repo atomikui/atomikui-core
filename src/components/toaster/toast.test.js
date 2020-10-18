@@ -12,10 +12,6 @@ describe('<Toast />', () => {
     toast = shallow(<Toast children="toast message" />);
   });
 
-  it('Should render without errors', () => {
-    expect(toast).toBeTruthy();
-  });
-
   it('Should render content', () => {
     expect(toast.find('Alert').children().text()).toBe('toast message');
   });

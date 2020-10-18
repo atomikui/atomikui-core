@@ -13,10 +13,6 @@ describe('<Statistic />', () => {
     statistic = shallow(<Statistic value="25,000" label="Views" />);
   });
 
-  it('Should render without errors', () => {
-    expect(statistic).toBeTruthy();
-  });
-
   it('Should render with the label on the top', () => {
     statistic.setProps({ topLabel: true });
 

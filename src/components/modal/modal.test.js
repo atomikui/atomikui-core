@@ -29,10 +29,6 @@ describe('<Modal />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(modal).toBeTruthy();
-  });
-
   it('Should call onClose when modal close button is clicked', () => {
     modal.find('.atomikui-modal__close-button').simulate('click');
 

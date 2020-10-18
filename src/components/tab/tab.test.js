@@ -11,10 +11,6 @@ describe('<Tab />', () => {
     tab = shallow(<Tab label="Tab One" />);
   });
 
-  it('Should render without errors', () => {
-    expect(tab).toBeTruthy();
-  });
-
   it('Should render a button with text', () => {
     expect(tab.find('Button')).toBeTruthy();
     expect(tab.find('Button').children().text()).toBe('Tab One');

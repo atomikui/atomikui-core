@@ -27,10 +27,6 @@ describe('<Truncate />', () => {
     );
   });
 
-  it('Chould render without errors', () => {
-    expect(truncate).toBeTruthy();
-  });
-
   it('Should render with custom ellipses content', () => {
     truncate.setProps({
       afterEllipses: <Link href="/path/to/article">Read More</Link>,

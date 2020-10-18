@@ -37,10 +37,6 @@ describe('<RangeSlider />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(rangeSlider).toBeTruthy();
-  });
-
   it('Should render 10 ticks', () => {
     expect(rangeSlider.find('.atomikui-range-slider__ticks__tick').length).toBe(
       10,

@@ -16,12 +16,8 @@ describe('<Toaster />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(toaster).toBeTruthy();
-  });
-
   it('Should render children', () => {
-    expect(toaster.children()).toBeTruthy();
+    expect(toaster.children()).toHaveLength(1);
   });
 
   it('Should set a position modifier class', () => {

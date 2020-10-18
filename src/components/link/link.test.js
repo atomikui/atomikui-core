@@ -16,10 +16,6 @@ describe('<Link />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(link).toBeTruthy();
-  });
-
   it('Should render children', () => {
     expect(link).toBeTruthy();
     expect(link.text()).toBe('This is a link');

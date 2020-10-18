@@ -25,10 +25,6 @@ describe('<Tabs />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(tabs).toBeTruthy();
-  });
-
   it('Should trigger onChange when a tab is clicked', () => {
     tabs.find('Tab').first().simulate('click');
 
