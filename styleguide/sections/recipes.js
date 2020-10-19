@@ -1,23 +1,23 @@
 module.exports = {
-  name: 'Templates',
-  content: './styleguide/docs/Templates.md',
+  name: 'Recipes',
+  content: './styleguide/docs/Recipes.md',
   sectionDepth: 6,
   sections: [
     {
       name: 'Form Validation',
-      content: 'src/templates/FormValidation.md',
+      content: 'src/recipes/FormValidation.md',
       usageMode: 'expand',
       exampleMode: 'expand',
     },
     {
       name: 'Grid',
-      content: 'src/templates/Grid.md',
+      content: 'src/recipes/Grid.md',
       usageMode: 'expand',
       exampleMode: 'expand',
     },
     {
       name: 'Pop Confirm',
-      content: 'src/templates/PopConfirm.md',
+      content: 'src/recipes/PopConfirm.md',
       usageMode: 'expand',
       exampleMode: 'expand',
     },

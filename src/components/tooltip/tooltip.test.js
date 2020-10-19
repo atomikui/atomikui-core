@@ -16,8 +16,12 @@ describe('<Tooltip />', () => {
 
   beforeEach(() => {
     tooltip = mount(
-      <Tooltip text="This is a tooltip" theme="warning" align="top-left">
-        <Button size="md">button</Button>
+      <Tooltip
+        trigger={<Button size="md">button</Button>}
+        theme="warning"
+        align="top-left"
+      >
+        This is a tooltip
       </Tooltip>,
     );
   });
@@ -65,4 +69,11 @@ describe('<Tooltip />', () => {
       ).toBe(true);
     },
   );
+
+  it('Should close the tooltip on Click', () => {
+    tooltip.setProps({ triggerOnClick: true });
+
+    tooltip.find('Button').simulate('click');
+    expect(tooltip.find('[data-testid="tooltip"]')).toBeTruthy();
+  });
 });

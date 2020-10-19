@@ -11,15 +11,23 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
     alignItems: 'center',
   }}
 >
-  <Tooltip text="This is a tooltip" align="top-center">
-    <Button theme="blue">Button Trigger</Button>
+  <Tooltip
+    trigger={<Button theme="blue">Button Trigger</Button>}
+    align="top-center"
+  >
+    This is a tooltip
   </Tooltip>
   <p style={{ marginLeft: '16px' }}>
     This is a tooltip nested
-    <Tooltip text="This is a tooltip" align="top-center">
-      <Button theme="link" href="#">
-        tooltip
-      </Button>
+    <Tooltip
+      trigger={
+        <Button theme="link">
+          <b>tooltip</b>
+        </Button>
+      }
+      align="top-center"
+    >
+      This is a tooltip
     </Tooltip> inside of some text content.
   </p>
 </div>;
@@ -38,28 +46,20 @@ import { Tooltip, Button } from '@atomikui/core';
       marginBottom: '16px',
     }}
   >
-    <Tooltip text="This is a tooltip">
-      <Button theme="blue">top-left</Button>
+    <Tooltip trigger={<Button theme="blue">top-left</Button>}>
+      This is a tooltip
     </Tooltip>
-    <Tooltip text="This is a tooltip" align="top-center">
-      <Button theme="blue">top-center</Button>
+    <Tooltip
+      trigger={<Button theme="blue">top-center</Button>}
+      align="top-center"
+    >
+      This is a tooltip
     </Tooltip>
-    <Tooltip text="This is a tooltip" align="top-right">
-      <Button theme="blue">top-right</Button>
-    </Tooltip>
-  </div>
-  <div
-    style={{
-      display: 'flex',
-      justifyContent: 'space-between',
-      marginBottom: '16px',
-    }}
-  >
-    <Tooltip text="This is a tooltip" align="right">
-      <Button theme="blue">right</Button>
-    </Tooltip>
-    <Tooltip text="This is a tooltip" align="left">
-      <Button theme="blue">left</Button>
+    <Tooltip
+      trigger={<Button theme="blue">top-right</Button>}
+      align="top-right"
+    >
+      This is a tooltip
     </Tooltip>
   </div>
   <div
@@ -69,14 +69,37 @@ import { Tooltip, Button } from '@atomikui/core';
       marginBottom: '16px',
     }}
   >
-    <Tooltip text="This is a tooltip" align="bottom-left">
-      <Button theme="blue">bottom-left</Button>
+    <Tooltip trigger={<Button theme="blue">right</Button>} align="right">
+      This is a tooltip
     </Tooltip>
-    <Tooltip text="This is a tooltip" align="bottom-center">
-      <Button theme="blue">bottom-center</Button>
+    <Tooltip trigger={<Button theme="blue">left</Button>} align="left">
+      This is a tooltip
     </Tooltip>
-    <Tooltip text="This is a tooltip" align="bottom-right">
-      <Button theme="blue">bottom-right</Button>
+  </div>
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      marginBottom: '16px',
+    }}
+  >
+    <Tooltip
+      trigger={<Button theme="blue">bottom-left</Button>}
+      align="bottom-left"
+    >
+      This is a tooltip
+    </Tooltip>
+    <Tooltip
+      trigger={<Button theme="blue">bottom-center</Button>}
+      align="bottom-center"
+    >
+      This is a tooltip
+    </Tooltip>
+    <Tooltip
+      trigger={<Button theme="blue">bottom-right</Button>}
+      align="bottom-right"
+    >
+      This is a tooltip
     </Tooltip>
   </div>
 </>;
@@ -88,8 +111,12 @@ import { Tooltip, Button } from '@atomikui/core';
 import { Tooltip, Button } from '@atomikui/core';
 
 <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-  <Tooltip text="This is a tooltip" align="top-center" triggerOnClick>
-    <Button theme="blue">On Click</Button>
+  <Tooltip
+    trigger={<Button theme="blue">On Click</Button>}
+    align="top-center"
+    triggerOnClick
+  >
+    This is a tooltip
   </Tooltip>
 </div>;
 ```
@@ -104,43 +131,43 @@ import { Tooltip, Button } from '@atomikui/core';
 >
   <Tooltip
     className="margin-bottom-8"
-    text="This is a tooltip"
+    trigger={<Button theme="blue">Info</Button>}
     theme="info"
     align="top-center"
   >
-    <Button theme="blue">Info</Button>
+    This is a tooltip
   </Tooltip>
   <Tooltip
     className="margin-bottom-8"
-    text="This is a tooltip"
+    trigger={<Button theme="blue">light-gray</Button>}
     theme="light-gray"
     align="top-center"
   >
-    <Button theme="blue">light-gray</Button>
+    This is a tooltip
   </Tooltip>
   <Tooltip
     className="margin-bottom-8"
-    text="This is a tooltip"
+    trigger={<Button theme="blue">Warning</Button>}
     theme="warning"
     align="top-center"
   >
-    <Button theme="blue">Warning</Button>
+    This is a tooltip
   </Tooltip>
   <Tooltip
     className="margin-bottom-8"
-    text="This is a tooltip"
+    trigger={<Button theme="blue">Error</Button>}
     theme="error"
     align="top-center"
   >
-    <Button theme="blue">Error</Button>
+    This is a tooltip
   </Tooltip>
   <Tooltip
     className="margin-bottom-8"
-    text="This is a tooltip"
+    trigger={<Button theme="blue">Success</Button>}
     theme="success"
     align="top-center"
   >
-    <Button theme="blue">Success</Button>
+    This is a tooltip
   </Tooltip>
 </div>;
 ```
