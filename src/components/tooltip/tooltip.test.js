@@ -69,4 +69,11 @@ describe('<Tooltip />', () => {
       ).toBe(true);
     },
   );
+
+  it('Should close the tooltip on Click', () => {
+    tooltip.setProps({ triggerOnClick: true });
+
+    tooltip.find('Button').simulate('click');
+    expect(tooltip.find('[data-testid="tooltip"]')).toBeTruthy();
+  });
 });
