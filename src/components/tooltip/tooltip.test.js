@@ -16,8 +16,12 @@ describe('<Tooltip />', () => {
 
   beforeEach(() => {
     tooltip = mount(
-      <Tooltip text="This is a tooltip" theme="warning" align="top-left">
-        <Button size="md">button</Button>
+      <Tooltip
+        trigger={<Button size="md">button</Button>}
+        theme="warning"
+        align="top-left"
+      >
+        This is a tooltip
       </Tooltip>,
     );
   });

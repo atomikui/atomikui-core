@@ -12,7 +12,7 @@ const landmarks = require('./landmarks');
 const layout = require('./layout');
 const navigation = require('./navigation');
 const providers = require('./providers');
-const templates = require('./templates');
+const recipes = require('./recipes');
 const wallet = require('./wallet');
 
 module.exports = [
@@ -30,6 +30,6 @@ module.exports = [
   wallet,
   providers,
   experimental,
-  templates,
+  recipes,
   sassUtilities,
 ];
