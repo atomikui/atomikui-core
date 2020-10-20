@@ -1,5 +1,20 @@
 <br />
 
+### [v0.7.0](https://github.com/atomikui/atomikui-core/compare/v0.6.0...v0.7.0) - 2020-10-20
+
+#### Merged
+
+- [Pagination issue #54] Adds theme color variants [`#60`](https://github.com/atomikui/atomikui-core/pull/60)
+- Enhancement/issue 58 tooltip refactor [`#59`](https://github.com/atomikui/atomikui-core/pull/59)
+
+#### Commits
+
+- Test coverage refactoring [`64b82f9`](https://github.com/atomikui/atomikui-core/commit/64b82f9f0ad5661878c5588f4a14e953bff8a447)
+- [Tooltip #58] Refactoris tooltip component [`8888bc2`](https://github.com/atomikui/atomikui-core/commit/8888bc2e200867d1f1b61109c33787804ab6fb78)
+- Refactors unit tests [`4a82951`](https://github.com/atomikui/atomikui-core/commit/4a82951b3da9c42228682bffba8dde852e629964)
+
+<hr />
+
 ### [v0.6.0](https://github.com/atomikui/atomikui-core/compare/v0.5.2...v0.6.0) - 2020-10-13
 
 #### Merged
