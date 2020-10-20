@@ -50,7 +50,7 @@ const Drawer = ({
     if (focusTrap) {
       setTimeout(() => {
         focusTrap[isOpen ? 'activate' : 'deactivate']();
-      }, 300);
+      }, 50);
     }
   }, [focusTrap, isOpen]);
 
