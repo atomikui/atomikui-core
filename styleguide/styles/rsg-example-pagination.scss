@@ -1,0 +1,8 @@
+[data-preview='Pagination'] > * {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  & > * {
+    margin: rem(0 8 8 0);
+  }
+}

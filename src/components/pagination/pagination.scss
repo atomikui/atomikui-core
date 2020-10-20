@@ -41,4 +41,24 @@ $pagination-hover-bg: darken($background-light-gray, 5%);
     background: $active-bg-color;
     color: $white;
   }
+
+  @each $name, $color in $background-dark-colors {
+    &--#{$name} {
+      .atomikui-pagination__item.is-active > a {
+        background-color: $color;
+        color: $white;
+
+        @include altFontColor($name);
+      }
+    }
+  }
+
+  @each $name, $color in $background-light-colors {
+    &--#{$name}-light {
+      .atomikui-pagination__item.is-active > a {
+        background-color: $color;
+        color: $default-control-text-color;
+      }
+    }
+  }
 }

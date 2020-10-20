@@ -25,4 +25,12 @@ describe('<Pagination />', () => {
   it('Should render 6 PageItems', () => {
     expect(pagination.find('Link').length).toBe(6);
   });
+
+  it('Should render themes', () => {
+    pagination.setProps({ theme: 'red' });
+    expect(pagination.hasClass('atomikui-pagination--red')).toBeTruthy();
+
+    pagination.setProps({ themeVariant: 'light' });
+    expect(pagination.hasClass('atomikui-pagination--red-light')).toBeTruthy();
+  });
 });
