@@ -29,27 +29,27 @@ describe('<Button />', () => {
   });
 
   it('Should render dark theme class', () => {
-    expect(button.hasClass('atomikui-btn--red')).toBe(true);
+    expect(button.hasClass('atomikui-btn--red')).toBeTruthy();
   });
 
   it('Should render light theme class', () => {
     button.setProps({ themeVariant: 'light' });
-    expect(button.hasClass('atomikui-btn--red-light')).toBe(true);
+    expect(button.hasClass('atomikui-btn--red-light')).toBeTruthy();
   });
 
   it('Should accept custom classes', () => {
-    expect(button.hasClass('atomikui-btn--custom')).toBe(true);
+    expect(button.hasClass('atomikui-btn--custom')).toBeTruthy();
   });
 
   it('Should render button as block', () => {
-    expect(button.hasClass('atomikui-btn--block')).toBe(true);
+    expect(button.hasClass('atomikui-btn--block')).toBeTruthy();
   });
 
   it('Should render button size theme', () => {
-    expect(button.hasClass('atomikui-btn--lg')).toBe(true);
+    expect(button.hasClass('atomikui-btn--lg')).toBeTruthy();
   });
 
   it('Should rbe able to disable button', () => {
-    expect(button.prop('disabled')).toBe(true);
+    expect(button.prop('disabled')).toBeTruthy();
   });
 });

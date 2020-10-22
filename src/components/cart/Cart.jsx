@@ -47,14 +47,14 @@ const Cart = ({
           {subtotal.toLocaleString('en', { minimumFractionDigits: 2 })}
         </div>
         {tax && (
-          <div className="atomikui-cart__tax">
+          <div className="atomikui-cart__tax" data-test-id="cart-tax">
             <span className="text-weight-semibold">Sales Tax:</span> $
             {(subtotal * tax).toFixed(2).toLocaleString('en', {
               minimumFractionDigits: 2,
             })}
           </div>
         )}
-        <div className="atomikui-cart__total">
+        <div className="atomikui-cart__total" data-test-id="cart-total">
           <span className="text-weight-semibold">Total:</span> $
           {(subtotal * tax + subtotal).toFixed(2).toLocaleString('en', {
             minimumFractionDigits: 2,

@@ -42,7 +42,7 @@ describe('<AutoComplete />', () => {
       .last()
       .simulate('click');
 
-    expect(onChangeSpy.withArgs('Tangerine').called).toBe(true);
+    expect(onChangeSpy.withArgs('Tangerine').called).toBeTruthy();
   });
 
   it('Should trigger onChange callback with empty value', () => {
@@ -50,7 +50,7 @@ describe('<AutoComplete />', () => {
       .find('input')
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
-    expect(onChangeSpy.withArgs('').called).toBe(true);
+    expect(onChangeSpy.withArgs('').called).toBeTruthy();
   });
 
   it('Should set the class of the selected item to `.is-selected`', () => {
@@ -68,6 +68,6 @@ describe('<AutoComplete />', () => {
         .children()
         .first()
         .hasClass('is-selected'),
-    ).toBe(true);
+    ).toBeTruthy();
   });
 });

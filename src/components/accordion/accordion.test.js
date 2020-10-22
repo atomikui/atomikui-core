@@ -32,9 +32,9 @@ describe('<Accordion />', () => {
   });
 
   it('Should should render 3 children', () => {
-    expect(accordion.find('[data-test-id="accordion"]').children().length).toBe(
-      3,
-    );
+    expect(
+      accordion.find('[data-test-id="accordion"]').children(),
+    ).toHaveLength(3);
   });
 
   it('Should handle the click event if `multipleOpen` prop is false', () => {

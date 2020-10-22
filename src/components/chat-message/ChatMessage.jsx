@@ -10,7 +10,10 @@ const ChatMessage = ({ dateTimeStamp, message, isOutgoing }) => {
       })}
     >
       {dateTimeStamp && (
-        <div className="atomikui-chat-message__item__timestamp">
+        <div
+          className="atomikui-chat-message__item__timestamp"
+          data-test-id="chat-message-timestamp"
+        >
           {dateTimeStamp}
         </div>
       )}

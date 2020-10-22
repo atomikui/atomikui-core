@@ -38,7 +38,9 @@ describe('<Cart />', () => {
   });
 
   it('Should calculate subtotal', () => {
-    expect(cart.find('.atomikui-cart__total').text()).toBe('Total: $9179.98');
+    expect(cart.find('[data-test-id="cart-total"]').text()).toBe(
+      'Total: $9179.98',
+    );
   });
 
   it('Should trigger onCartItemUpdate whencart item is updated', () => {
@@ -47,11 +49,11 @@ describe('<Cart />', () => {
       .first()
       .simulate('change', { target: { value: 2 } });
 
-    expect(onCartItemUpdateSpy.withArgs(2, 0).called).toBe(true);
+    expect(onCartItemUpdateSpy.withArgs(2, 0).called).toBeTruthy();
   });
 
   it('Should conditionally render tax', () => {
     cart.setProps({ tax: null });
-    expect(cart.find('.atomikui-cart__tax').length).toBe(0);
+    expect(cart.find('[data-test-id="cart-tax"]')).toHaveLength(0);
   });
 });

@@ -39,6 +39,7 @@ const ButtonGroup = ({
           'atomikui-button-group--stretch': stretch,
           'has-error': hasError,
         })}
+        data-test-id="button-group"
         role="group"
         {...others}
       >

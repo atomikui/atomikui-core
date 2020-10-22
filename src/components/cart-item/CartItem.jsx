@@ -41,6 +41,7 @@ const CartItem = ({
               Qty:
             </div>
             <FormField
+              data-test-id="cart-item-qty"
               type="number"
               className="atomikui-cart-item__quantity"
               value={String(itemQuantity)}

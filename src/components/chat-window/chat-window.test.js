@@ -19,12 +19,6 @@ describe('<ChatWindow />', () => {
     onCloseSpy = sinon.spy();
     onMessageSentSpy = sinon.spy();
 
-    // jest.spyOn(global, 'fetch').mockImplementation(() =>
-    //   Promise.resolve({
-    //     json: () => Promise.resolve({}),
-    //   }),
-    // );
-
     chatWindow = shallow(
       <ChatWindow
         messages={[]}
@@ -38,22 +32,22 @@ describe('<ChatWindow />', () => {
 
   it('Should trigger onClose callback', () => {
     chatWindow.setProps({ isOpen: true });
-    chatWindow.find('.atomikui-chat-window__close-btn').simulate('click');
-    expect(onCloseSpy.called).toBe(true);
+    chatWindow.find('[data-test-id="chat-window-close-btn"]').simulate('click');
+    expect(onCloseSpy.called).toBeTruthy();
   });
 
   it('Should trigger onMessageSent callback', () => {
     chatWindow
       .find('.atomikui-chat-window__input')
       .simulate('change', { target: { value: 'Hello!' } });
-    chatWindow.find('.atomikui-chat-window__send-btn').simulate('click');
+    chatWindow.find('[data-test-id="chat-window-send-btn"]').simulate('click');
 
-    expect(onMessageSentSpy.called).toBe(true);
+    expect(onMessageSentSpy.called).toBeTruthy();
   });
 
   it('Should trigger onMessageSent callback when enter key is pressed', () => {
     chatWindow
-      .find('.atomikui-chat-window__input')
+      .find('textarea[data-test-id="chat-window-user-input"]')
       .simulate('change', { target: { value: 'Hello!' } });
     chatWindow.find('.atomikui-chat-window__input').simulate('keydown', {
       key: 'Enter',
@@ -62,12 +56,6 @@ describe('<ChatWindow />', () => {
       preventDefault() {},
     });
 
-    expect(onMessageSentSpy.called).toBe(true);
-  });
-
-  it('Should auto expand the user input', () => {
-    chatWindow
-      .find('.atomikui-chat-window__input')
-      .simulate('change', { target: { value: longText } });
+    expect(onMessageSentSpy.called).toBeTruthy();
   });
 });

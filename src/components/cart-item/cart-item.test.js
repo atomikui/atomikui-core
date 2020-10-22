@@ -25,7 +25,9 @@ describe('<CartItem />', () => {
   });
 
   it('Should trigger onQuantityChange when quantity is updated', () => {
-    cartItem.find('input').simulate('change', { target: { value: 2 } });
-    expect(onQuantityChangeSpy.withArgs(2).called).toBe(true);
+    cartItem
+      .find('input[data-test-id="cart-item-qty"]')
+      .simulate('change', { target: { value: 2 } });
+    expect(onQuantityChangeSpy.withArgs(2).called).toBeTruthy();
   });
 });

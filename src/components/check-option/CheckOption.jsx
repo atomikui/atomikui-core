@@ -41,6 +41,7 @@ const CheckOption = forwardRef(
     return (
       <>
         <Label
+          data-test-id="check-option"
           htmlFor={uid}
           className={classnames('atomikui-check-option', className, {
             'has-error': hasError,
@@ -65,7 +66,10 @@ const CheckOption = forwardRef(
             required
             {...others}
           />
-          <span className="atomikui-check-option__icon">
+          <span
+            className="atomikui-check-option__icon"
+            data-test-id="check-option-icon"
+          >
             <Icon
               className={classnames({
                 'is-hidden': !checked && !defaultChecked,

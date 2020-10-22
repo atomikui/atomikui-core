@@ -37,7 +37,7 @@ describe('<AccordionItem />', () => {
       accordionItem
         .find('[data-test-id="accordion-item-trigger"]')
         .prop('aria-expanded'),
-    ).toBe(true);
+    ).toBeTruthy();
   });
 
   it('Should trigger handleClick callback', () => {
@@ -46,6 +46,6 @@ describe('<AccordionItem />', () => {
       .find('[data-test-id="accordion-item-trigger"]')
       .simulate('click');
 
-    expect(handleClickSpy.called).toBe(true);
+    expect(handleClickSpy.called).toBeTruthy();
   });
 });

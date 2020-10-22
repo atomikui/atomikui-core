@@ -40,12 +40,12 @@ describe('<CheckOption />', () => {
   it('Should trigger onChange callback', () => {
     checkOption.find('input').simulate('change', { checked: true });
 
-    expect(checkOptionSpy.called).toBe(true);
+    expect(checkOptionSpy.called).toBeTruthy();
   });
 
   it('Should set as checked if defaultChecked is true', () => {
     checkOption.setProps({ defaultChecked: true });
-    expect(checkOption.find('input').props().defaultChecked).toBe(true);
+    expect(checkOption.find('input').props().defaultChecked).toBeTruthy();
   });
 
   it('Should handle an error', () => {
@@ -55,8 +55,10 @@ describe('<CheckOption />', () => {
     });
 
     expect(
-      checkOption.find('label.atomikui-check-option').hasClass('has-error'),
-    ).toBe(true);
+      checkOption
+        .find('label[data-test-id="check-option"]')
+        .hasClass('has-error'),
+    ).toBeTruthy();
     expect(checkOption.find('Hint')).toBeTruthy();
     expect(checkOption.find('Hint').text()).toBe('This field is required');
   });
@@ -72,21 +74,25 @@ describe('<CheckOption />', () => {
     checkOption.setProps({ checked: true });
 
     expect(
-      checkOption.find('.atomikui-check-option__icon').find('svg').length,
-    ).toBe(1);
+      checkOption.find('[data-test-id="check-option-icon"]').find('svg'),
+    ).toHaveLength(1);
   });
 
   it('Should render dark theme', () => {
     checkOption.setProps({ theme: 'red' });
     expect(
-      checkOption.find('Label').hasClass('atomikui-check-option--red'),
-    ).toBe(true);
+      checkOption
+        .find('label[data-test-id="check-option"]')
+        .hasClass('atomikui-check-option--red'),
+    ).toBeTruthy();
   });
 
   it('Should render light theme', () => {
     checkOption.setProps({ theme: 'red', themeVariant: 'light' });
     expect(
-      checkOption.find('Label').hasClass('atomikui-check-option--red-light'),
-    ).toBe(true);
+      checkOption
+        .find('label[data-test-id="check-option"]')
+        .hasClass('atomikui-check-option--red-light'),
+    ).toBeTruthy();
   });
 });
