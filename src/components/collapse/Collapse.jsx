@@ -39,6 +39,7 @@ const Collapse = ({
           })}
         >
           <Button
+            data-test-id="collapse-trigger"
             className={classnames('atomikui-collapse__trigger', {
               'atomikui-collapse__trigger--right-aligned-icon': rightAlignTriggerIcon,
               'is-open': open,
@@ -57,6 +58,7 @@ const Collapse = ({
       )}
       <div
         id={id}
+        data-test-id="collapse-body"
         className="atomikui-collapse__bd"
         style={{
           height: open ? contentHeight : '0px',

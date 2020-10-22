@@ -36,21 +36,21 @@ describe('<Comment />', () => {
   });
 
   it('Should display an author link', () => {
-    expect(comment.find('Link')).toBeTruthy();
+    expect(comment.find(['data-test-id="comment-author-link"'])).toBeTruthy();
   });
 
   it('Should not display an author link if authorLink is null', () => {
     comment.setProps({ authorLink: null });
-    expect(comment.find('Link').length).toBe(0);
+    expect(comment.find('data-test-id="comment-author-link"')).toHaveLength(0);
   });
 
   it('Should display comment replies', () => {
-    expect(comment.find('.atomikui-comment__replies')).toBeTruthy();
+    expect(comment.find('data-test-id="comment-replies"')).toBeTruthy();
   });
 
   it('Should trigger onReply callback', () => {
-    comment.find('.atomikui-comment__reply-btn').simulate('click');
+    comment.find('[data-test-id="comment-reply-btn"]').simulate('click');
 
-    expect(onReplySpy.called).toBe(true);
+    expect(onReplySpy.called).toBeTruthy();
   });
 });
