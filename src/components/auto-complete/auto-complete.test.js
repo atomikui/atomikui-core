@@ -37,7 +37,9 @@ describe('<AutoComplete />', () => {
   it('Should trigger onChange callback with selected item', () => {
     autocomplete.find('input').simulate('change');
     autocomplete
-      .find('.atomikui-auto-complete__list > :last-child')
+      .find('[data-test-id="autocomplete-list"]')
+      .children()
+      .last()
       .simulate('click');
 
     expect(onChangeSpy.withArgs('Tangerine').called).toBe(true);
@@ -54,13 +56,17 @@ describe('<AutoComplete />', () => {
   it('Should set the class of the selected item to `.is-selected`', () => {
     autocomplete.find('input').simulate('change');
     autocomplete
-      .find('.atomikui-auto-complete__list > :first-child')
+      .find('[data-test-id="autocomplete-list"]')
+      .children()
+      .first()
       .simulate('click');
     autocomplete.find('input').simulate('change');
 
     expect(
       autocomplete
-        .find('.atomikui-auto-complete__list > :first-child')
+        .find('[data-test-id="autocomplete-list"]')
+        .children()
+        .first()
         .hasClass('is-selected'),
     ).toBe(true);
   });

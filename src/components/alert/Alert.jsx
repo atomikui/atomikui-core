@@ -42,7 +42,7 @@ const Alert = ({
     >
       {icon || (
         <Icon
-          data-testid={`icon-${theme}`}
+          data-test-id={`icon-${theme}`}
           id={`icon-${shortid.generate()}`}
           icon={!theme ? icons.info : icons[theme]}
           size="lg"

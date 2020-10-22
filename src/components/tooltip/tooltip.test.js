@@ -32,17 +32,17 @@ describe('<Tooltip />', () => {
 
   it('Should create and remove tooltip', () => {
     tooltip.find('Button').simulate('focus');
-    expect(tooltip.find('[data-testid="tooltip"]')).toBeTruthy();
+    expect(tooltip.find('[data-test-id="tooltip"]')).toBeTruthy();
 
     tooltip.find('Button').simulate('blur');
-    expect(tooltip.find('[data-testid="tooltip"]').length).toBe(0);
+    expect(tooltip.find('[data-test-id="tooltip"]').length).toBe(0);
   });
 
   it('Should create themed tooltip', () => {
     tooltip.find('Button').simulate('focus');
     expect(
       document
-        .querySelector('[data-testid="tooltip"]')
+        .querySelector('[data-test-id="tooltip"]')
         .classList.contains('atomikui-tooltip--warning'),
     ).toBe(true);
   });
@@ -64,7 +64,7 @@ describe('<Tooltip />', () => {
 
       expect(
         document
-          .querySelector('[data-testid="tooltip"]')
+          .querySelector('[data-test-id="tooltip"]')
           .classList.contains(`atomikui-tooltip--align-${align}`),
       ).toBe(true);
     },
@@ -74,6 +74,6 @@ describe('<Tooltip />', () => {
     tooltip.setProps({ triggerOnClick: true });
 
     tooltip.find('Button').simulate('click');
-    expect(tooltip.find('[data-testid="tooltip"]')).toBeTruthy();
+    expect(tooltip.find('[data-test-id="tooltip"]')).toBeTruthy();
   });
 });

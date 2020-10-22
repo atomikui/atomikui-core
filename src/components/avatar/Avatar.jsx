@@ -30,11 +30,16 @@ const Avatar = ({
             themeVariant ? `-${themeVariant}` : ''
           }`]: theme,
         })}
+        data-test-id="avatar-content"
       >
         {src && <img className="atomikui-avatar__image" src={src} alt={alt} />}
         {children}
       </span>
-      {label && <span className="atomikui-avatar__label">{label}</span>}
+      {label && (
+        <span className="atomikui-avatar__label" data-test-id="avatar-label">
+          {label}
+        </span>
+      )}
     </span>
   );
 };
