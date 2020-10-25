@@ -12,7 +12,15 @@ describe('<ListItem />', () => {
     listItem = shallow(<ListItem className="custom-class">Item 1</ListItem>);
   });
 
+  it('Should render a <li /> element', () => {
+    expect(listItem.find('li')).toHaveLength(1);
+  });
+
   it('Should set a custom class', () => {
-    expect(listItem.hasClass('custom-class')).toBe(true);
+    expect(listItem.hasClass('custom-class')).toBeTruthy();
+  });
+
+  it('Should render content inside of the <li />', () => {
+    expect(listItem.find('li').text()).toBe('Item 1');
   });
 });

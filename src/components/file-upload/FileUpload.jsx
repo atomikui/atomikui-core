@@ -57,6 +57,7 @@ const FileUpload = forwardRef(
 
     return (
       <div
+        data-test-id="file-upload"
         className={classnames('atomikui-file-upload', className, {
           'has-error': hasError,
         })}
@@ -74,6 +75,7 @@ const FileUpload = forwardRef(
           onDragOver={onDragOver}
           onDrop={handleChange}
           htmlFor={id}
+          data-test-id="file-upload-wrapper"
           className={classnames('atomikui-file-upload__wrapper', {
             'atomikui-file-upload__wrapper--drag-and-drop': dragAndDrop,
           })}

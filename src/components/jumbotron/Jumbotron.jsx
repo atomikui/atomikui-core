@@ -10,6 +10,7 @@ const Jumbotron = ({ children, className, theme, themeVariant, ...others }) => {
           themeVariant ? `-${themeVariant}` : ''
         }`]: theme,
       })}
+      data-test-id="jumbotron"
       {...others}
     >
       {children}

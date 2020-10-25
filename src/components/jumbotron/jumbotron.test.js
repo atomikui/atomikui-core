@@ -47,8 +47,8 @@ describe('<Jumbotron />', () => {
     jumbotron.setProps({ theme });
     expect(
       jumbotron
-        .find('.atomikui-jumbotron')
+        .find('[data-test-id="jumbotron"]')
         .hasClass(`atomikui-jumbotron--${theme}`),
-    ).toBe(true);
+    ).toBeTruthy();
   });
 });

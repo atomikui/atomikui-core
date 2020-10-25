@@ -91,6 +91,7 @@ const DatePicker = forwardRef(
         )}
         <div className="atomikui-date-picker__input">
           <FormField
+            data-test-id="data-picker-input"
             ref={ref}
             id={uid}
             mask="99/99/9999"
@@ -103,6 +104,7 @@ const DatePicker = forwardRef(
           />
           <Button
             className="atomikui-date-picker__input__btn"
+            data-test-id="datepicker-input-btn"
             theme="hollow"
             size="md"
             onClick={() => {
@@ -115,7 +117,11 @@ const DatePicker = forwardRef(
           </Button>
         </div>
         <Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}>
-          <div className="atomikui-date-picker__calendar" ref={calendar}>
+          <div
+            className="atomikui-date-picker__calendar"
+            data-test-id="datepicker-calendar"
+            ref={calendar}
+          >
             <Calendar
               onChange={(details) => {
                 return handleDateChange(details);

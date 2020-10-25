@@ -24,6 +24,7 @@ const List = ({
           [`atomikui-list--align-${align}`]: align,
           'atomikui-list--loose': loose,
         })}
+        data-test-id="list"
         {...others}
       >
         {Children.map(children, (child) => {

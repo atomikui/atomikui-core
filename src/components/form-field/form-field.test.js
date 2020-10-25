@@ -31,7 +31,7 @@ describe('<FormField />', () => {
   it('Should trigger onChange callback when form field value changes', () => {
     formField.find('input').simulate('change', { target: { value: 'test' } });
 
-    expect(onChangeSpy.called).toBe(true);
+    expect(onChangeSpy.called).toBeTruthy();
   });
 
   it('Should render help hint with text', () => {
@@ -44,9 +44,9 @@ describe('<FormField />', () => {
   it('Should render error class', () => {
     formField.setProps({ hasError: true });
 
-    expect(formField.find('.atomikui-formfield').hasClass('has-error')).toBe(
-      true,
-    );
+    expect(
+      formField.find('[data-test-id="formfield"]').hasClass('has-error'),
+    ).toBeTruthy();
   });
 
   it('Should render error hint with text', () => {
@@ -58,6 +58,6 @@ describe('<FormField />', () => {
 
   it('Should not render a label if label is null', () => {
     formField.setProps({ label: null });
-    expect(formField.find('.atomikui-formfield__label').length).toBe(0);
+    expect(formField.find('[formfield-label]')).toHaveLength(0);
   });
 });

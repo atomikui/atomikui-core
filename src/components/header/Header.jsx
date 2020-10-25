@@ -37,6 +37,7 @@ const Header = ({
         <LogoElement
           {...(logoLink && { href: logoLink })}
           className="atomikui-header__logo-content"
+          data-test-id="logo-content"
           style={{
             fontFamily: logoFont,
             fontSize: `${logoFontSize}px`,
@@ -48,6 +49,7 @@ const Header = ({
         </LogoElement>
       </div>
       <button
+        data-test-id="header-menu-toggle"
         className="atomikui-header__menu-toggle"
         aria-label="menu toggle button"
         onClick={() => {
@@ -64,6 +66,7 @@ const Header = ({
           className={classnames('atomikui-header__nav', {
             'is-open': isOpen,
           })}
+          data-test-id="header-nav"
         >
           <ul>
             {Children.map(children, (child, index) => {

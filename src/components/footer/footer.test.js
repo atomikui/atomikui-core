@@ -29,6 +29,6 @@ describe('<Footer />', () => {
   });
 
   it('Should render without errors', () => {
-    expect(footer).toBeTruthy();
+    expect(footer).toHaveLength(1);
   });
 });

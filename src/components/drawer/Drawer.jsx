@@ -61,6 +61,7 @@ const Drawer = ({
         role="presentation"
         ref={ref}
         onKeyDown={handleKeyDown}
+        data-test-id="drawer"
         className={classnames('atomikui-drawer', className, {
           'is-open': isOpen,
           [`atomikui-drawer--${position}`]: position,

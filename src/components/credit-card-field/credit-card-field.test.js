@@ -42,8 +42,8 @@ describe('<CreditCardField />', () => {
       .find('input[data-test-id="credit-card-number"]')
       .simulate('change', { target: { value: '5105105105105100' } });
 
-    expect(onchangeSpy.called).toBe(true);
-    expect(onCardNumberChangeSpy.called).toBe(true);
+    expect(onchangeSpy.called).toBeTruthy();
+    expect(onCardNumberChangeSpy.called).toBeTruthy();
   });
 
   it('Should show the credit card field when 4 digit preview is clicked', () => {
