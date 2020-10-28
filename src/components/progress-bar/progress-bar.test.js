@@ -35,7 +35,7 @@ describe('<ProgressBar />', () => {
   });
 
   it('Should set the label', () => {
-    expect(progressBar.find('.atomikui-progress-bar__label').text()).toBe(
+    expect(progressBar.find('[data-test-id="progress-bar-label"]').text()).toBe(
       '60%',
     );
   });

@@ -103,7 +103,7 @@ const Post = ({
                 trigger={
                   <Button
                     className="atomikui-post__action-item"
-                    id="bookmark"
+                    data-test-id="post-bookmark-btn"
                     theme="link"
                     aria-label="bookmark link"
                     onClick={() => {
@@ -139,7 +139,7 @@ const Post = ({
             <ListItem>
               <Button
                 theme="blue"
-                id="comment-btn"
+                data-test-id="post-comment-btn"
                 size="md"
                 onClick={onComment}
               >
@@ -147,14 +147,18 @@ const Post = ({
               </Button>
             </ListItem>
             <ListItem>
-              <Button id="report-btn" theme="link" onClick={onReport}>
+              <Button
+                data-test-id="post-report-btn"
+                theme="link"
+                onClick={onReport}
+              >
                 Report
               </Button>
             </ListItem>
           </List>
 
           <h2 className="margin-top-36 margin-bottom-24">Comments</h2>
-          <div className="atomikui-post__comments">
+          <div className="atomikui-post__comments" data-test-id="post-comments">
             {comments.length ? comments : 'No comments to show'}
           </div>
         </div>
