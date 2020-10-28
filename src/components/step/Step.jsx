@@ -21,6 +21,7 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
       })}
     >
       <StepNumber
+        data-test-id="step-number"
         className="atomikui-step__number"
         href={isComplete ? href : null}
         aria-label={isComplete ? 'step complete' : children}

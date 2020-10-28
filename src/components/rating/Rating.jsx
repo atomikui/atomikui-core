@@ -26,6 +26,7 @@ const Rating = ({ className, maxStars, onSelect, size, stars, ...others }) => {
 
   return (
     <div
+      data-test-id="rating"
       className={classnames('atomikui-rating', className)}
       {...others}
       aria-label={`Rating: ${stars} out of ${ratingBaseline} stars`}

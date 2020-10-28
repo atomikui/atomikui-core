@@ -38,7 +38,7 @@ describe('<RangeSlider />', () => {
   });
 
   it('Should render 10 ticks', () => {
-    expect(rangeSlider.find('.atomikui-range-slider__ticks__tick').length).toBe(
+    expect(rangeSlider.find('[data-test-id="range-slider-tick"]').length).toBe(
       10,
     );
   });
@@ -46,7 +46,7 @@ describe('<RangeSlider />', () => {
   it('If range slider `is not disabled` ticks should have onClick event', () => {
     expect(
       rangeSlider
-        .find('.atomikui-range-slider__ticks__tick')
+        .find('[data-test-id="range-slider-tick"]')
         .first()
         .prop('onFocus'),
     ).toBeDefined();
@@ -57,31 +57,35 @@ describe('<RangeSlider />', () => {
 
     expect(
       rangeSlider
-        .find('.atomikui-range-slider__ticks__tick')
+        .find('[data-test-id="range-slider-tick"]')
         .first()
         .prop('onFocus'),
     ).toBeUndefined();
   });
 
   it('Should update the tick label when the value changes', () => {
-    rangeSlider.find('input').simulate('change', { target: { value: '500' } });
+    rangeSlider
+      .find('[data-test-id="range-slider-input"]')
+      .simulate('change', { target: { value: '500' } });
 
     expect(
       rangeSlider
-        .find('.atomikui-range-slider__ticks__label.is-selected')
+        .find('[data-test-id="range-slider-ticks-label"].is-selected')
         .text(),
     ).toBe('$500');
   });
 
   it('Should trigger onChange callback when input value changes', () => {
-    rangeSlider.find('input').simulate('change', { target: { value: '900' } });
+    rangeSlider
+      .find('[data-test-id="range-slider-input"]')
+      .simulate('change', { target: { value: '900' } });
 
     expect(onChangeSpy.withArgs('900').called).toBe(true);
   });
 
   it('Should trigger onChange callback when tick label is clicked', () => {
     rangeSlider
-      .find('.atomikui-range-slider__ticks__label')
+      .find('[data-test-id="range-slider-ticks-label"]')
       .first()
       .simulate('focus');
 
@@ -95,7 +99,7 @@ describe('<RangeSlider />', () => {
     });
 
     expect(
-      rangeSlider.find('.atomikui-range-slider').hasClass('has-error'),
+      rangeSlider.find('[data-test-id="range-slider"]').hasClass('has-error'),
     ).toBe(true);
     expect(rangeSlider.find('Hint')).toBeTruthy();
     expect(rangeSlider.find('Hint').text()).toBe('This field is required');

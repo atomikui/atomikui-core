@@ -14,25 +14,25 @@ describe('<Rating />', () => {
   });
 
   it('Should render 4 stars', () => {
-    expect(rating.find('.atomikui-rating').children().length).toBe(4);
+    expect(rating.find('[data-test-id="rating"]').children().length).toBe(4);
   });
 
   it('Should render 5 stars', () => {
     rating.setProps({ stars: 4.5 });
-    expect(rating.find('.atomikui-rating').children().length).toBe(5);
+    expect(rating.find('[data-test-id="rating"]').children().length).toBe(5);
   });
 
   it('Should not render more than 5 stars', () => {
     rating.setProps({ stars: 20 });
 
-    expect(rating.find('.atomikui-rating').children().length).toBe(5);
+    expect(rating.find('[data-test-id="rating"]').children().length).toBe(5);
   });
 
   it('Should trigger onSelect callback', () => {
     const onSelectSpy = sinon.spy();
     rating.setProps({ onSelect: onSelectSpy });
 
-    rating.find('.atomikui-rating').children().first().simulate('click');
+    rating.find('[data-test-id="rating"]').children().first().simulate('click');
 
     expect(onSelectSpy.withArgs(1).called).toBe(true);
   });
