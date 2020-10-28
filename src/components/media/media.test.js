@@ -18,7 +18,15 @@ describe('<Component />', () => {
     );
   });
 
-  it('Should render without errors', () => {
-    expect(media).toBeTruthy();
+  it('Should render a header section', () => {
+    expect(media.find('[data-test-id="media-hd"]')).toHaveLength(1);
+  });
+
+  it('Should render a body section', () => {
+    expect(media.find('[data-test-id="media-bd"]')).toHaveLength(1);
+  });
+
+  it('Should render a footer section', () => {
+    expect(media.find('[data-test-id="media-ft"]')).toHaveLength(1);
   });
 });

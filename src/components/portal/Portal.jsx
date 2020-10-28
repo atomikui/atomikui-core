@@ -10,7 +10,7 @@ Portal.propTypes = {
   /** Children to be rendered in the target container */
   children: PropTypes.node,
   /** Container where the Children will be rendered */
-  container: PropTypes.oneOfType([PropTypes.object, PropTypes.element]),
+  container: PropTypes.oneOfType([PropTypes.node]),
   /** Disables the portal and renders the children in the current DOM node */
   disabled: PropTypes.bool,
 };

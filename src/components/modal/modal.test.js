@@ -30,7 +30,7 @@ describe('<Modal />', () => {
   });
 
   it('Should call onClose when modal close button is clicked', () => {
-    modal.find('.atomikui-modal__close-button').simulate('click');
+    modal.find('[data-test-id="modal-close-btn"]').simulate('click');
 
     expect(onCloseSpy.called).toBe(true);
   });
@@ -50,7 +50,7 @@ describe('<Modal />', () => {
 
   it('Should call onClose when escape key is pressed', () => {
     modal
-      .find('.atomikui-modal__close-button')
+      .find('[data-test-id="modal-close-btn"]')
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
     expect(onCloseSpy.called).toBe(true);
@@ -68,7 +68,9 @@ describe('<Modal />', () => {
     modal.setProps({ overlayTheme: 'white' });
 
     expect(
-      modal.find('.atomikui-overlay').hasClass('atomikui-overlay--white'),
+      modal
+        .find('[data-test-id="overlay"]')
+        .hasClass('atomikui-overlay--white'),
     ).toBe(true);
   });
 });
