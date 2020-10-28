@@ -36,16 +36,18 @@ describe('<Comment />', () => {
   });
 
   it('Should display an author link', () => {
-    expect(comment.find(['data-test-id="comment-author-link"'])).toBeTruthy();
+    expect(comment.find('[data-test-id="comment-author-link"]')).toBeTruthy();
   });
 
   it('Should not display an author link if authorLink is null', () => {
     comment.setProps({ authorLink: null });
-    expect(comment.find('data-test-id="comment-author-link"')).toHaveLength(0);
+    expect(comment.find('[data-test-id="comment-author-link"]')).toHaveLength(
+      0,
+    );
   });
 
   it('Should display comment replies', () => {
-    expect(comment.find('data-test-id="comment-replies"')).toBeTruthy();
+    expect(comment.find('[data-test-id="comment-replies"]')).toBeTruthy();
   });
 
   it('Should trigger onReply callback', () => {
