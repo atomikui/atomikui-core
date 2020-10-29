@@ -1,5 +1,18 @@
 <br />
 
+### [v0.7.1](https://github.com/atomikui/atomikui-core/compare/v0.7.0...v0.7.1) - 2020-10-29
+
+#### Merged
+
+- Maintenance/issue 61 refactor unit tests with testids [`#63`](https://github.com/atomikui/atomikui-core/pull/63)
+
+#### Commits
+
+- Updates CHANGELOG.md [`7edb03a`](https://github.com/atomikui/atomikui-core/commit/7edb03ab23af170e6ecd46915bd0458a89cbd893)
+- Upgrade to 0.7.1 [`6821feb`](https://github.com/atomikui/atomikui-core/commit/6821feb19e06be46b92e54076cb426fb769862b6)
+
+<hr />
+
 ### [v0.7.0](https://github.com/atomikui/atomikui-core/compare/v0.6.0...v0.7.0) - 2020-10-20
 
 #### Merged
