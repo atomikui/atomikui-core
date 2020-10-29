@@ -12,12 +12,14 @@ describe('<Tab />', () => {
   });
 
   it('Should render a button with text', () => {
-    expect(tab.find('Button')).toBeTruthy();
-    expect(tab.find('Button').children().text()).toBe('Tab One');
+    expect(tab.find('[data-test-id="tab-btn"]')).toBeTruthy();
+    expect(tab.find('[data-test-id="tab-btn"]').children().text()).toBe(
+      'Tab One',
+    );
   });
 
   it('Should render child content', () => {
     tab.setProps({ children: <span>Child</span> });
-    expect(tab.find('.atomikui-tab__content')).toBeTruthy();
+    expect(tab.find('[data-test-id="tab-content"]')).toBeTruthy();
   });
 });

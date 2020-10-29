@@ -119,18 +119,20 @@ describe('<Table />', () => {
   });
 
   it('Should have pagination', () => {
-    expect(table.find('#pagination')).toHaveLength(1);
+    expect(table.find('[data-test-id="table-pagination"]')).toHaveLength(1);
   });
 
   it('Should not have pagination is `isPaginated` is false', () => {
     table.setProps({ isPaginated: false });
-    expect(table.find('#pagination')).toHaveLength(0);
+    expect(table.find('[data-test-id="table-pagination"]')).toHaveLength(0);
   });
 
   test.each(['is-full-width', 'is-fixed-layout', 'is-striped'])(
     'Should set the table modifier: %p',
     (claaaName) => {
-      expect(table.find('.atomikui-table').hasClass(claaaName)).toBeTruthy();
+      expect(
+        table.find('[data-test-id="table"]').hasClass(claaaName),
+      ).toBeTruthy();
     },
   );
 
@@ -139,13 +141,17 @@ describe('<Table />', () => {
   });
 
   it('Should show next and previous pages', () => {
-    table.find('button#to-next').simulate('click');
+    table
+      .find('button[data-test-id="pagination-to-next-btn"]')
+      .simulate('click');
 
     expect(
       table.find('tbody').children().first().children().first().text(),
     ).toBe('6');
 
-    table.find('button#to-previous').simulate('click');
+    table
+      .find('button[data-test-id="pagination-to-previous-btn"]')
+      .simulate('click');
 
     expect(
       table.find('tbody').children().first().children().first().text(),
@@ -153,13 +159,17 @@ describe('<Table />', () => {
   });
 
   it('Should show first and last pages', () => {
-    table.find('button#to-last').simulate('click');
+    table
+      .find('button[data-test-id="pagination-to-last-btn"]')
+      .simulate('click');
 
     expect(
       table.find('tbody').children().first().children().first().text(),
     ).toBe('6');
 
-    table.find('button#to-first').simulate('click');
+    table
+      .find('button[data-test-id="pagination-to-first-btn"]')
+      .simulate('click');
 
     expect(
       table.find('tbody').children().first().children().first().text(),
@@ -168,7 +178,7 @@ describe('<Table />', () => {
 
   it('Should advance when page number is entered in text field', () => {
     table
-      .find('input#go-to-page-textbox')
+      .find('input[data-test-id="pagination-to-page-input"]')
       .simulate('change', { target: { value: '2' } });
 
     expect(
@@ -178,7 +188,7 @@ describe('<Table />', () => {
 
   it('Should advance when page number is entered in text field', () => {
     table
-      .find('input#go-to-page-textbox')
+      .find('input[data-test-id="pagination-to-page-input"]')
       .simulate('change', { target: { value: '2' } });
 
     expect(
@@ -188,7 +198,7 @@ describe('<Table />', () => {
 
   it('Should show more rows when option is selected from dropdown', () => {
     table
-      .find('select#go-to-page-dropdown')
+      .find('select[data-test-id="pagination-to-page-dropdown"]')
       .simulate('change', { target: { value: '10' } });
 
     expect(table.find('tbody').children()).toHaveLength(10);
@@ -196,30 +206,45 @@ describe('<Table />', () => {
 
   it('Should not show more rows if dropdown value is empty', () => {
     table
-      .find('select#go-to-page-dropdown')
+      .find('select[data-test-id="pagination-to-page-dropdown"]')
       .simulate('change', { target: { value: '' } });
 
     expect(table.find('tbody').children()).toHaveLength(5);
   });
 
   it('Should set dropdown options based on number of rows', () => {
-    expect(table.find('select#go-to-page-dropdown').childAt(1).text()).toBe(
-      'Show 5',
-    );
-    expect(table.find('select#go-to-page-dropdown').childAt(2).text()).toBe(
-      'Show 10',
-    );
+    expect(
+      table
+        .find('select[data-test-id="pagination-to-page-dropdown"]')
+        .childAt(1)
+        .text(),
+    ).toBe('Show 5');
+    expect(
+      table
+        .find('select[data-test-id="pagination-to-page-dropdown"]')
+        .childAt(2)
+        .text(),
+    ).toBe('Show 10');
 
     table.setProps({ numRowsPerPage: 4 });
 
-    expect(table.find('select#go-to-page-dropdown').childAt(1).text()).toBe(
-      'Show 4',
-    );
-    expect(table.find('select#go-to-page-dropdown').childAt(2).text()).toBe(
-      'Show 8',
-    );
-    expect(table.find('select#go-to-page-dropdown').childAt(3).text()).toBe(
-      'Show 10',
-    );
+    expect(
+      table
+        .find('select[data-test-id="pagination-to-page-dropdown"]')
+        .childAt(1)
+        .text(),
+    ).toBe('Show 4');
+    expect(
+      table
+        .find('select[data-test-id="pagination-to-page-dropdown"]')
+        .childAt(2)
+        .text(),
+    ).toBe('Show 8');
+    expect(
+      table
+        .find('select[data-test-id="pagination-to-page-dropdown"]')
+        .childAt(3)
+        .text(),
+    ).toBe('Show 10');
   });
 });

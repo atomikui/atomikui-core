@@ -15,6 +15,7 @@ const Tab = ({
   return (
     <Button
       theme="hollow"
+      data-test-id="tab-btn"
       className={classnames('atomikui-tab', className, {
         'is-active': active,
         'atomikui-tab--comparison': comparison,
@@ -23,7 +24,11 @@ const Tab = ({
       {...others}
     >
       {label}
-      {children && <span className="atomikui-tab__content">{children}</span>}
+      {children && (
+        <span className="atomikui-tab__content" data-test-id="tab-content">
+          {children}
+        </span>
+      )}
     </Button>
   );
 };

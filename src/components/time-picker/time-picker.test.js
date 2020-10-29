@@ -23,17 +23,23 @@ describe('<TimePicker />', () => {
   });
 
   it('Should trigger onChange callback', () => {
-    timepicker.find('select#hour-dropdown').simulate('change');
+    timepicker
+      .find('select[data-test-id="timepicker-hour-dropdown"]')
+      .simulate('change');
     expect(onChangeSpy.called).toBeTruthy();
 
-    timepicker.find('select#minutes-dropdown').simulate('change');
+    timepicker
+      .find('select[data-test-id="timepicker-minutes-dropdown"]')
+      .simulate('change');
     expect(onChangeSpy.called).toBeTruthy();
 
-    timepicker.find('select#amOrPm-dropdown').simulate('change');
+    timepicker
+      .find('select[data-test-id="timepicker-amOrPm-dropdown"]')
+      .simulate('change');
     expect(onChangeSpy.called).toBeTruthy();
   });
 
   it('Should display the error text', () => {
-    expect(timepicker.find('div#time-picker-error')).toHaveLength(1);
+    expect(timepicker.find('Hint')).toHaveLength(1);
   });
 });
