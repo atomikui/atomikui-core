@@ -58,6 +58,7 @@ const WalletItem = ({
     ) : (
       cardIcons[paymentType] || (
         <Icon
+          data-test-id="wallet-item-icon"
           className="atomikui-wallet-item__default-icon"
           icon={faCreditCard}
           size="3x"
@@ -78,7 +79,12 @@ const WalletItem = ({
         {isCustomType ? type.icon : icon}
       </div>
       <div className="atomikui-wallet-item__label">
-        <div className="atomikui-wallet-item__label-text">{paymentLabel}</div>
+        <div
+          className="atomikui-wallet-item__label-text"
+          data-test-id="wallet-item-label-text"
+        >
+          {paymentLabel}
+        </div>
         <div className="atomikui-wallet-item__info">
           {endsIn && (
             <>

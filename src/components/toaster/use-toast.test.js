@@ -9,12 +9,12 @@ describe('useToast', () => {
   const App = withToastProvider(() => {
     const toast = useToast();
 
-    const createToast = () => {
-      toast.add('info', 'This is a toast message.');
+    const createToast = (type, message) => {
+      toast.add(type, message);
     };
 
     useEffect(() => {
-      createToast();
+      createToast('info', 'This is a toast message.');
     }, []);
 
     return <button onClick={createToast}>Add Toast</button>;
@@ -27,10 +27,10 @@ describe('useToast', () => {
   });
 
   it('Should create a toaster', () => {
-    expect(app.find('.atomikui-toaster')).toBeTruthy();
+    expect(app.find('[data-test-id="toaster"]')).toHaveLength(1);
   });
 
   it('Should create one toast', () => {
-    expect(app.find('.atomikui-toaster').children()).toBeTruthy();
+    expect(app.find('[data-test-id="toaster"]').children()).toHaveLength(1);
   });
 });

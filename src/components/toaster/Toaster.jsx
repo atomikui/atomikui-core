@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 const Toaster = ({ children, className, position, ...others }) => {
   return (
     <div
+      data-test-id="toaster"
       className={classnames('atomikui-toaster', className, {
         [`atomikui-toaster--${position}`]: position,
       })}
