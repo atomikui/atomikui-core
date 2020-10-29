@@ -32,20 +32,20 @@ describe('<Modal />', () => {
   it('Should call onClose when modal close button is clicked', () => {
     modal.find('[data-test-id="modal-close-btn"]').simulate('click');
 
-    expect(onCloseSpy.called).toBe(true);
+    expect(onCloseSpy.called).toBeTruthy();
   });
 
   it('Should call onClose when modal overlay is clicked', () => {
     modal.find('Overlay').simulate('click');
 
-    expect(onCloseSpy.called).toBe(true);
+    expect(onCloseSpy.called).toBeTruthy();
   });
 
   it('Should not call onClose when modal overlay is clicked if `disableOverlayclick` is true', () => {
     modal.setProps({ disableOverlayclick: true });
     modal.find('Overlay').simulate('click');
 
-    expect(onCloseSpy.called).toBe(false);
+    expect(onCloseSpy.called).toBeFalsy();
   });
 
   it('Should call onClose when escape key is pressed', () => {
@@ -53,7 +53,7 @@ describe('<Modal />', () => {
       .find('[data-test-id="modal-close-btn"]')
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
-    expect(onCloseSpy.called).toBe(true);
+    expect(onCloseSpy.called).toBeTruthy();
   });
 
   it('Should not call onClose callback if overlay click event is disabled', () => {
@@ -61,7 +61,7 @@ describe('<Modal />', () => {
 
     modal.find('Overlay').simulate('click');
 
-    expect(onCloseSpy.called).toBe(false);
+    expect(onCloseSpy.called).toBeFalsy();
   });
 
   it('Should set the overlay theme class', () => {
@@ -71,6 +71,6 @@ describe('<Modal />', () => {
       modal
         .find('[data-test-id="overlay"]')
         .hasClass('atomikui-overlay--white'),
-    ).toBe(true);
+    ).toBeTruthy();
   });
 });

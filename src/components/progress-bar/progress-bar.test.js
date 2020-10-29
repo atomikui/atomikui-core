@@ -26,12 +26,14 @@ describe('<ProgressBar />', () => {
   test.each(['info', 'pill', 'thin', 'animated'])(
     'Should set ProgressBar theme based on prop value: %p',
     (prop) => {
-      expect(progressBar.hasClass(`atomikui-progress-bar--${prop}`)).toBe(true);
+      expect(
+        progressBar.hasClass(`atomikui-progress-bar--${prop}`),
+      ).toBeTruthy();
     },
   );
 
   it('Should set a custom class', () => {
-    expect(progressBar.hasClass('atomikui-progress-bar--custom')).toBe(true);
+    expect(progressBar.hasClass('atomikui-progress-bar--custom')).toBeTruthy();
   });
 
   it('Should set the label', () => {
@@ -48,11 +50,13 @@ describe('<ProgressBar />', () => {
 
   it('Should render dark theme', () => {
     progressBar.setProps({ theme: 'red' });
-    expect(progressBar.hasClass('atomikui-progress-bar--red')).toBe(true);
+    expect(progressBar.hasClass('atomikui-progress-bar--red')).toBeTruthy();
   });
 
   it('Should render light theme', () => {
     progressBar.setProps({ theme: 'red', themeVariant: 'light' });
-    expect(progressBar.hasClass('atomikui-progress-bar--red-light')).toBe(true);
+    expect(
+      progressBar.hasClass('atomikui-progress-bar--red-light'),
+    ).toBeTruthy();
   });
 });

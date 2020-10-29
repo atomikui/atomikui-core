@@ -34,6 +34,6 @@ describe('<Rating />', () => {
 
     rating.find('[data-test-id="rating"]').children().first().simulate('click');
 
-    expect(onSelectSpy.withArgs(1).called).toBe(true);
+    expect(onSelectSpy.withArgs(1).called).toBeTruthy();
   });
 });

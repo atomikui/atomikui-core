@@ -40,7 +40,7 @@ describe('<Dropdown />', () => {
 
     expect(
       dropdown.find('[data-test-id="dropdown"]').hasClass('has-error'),
-    ).toBe(true);
+    ).toBeTruthy();
     expect(dropdown.find('Hint')).toBeTruthy();
     expect(dropdown.find('Hint').text()).toBe('This field is required');
   });

@@ -61,7 +61,7 @@ describe('<DatePicker />', () => {
       datepicker
         .find('[data-test-id="datepicker-calendar"]')
         .hasClass('is-open'),
-    ).toBe(false);
+    ).toBeFalsy();
   });
 
   it('Should handle an invalid date', () => {

@@ -28,6 +28,6 @@ describe('<Tabs />', () => {
   it('Should trigger onChange when a tab is clicked', () => {
     tabs.find('Tab').first().simulate('click');
 
-    expect(onChangeSpy.called).toBe(true);
+    expect(onChangeSpy.called).toBeTruthy();
   });
 });

@@ -25,7 +25,7 @@ describe('<Collapse />', () => {
       collapse
         .find('button[data-test-id="collapse-trigger"]')
         .hasClass('is-open'),
-    ).toBe(true);
+    ).toBeTruthy();
 
     collapse.find('button[data-test-id="collapse-trigger"]').simulate('click');
 
@@ -33,6 +33,6 @@ describe('<Collapse />', () => {
       collapse
         .find('button[data-test-id="collapse-trigger"]')
         .hasClass('is-open'),
-    ).toBe(false);
+    ).toBeFalsy();
   });
 });

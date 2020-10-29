@@ -25,12 +25,12 @@ describe('<WalletItem />', () => {
   });
 
   it('Should set the item as selected', () => {
-    expect(walletItem.hasClass('is-selected')).toBe(true);
+    expect(walletItem.hasClass('is-selected')).toBeTruthy();
   });
 
   it('Should trigger callback on click', () => {
     walletItem.simulate('click');
-    expect(walletItemSpy.called).toBe(true);
+    expect(walletItemSpy.called).toBeTruthy();
   });
 
   it('Should render a default payment method icon if one does not exist', () => {

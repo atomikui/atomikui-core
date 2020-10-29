@@ -15,6 +15,7 @@ const Stepper = ({
   return (
     <nav title={title || `stepper ${shortid.generate()}`}>
       <List
+        data-test-id="stepper"
         className={classnames('atomikui-stepper', className, {
           'atomikui-stepper--inline': inline,
         })}

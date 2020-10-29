@@ -36,20 +36,22 @@ describe('<Stepper />', () => {
     stepper.setProps({ topLabels: true });
     expect(
       stepper
-        .find('.atomikui-step')
+        .find('[data-test-id="step"]')
         .first()
         .hasClass('atomikui-step--top-label'),
-    ).toBe(true);
+    ).toBeTruthy();
   });
 
   it('Should render first child with an anchor tag', () => {
-    const link = stepper.find('.atomikui-step').find('Link');
+    const link = stepper.find('[data-test-id="step"]').find('Link');
     expect(link).toBeTruthy();
   });
 
   it('Should render as inline', () => {
     expect(
-      stepper.find('ul.atomikui-stepper').hasClass('atomikui-stepper--inline'),
-    ).toBe(true);
+      stepper
+        .find('ul[data-test-id="stepper"]')
+        .hasClass('atomikui-stepper--inline'),
+    ).toBeTruthy();
   });
 });

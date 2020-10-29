@@ -75,16 +75,16 @@ describe('<Post />', () => {
 
   it('Should trigger onBookmark callback', () => {
     post.find('button[data-test-id="post-bookmark-btn"]').simulate('click');
-    expect(onBookmarkSpy.withArgs(true).called).toBe(true);
+    expect(onBookmarkSpy.withArgs(true).called).toBeTruthy();
   });
 
   it('Should trigger onReport callback', () => {
     post.find('button[data-test-id="post-report-btn"]').simulate('click');
-    expect(onReportSpy.called).toBe(true);
+    expect(onReportSpy.called).toBeTruthy();
   });
 
   it('Should trigger onComment callback', () => {
     post.find('button[data-test-id="post-comment-btn"]').simulate('click');
-    expect(onCommentSpy.called).toBe(true);
+    expect(onCommentSpy.called).toBeTruthy();
   });
 });

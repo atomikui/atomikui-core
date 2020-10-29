@@ -14,11 +14,11 @@ describe('<Tag />', () => {
 
   it('Should render dark theme', () => {
     tag.setProps({ theme: 'red' });
-    expect(tag.hasClass('atomikui-tag--red')).toBe(true);
+    expect(tag.hasClass('atomikui-tag--red')).toBeTruthy();
   });
 
   it('Should render light theme', () => {
     tag.setProps({ theme: 'red', themeVariant: 'light' });
-    expect(tag.hasClass('atomikui-tag--red-light')).toBe(true);
+    expect(tag.hasClass('atomikui-tag--red-light')).toBeTruthy();
   });
 });

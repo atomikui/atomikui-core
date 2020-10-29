@@ -48,7 +48,7 @@ describe('<Accordion />', () => {
         .find('[data-test-id="accordion-item-trigger"]')
         .first()
         .prop('aria-expanded'),
-    ).toBe(true);
+    ).toBeTruthy();
 
     accordion
       .find('[data-test-id="accordion-item-trigger"]')
@@ -60,6 +60,6 @@ describe('<Accordion />', () => {
         .find('[data-test-id="accordion-item-trigger"]')
         .first()
         .prop('aria-expanded'),
-    ).toBe(false);
+    ).toBeFalsy();
   });
 });

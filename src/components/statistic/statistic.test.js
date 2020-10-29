@@ -16,13 +16,13 @@ describe('<Statistic />', () => {
   it('Should render with the label on the top', () => {
     statistic.setProps({ topLabel: true });
 
-    expect(statistic.hasClass('atomikui-statistic--top-label')).toBe(true);
+    expect(statistic.hasClass('atomikui-statistic--top-label')).toBeTruthy();
   });
 
   it('Should render horizontal format', () => {
     statistic.setProps({ horizontal: true });
 
-    expect(statistic.hasClass('atomikui-statistic--horizontal')).toBe(true);
+    expect(statistic.hasClass('atomikui-statistic--horizontal')).toBeTruthy();
   });
 
   it('Should render with an icon', () => {

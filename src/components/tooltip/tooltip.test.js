@@ -44,7 +44,7 @@ describe('<Tooltip />', () => {
       document
         .querySelector('[data-test-id="tooltip"]')
         .classList.contains('atomikui-tooltip--warning'),
-    ).toBe(true);
+    ).toBeTruthy();
   });
 
   test.each([
@@ -66,7 +66,7 @@ describe('<Tooltip />', () => {
         document
           .querySelector('[data-test-id="tooltip"]')
           .classList.contains(`atomikui-tooltip--align-${align}`),
-      ).toBe(true);
+      ).toBeTruthy();
     },
   );
 

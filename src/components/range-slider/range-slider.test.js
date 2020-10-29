@@ -80,7 +80,7 @@ describe('<RangeSlider />', () => {
       .find('[data-test-id="range-slider-input"]')
       .simulate('change', { target: { value: '900' } });
 
-    expect(onChangeSpy.withArgs('900').called).toBe(true);
+    expect(onChangeSpy.withArgs('900').called).toBeTruthy();
   });
 
   it('Should trigger onChange callback when tick label is clicked', () => {
@@ -89,7 +89,7 @@ describe('<RangeSlider />', () => {
       .first()
       .simulate('focus');
 
-    expect(onChangeSpy.withArgs('100').called).toBe(true);
+    expect(onChangeSpy.withArgs('100').called).toBeTruthy();
   });
 
   it('Should handle an error', () => {
@@ -100,7 +100,7 @@ describe('<RangeSlider />', () => {
 
     expect(
       rangeSlider.find('[data-test-id="range-slider"]').hasClass('has-error'),
-    ).toBe(true);
+    ).toBeTruthy();
     expect(rangeSlider.find('Hint')).toBeTruthy();
     expect(rangeSlider.find('Hint').text()).toBe('This field is required');
   });

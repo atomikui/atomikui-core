@@ -14,6 +14,6 @@ describe('<Wallet />', () => {
 
   it('Should set Wallet layout as grid', () => {
     wallet.setProps({ isGrid: true });
-    expect(wallet.hasClass('atomikui-wallet--grid')).toBe(true);
+    expect(wallet.hasClass('atomikui-wallet--grid')).toBeTruthy();
   });
 });

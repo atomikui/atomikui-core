@@ -14,6 +14,7 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
     <ListItem
       key={shortid.generate()}
       aria-current={isActive}
+      data-test-id="step"
       className={classnames('atomikui-step', {
         'is-complete': isComplete,
         'is-active': isActive,

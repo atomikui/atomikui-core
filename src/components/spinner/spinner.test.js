@@ -14,16 +14,16 @@ describe('<Spinner />', () => {
   });
 
   it('Should set a dark theme class', () => {
-    expect(spinner.hasClass('atomikui-spinner--red')).toBe(true);
+    expect(spinner.hasClass('atomikui-spinner--red')).toBeTruthy();
   });
 
   it('Should set a light theme class', () => {
     spinner.setProps({ themeVariant: 'light' });
-    expect(spinner.hasClass('atomikui-spinner--red-light')).toBe(true);
+    expect(spinner.hasClass('atomikui-spinner--red-light')).toBeTruthy();
   });
 
   test.each(sizes)('Should set the size modifier .spinner--%p', (size) => {
     spinner.setProps({ size });
-    expect(spinner.hasClass(`atomikui-spinner--${size}`)).toBe(true);
+    expect(spinner.hasClass(`atomikui-spinner--${size}`)).toBeTruthy();
   });
 });

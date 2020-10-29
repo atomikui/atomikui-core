@@ -25,7 +25,7 @@ describe('<Alert />', () => {
 
   it('Should trigger onClose callabck', () => {
     alert.find('Button').simulate('click');
-    expect(onCloseSpy.called).toBe(true);
+    expect(onCloseSpy.called).toBeTruthy();
   });
 
   it('Should render the appropriate aria-live attribute value', () => {
