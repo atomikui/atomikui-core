@@ -26,7 +26,7 @@ const Tooltip = ({
           [`atomikui-tooltip--${theme}`]: theme,
           'has-pointer-events': hasPointerEvents,
         })}
-        data-testid="tooltip"
+        data-test-id="tooltip"
         role="tooltip"
       >
         <div className="atomikui-tooltip__content" id={`${tooltipId}_text`}>

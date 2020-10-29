@@ -43,9 +43,15 @@ const AccordionItem = ({
         aria-expanded={isExpanded}
         aria-controls={panelId}
         className="atomikui-accordion-item__trigger"
+        data-test-id="accordion-item-trigger"
         onClick={handleOnClick}
       >
-        <span className="atomikui-accordion-item__trigger__label">{label}</span>
+        <span
+          className="atomikui-accordion-item__trigger__label"
+          data-test-id="accordion-item-trigger-label"
+        >
+          {label}
+        </span>
         <Icon
           className="atomikui-accordion-item__trigger__icon"
           icon={faAngleDown}

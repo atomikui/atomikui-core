@@ -37,7 +37,12 @@ const ProgressBar = ({
         aria-valuemax="100"
         style={{ width: `${now}%` }}
       >
-        <span className="atomikui-progress-bar__label">{label}</span>
+        <span
+          className="atomikui-progress-bar__label"
+          data-test-id="progress-bar-label"
+        >
+          {label}
+        </span>
       </div>
     </div>
   );

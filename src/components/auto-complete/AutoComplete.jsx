@@ -35,7 +35,11 @@ const AutoComplete = forwardRef(
               {...getRootProps({}, { suppressRefError: true })}
             >
               <FormField ref={ref} {...getInputProps()} {...others} />
-              <ul className="atomikui-auto-complete__list" {...getMenuProps()}>
+              <ul
+                className="atomikui-auto-complete__list"
+                data-test-id="autocomplete-list"
+                {...getMenuProps()}
+              >
                 {isOpen
                   ? itemList
                       .filter((item) => {

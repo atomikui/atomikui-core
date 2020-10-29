@@ -71,6 +71,7 @@ const Table = ({
       <div style={{ width: '100%', overflow: 'auto' }}>
         <table
           {...getTableProps()}
+          data-test-id="table"
           className={classnames('atomikui-table', className, {
             'is-full-width': isFullWidth,
             'is-fixed-layout': isFixedLayout,
@@ -122,11 +123,11 @@ const Table = ({
       </div>
       {isPaginated && (
         <div
-          id="pagination"
+          data-test-id="table-pagination"
           className="margin-top-16 margin-bottom-2 flex flex--align-middle flex--justify-flex-end flex--hr-8"
         >
           <Button
-            id="to-first"
+            data-test-id="pagination-to-first-btn"
             theme="blue"
             size="md"
             onClick={() => {
@@ -141,7 +142,7 @@ const Table = ({
             />
           </Button>
           <Button
-            id="to-previous"
+            data-test-id="pagination-to-previous-btn"
             theme="blue"
             size="md"
             onClick={() => {
@@ -156,7 +157,7 @@ const Table = ({
             />
           </Button>
           <Button
-            id="to-next"
+            data-test-id="pagination-to-next-btn"
             theme="blue"
             size="md"
             onClick={() => {
@@ -171,7 +172,7 @@ const Table = ({
             />
           </Button>
           <Button
-            id="to-last"
+            data-test-id="pagination-to-last-btn"
             theme="blue"
             size="md"
             onClick={() => {
@@ -194,7 +195,7 @@ const Table = ({
           <span className="flex flex--align-middle">
             <span>| Go to page:</span>
             <FormField
-              id="go-to-page-textbox"
+              data-test-id="pagination-to-page-input"
               aria-label="Enter page number"
               className="margin-left-4"
               style={{ width: '50px' }}
@@ -208,7 +209,7 @@ const Table = ({
             />
           </span>
           <Dropdown
-            id="go-to-page-dropdown"
+            data-test-id="pagination-to-page-dropdown"
             aria-label="Select page range"
             theme="blue"
             style={{ width: '130px' }}

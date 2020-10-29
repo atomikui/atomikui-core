@@ -38,9 +38,9 @@ describe('<Dropdown />', () => {
   it('Should handle an error', () => {
     dropdown.setProps({ hasError: true, errorText: 'This field is required' });
 
-    expect(dropdown.find('.atomikui-dropdown').hasClass('has-error')).toBe(
-      true,
-    );
+    expect(
+      dropdown.find('[data-test-id="dropdown"]').hasClass('has-error'),
+    ).toBeTruthy();
     expect(dropdown.find('Hint')).toBeTruthy();
     expect(dropdown.find('Hint').text()).toBe('This field is required');
   });
@@ -54,14 +54,16 @@ describe('<Dropdown />', () => {
 
   it('Should set color themes', () => {
     expect(
-      dropdown.find('.atomikui-dropdown').hasClass('atomikui-dropdown--red'),
+      dropdown
+        .find('[data-test-id="dropdown"]')
+        .hasClass('atomikui-dropdown--red'),
     ).toBeTruthy();
 
     dropdown.setProps({ themeVariant: 'light' });
 
     expect(
       dropdown
-        .find('.atomikui-dropdown')
+        .find('[data-test-id="dropdown"]')
         .hasClass('atomikui-dropdown--red-light'),
     ).toBeTruthy();
   });

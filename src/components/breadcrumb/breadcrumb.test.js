@@ -22,11 +22,11 @@ describe('<Breadcrumb />', () => {
   });
 
   it('Should render 4 children', () => {
-    expect(breadcrumb.find('Link').length).toBe(3);
+    expect(breadcrumb.find('Link')).toHaveLength(3);
   });
 
   it('Should should not render a Link for the active item', () => {
     const link = breadcrumb.find('Link').last().dive().find('Link');
-    expect(link.length).toBe(0);
+    expect(link).toHaveLength(0);
   });
 });

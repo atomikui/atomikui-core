@@ -25,7 +25,7 @@ describe('<Alert />', () => {
 
   it('Should trigger onClose callabck', () => {
     alert.find('Button').simulate('click');
-    expect(onCloseSpy.called).toBe(true);
+    expect(onCloseSpy.called).toBeTruthy();
   });
 
   it('Should render the appropriate aria-live attribute value', () => {
@@ -40,7 +40,7 @@ describe('<Alert />', () => {
     'Should render an %p Icon',
     (theme) => {
       alert.setProps({ theme });
-      expect(alert.find(`[data-testid="icon-${theme}"]`)).toBeTruthy();
+      expect(alert.find(`[data-test-id="icon-${theme}"]`)).toHaveLength(1);
     },
   );
 });

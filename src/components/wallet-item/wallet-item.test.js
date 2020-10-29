@@ -25,18 +25,18 @@ describe('<WalletItem />', () => {
   });
 
   it('Should set the item as selected', () => {
-    expect(walletItem.hasClass('is-selected')).toBe(true);
+    expect(walletItem.hasClass('is-selected')).toBeTruthy();
   });
 
   it('Should trigger callback on click', () => {
     walletItem.simulate('click');
-    expect(walletItemSpy.called).toBe(true);
+    expect(walletItemSpy.called).toBeTruthy();
   });
 
   it('Should render a default payment method icon if one does not exist', () => {
     walletItem.setProps({ type: 'Foobar' });
     expect(
-      walletItem.find('.atomikui-wallet-item__icon').children(),
+      walletItem.find('[data-test-id="wallet-item-icon"]').children(),
     ).toBeTruthy();
   });
 
@@ -53,7 +53,7 @@ describe('<WalletItem />', () => {
     );
 
     expect(
-      customWalletItem.find('.atomikui-wallet-item__label-text').text(),
+      customWalletItem.find('[data-test-id="wallet-item-label-text"]').text(),
     ).toBe('My Piggy Bank');
   });
 });

@@ -5,7 +5,9 @@ const SwitchPanel = ({ children, className, label, ...others }) => {
   return (
     <div className="atomikui-switch-panel" {...others}>
       <div className="atomikui-switch-panel__hd">{label}</div>
-      <div className="atomikui-switch-panel__bd">{children}</div>
+      <div className="atomikui-switch-panel__bd" data-test-id="switch-panel-bd">
+        {children}
+      </div>
     </div>
   );
 };

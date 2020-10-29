@@ -17,15 +17,15 @@ describe('<Hint />', () => {
   });
 
   it('Should render children', () => {
-    expect(hint).toBeTruthy();
+    expect(hint).toHaveLength(1);
     expect(hint.text()).toBe('This is a hint');
   });
 
   it('Should render theme based on `type` prop', () => {
-    expect(hint.hasClass('atomikui-hint--error')).toBe(true);
+    expect(hint.hasClass('atomikui-hint--error')).toBeTruthy();
   });
 
   it('Should render with a custom class', () => {
-    expect(hint.hasClass('atomikui-hint--custon-class')).toBe(true);
+    expect(hint.hasClass('atomikui-hint--custon-class')).toBeTruthy();
   });
 });

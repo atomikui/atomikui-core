@@ -52,12 +52,14 @@ const RangeSlider = forwardRef(
       <>
         {label && <Label htmlFor={uid}>{label}</Label>}
         <div
+          data-test-id="range-slider"
           className={classnames('atomikui-range-slider', className, {
             'has-error': hasError,
             'is-disabled': disabled,
           })}
         >
           <input
+            data-test-id="range-slider-input"
             ref={mergeRefs([sliderRef, ref])}
             id={uid}
             aria-valuemin={min}
@@ -84,6 +86,7 @@ const RangeSlider = forwardRef(
                   <button
                     type="button"
                     key={shortid.generate()}
+                    data-test-id="range-slider-tick"
                     className="atomikui-range-slider__ticks__tick"
                     {...(!disabled && {
                       onFocus: () => {
@@ -92,6 +95,7 @@ const RangeSlider = forwardRef(
                     })}
                   >
                     <span
+                      data-test-id="range-slider-ticks-label"
                       className={classnames(
                         'atomikui-range-slider__ticks__label',
                         {

@@ -25,7 +25,7 @@ describe('<SwitchPanel />', () => {
 
   it('Should render children', () => {
     expect(
-      switchPanel.find('.atomikui-switch-panel__bd').children().length,
-    ).toBe(3);
+      switchPanel.find('[data-test-id="switch-panel-bd"]').children(),
+    ).toHaveLength(3);
   });
 });

@@ -18,14 +18,14 @@ describe('<Card />', () => {
   });
 
   it('Should render a header', () => {
-    expect(card.find('.atomikui-card__header')).toBeTruthy();
+    expect(card.find('[data-test-id="card-header"]')).toHaveLength(1);
   });
 
   it('Should render a body', () => {
-    expect(card.find('.atomikui-card__body')).toBeTruthy();
+    expect(card.find('[data-test-id="card-body"]')).toHaveLength(1);
   });
 
   it('Should render a footer', () => {
-    expect(card.find('.atomikui-card__footer')).toBeTruthy();
+    expect(card.find('[data-test-id="card-footer"]')).toHaveLength(1);
   });
 });

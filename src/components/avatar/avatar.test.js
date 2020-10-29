@@ -11,7 +11,7 @@ describe('<Avatar />', () => {
       <Avatar src="/profile-image.png" alt="Alan Smith" label="Avatar Label" />,
     );
 
-    const label = avatar.find('.atomikui-avatar__label');
+    const label = avatar.find('[data-test-id="avatar-label"]');
 
     expect(label).toBeTruthy();
   });
@@ -37,7 +37,7 @@ describe('<Avatar />', () => {
 
     expect(
       avatar
-        .find('.atomikui-avatar__content')
+        .find('[data-test-id="avatar-content"]')
         .hasClass('atomikui-avatar__content--red'),
     ).toBeTruthy();
   });
@@ -55,7 +55,7 @@ describe('<Avatar />', () => {
 
     expect(
       avatar
-        .find('.atomikui-avatar__content')
+        .find('[data-test-id="avatar-content"]')
         .hasClass('atomikui-avatar__content--red-light'),
     ).toBeTruthy();
   });

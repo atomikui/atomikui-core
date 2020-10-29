@@ -16,7 +16,11 @@ const Accordion = ({
   }, []);
 
   return (
-    <div className={classnames('atomikui-accordion', classnames)} {...others}>
+    <div
+      className={classnames('atomikui-accordion', classnames)}
+      data-test-id="accordion"
+      {...others}
+    >
       {Children.map(children, (child, index) => {
         return cloneElement(child, {
           ...(!multipleOpen && {

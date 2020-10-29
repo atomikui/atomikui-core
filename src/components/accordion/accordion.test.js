@@ -32,32 +32,34 @@ describe('<Accordion />', () => {
   });
 
   it('Should should render 3 children', () => {
-    expect(accordion.find('.atomikui-accordion').children().length).toBe(3);
+    expect(
+      accordion.find('[data-test-id="accordion"]').children(),
+    ).toHaveLength(3);
   });
 
   it('Should handle the click event if `multipleOpen` prop is false', () => {
     accordion
-      .find('.atomikui-accordion-item__trigger')
+      .find('[data-test-id="accordion-item-trigger"]')
       .first()
       .simulate('click');
 
     expect(
       accordion
-        .find('.atomikui-accordion-item__trigger')
+        .find('[data-test-id="accordion-item-trigger"]')
         .first()
         .prop('aria-expanded'),
-    ).toBe(true);
+    ).toBeTruthy();
 
     accordion
-      .find('.atomikui-accordion-item__trigger')
+      .find('[data-test-id="accordion-item-trigger"]')
       .first()
       .simulate('click');
 
     expect(
       accordion
-        .find('.atomikui-accordion-item__trigger')
+        .find('[data-test-id="accordion-item-trigger"]')
         .first()
         .prop('aria-expanded'),
-    ).toBe(false);
+    ).toBeFalsy();
   });
 });

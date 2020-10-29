@@ -46,24 +46,24 @@ describe('<FileUpload />', () => {
   it('Should trigger onChange callback when file input value changes', () => {
     fileUpload.find('input').simulate('change');
 
-    expect(onChangeSpy.called).toBe(true);
+    expect(onChangeSpy.called).toBeTruthy();
   });
 
   it('Should trigger onChange callback on file drop', () => {
     fileUpload
-      .find('.atomikui-file-upload__wrapper')
+      .find('[data-test-id="file-upload-wrapper"]')
       .simulate('drop', onDropEvent);
 
-    expect(onChangeSpy.called).toBe(true);
+    expect(onChangeSpy.called).toBeTruthy();
   });
 
   it('Should prevent call `preventDefault` and `stopPropagation` onDragOver', () => {
     fileUpload
-      .find('.atomikui-file-upload__wrapper')
+      .find('[data-test-id="file-upload-wrapper"]')
       .simulate('dragOver', dragOverEvent);
 
-    expect(preventDefaultSpy.called).toBe(true);
-    expect(stopPropagationSpy.called).toBe(true);
+    expect(preventDefaultSpy.called).toBeTruthy();
+    expect(stopPropagationSpy.called).toBeTruthy();
   });
 
   it('Should display the filename', () => {
@@ -71,7 +71,7 @@ describe('<FileUpload />', () => {
 
     expect(
       fileUpload
-        .find('.atomikui-file-upload__wrapper')
+        .find('[data-test-id="file-upload-wrapper"]')
         .children()
         .last()
         .text(),
@@ -81,7 +81,7 @@ describe('<FileUpload />', () => {
   it('Should render a list of files if `dragAndDrop` prop is `true`', () => {
     fileUpload.setProps({ dragAndDrop: true });
     fileUpload
-      .find('.atomikui-file-upload__wrapper')
+      .find('[data-test-id="file-upload-wrapper"]')
       .simulate('drop', onDropEvent);
 
     expect(fileUpload.find('List').children()).toBeTruthy();
@@ -90,9 +90,9 @@ describe('<FileUpload />', () => {
   it('Should render error class', () => {
     fileUpload.setProps({ hasError: true });
 
-    expect(fileUpload.find('.atomikui-file-upload').hasClass('has-error')).toBe(
-      true,
-    );
+    expect(
+      fileUpload.find('[data-test-id="file-upload"]').hasClass('has-error'),
+    ).toBeTruthy();
   });
 
   it('Should render error hint with text', () => {

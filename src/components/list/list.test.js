@@ -21,7 +21,7 @@ describe('<List />', () => {
   });
 
   it('Should render children', () => {
-    expect(list.find('ul').children().length).toBe(4);
+    expect(list.find('ul').children()).toHaveLength(4);
   });
 
   it('Should render an <ol /> if type is "ordered"', () => {
@@ -36,8 +36,10 @@ describe('<List />', () => {
       list.setProps({ type: modifier });
 
       expect(
-        list.find('.atomikui-list').hasClass(`atomikui-list--${modifier}`),
-      ).toBe(true);
+        list
+          .find('[data-test-id="list"]')
+          .hasClass(`atomikui-list--${modifier}`),
+      ).toBeTruthy();
     },
   );
 
@@ -48,9 +50,9 @@ describe('<List />', () => {
 
       expect(
         list
-          .find('.atomikui-list')
+          .find('[data-test-id="list"]')
           .hasClass(`atomikui-list--align-${modifier}`),
-      ).toBe(true);
+      ).toBeTruthy();
     },
   );
 

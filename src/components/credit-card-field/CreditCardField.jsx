@@ -177,6 +177,7 @@ const CreditCardField = ({
           {creditCardIcons[cardType]}
           <FormField
             {...cardNumber}
+            data-test-id="credit-card-number"
             aria-label="Credit Card Number"
             className={classnames({
               'display-none': cardFieldHidden,
@@ -207,6 +208,7 @@ const CreditCardField = ({
             })}
           >
             <FormField
+              data-test-id="credit-card-expiry"
               aria-label="Expiration Date"
               {...cardExpiry}
               mask="99/99"
@@ -224,6 +226,7 @@ const CreditCardField = ({
               >
                 <FormField
                   {...cardCvc}
+                  data-test-id="credit-card-cvc"
                   aria-label="CVC"
                   onKeyDown={(e) => {
                     return enforceMaxLength(3, e);
@@ -244,6 +247,7 @@ const CreditCardField = ({
               >
                 <FormField
                   {...cardZip}
+                  data-test-id="credit-card-zip"
                   aria-label="ZIP Code"
                   onKeyDown={(e) => {
                     return enforceMaxLength(5, e);

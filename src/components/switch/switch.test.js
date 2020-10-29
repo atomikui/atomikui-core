@@ -25,21 +25,23 @@ describe('<Switch />', () => {
   it('Should trigger onChange callback', () => {
     component.find('input').simulate('change', { target: { checked: false } });
 
-    expect(onChangeSpy.called).toBe(true);
+    expect(onChangeSpy.called).toBeTruthy();
   });
 
   it('Switch toggle should not have an onClick event if disabled', () => {
     component.setProps({ disabled: true });
 
     expect(
-      component.find('.atomikui-switch__toggle').prop('onClick'),
+      component.find('[data-test-id="switch-toggle"]').prop('onClick'),
     ).toBeFalsy();
   });
 
   it('Should handle an error', () => {
     component.setProps({ hasError: true, errorText: 'This field is required' });
 
-    expect(component.find('.atomikui-switch').hasClass('has-error')).toBe(true);
+    expect(
+      component.find('[data-test-id="switch"]').hasClass('has-error'),
+    ).toBeTruthy();
     expect(component.find('Hint')).toBeTruthy();
     expect(component.find('Hint').text()).toBe('This field is required');
   });

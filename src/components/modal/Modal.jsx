@@ -73,6 +73,7 @@ const Modal = ({
           <div className="atomikui-modal__header">
             <div className="atomikui-modal__title">{title}</div>
             <button
+              data-test-id="modal-close-btn"
               className="atomikui-modal__close-button"
               aria-label="close-button"
               onClick={onClose}

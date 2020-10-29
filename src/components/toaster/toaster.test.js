@@ -21,6 +21,6 @@ describe('<Toaster />', () => {
   });
 
   it('Should set a position modifier class', () => {
-    expect(toaster.hasClass('atomikui-toaster--top-center')).toBe(true);
+    expect(toaster.hasClass('atomikui-toaster--top-center')).toBeTruthy();
   });
 });

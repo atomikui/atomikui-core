@@ -17,19 +17,19 @@ describe('<Drawer />', () => {
 
   it('Should call onClose when escape key is pressed', () => {
     drawer
-      .find('.atomikui-drawer')
+      .find('[data-test-id="drawer"]')
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
-    expect(onCloseSpy.called).toBe(true);
+    expect(onCloseSpy.called).toBeTruthy();
   });
 
   it('Should call onClose when overlay is clicked', () => {
     drawer.find('Overlay').simulate('click');
 
-    expect(onCloseSpy.called).toBe(true);
+    expect(onCloseSpy.called).toBeTruthy();
   });
 
   it('Should set the left position of the drawer', () => {
-    expect(drawer.find('.atomikui-drawer').props().style.left).toBe(0);
+    expect(drawer.find('[data-test-id="drawer"]').props().style.left).toBe(0);
   });
 });

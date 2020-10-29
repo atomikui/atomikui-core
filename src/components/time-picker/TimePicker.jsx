@@ -48,7 +48,7 @@ const TimePicker = ({
         {...others}
       >
         <select
-          id="hour-dropdown"
+          data-test-id="timepicker-hour-dropdown"
           aria-label="select the hour of the day"
           aria-describedby="time-picker-error"
           value={hourValue}
@@ -66,7 +66,7 @@ const TimePicker = ({
         </select>
         <span>:</span>
         <select
-          id="minutes-dropdown"
+          data-test-id="timepicker-minutes-dropdown"
           aria-label="select the minute of the hour"
           aria-describedby="time-picker-error"
           value={minuteValue}
@@ -83,7 +83,7 @@ const TimePicker = ({
           })}
         </select>
         <select
-          id="amOrPm-dropdown"
+          data-test-id="timepicker-amOrPm-dropdown"
           aria-label="select AM or PM"
           aria-describedby="time-picker-error"
           value={amOrPmValue}
@@ -96,7 +96,7 @@ const TimePicker = ({
         </select>
       </div>
       {hasError && (
-        <Hint id="time-picker-error" type="error" style={{ marginTop: '3px' }}>
+        <Hint type="error" style={{ marginTop: '3px' }}>
           {errorText}
         </Hint>
       )}

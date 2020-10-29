@@ -14,11 +14,11 @@ describe('<Badge />', () => {
 
   it('Should render theme variants', () => {
     badge.setProps({ theme: 'red' });
-    expect(badge.hasClass('atomikui-badge--red')).toBe(true);
+    expect(badge.hasClass('atomikui-badge--red')).toBeTruthy();
   });
 
   it('Should render theme variants', () => {
     badge.setProps({ theme: 'red', themeVariant: 'light' });
-    expect(badge.hasClass('atomikui-badge--red-light')).toBe(true);
+    expect(badge.hasClass('atomikui-badge--red-light')).toBeTruthy();
   });
 });

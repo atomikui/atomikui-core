@@ -20,11 +20,11 @@ describe('<ChatMessage />', () => {
 
   it('Should render the timestamp', () => {
     expect(
-      chatMessage.find('.atomikui-chat-message__item__timestamp').text(),
+      chatMessage.find('[data-test-id="chat-message-timestamp"]').text(),
     ).toBe('Tuesday, March 10, 2020 3:36 PM');
   });
 
   it('Should add a modifier class if same origin', () => {
-    expect(chatMessage.hasClass('is-outgoing')).toBe(true);
+    expect(chatMessage.hasClass('is-outgoing')).toBeTruthy();
   });
 });

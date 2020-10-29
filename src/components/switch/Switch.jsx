@@ -32,6 +32,7 @@ const Switch = forwardRef(
       <>
         <div
           htmlFor={uid}
+          data-test-id="switch"
           className={classnames('atomikui-switch', className, {
             'is-checked': checked,
             'is-disabled': disabled,
@@ -56,6 +57,7 @@ const Switch = forwardRef(
           <button
             type="button"
             aria-label="toggle switch"
+            data-test-id="switch-toggle"
             className="atomikui-switch__toggle"
             tabIndex="0"
             onClick={!disabled ? onChange : undefined}

@@ -115,6 +115,7 @@ const ChatWindow = ({
           />
         </div>
         <button
+          data-test-id="chat-window-close-btn"
           className="atomikui-chat-window__close-btn"
           onClick={() => {
             return onClose();
@@ -137,6 +138,7 @@ const ChatWindow = ({
       </div>
       <div className="atomikui-chat-window__footer">
         <textarea
+          data-test-id="chat-window-user-input"
           aria-label="Enter a Message"
           id="chat-message-input"
           ref={userInputRef}
@@ -148,6 +150,7 @@ const ChatWindow = ({
           onKeyDown={handleKeyDown}
         />
         <Button
+          data-test-id="chat-window-send-btn"
           className="atomikui-chat-window__send-btn"
           onClick={() => {
             return handleSubmit();

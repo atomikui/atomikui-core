@@ -21,9 +21,17 @@ const Media = ({
       })}
       {...others}
     >
-      <div className="atomikui-media__hd">{header}</div>
-      <div className="atomikui-media__bd">{body}</div>
-      {footer && <div className="atomikui-media__ft">{footer}</div>}
+      <div className="atomikui-media__hd" data-test-id="media-hd">
+        {header}
+      </div>
+      <div className="atomikui-media__bd" data-test-id="media-bd">
+        {body}
+      </div>
+      {footer && (
+        <div className="atomikui-media__ft" data-test-id="media-ft">
+          {footer}
+        </div>
+      )}
     </div>
   );
 };

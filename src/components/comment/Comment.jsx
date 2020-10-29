@@ -23,11 +23,18 @@ const Comment = ({
       </div>
       <div className="atomikui-comment__content">
         <div className="atomikui-comment__title">
-          {authorLink ? <Link href={authorLink}>{author}</Link> : author}
+          {authorLink ? (
+            <Link data-test-id="comment-author-link" href={authorLink}>
+              {author}
+            </Link>
+          ) : (
+            author
+          )}
         </div>
         <div className="atomikui-comment__metadata">{metadata}</div>
         <div className="atomikui-comment__text">{children}</div>
         <Button
+          data-test-id="comment-reply-btn"
           className="atomikui-comment__reply-btn"
           theme="link"
           onClick={onReply}
@@ -35,7 +42,12 @@ const Comment = ({
           Reply
         </Button>
         {!!replies.length && (
-          <div className="atomikui-comment__replies">{replies}</div>
+          <div
+            className="atomikui-comment__replies"
+            data-test-id="comment-replies"
+          >
+            {replies}
+          </div>
         )}
       </div>
     </div>

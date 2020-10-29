@@ -22,24 +22,30 @@ describe('<AccordionItem />', () => {
 
   it('Should render a label', () => {
     expect(
-      accordionItem.find('.atomikui-accordion-item__trigger__label').text(),
+      accordionItem
+        .find('[data-test-id="accordion-item-trigger-label"]')
+        .text(),
     ).toBe('Accordion Heading 1');
   });
 
   it('Should set the state internally', () => {
-    accordionItem.find('button').simulate('click');
+    accordionItem
+      .find('[data-test-id="accordion-item-trigger"]')
+      .simulate('click');
 
     expect(
       accordionItem
-        .find('.atomikui-accordion-item__trigger')
+        .find('[data-test-id="accordion-item-trigger"]')
         .prop('aria-expanded'),
-    ).toBe(true);
+    ).toBeTruthy();
   });
 
   it('Should trigger handleClick callback', () => {
     accordionItem.setProps({ handleClick: handleClickSpy });
-    accordionItem.find('button').simulate('click');
+    accordionItem
+      .find('[data-test-id="accordion-item-trigger"]')
+      .simulate('click');
 
-    expect(handleClickSpy.called).toBe(true);
+    expect(handleClickSpy.called).toBeTruthy();
   });
 });

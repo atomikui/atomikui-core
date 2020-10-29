@@ -60,13 +60,17 @@ const FormField = forwardRef(
 
     return (
       <div
+        data-test-id="formfield"
         className={classnames('atomikui-formfield', className, {
           'has-error': hasError,
           'atomikui-formfield--borderless': borderless,
         })}
       >
         {label && (
-          <div className="atomikui-formfield__label">
+          <div
+            data-test-id="formfield-label"
+            className="atomikui-formfield__label"
+          >
             <Label htmlFor={uid}>{label}</Label>
           </div>
         )}

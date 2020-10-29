@@ -24,7 +24,7 @@ describe('<Overlay />', () => {
 
   it('Should set a color theme class', () => {
     overlay.setProps({ theme: 'blue' });
-    expect(overlay.hasClass('atomikui-overlay--blue')).toBe(true);
+    expect(overlay.hasClass('atomikui-overlay--blue')).toBeTruthy();
   });
 
   it('Should add onClick to all children', () => {
@@ -33,6 +33,6 @@ describe('<Overlay />', () => {
 
   it('Should trigger "stopPropagation" on child click', () => {
     overlay.children().first().simulate('click', event);
-    expect(stopPropagationSpy.called).toBe(true);
+    expect(stopPropagationSpy.called).toBeTruthy();
   });
 });

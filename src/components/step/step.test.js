@@ -22,6 +22,6 @@ describe('<Step />', () => {
 
   it('Should render a span if isComplete is false', () => {
     step.setProps({ isComplete: false });
-    expect(step.find('span.atomikui-step__number')).toBeTruthy();
+    expect(step.find('[data-test-id="step-number"]')).toBeTruthy();
   });
 });

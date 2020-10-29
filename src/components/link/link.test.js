@@ -17,7 +17,7 @@ describe('<Link />', () => {
   });
 
   it('Should render children', () => {
-    expect(link).toBeTruthy();
+    expect(link).toHaveLength(1);
     expect(link.text()).toBe('This is a link');
   });
 
@@ -25,7 +25,11 @@ describe('<Link />', () => {
     expect(link.prop('href')).toBe('/home');
   });
 
-  it('Should render rel="noopener noreferrer if target="_blank""', () => {
+  it('Should conditionally apply rel="noopener noreferrer" attribute', () => {
     expect(link.prop('rel')).toBe('noopener noreferrer');
+
+    link.setProps({ target: null });
+
+    expect(link.prop('rel')).toBeNull();
   });
 });

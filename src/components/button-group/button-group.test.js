@@ -38,7 +38,7 @@ describe('<ButtonGroup />', () => {
 
     expect(
       buttonGroup
-        .find('.atomikui-button-group')
+        .find('[data-test-id="button-group"]')
         .hasClass('atomikui-button-group--red'),
     ).toBeTruthy();
 
@@ -46,7 +46,7 @@ describe('<ButtonGroup />', () => {
 
     expect(
       buttonGroup
-        .find('.atomikui-button-group')
+        .find('[data-test-id="button-group"]')
         .hasClass('atomikui-button-group--red-light'),
     ).toBeTruthy();
   });

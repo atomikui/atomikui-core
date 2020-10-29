@@ -19,6 +19,6 @@ describe('<Label />', () => {
   });
 
   it('Should render with a custom class', () => {
-    expect(label.hasClass('atomikui-label--custon-class')).toBe(true);
+    expect(label.hasClass('atomikui-label--custon-class')).toBeTruthy();
   });
 });

@@ -30,30 +30,30 @@ describe('<Header />', () => {
   });
 
   it('Should toggle .is-open class when menu button is clicked', () => {
-    header.find('button.atomikui-header__menu-toggle').simulate('click');
+    header.find('[data-test-id="header-menu-toggle"]').simulate('click');
     expect(
-      header.find('nav.atomikui-header__nav').hasClass('is-open'),
+      header.find('[data-test-id="header-nav"]').hasClass('is-open'),
     ).toBeTruthy();
 
-    header.find('button.atomikui-header__menu-toggle').simulate('click');
+    header.find('[data-test-id="header-menu-toggle"]').simulate('click');
     expect(
-      header.find('nav.atomikui-header__nav').hasClass('is-open'),
+      header.find('[data-test-id="header-nav"]').hasClass('is-open'),
     ).toBeFalsy();
   });
 
   it('Should hide nav when nav link is clicked', () => {
-    header.find('button.atomikui-header__menu-toggle').simulate('click');
-    header.find('nav.atomikui-header__nav a').first().simulate('click');
+    header.find('[data-test-id="header-menu-toggle"]').simulate('click');
+    header.find('[data-test-id="header-nav"] a').first().simulate('click');
 
     expect(
-      header.find('nav.atomikui-header__nav').hasClass('is-open'),
+      header.find('[data-test-id="header-nav"]').hasClass('is-open'),
     ).toBeFalsy();
   });
 
   it('Should render logo content as an anchor or span', () => {
-    expect(header.find('a.atomikui-header__logo-content')).toBeTruthy();
+    expect(header.find('a[data-test-id="logo-content"]')).toHaveLength(1);
 
     header.setProps({ logoLink: null });
-    expect(header.find('span.atomikui-header__logo-content')).toBeTruthy();
+    expect(header.find('span[data-test-id="logo-content"]')).toHaveLength(1);
   });
 });
