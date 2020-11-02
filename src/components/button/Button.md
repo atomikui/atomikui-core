@@ -10,7 +10,7 @@ import { Button } from '@atomikui/core';
 
 ### Button Color Themes
 
-There are many color themes to choose from. simplay pass in a theme prop with the color of your choice.
+There are many color themes to choose from. Simply pass in a `theme` prop with the color of your choice.
 
 #### Dark
 

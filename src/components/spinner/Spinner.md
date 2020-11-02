@@ -2,7 +2,7 @@ The Spinner component can be used tp indicate that a process is taking place. Un
 
 ### Color Themes
 
-There are many color themes to choose from. simplay pass in a `theme` prop with the color of your choice.
+There are many color themes to choose from. Simply pass in a `theme` prop with the color of your choice.
 
 #### Dark
 

@@ -14,7 +14,7 @@ const now = 60;
 
 ### Progress Bar Color Themes
 
-There are 20 dark and 20 light themes. to choose from. simplay pass in a `theme` prop with the color of your choice.
+There are 20 dark and 20 light themes. to choose from. Simply pass in a `theme` prop with the color of your choice.
 
 #### Dark Themes
 
