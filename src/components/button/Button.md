@@ -10,9 +10,9 @@ import { Button } from '@atomikui/core';
 
 ### Button Color Themes
 
-The Button offers 20 dark and 20 themeVariant="light" color themes.
+There are many color themes to choose from. simplay pass in a theme prop with the color of your choice.
 
-#### Dark Themes
+#### Dark
 
 ```jsx
 import { Button } from '@atomikui/core';
@@ -42,7 +42,7 @@ import { Button } from '@atomikui/core';
 </>;
 ```
 
-#### Light Themes
+#### Light
 
 ```jsx
 import { Button } from '@atomikui/core';
