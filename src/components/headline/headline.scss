@@ -1,0 +1,29 @@
+.atomikui-headline {
+  &__title {
+    font-size: rem(32);
+    line-height: 1.2;
+    font-weight: $font-bold;
+  }
+
+  &__subtitle {
+    font-size: rem(20);
+    line-height: 1.2;
+  }
+
+  &.is-uppercase {
+    .atomikui-headline__title,
+    .atomikui-headline__subtitle {
+      text-transform: uppercase;
+    }
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    &__title {
+      font-size: rem(48);
+    }
+
+    &__subtitle {
+      font-size: rem(30);
+    }
+  }
+}
