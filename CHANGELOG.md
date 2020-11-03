@@ -1,5 +1,15 @@
 <br />
 
+### [v0.8.0](https://github.com/atomikui/atomikui-core/compare/v0.7.1...v0.8.0) - 2020-11-03
+
+#### Commits
+
+- Adds Headline component [`520eac5`](https://github.com/atomikui/atomikui-core/commit/520eac589cb78dfb64a55a27ff7f70d3ee763775)
+- Fixes typos in documentation [`b67f948`](https://github.com/atomikui/atomikui-core/commit/b67f94845c17dfaa94c74165ffc6af26ead70434)
+- Updates CHANGELOG.md [`2d68bac`](https://github.com/atomikui/atomikui-core/commit/2d68bac47f3aba2eb33ca0b1297d36b8a0a0072f)
+
+<hr />
+
 ### [v0.7.1](https://github.com/atomikui/atomikui-core/compare/v0.7.0...v0.7.1) - 2020-10-29
 
 #### Merged
