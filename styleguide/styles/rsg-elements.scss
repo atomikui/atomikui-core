@@ -38,6 +38,10 @@ h2[class^='rsg--'] {
   }
 }
 
+code[class^='rsg--name'] {
+  color: #558b2f;
+}
+
 code[class^='rsg--code']:not(:empty) {
   color: darken(#dd4a68, 5%);
 }
