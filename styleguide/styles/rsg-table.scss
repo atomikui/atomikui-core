@@ -1,8 +1,6 @@
 table[class^='rsg--table'] {
-  background: lighten($background-light-gray, 3%);
-
   thead {
-    border-bottom: rem(2) solid darken($background-light-gray, 5%);
+    border-bottom: rem(2) solid darken($background-light-gray, 2%);
   }
 
   th,
@@ -12,7 +10,7 @@ table[class^='rsg--table'] {
 
   tbody {
     tr > * + * {
-      border-left: rem(1) solid darken($background-light-gray, 5%);
+      border-left: rem(1) solid darken($background-light-gray, 2%);
     }
   }
 }

@@ -7,9 +7,11 @@ import Overlay from '../overlay';
 const Drawer = ({
   children,
   className,
+  height,
   isOpen,
   onClose,
   position,
+  width,
   ...others
 }) => {
   const ref = useRef();
@@ -66,7 +68,7 @@ const Drawer = ({
           'is-open': isOpen,
           [`atomikui-drawer--${position}`]: position,
         })}
-        style={styles}
+        style={{ width, height, ...styles }}
         {...others}
       >
         {children}
@@ -80,20 +82,26 @@ Drawer.propTypes = {
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Sets drawer height */
+  height: PropTypes.number,
   /** Specifies if drawer is open */
   isOpen: PropTypes.bool,
   /** Callback triggered on close. */
   onClose: PropTypes.func,
   /** Drawer position */
   position: PropTypes.oneOf(['left', 'top', 'right', 'bottom']),
+  /** Sets drawer width */
+  width: PropTypes.number,
 };
 
 Drawer.defaultProps = {
   children: null,
   className: '',
+  height: null,
   isOpen: false,
   onClose: null,
   position: 'left',
+  width: null,
 };
 
 export default Drawer;
