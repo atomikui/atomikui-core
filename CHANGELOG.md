@@ -1,5 +1,18 @@
 <br />
 
+### [v0.9.0](https://github.com/atomikui/atomikui-core/compare/v0.8.0...v0.9.0) - 2020-11-12
+
+#### Merged
+
+- [Drawer] - Adds support for custom height and width [`#64`](https://github.com/atomikui/atomikui-core/pull/64)
+
+#### Commits
+
+- Updates CHANGELOG.md [`d38f926`](https://github.com/atomikui/atomikui-core/commit/d38f9264479ec1b4f532fe6c30b73bbacbb52f6e)
+- Upgrade to 0.9.0 [`fd10d80`](https://github.com/atomikui/atomikui-core/commit/fd10d804136efbbc6eda41d30dd6724e8430d037)
+
+<hr />
+
 ### [v0.8.0](https://github.com/atomikui/atomikui-core/compare/v0.7.1...v0.8.0) - 2020-11-03
 
 #### Commits
