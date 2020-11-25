@@ -1,5 +1,15 @@
 <br />
 
+### [v0.9.1](https://github.com/atomikui/atomikui-core/compare/v0.9.0...v0.9.1) - 2020-11-25
+
+#### Commits
+
+- Updates eslint-config-atomikui to 0.3.1. withToastProvider optimizations [`f352e21`](https://github.com/atomikui/atomikui-core/commit/f352e21a2859566d12f86827f18bcf19257722f3)
+- Updates CHANGELOG.md [`27875e4`](https://github.com/atomikui/atomikui-core/commit/27875e401881244eb242d5a5867f40a2fce9ce45)
+- fixes cart-item state not updating [`cab4e2f`](https://github.com/atomikui/atomikui-core/commit/cab4e2f180f71d4c6329df85e6df1cd31668d3a3)
+
+<hr />
+
 ### [v0.9.0](https://github.com/atomikui/atomikui-core/compare/v0.8.0...v0.9.0) - 2020-11-12
 
 #### Merged
