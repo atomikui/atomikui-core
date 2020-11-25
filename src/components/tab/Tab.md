@@ -18,10 +18,6 @@ import { Tab } from '@atomikui/core';
 <Tab label="Tab One" active />;
 ```
 
-### Demo
+### Usage
 
 [`<Tabs />`](/styleguide/#/Content/Tabs)
-
-```
-
-```

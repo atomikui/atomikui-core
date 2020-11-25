@@ -13,6 +13,6 @@ const [currentIndex, setCurrentIndex] = useState(0);
 </TabPanel>;
 ```
 
-### Demo
+### Usage
 
 [`<Tabs />`](/styleguide/#/Content/Tabs)
