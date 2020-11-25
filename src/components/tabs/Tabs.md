@@ -116,5 +116,5 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
 ### API
 
-[`<Tab />`](https://www.atomikui.com/#/Content/Tab)<br />
-[`<TabPanel />`](https://www.atomikui.com/#/Content/TabPanel)
+[`<Tab />`](/styleguide/#/Content/Tab)<br />
+[`<TabPanel />`](/styleguide/#/Content/TabPanel)

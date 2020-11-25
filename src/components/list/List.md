@@ -93,4 +93,4 @@ import { List, ListItem } from '@atomikui/core';
 
 #### API
 
-[`<ListItem />`](https://www.atomikui.com/#/Data%20Display/ListItem)
+[`<ListItem />`](/styleguide/#/Data%20Display/ListItem)
