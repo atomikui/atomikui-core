@@ -14,4 +14,4 @@ import { CartItem } from '@atomikui/core';
 
 ### Demo
 
-[`<Cart />`](https://www.atomikui.com/#/Informational/Cart)
+[`<Cart />`](/styleguide/#/Informational/Cart)
