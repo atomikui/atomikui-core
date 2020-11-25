@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
@@ -19,10 +19,13 @@ const CartItem = ({
   const handleQuantityChange = (newQuantity) => {
     setItemQuantity(newQuantity);
     onQuantityChange(newQuantity);
-    setTotal(price * itemQuantity);
   };
 
   const quantityLabel = `qty-${shortid.generate()}`;
+
+  useEffect(() => {
+    setTotal(price * itemQuantity);
+  }, [price, itemQuantity]);
 
   return (
     <div className={classnames('atomikui-cart-item', className)} {...others}>
