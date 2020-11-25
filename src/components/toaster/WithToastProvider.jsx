@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import ToastContext from './toast-context';
@@ -10,23 +10,29 @@ const withToastProvider = (Component) => {
   const WithToastProvider = (props) => {
     const [toasts, setToasts] = useState([]);
 
-    const add = (theme, content) => {
-      const id = shortid.generate();
+    const add = useCallback(
+      (theme, content) => {
+        const id = shortid.generate();
 
-      setToasts([...toasts, { id, theme, content }]);
-    };
+        setToasts([...toasts, { id, theme, content }]);
+      },
+      [toasts],
+    );
 
-    const remove = (id) => {
-      return setToasts(
-        toasts.filter((toast) => {
-          return toast.id !== id;
-        }),
-      );
-    };
+    const remove = useCallback(
+      (id) => {
+        return setToasts(
+          toasts.filter((toast) => {
+            return toast.id !== id;
+          }),
+        );
+      },
+      [toasts],
+    );
 
     const providerValue = useMemo(() => {
       return { add, remove };
-    }, [toasts]);
+    }, [add, remove]);
 
     const { position, duration } = props;
 
