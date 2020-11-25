@@ -20,7 +20,7 @@ import { Tab } from '@atomikui/core';
 
 #### Demo
 
-[`<Tabs />`](https://www.atomikui.com/#/Content/Tabs)
+[`<Tabs />`](/styleguide/#/Content/Tabs)
 
 ```
 

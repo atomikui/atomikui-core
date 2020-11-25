@@ -8,4 +8,4 @@ import { ListItem } from '@atomikui/core';
 
 #### Demo
 
-[`<List />`](https://www.atomikui.com/#/Data%20Display/List)
+[`<List />`](/styleguide/#/Data%20Display/List)
