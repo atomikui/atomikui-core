@@ -68,4 +68,4 @@ import { faPiggyBank } from '@fortawesome/free-solid-svg-icons';
 
 ### Demo
 
-[`<Wallet />`](https://www.atomikui.com/#/Payment%20Wallet/Wallet)
+[`<Wallet />`](/styleguide/#/Payment%20Wallet/Wallet)

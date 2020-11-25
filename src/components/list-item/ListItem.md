@@ -6,6 +6,6 @@ import { ListItem } from '@atomikui/core';
 <ListItem>List Item</ListItem>;
 ```
 
-#### Demo
+### Demo
 
 [`<List />`](/styleguide/#/Data%20Display/List)

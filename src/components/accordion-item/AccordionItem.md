@@ -17,4 +17,4 @@ import { AccordionItem } from '@atomikui/core';
 
 ### Demo
 
-[`<Accordion />`](https://www.atomikui.com/#/Content/Accordion)
+[`<Accordion />`](/styleguide/#/Content/Accordion)

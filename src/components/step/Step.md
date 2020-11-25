@@ -16,6 +16,6 @@ import { Step } from '@atomikui/core';
 </>;
 ```
 
-#### Demo
+### Demo
 
 [`<Stepper />`](/styleguide/#/Navigation/Stepper)

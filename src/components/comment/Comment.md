@@ -42,4 +42,4 @@ const replies = [
 
 ### Demo
 
-[`<Post />`](https://www.atomikui.com/#/Content/Post)
+[`<Post />`](/styleguide/#/Content/Post)
