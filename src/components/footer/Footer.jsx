@@ -14,35 +14,31 @@ const Footer = ({
   navBackgroundColor,
   textColor,
   ...others
-}) => {
-  return (
-    <footer
-      className={classnames('atomikui-footer', className)}
-      style={{ backgroundColor, color: textColor }}
-      {...others}
+}) => (
+  <footer
+    className={classnames('atomikui-footer', className)}
+    style={{ backgroundColor, color: textColor }}
+    {...others}
+  >
+    <nav
+      aria-label={`auxiliary nav ${document.querySelectorAll('nav').length}`}
+      style={{ backgroundColor: navBackgroundColor }}
     >
-      <nav
-        aria-label={`auxiliary nav ${document.querySelectorAll('nav').length}`}
-        style={{ backgroundColor: navBackgroundColor }}
-      >
-        <ul>
-          {Children.map(children, (link, index) => {
-            return (
-              <li key={`auxiliary-navitem-${index + 1}`}>
-                {cloneElement(link, { style: { color: linkColor } })}
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-      {logo}
-      <p>
-        &copy; {copyrightYear} {copyrightEntity && `${copyrightEntity}.`}{' '}
-        {copyrightText}
-      </p>
-    </footer>
-  );
-};
+      <ul>
+        {Children.map(children, (link, index) => (
+          <li key={`auxiliary-navitem-${index + 1}`}>
+            {cloneElement(link, { style: { color: linkColor } })}
+          </li>
+        ))}
+      </ul>
+    </nav>
+    {logo}
+    <p>
+      &copy; {copyrightYear} {copyrightEntity && `${copyrightEntity}.`}{' '}
+      {copyrightText}
+    </p>
+  </footer>
+);
 
 Footer.propTypes = {
   /** Footer background color */

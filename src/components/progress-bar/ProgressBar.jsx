@@ -12,41 +12,37 @@ const ProgressBar = ({
   themeVariant,
   thickness,
   ...others
-}) => {
-  return (
+}) => (
+  <div
+    className={classnames(
+      'atomikui-progress-bar',
+      className,
+      [animated && 'animated', shape, thickness].map((prop) => ({
+        [`atomikui-progress-bar--${prop}`]: prop,
+        [`atomikui-progress-bar--${theme}${
+          themeVariant ? `-${themeVariant}` : ''
+        }`]: theme,
+      })),
+    )}
+    {...others}
+  >
     <div
-      className={classnames(
-        'atomikui-progress-bar',
-        className,
-        [animated && 'animated', shape, thickness].map((prop) => {
-          return {
-            [`atomikui-progress-bar--${prop}`]: prop,
-            [`atomikui-progress-bar--${theme}${
-              themeVariant ? `-${themeVariant}` : ''
-            }`]: theme,
-          };
-        }),
-      )}
-      {...others}
+      className="atomikui-progress-bar__bar"
+      role="progressbar"
+      aria-valuenow={now}
+      aria-valuemin="0"
+      aria-valuemax="100"
+      style={{ width: `${now}%` }}
     >
-      <div
-        className="atomikui-progress-bar__bar"
-        role="progressbar"
-        aria-valuenow={now}
-        aria-valuemin="0"
-        aria-valuemax="100"
-        style={{ width: `${now}%` }}
+      <span
+        className="atomikui-progress-bar__label"
+        data-test-id="progress-bar-label"
       >
-        <span
-          className="atomikui-progress-bar__label"
-          data-test-id="progress-bar-label"
-        >
-          {label}
-        </span>
-      </div>
+        {label}
+      </span>
     </div>
-  );
-};
+  </div>
+);
 
 ProgressBar.propTypes = {
   /** Animages the progress bar. */

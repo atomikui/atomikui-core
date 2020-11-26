@@ -10,21 +10,19 @@ const Link = ({
   href,
   target,
   ...others
-}) => {
-  return (
-    <a
-      className={classnames('atomikui-link', className, {
-        'is-disabled': disabled,
-      })}
-      href={href}
-      target={target}
-      rel={target === '_blank' ? 'noopener noreferrer' : null}
-      {...others}
-    >
-      {children}
-    </a>
-  );
-};
+}) => (
+  <a
+    className={classnames('atomikui-link', className, {
+      'is-disabled': disabled,
+    })}
+    href={href}
+    target={target}
+    rel={target === '_blank' ? 'noopener noreferrer' : null}
+    {...others}
+  >
+    {children}
+  </a>
+);
 
 Link.propTypes = {
   /** Specifies as active link */

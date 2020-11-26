@@ -80,41 +80,32 @@ const Table = ({
           {...others}
         >
           <thead>
-            {headerGroups.map((headerGroup, rowIndex) => {
-              return (
-                <tr
-                  key={`row-${rowIndex + 1}`}
-                  {...headerGroup.getHeaderGroupProps()}
-                >
-                  {headerGroup.headers.map((column, colIndex) => {
-                    return (
-                      <th
-                        key={`col-${colIndex + 1}`}
-                        {...column.getHeaderProps()}
-                      >
-                        {column.render('Header')}
-                      </th>
-                    );
-                  })}
-                </tr>
-              );
-            })}
+            {headerGroups.map((headerGroup, rowIndex) => (
+              <tr
+                key={`row-${rowIndex + 1}`}
+                {...headerGroup.getHeaderGroupProps()}
+              >
+                {headerGroup.headers.map((column, colIndex) => (
+                  <th key={`col-${colIndex + 1}`} {...column.getHeaderProps()}>
+                    {column.render('Header')}
+                  </th>
+                ))}
+              </tr>
+            ))}
           </thead>
           <tbody {...getTableBodyProps()}>
             {(isPaginated ? page : rows).map((row, bodyRowIndex) => {
               prepareRow(row);
               return (
                 <tr key={`body-row-${bodyRowIndex + 1}`} {...row.getRowProps()}>
-                  {row.cells.map((cell, bodyCellIndex) => {
-                    return (
-                      <td
-                        key={`body-cell-${bodyCellIndex + 1}`}
-                        {...cell.getCellProps()}
-                      >
-                        {cell.render('Cell')}
-                      </td>
-                    );
-                  })}
+                  {row.cells.map((cell, bodyCellIndex) => (
+                    <td
+                      key={`body-cell-${bodyCellIndex + 1}`}
+                      {...cell.getCellProps()}
+                    >
+                      {cell.render('Cell')}
+                    </td>
+                  ))}
                 </tr>
               );
             })}
@@ -130,9 +121,7 @@ const Table = ({
             data-test-id="pagination-to-first-btn"
             theme="blue"
             size="md"
-            onClick={() => {
-              return gotoPage(0);
-            }}
+            onClick={() => gotoPage(0)}
             disabled={!canPreviousPage}
             aria-label="Go to first page"
           >
@@ -145,9 +134,7 @@ const Table = ({
             data-test-id="pagination-to-previous-btn"
             theme="blue"
             size="md"
-            onClick={() => {
-              return previousPage();
-            }}
+            onClick={() => previousPage()}
             disabled={!canPreviousPage}
             aria-label="Go to previous page"
           >
@@ -160,9 +147,7 @@ const Table = ({
             data-test-id="pagination-to-next-btn"
             theme="blue"
             size="md"
-            onClick={() => {
-              return nextPage();
-            }}
+            onClick={() => nextPage()}
             disabled={!canNextPage}
             aria-label="Go to next page"
           >
@@ -175,9 +160,7 @@ const Table = ({
             data-test-id="pagination-to-last-btn"
             theme="blue"
             size="md"
-            onClick={() => {
-              return gotoPage(pageCount - 1);
-            }}
+            onClick={() => gotoPage(pageCount - 1)}
             disabled={!canNextPage}
             aria-label="Go to last page"
           >
@@ -220,11 +203,10 @@ const Table = ({
                 setPageSize(Number(value));
               }
             }}
-            options={creategGotToPageOptions(data.length, numRowsPerPage).map(
-              (pSize) => {
-                return { text: `Show ${pSize}`, value: String(pSize) };
-              },
-            )}
+            options={creategGotToPageOptions(
+              data.length,
+              numRowsPerPage,
+            ).map((pSize) => ({ text: `Show ${pSize}`, value: String(pSize) }))}
           />
         </div>
       )}

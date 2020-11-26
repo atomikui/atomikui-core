@@ -11,31 +11,27 @@ const Pagination = ({
   theme,
   themeVariant,
   ...others
-}) => {
-  return (
-    <List
-      className={classnames('atomikui-pagination', {
-        [`atomikui-pagination--${theme}${
-          themeVariant ? `-${themeVariant}` : ''
-        }`]: theme,
-      })}
-      {...others}
-    >
-      {Children.map(children, (child) => {
-        return (
-          <ListItem
-            className={classnames('atomikui-pagination__item', {
-              'is-active': child.props.active,
-            })}
-            key={shortid.generate()}
-          >
-            {child}
-          </ListItem>
-        );
-      })}
-    </List>
-  );
-};
+}) => (
+  <List
+    className={classnames('atomikui-pagination', {
+      [`atomikui-pagination--${theme}${
+        themeVariant ? `-${themeVariant}` : ''
+      }`]: theme,
+    })}
+    {...others}
+  >
+    {Children.map(children, (child) => (
+      <ListItem
+        className={classnames('atomikui-pagination__item', {
+          'is-active': child.props.active,
+        })}
+        key={shortid.generate()}
+      >
+        {child}
+      </ListItem>
+    ))}
+  </List>
+);
 
 Pagination.propTypes = {
   /** Child elements */

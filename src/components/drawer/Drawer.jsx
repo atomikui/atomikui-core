@@ -28,9 +28,7 @@ const Drawer = ({
   useEffect(() => {
     setFocusTrap(
       createFocusTrap(ref.current, {
-        allowOutsideClick: () => {
-          return true;
-        },
+        allowOutsideClick: () => true,
         clickOutsideDeactivates: true,
         escapeDeactivates: true,
         fallbackFocus: ref,

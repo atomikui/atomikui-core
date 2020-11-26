@@ -44,9 +44,7 @@ const RangeSlider = forwardRef(
       sliderRef.current.focus();
     };
 
-    const handleTickClick = (val) => {
-      return handleChange(val);
-    };
+    const handleTickClick = (val) => handleChange(val);
 
     return (
       <>
@@ -72,43 +70,37 @@ const RangeSlider = forwardRef(
             {...(value && { value: rangeValue })}
             {...(defaultValue && !value && { defaultValue: rangeValue })}
             type="range"
-            onChange={(e) => {
-              return handleChange(e.target.value);
-            }}
+            onChange={(e) => handleChange(e.target.value)}
             required={required}
             disabled={disabled}
             {...others}
           />
           {ticks && (
             <div className="atomikui-range-slider__ticks" aria-hidden="true">
-              {ticks.map(({ text, val }) => {
-                return (
-                  <button
-                    type="button"
-                    key={shortid.generate()}
-                    data-test-id="range-slider-tick"
-                    className="atomikui-range-slider__ticks__tick"
-                    {...(!disabled && {
-                      onFocus: () => {
-                        return handleTickClick(val);
+              {ticks.map(({ text, val }) => (
+                <button
+                  type="button"
+                  key={shortid.generate()}
+                  data-test-id="range-slider-tick"
+                  className="atomikui-range-slider__ticks__tick"
+                  {...(!disabled && {
+                    onFocus: () => handleTickClick(val),
+                  })}
+                >
+                  <span
+                    data-test-id="range-slider-ticks-label"
+                    className={classnames(
+                      'atomikui-range-slider__ticks__label',
+                      {
+                        'is-selected': val === rangeValue,
+                        'is-hidden-on-mobile': hideLabelsOnMobile,
                       },
-                    })}
+                    )}
                   >
-                    <span
-                      data-test-id="range-slider-ticks-label"
-                      className={classnames(
-                        'atomikui-range-slider__ticks__label',
-                        {
-                          'is-selected': val === rangeValue,
-                          'is-hidden-on-mobile': hideLabelsOnMobile,
-                        },
-                      )}
-                    >
-                      {text}
-                    </span>
-                  </button>
-                );
-              })}
+                    {text}
+                  </span>
+                </button>
+              ))}
             </div>
           )}
         </div>

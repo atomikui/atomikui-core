@@ -2,9 +2,9 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 
-const Portal = ({ children, container, disabled }) => {
-  return <>{disabled ? children : createPortal(children, container)}</>;
-};
+const Portal = ({ children, container, disabled }) => (
+  <>{disabled ? children : createPortal(children, container)}</>
+);
 
 Portal.propTypes = {
   /** Children to be rendered in the target container */

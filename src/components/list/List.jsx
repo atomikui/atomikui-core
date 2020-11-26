@@ -27,9 +27,7 @@ const List = ({
         data-test-id="list"
         {...others}
       >
-        {Children.map(children, (child) => {
-          return cloneElement(child, { isMenu });
-        })}
+        {Children.map(children, (child) => cloneElement(child, { isMenu }))}
       </Ul>
     </Wrapper>
   );

@@ -21,13 +21,9 @@ const Toast = ({ children, className, duration, remove, theme, ...others }) => {
 
   useEffect(() => {
     if (duration !== -1) {
-      const timer = setTimeout(() => {
-        return toastRef.current();
-      }, duration);
+      const timer = setTimeout(() => toastRef.current(), duration);
 
-      return () => {
-        return clearTimeout(timer);
-      };
+      return () => clearTimeout(timer);
     }
 
     return undefined;

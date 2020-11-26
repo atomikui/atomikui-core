@@ -10,12 +10,8 @@ const AutoComplete = forwardRef(
 
     return (
       <Downshift
-        onChange={(selection) => {
-          return onChange(selection ? selection.value : '');
-        }}
-        itemToString={(item) => {
-          return item ? item.value : '';
-        }}
+        onChange={(selection) => onChange(selection ? selection.value : '')}
+        itemToString={(item) => (item ? item.value : '')}
         initialInputValue={value}
         initialSelectedItem={{ value }}
       >
@@ -28,53 +24,48 @@ const AutoComplete = forwardRef(
           inputValue,
           getRootProps,
           selectedItem,
-        }) => {
-          return (
-            <div
-              className={classnames('atomikui-auto-complete', className)}
-              {...getRootProps({}, { suppressRefError: true })}
+        }) => (
+          <div
+            className={classnames('atomikui-auto-complete', className)}
+            {...getRootProps({}, { suppressRefError: true })}
+          >
+            <FormField ref={ref} {...getInputProps()} {...others} />
+            <ul
+              className="atomikui-auto-complete__list"
+              data-test-id="autocomplete-list"
+              {...getMenuProps()}
             >
-              <FormField ref={ref} {...getInputProps()} {...others} />
-              <ul
-                className="atomikui-auto-complete__list"
-                data-test-id="autocomplete-list"
-                {...getMenuProps()}
-              >
-                {isOpen
-                  ? itemList
-                      .filter((item) => {
-                        return (
-                          !inputValue ||
-                          item.value
-                            .toLowerCase()
-                            .includes(inputValue.toLowerCase())
-                        );
-                      })
-                      .map((item, index) => {
-                        return (
-                          <li
-                            key={`item-${index + 1}`}
-                            className={classnames({
-                              'is-selected': selectedItem
-                                ? selectedItem.value === item.value
-                                : false,
-                              'is-highlighted': highlightedIndex === index,
-                            })}
-                            {...getItemProps({
-                              key: item.value,
-                              index,
-                              item,
-                            })}
-                          >
-                            {item.value}
-                          </li>
-                        );
-                      })
-                  : null}
-              </ul>
-            </div>
-          );
-        }}
+              {isOpen
+                ? itemList
+                    .filter(
+                      (item) =>
+                        !inputValue ||
+                        item.value
+                          .toLowerCase()
+                          .includes(inputValue.toLowerCase()),
+                    )
+                    .map((item, index) => (
+                      <li
+                        key={`item-${index + 1}`}
+                        className={classnames({
+                          'is-selected': selectedItem
+                            ? selectedItem.value === item.value
+                            : false,
+                          'is-highlighted': highlightedIndex === index,
+                        })}
+                        {...getItemProps({
+                          key: item.value,
+                          index,
+                          item,
+                        })}
+                      >
+                        {item.value}
+                      </li>
+                    ))
+                : null}
+            </ul>
+          </div>
+        )}
       </Downshift>
     );
   },

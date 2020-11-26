@@ -50,9 +50,7 @@ const CartItem = ({
               value={String(itemQuantity)}
               placeholder="Qty"
               aria-labelledby={quantityLabel}
-              onChange={(e) => {
-                return handleQuantityChange(+e.target.value);
-              }}
+              onChange={(e) => handleQuantityChange(+e.target.value)}
             />
           </div>
           <div>

@@ -17,28 +17,24 @@ const Tooltip = ({
   const [tooltipContent] = useState(children);
   const [tooltipId] = useState(`tooltip-${shortid.generate()}`);
 
-  const createTooltipElement = () => {
-    return (
-      <div
-        id={tooltipId}
-        className={classnames('atomikui-tooltip', {
-          [`atomikui-tooltip--align-${align}`]: align,
-          [`atomikui-tooltip--${theme}`]: theme,
-          'has-pointer-events': hasPointerEvents,
-        })}
-        data-test-id="tooltip"
-        role="tooltip"
-      >
-        <div className="atomikui-tooltip__content" id={`${tooltipId}_text`}>
-          {tooltipContent}
-        </div>
+  const createTooltipElement = () => (
+    <div
+      id={tooltipId}
+      className={classnames('atomikui-tooltip', {
+        [`atomikui-tooltip--align-${align}`]: align,
+        [`atomikui-tooltip--${theme}`]: theme,
+        'has-pointer-events': hasPointerEvents,
+      })}
+      data-test-id="tooltip"
+      role="tooltip"
+    >
+      <div className="atomikui-tooltip__content" id={`${tooltipId}_text`}>
+        {tooltipContent}
       </div>
-    );
-  };
+    </div>
+  );
 
-  const removeTooltip = () => {
-    return setToolTip(null);
-  };
+  const removeTooltip = () => setToolTip(null);
 
   const createTooltip = async (e) => {
     const {

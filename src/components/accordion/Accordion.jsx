@@ -21,16 +21,14 @@ const Accordion = ({
       data-test-id="accordion"
       {...others}
     >
-      {Children.map(children, (child, index) => {
-        return cloneElement(child, {
+      {Children.map(children, (child, index) =>
+        cloneElement(child, {
           ...(!multipleOpen && {
-            handleClick: (isOpen) => {
-              return setIsExpanded(isOpen ? null : index);
-            },
+            handleClick: (isOpen) => setIsExpanded(isOpen ? null : index),
             expanded: index === isExpanded,
           }),
-        });
-      })}
+        }),
+      )}
     </div>
   );
 };

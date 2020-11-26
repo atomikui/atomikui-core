@@ -2,24 +2,22 @@ import React, { Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Wallet = ({ children, className, isGrid, ...others }) => {
-  return (
-    <div
-      className={classnames('atomikui-wallet', className, {
-        'atomikui-wallet--grid': isGrid,
-      })}
-      {...others}
-    >
-      {isGrid
-        ? Children.map(children, (child) => {
-            return cloneElement(child, {
-              className: 'atomikui-wallet-item--grid',
-            });
-          })
-        : children}
-    </div>
-  );
-};
+const Wallet = ({ children, className, isGrid, ...others }) => (
+  <div
+    className={classnames('atomikui-wallet', className, {
+      'atomikui-wallet--grid': isGrid,
+    })}
+    {...others}
+  >
+    {isGrid
+      ? Children.map(children, (child) =>
+          cloneElement(child, {
+            className: 'atomikui-wallet-item--grid',
+          }),
+        )
+      : children}
+  </div>
+);
 
 Wallet.propTypes = {
   /** Payment method passed in to Wallet as children */

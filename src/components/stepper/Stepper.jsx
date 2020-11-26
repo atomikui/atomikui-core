@@ -11,25 +11,23 @@ const Stepper = ({
   topLabels,
   title,
   ...others
-}) => {
-  return (
-    <nav title={title || `stepper ${shortid.generate()}`}>
-      <List
-        data-test-id="stepper"
-        className={classnames('atomikui-stepper', className, {
-          'atomikui-stepper--inline': inline,
-        })}
-        {...others}
-      >
-        {topLabels
-          ? Children.map(children, (child) => {
-              return cloneElement(child, { topLabel: true });
-            })
-          : children}
-      </List>
-    </nav>
-  );
-};
+}) => (
+  <nav title={title || `stepper ${shortid.generate()}`}>
+    <List
+      data-test-id="stepper"
+      className={classnames('atomikui-stepper', className, {
+        'atomikui-stepper--inline': inline,
+      })}
+      {...others}
+    >
+      {topLabels
+        ? Children.map(children, (child) =>
+            cloneElement(child, { topLabel: true }),
+          )
+        : children}
+    </List>
+  </nav>
+);
 
 Stepper.propTypes = {
   /** Specifies custom component classes. */

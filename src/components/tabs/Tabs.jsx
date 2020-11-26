@@ -25,15 +25,13 @@ const Tabs = ({
       })}
       {...others}
     >
-      {Children.map(children, (child, index) => {
-        return cloneElement(child, {
+      {Children.map(children, (child, index) =>
+        cloneElement(child, {
           active: index === activeTab,
           comparison,
-          onClick: () => {
-            return handleChange(index);
-          },
-        });
-      })}
+          onClick: () => handleChange(index),
+        }),
+      )}
     </div>
   );
 };

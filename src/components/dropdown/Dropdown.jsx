@@ -78,16 +78,14 @@ const Dropdown = forwardRef(
                 onBlur: onChange,
               },
               ...options,
-            ].map((option, index) => {
-              return (
-                <option
-                  key={`option-${option.text}-${index + 1}`}
-                  value={option.value}
-                >
-                  {option.text}
-                </option>
-              );
-            })}
+            ].map((option, index) => (
+              <option
+                key={`option-${option.text}-${index + 1}`}
+                value={option.value}
+              >
+                {option.text}
+              </option>
+            ))}
           </select>
           <div className="atomikui-dropdown__select__trigger">
             <Icon icon={faCaretDown} />

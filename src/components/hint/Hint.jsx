@@ -2,18 +2,16 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Hint = ({ className, children, type, ...others }) => {
-  return (
-    <div
-      className={classnames('atomikui-hint', className, {
-        [`atomikui-hint--${type}`]: type,
-      })}
-      {...others}
-    >
-      {children}
-    </div>
-  );
-};
+const Hint = ({ className, children, type, ...others }) => (
+  <div
+    className={classnames('atomikui-hint', className, {
+      [`atomikui-hint--${type}`]: type,
+    })}
+    {...others}
+  >
+    {children}
+  </div>
+);
 
 Hint.propTypes = {
   /** Custom classes to be added to Label component. */

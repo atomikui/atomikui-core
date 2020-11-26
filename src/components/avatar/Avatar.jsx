@@ -14,35 +14,33 @@ const Avatar = ({
   theme,
   themeVariant,
   ...others
-}) => {
-  return (
+}) => (
+  <span
+    className={classnames('atomikui-avatar', {
+      'atomikui-avatar--flip': flipLabel,
+      [`atomikui-avatar--${size}`]: size,
+      [`atomikui-avatar--${shape}`]: shape,
+    })}
+    {...others}
+  >
     <span
-      className={classnames('atomikui-avatar', {
-        'atomikui-avatar--flip': flipLabel,
-        [`atomikui-avatar--${size}`]: size,
-        [`atomikui-avatar--${shape}`]: shape,
+      className={classnames('atomikui-avatar__content', className, {
+        [`atomikui-avatar__content--${theme}${
+          themeVariant ? `-${themeVariant}` : ''
+        }`]: theme,
       })}
-      {...others}
+      data-test-id="avatar-content"
     >
-      <span
-        className={classnames('atomikui-avatar__content', className, {
-          [`atomikui-avatar__content--${theme}${
-            themeVariant ? `-${themeVariant}` : ''
-          }`]: theme,
-        })}
-        data-test-id="avatar-content"
-      >
-        {src && <img className="atomikui-avatar__image" src={src} alt={alt} />}
-        {children}
-      </span>
-      {label && (
-        <span className="atomikui-avatar__label" data-test-id="avatar-label">
-          {label}
-        </span>
-      )}
+      {src && <img className="atomikui-avatar__image" src={src} alt={alt} />}
+      {children}
     </span>
-  );
-};
+    {label && (
+      <span className="atomikui-avatar__label" data-test-id="avatar-label">
+        {label}
+      </span>
+    )}
+  </span>
+);
 
 Avatar.propTypes = {
   /** Avatar image alt text attribute */

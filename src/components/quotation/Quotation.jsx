@@ -4,22 +4,20 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 
-const Quotation = ({ className, children, footer, pullquote, ...others }) => {
-  return (
-    <blockquote
-      className={classnames('atomikui-quotation', className, {
-        'atomikui-quotation--pullquote': pullquote,
-      })}
-      {...others}
-    >
-      <p>
-        {pullquote && <Icon icon={faQuoteLeft} size="4x" />}
-        {children}
-      </p>
-      {footer && <footer>{footer}</footer>}
-    </blockquote>
-  );
-};
+const Quotation = ({ className, children, footer, pullquote, ...others }) => (
+  <blockquote
+    className={classnames('atomikui-quotation', className, {
+      'atomikui-quotation--pullquote': pullquote,
+    })}
+    {...others}
+  >
+    <p>
+      {pullquote && <Icon icon={faQuoteLeft} size="4x" />}
+      {children}
+    </p>
+    {footer && <footer>{footer}</footer>}
+  </blockquote>
+);
 
 Quotation.propTypes = {
   /** Blockquote content */

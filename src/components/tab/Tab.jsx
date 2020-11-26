@@ -11,27 +11,25 @@ const Tab = ({
   label,
   onClick,
   ...others
-}) => {
-  return (
-    <Button
-      theme="hollow"
-      data-test-id="tab-btn"
-      className={classnames('atomikui-tab', className, {
-        'is-active': active,
-        'atomikui-tab--comparison': comparison,
-      })}
-      onClick={onClick}
-      {...others}
-    >
-      {label}
-      {children && (
-        <span className="atomikui-tab__content" data-test-id="tab-content">
-          {children}
-        </span>
-      )}
-    </Button>
-  );
-};
+}) => (
+  <Button
+    theme="hollow"
+    data-test-id="tab-btn"
+    className={classnames('atomikui-tab', className, {
+      'is-active': active,
+      'atomikui-tab--comparison': comparison,
+    })}
+    onClick={onClick}
+    {...others}
+  >
+    {label}
+    {children && (
+      <span className="atomikui-tab__content" data-test-id="tab-content">
+        {children}
+      </span>
+    )}
+  </Button>
+);
 
 Tab.propTypes = {
   /** Makes a Tab active */

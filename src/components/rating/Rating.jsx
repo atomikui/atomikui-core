@@ -9,9 +9,7 @@ const Rating = ({ className, maxStars, onSelect, size, stars, ...others }) => {
   const hasHalfStar = !Number.isInteger(stars) && !onSelect;
   const fullStars = Math.floor(stars);
 
-  const setRatingBaseline = (baseline) => {
-    return baseline <= 5 ? baseline : 5;
-  };
+  const setRatingBaseline = (baseline) => (baseline <= 5 ? baseline : 5);
 
   const ratingBaseline = setRatingBaseline(onSelect ? maxStars : fullStars);
 
@@ -31,27 +29,19 @@ const Rating = ({ className, maxStars, onSelect, size, stars, ...others }) => {
       {...others}
       aria-label={`Rating: ${stars} out of ${ratingBaseline} stars`}
     >
-      {ratings.map((index) => {
-        return (
-          <Icon
-            className={classnames('atomikui-rating__star', {
-              'atomikui-rating__star--selectable': onSelect,
-              'is-selected': onSelect && index + 1 <= rating,
-            })}
-            key={shortid.generate()}
-            icon={faStar}
-            aria-hidden="true"
-            size={size}
-            onClick={
-              onSelect
-                ? () => {
-                    return handleSelection(index + 1);
-                  }
-                : null
-            }
-          />
-        );
-      })}
+      {ratings.map((index) => (
+        <Icon
+          className={classnames('atomikui-rating__star', {
+            'atomikui-rating__star--selectable': onSelect,
+            'is-selected': onSelect && index + 1 <= rating,
+          })}
+          key={shortid.generate()}
+          icon={faStar}
+          aria-hidden="true"
+          size={size}
+          onClick={onSelect ? () => handleSelection(index + 1) : null}
+        />
+      ))}
       {hasHalfStar && ratingBaseline < 5 && (
         <Icon
           className="atomikui-rating__star"

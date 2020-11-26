@@ -33,9 +33,7 @@ const CreditCardField = ({
   const cvcRef = useRef();
   const zipRef = useRef();
 
-  const stripMask = (str) => {
-    return str.replace(/(-|\/|_)/g, '');
-  };
+  const stripMask = (str) => str.replace(/(-|\/|_)/g, '');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -194,9 +192,7 @@ const CreditCardField = ({
               id="last-four-digits-btn"
               className="atomikui-credit-card-field__last-four-digits-btn"
               tabIndex="0"
-              onFocus={() => {
-                return setCardFieldHidden(false);
-              }}
+              onFocus={() => setCardFieldHidden(false)}
             >
               {cardPreview}
             </button>
@@ -261,13 +257,11 @@ const CreditCardField = ({
       {!!errors.length && (
         <div className="margin-top-2">
           <List>
-            {errors.map((field, index) => {
-              return (
-                <ListItem key={`list-item-${index + 1}`}>
-                  <Hint type="error">{errorMessages[field]}</Hint>
-                </ListItem>
-              );
-            })}
+            {errors.map((field, index) => (
+              <ListItem key={`list-item-${index + 1}`}>
+                <Hint type="error">{errorMessages[field]}</Hint>
+              </ListItem>
+            ))}
           </List>
         </div>
       )}

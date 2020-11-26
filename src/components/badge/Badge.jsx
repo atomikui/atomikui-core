@@ -2,21 +2,19 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Badge = ({ className, label, value, theme, themeVariant, ...others }) => {
-  return (
-    <div
-      className={classnames('atomikui-badge', className, {
-        [`atomikui-badge--${theme}${
-          themeVariant ? `-${themeVariant}` : ''
-        }`]: theme,
-      })}
-      {...others}
-    >
-      <div className="atomikui-badge__label">{label}</div>
-      <div className="atomikui-badge__value">{value}</div>
-    </div>
-  );
-};
+const Badge = ({ className, label, value, theme, themeVariant, ...others }) => (
+  <div
+    className={classnames('atomikui-badge', className, {
+      [`atomikui-badge--${theme}${
+        themeVariant ? `-${themeVariant}` : ''
+      }`]: theme,
+    })}
+    {...others}
+  >
+    <div className="atomikui-badge__label">{label}</div>
+    <div className="atomikui-badge__value">{value}</div>
+  </div>
+);
 
 Badge.propTypes = {
   /** Adds custom component CSS classes */

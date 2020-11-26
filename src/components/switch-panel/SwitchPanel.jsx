@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SwitchPanel = ({ children, className, label, ...others }) => {
-  return (
-    <div className="atomikui-switch-panel" {...others}>
-      <div className="atomikui-switch-panel__hd">{label}</div>
-      <div className="atomikui-switch-panel__bd" data-test-id="switch-panel-bd">
-        {children}
-      </div>
+const SwitchPanel = ({ children, className, label, ...others }) => (
+  <div className="atomikui-switch-panel" {...others}>
+    <div className="atomikui-switch-panel__hd">{label}</div>
+    <div className="atomikui-switch-panel__bd" data-test-id="switch-panel-bd">
+      {children}
     </div>
-  );
-};
+  </div>
+);
 
 SwitchPanel.propTypes = {
   /** Switch panel content. */

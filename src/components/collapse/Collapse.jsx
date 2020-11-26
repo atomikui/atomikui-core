@@ -47,9 +47,7 @@ const Collapse = ({
             theme="link"
             aria-expanded={open}
             aria-controls={id}
-            onClick={() => {
-              return setOpen(!open);
-            }}
+            onClick={() => setOpen(!open)}
           >
             <Icon icon={faChevronRight} size="lg" />
             <span>{toggleText}</span>
@@ -60,9 +58,7 @@ const Collapse = ({
         id={id}
         data-test-id="collapse-body"
         className="atomikui-collapse__bd"
-        style={{
-          height: open ? contentHeight : '0px',
-        }}
+        style={{ height: open ? contentHeight : '0px' }}
       >
         <div ref={collapseRef}>{children}</div>
       </div>

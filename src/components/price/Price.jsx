@@ -12,25 +12,23 @@ const Price = ({
   theme,
   themeVariant,
   ...others
-}) => {
-  return (
-    <span
-      className={classnames('atomikui-price', className, {
-        [`atomikui-price--${size}`]: size,
-        [`atomikui-price--${theme}${
-          themeVariant ? `-${themeVariant}` : ''
-        }`]: theme,
-      })}
-      {...others}
-    >
-      <span className="atomikui-price__currency">{currencySymbol}</span>
-      <span className="atomikui-price__amount">
-        {numeral(amount).format(`0,0[.]00`)}
-      </span>
-      <span className="atomikui-price__label">{label}</span>
+}) => (
+  <span
+    className={classnames('atomikui-price', className, {
+      [`atomikui-price--${size}`]: size,
+      [`atomikui-price--${theme}${
+        themeVariant ? `-${themeVariant}` : ''
+      }`]: theme,
+    })}
+    {...others}
+  >
+    <span className="atomikui-price__currency">{currencySymbol}</span>
+    <span className="atomikui-price__amount">
+      {numeral(amount).format(`0,0[.]00`)}
     </span>
-  );
-};
+    <span className="atomikui-price__label">{label}</span>
+  </span>
+);
 
 Price.propTypes = {
   /** Adds custom component CSS classes */

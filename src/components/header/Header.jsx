@@ -67,20 +67,16 @@ const Header = ({
           data-test-id="header-nav"
         >
           <ul>
-            {Children.map(children, (child, index) => {
-              return (
-                <li key={`nav-item-${index + 1}`}>
-                  {cloneElement(child, {
-                    onClick: () => {
-                      return setIsOpen(!isOpen);
-                    },
-                    style: {
-                      color: linkColor,
-                    },
-                  })}
-                </li>
-              );
-            })}
+            {Children.map(children, (child, index) => (
+              <li key={`nav-item-${index + 1}`}>
+                {cloneElement(child, {
+                  onClick: () => setIsOpen(!isOpen),
+                  style: {
+                    color: linkColor,
+                  },
+                })}
+              </li>
+            ))}
           </ul>
         </nav>
       )}

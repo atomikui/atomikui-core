@@ -3,20 +3,18 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 
-const Breadcrumb = ({ children, className, title, ...others }) => {
-  return (
-    <nav title={title || `breadcrumb ${shortid.generate()}`}>
-      <ol
-        className={classnames('atomikui-breadcrumb', className, {})}
-        {...others}
-      >
-        {Children.map(children, (child, i) => {
-          return <li key={`breadcumb-${i + 1}`}>{child}</li>;
-        })}
-      </ol>
-    </nav>
-  );
-};
+const Breadcrumb = ({ children, className, title, ...others }) => (
+  <nav title={title || `breadcrumb ${shortid.generate()}`}>
+    <ol
+      className={classnames('atomikui-breadcrumb', className, {})}
+      {...others}
+    >
+      {Children.map(children, (child, i) => (
+        <li key={`breadcumb-${i + 1}`}>{child}</li>
+      ))}
+    </ol>
+  </nav>
+);
 
 Breadcrumb.propTypes = {
   /** Adds custom component CSS classes */

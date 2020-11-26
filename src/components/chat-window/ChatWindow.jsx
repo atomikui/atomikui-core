@@ -123,15 +123,13 @@ const ChatWindow = ({
         </button>
       </div>
       <div ref={chatWindowBodyRef} className="atomikui-chat-window__body">
-        {messages.map(({ isOutgoing, ...props }, index) => {
-          return (
-            <ChatMessage
-              key={`message-${index + 1}`}
-              isOutgoing={isOutgoing}
-              {...props}
-            />
-          );
-        })}
+        {messages.map(({ isOutgoing, ...props }, index) => (
+          <ChatMessage
+            key={`message-${index + 1}`}
+            isOutgoing={isOutgoing}
+            {...props}
+          />
+        ))}
       </div>
       <div className="atomikui-chat-window__footer">
         <textarea

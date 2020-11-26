@@ -4,13 +4,13 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Hint from '../hint';
 
-const hoursOptions = [...Array(13).keys()].slice(1, 13).map((hour) => {
-  return String(hour);
-});
+const hoursOptions = [...Array(13).keys()]
+  .slice(1, 13)
+  .map((hour) => String(hour));
 
-const minutesOptions = [...Array(60).keys()].map((minute) => {
-  return minute < 10 ? `0${minute}` : String(minute);
-});
+const minutesOptions = [...Array(60).keys()].map((minute) =>
+  minute < 10 ? `0${minute}` : String(minute),
+);
 
 const TimePicker = ({
   className,
@@ -52,17 +52,13 @@ const TimePicker = ({
           aria-label="select the hour of the day"
           aria-describedby="time-picker-error"
           value={hourValue}
-          onChange={(e) => {
-            return setHourValue(e.target.value);
-          }}
+          onChange={(e) => setHourValue(e.target.value)}
         >
-          {hoursOptions.map((h) => {
-            return (
-              <option key={`hour-${h}`} value={h}>
-                {h}
-              </option>
-            );
-          })}
+          {hoursOptions.map((h) => (
+            <option key={`hour-${h}`} value={h}>
+              {h}
+            </option>
+          ))}
         </select>
         <span>:</span>
         <select
@@ -70,26 +66,20 @@ const TimePicker = ({
           aria-label="select the minute of the hour"
           aria-describedby="time-picker-error"
           value={minuteValue}
-          onChange={(e) => {
-            return setMinuteValue(e.target.value);
-          }}
+          onChange={(e) => setMinuteValue(e.target.value)}
         >
-          {minutesOptions.map((m) => {
-            return (
-              <option key={`minute-${m}`} value={m}>
-                {m}
-              </option>
-            );
-          })}
+          {minutesOptions.map((m) => (
+            <option key={`minute-${m}`} value={m}>
+              {m}
+            </option>
+          ))}
         </select>
         <select
           data-test-id="timepicker-amOrPm-dropdown"
           aria-label="select AM or PM"
           aria-describedby="time-picker-error"
           value={amOrPmValue}
-          onChange={(e) => {
-            return setAmOrPmValue(e.target.value);
-          }}
+          onChange={(e) => setAmOrPmValue(e.target.value)}
         >
           <option value="AM">AM</option>
           <option value="PM">PM</option>

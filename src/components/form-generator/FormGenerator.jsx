@@ -26,42 +26,34 @@ const components = {
   Switch,
 };
 
-const FormGenerator = ({ rowSpacing, fieldsets }) => {
-  return (
-    <>
-      {fieldsets.map((fieldset, gridIndex) => {
-        return (
-          <Grid
-            key={`grid-${gridIndex + 1}`}
-            className={classnames({
-              [`margin-bottom-${rowSpacing}`]: rowSpacing,
-            })}
-          >
-            <Row>
-              {fieldset.map(
-                (
-                  {
-                    component,
-                    colProps = { sm: 12, md: 12, lg: 12 },
-                    ...props
-                  },
-                  colIndex,
-                ) => {
-                  const Component = components[component];
-                  return (
-                    <Col key={`col-${colIndex + 1}`} {...colProps}>
-                      <Component {...props} />
-                    </Col>
-                  );
-                },
-              )}
-            </Row>
-          </Grid>
-        );
-      })}
-    </>
-  );
-};
+const FormGenerator = ({ rowSpacing, fieldsets }) => (
+  <>
+    {fieldsets.map((fieldset, gridIndex) => (
+      <Grid
+        key={`grid-${gridIndex + 1}`}
+        className={classnames({
+          [`margin-bottom-${rowSpacing}`]: rowSpacing,
+        })}
+      >
+        <Row>
+          {fieldset.map(
+            (
+              { component, colProps = { sm: 12, md: 12, lg: 12 }, ...props },
+              colIndex,
+            ) => {
+              const Component = components[component];
+              return (
+                <Col key={`col-${colIndex + 1}`} {...colProps}>
+                  <Component {...props} />
+                </Col>
+              );
+            },
+          )}
+        </Row>
+      </Grid>
+    ))}
+  </>
+);
 
 FormGenerator.propTypes = {
   /** Sets the vertical rhythm for each row */

@@ -9,21 +9,19 @@ const Tag = ({
   theme,
   themeVariant,
   ...others
-}) => {
-  return (
-    <div
-      className={classnames('atomikui-tag', className, {
-        [`atomikui-tag--${theme}${
-          themeVariant ? `-${themeVariant}` : ''
-        }`]: theme,
-        [`atomikui-tag--${shape}`]: shape,
-      })}
-      {...others}
-    >
-      {children}
-    </div>
-  );
-};
+}) => (
+  <div
+    className={classnames('atomikui-tag', className, {
+      [`atomikui-tag--${theme}${
+        themeVariant ? `-${themeVariant}` : ''
+      }`]: theme,
+      [`atomikui-tag--${shape}`]: shape,
+    })}
+    {...others}
+  >
+    {children}
+  </div>
+);
 
 Tag.propTypes = {
   /** Adds custom component CSS classes */

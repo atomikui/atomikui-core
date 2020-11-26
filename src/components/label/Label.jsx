@@ -3,13 +3,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const Label = ({ className, children, ...others }) => {
-  return (
-    <label className={classnames('atomikui-label', className)} {...others}>
-      {children}
-    </label>
-  );
-};
+const Label = ({ className, children, ...others }) => (
+  <label className={classnames('atomikui-label', className)} {...others}>
+    {children}
+  </label>
+);
 
 Label.propTypes = {
   /** Custom classes to be added to Label component. */

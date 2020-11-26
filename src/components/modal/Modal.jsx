@@ -34,9 +34,7 @@ const Modal = ({
     if (isOpen) {
       setFocusTrap(
         createFocusTrap(modalRef.current, {
-          allowOutsideClick: () => {
-            return !disableOverlayclick || noOverlay;
-          },
+          allowOutsideClick: () => !disableOverlayclick || noOverlay,
           clickOutsideDeactivates: noOverlay,
           escapeDeactivates: false,
           fallbackFocus: modalRef,

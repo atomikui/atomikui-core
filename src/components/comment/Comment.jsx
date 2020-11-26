@@ -15,44 +15,42 @@ const Comment = ({
   replies,
   onReply,
   ...others
-}) => {
-  return (
-    <div className={classnames('atomikui-comment', className)} {...others}>
-      <div className="atomikui-comment__avatar">
-        <Avatar src={avatar} alt={author} shape="bevel" />
-      </div>
-      <div className="atomikui-comment__content">
-        <div className="atomikui-comment__title">
-          {authorLink ? (
-            <Link data-test-id="comment-author-link" href={authorLink}>
-              {author}
-            </Link>
-          ) : (
-            author
-          )}
-        </div>
-        <div className="atomikui-comment__metadata">{metadata}</div>
-        <div className="atomikui-comment__text">{children}</div>
-        <Button
-          data-test-id="comment-reply-btn"
-          className="atomikui-comment__reply-btn"
-          theme="link"
-          onClick={onReply}
-        >
-          Reply
-        </Button>
-        {!!replies.length && (
-          <div
-            className="atomikui-comment__replies"
-            data-test-id="comment-replies"
-          >
-            {replies}
-          </div>
+}) => (
+  <div className={classnames('atomikui-comment', className)} {...others}>
+    <div className="atomikui-comment__avatar">
+      <Avatar src={avatar} alt={author} shape="bevel" />
+    </div>
+    <div className="atomikui-comment__content">
+      <div className="atomikui-comment__title">
+        {authorLink ? (
+          <Link data-test-id="comment-author-link" href={authorLink}>
+            {author}
+          </Link>
+        ) : (
+          author
         )}
       </div>
+      <div className="atomikui-comment__metadata">{metadata}</div>
+      <div className="atomikui-comment__text">{children}</div>
+      <Button
+        data-test-id="comment-reply-btn"
+        className="atomikui-comment__reply-btn"
+        theme="link"
+        onClick={onReply}
+      >
+        Reply
+      </Button>
+      {!!replies.length && (
+        <div
+          className="atomikui-comment__replies"
+          data-test-id="comment-replies"
+        >
+          {replies}
+        </div>
+      )}
     </div>
-  );
-};
+  </div>
+);
 
 Comment.propTypes = {
   /** Comment Author */

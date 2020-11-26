@@ -109,9 +109,9 @@ const FileUpload = forwardRef(
             <>
               <div className="margin-top-16" />
               <List className="atomikui-file-upload__file-list">
-                {files.map((file) => {
-                  return <ListItem key={shortid.generate()}>{file}</ListItem>;
-                })}
+                {files.map((file) => (
+                  <ListItem key={shortid.generate()}>{file}</ListItem>
+                ))}
               </List>
             </>
           )}

@@ -34,13 +34,11 @@ const Overlay = ({
       })}
       {...others}
     >
-      {Children.map(children, (child) => {
-        return cloneElement(child, {
-          onClick: (e) => {
-            return e.stopPropagation();
-          },
-        });
-      })}
+      {Children.map(children, (child) =>
+        cloneElement(child, {
+          onClick: (e) => e.stopPropagation(),
+        }),
+      )}
     </div>
   );
 };

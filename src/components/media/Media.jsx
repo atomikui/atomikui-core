@@ -11,30 +11,28 @@ const Media = ({
   footer,
   reverse,
   ...others
-}) => {
-  return (
-    <div
-      className={classnames('atomikui-media', className, {
-        'atomikui-media--inline': inline,
-        'atomikui-media--reverse': reverse,
-        [`media--${align}`]: align,
-      })}
-      {...others}
-    >
-      <div className="atomikui-media__hd" data-test-id="media-hd">
-        {header}
-      </div>
-      <div className="atomikui-media__bd" data-test-id="media-bd">
-        {body}
-      </div>
-      {footer && (
-        <div className="atomikui-media__ft" data-test-id="media-ft">
-          {footer}
-        </div>
-      )}
+}) => (
+  <div
+    className={classnames('atomikui-media', className, {
+      'atomikui-media--inline': inline,
+      'atomikui-media--reverse': reverse,
+      [`media--${align}`]: align,
+    })}
+    {...others}
+  >
+    <div className="atomikui-media__hd" data-test-id="media-hd">
+      {header}
     </div>
-  );
-};
+    <div className="atomikui-media__bd" data-test-id="media-bd">
+      {body}
+    </div>
+    {footer && (
+      <div className="atomikui-media__ft" data-test-id="media-ft">
+        {footer}
+      </div>
+    )}
+  </div>
+);
 
 Media.propTypes = {
   /** Specifies media content alignment */

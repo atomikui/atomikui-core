@@ -64,9 +64,7 @@ const DatePicker = forwardRef(
     useEffect(() => {
       setFocusTrap(
         createFocusTrap(calendar.current, {
-          allowOutsideClick: () => {
-            return true;
-          },
+          allowOutsideClick: () => true,
           clickOutsideDeactivates: false,
           escapeDeactivates: true,
           fallbackFocus: calendar,
@@ -95,9 +93,7 @@ const DatePicker = forwardRef(
             ref={ref}
             id={uid}
             mask="99/99/9999"
-            onBlur={(e) => {
-              return handleDateChange(e.target.value);
-            }}
+            onBlur={(e) => handleDateChange(e.target.value)}
             value={theValue}
             disabled={disabled}
             {...others}
@@ -107,9 +103,7 @@ const DatePicker = forwardRef(
             data-test-id="datepicker-input-btn"
             theme="hollow"
             size="md"
-            onClick={() => {
-              return setIsOpen(!isOpen);
-            }}
+            onClick={() => setIsOpen(!isOpen)}
             disabled={disabled}
             aria-label="show calendar button"
           >
@@ -123,9 +117,7 @@ const DatePicker = forwardRef(
             ref={calendar}
           >
             <Calendar
-              onChange={(details) => {
-                return handleDateChange(details);
-              }}
+              onChange={(details) => handleDateChange(details)}
               value={new Date(theValue)}
             />
           </div>

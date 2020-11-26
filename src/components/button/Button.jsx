@@ -14,26 +14,24 @@ const Button = ({
   theme,
   themeVariant,
   ...others
-}) => {
-  return (
-    <button
-      className={classnames('atomikui-btn', className, {
-        [`atomikui-btn--${theme}${
-          themeVariant ? `-${themeVariant}` : ''
-        }`]: theme,
-        [`atomikui-btn--${shape}`]: shape,
-        [`atomikui-btn--${size}`]: size,
-        'atomikui-btn--condensed': condensed,
-        'atomikui-btn--block': block,
-      })}
-      type={type}
-      disabled={disabled}
-      {...others}
-    >
-      {children}
-    </button>
-  );
-};
+}) => (
+  <button
+    className={classnames('atomikui-btn', className, {
+      [`atomikui-btn--${theme}${
+        themeVariant ? `-${themeVariant}` : ''
+      }`]: theme,
+      [`atomikui-btn--${shape}`]: shape,
+      [`atomikui-btn--${size}`]: size,
+      'atomikui-btn--condensed': condensed,
+      'atomikui-btn--block': block,
+    })}
+    type={type}
+    disabled={disabled}
+    {...others}
+  >
+    {children}
+  </button>
+);
 
 Button.propTypes = {
   /** Displays button as a block elment. */

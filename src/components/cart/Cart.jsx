@@ -13,9 +13,10 @@ const Cart = ({
   title,
   ...others
 }) => {
-  const subtotal = items.reduce((a, b) => {
-    return b.quantity > 0 ? (a + b.price) * b.quantity : a;
-  }, 0);
+  const subtotal = items.reduce(
+    (a, b) => (b.quantity > 0 ? (a + b.price) * b.quantity : a),
+    0,
+  );
 
   return (
     <div className={classnames('atomikui-cart', className)} {...others}>
@@ -25,18 +26,16 @@ const Cart = ({
       </div>
       <div className="atomikui-cart__bd">
         <List className="atomikui-cart__items">
-          {items.map((props, index) => {
-            return (
-              <ListItem key={`item-${index + 1}`}>
-                <CartItem
-                  onQuantityChange={(newQuantity) => {
-                    return onCartItemUpdate(newQuantity, index);
-                  }}
-                  {...props}
-                />
-              </ListItem>
-            );
-          })}
+          {items.map((props, index) => (
+            <ListItem key={`item-${index + 1}`}>
+              <CartItem
+                onQuantityChange={(newQuantity) =>
+                  onCartItemUpdate(newQuantity, index)
+                }
+                {...props}
+              />
+            </ListItem>
+          ))}
         </List>
       </div>
       <div className="atomikui-cart__ft">
@@ -47,14 +46,14 @@ const Cart = ({
         {tax && (
           <div className="atomikui-cart__tax" data-test-id="cart-tax">
             <span className="text-weight-semibold">Sales Tax:</span> $
-            {(subtotal * tax).toFixed(2).toLocaleString('en', {
+            {Number((subtotal * tax).toFixed(2)).toLocaleString('en', {
               minimumFractionDigits: 2,
             })}
           </div>
         )}
         <div className="atomikui-cart__total" data-test-id="cart-total">
           <span className="text-weight-semibold">Total:</span> $
-          {(subtotal * tax + subtotal).toFixed(2).toLocaleString('en', {
+          {Number((subtotal * tax + subtotal).toFixed(2)).toLocaleString('en', {
             minimumFractionDigits: 2,
           })}
         </div>
