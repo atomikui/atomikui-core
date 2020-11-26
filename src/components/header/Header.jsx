@@ -52,9 +52,7 @@ const Header = ({
         data-test-id="header-menu-toggle"
         className="atomikui-header__menu-toggle"
         aria-label="menu toggle button"
-        onClick={() => {
-          return setIsOpen(!isOpen);
-        }}
+        onClick={() => setIsOpen(!isOpen)}
       >
         <Icon icon={faGripLines} size="2x" color={menuToggleColor} />
       </button>

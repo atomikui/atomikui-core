@@ -54,7 +54,7 @@ const Drawer = ({
         focusTrap[isOpen ? 'activate' : 'deactivate']();
       }, 50);
     }
-  }, [focusTrap, isOpen]);
+  }, [focusTrap, isOpen, position]);
 
   return (
     <>

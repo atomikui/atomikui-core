@@ -13,7 +13,7 @@ const Accordion = ({
 
   useEffect(() => {
     setIsExpanded(defaultOpen);
-  }, []);
+  }, [defaultOpen]);
 
   return (
     <div

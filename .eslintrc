@@ -2,6 +2,7 @@
   "parser": "babel-eslint",
   "extends": "atomikui",
   "rules": {
+    "arrow-body-style": 0,
     "react-perf/jsx-no-new-object-as-prop": 1,
     "react-perf/jsx-no-new-function-as-prop": 1,
     "react/jsx-props-no-spreading": 0,
