@@ -2,7 +2,6 @@ import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import createFocusTrap from 'focus-trap';
-import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import ChatMessage from '../chat-message';
@@ -117,19 +116,17 @@ const ChatWindow = ({
         <button
           data-test-id="chat-window-close-btn"
           className="atomikui-chat-window__close-btn"
-          onClick={() => {
-            return onClose();
-          }}
+          onClick={onClose}
           aria-label="close button"
         >
           <Icon icon={faTimes} size="2x" color="white" />
         </button>
       </div>
       <div ref={chatWindowBodyRef} className="atomikui-chat-window__body">
-        {messages.map(({ isOutgoing, ...props }) => {
+        {messages.map(({ isOutgoing, ...props }, index) => {
           return (
             <ChatMessage
-              key={shortid.generate()}
+              key={`message-${index + 1}`}
               isOutgoing={isOutgoing}
               {...props}
             />
@@ -152,10 +149,8 @@ const ChatWindow = ({
         <Button
           data-test-id="chat-window-send-btn"
           className="atomikui-chat-window__send-btn"
-          onClick={() => {
-            return handleSubmit();
-          }}
-          theme="sky-blue"
+          onClick={handleSubmit}
+          theme="blue"
           disabled={!message}
         >
           Send

@@ -1,7 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import shortid from 'shortid';
 import CartItem from '../cart-item';
 import List from '../list';
 import ListItem from '../list-item';
@@ -28,9 +27,8 @@ const Cart = ({
         <List className="atomikui-cart__items">
           {items.map((props, index) => {
             return (
-              <ListItem key={shortid.generate()}>
+              <ListItem key={`item-${index + 1}`}>
                 <CartItem
-                  key={shortid.generate()}
                   onQuantityChange={(newQuantity) => {
                     return onCartItemUpdate(newQuantity, index);
                   }}

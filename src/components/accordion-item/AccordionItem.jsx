@@ -13,7 +13,7 @@ const AccordionItem = ({
   ...others
 }) => {
   const [isExpanded, setIsExpanded] = useState(expanded);
-  const [contentHeight, setContentHeight] = useState('0px');
+  const [contentHeight, setContentHeight] = useState({ height: 0 });
   const contentRef = useRef();
 
   const headerId = shortid.generate();
@@ -28,8 +28,10 @@ const AccordionItem = ({
   };
 
   useEffect(() => {
-    setContentHeight(`${contentRef.current.scrollHeight}px`);
-  });
+    setContentHeight({
+      height: isExpanded ? `${contentRef.current.scrollHeight}px` : '0px',
+    });
+  }, [contentRef, isExpanded]);
 
   useEffect(() => {
     setIsExpanded(expanded);
@@ -62,9 +64,7 @@ const AccordionItem = ({
         id={panelId}
         arial-labelledby={headerId}
         className="atomikui-accordion-item__body"
-        style={{
-          height: isExpanded ? contentHeight : '0px',
-        }}
+        style={contentHeight}
       >
         <div
           className="atomikui-accordion-item__body__content"

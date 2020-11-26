@@ -64,8 +64,9 @@ const CreditCardField = ({
     setCreditCardIsFocused(false);
   };
 
-  const enforceMaxLength = (maxLength, e) => {
-    if (e.target.value.length === maxLength && e.keyCode !== 8) {
+  const enforceMaxLength = (e) => {
+    const { value, maxLength } = e.target;
+    if (value.length === +maxLength && e.keyCode !== 8) {
       e.preventDefault();
     }
   };
@@ -228,9 +229,8 @@ const CreditCardField = ({
                   {...cardCvc}
                   data-test-id="credit-card-cvc"
                   aria-label="CVC"
-                  onKeyDown={(e) => {
-                    return enforceMaxLength(3, e);
-                  }}
+                  maxLength="3"
+                  onKeyDown={enforceMaxLength}
                   borderless
                 />
               </div>
@@ -249,9 +249,8 @@ const CreditCardField = ({
                   {...cardZip}
                   data-test-id="credit-card-zip"
                   aria-label="ZIP Code"
-                  onKeyDown={(e) => {
-                    return enforceMaxLength(5, e);
-                  }}
+                  maxLength="5"
+                  onKeyDown={enforceMaxLength}
                   borderless
                 />
               </div>

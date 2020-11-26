@@ -2,8 +2,8 @@
   "parser": "babel-eslint",
   "extends": "atomikui",
   "rules": {
-    "react-perf/jsx-no-new-object-as-prop": 0,
-    "react-perf/jsx-no-new-function-as-prop": 0,
+    "react-perf/jsx-no-new-object-as-prop": 1,
+    "react-perf/jsx-no-new-function-as-prop": 1,
     "react/jsx-props-no-spreading": 0,
     "react/button-has-type": 0
   }
