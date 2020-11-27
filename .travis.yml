@@ -3,14 +3,21 @@ language: node_js
 node_js:
   - '12.16.2'
 
-install:
+before_script:
   - yarn install
+
+script:
+  - yarn build:styleguide
+  - node server.js
 
 jobs:
   include:
     - stage: Test
       script:
         - yarn test:unit
+        - yarn test:accessibility
+    - stage: Lint
+      script:
         - yarn lint:js
         - yarn lint:sass
     - stage: Publish NPM
