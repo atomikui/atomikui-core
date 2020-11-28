@@ -15,9 +15,11 @@ jobs:
     - stage: Test - Unit
       script:
         - yarn test:unit
-    - stage: Lint
+    - stage: Lint - JS
       script:
         - yarn lint:js
+    - stage: Lint - Sass
+      script:
         - yarn lint:sass
     - stage: Publish NPM
       script:
