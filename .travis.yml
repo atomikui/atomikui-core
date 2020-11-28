@@ -1,7 +1,16 @@
 language: node_js
 
+addons:
+  chrome: stable
+
 node_js:
   - '12.16.2'
+
+env:
+  global:
+    - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+
+before_install: google-chrome-stable --headless --disable-gpu --remote-debugging-port=3000 http://localhost &
 
 before_script:
   - yarn install
@@ -15,9 +24,11 @@ jobs:
     - stage: Test
       script:
         - yarn test:unit
-        - yarn test:accessibility
+        - yarn lint:js
+        - yarn lint:sass
     - stage: Lint
       script:
+        - yarn test:unit
         - yarn lint:js
         - yarn lint:sass
     - stage: Publish NPM
