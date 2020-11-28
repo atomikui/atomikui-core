@@ -10,7 +10,7 @@ env:
   global:
     - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
-before_install: google-chrome-stable --headless --disable-gpu http://localhost:3000 &
+before_install: google-chrome-stable --headless --disable-gpu --remote-debugging-port=6060 http://localhost &
 
 before_script:
   - yarn install
