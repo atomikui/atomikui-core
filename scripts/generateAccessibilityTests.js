@@ -21,10 +21,10 @@ const generateAccessibilityTests = ({
 
     it('Should pass accessibility tests', async () => {
       await page.goto(pageUrl);
+      console.log('THE PAGE:', page);
       // await expect(page).toPassAxeTests({
       //   include: `[data-preview=${component}]`,
       // });
-      expect(1).toEqual(1);
     });
 
     afterEach(async () => {
