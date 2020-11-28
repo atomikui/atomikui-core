@@ -21,14 +21,14 @@ script:
 
 jobs:
   include:
-    - stage: Test
+    - stage: Accessibility Tests
+      script:
+        - yarn test:accessibility
+    - stage: Unit Tests
       script:
         - yarn test:unit
-        - yarn lint:js
-        - yarn lint:sass
-    - stage: Lint
+    - stage: Linting
       script:
-        - yarn test:unit
         - yarn lint:js
         - yarn lint:sass
     - stage: Publish NPM
