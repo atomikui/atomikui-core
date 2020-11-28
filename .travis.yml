@@ -6,14 +6,11 @@ node_js:
 install:
   - yarn install
 
-script:
-  - yarn build:styleguide
-
 jobs:
   include:
     - stage: Test - Accessiblity
       script:
-        - node server.js &
+        - yarn start &
         - yarn test:accessibility
     - stage: Test - Unit
       script:
