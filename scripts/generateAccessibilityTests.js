@@ -20,7 +20,7 @@ const generateAccessibilityTests = ({
     });
 
     it('Should pass accessibility tests', async () => {
-      // await page.goto(pageUrl);
+      await page.goto(pageUrl);
       // await expect(page).toPassAxeTests({
       //   include: `[data-preview=${component}]`,
       // });
