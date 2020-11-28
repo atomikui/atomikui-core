@@ -3,17 +3,17 @@ language: node_js
 node_js:
   - '12.16.2'
 
-before_script:
+install:
   - yarn install
 
 script:
   - yarn build:styleguide
-  - node server.js
 
 jobs:
   include:
     - stage: Test - Accessiblity
       script:
+        - node server.js &
         - yarn test:accessibility
     - stage: Test - Unit
       script:
