@@ -3,12 +3,14 @@ language: node_js
 node_js:
   - '12.16.2'
 
+before_script:
+  - yarn build:styleguide
+  - yarn start:server
+
 jobs:
   include:
     - stage: Test - Accessiblity
       script:
-        - yarn build:styleguide
-        - node server.js
         - yarn test:accessibility
     - stage: Test - Unit
       script:
