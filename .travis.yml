@@ -1,33 +1,21 @@
 language: node_js
 
-addons:
-  chrome: stable
-
 node_js:
   - '12.16.2'
 
-env:
-  global:
-    - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-
-before_install: "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9222 http://localhost:6060 &"
-
-before_script:
+install:
   - yarn install
-
-script:
-  - yarn build:styleguide
-  - node server.js
 
 jobs:
   include:
-    - stage: Accessibility Tests
+    - stage: Test - Accessiblity
       script:
+        - yarn build:styleguide
         - yarn test:accessibility
-    - stage: Unit Tests
+    - stage: Test - Unit
       script:
         - yarn test:unit
-    - stage: Linting
+    - stage: Lint
       script:
         - yarn lint:js
         - yarn lint:sass

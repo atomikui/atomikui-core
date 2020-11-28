@@ -7,6 +7,7 @@ const generateAccessibilityTests = ({
 }) => {
   describe(`Accesssibility testing for component: ${component}`, () => {
     const pageUrl = `${url}/#!/${path}`;
+    console.log('PAGE URL:', pageUrl);
     let browser;
     let page;
 
