@@ -10,7 +10,7 @@ env:
   global:
     - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 
-before_install: google-chrome-stable --headless --disable-gpu --remote-debugging-port=6060 http://localhost &
+before_install: "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=9222 http://localhost &"
 
 before_script:
   - yarn install
