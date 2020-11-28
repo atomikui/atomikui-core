@@ -4,8 +4,11 @@ node_js:
   - '12.16.2'
 
 before_script:
+  - yarn install
+
+script:
   - yarn build:styleguide
-  - yarn start:server
+  - node server.js
 
 jobs:
   include:
