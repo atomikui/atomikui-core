@@ -1,4 +1,7 @@
 const puppeteer = require('puppeteer');
+const Adapter = require('enzyme-adapter-react-16');
+
+configure({ adapter: new Adapter() });
 
 const generateAccessibilityTests = ({
   component,
@@ -7,7 +10,6 @@ const generateAccessibilityTests = ({
 }) => {
   describe(`Accesssibility testing for component: ${component}`, () => {
     const pageUrl = `${url}/#!/${path}`;
-    console.log('PAGE URL:', pageUrl);
     let browser;
     let page;
 
