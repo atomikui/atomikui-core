@@ -1,5 +1,18 @@
 <br />
 
+### [v0.9.3](https://github.com/atomikui/atomikui-core/compare/v0.9.2...v0.9.3) - 2020-11-28
+
+#### Merged
+
+- Travis - adds accessibility testing and fixes accessibility errors [`#67`](https://github.com/atomikui/atomikui-core/pull/67)
+
+#### Commits
+
+- Updates CHANGELOG.md [`6dc9c98`](https://github.com/atomikui/atomikui-core/commit/6dc9c987782446f86a33cd7fe158eb4acc45dbc7)
+- Upgrade to 0.9.3 [`9029583`](https://github.com/atomikui/atomikui-core/commit/90295830ba8f0787077418845235cef0baeed70a)
+
+<hr />
+
 ### [v0.9.2](https://github.com/atomikui/atomikui-core/compare/v0.9.1...v0.9.2) - 2020-11-26
 
 #### Commits
