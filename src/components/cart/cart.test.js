@@ -39,7 +39,7 @@ describe('<Cart />', () => {
 
   it('Should calculate subtotal', () => {
     expect(cart.find('[data-test-id="cart-total"]').text()).toBe(
-      'Total: $9179.98',
+      'Total: $9,179.98',
     );
   });
 

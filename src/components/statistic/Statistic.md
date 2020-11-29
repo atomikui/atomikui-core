@@ -79,6 +79,10 @@ There are many color themes to choose from. Simply pass in a `theme` prop with t
 
 #### Dark
 
+_Note:_ For accessibility, `light-green`, `lime`, `yellow`, `light-orange` and `amber` can only be used on dark backgrounds.
+
+<br />
+
 ```jsx
 import { Statistic } from '@atomikui/core';
 
@@ -93,16 +97,19 @@ import { Statistic } from '@atomikui/core';
   <Statistic value="3" label="cyan" theme="cyan" />
   <Statistic value="17" label="teal" theme="teal" />
   <Statistic value="87" label="green" theme="green" />
-  <Statistic value="87" label="light-green" theme="light-green" />
-  <Statistic value="87" label="lime" theme="lime" />
-  <Statistic value="87" label="yellow" theme="yellow" />
-  <Statistic value="87" label="light-orange" theme="light-orange" />
   <Statistic value="87" label="deep-orange" theme="deep-orange" />
-  <Statistic value="87" label="amber" theme="amber" />
   <Statistic value="87" label="brown" theme="brown" />
   <Statistic value="87" label="gray" theme="gray" />
   <Statistic value="87" label="blue-gray" theme="blue-gray" />
   <Statistic value="87" label="black" theme="black" />
+
+  <div className="statistic-alt">
+    <Statistic value="87" label="light-green" theme="light-green" />
+    <Statistic value="87" label="lime" theme="lime" />
+    <Statistic value="87" label="yellow" theme="yellow" />
+    <Statistic value="87" label="light-orange" theme="light-orange" />
+    <Statistic value="87" label="amber" theme="amber" />
+  </div>
 </>;
 ```
 

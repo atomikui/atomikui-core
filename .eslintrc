@@ -1,9 +1,4 @@
 {
   "parser": "babel-eslint",
-  "extends": "atomikui",
-  "rules": {
-    "arrow-body-style": ["error", "as-needed"],
-    "react-perf/jsx-no-new-object-as-prop": 1,
-    "react-perf/jsx-no-new-function-as-prop": 1
-  }
+  "extends": "atomikui"
 }

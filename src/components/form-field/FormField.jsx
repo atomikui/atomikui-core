@@ -38,6 +38,7 @@ const FormField = forwardRef(
       helpText,
       id,
       label,
+      labelProps,
       mask,
       name,
       onChange,
@@ -71,7 +72,9 @@ const FormField = forwardRef(
             data-test-id="formfield-label"
             className="atomikui-formfield__label"
           >
-            <Label htmlFor={uid}>{label}</Label>
+            <Label htmlFor={uid} {...labelProps}>
+              {label}
+            </Label>
           </div>
         )}
         {type === 'textarea' ? (
@@ -152,6 +155,9 @@ FormField.propTypes = {
   id: PropTypes.string,
   /** Specifies label text. */
   label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  /** Props to be spread on label element */
+  // eslint-disable-next-line react/forbid-prop-types
+  labelProps: PropTypes.object,
   /** Optional form field mask */
   mask: PropTypes.string,
   /** onChange callback. */
@@ -184,6 +190,7 @@ FormField.defaultProps = {
   helpText: '',
   id: null,
   label: '',
+  labelProps: null,
   mask: '',
   name: '',
   onChange() {},

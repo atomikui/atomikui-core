@@ -1,5 +1,15 @@
 <br />
 
+### [v0.9.2](https://github.com/atomikui/atomikui-core/compare/v0.9.1...v0.9.2) - 2020-11-26
+
+#### Commits
+
+- F8xes eslint errors [`846a63d`](https://github.com/atomikui/atomikui-core/commit/846a63d44e634ece4572040191b82fa1aac5a07c)
+- Linting and optimization [`1ebc791`](https://github.com/atomikui/atomikui-core/commit/1ebc79133d8457684fb6fad4f1bcf6ec319aebf1)
+- styleguide updates [`637566b`](https://github.com/atomikui/atomikui-core/commit/637566b5b03109728cce2cf22257607df8e750c7)
+
+<hr />
+
 ### [v0.9.1](https://github.com/atomikui/atomikui-core/compare/v0.9.0...v0.9.1) - 2020-11-25
 
 #### Commits
