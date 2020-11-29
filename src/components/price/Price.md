@@ -26,6 +26,8 @@ There are many color themes to choose from. Simply pass in a `theme` prop with t
 
 #### Dark
 
+_Note:_ For accessibility, `cyan`, `light-green`, `lime`, `yellow`, `light-orange`, `orange` and `amber` can only be used on dark backgrounds.
+
 ```jsx
 import { Price } from '@atomikui/core';
 
@@ -37,20 +39,23 @@ import { Price } from '@atomikui/core';
   <Price amount={124.99} label="/ month" theme="indigo" />
   <Price amount={124.99} label="/ month" theme="blue" />
   <Price amount={124.99} label="/ month" theme="sky-blue" />
-  <Price amount={124.99} label="/ month" theme="cyan" />
   <Price amount={124.99} label="/ month" theme="teal" />
   <Price amount={124.99} label="/ month" theme="green" />
-  <Price amount={124.99} label="/ month" theme="light-green" />
-  <Price amount={124.99} label="/ month" theme="lime" />
-  <Price amount={124.99} label="/ month" theme="yellow" />
-  <Price amount={124.99} label="/ month" theme="light-orange" />
-  <Price amount={124.99} label="/ month" theme="orange" />
   <Price amount={124.99} label="/ month" theme="deep-orange" />
-  <Price amount={124.99} label="/ month" theme="amber" />
   <Price amount={124.99} label="/ month" theme="brown" />
   <Price amount={124.99} label="/ month" theme="gray" />
   <Price amount={124.99} label="/ month" theme="blue-gray" />
   <Price amount={124.99} label="/ month" theme="black" />
+
+  <div className="price-alt">
+    <Price amount={124.99} label="/ month" theme="cyan" />
+    <Price amount={124.99} label="/ month" theme="light-green" />
+    <Price amount={124.99} label="/ month" theme="lime" />
+    <Price amount={124.99} label="/ month" theme="yellow" />
+    <Price amount={124.99} label="/ month" theme="light-orange" />
+    <Price amount={124.99} label="/ month" theme="orange" />
+    <Price amount={124.99} label="/ month" theme="amber" />
+  </div>
 </>;
 ```
 

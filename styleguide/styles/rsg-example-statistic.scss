@@ -9,5 +9,14 @@
 }
 
 [data-testid='Statistic-example-13'] {
-  background: #111 !important;
+  background: darken($blue-gray-900, 5%) !important;
+}
+
+.statistic-alt {
+  background: darken($blue-gray-900, 5%);
+  padding: rem(16);
+
+  & > * {
+    margin: rem(0 24 16 0);
+  }
 }
