@@ -76,13 +76,14 @@ const RangeSlider = forwardRef(
             {...others}
           />
           {ticks && (
-            <div className="atomikui-range-slider__ticks" aria-hidden="true">
+            <div className="atomikui-range-slider__ticks">
               {ticks.map(({ text, val }) => (
                 <button
                   type="button"
                   key={shortid.generate()}
                   data-test-id="range-slider-tick"
                   className="atomikui-range-slider__ticks__tick"
+                  {...(disabled && { 'aria-disabled': true })}
                   {...(!disabled && {
                     onFocus: () => handleTickClick(val),
                   })}

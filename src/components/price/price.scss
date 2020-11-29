@@ -65,7 +65,11 @@
 
   @each $name, $color in $background-light-colors {
     &--#{$name}-light {
-      color: $color;
+      color: $white;
+
+      .atomikui-price__amount {
+        color: $color;
+      }
     }
   }
 }
