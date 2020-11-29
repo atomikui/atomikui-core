@@ -82,6 +82,22 @@
       .atomikui-statistic__value {
         color: $color;
       }
+
+      @if $name ==
+        light-green or
+        $name ==
+        lime or
+        $name ==
+        yellow or
+        $name ==
+        light-orange or
+        $name ==
+        amber
+      {
+        .atomikui-statistic__ft {
+          color: $white;
+        }
+      }
     }
   }
 

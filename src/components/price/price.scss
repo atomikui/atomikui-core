@@ -39,13 +39,37 @@
 
   @each $name, $color in $background-dark-colors {
     &--#{$name} {
-      color: $color;
+      .atomikui-price__amount {
+        color: $color;
+      }
+
+      @if $name ==
+        cyan or
+        $name ==
+        light-green or
+        $name ==
+        lime or
+        $name ==
+        yellow or
+        $name ==
+        light-orange or
+        $name ==
+        orange or
+        $name ==
+        amber
+      {
+        color: $white;
+      }
     }
   }
 
   @each $name, $color in $background-light-colors {
     &--#{$name}-light {
-      color: $color;
+      color: $white;
+
+      .atomikui-price__amount {
+        color: $color;
+      }
     }
   }
 }

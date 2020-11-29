@@ -8,10 +8,18 @@ install:
 
 jobs:
   include:
-    - stage: Test
+    - stage: Test - Accessiblity
+      script:
+        - yarn start &
+        - yarn test:accessibility
+    - stage: Test - Unit
       script:
         - yarn test:unit
+    - stage: Lint - JS
+      script:
         - yarn lint:js
+    - stage: Lint - Sass
+      script:
         - yarn lint:sass
     - stage: Publish NPM
       script:

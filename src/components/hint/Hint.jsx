@@ -19,7 +19,7 @@ Hint.propTypes = {
   /** Hint content. */
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the typr of hint. */
-  type: PropTypes.oneOf(['error', 'warning', 'success', 'info']),
+  type: PropTypes.oneOf(['error', 'success', 'info']),
 };
 
 Hint.defaultProps = {

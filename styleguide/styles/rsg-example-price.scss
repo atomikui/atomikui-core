@@ -14,3 +14,12 @@
 [data-testid='Price-example-7'] {
   background: #111 !important;
 }
+
+.price-alt {
+  background: darken($blue-gray-900, 5%);
+  padding: rem(16);
+
+  & > * {
+    margin: rem(0 24 16 0);
+  }
+}

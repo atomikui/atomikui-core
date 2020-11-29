@@ -7,7 +7,7 @@
   & > input[type='range'] {
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: $gray-100;
+    background: $gray-300;
     border: 0;
     border-radius: rem(4);
     height: rem(4);
@@ -100,7 +100,7 @@
     z-index: 2;
 
     .atomikui-range-slider__ticks__tick {
-      background: $gray-100;
+      background: $gray-300;
       border: 0;
       border-radius: 50%;
       cursor: pointer;
@@ -150,12 +150,12 @@
 
     input[type='range'],
     .atomikui-range-slider__ticks__tick {
-      background: $background-light-gray;
+      background: $gray-300;
       cursor: default;
     }
 
     .atomikui-range-slider__ticks__label {
-      color: $gray-200;
+      color: $gray-400;
     }
   }
 

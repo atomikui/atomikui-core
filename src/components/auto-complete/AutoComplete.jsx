@@ -17,6 +17,7 @@ const AutoComplete = forwardRef(
       >
         {({
           getInputProps,
+          getLabelProps,
           getItemProps,
           getMenuProps,
           highlightedIndex,
@@ -29,7 +30,12 @@ const AutoComplete = forwardRef(
             className={classnames('atomikui-auto-complete', className)}
             {...getRootProps({}, { suppressRefError: true })}
           >
-            <FormField ref={ref} {...getInputProps()} {...others} />
+            <FormField
+              ref={ref}
+              labelProps={getLabelProps()}
+              {...getInputProps()}
+              {...others}
+            />
             <ul
               className="atomikui-auto-complete__list"
               data-test-id="autocomplete-list"
