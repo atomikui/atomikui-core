@@ -1,5 +1,15 @@
 <br />
 
+### [v0.9.4](https://github.com/atomikui/atomikui-core/compare/v0.9.3...v0.9.4) - 2020-12-02
+
+#### Commits
+
+- Moves dependencies to peerDependencies [`dda5183`](https://github.com/atomikui/atomikui-core/commit/dda51833000364b153a16c916895d32d8b9200b5)
+- Update package.json [`80c90e7`](https://github.com/atomikui/atomikui-core/commit/80c90e7fda2a549abdb17fa21d01d515fac0809b)
+- Updates CHANGELOG.md [`1633501`](https://github.com/atomikui/atomikui-core/commit/16335017027514eaf35cf9ddd51ce3d3356c46dd)
+
+<hr />
+
 ### [v0.9.3](https://github.com/atomikui/atomikui-core/compare/v0.9.2...v0.9.3) - 2020-11-28
 
 #### Merged
