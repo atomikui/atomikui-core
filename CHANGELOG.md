@@ -1,5 +1,15 @@
 <br />
 
+### [v0.9.6](https://github.com/atomikui/atomikui-core/compare/v0.9.5...v0.9.6) - 2020-12-04
+
+#### Commits
+
+- Updates README.md Installation.md [`c8bb8bd`](https://github.com/atomikui/atomikui-core/commit/c8bb8bdc60c97bf5e9ee9b4842298d2de3b6cd34)
+- updates peer dependencies [`d95856f`](https://github.com/atomikui/atomikui-core/commit/d95856fa8781d5606d9eb025326223650a20c558)
+- Updates CHANGELOG.md [`770f917`](https://github.com/atomikui/atomikui-core/commit/770f9175d0a2834940a618c599513f7e30902150)
+
+<hr />
+
 ### [v0.9.5](https://github.com/atomikui/atomikui-core/compare/v0.9.4...v0.9.5) - 2020-12-02
 
 #### Commits
