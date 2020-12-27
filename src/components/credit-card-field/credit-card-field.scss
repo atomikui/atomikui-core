@@ -3,6 +3,18 @@
     margin-bottom: rem(3);
   }
 
+  &__last-four-digits-btn {
+    border: 0;
+    font-size: inherit;
+    line-height: rem($input-height + 1);
+
+    &:focus {
+      @include focus-outline();
+
+      outline: 0;
+    }
+  }
+
   &__fields {
     align-items: center;
     background: $background-light-gray;
@@ -20,18 +32,6 @@
 
     & > svg {
       margin: rem(0 8);
-    }
-  }
-
-  &__last-four-digits-btn {
-    border: 0;
-    font-size: inherit;
-    line-height: rem($input-height + 1);
-
-    &:focus {
-      @include focus-outline();
-
-      outline: 0;
     }
   }
 
