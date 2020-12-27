@@ -33,7 +33,7 @@ const FormGenerator = ({ rowSpacing, fieldsets }) => (
         <Row>
           {fieldset.map(
             (
-              { component, colProps = { sm: 12, md: 12, lg: 12 }, ...props },
+              { component, cols = { sm: 12, md: 12, lg: 12 }, ...props },
               colIndex,
             ) => {
               const Component = components[component];
@@ -43,7 +43,7 @@ const FormGenerator = ({ rowSpacing, fieldsets }) => (
                   className={classnames({
                     [`padding-bottom-${rowSpacing}`]: rowSpacing,
                   })}
-                  {...colProps}
+                  {...cols}
                 >
                   <Component {...props} />
                 </Col>

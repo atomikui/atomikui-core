@@ -22,14 +22,14 @@ const personalInfo = [
   [
     {
       component: 'FormField',
-      colProps: { sm: 12, md: 9, lg: 10 },
+      cols: { sm: 12, md: 9, lg: 10 },
       name: 'firstName',
       label: 'First Name',
       onChange: (e) => console.log(e.target.value),
     },
     {
       component: 'FormField',
-      colProps: { sm: 12, md: 3, lg: 2 },
+      cols: { sm: 12, md: 3, lg: 2 },
       id: 'mi',
       name: 'mi',
       label: 'Middle Initial',
@@ -47,7 +47,7 @@ const personalInfo = [
   [
     {
       component: 'FormField',
-      colProps: { sm: 12, md: 6, lg: 6 },
+      cols: { sm: 12, md: 6, lg: 6 },
       id: 'email',
       name: 'email',
       label: 'Email Address',
@@ -55,7 +55,7 @@ const personalInfo = [
     },
     {
       component: 'FormField',
-      colProps: { sm: 12, md: 6, lg: 6 },
+      cols: { sm: 12, md: 6, lg: 6 },
       id: 'phone',
       name: 'phone',
       label: 'Phone Number',
@@ -83,11 +83,11 @@ const personalInfo = [
 
 ### Layout
 
-The FormGenerator uses [React-Flexbox-Grid](http://roylee0704.github.io/react-flexbox-grid/) to handle the layout of the form. Each form field is wrapped in a column whose width can be controlled by the `colProps` property.
+The FormGenerator uses [React-Flexbox-Grid](http://roylee0704.github.io/react-flexbox-grid/) to handle the layout of the form. Each form field is wrapped in a column whose width can be controlled by the `cols` property.
 
-For example, `colProps: { sm: 12, md: 6, lg: 6 }` will set a form fields column to 12 on small devices and 6 on medium and large devices.
+For example, `cols: { sm: 12, md: 6, lg: 6 }` will set a form fields column to 12 on small devices and 6 on medium and large devices.
 
-By default, `colProps` is set to `12` for all breakpoints if otherwise not specified.
+By default, `cols` is set to `12` for all breakpoints if otherwise not specified.
 <br /><br />
 
 ### Validation
@@ -133,7 +133,7 @@ const formfields = [
   [
     {
       component: 'FormField',
-      colProps: { sm: 12, md: 6, lg: 6 },
+      cols: { sm: 12, md: 6, lg: 6 },
       name: 'firstName',
       label: 'First Name',
       defaultValue: values.firstName,
@@ -145,7 +145,7 @@ const formfields = [
   [
     {
       component: 'FormField',
-      colProps: { sm: 12, md: 6, lg: 6 },
+      cols: { sm: 12, md: 6, lg: 6 },
       name: 'lastName',
       label: 'Last Name',
       defaultValue: values.lastName,
@@ -157,7 +157,7 @@ const formfields = [
   [
     {
       component: 'DatePicker',
-      colProps: { sm: 12, md: 6, lg: 6 },
+      cols: { sm: 12, md: 6, lg: 6 },
       name: 'date',
       label: 'Select a Date',
       defaultValue: values.date,
@@ -217,7 +217,7 @@ const formfields = [
   [
     {
       component: 'CheckOption',
-      colProps: { sm: 12, md: 6, lg: 6 },
+      cols: { sm: 12, md: 6, lg: 6 },
       name: 'leaveComment',
       label: 'Leave a Comment?',
       defaultChecked: values.leaveComment,
@@ -228,7 +228,7 @@ const formfields = [
     ? [
         {
           component: 'FormField',
-          colProps: { sm: 12, md: 12, lg: 12 },
+          cols: { sm: 12, md: 12, lg: 12 },
           name: 'comment',
           label: 'Comment',
           defaultValue: values.comment,
