@@ -29,12 +29,7 @@ const components = {
 const FormGenerator = ({ rowSpacing, fieldsets }) => (
   <>
     {fieldsets.map((fieldset, gridIndex) => (
-      <Grid
-        key={`grid-${gridIndex + 1}`}
-        className={classnames({
-          [`margin-bottom-${rowSpacing}`]: rowSpacing,
-        })}
-      >
+      <Grid key={`grid-${gridIndex + 1}`}>
         <Row>
           {fieldset.map(
             (
@@ -43,7 +38,13 @@ const FormGenerator = ({ rowSpacing, fieldsets }) => (
             ) => {
               const Component = components[component];
               return (
-                <Col key={`col-${colIndex + 1}`} {...colProps}>
+                <Col
+                  key={`col-${colIndex + 1}`}
+                  className={classnames({
+                    [`padding-bottom-${rowSpacing}`]: rowSpacing,
+                  })}
+                  {...colProps}
+                >
                   <Component {...props} />
                 </Col>
               );

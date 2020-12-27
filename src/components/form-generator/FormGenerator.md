@@ -22,28 +22,25 @@ const personalInfo = [
   [
     {
       component: 'FormField',
-      colProps: { sm: 12, md: 6, lg: 6 },
+      colProps: { sm: 12, md: 9, lg: 10 },
       name: 'firstName',
       label: 'First Name',
       onChange: (e) => console.log(e.target.value),
     },
-  ],
-  [
     {
       component: 'FormField',
-      colProps: { sm: 12, md: 6, lg: 6 },
-      name: 'lastName',
-      label: 'Last Name',
+      colProps: { sm: 12, md: 3, lg: 2 },
+      id: 'mi',
+      name: 'mi',
+      label: 'Middle Initial',
       onChange: (e) => console.log(e.target.value),
     },
   ],
   [
     {
       component: 'FormField',
-      colProps: { sm: 12, md: 2, lg: 2 },
-      id: 'mi',
-      name: 'mi',
-      label: 'Middle Initial',
+      name: 'lastName',
+      label: 'Last Name',
       onChange: (e) => console.log(e.target.value),
     },
   ],
@@ -56,8 +53,6 @@ const personalInfo = [
       label: 'Email Address',
       onChange: (e) => console.log(e.target.value),
     },
-  ],
-  [
     {
       component: 'FormField',
       colProps: { sm: 12, md: 6, lg: 6 },
@@ -71,7 +66,7 @@ const personalInfo = [
   [
     {
       component: 'Button',
-      theme: 'sky-blue',
+      theme: 'blue',
       children: 'Submit',
       className: 'margin-top-8',
     },
@@ -175,7 +170,7 @@ const formfields = [
     {
       component: 'Button',
       type: 'submit',
-      theme: 'sky-blue',
+      theme: 'blue',
       children: 'Submit',
       className: 'margin-top-8',
     },
