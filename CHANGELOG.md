@@ -1,5 +1,15 @@
 <br />
 
+### [v0.9.7](https://github.com/atomikui/atomikui-core/compare/v0.9.6...v0.9.7) - 2020-12-27
+
+#### Commits
+
+- Updates form generator spacing [`94b609f`](https://github.com/atomikui/atomikui-core/commit/94b609fbe2602386e14e177b2b4aabf4a6a210be)
+- FormGenerator: updates colProps to be cols [`01b2236`](https://github.com/atomikui/atomikui-core/commit/01b223641a17b0bf10ee4929bac4d0a093b7da84)
+- Updates CHANGELOG.md [`79c7766`](https://github.com/atomikui/atomikui-core/commit/79c7766f6b5d45991ec797ea658b291b16829080)
+
+<hr />
+
 ### [v0.9.6](https://github.com/atomikui/atomikui-core/compare/v0.9.5...v0.9.6) - 2020-12-04
 
 #### Commits
