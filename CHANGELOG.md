@@ -1,5 +1,14 @@
 <br />
 
+### [v0.9.8](https://github.com/atomikui/atomikui-core/compare/v0.9.7...v0.9.8) - 2020-12-28
+
+#### Commits
+
+- Updates CHANGELOG.md [`0f58a72`](https://github.com/atomikui/atomikui-core/commit/0f58a721f61c98ef5996fdb2a42bcd2e472c0e39)
+- Update .npmignore [`70ac9f2`](https://github.com/atomikui/atomikui-core/commit/70ac9f2337923790619adfaaf9f764de913a3de5)
+
+<hr />
+
 ### [v0.9.7](https://github.com/atomikui/atomikui-core/compare/v0.9.6...v0.9.7) - 2020-12-27
 
 #### Commits
