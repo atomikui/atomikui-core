@@ -12,6 +12,7 @@ coverage/
 jest/
 sass-utilities/
 styleguide/
+splash/
 
 styleguide.config.js
 webpack.config.js
