@@ -214,6 +214,8 @@ const ColorChart = (props) => {
             >
               {hex}
               <br />${name}
+              <br />
+              .text-color-{name}
             </div>
           </div>
         ))}
