@@ -7,7 +7,7 @@ a.atomikui-btn {
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
-  font-size: rem(14);
+  font-size: inherit;
   font-weight: $font-medium;
   min-height: rem($input-height);
   outline: 0;
@@ -17,7 +17,7 @@ a.atomikui-btn {
   transition: background-color 0.3s ease-in-out;
 
   &:not(.atomikui-btn--link) {
-    text-transform: uppercase;
+    text-transform: lowercase;
   }
 
   &:hover,
