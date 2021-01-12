@@ -1,5 +1,19 @@
 <br />
 
+### [v0.10.0](https://github.com/atomikui/atomikui-core/compare/v0.9.8...v0.10.0) - 2021-01-11
+
+#### Merged
+
+- Refactor/issues 70 and 71 [`#72`](https://github.com/atomikui/atomikui-core/pull/72)
+
+#### Commits
+
+- Updates CHANGELOG.md [`bc71c11`](https://github.com/atomikui/atomikui-core/commit/bc71c11f73373b5fafb4c84b5d9f9073015373e6)
+- Upgrade to 0.10.0 [`dd90762`](https://github.com/atomikui/atomikui-core/commit/dd90762e5b0b26d172e5b66ca82c95c28788819c)
+- Adds text color class name reference to color palette documentation [`32088d2`](https://github.com/atomikui/atomikui-core/commit/32088d215ce152e80b3a4aebdc5ea3f7386e8893)
+
+<hr />
+
 ### [v0.9.8](https://github.com/atomikui/atomikui-core/compare/v0.9.7...v0.9.8) - 2020-12-28
 
 #### Commits
