@@ -33,7 +33,7 @@ jobs:
         on:
           branch: master
           repo: atomikui/atomikui-core
-    - stage: GitHub Pages
+    - stage: Publish Styleguide
       script:
         - yarn splash:install
         - yarn build:splash
