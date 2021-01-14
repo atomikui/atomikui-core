@@ -1,5 +1,19 @@
 <br />
 
+### [v0.11.0](https://github.com/atomikui/atomikui-core/compare/v0.10.0...v0.11.0) - 2021-01-14
+
+#### Merged
+
+- Updates Cart, CartItem styles. [`#73`](https://github.com/atomikui/atomikui-core/pull/73)
+
+#### Commits
+
+- Updates CHANGELOG.md [`e996c32`](https://github.com/atomikui/atomikui-core/commit/e996c3207c6818294841009dfd173d2598e18447)
+- Upgrade to 0.11.0 [`5192569`](https://github.com/atomikui/atomikui-core/commit/5192569faa1665ce2592d317b9d127aa27709af8)
+- Update .travis.yml [`62407ef`](https://github.com/atomikui/atomikui-core/commit/62407efe6a42a5a154afebf1d66f229f12534ffb)
+
+<hr />
+
 ### [v0.10.0](https://github.com/atomikui/atomikui-core/compare/v0.9.8...v0.10.0) - 2021-01-11
 
 #### Merged
