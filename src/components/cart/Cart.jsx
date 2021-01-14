@@ -26,11 +26,11 @@ const Cart = ({
       </div>
       <div className="atomikui-cart__bd">
         <List className="atomikui-cart__items">
-          {items.map((props, index) => (
+          {items.map(({ id, ...props }, index) => (
             <ListItem key={`item-${index + 1}`}>
               <CartItem
                 onQuantityChange={(newQuantity) =>
-                  onCartItemUpdate(newQuantity, index)
+                  onCartItemUpdate(newQuantity, id)
                 }
                 {...props}
               />
@@ -68,6 +68,7 @@ Cart.propTypes = {
   /** Cart items */
   items: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
       imageUrl: PropTypes.string,
       description: PropTypes.string,
       quantity: PropTypes.number,

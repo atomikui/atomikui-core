@@ -19,6 +19,7 @@ describe('<Cart />', () => {
         tax={0.08}
         items={[
           {
+            id: 1,
             imageUrl: 'product-les-paul.jpg',
             description:
               'Gibson 60th Anniversary 1960 Les Paul Standard - Deep Cherry Sunburst',
@@ -26,6 +27,7 @@ describe('<Cart />', () => {
             price: 6499.99,
           },
           {
+            id: 2,
             imageUrl: 'gibson-honey-burst.jpg',
             description: 'Gibson Les Paul Classic Electric Guitar - Honeyburst',
             quantity: 1,
@@ -49,7 +51,7 @@ describe('<Cart />', () => {
       .first()
       .simulate('change', { target: { value: 2 } });
 
-    expect(onCartItemUpdateSpy.withArgs(2, 0).called).toBeTruthy();
+    expect(onCartItemUpdateSpy.withArgs(2, 1).called).toBeTruthy();
   });
 
   it('Should conditionally render tax', () => {
