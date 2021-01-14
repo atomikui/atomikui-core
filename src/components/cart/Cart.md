@@ -4,6 +4,7 @@ import { Cart } from '@atomikui/core';
 
 const [cartItems, setCartItems] = useState([
   {
+    id: 1,
     imageUrl: 'product-les-paul.jpg',
     description:
       'Gibson 60th Anniversary 1960 Les Paul Standard - Deep Cherry Sunburst',
@@ -11,6 +12,7 @@ const [cartItems, setCartItems] = useState([
     price: 6499.99,
   },
   {
+    id: 2,
     imageUrl: 'gibson-honey-burst.jpg',
     description: 'Gibson Les Paul Classic Electric Guitar - Honeyburst',
     quantity: 1,
@@ -18,12 +20,10 @@ const [cartItems, setCartItems] = useState([
   },
 ]);
 
-const updateCart = (quantity, itemIndex) => {
-  console.log(quantity, itemIndex);
-  const updatedCart = cartItems.map((item, index) => {
-    return itemIndex === index ? { ...item, quantity } : item;
+const updateCart = (quantity, id) => {
+  const updatedCart = cartItems.map((item) => {
+    return item.id === id ? { ...item, quantity } : item;
   });
-
   setCartItems(updatedCart);
 };
 
@@ -32,7 +32,7 @@ const updateCart = (quantity, itemIndex) => {
     title="Your Cart"
     tax={0.08}
     items={cartItems}
-    onCartItemUpdate={(newQuantity, index) => updateCart(newQuantity, index)}
+    onCartItemUpdate={(newQuantity, id) => updateCart(newQuantity, id)}
   />
 </>;
 ```

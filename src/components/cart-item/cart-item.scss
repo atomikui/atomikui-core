@@ -40,6 +40,8 @@
   &__description {
     flex: 1;
     font-weight: $font-semibold;
+    margin-bottom: rem(16);
+    min-width: 100%;
     text-align: left;
   }
 
@@ -77,6 +79,7 @@
     &__description {
       flex: 0 40%;
       margin-bottom: 0;
+      min-width: auto;
     }
   }
 }
