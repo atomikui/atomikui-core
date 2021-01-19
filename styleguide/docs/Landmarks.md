@@ -2,5 +2,5 @@ Landmarks are major sections on a page
 
 ### Components
 
-- [Alert](/styleguide/#/Landmarks/Header)
-- [Badge](/styleguide/#/Landmarks/Footer)
+- [Header](/styleguide/#/Landmarks/Header)
+- [Footer](/styleguide/#/Landmarks/Footer)
