@@ -2,4 +2,4 @@ Experimental components can be used, but are not at a stable point yet, and are 
 
 ### Components
 
-- [CreditCardField](/#/Experimental/CreditCardField)
+- [CreditCardField](/styleguide/#/Experimental/CreditCardField)

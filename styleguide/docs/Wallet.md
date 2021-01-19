@@ -2,5 +2,5 @@ Here you'll find components that can be used to compose a payment wallet UI for 
 
 ### Components
 
-- [Wallet](/#/Payment%20Wallet/Wallet)
-- [WalletItem](/#/Payment%20Wallet/WalletItem)
+- [Wallet](/styleguide/#/Payment%20Wallet/Wallet)
+- [WalletItem](/styleguide/#/Payment%20Wallet/WalletItem)

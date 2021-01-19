@@ -2,4 +2,4 @@ DOM components are used to interact with elements on the page outside of the cur
 
 ### Components
 
-- [Portal](/#/DOM/Portal)
+- [Portal](/styleguide/#/DOM/Portal)

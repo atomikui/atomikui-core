@@ -2,5 +2,5 @@ Data display components are used to format and display data in an organized form
 
 ### Components
 
-- [List](/#/Data%20Display/List)
-- [ListItem](/#/Data%20Display/ListItem)
+- [List](/styleguide/#/Data%20Display/List)
+- [ListItem](/styleguide/#/Data%20Display/ListItem)

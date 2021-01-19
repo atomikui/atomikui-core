@@ -2,4 +2,4 @@ Providers are HOCs (Higher Order Components) that wrap another component, provid
 
 ### Components
 
-- [WithToastProvider](/#/Providers/WithToastProvider)
+- [WithToastProvider](/styleguide/#/Providers/WithToastProvider)

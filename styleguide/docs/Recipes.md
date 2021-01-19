@@ -2,6 +2,6 @@ These recipes can be used to kickstart your project and provide best-practices a
 
 ### Templates
 
-- [Form Validation](/#/Recipes/Form%20Validation)
-- [Grid](/#/Recipes/Grid)
-- [Pop Confirm](/#/Recipes/Pop%20Confirm)
+- [Form Validation](/styleguide/#/Recipes/Form%20Validation)
+- [Grid](/styleguide/#/Recipes/Grid)
+- [Pop Confirm](/styleguide/#/Recipes/Pop%20Confirm)
