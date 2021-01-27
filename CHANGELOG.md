@@ -1,5 +1,15 @@
 <br />
 
+### [v0.11.1](https://github.com/atomikui/atomikui-core/compare/v0.11.0...v0.11.1) - 2021-01-27
+
+#### Commits
+
+- Fixes broken links [`cbb683a`](https://github.com/atomikui/atomikui-core/commit/cbb683aafaa832fc40183c031662c29f11b7b73f)
+- Updates CHANGELOG.md [`d5a63f9`](https://github.com/atomikui/atomikui-core/commit/d5a63f91900b85ef6c20dbf6c318c58a6fb3939a)
+- Dropdown - Adds missing error state red border [`c537be9`](https://github.com/atomikui/atomikui-core/commit/c537be94967eb76a3b3fda5edcbf402bedf81274)
+
+<hr />
+
 ### [v0.11.0](https://github.com/atomikui/atomikui-core/compare/v0.10.0...v0.11.0) - 2021-01-14
 
 #### Merged
