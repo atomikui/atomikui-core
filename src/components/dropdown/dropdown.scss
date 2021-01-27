@@ -43,17 +43,13 @@
   }
 
   &.is-disabled {
-    .atomikui-dropdown__select {
-      border: 0;
-    }
-
     .atomikui-dropdown__select__trigger {
       background-color: darken($disabled-background-gray, 5%);
     }
   }
 
   &.has-error &__select {
-    border-color: $formfield-border-error;
+    border: rem(1) solid $formfield-border-error;
   }
 
   &.has-error &__select__menu {
