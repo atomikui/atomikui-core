@@ -135,7 +135,7 @@ const App = () => {
               </Col>
             </Row>
           </Grid>
-          <div className="margin-top-20 margin-bottom-20">
+          <div className="margin-top-20">
             <Grid>
               <Col>
                 <h4 className="text-size-24 margin-bottom-32 has-bottom-border">
@@ -172,32 +172,6 @@ const App = () => {
                 </Row>
               ))}
             </Grid>
-          </div>
-          <div className="status-badges">
-            <img
-              src="https://travis-ci.com/atomikui/atomikui-core.svg?branch=master"
-              alt="Travis CI Status"
-            />
-            <a href="https://sonarcloud.io/dashboard?id=atomikui_atomikui-core">
-              <img
-                src="https://sonarcloud.io/api/project_badges/measure?project=atomikui_atomikui-core&metric=alert_status"
-                alt="Quality Gate Status"
-              />
-            </a>
-            <a href="https://www.npmjs.com/package/@atomikui/core">
-              <img
-                src="https://badgen.net/npm/v/@atomikui/core"
-                alt="Package Version"
-              />
-            </a>
-            <img
-              alt="GitHub Issues"
-              src="https://img.shields.io/github/issues-raw/atomikui/atomikui-core"
-            />
-            <img
-              alt="License"
-              src="https://img.shields.io/github/license/atomikui/atomikui-core"
-            />
           </div>
         </div>
       </main>

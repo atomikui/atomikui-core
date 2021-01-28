@@ -3,10 +3,6 @@ body {
   line-height: 1.6;
 }
 
-main {
-  padding-top: rem(60);
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -54,28 +50,12 @@ h6 {
   padding: rem(16 8);
 
   @media (min-width: $breakpoint-medium) {
-    padding: rem(40 20);
+    padding: rem(40 20 20);
   }
 }
 
 .link {
   font-weight: $font-semibold;
-}
-
-.status-badges {
-  align-items: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: rem(16);
-
-  & > * + * {
-    margin-left: rem(8);
-  }
-
-  & > * {
-    margin-bottom: rem(8);
-  }
 }
 
 .sitemap {
