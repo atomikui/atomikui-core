@@ -31,7 +31,7 @@ const App = () => {
   return (
     <>
       <Header
-        backgroundColor="#263238"
+        backgroundColor="#1b282e"
         logo={logo}
         logoLink="/"
         logoText="Atomik UI"
@@ -47,7 +47,7 @@ const App = () => {
       </Header>
       <main>
         <Hero
-          title="Atomik UI"
+          title="Accelerate Your Development"
           subtitle="A Library of Accessible React Components for Rapid Application Development."
           btnLink="/styleguide"
         />
@@ -68,7 +68,7 @@ const App = () => {
                       className="link"
                       href="/styleguide#/Getting%20Started/Installation"
                     >
-                      Read Installation Docs
+                      Read installation docs
                     </Link>
                   }
                 >
@@ -108,7 +108,7 @@ const App = () => {
                   title={<h3>Usage</h3>}
                   footer={
                     <Link className="link" href="/styleguide">
-                      Explore Component Docs
+                      Explore component docs
                     </Link>
                   }
                 >

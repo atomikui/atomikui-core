@@ -4,7 +4,7 @@ body {
 }
 
 main {
-  padding-top: rem(72);
+  padding-top: rem(60);
 }
 
 header {
@@ -16,6 +16,10 @@ footer {
   & > svg {
     margin-bottom: rem(4);
   }
+}
+
+h1 {
+  line-height: 1;
 }
 
 h1,
@@ -30,6 +34,12 @@ h6 {
   }
 }
 
+.atomikui-header {
+  height: auto;
+  padding: rem(0 16);
+  height: rem(60);
+}
+
 .main-content {
   margin: 0 auto;
   max-width: rem($site-width);
@@ -41,9 +51,7 @@ h6 {
 }
 
 .link {
-  font-size: rem(15);
   font-weight: $font-semibold;
-  text-transform: uppercase;
 }
 
 .status-badges {
