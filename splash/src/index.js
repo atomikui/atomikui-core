@@ -184,10 +184,12 @@ const App = () => {
                 alt="Quality Gate Status"
               />
             </a>
-            <img
-              src="https://badgen.net/npm/v/@atomikui/core"
-              alt="Package Version"
-            />
+            <a href="https://www.npmjs.com/package/@atomikui/core">
+              <img
+                src="https://badgen.net/npm/v/@atomikui/core"
+                alt="Package Version"
+              />
+            </a>
             <img
               alt="GitHub Issues"
               src="https://img.shields.io/github/issues-raw/atomikui/atomikui-core"
