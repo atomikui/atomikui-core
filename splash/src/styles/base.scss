@@ -1,3 +1,8 @@
+body {
+  font-size: rem(16);
+  line-height: 1.6;
+}
+
 main {
   padding-top: rem(72);
 }
@@ -42,6 +47,23 @@ footer {
 
   & > * {
     margin-bottom: rem(8);
+  }
+}
+
+.sitemap {
+  &:not(:last-of-type) {
+    border-bottom: rem(1) solid $blue-gray-100;
+    margin-bottom: rem(32);
+  }
+
+  &__list {
+    column-count: 2;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    &__list {
+      column-count: 3;
+    }
   }
 }
 

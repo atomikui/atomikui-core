@@ -6,6 +6,7 @@ import '@atomikui/core/dist/styles/main.min.css';
 import { Header, Footer, Link, Card } from '@atomikui/core';
 import Hero from './components/Hero';
 import AtomikUILogo from './components/AtomikUILogo';
+import links from './links';
 import './styles/main.scss';
 import 'prismjs/themes/prism-okaidia.css';
 
@@ -128,10 +129,42 @@ const App = () => {
               </Col>
             </Row>
           </Grid>
+          <div className="margin-top-20 margin-bottom-20">
+            <Grid>
+              <Col>
+                <h4 className="text-size-24 margin-bottom-32 text-align-center@medium">
+                  Components
+                </h4>
+              </Col>
+              {Object.keys(links).map((category) => (
+                <Row className="sitemap" key={category}>
+                  <Col md={2}>
+                    <h5 className="text-size-18 margin-bottom-16">
+                      {category}
+                    </h5>
+                  </Col>
+                  <Col md={10} className="margin-bottom-24">
+                    <ul className="sitemap__list">
+                      {links[category].map((link) => (
+                        <li key={link}>
+                          <Link
+                            href={`/styleguide/#/${category}/${link}`}
+                            className="margin-right-16"
+                          >
+                            {link}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </Col>
+                </Row>
+              ))}
+            </Grid>
+          </div>
           <div className="status-badges">
             <img
               src="https://travis-ci.com/atomikui/atomikui-core.svg?branch=master"
-              alt="Travis CI Status Image"
+              alt="Travis CI Status"
             />
             <a href="https://sonarcloud.io/dashboard?id=atomikui_atomikui-core">
               <img
@@ -141,7 +174,7 @@ const App = () => {
             </a>
             <img
               src="https://badgen.net/npm/v/@atomikui/core"
-              alt="Package Version Image"
+              alt="Package Version"
             />
             <img
               alt="GitHub Issues"
