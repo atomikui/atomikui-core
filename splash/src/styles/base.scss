@@ -38,6 +38,14 @@ h6 {
   height: auto;
   padding: rem(0 16);
   height: rem(60);
+
+  ul {
+    & > * {
+      a {
+        text-transform: capitalize;
+      }
+    }
+  }
 }
 
 .main-content {
