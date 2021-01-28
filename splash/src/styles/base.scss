@@ -63,9 +63,7 @@ h6 {
 }
 
 .sitemap {
-  &:not(:last-of-type) {
-    padding: rem(16);
-  }
+  padding: rem(16);
 
   &__list {
     column-count: 2;
