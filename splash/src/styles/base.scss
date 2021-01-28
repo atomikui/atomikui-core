@@ -18,6 +18,18 @@ footer {
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &.has-bottom-border {
+    border-bottom: rem(1) solid $blue-gray-100;
+    padding-bottom: rem(8);
+  }
+}
+
 .main-content {
   margin: 0 auto;
   max-width: rem($site-width);
@@ -52,12 +64,15 @@ footer {
 
 .sitemap {
   &:not(:last-of-type) {
-    border-bottom: rem(1) solid $blue-gray-100;
-    margin-bottom: rem(32);
+    padding: rem(16);
   }
 
   &__list {
     column-count: 2;
+
+    & > * {
+      break-inside: avoid-column;
+    }
   }
 
   @media (min-width: $breakpoint-medium) {

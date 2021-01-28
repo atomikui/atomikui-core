@@ -52,6 +52,12 @@ const App = () => {
           btnLink="/styleguide"
         />
         <div className="main-content">
+          <p className="margin-left-8 margin-right-8 margin-bottom-36">
+            Atomik UI is a library of accessible React components for rapid
+            application development. From form controls to informational
+            components like modals, alerts and toast notifications, you'll find
+            everything you need here to get your next project off the ground.
+          </p>
           <Grid>
             <Row>
               <Col md={6} className="margin-bottom-16">
@@ -132,24 +138,30 @@ const App = () => {
           <div className="margin-top-20 margin-bottom-20">
             <Grid>
               <Col>
-                <h4 className="text-size-24 margin-bottom-32 text-align-center@medium">
-                  Components
+                <h4 className="text-size-24 margin-bottom-32 has-bottom-border">
+                  Components and Features
                 </h4>
               </Col>
               {Object.keys(links).map((category) => (
                 <Row className="sitemap" key={category}>
-                  <Col md={2}>
-                    <h5 className="text-size-18 margin-bottom-16">
+                  <Col md={3}>
+                    <h5 className="text-size-20 margin-bottom-16">
                       {category}
                     </h5>
+                    <p className="margin-bottom-24">{links[category][0]}</p>
                   </Col>
-                  <Col md={10} className="margin-bottom-24">
+                  <Col md={1} />
+                  <Col md={8} className="margin-bottom-32">
                     <ul className="sitemap__list">
-                      {links[category].map((link) => (
+                      {links[category][1].map((link) => (
                         <li key={link}>
                           <Link
                             href={`/styleguide/#/${category}/${link}`}
-                            className="margin-right-16"
+                            className="margin-bottom-16 atomikui-btn atomikui-btn--cyan atomikui-btn--block atomikui-btn--pill atomikui-btn--md"
+                            style={{
+                              backgroundColor: '#80DEEA',
+                              textTransform: 'none',
+                            }}
                           >
                             {link}
                           </Link>
