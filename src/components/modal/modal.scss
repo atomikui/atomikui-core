@@ -5,19 +5,18 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  height: 100%;
+  margin: rem(16);
+  max-height: calc(100% - 32px);
   position: relative;
 
   &__header {
     align-items: center;
-    border-bottom: rem(1) solid $gray-100;
     display: flex;
     justify-content: space-between;
     padding: rem(16);
   }
 
   &__footer {
-    border-top: rem(1) solid $gray-100;
     padding: rem(16);
   }
 
@@ -89,6 +88,7 @@
 
   @media (min-width: $breakpoint-medium) {
     height: auto;
+    margin: 0;
     max-height: 80%;
     max-width: 70%;
   }
