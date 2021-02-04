@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "release:major": "npm version major -m \"Upgrade to %s\" && yarn changelog && yarn push-release",
-    "release:minor": "npm version minor -m \"Upgrade to %s\" && yarn changelog && yarn push-release",
-    "release:patch": "npm version patch -m \"Upgrade to %s\" && yarn changelog && yarn push-release",
+    "release:major": "yarn build && npm version major -m \"Upgrade to %s\" && yarn changelog && yarn push-release && yarn publish",
+    "release:minor": "yarn build && npm version minor -m \"Upgrade to %s\" && yarn changelog && yarn push-release && yarn publish",
+    "release:patch": "yarn build && npm version patch -m \"Upgrade to %s\" && yarn changelog && yarn push-release && yarn publish",
     "changelog": "auto-changelog --output CHANGELOG.md --template changelog.hbs && yarn changelog:commit",
     "changelog:commit": "git commit -m \"Updates CHANGELOG.md\" CHANGELOG.md",
     "push-release": "git push origin master",
@@ -38,11 +38,13 @@
     "start": "NODE_ENV=development styleguidist server",
     "splash:install": "yarn --cwd splash install",
     "start:splash": "yarn --cwd splash start",
+    "prebuild": "yarn lint:js && yarn lint:sass && yarn test:unit && yarn test:accessibility",
+    "build": "yarn build:atomik && yarn build:styles && yarn build:splash && yarn build:styleguide",
     "build:splash": "yarn --cwd splash build",
     "build:atomik": "NODE_ENV=production babel src --out-dir dist --copy-files --no-copy-ignored --ignore '**/*.test.js,**/*.spec.js' && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
     "build:styleguide": "NODE_ENV=production yarn styleguidist build && cp src/CNAME build",
-    "deploy": "yarn build:atomik && yarn build:styles && yarn build:splash && yarn build:styleguide && gh-pages -d build"
+    "publish": "npm publish && gh-pages -d build"
   },
   "jest": {
     "setupFilesAfterEnv": [

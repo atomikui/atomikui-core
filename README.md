@@ -4,7 +4,6 @@
 
 <div id="status-images">
   <p align="center">
-      <img src="https://travis-ci.com/atomikui/atomikui-core.svg?branch=master" alt="Travis CI Status Image" />
     <a href="https://sonarcloud.io/dashboard?id=atomikui_atomikui-core">
       <img src="https://sonarcloud.io/api/project_badges/measure?project=atomikui_atomikui-core&metric=alert_status" alt="Quality Gate Status" />
     </a>
