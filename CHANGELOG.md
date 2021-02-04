@@ -1,5 +1,15 @@
 <br />
 
+### [v0.12.0](https://github.com/atomikui/atomikui-core/compare/v0.11.1...v0.12.0) - 2021-02-04
+
+#### Commits
+
+- Splash page layout and style updates [`64f3dfc`](https://github.com/atomikui/atomikui-core/commit/64f3dfc72b2f66c99795523ec05a054118560a56)
+- Updates splash page with component links [`b1545a3`](https://github.com/atomikui/atomikui-core/commit/b1545a39ebb7abcc164a064370e1b458afa79eab)
+- Styleguide updates [`537463e`](https://github.com/atomikui/atomikui-core/commit/537463e76f42ab20eb2ad2e591e52cffcd61c229)
+
+<hr />
+
 ### [v0.11.1](https://github.com/atomikui/atomikui-core/compare/v0.11.0...v0.11.1) - 2021-01-27
 
 #### Commits
