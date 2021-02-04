@@ -44,7 +44,7 @@
     "build:atomik": "NODE_ENV=production babel src --out-dir dist --copy-files --no-copy-ignored --ignore '**/*.test.js,**/*.spec.js' && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
     "build:styleguide": "NODE_ENV=production yarn styleguidist build && cp src/CNAME build",
-    "publish": "npm publish && gh-pages -d build"
+    "publish": "gh-pages -d build && npm publish"
   },
   "jest": {
     "setupFilesAfterEnv": [
