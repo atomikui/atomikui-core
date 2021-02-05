@@ -9,6 +9,7 @@ export { default as Breadcrumb } from './components/breadcrumb';
 export { default as Button } from './components/button';
 export { default as ButtonGroup } from './components/button-group';
 export { default as Card } from './components/card';
+export { default as Carousel } from './components/carousel';
 export { default as Cart } from './components/cart';
 export { default as CartItem } from './components/cart-item';
 export { default as ChatWindow } from './components/chat-window';

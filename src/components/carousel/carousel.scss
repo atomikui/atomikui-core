@@ -1,0 +1,41 @@
+.atomikui-carousel {
+  position: relative;
+
+  &__viewport {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    overflow: auto;
+    // scroll-behavior: smooth;
+
+    & > * {
+      height: 100%;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    & > * {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:hover,
+      &:focus {
+        background: none;
+      }
+    }
+
+    &__prev-btn {
+      left: 0;
+    }
+
+    &__next-btn {
+      right: 0;
+    }
+  }
+}
