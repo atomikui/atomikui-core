@@ -10,7 +10,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
-const Carousel = ({ className, height, items, width, ...others }) => {
+const Carousel = ({
+  autoAdvanceInterval,
+  className,
+  height,
+  items,
+  width,
+  ...others
+}) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [imageWidth, setImageWidth] = useState(0);
 
@@ -21,6 +28,24 @@ const Carousel = ({ className, height, items, width, ...others }) => {
     speed: 20,
     direction: 'x',
   });
+
+  useEffect(() => {
+    let autoAdvance;
+
+    if (autoAdvanceInterval) {
+      autoAdvance = setInterval(() => {
+        setSelectedIndex(
+          selectedIndex === items.length - 1 ? 0 : selectedIndex + 1,
+        );
+      }, autoAdvanceInterval);
+    }
+
+    return () => {
+      if (autoAdvance) {
+        clearInterval(autoAdvance);
+      }
+    };
+  }, [selectedIndex]);
 
   useEffect(() => {
     window.onresize = debounce(() => {
@@ -42,6 +67,7 @@ const Carousel = ({ className, height, items, width, ...others }) => {
       {...others}
       style={{ width, height }}
     >
+      {selectedIndex}
       <div className="atomikui-carousel__viewport" ref={ref}>
         {items.map((img, index) => (
           <div
@@ -81,17 +107,20 @@ const Carousel = ({ className, height, items, width, ...others }) => {
 };
 
 Carousel.propTypes = {
+  /** Set duration for carousel auto advance */
+  autoAdvanceInterval: PropTypes.number,
   /** items to be rendered in carousel */
   items: PropTypes.arrayOf(PropTypes.string),
   /** Specifies custom component classes. */
   className: PropTypes.string,
   /** height of carousel */
-  height: PropTypes.number,
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** width of carousel */
-  width: PropTypes.oneOfType(PropTypes.number, PropTypes.string),
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 Carousel.defaultProps = {
+  autoAdvanceInterval: null,
   items: [],
   className: '',
   height: 300,
