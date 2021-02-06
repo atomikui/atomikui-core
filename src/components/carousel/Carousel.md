@@ -2,7 +2,6 @@
 import { Carousel } from '@atomikui/core';
 
 <Carousel
-  autoAdvanceInterval={3000}
   height={400}
   items={[
     'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHw%3D&w=1000&q=80',

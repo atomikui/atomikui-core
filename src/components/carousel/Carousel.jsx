@@ -11,7 +11,7 @@ import {
 import Button from '../button';
 
 const Carousel = ({
-  autoAdvanceInterval,
+  autoplayInterval,
   className,
   height,
   items,
@@ -25,27 +25,27 @@ const Carousel = ({
 
   const { scrollTo } = useSmoothScroll({
     ref,
-    speed: 20,
+    speed: 50,
     direction: 'x',
   });
 
-  useEffect(() => {
-    let autoAdvance;
+  // useEffect(() => {
+  //   let timer;
+  //   const isLast = selectedIndex === items.length - 1;
+  //   const duration = autoplayInterval;
 
-    if (autoAdvanceInterval) {
-      autoAdvance = setInterval(() => {
-        setSelectedIndex(
-          selectedIndex === items.length - 1 ? 0 : selectedIndex + 1,
-        );
-      }, autoAdvanceInterval);
-    }
+  //   if (autoplayInterval) {
+  //     timer = setInterval(() => {
+  //       setSelectedIndex(isLast ? 0 : selectedIndex + 1);
+  //     }, duration);
+  //   }
 
-    return () => {
-      if (autoAdvance) {
-        clearInterval(autoAdvance);
-      }
-    };
-  }, [selectedIndex]);
+  //   return () => {
+  //     if (timer) {
+  //       clearInterval(timer);
+  //     }
+  //   };
+  // }, [selectedIndex]);
 
   useEffect(() => {
     window.onresize = debounce(() => {
@@ -59,7 +59,23 @@ const Carousel = ({
 
   useEffect(() => {
     scrollTo(`#image-${selectedIndex}`);
-  }, [selectedIndex, scrollTo]);
+
+    let timer;
+    const isLast = selectedIndex === items.length - 1;
+    const duration = autoplayInterval;
+
+    if (autoplayInterval) {
+      timer = setInterval(() => {
+        setSelectedIndex(isLast ? 0 : selectedIndex + 1);
+      }, duration);
+    }
+
+    return () => {
+      if (timer) {
+        clearInterval(timer);
+      }
+    };
+  }, [selectedIndex, scrollTo, autoplayInterval]);
 
   return (
     <div
@@ -67,7 +83,6 @@ const Carousel = ({
       {...others}
       style={{ width, height }}
     >
-      {selectedIndex}
       <div className="atomikui-carousel__viewport" ref={ref}>
         {items.map((img, index) => (
           <div
@@ -108,7 +123,7 @@ const Carousel = ({
 
 Carousel.propTypes = {
   /** Set duration for carousel auto advance */
-  autoAdvanceInterval: PropTypes.number,
+  autoplayInterval: PropTypes.number,
   /** items to be rendered in carousel */
   items: PropTypes.arrayOf(PropTypes.string),
   /** Specifies custom component classes. */
@@ -120,7 +135,7 @@ Carousel.propTypes = {
 };
 
 Carousel.defaultProps = {
-  autoAdvanceInterval: null,
+  autoplayInterval: null,
   items: [],
   className: '',
   height: 300,
