@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React, { useState, useEffect, useRef } from 'react';
 import debounce from 'debounce';
 import PropTypes from 'prop-types';
@@ -12,7 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Button from '../button';
 
-const Carousel = ({
+const Gallery = ({
   autoplayInterval,
   className,
   height,
@@ -30,9 +28,6 @@ const Carousel = ({
     speed: 65,
     direction: 'x',
   });
-
-  const isFirst = selectedIndex === 0;
-  const isLast = selectedIndex === items.length - 1;
 
   const handleArrowNavigation = (e) => {
     e.preventDefault();
@@ -57,6 +52,8 @@ const Carousel = ({
   }, [ref]);
 
   useEffect(() => {
+    const isLast = selectedIndex === items.length - 1;
+
     scrollTo(`#image-${selectedIndex}`);
 
     if (autoplayInterval) {
@@ -78,15 +75,22 @@ const Carousel = ({
         tabIndex="0"
         onKeyDown={handleArrowNavigation}
       >
-        {items.map((img, index) => (
+        {items.map(([umgUrl, caption], index) => (
           <div
+            className="atomikui-carousel__panel"
             key={`image-${index + 1}`}
             id={`image-${index}`}
+            role="img"
+            aria-label={caption}
             style={{
               minWidth: imageWidth,
-              background: `center/cover url(${img})`,
+              background: `center/cover url(${umgUrl})`,
             }}
-          />
+          >
+            {caption && (
+              <div className="atomikui-carousel__caption">{caption}</div>
+            )}
+          </div>
         ))}
       </div>
       <div className="atomikui-carousel__controls">
@@ -115,7 +119,7 @@ const Carousel = ({
   );
 };
 
-Carousel.propTypes = {
+Gallery.propTypes = {
   /** Set duration for carousel auto advance */
   autoplayInterval: PropTypes.number,
   /** items to be rendered in carousel */
@@ -128,7 +132,7 @@ Carousel.propTypes = {
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
-Carousel.defaultProps = {
+Gallery.defaultProps = {
   autoplayInterval: null,
   items: [],
   className: '',
@@ -136,4 +140,4 @@ Carousel.defaultProps = {
   width: '100%',
 };
 
-export default Carousel;
+export default Gallery;

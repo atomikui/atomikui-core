@@ -10,6 +10,7 @@ module.exports = {
     'src/components/avatar/Avatar.jsx',
     'src/components/badge/Badge.jsx',
     'src/components/comment/Comment.jsx',
+    'src/components/gallery/Gallery.jsx',
     'src/components/quotation/Quotation.jsx',
     'src/components/post/Post.jsx',
     'src/components/tab-panel/TabPanel.jsx',

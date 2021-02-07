@@ -6,7 +6,6 @@ module.exports = {
   sectionDepth: 6,
   components: () => [
     'src/components/card/Card.jsx',
-    'src/components/carousel/Carousel.jsx',
     'src/components/chat-window/ChatWindow.jsx',
     'src/components/collapse/Collapse.jsx',
     'src/components/drawer/Drawer.jsx',
