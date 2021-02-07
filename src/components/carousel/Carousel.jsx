@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React, { useState, useEffect, useRef } from 'react';
 import debounce from 'debounce';
 import PropTypes from 'prop-types';
@@ -25,27 +27,24 @@ const Carousel = ({
 
   const { scrollTo } = useSmoothScroll({
     ref,
-    speed: 50,
+    speed: 65,
     direction: 'x',
   });
 
-  // useEffect(() => {
-  //   let timer;
-  //   const isLast = selectedIndex === items.length - 1;
-  //   const duration = autoplayInterval;
+  const isFirst = selectedIndex === 0;
+  const isLast = selectedIndex === items.length - 1;
 
-  //   if (autoplayInterval) {
-  //     timer = setInterval(() => {
-  //       setSelectedIndex(isLast ? 0 : selectedIndex + 1);
-  //     }, duration);
-  //   }
+  const handleArrowNavigation = (e) => {
+    e.preventDefault();
 
-  //   return () => {
-  //     if (timer) {
-  //       clearInterval(timer);
-  //     }
-  //   };
-  // }, [selectedIndex]);
+    if (e.key.includes('Arrow')) {
+      const next =
+        e.key === 'ArrowLeft' ? selectedIndex - 1 : selectedIndex + 1;
+      if (next < items.length && next > -1) {
+        setSelectedIndex(next);
+      }
+    }
+  };
 
   useEffect(() => {
     window.onresize = debounce(() => {
@@ -60,22 +59,12 @@ const Carousel = ({
   useEffect(() => {
     scrollTo(`#image-${selectedIndex}`);
 
-    let timer;
-    const isLast = selectedIndex === items.length - 1;
-    const duration = autoplayInterval;
-
     if (autoplayInterval) {
-      timer = setInterval(() => {
+      setTimeout(() => {
         setSelectedIndex(isLast ? 0 : selectedIndex + 1);
-      }, duration);
+      }, autoplayInterval);
     }
-
-    return () => {
-      if (timer) {
-        clearInterval(timer);
-      }
-    };
-  }, [selectedIndex, scrollTo, autoplayInterval]);
+  }, [selectedIndex, scrollTo, autoplayInterval, items]);
 
   return (
     <div
@@ -83,7 +72,12 @@ const Carousel = ({
       {...others}
       style={{ width, height }}
     >
-      <div className="atomikui-carousel__viewport" ref={ref}>
+      <div
+        ref={ref}
+        className="atomikui-carousel__viewport"
+        tabIndex="0"
+        onKeyDown={handleArrowNavigation}
+      >
         {items.map((img, index) => (
           <div
             key={`image-${index + 1}`}
