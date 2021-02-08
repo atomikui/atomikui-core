@@ -3,7 +3,6 @@ import { Gallery } from '@atomikui/core';
 
 <Gallery
   showFeaturedImage
-  height={400}
   items={[
     {
       url: 'landscape-1.jpg',

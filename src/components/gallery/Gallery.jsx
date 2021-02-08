@@ -10,7 +10,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   const [images, setImages] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
-  const renderImage = (index) => {
+  const renderImage = () => {
     const id = `image-${selectedIndex}`;
     const url = images[selectedIndex]?.url;
     const caption = images[selectedIndex]?.caption;
@@ -48,7 +48,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
           onClick={() => setSelectedIndex(null)}
           isActive
         >
-          {renderImage(selectedIndex)}
+          {renderImage()}
         </Overlay>
       )}
     </>
