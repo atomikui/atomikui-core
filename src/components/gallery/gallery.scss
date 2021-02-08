@@ -12,8 +12,14 @@
     background: $blue-gray-100;
     border: 1px solid white;
     cursor: pointer;
-    flex: 25% 0 0;
+    flex: 50% 0 0;
     height: rem(100);
+  }
+
+  @media (min-width: $breakpoint-small) {
+    & > * {
+      flex: 25% 0 0;
+    }
   }
 }
 
