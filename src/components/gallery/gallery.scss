@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  & > :first-child {
+  & > .is-featured {
     height: rem(300);
     min-width: 100%;
   }

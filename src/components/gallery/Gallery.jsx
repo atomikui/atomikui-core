@@ -6,7 +6,7 @@ import Overlay from '../overlay';
 
 // TODO: Addd focus trap for image modal
 
-const Gallery = ({ className, items, ...others }) => {
+const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   const [images, setImages] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
@@ -34,6 +34,7 @@ const Gallery = ({ className, items, ...others }) => {
       <div className={classnames('atomikui-gallery', className)} {...others}>
         {images.map(({ url, caption }, i) => (
           <button
+            className={i === 0 && showFeaturedImage && 'is-featured'}
             key={`image-${i + 1}`}
             style={{ background: `no-repeat center/cover url(${url})` }}
             onClick={() => setSelectedIndex(i)}
@@ -55,6 +56,7 @@ const Gallery = ({ className, items, ...others }) => {
 };
 
 Gallery.propTypes = {
+  showFeaturedImage: PropTypes.bool,
   /** items to be rendered in carousel */
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -69,6 +71,7 @@ Gallery.propTypes = {
 };
 
 Gallery.defaultProps = {
+  showFeaturedImage: false,
   items: [],
   className: '',
 };

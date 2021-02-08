@@ -2,6 +2,7 @@
 import { Gallery } from '@atomikui/core';
 
 <Gallery
+  showFeaturedImage
   height={400}
   items={[
     {
