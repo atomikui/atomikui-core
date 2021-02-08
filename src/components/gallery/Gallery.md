@@ -4,11 +4,26 @@ import { Gallery } from '@atomikui/core';
 <Gallery
   height={400}
   items={[
-    ['landscape-1.jpg', 'Snow capped mountains at dusk'],
-    ['landscape-2.jpg', 'Tree in a lake'],
-    ['landscape-3.jpg', 'Dock walk at dawn'],
-    ['landscape-4.jpg', 'Misty boat ride'],
-    ['landscape-5.jpg', 'Shelves carved in slopes'],
+    {
+      url: 'landscape-1.jpg',
+      caption: 'Snow capped mountains at dusk',
+    },
+    {
+      url: 'landscape-2.jpg',
+      caption: 'Tree in a lake',
+    },
+    {
+      url: 'landscape-3.jpg',
+      caption: 'Dock walk at dawn',
+    },
+    {
+      url: 'landscape-4.jpg',
+      caption: 'Misty boat ride',
+    },
+    {
+      url: 'landscape-5.jpg',
+      caption: 'Shelves carved in slopes',
+    },
   ]}
 />;
 ```

@@ -1,55 +1,43 @@
-.atomikui-carousel {
-  position: relative;
+.atomikui-gallery {
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
 
-  &__viewport {
-    display: flex;
-    flex-wrap: nowrap;
-    height: 100%;
-    overflow: auto;
-
-    & > * {
-      height: 100%;
-    }
+  & > :first-child {
+    height: rem(300);
+    min-width: 100%;
   }
 
-  &__panel {
-    position: relative;
+  & > * {
+    background: $blue-gray-100;
+    border: 1px solid white;
+    cursor: pointer;
+    flex: 25% 0 0;
+    height: rem(100);
+  }
+}
+
+.atomikui-gallery-overlay {
+  flex-direction: column;
+
+  &__image {
+    background: $white;
+    padding: rem(10);
+    width: 80%;
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+      width: 60%;
+    }
   }
 
   &__caption {
-    background: rgba(0, 0, 0, 0.7);
-    bottom: 0;
-    color: $white;
-    padding: rem(8);
-    position: absolute;
+    font-size: rem(17);
+    margin-top: rem(8);
     text-align: center;
-    width: 100%;
-  }
-
-  &__controls {
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-
-    & > * {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-
-      &:hover,
-      &:focus {
-        background: none;
-      }
-    }
-
-    &__prev-btn {
-      left: 0;
-    }
-
-    &__next-btn {
-      right: 0;
-    }
   }
 }
