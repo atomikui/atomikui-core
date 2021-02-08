@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import shuffle from 'lodash.shuffle';
 import Overlay from '../overlay';
+
+// TODO: Addd focus trap for image modal
 
 const Gallery = ({ className, items, ...others }) => {
   const [images, setImages] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
-    const featuredIndex = Math.round(items.length * Math.random());
-    const filteredItems = items.filter((item, i) => i !== featuredIndex);
-    filteredItems.unshift(items[featuredIndex]);
-    setImages(filteredItems);
+    setImages(shuffle(items));
   }, [items]);
 
   return (
@@ -38,7 +38,7 @@ const Gallery = ({ className, items, ...others }) => {
               alt={images[selectedIndex]?.caption}
             />
             <div className="atomikui-gallery-overlay__caption">
-              {images[selectedIndex]?.caption || images[selectedIndex]?.url}
+              {images[selectedIndex]?.caption}
             </div>
           </div>
         </Overlay>
