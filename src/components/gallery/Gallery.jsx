@@ -10,6 +10,21 @@ const Gallery = ({ className, items, ...others }) => {
   const [images, setImages] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
 
+  const renderImage = (index) => {
+    const id = `image-${selectedIndex}`;
+    const url = images[selectedIndex]?.url;
+    const caption = images[selectedIndex]?.caption;
+
+    return (
+      <div className="atomikui-gallery-overlay__image">
+        <img src={url} alt={caption} aria-describedby={id} />
+        <p id={id} className="atomikui-gallery-overlay__caption">
+          {caption}
+        </p>
+      </div>
+    );
+  };
+
   useEffect(() => {
     setImages(shuffle(items));
   }, [items]);
@@ -29,18 +44,10 @@ const Gallery = ({ className, items, ...others }) => {
       {selectedIndex !== null && (
         <Overlay
           className="atomikui-gallery-overlay"
-          isActive
           onClick={() => setSelectedIndex(null)}
+          isActive
         >
-          <div className="atomikui-gallery-overlay__image">
-            <img
-              src={images[selectedIndex]?.url}
-              alt={images[selectedIndex]?.caption}
-            />
-            <div className="atomikui-gallery-overlay__caption">
-              {images[selectedIndex]?.caption}
-            </div>
-          </div>
+          {renderImage(selectedIndex)}
         </Overlay>
       )}
     </>
