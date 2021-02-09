@@ -35,7 +35,9 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
                 'is-featured': index === 0 && showFeaturedImage,
               })}
               key={id}
-              style={{ background: `no-repeat center/cover url(${url})` }}
+              style={{
+                background: `no-repeat center/cover url(${url})`,
+              }}
               onClick={() => showImageModal(index)}
               aria-label={`show image ${index + 1}`}
             />

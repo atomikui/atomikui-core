@@ -12,11 +12,11 @@
     background: $blue-gray-100;
     border: 1px solid white;
     cursor: pointer;
-    flex: 50% 0 0;
+    flex: 33.333% 0 0;
     height: rem(100);
   }
 
-  @media (min-width: $breakpoint-small) {
+  @media (min-width: $breakpoint-medium) {
     & > * {
       flex: 25% 0 0;
     }
