@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React, { useState, useEffect, useRef, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -90,7 +91,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
               <Icon icon={faTimes} size="2x" color="#455a64" />
             </Button>
           </div>
-          <div className="atomikui-gallery-modal__body">
+          <div className="atomikui-gallery-modal__body" tabIndex="0">
             {images.map(({ image, index }) =>
               cloneElement(image, {
                 style: { display: index === selectedIndex ? 'block' : 'none' },
