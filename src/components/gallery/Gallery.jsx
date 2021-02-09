@@ -53,26 +53,25 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
         {images.map(({ button }) => button)}
       </div>
       <Overlay className="atomikui-gallery-overlay" isActive={showModal}>
-        <div className="atomikui-gallery-overlay__image">
-          <Button
-            theme="black"
-            size="md"
-            aria-label="close modal"
-            onClick={() => setShowModal(false)}
-          >
-            <Icon icon={faTimes} size="lg" color="white" />
-          </Button>
+        <div className="atomikui-gallery-overlay__modal">
+          <div className="atomikui-gallery-overlay__modal__header">
+            <div id={images[selectedIndex].id}>
+              {images[selectedIndex].caption}
+            </div>
+            <Button
+              theme="hollow"
+              size="md"
+              aria-label="close modal"
+              onClick={() => setShowModal(false)}
+            >
+              <Icon icon={faTimes} size="2x" color="#455a64" />
+            </Button>
+          </div>
           {images.map(({ image, index }) =>
             cloneElement(image, {
               style: { display: index === selectedIndex ? 'block' : 'none' },
             }),
           )}
-          <p
-            id={images[selectedIndex].id}
-            className="atomikui-gallery-overlay__caption"
-          >
-            {images[selectedIndex].caption}
-          </p>
         </div>
       </Overlay>
     </>

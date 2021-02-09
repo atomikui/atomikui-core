@@ -26,23 +26,11 @@
 .atomikui-gallery-overlay {
   flex-direction: column;
 
-  &__image {
+  &__modal {
     background: $white;
     padding: rem(10);
     position: relative;
     width: 90%;
-
-    & > button {
-      align-items: center;
-      border-radius: 0;
-      display: flex;
-      height: rem(38);
-      justify-content: center;
-      position: absolute;
-      right: rem(10);
-      top: rem(10);
-      width: rem(38);
-    }
 
     & > img {
       display: block;
@@ -54,9 +42,21 @@
     }
   }
 
-  &__caption {
-    font-size: rem(17);
-    margin-top: rem(8);
-    text-align: center;
+  &__modal__header {
+    align-items: center;
+    display: flex;
+    font-size: rem(18);
+    font-weight: $font-medium;
+    justify-content: space-between;
+    padding-bottom: rem(8);
+
+    & > button {
+      align-items: center;
+      border-radius: 0;
+      display: flex;
+      height: rem(38);
+      justify-content: center;
+      width: rem(38);
+    }
   }
 }
