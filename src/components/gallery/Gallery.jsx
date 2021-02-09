@@ -6,12 +6,19 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
 import Button from '../button';
+import Spinner from '../spinner';
 
 // TODO: Addd focus trap for image modal
 
 const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   const [images, setImages] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [imageLoading, setImageLoading] = useState(false);
+
+  const showImageModal = (index) => {
+    setSelectedIndex(index);
+    setImageLoading(true);
+  };
 
   const renderImage = () => {
     const id = `image-${selectedIndex}`;
@@ -23,7 +30,17 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
         <Button theme="black" size="md" onClick={() => setSelectedIndex(null)}>
           <Icon icon={faTimes} size="lg" color="white" />
         </Button>
-        <img src={url} alt={caption} aria-describedby={id} />
+        {imageLoading && (
+          <div className="atomikui-gallery-overlay__image-placeholder">
+            <Spinner size="xlg" theme="blue-gray" themeVariant="light" />
+          </div>
+        )}
+        <img
+          src={url}
+          alt={caption}
+          aria-describedby={id}
+          onLoad={() => setImageLoading(false)}
+        />
         <p id={id} className="atomikui-gallery-overlay__caption">
           {caption}
         </p>
@@ -38,14 +55,14 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   return (
     <>
       <div className={classnames('atomikui-gallery', className)} {...others}>
-        {images.map(({ url, caption }, i) => (
+        {images.map(({ url, caption }, index) => (
           <button
             className={classnames({
-              'is-featured': i === 0 && showFeaturedImage,
+              'is-featured': index === 0 && showFeaturedImage,
             })}
-            key={`image-${i + 1}`}
+            key={`image-${index + 1}`}
             style={{ background: `no-repeat center/cover url(${url})` }}
-            onClick={() => setSelectedIndex(i)}
+            onClick={() => showImageModal(index)}
             aria-label={`show image ${caption}`}
           />
         ))}
