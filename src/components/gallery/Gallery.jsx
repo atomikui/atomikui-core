@@ -10,8 +10,8 @@ import Button from '../button';
 // TODO: Addd focus trap for image modal
 
 const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
-  const [images, setImages] = useState([]);
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [images, setImages] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
   const showImageModal = (index) => {
@@ -21,8 +21,8 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
 
   const renderImage = () => {
     const id = `image-${selectedIndex}`;
-    const url = images[selectedIndex]?.url;
-    const caption = images[selectedIndex]?.caption;
+    const { url } = images[selectedIndex];
+    const { caption } = images[selectedIndex];
 
     return (
       <div className="atomikui-gallery-overlay__image">
@@ -40,8 +40,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   useEffect(() => {
     setImages(shuffle(items));
   }, [items]);
-
-  return (
+  return images ? (
     <>
       <div className={classnames('atomikui-gallery', className)} {...others}>
         {images.map(({ url, caption }, index) => (
@@ -60,7 +59,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
         {renderImage()}
       </Overlay>
     </>
-  );
+  ) : null;
 };
 
 Gallery.propTypes = {
