@@ -13,32 +13,22 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   const [images, setImages] = useState(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [cachedImages, setCachedImages] = useState([]);
 
   const showImageModal = (index) => {
     setSelectedIndex(index);
     setShowModal(true);
   };
 
-  const renderImage = () => {
-    const id = `image-${selectedIndex}`;
-    const { url } = images[selectedIndex];
-    const { caption } = images[selectedIndex];
-
-    return (
-      <div className="atomikui-gallery-overlay__image">
-        <Button theme="black" size="md" onClick={() => setShowModal(false)}>
-          <Icon icon={faTimes} size="lg" color="white" />
-        </Button>
-        <img src={url} alt={caption} aria-describedby={id} />
-        <p id={id} className="atomikui-gallery-overlay__caption">
-          {caption}
-        </p>
-      </div>
-    );
-  };
-
   useEffect(() => {
-    setImages(shuffle(items));
+    setImages(
+      shuffle(items).map(({ url, caption }, index) => ({
+        id: `image-${index + 1}`,
+        image: <img key={`image-${index + 1}`} src={url} alt={caption} />,
+        url,
+        caption,
+      })),
+    );
   }, [items]);
 
   return images ? (
@@ -57,7 +47,18 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
         ))}
       </div>
       <Overlay className="atomikui-gallery-overlay" isActive={showModal}>
-        {renderImage()}
+        <div className="atomikui-gallery-overlay__image">
+          <Button theme="black" size="md" onClick={() => setShowModal(false)}>
+            <Icon icon={faTimes} size="lg" color="white" />
+          </Button>
+          {images[selectedIndex].image}
+          <p
+            id={images[selectedIndex].id}
+            className="atomikui-gallery-overlay__caption"
+          >
+            {images[selectedIndex].caption}
+          </p>
+        </div>
       </Overlay>
     </>
   ) : null;
