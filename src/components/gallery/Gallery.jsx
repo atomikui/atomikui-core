@@ -40,6 +40,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   useEffect(() => {
     setImages(shuffle(items));
   }, [items]);
+
   return images ? (
     <>
       <div className={classnames('atomikui-gallery', className)} {...others}>
