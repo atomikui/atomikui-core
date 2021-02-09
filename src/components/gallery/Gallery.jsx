@@ -1,23 +1,42 @@
-import React, { useState, useEffect, cloneElement } from 'react';
+import React, { useState, useEffect, useRef, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import shuffle from 'lodash.shuffle';
+import createFocusTrap from 'focus-trap';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
 import Button from '../button';
 
-// TODO: Addd focus trap for image modal
-
 const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   const [images, setImages] = useState();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [focusTrap, setFocusTrap] = useState(null);
+
+  const modalRef = useRef();
 
   const showImageModal = (index) => {
     setSelectedIndex(index);
     setShowModal(true);
   };
+
+  useEffect(() => {
+    if (showModal) {
+      setFocusTrap(
+        createFocusTrap(modalRef.current, {
+          escapeDeactivates: false,
+          fallbackFocus: modalRef,
+        }),
+      );
+    }
+  }, [showModal]);
+
+  useEffect(() => {
+    if (focusTrap) {
+      focusTrap[showModal ? 'activate' : 'deactivate']();
+    }
+  }, [focusTrap, showModal]);
 
   useEffect(() => {
     setImages(
@@ -52,9 +71,9 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
       <div className={classnames('atomikui-gallery', className)} {...others}>
         {images.map(({ button }) => button)}
       </div>
-      <Overlay className="atomikui-gallery-overlay" isActive={showModal}>
-        <div className="atomikui-gallery-overlay__modal">
-          <div className="atomikui-gallery-overlay__modal__header">
+      <Overlay className="atomikui-gallery-modal" isActive={showModal}>
+        <div className="atomikui-gallery-modal__dialog" ref={modalRef}>
+          <div className="atomikui-gallery-modal__header">
             <div id={images[selectedIndex].id}>
               {images[selectedIndex].caption}
             </div>
@@ -67,11 +86,13 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
               <Icon icon={faTimes} size="2x" color="#455a64" />
             </Button>
           </div>
-          {images.map(({ image, index }) =>
-            cloneElement(image, {
-              style: { display: index === selectedIndex ? 'block' : 'none' },
-            }),
-          )}
+          <div className="atomikui-gallery-modal__body">
+            {images.map(({ image, index }) =>
+              cloneElement(image, {
+                style: { display: index === selectedIndex ? 'block' : 'none' },
+              }),
+            )}
+          </div>
         </div>
       </Overlay>
     </>

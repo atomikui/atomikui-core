@@ -23,26 +23,24 @@
   }
 }
 
-.atomikui-gallery-overlay {
+.atomikui-gallery-modal {
   flex-direction: column;
 
-  &__modal {
+  &__dialog {
     background: $white;
+    display: flex;
+    flex-direction: column;
+    max-height: 90%;
+    max-width: 90%;
     padding: rem(10);
     position: relative;
-    width: 90%;
-
-    & > img {
-      display: block;
-      width: 100%;
-    }
 
     @media (min-width: $breakpoint-medium) {
       width: 65%;
     }
   }
 
-  &__modal__header {
+  &__header {
     align-items: center;
     display: flex;
     font-size: rem(18);
@@ -55,8 +53,23 @@
       border-radius: 0;
       display: flex;
       height: rem(38);
+      margin-left: rem(16);
       justify-content: center;
       width: rem(38);
+    }
+  }
+
+  &__body {
+    flex: 1;
+    overflow: auto;
+
+    & > * {
+      width: 100%;
+    }
+
+    & > img {
+      display: block;
+      width: 100%;
     }
   }
 }
