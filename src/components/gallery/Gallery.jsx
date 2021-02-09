@@ -26,6 +26,8 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
         return {
           id,
           index,
+          url,
+          caption,
           image: <img key={id} src={url} alt={caption} aria-describedby={id} />,
           button: (
             <button
@@ -38,8 +40,6 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
               aria-label={`show image ${index + 1}`}
             />
           ),
-          url,
-          caption,
         };
       }),
     );
