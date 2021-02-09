@@ -33,8 +33,12 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   }, [showModal]);
 
   useEffect(() => {
-    if (focusTrap) {
-      focusTrap[showModal ? 'activate' : 'deactivate']();
+    if (!focusTrap) return;
+    console.log(focusTrap.current);
+    if (showModal) {
+      focusTrap.activate();
+    } else {
+      focusTrap.deactivate();
     }
   }, [focusTrap, showModal]);
 
