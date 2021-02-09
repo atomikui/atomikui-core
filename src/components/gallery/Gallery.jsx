@@ -6,41 +6,30 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
 import Button from '../button';
-import Spinner from '../spinner';
 
 // TODO: Addd focus trap for image modal
 
 const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   const [images, setImages] = useState([]);
   const [selectedIndex, setSelectedIndex] = useState(null);
-  const [imageLoading, setImageLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const showImageModal = (index) => {
     setSelectedIndex(index);
-    setImageLoading(true);
+    setShowModal(true);
   };
 
   const renderImage = () => {
     const id = `image-${selectedIndex}`;
-    const { url } = images[selectedIndex];
-    const { caption } = images[selectedIndex];
+    const url = images[selectedIndex]?.url;
+    const caption = images[selectedIndex]?.caption;
 
     return (
       <div className="atomikui-gallery-overlay__image">
-        <Button theme="black" size="md" onClick={() => setSelectedIndex(null)}>
+        <Button theme="black" size="md" onClick={() => setShowModal(false)}>
           <Icon icon={faTimes} size="lg" color="white" />
         </Button>
-        {imageLoading && (
-          <div className="atomikui-gallery-overlay__image-placeholder">
-            <Spinner size="xlg" theme="blue-gray" themeVariant="light" />
-          </div>
-        )}
-        <img
-          src={url}
-          alt={caption}
-          aria-describedby={id}
-          onLoad={() => setImageLoading(false)}
-        />
+        <img src={url} alt={caption} aria-describedby={id} />
         <p id={id} className="atomikui-gallery-overlay__caption">
           {caption}
         </p>
@@ -67,11 +56,9 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
           />
         ))}
       </div>
-      {selectedIndex !== null && (
-        <Overlay className="atomikui-gallery-overlay" isActive>
-          {renderImage()}
-        </Overlay>
-      )}
+      <Overlay className="atomikui-gallery-overlay" isActive={showModal}>
+        {renderImage()}
+      </Overlay>
     </>
   );
 };
