@@ -29,7 +29,20 @@
   &__image {
     background: $white;
     padding: rem(10);
+    position: relative;
     width: 80%;
+
+    & > button {
+      align-items: center;
+      border-radius: 0;
+      display: flex;
+      height: rem(38);
+      justify-content: center;
+      position: absolute;
+      right: rem(10);
+      top: rem(10);
+      width: rem(38);
+    }
 
     & > img {
       display: block;

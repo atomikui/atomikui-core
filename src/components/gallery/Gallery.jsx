@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import shuffle from 'lodash.shuffle';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
+import Button from '../button';
 
 // TODO: Addd focus trap for image modal
 
@@ -12,11 +15,14 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
 
   const renderImage = () => {
     const id = `image-${selectedIndex}`;
-    const url = images[selectedIndex]?.url;
-    const caption = images[selectedIndex]?.caption;
+    const { url } = images[selectedIndex];
+    const { caption } = images[selectedIndex];
 
     return (
       <div className="atomikui-gallery-overlay__image">
+        <Button theme="black" size="md" onClick={() => setSelectedIndex(null)}>
+          <Icon icon={faTimes} size="lg" color="white" />
+        </Button>
         <img src={url} alt={caption} aria-describedby={id} />
         <p id={id} className="atomikui-gallery-overlay__caption">
           {caption}
@@ -34,7 +40,9 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
       <div className={classnames('atomikui-gallery', className)} {...others}>
         {images.map(({ url, caption }, i) => (
           <button
-            className={i === 0 && showFeaturedImage && 'is-featured'}
+            className={classnames({
+              'is-featured': i === 0 && showFeaturedImage,
+            })}
             key={`image-${i + 1}`}
             style={{ background: `no-repeat center/cover url(${url})` }}
             onClick={() => setSelectedIndex(i)}
@@ -43,11 +51,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
         ))}
       </div>
       {selectedIndex !== null && (
-        <Overlay
-          className="atomikui-gallery-overlay"
-          onClick={() => setSelectedIndex(null)}
-          isActive
-        >
+        <Overlay className="atomikui-gallery-overlay" isActive>
           {renderImage()}
         </Overlay>
       )}
@@ -56,6 +60,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
 };
 
 Gallery.propTypes = {
+  /** Displays a random featured image */
   showFeaturedImage: PropTypes.bool,
   /** items to be rendered in carousel */
   items: PropTypes.arrayOf(
