@@ -9,10 +9,10 @@ import Overlay from '../overlay';
 import Button from '../button';
 
 const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
+  const [focusTrap, setFocusTrap] = useState();
   const [images, setImages] = useState();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
-  const [focusTrap, setFocusTrap] = useState(null);
 
   const modalRef = useRef();
 
@@ -34,7 +34,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
 
   useEffect(() => {
     if (!focusTrap) return;
-    console.log(focusTrap.current);
+
     if (showModal) {
       focusTrap.activate();
     } else {
