@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import shuffle from 'lodash.shuffle';
@@ -10,7 +10,7 @@ import Button from '../button';
 // TODO: Addd focus trap for image modal
 
 const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
-  const [images, setImages] = useState(null);
+  const [images, setImages] = useState();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
@@ -25,6 +25,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
         const id = `image-${index + 1}`;
         return {
           id,
+          index,
           image: <img key={id} src={url} alt={caption} aria-describedby={id} />,
           button: (
             <button
@@ -34,7 +35,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
               key={id}
               style={{ background: `no-repeat center/cover url(${url})` }}
               onClick={() => showImageModal(index)}
-              aria-label={`show image ${caption}`}
+              aria-label={`show image ${index + 1}`}
             />
           ),
           url,
@@ -59,7 +60,11 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
           >
             <Icon icon={faTimes} size="lg" color="white" />
           </Button>
-          {images[selectedIndex].image}
+          {images.map(({ image, index }) =>
+            cloneElement(image, {
+              style: { display: index === selectedIndex ? 'block' : 'none' },
+            }),
+          )}
           <p
             id={images[selectedIndex].id}
             className="atomikui-gallery-overlay__caption"
