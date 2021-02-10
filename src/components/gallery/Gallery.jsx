@@ -37,12 +37,16 @@ const Gallery = ({
         }),
       );
     }
+
+    setImmediate(() => {
+      focusTrap[showModal ? 'activate' : 'deactivate']();
+    });
   }, [showModal, focusTrap]);
 
-  useEffect(() => {
-    if (!focusTrap) return;
-    focusTrap[showModal ? 'activate' : 'deactivate']();
-  }, [showModal, focusTrap]);
+  // useEffect(() => {
+  //   if (!focusTrap) return;
+  //   focusTrap[showModal ? 'activate' : 'deactivate']();
+  // }, [showModal, focusTrap]);
 
   useEffect(() => {
     setImages(
