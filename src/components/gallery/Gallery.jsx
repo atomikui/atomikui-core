@@ -9,7 +9,13 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
 import Button from '../button';
 
-const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
+const Gallery = ({
+  className,
+  showFeaturedImage,
+  items,
+  randomize,
+  ...others
+}) => {
   const [focusTrap, setFocusTrap] = useState();
   const [images, setImages] = useState();
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -23,7 +29,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
   };
 
   useEffect(() => {
-    if (showModal) {
+    if (showModal && !focusTrap) {
       setFocusTrap(
         createFocusTrap(modalRef.current, {
           escapeDeactivates: false,
@@ -31,21 +37,16 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
         }),
       );
     }
-  }, [showModal]);
+  }, [showModal, focusTrap]);
 
   useEffect(() => {
     if (!focusTrap) return;
-
-    if (showModal) {
-      focusTrap.activate();
-    } else {
-      focusTrap.deactivate();
-    }
-  }, [focusTrap, showModal]);
+    focusTrap[showModal ? 'activate' : 'deactivate']();
+  }, [showModal, focusTrap]);
 
   useEffect(() => {
     setImages(
-      shuffle(items).map(({ url, caption }, index) => {
+      (randomize ? shuffle(items) : items).map(({ url, caption }, index) => {
         const id = `image-${index + 1}`;
         return {
           id,
@@ -69,7 +70,7 @@ const Gallery = ({ className, showFeaturedImage, items, ...others }) => {
         };
       }),
     );
-  }, [items, showFeaturedImage]);
+  }, [items, showFeaturedImage, randomize]);
 
   return images ? (
     <>
@@ -118,12 +119,15 @@ Gallery.propTypes = {
   ),
   /** Specifies custom component classes. */
   className: PropTypes.string,
+  /** Randomizes images */
+  randomize: PropTypes.bool,
 };
 
 Gallery.defaultProps = {
   showFeaturedImage: false,
   items: [],
   className: '',
+  randomize: false,
 };
 
 export default Gallery;
