@@ -64,12 +64,8 @@ const ChatWindow = ({
   }, []);
 
   useEffect(() => {
-    if (!focusTrap) return;
-
-    if (isOpen) {
-      focusTrap.activate();
-    } else {
-      focusTrap.deactivate();
+    if (focusTrap) {
+      focusTrap[isOpen ? 'activate' : 'deactivate']();
     }
   }, [isOpen, focusTrap]);
 

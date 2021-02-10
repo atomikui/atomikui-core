@@ -43,11 +43,6 @@ const Gallery = ({
     });
   }, [showModal, focusTrap]);
 
-  // useEffect(() => {
-  //   if (!focusTrap) return;
-  //   focusTrap[showModal ? 'activate' : 'deactivate']();
-  // }, [showModal, focusTrap]);
-
   useEffect(() => {
     setImages(
       (randomize ? shuffle(items) : items).map(({ url, caption }, index) => {
