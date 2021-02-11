@@ -39,7 +39,9 @@ const Gallery = ({
     }
 
     setImmediate(() => {
-      focusTrap[showModal ? 'activate' : 'deactivate']();
+      if (focusTrap) {
+        focusTrap[showModal ? 'activate' : 'deactivate']();
+      }
     });
   }, [showModal, focusTrap]);
 
@@ -83,6 +85,7 @@ const Gallery = ({
               {images[selectedIndex].caption}
             </div>
             <Button
+              data-testid="overlay-close-btn"
               theme="hollow"
               size="md"
               aria-label="close modal"
