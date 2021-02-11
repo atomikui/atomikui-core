@@ -94,7 +94,10 @@ const Gallery = ({
           <div className="atomikui-gallery-modal__body" tabIndex="0">
             {images.map(({ image, index }) =>
               cloneElement(image, {
-                style: { display: index === selectedIndex ? 'block' : 'none' },
+                style: {
+                  'aria-describedby': images[selectedIndex].id,
+                  display: index === selectedIndex ? 'block' : 'none',
+                },
               }),
             )}
           </div>
@@ -105,8 +108,8 @@ const Gallery = ({
 };
 
 Gallery.propTypes = {
-  /** Displays a random featured image */
-  showFeaturedImage: PropTypes.bool,
+  /** Specifies custom component classes. */
+  className: PropTypes.string,
   /** items to be rendered in carousel */
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -116,17 +119,20 @@ Gallery.propTypes = {
       caption: PropTypes.string.isRequired,
     }),
   ),
-  /** Specifies custom component classes. */
-  className: PropTypes.string,
   /** Randomizes images */
   randomize: PropTypes.bool,
+  /** Displays a random featured image */
+  showFeaturedImage: PropTypes.bool,
+  /** Gallery title */
+  title: PropTypes.string,
 };
 
 Gallery.defaultProps = {
-  showFeaturedImage: false,
-  items: [],
   className: '',
+  items: [],
   randomize: false,
+  showFeaturedImage: false,
+  title: '',
 };
 
 export default Gallery;
