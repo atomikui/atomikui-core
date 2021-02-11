@@ -10,6 +10,7 @@ import Overlay from '../overlay';
 import Button from '../button';
 
 const Gallery = ({
+  borderColor,
   className,
   showFeaturedImage,
   items,
@@ -63,6 +64,7 @@ const Gallery = ({
               key={id}
               style={{
                 background: `no-repeat center/cover url(${url})`,
+                border: borderColor ? `1px solid ${borderColor}` : null,
               }}
               onClick={() => showImageModal(index)}
               aria-label={`show image ${index + 1}`}
@@ -71,7 +73,7 @@ const Gallery = ({
         };
       }),
     );
-  }, [items, showFeaturedImage, randomize]);
+  }, [borderColor, items, showFeaturedImage, randomize]);
 
   return images ? (
     <>
@@ -111,6 +113,8 @@ const Gallery = ({
 };
 
 Gallery.propTypes = {
+  /** Defines the color of the image borderes. E.g. #fff or white */
+  borderColor: PropTypes.string,
   /** Specifies custom component classes. */
   className: PropTypes.string,
   /** items to be rendered in carousel */
@@ -129,6 +133,7 @@ Gallery.propTypes = {
 };
 
 Gallery.defaultProps = {
+  borderColor: '',
   className: '',
   items: [],
   randomize: false,
