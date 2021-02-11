@@ -126,8 +126,6 @@ Gallery.propTypes = {
   randomize: PropTypes.bool,
   /** Displays a random featured image */
   showFeaturedImage: PropTypes.bool,
-  /** Gallery title */
-  title: PropTypes.string,
 };
 
 Gallery.defaultProps = {
@@ -135,7 +133,6 @@ Gallery.defaultProps = {
   items: [],
   randomize: false,
   showFeaturedImage: false,
-  title: '',
 };
 
 export default Gallery;
