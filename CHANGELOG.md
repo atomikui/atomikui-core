@@ -4,9 +4,9 @@
 
 #### Commits
 
+- fixes sass lint error [`56c2e69`](https://github.com/atomikui/atomikui-core/commit/56c2e69b268ef8c00128b893c9d358125e12c799)
 - Bumps version and update changelog [`a72b288`](https://github.com/atomikui/atomikui-core/commit/a72b288772559c8f795deb12f9b792b3af4d44b1)
 - Fixes Safari issue with button spacing. Updates button focus state [`b325ff7`](https://github.com/atomikui/atomikui-core/commit/b325ff70601d580f2a7e4452bf4bc30bd5fa36fa)
-- Adds .travis.yml to .npmignore. Updates build scripts [`96855eb`](https://github.com/atomikui/atomikui-core/commit/96855ebde3419e3f8f3ac36f9b1de8a16ff250ce)
 
 <hr />
 
