@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "release:major": "npm version major && yarn build && yarn changelog && yarn commit-and-push && yarn publish",
-    "release:minor": "npm version minor && yarn build && yarn changelog && yarn commit-and-push && yarn publish",
-    "release:patch": "npm version patch && yarn build && yarn changelog && yarn commit-and-push && yarn publish",
+    "release:major": "npm version major && yarn changelog && yarn build && yarn commit-and-push && yarn publish",
+    "release:minor": "npm version minor && yarn changelog && yarn build && yarn commit-and-push && yarn publish",
+    "release:patch": "npm version patch && yarn changelog && yarn build && yarn commit-and-push && yarn publish",
     "changelog": "auto-changelog --output CHANGELOG.md --template changelog.hbs",
     "commit-build": "git commit -m \"Bumps version and update changelog\" -a && git push origin master",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
