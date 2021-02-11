@@ -1,11 +1,22 @@
 <br />
 
+### [v0.13.1](https://github.com/atomikui/atomikui-core/compare/v0.13.0...v0.13.1) - 2021-02-11
+
+#### Commits
+
+- Updates CHANGELOG.md [`d4d4e17`](https://github.com/atomikui/atomikui-core/commit/d4d4e170890aae45a97a4e192fe95ef3b441af5d)
+- Updates CHANGELOG.md [`3589fa2`](https://github.com/atomikui/atomikui-core/commit/3589fa20f2d67d788086caf87204ed072d108343)
+- Updates overlay opacity [`31b2a0f`](https://github.com/atomikui/atomikui-core/commit/31b2a0f4ac7daff7ac7db446e79ffe436d37c5ca)
+
+<hr />
+
 ### [v0.13.0](https://github.com/atomikui/atomikui-core/compare/v0.12.0...v0.13.0) - 2021-02-11
 
 #### Commits
 
 - image gallery [`58833dd`](https://github.com/atomikui/atomikui-core/commit/58833dd3f54d78289d088a7d93e34c132299a363)
-- Test coverage and adds husky prepush hook. [`d0f8d99`](https://github.com/atomikui/atomikui-core/commit/d0f8d998194cfa462f02906467a8403e6e276aaf)
+- Carousel component [`ab040e3`](https://github.com/atomikui/atomikui-core/commit/ab040e3cf78a728131bf5cf319e020db186ed624)
+- Test covergae and adds husky prepush hook. [`d0f8d99`](https://github.com/atomikui/atomikui-core/commit/d0f8d998194cfa462f02906467a8403e6e276aaf)
 
 <hr />
 
