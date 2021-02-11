@@ -1,5 +1,15 @@
 <br />
 
+### [v0.13.0](https://github.com/atomikui/atomikui-core/compare/v0.12.0...v0.13.0) - 2021-02-11
+
+#### Commits
+
+- image gallery [`58833dd`](https://github.com/atomikui/atomikui-core/commit/58833dd3f54d78289d088a7d93e34c132299a363)
+- Carousel component [`ab040e3`](https://github.com/atomikui/atomikui-core/commit/ab040e3cf78a728131bf5cf319e020db186ed624)
+- Test covergae and adds husky prepush hook. [`d0f8d99`](https://github.com/atomikui/atomikui-core/commit/d0f8d998194cfa462f02906467a8403e6e276aaf)
+
+<hr />
+
 ### [v0.12.0](https://github.com/atomikui/atomikui-core/compare/v0.11.1...v0.12.0) - 2021-02-04
 
 #### Commits

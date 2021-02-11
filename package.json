@@ -29,7 +29,7 @@
     "release:minor": "npm version minor && yarn build && yarn changelog && yarn commit-and-push && yarn push-release && yarn publish",
     "release:patch": "npm version patch && yarn build && yarn changelog && yarn commit-and-push && yarn push-release && yarn publish",
     "changelog": "auto-changelog --output CHANGELOG.md --template changelog.hbs",
-    "commit-build": "git commit -m \"Updates CHANGELOG.md\" --all",
+    "commit-build": "git commit -m \"Updates CHANGELOG.md\" -a",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "lint:sass": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc --fix",
     "test:unit": "jest --coverage --silent --config=./jest/jest.config.js",
