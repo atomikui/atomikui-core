@@ -93,7 +93,7 @@ export default {
     'Providers are HOCs (Higher Order Components) that wrap another component, providing it with access to additional functionality.',
     ['WithToastProvider'],
   ],
-  Experiemental: [
+  Experimental: [
     'Experimental components can be used, but are not at a stable point yet, and are subject to change.',
     ['CreditCardField'],
   ],
