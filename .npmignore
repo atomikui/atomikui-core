@@ -5,6 +5,7 @@
 .gitignore
 .eslintrc
 .babelrc
+.travis.yml
 
 build/
 public/
