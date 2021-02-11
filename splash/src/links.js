@@ -18,6 +18,7 @@ export default {
       'AccordionItem',
       'Avatar',
       'Badge',
+      'Gallery',
       'Quotation',
       'Comment',
       'Post',

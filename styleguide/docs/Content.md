@@ -6,6 +6,7 @@ Content components are used to control how content is formatted and displayed.
 - [AccordionItem](/styleguide/#/Content/AccordionItem)
 - [Avatar](/styleguide/#/Content/Avatar)
 - [Badge](/styleguide/#/Content/Badge)
+- [Gallery](/styleguide/#/Content/Gallery)
 - [Quotation](/styleguide/#/Content/Quotation)
 - [Comment](/styleguide/#/Content/Comment)
 - [Post](/styleguide/#/Content/Post)
