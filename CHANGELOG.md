@@ -1,5 +1,15 @@
 <br />
 
+### [v0.13.3](https://github.com/atomikui/atomikui-core/compare/v0.13.2...v0.13.3) - 2021-02-12
+
+#### Commits
+
+- ButtonGroup - fixes Safari spacing issue between buttons [`bcd5c96`](https://github.com/atomikui/atomikui-core/commit/bcd5c969bd514312da2783b23db4b1b1debf546a)
+- Splash - fixes broken link [`917fdc9`](https://github.com/atomikui/atomikui-core/commit/917fdc9bab3c93a5ea12b157a54ea1af8dd471ae)
+- Bumps version and update changelog [`a5bc656`](https://github.com/atomikui/atomikui-core/commit/a5bc6560f5b6463a52e0860ca2c726415d32ee2e)
+
+<hr />
+
 ### [v0.13.2](https://github.com/atomikui/atomikui-core/compare/v0.13.1...v0.13.2) - 2021-02-11
 
 #### Commits
