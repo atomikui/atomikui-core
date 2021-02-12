@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "release:major": "npm version major && yarn changelog && yarn build && yarn commit-build && yarn deploy",
-    "release:minor": "npm version minor && yarn changelog && yarn build && yarn commit-build && yarn deploy",
-    "release:patch": "npm version patch && yarn changelog && yarn build && yarn commit-build && yarn deploy",
+    "release:major": "npm version major && yarn changelog && yarn build && yarn commit-build && yarn deploy-styleguide",
+    "release:minor": "npm version minor && yarn changelog && yarn build && yarn commit-build && yarn deploy-styleguide",
+    "release:patch": "npm version patch && yarn changelog && yarn build && yarn commit-build && yarn deploy-styleguide",
     "changelog": "auto-changelog --output CHANGELOG.md --template changelog.hbs",
     "commit-build": "git commit -m \"Bumps version and update changelog\" -a && git push origin master",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
@@ -42,7 +42,7 @@
     "build:atomik": "NODE_ENV=production babel src --out-dir dist --copy-files --no-copy-ignored --ignore '**/*.test.js,**/*.spec.js' && cp package.json dist/package.json",
     "build:styles": "cross-env webpack -p --config webpack.config.js",
     "build:styleguide": "NODE_ENV=production yarn styleguidist build && cp src/CNAME build",
-    "deploy": "npm publish && gh-pages -d build"
+    "deploy-styleguide": "gh-pages -d build"
   },
   "husky": {
     "hooks": {
