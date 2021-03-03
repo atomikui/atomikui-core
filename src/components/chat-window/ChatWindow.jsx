@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import createFocusTrap from 'focus-trap';
+import FocusTrap from 'focus-trap-react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import ChatMessage from '../chat-message';
@@ -18,12 +18,10 @@ const ChatWindow = ({
   incomingSenderImg,
   incomingSenderStatus,
 }) => {
-  const chatWindowRef = useRef();
   const chatWindowBodyRef = useRef();
   const userInputRef = useRef();
 
   const [message, setMessage] = useState('');
-  const [focusTrap, setFocusTrap] = useState(null);
 
   const handleChange = (e) => {
     setMessage(e.target.value);
@@ -34,124 +32,111 @@ const ChatWindow = ({
     setMessage('');
   };
 
+  const setChatWindowScrollPosition = () => {
+    const chatWindowBody = chatWindowBodyRef.current;
+    chatWindowBody.scrollTop = chatWindowBody.scrollHeight;
+  };
+
+  const autoExpandInput = () => {
+    const userInput = userInputRef.current;
+    userInput.style.height = 'auto';
+    userInput.style.height = `${userInput.scrollHeight}px`;
+  };
+
   const handleKeyDown = (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
       if (message) {
         handleSubmit();
       }
+    } else {
+      autoExpandInput();
     }
   };
 
-  const setChatWindowScrollPosition = () => {
-    const chatWindowBody = chatWindowBodyRef.current;
-    chatWindowBody.scrollTop = chatWindowBody.scrollHeight;
-  };
-
-  const autExpandInput = () => {
-    const userInput = userInputRef.current;
-    userInput.style.height = 'auto';
-    userInput.style.height = `${userInput.scrollHeight}px`;
-  };
-
   useEffect(() => {
-    setFocusTrap(
-      createFocusTrap(chatWindowRef.current, {
-        clickOutsideDeactivates: true,
-        fallbackFocus: chatWindowRef.current,
-      }),
-    );
-  }, []);
-
-  useEffect(() => {
-    if (focusTrap) {
-      focusTrap[isOpen ? 'activate' : 'deactivate']();
+    if (isOpen) {
+      setChatWindowScrollPosition();
+      autoExpandInput();
     }
-  }, [isOpen, focusTrap]);
+  }, [messages, isOpen]);
 
-  useEffect(() => {
-    setChatWindowScrollPosition();
-  }, [messages]);
-
-  useEffect(() => {
-    autExpandInput();
-  }, [message]);
-
-  return (
-    <div
-      ref={chatWindowRef}
-      className={classnames('atomikui-chat-window', className, {
-        'is-open': isOpen,
-        [`atomikui-chat-window--${position}`]: position,
-      })}
-    >
-      <div className="atomikui-chat-window__header">
-        <div className="atomikui-chat-window__title">
-          {incomingSenderImg ? (
-            <img
-              className="atomikui-chat-window__avatar"
-              src={incomingSenderImg}
-              alt="Avatar"
+  return isOpen ? (
+    <FocusTrap>
+      <div
+        className={classnames('atomikui-chat-window', className, {
+          'is-open': isOpen,
+          [`atomikui-chat-window--${position}`]: position,
+        })}
+      >
+        <div className="atomikui-chat-window__header">
+          <div className="atomikui-chat-window__title">
+            {incomingSenderImg ? (
+              <img
+                className="atomikui-chat-window__avatar"
+                src={incomingSenderImg}
+                alt="Avatar"
+              />
+            ) : (
+              <Icon
+                className="atomikui-chat-window__avatar-icon"
+                icon={faUserCircle}
+                size="2x"
+                color="white"
+              />
+            )}
+            {incomingSenderName}
+            <span
+              aria-label={`Status: ${incomingSenderStatus}`}
+              className={classnames('atomikui-chat-window__sender-status', {
+                [`atomikui-chat-window__sender-status--${incomingSenderStatus}`]: incomingSenderStatus,
+              })}
             />
-          ) : (
-            <Icon
-              className="atomikui-chat-window__avatar-icon"
-              icon={faUserCircle}
-              size="2x"
-              color="white"
-            />
-          )}
-          {incomingSenderName}
-          <span
-            aria-label={`Status: ${incomingSenderStatus}`}
-            className={classnames('atomikui-chat-window__sender-status', {
-              [`atomikui-chat-window__sender-status--${incomingSenderStatus}`]: incomingSenderStatus,
-            })}
-          />
+          </div>
+          <button
+            data-test-id="chat-window-close-btn"
+            className="atomikui-chat-window__close-btn"
+            onClick={onClose}
+            aria-label="close button"
+          >
+            <Icon icon={faTimes} size="2x" color="white" />
+          </button>
         </div>
-        <button
-          data-test-id="chat-window-close-btn"
-          className="atomikui-chat-window__close-btn"
-          onClick={onClose}
-          aria-label="close button"
-        >
-          <Icon icon={faTimes} size="2x" color="white" />
-        </button>
-      </div>
-      <div ref={chatWindowBodyRef} className="atomikui-chat-window__body">
-        {messages.map(({ isOutgoing, ...props }, index) => (
-          <ChatMessage
-            key={`message-${index + 1}`}
-            isOutgoing={isOutgoing}
-            {...props}
+        <div ref={chatWindowBodyRef} className="atomikui-chat-window__body">
+          {messages.map(({ isOutgoing, ...props }, index) => (
+            <ChatMessage
+              key={`message-${index + 1}`}
+              isOutgoing={isOutgoing}
+              {...props}
+            />
+          ))}
+        </div>
+        <div className="atomikui-chat-window__footer">
+          <textarea
+            data-test-id="chat-window-user-input"
+            aria-label="Enter a Message"
+            id="chat-message-input"
+            ref={userInputRef}
+            className="atomikui-chat-window__input"
+            rows="1"
+            placeholder="Enter your message..."
+            value={message}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
           />
-        ))}
+          <Button
+            data-test-id="chat-window-send-btn"
+            className="atomikui-chat-window__send-btn"
+            onClick={handleSubmit}
+            theme="blue"
+            disabled={!message}
+          >
+            Send
+          </Button>
+        </div>
       </div>
-      <div className="atomikui-chat-window__footer">
-        <textarea
-          data-test-id="chat-window-user-input"
-          aria-label="Enter a Message"
-          id="chat-message-input"
-          ref={userInputRef}
-          className="atomikui-chat-window__input"
-          rows="1"
-          placeholder="Enter your message..."
-          value={message}
-          onChange={handleChange}
-          onKeyDown={handleKeyDown}
-        />
-        <Button
-          data-test-id="chat-window-send-btn"
-          className="atomikui-chat-window__send-btn"
-          onClick={handleSubmit}
-          theme="blue"
-          disabled={!message}
-        >
-          Send
-        </Button>
-      </div>
-    </div>
-  );
+    </FocusTrap>
+  ) : null;
 };
 
 ChatWindow.propTypes = {

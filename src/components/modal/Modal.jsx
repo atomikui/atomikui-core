@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import createFocusTrap from 'focus-trap';
+import FocusTrap from 'focus-trap-react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
@@ -21,33 +21,11 @@ const Modal = ({
   title,
   ...others
 }) => {
-  const [focusTrap, setFocusTrap] = useState(null);
-  const modalRef = useRef();
-
   const handleKeyDown = (e) => {
     if (e.keyCode === 27) {
       onClose();
     }
   };
-
-  useEffect(() => {
-    if (isOpen) {
-      setFocusTrap(
-        createFocusTrap(modalRef.current, {
-          allowOutsideClick: () => !disableOverlayclick || noOverlay,
-          clickOutsideDeactivates: noOverlay,
-          escapeDeactivates: false,
-          fallbackFocus: modalRef,
-        }),
-      );
-    }
-  }, [disableOverlayclick, isOpen, noOverlay]);
-
-  useEffect(() => {
-    if (focusTrap) {
-      focusTrap[isOpen ? 'activate' : 'deactivate']();
-    }
-  }, [focusTrap, isOpen]);
 
   return (
     <Portal container={document.body}>
@@ -61,27 +39,31 @@ const Modal = ({
         onKeyDown={!disableEscapKey ? handleKeyDown : null}
         {...others}
       >
-        <div
-          ref={modalRef}
-          className={classnames('atomikui-modal', className, {
-            [`atomikui-modal--${theme}`]: theme,
-            'is-open': isOpen,
-          })}
-        >
-          <div className="atomikui-modal__header">
-            <div className="atomikui-modal__title">{title}</div>
-            <button
-              data-test-id="modal-close-btn"
-              className="atomikui-modal__close-button"
-              aria-label="close-button"
-              onClick={onClose}
+        {isOpen ? (
+          <FocusTrap>
+            <div
+              data-test-id="modal"
+              className={classnames('atomikui-modal', className, {
+                [`atomikui-modal--${theme}`]: theme,
+                'is-open': isOpen,
+              })}
             >
-              <Icon icon={faTimes} size="2x" color="white" />
-            </button>
-          </div>
-          <div className="atomikui-modal__body">{children}</div>
-          {footer && <div className="atomikui-modal__footer">{footer}</div>}
-        </div>
+              <div className="atomikui-modal__header">
+                <div className="atomikui-modal__title">{title}</div>
+                <button
+                  data-test-id="modal-close-btn"
+                  className="atomikui-modal__close-button"
+                  aria-label="close-button"
+                  onClick={onClose}
+                >
+                  <Icon icon={faTimes} size="2x" color="white" />
+                </button>
+              </div>
+              <div className="atomikui-modal__body">{children}</div>
+              {footer && <div className="atomikui-modal__footer">{footer}</div>}
+            </div>
+          </FocusTrap>
+        ) : null}
       </Overlay>
     </Portal>
   );

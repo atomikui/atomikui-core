@@ -7,9 +7,6 @@ import ChatWindow from './ChatWindow';
 
 configure({ adapter: new Adapter() });
 
-const longText =
-  'Pellentesque elementum bibendum est, ornare rutrum odio condimentum sed. Vestibulum ut eros vitae sapien suscipit porttitor. Sed elit diam, vestibulum sed accumsan eu, euismod sed lectus. Suspendisse velit turpis, cursus sit amet vestibulum ac, tincidunt et odio. Nulla vitae posuere metus. Nunc dolor libero, mollis a feugiat quis, commodo sit amet lectus. Nulla velit diam, feugiat eu orci vitae, dictum eleifend orci.';
-
 describe('<ChatWindow />', () => {
   let chatWindow;
   let onCloseSpy;
@@ -21,6 +18,7 @@ describe('<ChatWindow />', () => {
 
     chatWindow = shallow(
       <ChatWindow
+        isOpen
         messages={[]}
         onClose={onCloseSpy}
         onMessageSent={onMessageSentSpy}

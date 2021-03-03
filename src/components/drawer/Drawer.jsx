@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import createFocusTrap from 'focus-trap';
+import FocusTrap from 'focus-trap-react';
 import Overlay from '../overlay';
 
 const Drawer = ({
@@ -15,26 +15,14 @@ const Drawer = ({
   ...others
 }) => {
   const ref = useRef();
-
-  const [focusTrap, setFocusTrap] = useState(null);
   const [styles, setStyles] = useState({});
+  const Wrapper = isOpen ? FocusTrap : 'div';
 
   const handleKeyDown = (e) => {
     if (e.keyCode === 27) {
       onClose();
     }
   };
-
-  useEffect(() => {
-    setFocusTrap(
-      createFocusTrap(ref.current, {
-        allowOutsideClick: () => true,
-        clickOutsideDeactivates: true,
-        escapeDeactivates: true,
-        fallbackFocus: ref,
-      }),
-    );
-  }, []);
 
   useEffect(() => {
     setStyles({
@@ -46,31 +34,27 @@ const Drawer = ({
             ]
           }px`,
     });
-
-    if (focusTrap) {
-      setTimeout(() => {
-        focusTrap[isOpen ? 'activate' : 'deactivate']();
-      }, 50);
-    }
-  }, [focusTrap, isOpen, position]);
+  }, [isOpen, position]);
 
   return (
     <>
       <Overlay isActive={isOpen} onClick={onClose} />
-      <div
-        role="presentation"
-        ref={ref}
-        onKeyDown={handleKeyDown}
-        data-test-id="drawer"
-        className={classnames('atomikui-drawer', className, {
-          'is-open': isOpen,
-          [`atomikui-drawer--${position}`]: position,
-        })}
-        style={{ width, height, ...styles }}
-        {...others}
-      >
-        {children}
-      </div>
+      <Wrapper>
+        <div
+          role="presentation"
+          ref={ref}
+          onKeyDown={handleKeyDown}
+          data-test-id="drawer"
+          className={classnames('atomikui-drawer', className, {
+            'is-open': isOpen,
+            [`atomikui-drawer--${position}`]: position,
+          })}
+          style={{ width, height, ...styles }}
+          {...others}
+        >
+          {children}
+        </div>
+      </Wrapper>
     </>
   );
 };

@@ -36,14 +36,14 @@ describe('<Modal />', () => {
   });
 
   it('Should call onClose when modal overlay is clicked', () => {
-    modal.find('Overlay').simulate('click');
+    modal.find('[data-test-id="overlay"]').simulate('click');
 
     expect(onCloseSpy.called).toBeTruthy();
   });
 
   it('Should not call onClose when modal overlay is clicked if `disableOverlayclick` is true', () => {
     modal.setProps({ disableOverlayclick: true });
-    modal.find('Overlay').simulate('click');
+    modal.find('[data-test-id="overlay"]').simulate('click');
 
     expect(onCloseSpy.called).toBeFalsy();
   });
@@ -59,7 +59,7 @@ describe('<Modal />', () => {
   it('Should not call onClose callback if overlay click event is disabled', () => {
     modal.setProps({ disableOverlayclick: true, noOverlay: false });
 
-    modal.find('Overlay').simulate('click');
+    modal.find('[data-test-id="overlay"]').simulate('click');
 
     expect(onCloseSpy.called).toBeFalsy();
   });
@@ -72,5 +72,11 @@ describe('<Modal />', () => {
         .find('[data-test-id="overlay"]')
         .hasClass('atomikui-overlay--white'),
     ).toBeTruthy();
+  });
+
+  it('Should conditionally render modal', () => {
+    expect(modal.find('[data-test-id="overlay"]').children()).toHaveLength(1);
+    modal.setProps({ isOpen: false });
+    expect(modal.find('[data-test-id="overlay"]').children()).toHaveLength(0);
   });
 });
