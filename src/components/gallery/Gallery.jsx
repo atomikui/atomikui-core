@@ -81,8 +81,8 @@ const Gallery = ({
               <div className="atomikui-gallery-modal__body" tabIndex="0">
                 {images.map(({ image, index }) =>
                   cloneElement(image, {
+                    'aria-describedby': images[selectedIndex].id,
                     style: {
-                      'aria-describedby': images[selectedIndex].id,
                       display: index === selectedIndex ? 'block' : 'none',
                     },
                   }),
