@@ -35,7 +35,7 @@ const Gallery = ({
           index,
           url,
           caption,
-          image: <img key={id} src={url} alt={caption} ariaDescribedby={id} />,
+          image: <img key={id} src={url} alt={caption} aria-describedby={id} />,
           button: (
             <button
               className={classnames({
