@@ -1,5 +1,19 @@
 <br />
 
+### [v0.13.4](https://github.com/atomikui/atomikui-core/compare/v0.13.3...v0.13.4) - 2021-03-03
+
+#### Merged
+
+- Refactor/focus trap react [`#77`](https://github.com/atomikui/atomikui-core/pull/77)
+
+#### Commits
+
+- Update CHANGELOG.md [`20dbe4c`](https://github.com/atomikui/atomikui-core/commit/20dbe4c78e34f1bd6d55ff30c58932dee2dea06b)
+- Bumps version and update changelog [`026ebb4`](https://github.com/atomikui/atomikui-core/commit/026ebb4a5c618d2fa0c5ccbcf8b7116a059b777f)
+- Bumps version and update changelog [`617f47d`](https://github.com/atomikui/atomikui-core/commit/617f47d51e09907d92d86b6c3894bf1738b61695)
+
+<hr />
+
 ### [v0.13.3](https://github.com/atomikui/atomikui-core/compare/v0.13.2...v0.13.3) - 2021-02-12
 
 #### Commits
