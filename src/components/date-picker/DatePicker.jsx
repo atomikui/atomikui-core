@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef, forwardRef } from 'react';
+import React, { useState, forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Calendar from 'react-calendar';
-import createFocusTrap from 'focus-trap';
+import FocusTrap from 'focus-trap-react';
 import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
@@ -27,8 +27,6 @@ const DatePicker = forwardRef(
     ref,
   ) => {
     const uid = `datepicker-${shortid.generate()}`;
-    const calendar = useRef();
-    const [focusTrap, setFocusTrap] = useState(null);
     const [theValue, setTheValue] = useState(validateDate(value) || new Date());
     const [isOpen, setIsOpen] = useState(false);
 
@@ -61,25 +59,6 @@ const DatePicker = forwardRef(
       }
     };
 
-    useEffect(() => {
-      setFocusTrap(
-        createFocusTrap(calendar.current, {
-          allowOutsideClick: () => true,
-          clickOutsideDeactivates: false,
-          escapeDeactivates: true,
-          fallbackFocus: calendar,
-        }),
-      );
-    }, [calendar]);
-
-    useEffect(() => {
-      if (focusTrap) {
-        setTimeout(() => {
-          focusTrap[isOpen ? 'activate' : 'deactivate']();
-        }, 200);
-      }
-    }, [focusTrap, isOpen]);
-
     return (
       <div className={classnames('atomikui-date-picker', className)}>
         {label && (
@@ -111,16 +90,19 @@ const DatePicker = forwardRef(
           </Button>
         </div>
         <Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}>
-          <div
-            className="atomikui-date-picker__calendar"
-            data-test-id="datepicker-calendar"
-            ref={calendar}
-          >
-            <Calendar
-              onChange={(details) => handleDateChange(details)}
-              value={new Date(theValue)}
-            />
-          </div>
+          {isOpen ? (
+            <FocusTrap>
+              <div
+                className="atomikui-date-picker__calendar"
+                data-test-id="datepicker-calendar"
+              >
+                <Calendar
+                  onChange={(details) => handleDateChange(details)}
+                  value={new Date(theValue)}
+                />
+              </div>
+            </FocusTrap>
+          ) : null}
         </Overlay>
       </div>
     );

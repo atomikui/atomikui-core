@@ -40,6 +40,9 @@ describe('<DatePicker />', () => {
   });
 
   it('Should change input value when calendar date is clicked', () => {
+    datepicker
+      .find('button[data-test-id="datepicker-input-btn"]')
+      .simulate('click');
     datepicker.find('.react-calendar__tile').at(15).simulate('click');
 
     expect(
@@ -58,10 +61,8 @@ describe('<DatePicker />', () => {
       .simulate('keydown', { key: 'Escape', keyCode: 27, which: 27 });
 
     expect(
-      datepicker
-        .find('[data-test-id="datepicker-calendar"]')
-        .hasClass('is-open'),
-    ).toBeFalsy();
+      datepicker.find('[data-test-id="datepicker-calendar"]'),
+    ).toHaveLength(0);
   });
 
   it('Should handle an invalid date', () => {

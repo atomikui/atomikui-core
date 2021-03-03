@@ -12,7 +12,13 @@ describe('<Drawer />', () => {
 
   beforeEach(() => {
     onCloseSpy = sinon.spy();
-    drawer = mount(<Drawer onClose={onCloseSpy} isOpen={true} />);
+    drawer = mount(
+      <Drawer onClose={onCloseSpy} isOpen={true}>
+        <div>
+          <button>click me</button>
+        </div>
+      </Drawer>,
+    );
   });
 
   it('Should call onClose when escape key is pressed', () => {
