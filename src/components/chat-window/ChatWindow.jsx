@@ -61,7 +61,9 @@ const ChatWindow = ({
     }
   }, [messages, isOpen]);
 
-  return isOpen ? (
+  if (!isOpen) return null;
+
+  return (
     <FocusTrap>
       <div
         className={classnames('atomikui-chat-window', className, {
@@ -136,7 +138,7 @@ const ChatWindow = ({
         </div>
       </div>
     </FocusTrap>
-  ) : null;
+  );
 };
 
 ChatWindow.propTypes = {

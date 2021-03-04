@@ -55,7 +55,9 @@ const Gallery = ({
     );
   }, [borderColor, items, showFeaturedImage, randomize]);
 
-  return images ? (
+  if (!images) return null;
+
+  return (
     <>
       <div className={classnames('atomikui-gallery', className)} {...others}>
         {images.map(({ button }) => button)}
@@ -93,7 +95,7 @@ const Gallery = ({
         ) : null}
       </Overlay>
     </>
-  ) : null;
+  );
 };
 
 Gallery.propTypes = {

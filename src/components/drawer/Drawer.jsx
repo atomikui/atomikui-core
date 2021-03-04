@@ -25,15 +25,17 @@ const Drawer = ({
   };
 
   useEffect(() => {
-    setStyles({
-      [position]: isOpen
-        ? 0
-        : `-${
-            ref.current[
-              position.match(/top|bottom/) ? 'clientHeight' : 'clientWidth'
-            ]
-          }px`,
-    });
+    if (isOpen) {
+      setStyles({ [position]: 0 });
+    } else {
+      setStyles({
+        [position]: `-${
+          ref.current[
+            position.match(/top|bottom/) ? 'clientHeight' : 'clientWidth'
+          ]
+        }px`,
+      });
+    }
   }, [isOpen, position]);
 
   return (
