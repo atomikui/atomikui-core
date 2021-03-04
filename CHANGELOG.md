@@ -1,5 +1,18 @@
 <br />
 
+### [v0.13.5](https://github.com/atomikui/atomikui-core/compare/v0.13.4...v0.13.5) - 2021-03-04
+
+#### Merged
+
+- DatePicker - fixes issue with value not updating after date select from calendar [`#80`](https://github.com/atomikui/atomikui-core/pull/80)
+- Fixes code smells [`#79`](https://github.com/atomikui/atomikui-core/pull/79)
+
+#### Commits
+
+- Bumps version and update changelog [`ec8d186`](https://github.com/atomikui/atomikui-core/commit/ec8d18637371c1ab966a1f5456d88b642a4e247a)
+
+<hr />
+
 ### [v0.13.4](https://github.com/atomikui/atomikui-core/compare/v0.13.3...v0.13.4) - 2021-03-03
 
 #### Merged
