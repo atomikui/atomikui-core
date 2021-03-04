@@ -91,17 +91,17 @@ const DatePicker = forwardRef(
         </div>
         <Overlay isActive={isOpen} onKeyDown={handleKeyDown} onClick={cancel}>
           {isOpen ? (
-            <FocusTrap>
-              <div
-                className="atomikui-date-picker__calendar"
-                data-test-id="datepicker-calendar"
-              >
+            <div
+              className="atomikui-date-picker__calendar"
+              data-test-id="datepicker-calendar"
+            >
+              <FocusTrap>
                 <Calendar
                   onChange={(details) => handleDateChange(details)}
                   value={new Date(theValue)}
                 />
-              </div>
-            </FocusTrap>
+              </FocusTrap>
+            </div>
           ) : null}
         </Overlay>
       </div>
