@@ -36,6 +36,10 @@ const Dropdown = forwardRef(
     const inputHintId = `${inputName}_hint`;
     const inputErrorId = `${inputName}_error`;
 
+    const dropdownOptions = defaultOption
+      ? [defaultOption, ...options]
+      : options;
+
     return (
       <div
         data-test-id="dropdown"
@@ -72,7 +76,7 @@ const Dropdown = forwardRef(
             onChange={onChange}
             {...others}
           >
-            {[defaultOption, ...options].map((option, index) => (
+            {dropdownOptions.map((option, index) => (
               <option
                 key={`option-${option.text}-${index + 1}`}
                 value={option.value}
@@ -174,10 +178,7 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   className: '',
-  defaultOption: {
-    text: 'Select One',
-    value: '',
-  },
+  defaultOption: null,
   defaultValue: '',
   disabled: false,
   errorText: '',
