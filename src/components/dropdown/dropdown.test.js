@@ -14,6 +14,10 @@ describe('<Dropdown />', () => {
         label="Select a Color"
         value="Orange"
         theme="red"
+        defaultOption={{
+          text: 'Please Select a Color',
+          value: '',
+        }}
         options={[
           { text: 'Red', value: 'Red' },
           { text: 'Orange', value: 'Orange' },
