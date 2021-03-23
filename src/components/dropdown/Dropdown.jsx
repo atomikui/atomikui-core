@@ -11,6 +11,7 @@ const Dropdown = forwardRef(
   (
     {
       className,
+      defaultOption,
       defaultValue,
       disabled,
       errorText,
@@ -34,6 +35,10 @@ const Dropdown = forwardRef(
     const inputName = name || uid;
     const inputHintId = `${inputName}_hint`;
     const inputErrorId = `${inputName}_error`;
+
+    const dropdownOptions = defaultOption
+      ? [defaultOption, ...options]
+      : options;
 
     return (
       <div
@@ -71,14 +76,7 @@ const Dropdown = forwardRef(
             onChange={onChange}
             {...others}
           >
-            {[
-              {
-                text: 'Select One',
-                value: '',
-                onBlur: onChange,
-              },
-              ...options,
-            ].map((option, index) => (
+            {dropdownOptions.map((option, index) => (
               <option
                 key={`option-${option.text}-${index + 1}`}
                 value={option.value}
@@ -109,6 +107,13 @@ const Dropdown = forwardRef(
 Dropdown.propTypes = {
   /** Specifies custom component classes. */
   className: PropTypes.string,
+  /** Specifies the first default option to be displayed */
+  defaultOption: PropTypes.shape({
+    /** Option text. */
+    text: PropTypes.string,
+    /** Option value. */
+    value: PropTypes.string,
+  }),
   /** Sets the default value for an uncontrolled dropdown */
   defaultValue: PropTypes.string,
   /** Disables a form field. */
@@ -173,6 +178,7 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   className: '',
+  defaultOption: null,
   defaultValue: '',
   disabled: false,
   errorText: '',

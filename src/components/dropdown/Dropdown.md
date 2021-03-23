@@ -9,10 +9,14 @@ import { Dropdown } from '@atomikui/core';
 const [value, setValue] = useState('');
 
 <Dropdown
-  label="Select a Color"
+  label="What's your favorite Color"
   errorText="Please select a color"
   onChange={(e) => setValue(e.target.value)}
   value={value}
+  defaultOption={{
+    text: 'Please Select a Color',
+    value: '',
+  }}
   options={[
     { text: 'Red', value: 'Red' },
     { text: 'Orange', value: 'Orange' },

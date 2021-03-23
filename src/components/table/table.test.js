@@ -216,13 +216,13 @@ describe('<Table />', () => {
     expect(
       table
         .find('select[data-test-id="pagination-to-page-dropdown"]')
-        .childAt(1)
+        .childAt(0)
         .text(),
     ).toBe('Show 5');
     expect(
       table
         .find('select[data-test-id="pagination-to-page-dropdown"]')
-        .childAt(2)
+        .childAt(1)
         .text(),
     ).toBe('Show 10');
 
@@ -231,19 +231,19 @@ describe('<Table />', () => {
     expect(
       table
         .find('select[data-test-id="pagination-to-page-dropdown"]')
-        .childAt(1)
+        .childAt(0)
         .text(),
     ).toBe('Show 4');
     expect(
       table
         .find('select[data-test-id="pagination-to-page-dropdown"]')
-        .childAt(2)
+        .childAt(1)
         .text(),
     ).toBe('Show 8');
     expect(
       table
         .find('select[data-test-id="pagination-to-page-dropdown"]')
-        .childAt(3)
+        .childAt(2)
         .text(),
     ).toBe('Show 10');
   });
