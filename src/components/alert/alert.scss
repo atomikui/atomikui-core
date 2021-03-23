@@ -12,7 +12,10 @@
 
   &__body {
     flex: 1;
-    padding: rem(0 16);
+  }
+
+  &__icon {
+    margin-right: rem(16);
   }
 
   .atomikui-btn.atomikui-alert__btn {

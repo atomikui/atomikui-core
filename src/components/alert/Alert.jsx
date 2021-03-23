@@ -16,6 +16,7 @@ const Alert = ({
   align,
   className,
   children,
+  hideIcon,
   icon,
   theme,
   onClose,
@@ -40,8 +41,10 @@ const Alert = ({
       aria-atomic="true"
       {...others}
     >
-      {icon || (
+      {icon && <div className="atomikui-alert__icon">{icon}</div>}
+      {!hideIcon && !icon && (
         <Icon
+          className="atomikui-alert__icon"
           data-test-id={`icon-${theme}`}
           id={`icon-${shortid.generate()}`}
           icon={!theme ? icons.info : icons[theme]}
@@ -76,6 +79,8 @@ Alert.propTypes = {
   align: PropTypes.oneOf(['middle', 'bottom']),
   /** Specifies custom component classes. */
   className: PropTypes.string,
+  /** Hides the default alert icon */
+  hideIcon: PropTypes.bool,
   /** A custom icon to be displayed to the left of the alert body text */
   icon: PropTypes.node,
   /** onClose Callback */
@@ -89,6 +94,7 @@ Alert.propTypes = {
 Alert.defaultProps = {
   align: null,
   className: '',
+  hideIcon: false,
   icon: null,
   onClose: null,
   children: null,

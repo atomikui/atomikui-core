@@ -30,10 +30,13 @@ describe('<Alert />', () => {
 
   it('Should render the appropriate aria-live attribute value', () => {
     expect(alert.prop('aria-live')).toBe('polite');
-
     alert.setProps({ theme: 'error' });
-
     expect(alert.prop('aria-live')).toBe('assertive');
+  });
+
+  it('Should render a custom icon', () => {
+    alert.setProps({ icon: <svg data-test-id="custom-alert-icon" /> });
+    expect(alert.find('[data-test-id="custom-alert-icon"]')).toHaveLength(1);
   });
 
   test.each(['success', 'error', 'warning', 'info'])(
