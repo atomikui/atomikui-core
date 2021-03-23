@@ -1,5 +1,22 @@
 <br />
 
+### [v0.14.0](https://github.com/atomikui/atomikui-core/compare/v0.13.5...v0.14.0) - 2021-03-23
+
+#### Merged
+
+- Pop Confirm - Adds focus trap [`#90`](https://github.com/atomikui/atomikui-core/pull/90)
+- Modal - fixes event bubble issue from overlay click event [`#89`](https://github.com/atomikui/atomikui-core/pull/89)
+- Header - removes nav link uppercase text-transform rule [`#87`](https://github.com/atomikui/atomikui-core/pull/87)
+- Overlay - Adds blur [`#86`](https://github.com/atomikui/atomikui-core/pull/86)
+- Avatar - removes label uppercase text-transform rule [`#85`](https://github.com/atomikui/atomikui-core/pull/85)
+- Adds default option prop [`#84`](https://github.com/atomikui/atomikui-core/pull/84)
+
+#### Commits
+
+- Bumps version and update changelog [`732a60c`](https://github.com/atomikui/atomikui-core/commit/732a60cbdc41ef3652e410c3b04640cb56595d19)
+
+<hr />
+
 ### [v0.13.5](https://github.com/atomikui/atomikui-core/compare/v0.13.4...v0.13.5) - 2021-03-04
 
 #### Merged
