@@ -2,7 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import FocusTrap from 'focus-trap-react';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Overlay from '../overlay';
+import Button from '../button';
 
 const Drawer = ({
   children,
@@ -41,7 +44,9 @@ const Drawer = ({
   return (
     <>
       <Overlay isActive={isOpen} onClick={onClose} />
-      <Wrapper>
+      <Wrapper
+        {...(isOpen && { focusTrapOptions: { clickOutsideDeactivates: true } })}
+      >
         <div
           role="presentation"
           ref={ref}
@@ -55,6 +60,13 @@ const Drawer = ({
           {...others}
         >
           {children}
+          <Button
+            aria-label="close drawer"
+            className="atomikui-drawer__close-btn"
+            onClick={onClose}
+          >
+            <Icon icon={faTimes} color="white" />
+          </Button>
         </div>
       </Wrapper>
     </>
