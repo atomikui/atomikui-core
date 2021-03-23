@@ -64,6 +64,6 @@ div[class^='rsg--sidebar'] {
     > [class^='rsg--link'] {
     display: block;
     font-weight: $font-bold;
-    text-transform: uppercase;
+    font-size: rem(17);
   }
 }
