@@ -7,7 +7,7 @@
   flex-direction: column;
   margin: rem(16);
   max-height: calc(100% - 32px);
-  position: relative;
+  position: absolute;
 
   &__header {
     align-items: center;

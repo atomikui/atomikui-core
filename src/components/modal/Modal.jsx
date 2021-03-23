@@ -27,6 +27,12 @@ const Modal = ({
     }
   };
 
+  const handleOverlayclick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
     <Portal container={document.body}>
       <Overlay
@@ -35,12 +41,17 @@ const Modal = ({
         classes={classnames({
           'overlay--transparent': noOverlay,
         })}
-        onClick={!disableOverlayclick ? onClose : null}
-        onKeyDown={!disableEscapKey ? handleKeyDown : null}
+        {...(!disableOverlayclick && { onClick: handleOverlayclick })}
+        {...(!disableEscapKey && { onKeyDown: handleKeyDown })}
         {...others}
       >
         {isOpen ? (
-          <FocusTrap>
+          <FocusTrap
+            focusTrapOptions={{
+              clickOutsideDeactivates: !disableOverlayclick,
+              escapeDeactivates: !disableEscapKey,
+            }}
+          >
             <div
               data-test-id="modal"
               className={classnames('atomikui-modal', className, {
