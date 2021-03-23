@@ -7,6 +7,7 @@ const Overlay = ({
   allowBodyScroll,
   children,
   className,
+  blur,
   isActive,
   theme,
   ...others
@@ -32,6 +33,7 @@ const Overlay = ({
         [`atomikui-overlay--align-${align}`]: align,
         'is-active': isActive,
       })}
+      style={{ backdropFilter: `blur(${blur}px)` }}
       {...others}
     >
       {Children.map(children, (child) =>
@@ -50,6 +52,8 @@ Overlay.propTypes = {
   allowBodyScroll: PropTypes.bool,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Number speifying the blur of the overlay backdrop */
+  blur: PropTypes.number,
   /** Overlay content */
   children: PropTypes.node,
   /** Specifies if overlay is active */
@@ -62,6 +66,7 @@ Overlay.defaultProps = {
   align: null,
   allowBodyScroll: false,
   className: '',
+  blur: 0,
   children: null,
   isActive: false,
   theme: null,
