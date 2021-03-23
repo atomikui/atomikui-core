@@ -1,5 +1,18 @@
 <br />
 
+### [v0.15.0](https://github.com/atomikui/atomikui-core/compare/v0.14.0...v0.15.0) - 2021-03-23
+
+#### Merged
+
+- Issue 91 alert optional icon [`#94`](https://github.com/atomikui/atomikui-core/pull/94)
+- Overlay - adds close button [`#93`](https://github.com/atomikui/atomikui-core/pull/93)
+
+#### Commits
+
+- Bumps version and update changelog [`e2e600b`](https://github.com/atomikui/atomikui-core/commit/e2e600b2273038265811a496052ecbd822bbb112)
+
+<hr />
+
 ### [v0.14.0](https://github.com/atomikui/atomikui-core/compare/v0.13.5...v0.14.0) - 2021-03-23
 
 #### Merged
