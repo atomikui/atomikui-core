@@ -1,6 +1,7 @@
 .atomikui-user-persona {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  line-height: 1.3;
 
   & > * + * {
     margin-left: rem(12);
@@ -44,5 +45,19 @@
 
   &__status-message {
     font-size: rem(14);
+  }
+
+  &--sm {
+    .atomikui-user-persona__user-name {
+      font-size: rem(14);
+    }
+
+    .atomikui-user-persona__status-message {
+      font-size: rem(13);
+    }
+  }
+
+  &--lg {
+    line-height: inherit;
   }
 }
