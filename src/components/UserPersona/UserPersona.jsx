@@ -4,7 +4,15 @@ import classnames from 'classnames';
 import Avatar from '../avatar';
 import initialsFromName from '../../utilities/initialsFromName';
 
-const UserPersona = ({ avatar, name, size, status, statusMessage, theme }) => (
+const UserPersona = ({
+  avatar,
+  avatarOnly,
+  name,
+  size,
+  status,
+  statusMessage,
+  theme,
+}) => (
   <div
     className={classnames('atomikui-user-persona', {
       [`atomikui-user-persona--${size}`]: size,
@@ -20,23 +28,27 @@ const UserPersona = ({ avatar, name, size, status, statusMessage, theme }) => (
         })}
       />
     </div>
-    <div>
-      <div className="atomikui-user-persona__user-name">{name}</div>
-      <div
-        data-test-id="user-persona-status-message"
-        className="atomikui-user-persona__status-message"
-      >
-        {statusMessage || status}
+    {!avatarOnly && (
+      <div>
+        <div className="atomikui-user-persona__user-name">{name}</div>
+        <div
+          data-test-id="user-persona-status-message"
+          className="atomikui-user-persona__status-message"
+        >
+          {statusMessage || status}
+        </div>
       </div>
-    </div>
+    )}
   </div>
 );
 
 UserPersona.propTypes = {
   /** User image URL */
   avatar: PropTypes.string,
+  /** Displays only the user avatar */
+  avatarOnly: PropTypes.bool,
   /** User name */
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   /** Specifies the size */
   size: PropTypes.oneOf(['sm', 'lg']),
   /** User status */
@@ -72,7 +84,7 @@ UserPersona.propTypes = {
 
 UserPersona.defaultProps = {
   avatar: '',
-  name: '',
+  avatarOnly: false,
   size: null,
   status: 'offline',
   statusMessage: '',

@@ -11,6 +11,33 @@ import { UserPersona } from '@atomikui/core';
 />;
 ```
 
+### With Initials
+
+```jsx
+import { UserPersona } from '@atomikui/core';
+
+<UserPersona
+  theme="blue-gray"
+  name="Bob Smith"
+  status="available"
+  statusMessage="I'm available until 11:30am"
+/>;
+```
+
+### Avatar Only
+
+```jsx
+import { UserPersona } from '@atomikui/core';
+
+<UserPersona
+  avatar="bob.png"
+  name="Bob Smith"
+  status="available"
+  statusMessage="I'm available until 11:30am"
+  avatarOnly
+/>;
+```
+
 ### Status
 
 ```jsx
