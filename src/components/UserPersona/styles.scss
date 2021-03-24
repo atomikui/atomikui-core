@@ -1,0 +1,78 @@
+.atomikui-user-persona {
+  align-items: center;
+  display: flex;
+  line-height: 1.3;
+
+  & > * + * {
+    margin-left: rem(12);
+  }
+
+  &__avatar {
+    align-items: center;
+    display: flex;
+    position: relative;
+  }
+
+  &__status-icon {
+    border-radius: 50%;
+    bottom: rem(0);
+    box-shadow: 0 0 0 rem(2) $white;
+    height: rem(10);
+    position: absolute;
+    right: rem(0);
+    width: rem(10);
+
+    &.is-available {
+      background: $light-green-600;
+    }
+
+    &.is-away {
+      background: $yellow-700;
+    }
+
+    &.is-offline {
+      background: $blue-gray-200;
+    }
+
+    &.is-busy {
+      background: $red-500;
+    }
+  }
+
+  &__user-name {
+    font-weight: $font-semibold;
+  }
+
+  &__status-message {
+    font-size: rem(14);
+  }
+
+  &--sm {
+    line-height: 1.2;
+
+    .atomikui-user-persona__user-name {
+      font-size: rem(14);
+    }
+
+    .atomikui-user-persona__status-message {
+      font-size: rem(13);
+    }
+
+    .atomikui-user-persona__status-icon {
+      box-shadow: 0 0 0 rem(1.5) $white;
+      height: rem(8);
+      width: rem(8);
+      right: rem(-1);
+      bottom: rem(-1);
+    }
+  }
+
+  &--lg {
+    line-height: inherit;
+
+    .atomikui-user-persona__status-icon {
+      height: rem(14);
+      width: rem(14);
+    }
+  }
+}

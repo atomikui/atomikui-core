@@ -58,6 +58,7 @@ export { default as Tag } from './components/tag';
 export { default as TimePicker } from './components/time-picker';
 export { default as Tooltip } from './components/tooltip';
 export { default as Truncate } from './components/truncate';
+export { default as UserPersona } from './components/UserPersona';
 export { withToastProvider, useToast } from './components/toaster';
 export { default as Wallet } from './components/wallet';
 export { default as WalletItem } from './components/wallet-item';

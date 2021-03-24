@@ -18,5 +18,6 @@ module.exports = {
     'src/components/tab/Tab.jsx',
     'src/components/tag/Tag.jsx',
     'src/components/truncate/Truncate.jsx',
+    'src/components/UserPersona/UserPersona.jsx',
   ],
 };
