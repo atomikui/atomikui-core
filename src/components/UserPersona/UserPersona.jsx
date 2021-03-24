@@ -30,7 +30,7 @@ const UserPersona = ({ avatar, name, size, status, statusMessage, theme }) => (
     <div>
       <div className="atomikui-user-persona__user-name">{name}</div>
       <div className="atomikui-user-persona__status-message">
-        {statusMessage}
+        {statusMessage || status}
       </div>
     </div>
   </div>
