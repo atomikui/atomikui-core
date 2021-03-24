@@ -88,7 +88,7 @@ UserPersona.defaultProps = {
   size: null,
   status: 'offline',
   statusMessage: '',
-  theme: null,
+  theme: 'blue-gray',
 };
 
 export default UserPersona;

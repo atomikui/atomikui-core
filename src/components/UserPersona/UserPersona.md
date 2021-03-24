@@ -17,7 +17,6 @@ import { UserPersona } from '@atomikui/core';
 import { UserPersona } from '@atomikui/core';
 
 <UserPersona
-  theme="blue-gray"
   name="Bob Smith"
   status="available"
   statusMessage="I'm available until 11:30am"
