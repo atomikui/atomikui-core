@@ -1,5 +1,19 @@
 <br />
 
+### [v0.16.0](https://github.com/atomikui/atomikui-core/compare/v0.15.0...v0.16.0) - 2021-03-24
+
+#### Merged
+
+- Issue 95 user persona component [`#97`](https://github.com/atomikui/atomikui-core/pull/97)
+
+#### Commits
+
+- UserPersona - Adds avatarOnly prop [`a1c1019`](https://github.com/atomikui/atomikui-core/commit/a1c10197a3e251faddc788867df624edc0f85cef)
+- Bumps version and update changelog [`1326ad1`](https://github.com/atomikui/atomikui-core/commit/1326ad1624f9aad2d304442d5bf01c057dde1516)
+- UserPersona - Updates default theme [`0a9946b`](https://github.com/atomikui/atomikui-core/commit/0a9946b5193b7732b36f18ae2ee1945f5539da25)
+
+<hr />
+
 ### [v0.15.0](https://github.com/atomikui/atomikui-core/compare/v0.14.0...v0.15.0) - 2021-03-23
 
 #### Merged
