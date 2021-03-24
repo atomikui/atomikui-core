@@ -2,14 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Avatar from '../avatar';
-
-const intials = (name) => {
-  const parts = name.split(' ');
-  if (parts.length === 3) {
-    parts.splice(1, 1);
-  }
-  return (parts[0].charAt(0) + parts[1].charAt(0)).toUpperCase();
-};
+import initialsFromName from '../../utilities/initialsFromName';
 
 const UserPersona = ({ avatar, name, size, status, statusMessage, theme }) => (
   <div
@@ -19,7 +12,7 @@ const UserPersona = ({ avatar, name, size, status, statusMessage, theme }) => (
   >
     <div className="atomikui-user-persona__avatar">
       <Avatar size={size} theme={theme} src={avatar}>
-        {!avatar && name && intials(name)}
+        {!avatar && name && initialsFromName(name)}
       </Avatar>
       <span
         className={classnames('atomikui-user-persona__status-icon', {
@@ -29,7 +22,10 @@ const UserPersona = ({ avatar, name, size, status, statusMessage, theme }) => (
     </div>
     <div>
       <div className="atomikui-user-persona__user-name">{name}</div>
-      <div className="atomikui-user-persona__status-message">
+      <div
+        data-test-id="user-persona-status-message"
+        className="atomikui-user-persona__status-message"
+      >
         {statusMessage || status}
       </div>
     </div>
