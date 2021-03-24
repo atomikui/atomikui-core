@@ -1,0 +1,48 @@
+.atomikui-user-persona {
+  display: inline-flex;
+  align-items: center;
+
+  & > * + * {
+    margin-left: rem(12);
+  }
+
+  &__avatar {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__status-icon {
+    box-shadow: 0 0 0 rem(2) $white;
+    border-radius: 50%;
+    width: rem(10);
+    height: rem(10);
+    position: absolute;
+    bottom: rem(0);
+    right: rem(0);
+
+    &.is-available {
+      background: $light-green-600;
+    }
+
+    &.is-away {
+      background: $yellow-700;
+    }
+
+    &.is-offline {
+      background: $blue-gray-200;
+    }
+
+    &.is-busy {
+      background: $red-500;
+    }
+  }
+
+  &__user-name {
+    font-weight: $font-semibold;
+  }
+
+  &__status-message {
+    font-size: rem(14);
+  }
+}
