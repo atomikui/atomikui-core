@@ -37,6 +37,6 @@ const updateCart = (quantity, id) => {
 </>;
 ```
 
-### API
+#### Used With:
 
 [`<CartItem />`](/styleguide/#/Informational/CartItem)

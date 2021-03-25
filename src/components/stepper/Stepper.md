@@ -63,6 +63,6 @@ import { Stepper, Step } from '@atomikui/core';
 </Stepper>;
 ```
 
-#### API
+##### Used With:
 
 [`<Step />`](/styleguide/#/Navigation/Step)

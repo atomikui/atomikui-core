@@ -114,7 +114,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 </>;
 ```
 
-### API
+#### Used With:
 
 [`<Tab />`](/styleguide/#/Content/Tab)<br />
 [`<TabPanel />`](/styleguide/#/Content/TabPanel)

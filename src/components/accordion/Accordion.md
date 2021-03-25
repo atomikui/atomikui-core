@@ -84,6 +84,6 @@ import { Accordion, AccordionItem } from '@atomikui/core';
 </Accordion>;
 ```
 
-### API
+#### Used With:
 
 [`<AccordionItem />`](/styleguide/#/Content/AccordionItem)

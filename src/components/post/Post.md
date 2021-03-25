@@ -43,6 +43,6 @@ import { Post, Comment } from '@atomikui/core';
 </Post>;
 ```
 
-### API
+#### Used With:
 
 [`<Comment />`](/styleguide/#/Content/Comment)
