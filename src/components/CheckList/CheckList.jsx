@@ -9,9 +9,10 @@ import Button from '../button';
 
 const CheckList = ({ items, onCheck, ...others }) => (
   <List className="atomikui-checklist" loose {...others}>
-    {items.map(({ description, isChecked }, index) => (
-      <ListItem key={`item-${index + 1}`}>
+    {items.map(({ id, description, isChecked }) => (
+      <ListItem key={`item-${id}`}>
         <Button
+          onClick={() => onCheck({ id, isChecked: !isChecked })}
           className={classnames('atomikui-checklist__item', {
             'is-checked': isChecked,
           })}
@@ -28,6 +29,7 @@ CheckList.propTypes = {
   /** Items to be rendered as check list */
   items: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number,
       description: PropTypes.string,
       isChecked: PropTypes.bool,
     }),
