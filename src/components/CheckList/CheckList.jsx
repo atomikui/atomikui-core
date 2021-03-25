@@ -8,11 +8,16 @@ import ListItem from '../list-item';
 import Button from '../button';
 
 const CheckList = ({ items, onCheck, ...others }) => (
-  <List className="atomikui-checklist" loose {...others}>
-    {items.map(({ id, description, isChecked }) => (
-      <ListItem key={`item-${id}`}>
+  <List
+    data-test-id="check-list"
+    className="atomikui-checklist"
+    loose
+    {...others}
+  >
+    {items.map(({ id, description, isChecked }, index) => (
+      <ListItem key={`item-${index + 1}`}>
         <Button
-          onClick={() => onCheck({ id, isChecked: !isChecked })}
+          onClick={() => onCheck({ id, index, isChecked: !isChecked })}
           className={classnames('atomikui-checklist__item', {
             'is-checked': isChecked,
           })}
@@ -29,9 +34,12 @@ CheckList.propTypes = {
   /** Items to be rendered as check list */
   items: PropTypes.arrayOf(
     PropTypes.shape({
+      /** Optional identifier. If no ID is specified, the item's index is used as a fallback */
       id: PropTypes.number,
-      description: PropTypes.string,
-      isChecked: PropTypes.bool,
+      /** Item description */
+      description: PropTypes.string.isRequired,
+      /** Item checked state */
+      isChecked: PropTypes.bool.isRequired,
     }),
   ).isRequired,
   /** Callback triggered when item is updated */

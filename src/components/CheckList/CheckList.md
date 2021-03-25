@@ -1,4 +1,8 @@
-The CheckList component displays a list of items that can be checked.
+The CheckList component displays a list of items that can be checked. This is a stateless component, so it relies on the external state to render it.
+
+The example below demonstrates how to utilize the React useReducer hook to manage the component's state.
+
+<br />
 
 ```jsx
 const { useReducer } = React;
@@ -18,8 +22,9 @@ const checkListReducer = (state, action) => {
     case 'UPDATE_ITEM':
       return {
         ...state,
-        items: state.items.map((item) =>
-          item.id === action.payload.id
+        items: state.items.map((item, index) =>
+          (item.id && item.id === action.payload.id) ||
+          action.payload.index === index
             ? { ...item, isChecked: action.payload.isChecked }
             : item,
         ),

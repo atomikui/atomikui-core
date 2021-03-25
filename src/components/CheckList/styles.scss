@@ -7,8 +7,9 @@
     padding: rem(8);
     width: 100%;
 
-    &:hover {
-      background: darken($blue-gray-50, 4%);
+    &:hover,
+    &:focus {
+      background: darken($sky-blue-50, 1%);
     }
 
     & > svg {
