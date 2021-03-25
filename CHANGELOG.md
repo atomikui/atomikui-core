@@ -1,5 +1,17 @@
 <br />
 
+### [v0.17.0](https://github.com/atomikui/atomikui-core/compare/v0.16.0...v0.17.0) - 2021-03-25
+
+#### Merged
+
+- Issue 98 checklist component [`#99`](https://github.com/atomikui/atomikui-core/pull/99)
+
+#### Commits
+
+- Bumps version and update changelog [`a51d07f`](https://github.com/atomikui/atomikui-core/commit/a51d07fb5495ab09b241a77e9e87052bfc645c31)
+
+<hr />
+
 ### [v0.16.0](https://github.com/atomikui/atomikui-core/compare/v0.15.0...v0.16.0) - 2021-03-24
 
 #### Merged
