@@ -1,6 +1,6 @@
 Vertical and horizontal rhythm can be achieved with margin and padding utility classes
 
-### Margin and Padding Utilities
+<br />
 
 ```jsx noeditor
 import shortid from 'shortid';
@@ -72,37 +72,40 @@ const Column = ({ children, className, transparent, ...props }) => {
   );
 };
 
-<Grid>
-  {units.map((unit) => {
-    return (
-      <Row key={shortid.generate()}>
-        <Column md={5} className={`margin-top-${unit}`}>
-          .margin-top-{unit} / .padding-top-{unit}
-        </Column>
-        <Column md={2} transparent>
-          {unit}px
-        </Column>
-        <Column md={5} className={`margin-bottom-${unit}`}>
-          .margin-bottom-{unit} / .padding-bottom-{unit}
-        </Column>
-      </Row>
-    );
-  })}
-  <div style={styles.divider}></div>
-  {units.map((unit) => {
-    return (
-      <Row key={shortid.generate()}>
-        <Column md={5} className={`margin-right-${unit}`}>
-          .margin-right-{unit} / .padding-right-{unit}
-        </Column>
-        <Column md={2} transparent>
-          {unit}px
-        </Column>
-        <Column md={5} className={`margin-left-${unit}`}>
-          .margin-left-{unit} / .padding-left-{unit}
-        </Column>
-      </Row>
-    );
-  })}
-</Grid>;
+<>
+  <Grid>
+    <h3 className="text-size-24 margin-bottom-16">Margin Utility Classes</h3>
+    {units.map((unit) => {
+      return (
+        <Row key={shortid.generate()}>
+          <Column md={5} className={`margin-top-${unit}`}>
+            .margin-top-{unit} / .padding-top-{unit}
+          </Column>
+          <Column md={2} transparent>
+            {unit}px
+          </Column>
+          <Column md={5} className={`margin-bottom-${unit}`}>
+            .margin-bottom-{unit} / .padding-bottom-{unit}
+          </Column>
+        </Row>
+      );
+    })}
+    <h3 className="text-size-24 margin-bottom-16">Padding Utility Classes</h3>
+    {units.map((unit) => {
+      return (
+        <Row key={shortid.generate()}>
+          <Column md={5} className={`margin-right-${unit}`}>
+            .margin-right-{unit} / .padding-right-{unit}
+          </Column>
+          <Column md={2} transparent>
+            {unit}px
+          </Column>
+          <Column md={5} className={`margin-left-${unit}`}>
+            .margin-left-{unit} / .padding-left-{unit}
+          </Column>
+        </Row>
+      );
+    })}
+  </Grid>
+</>;
 ```
