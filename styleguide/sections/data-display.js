@@ -4,11 +4,10 @@ module.exports = {
   usageMode: 'expand',
   exampleMode: 'expand',
   sectionDepth: 6,
-  components: () => {
-    return [
-      'src/components/list/List.jsx',
-      'src/components/list-item/ListItem.jsx',
-      'src/components/table/Table.jsx',
-    ];
-  },
+  components: () => [
+    'src/components/CheckList/CheckList.jsx',
+    'src/components/list/List.jsx',
+    'src/components/list-item/ListItem.jsx',
+    'src/components/table/Table.jsx',
+  ],
 };

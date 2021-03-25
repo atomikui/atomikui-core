@@ -1,0 +1,31 @@
+.atomikui-checklist {
+  &__item {
+    align-items: center;
+    background: $blue-gray-50;
+    cursor: pointer;
+    display: flex;
+    padding: rem(8);
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      background: darken($sky-blue-50, 1%);
+    }
+
+    & > svg {
+      margin-right: rem(12);
+
+      & > path {
+        fill: $blue-gray-300;
+      }
+    }
+
+    &.is-checked {
+      & > svg {
+        & > path {
+          fill: $light-green-700;
+        }
+      }
+    }
+  }
+}
