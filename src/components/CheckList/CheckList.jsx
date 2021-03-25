@@ -42,7 +42,7 @@ CheckList.propTypes = {
       isChecked: PropTypes.bool.isRequired,
     }),
   ).isRequired,
-  /** Callback triggered when item is updated */
+  /** Callback triggered when item is clicked */
   onCheck: PropTypes.func.isRequired,
 };
 
