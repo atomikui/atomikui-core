@@ -13,13 +13,12 @@ const styles = {
   },
   box: {
     padding: '12px',
-    background: '#1565c0',
-    color: 'white',
+    background: '#eceff1',
     textAlign: 'center',
     fontSize: '15px',
   },
   boxWrapper: {
-    background: '#ff8400',
+    background: '#00acc1',
     display: 'flex',
     flexDirection: 'column',
   },
