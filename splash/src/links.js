@@ -27,11 +27,12 @@ export default {
       'Tab',
       'Tag',
       'Truncate',
+      'UserPersona',
     ],
   ],
   'Data Display': [
     'Data display components are used to format and display data in an organized format.',
-    ['List', 'ListItem', 'Table'],
+    ['CheckList', 'List', 'ListItem', 'Table'],
   ],
   DOM: [
     "DOM components are used to interact with elements on the page outside of the current component's scope.",

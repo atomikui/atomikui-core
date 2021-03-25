@@ -15,3 +15,4 @@ Content components are used to control how content is formatted and displayed.
 - [Tab](/styleguide/#/Content/Tab)
 - [Tag](/styleguide/#/Content/Tag)
 - [Truncate](/styleguide/#/Content/Truncate)
+- [UserPersona](/styleguide/#/Content/UserPersona)
