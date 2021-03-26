@@ -91,6 +91,6 @@ import { List, ListItem } from '@atomikui/core';
 </>;
 ```
 
-##### Used With:
+### Requires:
 
 [`<ListItem />`](/styleguide/#/Data%20Display/ListItem)

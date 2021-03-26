@@ -40,6 +40,6 @@ const replies = [
 </>;
 ```
 
-### Usage
+### Used With:
 
 [`<Post />`](/styleguide/#/Content/Post)

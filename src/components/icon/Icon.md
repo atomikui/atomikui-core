@@ -2,7 +2,7 @@ Atomik UI comes with the <a href="https://fontawesome.com/icons?d=gallery&m=free
 
 Below demonstrates how to get started with Font Awesome icons.
 
-### Usage
+### Used With:
 
 Install and import the Font Awesome dependencies and the icons that you'd like to use.
 

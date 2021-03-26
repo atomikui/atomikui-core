@@ -114,7 +114,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 </>;
 ```
 
-#### Used With:
+### Requires:
 
 [`<Tab />`](/styleguide/#/Content/Tab)<br />
 [`<TabPanel />`](/styleguide/#/Content/TabPanel)

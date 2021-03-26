@@ -66,6 +66,6 @@ import { faPiggyBank } from '@fortawesome/free-solid-svg-icons';
 />;
 ```
 
-### Usage
+### Used With:
 
 [`<Wallet />`](/styleguide/#/Payment%20Wallet/Wallet)

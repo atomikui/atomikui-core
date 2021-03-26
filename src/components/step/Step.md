@@ -16,6 +16,6 @@ import { Step } from '@atomikui/core';
 </>;
 ```
 
-### Usage
+### Used With:
 
 [`<Stepper />`](/styleguide/#/Navigation/Stepper)

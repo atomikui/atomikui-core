@@ -15,6 +15,6 @@ import { AccordionItem } from '@atomikui/core';
 </AccordionItem>;
 ```
 
-### Usage
+### Used With:
 
 [`<Accordion />`](/styleguide/#/Content/Accordion)

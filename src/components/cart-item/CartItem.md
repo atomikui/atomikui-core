@@ -12,6 +12,6 @@ import { CartItem } from '@atomikui/core';
 />;
 ```
 
-### Usage
+### Used With:
 
 [`<Cart />`](/styleguide/#/Informational/Cart)

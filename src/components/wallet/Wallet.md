@@ -70,6 +70,6 @@ import { Wallet, WalletItem } from '@atomikui/core';
 </Wallet>;
 ```
 
-#### Used With:
+### Requires:
 
 [`<WalletItem />`](/styleguide/#/Payment%20Wallet/WalletItem)
