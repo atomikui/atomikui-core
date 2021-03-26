@@ -21,6 +21,12 @@ module.exports = {
     './styleguide/styles/main.scss',
     './scripts/app.js',
   ],
+  styleguideComponents: {
+    ReactComponentRenderer: path.join(
+      __dirname,
+      'styleguide/components/ReactComponentRenderer',
+    ),
+  },
   template: {
     favicon: 'favicon.ico',
     head: {
