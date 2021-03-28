@@ -1,5 +1,5 @@
 [data-preview='UserPersona'] > * {
-  & > * {
-    margin-bottom: rem(18);
+  & > * + * {
+    margin-top: rem(18);
   }
 }
