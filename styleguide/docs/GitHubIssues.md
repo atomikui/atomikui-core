@@ -1,6 +1,14 @@
 ```jsx noeditor
 import { useEffect, useState } from 'react';
-import { List, ListItem, Link, Badge, Tag, Avatar } from '@atomikui/core';
+import {
+  List,
+  ListItem,
+  Link,
+  Badge,
+  Tag,
+  Avatar,
+  Spinner,
+} from '@atomikui/core';
 
 const GitBubIssues = () => {
   const [issues, setIssues] = useState([]);
@@ -10,6 +18,15 @@ const GitBubIssues = () => {
       .then((res) => res.json())
       .then((data) => setIssues(data));
   }, []);
+
+  if (issues.length === 0) {
+    return (
+      <div className="flex flex--align-middle flex--hr-8">
+        <Spinner theme="blue" />
+        <span>Loading GitHub issues....</span>
+      </div>
+    );
+  }
 
   return (
     <List className="gh-issues-list">
