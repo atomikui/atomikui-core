@@ -12,12 +12,11 @@ import {
 } from '@atomikui/core';
 
 const GitBubIssues = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
   const [issues, setIssues] = useState([]);
 
   useEffect(() => {
-    setIsLoading(true);
     fetch('https://api.github.com/repos/atomikui/atomikui-core/issues')
       .then((res) => res.json())
       .then((data) => {
@@ -40,14 +39,14 @@ const GitBubIssues = () => {
 
   if (isLoading) {
     return (
-      <div className="flex flex--align-middle flex--hr-8">
+      <div className="margin-top-32 flex flex--align-middle flex--hr-8">
         <Spinner theme="blue" />
         <span>Loading GitHub issues....</span>
       </div>
     );
   }
 
-  if (issues.length === 0) {
+  if (!isLoading && issues.length === 0) {
     return <div className="margin-top-32">There are no open issues.</div>;
   }
 
