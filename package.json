@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "prerelease": "yarn test:unit && yarn test:accessibility",
+    "preversion": "yarn test:unit && yarn test:accessibility",
     "release:major": "npm version major && yarn changelog && yarn build && yarn commit-build && yarn deploy-styleguide",
     "release:minor": "npm version minor && yarn changelog && yarn build && yarn commit-build && yarn deploy-styleguide",
     "release:patch": "npm version patch && yarn changelog && yarn build && yarn commit-build && yarn deploy-styleguide",
