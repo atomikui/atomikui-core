@@ -45,7 +45,7 @@ import { Alert } from '@atomikui/core';
 ```jsx
 import { Alert, Spinner } from '@atomikui/core';
 
-<Alert theme="dark" align="middle" icon={<Spinner theme="blue" />}>
+<Alert theme="dark" align="middle" icon={<Spinner theme="cyan" />}>
   Please wait while we load your content
 </Alert>;
 ```
