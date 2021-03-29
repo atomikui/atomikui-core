@@ -1,5 +1,19 @@
 <br />
 
+### [v0.18.0](https://github.com/atomikui/atomikui-core/compare/v0.17.0...v0.18.0) - 2021-03-29
+
+#### Merged
+
+- ChatWindow - Add UserPersona [`#100`](https://github.com/atomikui/atomikui-core/pull/100)
+
+#### Commits
+
+- Creates custom ReactComponentRenderer [`682c36b`](https://github.com/atomikui/atomikui-core/commit/682c36ba527f561cea8724bbbfb3cb93bf3b84cc)
+- Update Spacing.md [`5b9fb7b`](https://github.com/atomikui/atomikui-core/commit/5b9fb7bc88013706b48e6ed5ab371fdcd753aa3a)
+- Documentation content updates [`6e8f37b`](https://github.com/atomikui/atomikui-core/commit/6e8f37b796b1003ef3b8725b3179dfc2dffefcf5)
+
+<hr />
+
 ### [v0.17.0](https://github.com/atomikui/atomikui-core/compare/v0.16.0...v0.17.0) - 2021-03-25
 
 #### Merged
