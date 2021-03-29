@@ -47,6 +47,10 @@ const GitBubIssues = () => {
     );
   }
 
+  if (issues.length === 0) {
+    return <div className="margin-top-32">There are no open issues.</div>;
+  }
+
   return (
     <List className="gh-issues-list">
       {issues.map(
