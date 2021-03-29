@@ -11,6 +11,19 @@ import {
   Alert,
 } from '@atomikui/core';
 
+const setTagFontColor = (color) => {
+  const colors = {
+    bug: 'white',
+    documentation: 'clack',
+    enhancement: 'black',
+    feature: 'white',
+    maintenance: 'white',
+    refactor: 'white',
+  };
+
+  return colors[color.toLowerCase()];
+};
+
 const GitBubIssues = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -91,7 +104,7 @@ const GitBubIssues = () => {
                       shape="pill"
                       style={{
                         background: `#${color}`,
-                        color: isDefault ? 'black' : 'white',
+                        color: setTagFontColor(name),
                       }}
                     >
                       {name}
