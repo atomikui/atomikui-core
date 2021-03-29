@@ -18,8 +18,9 @@ const Alert = ({
   children,
   hideIcon,
   icon,
-  theme,
   onClose,
+  theme,
+  variant,
   ...others
 }) => {
   const icons = {
@@ -35,6 +36,8 @@ const Alert = ({
       className={classnames('atomikui-alert', className, {
         [`atomikui-alert--${theme}`]: theme,
         [`atomikui-alert--${align}`]: align,
+        'is-solid': variant === 'solid',
+        'is-bordered': variant === 'bordered',
       })}
       role="alert"
       aria-live={theme === 'error' ? 'assertive' : 'polite'}
@@ -49,7 +52,6 @@ const Alert = ({
           id={`icon-${shortid.generate()}`}
           icon={!theme ? icons.info : icons[theme]}
           size="lg"
-          color={!theme ? '#027abf' : 'white'}
         />
       )}
       <div className="atomikui-alert__body">{children}</div>
@@ -89,6 +91,8 @@ Alert.propTypes = {
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Specifies the  theme variation. */
   theme: PropTypes.oneOf(['dark', 'info', 'warning', 'error', 'success']),
+  /** Alert bariant */
+  variant: PropTypes.oneOf(['bordered', 'solid']),
 };
 
 Alert.defaultProps = {
@@ -99,6 +103,7 @@ Alert.defaultProps = {
   onClose: null,
   children: null,
   theme: null,
+  variant: 'solid',
 };
 
 export default Alert;

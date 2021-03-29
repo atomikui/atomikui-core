@@ -1,6 +1,6 @@
 .atomikui-alert {
   align-items: top;
-  background: $blue-100;
+  background: $blue-gray-50;
   border-radius: rem($border-radius);
   color: $black;
   display: flex;
@@ -9,6 +9,12 @@
   justify-content: space-between;
   padding: rem(16);
   width: 100%;
+
+  & > svg {
+    & > path {
+      fill: $blue-gray-600;
+    }
+  }
 
   &__body {
     flex: 1;
@@ -42,14 +48,35 @@
     align-items: flex-end;
   }
 
+  &.is-bordered {
+    background: transparent;
+    border: rem(2) solid $blue-gray-100;
+  }
+
   @each $name, $color in $informational-colors {
-    &--#{$name} {
+    &--#{$name}.is-solid {
       background-color: $color;
       border: 0;
       color: $white;
 
+      & > svg {
+        & > path {
+          fill: $white;
+        }
+      }
+
       @if $name == success or $name == warning {
         color: $black;
+      }
+    }
+
+    &--#{$name}.is-bordered {
+      border-color: $color;
+
+      & > svg {
+        & > path {
+          fill: $color;
+        }
       }
     }
   }
