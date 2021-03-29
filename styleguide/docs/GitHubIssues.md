@@ -8,18 +8,37 @@ import {
   Tag,
   Avatar,
   Spinner,
+  Alert,
 } from '@atomikui/core';
 
 const GitBubIssues = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [issues, setIssues] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch('https://api.github.com/repos/atomikui/atomikui-core/issues')
       .then((res) => res.json())
-      .then((data) => setIssues(data));
+      .then((data) => {
+        setIssues(data);
+        setIsLoading(false);
+      })
+      .catch(() => {
+        setIsLoading(false);
+        setError(true);
+      });
   }, []);
 
-  if (issues.length === 0) {
+  if (error) {
+    return (
+      <Alert className="margin-top-32" theme="error">
+        Could not load GitHub issues.
+      </Alert>
+    );
+  }
+
+  if (isLoading) {
     return (
       <div className="flex flex--align-middle flex--hr-8">
         <Spinner theme="blue" />
