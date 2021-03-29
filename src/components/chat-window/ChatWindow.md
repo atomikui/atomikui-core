@@ -6,9 +6,9 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faComment } from '@fortawesome/free-solid-svg-icons';
 
 const incomingMessage = {
-  sender: 'Paul Smith',
-  senderStatus: 'available',
-  senderImg: 'profile-image.png',
+  sender: 'Steve Smith',
+  senderStatus: 'busy',
+  senderImg: 'steve.png',
   messages: [
     {
       message: 'Hello there!',
