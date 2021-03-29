@@ -25,11 +25,12 @@
   },
   "license": "MIT",
   "scripts": {
+    "prerelease": "yarn test:unit && yarn test:accessibility",
     "release:major": "npm version major && yarn changelog && yarn build && yarn commit-build && yarn deploy-styleguide",
     "release:minor": "npm version minor && yarn changelog && yarn build && yarn commit-build && yarn deploy-styleguide",
     "release:patch": "npm version patch && yarn changelog && yarn build && yarn commit-build && yarn deploy-styleguide",
     "changelog": "auto-changelog --output CHANGELOG.md --template changelog.hbs",
-    "commit-build": "git commit -m \"Bumps version and update changelog\" -a && git push origin master",
+    "commit-build": "git commit -m \"Bumps version and update changelog\" -a && git push origin master --no-verify",
     "lint:js": "eslint 'src/**/*.js' --fix --ignore-pattern '*.test.js'",
     "lint:sass": "stylelint ./src/components/**/*.scss ./sass-utilities/**/*.scss --config .stylelintrc --fix",
     "test:unit": "jest --coverage --silent --config=./jest/jest.config.js",
