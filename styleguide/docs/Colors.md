@@ -1,4 +1,8 @@
+Click on a color swatch to copy its hexidecimal value to the clipboard.
+
 ```jsx noeditor
+import { withToastProvider, useToast } from '@atomikui/core';
+
 const colors = [
   ['red-50', '#ffebee'],
   ['red-100', '#ffcdd2'],
@@ -194,7 +198,9 @@ const colors = [
   ['white', '#ffffff'],
 ];
 
-const ColorChart = (props) => {
+const ColorChart = withToastProvider((props) => {
+  const toast = useToast();
+
   return (
     <>
       <h3 className="text-size-24 margin-bottom-16">{props.title}</h3>
@@ -202,12 +208,18 @@ const ColorChart = (props) => {
         {props.colors.map(([name, hex]) => (
           <div key={name} style={{ width: '20%' }}>
             <div
+              onClick={() => {
+                navigator.clipboard.writeText(hex);
+                toast.add('', `Copied ${hex} to clipboard`);
+              }}
+              title={`Copy ${hex}`}
               style={{
+                cursor: 'pointer',
                 width: '100%',
                 ...(name === 'white' && { border: '1px solid #ccc' }),
               }}
               className={`bg-color-${name} padding-16`}
-            ></div>
+            />
             <div
               className="text-align-center padding-top-4 padding-bottom-16"
               style={{ fontSize: '15px', lineHeight: 1.3 }}
@@ -222,7 +234,7 @@ const ColorChart = (props) => {
       </div>
     </>
   );
-};
+});
 
 <>
   <ColorChart colors={colors} title="Sass Color Variables & Classes" />
