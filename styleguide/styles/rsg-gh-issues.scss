@@ -1,0 +1,17 @@
+.gh-issues-list {
+  margin: rem(32 0);
+
+  & > * + * {
+    border-top: rem(1) solid $blue-gray-100;
+    margin-top: rem(40);
+    padding-top: rem(40);
+  }
+
+  &__tags {
+    display: flex;
+
+    & > * + * {
+      margin-left: rem(8);
+    }
+  }
+}

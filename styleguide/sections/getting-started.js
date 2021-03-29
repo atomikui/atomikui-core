@@ -11,5 +11,9 @@ module.exports = {
       name: 'Changelog',
       content: './CHANGELOG.md',
     },
+    {
+      name: 'GitHub Issues',
+      content: './styleguide/docs/GitHubIssues.md',
+    },
   ],
 };

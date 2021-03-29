@@ -236,7 +236,5 @@ const ColorChart = withToastProvider((props) => {
   );
 });
 
-<>
-  <ColorChart colors={colors} title="Sass Color Variables & Classes" />
-</>;
+<ColorChart colors={colors} title="Sass Color Variables & Classes" />;
 ```
