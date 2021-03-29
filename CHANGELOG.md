@@ -1,5 +1,18 @@
 <br />
 
+### [v0.19.0](https://github.com/atomikui/atomikui-core/compare/v0.18.0...v0.19.0) - 2021-03-29
+
+#### Merged
+
+- Issue 101 alert bordered variant [`#102`](https://github.com/atomikui/atomikui-core/pull/102)
+
+#### Commits
+
+- Bumps version and update changelog [`744daab`](https://github.com/atomikui/atomikui-core/commit/744daab0f8140363a5c4468c8c45a7ee2a71838f)
+- Update package.json [`8dc775d`](https://github.com/atomikui/atomikui-core/commit/8dc775d0d6f98644a74cc3e90987031ef34c3b94)
+
+<hr />
+
 ### [v0.18.0](https://github.com/atomikui/atomikui-core/compare/v0.17.0...v0.18.0) - 2021-03-29
 
 #### Merged
