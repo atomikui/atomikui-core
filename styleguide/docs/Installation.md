@@ -1,3 +1,5 @@
+<div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
+
 Adding Atomik UI to your project is simple.
 
 ### Setup

@@ -1,4 +1,4 @@
-<br />
+<div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
 ### [v0.19.0](https://github.com/atomikui/atomikui-core/compare/v0.18.0...v0.19.0) - 2021-03-29
 

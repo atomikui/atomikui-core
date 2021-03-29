@@ -108,5 +108,8 @@ const GitBubIssues = () => {
   );
 };
 
-<GitBubIssues />;
+<>
+  <div style={{ borderBottom: '.125rem solid #e1e1e1' }} />
+  <GitBubIssues />
+</>;
 ```
