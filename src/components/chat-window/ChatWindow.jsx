@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faTimes, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import ChatMessage from '../chat-message';
 import Button from '../button';
+import UserPersona from '../UserPersona';
 
 const ChatWindow = ({
   className,
@@ -73,26 +74,11 @@ const ChatWindow = ({
       >
         <div className="atomikui-chat-window__header">
           <div className="atomikui-chat-window__title">
-            {incomingSenderImg ? (
-              <img
-                className="atomikui-chat-window__avatar"
-                src={incomingSenderImg}
-                alt="Avatar"
-              />
-            ) : (
-              <Icon
-                className="atomikui-chat-window__avatar-icon"
-                icon={faUserCircle}
-                size="2x"
-                color="white"
-              />
-            )}
-            {incomingSenderName}
-            <span
-              aria-label={`Status: ${incomingSenderStatus}`}
-              className={classnames('atomikui-chat-window__sender-status', {
-                [`atomikui-chat-window__sender-status--${incomingSenderStatus}`]: incomingSenderStatus,
-              })}
+            <UserPersona
+              avatar={incomingSenderImg}
+              name={incomingSenderName}
+              status={incomingSenderStatus}
+              statusBorder="#0277bd"
             />
           </div>
           <button
@@ -170,7 +156,12 @@ ChatWindow.propTypes = {
   /** Name of incoming sender */
   incomingSenderName: PropTypes.string,
   /** Status of incoming sender */
-  incomingSenderStatus: PropTypes.oneOf(['available', 'away', 'offline']),
+  incomingSenderStatus: PropTypes.oneOf([
+    'available',
+    'away',
+    'busy',
+    'offline',
+  ]),
 };
 
 ChatWindow.defaultProps = {

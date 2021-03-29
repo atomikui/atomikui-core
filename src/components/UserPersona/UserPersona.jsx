@@ -35,7 +35,9 @@ const UserPersona = ({
           data-test-id="user-persona-status-message"
           className="atomikui-user-persona__status-message"
         >
-          {statusMessage || status}
+          {statusMessage || (
+            <span style={{ textTransform: 'capitalize' }}>{status}</span>
+          )}
         </div>
       </div>
     )}
@@ -86,7 +88,7 @@ UserPersona.defaultProps = {
   avatar: '',
   avatarOnly: false,
   size: null,
-  status: 'offline',
+  status: 'Offline',
   statusMessage: '',
   theme: 'blue-gray',
 };

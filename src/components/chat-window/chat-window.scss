@@ -30,7 +30,6 @@
   &__title {
     align-items: center;
     display: flex;
-    text-transform: uppercase;
   }
 
   &__avatar {
@@ -45,26 +44,6 @@
     height: rem(40);
     margin-right: rem(8);
     width: rem(40);
-  }
-
-  &__sender-status {
-    background: white;
-    border-radius: 50%;
-    height: rem(8);
-    margin-left: rem(8);
-    width: rem(8);
-
-    &.atomikui-chat-window__sender-status--available {
-      background: $light-green-400;
-    }
-
-    &.atomikui-chat-window__sender-status--away {
-      background: $yellow-500;
-    }
-
-    &.atomikui-chat-window__sender-status--offline {
-      background: $red-400;
-    }
   }
 
   &__body {
