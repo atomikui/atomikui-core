@@ -1,10 +1,9 @@
 import React, { Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import shortid from 'shortid';
 
 const Breadcrumb = ({ children, className, title, ...others }) => (
-  <nav title={title || `breadcrumb ${shortid.generate()}`}>
+  <nav title={title}>
     <ol
       className={classnames('atomikui-breadcrumb', className, {})}
       {...others}
@@ -28,7 +27,7 @@ Breadcrumb.propTypes = {
 Breadcrumb.defaultProps = {
   className: '',
   children: null,
-  title: '',
+  title: 'breadcrumb',
 };
 
 export default Breadcrumb;
