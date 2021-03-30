@@ -24,11 +24,9 @@ const ButtonGroup = ({
   const inputErrorId = `${uid}_error`;
 
   return (
-    <>
+    <fieldset aria-describedby={`${inputHintId} ${inputErrorId}`}>
       {label && (
-        <div className="flex margin-bottom-4">
-          <Label>{label}</Label>
-        </div>
+        <legend className="atomikui-label margin-bottom-4">{label}</legend>
       )}
       <div
         className={classnames('atomikui-button-group', className, {
@@ -55,7 +53,7 @@ const ButtonGroup = ({
           )}
         </div>
       )}
-    </>
+    </fieldset>
   );
 };
 
