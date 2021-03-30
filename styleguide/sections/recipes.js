@@ -5,19 +5,19 @@ module.exports = {
   sections: [
     {
       name: 'Form Validation',
-      content: 'src/recipes/FormValidation.md',
+      content: 'src/examples/FormValidation.md',
       usageMode: 'expand',
       exampleMode: 'expand',
     },
     {
       name: 'Grid',
-      content: 'src/recipes/Grid.md',
+      content: 'src/examples/Grid.md',
       usageMode: 'expand',
       exampleMode: 'expand',
     },
     {
       name: 'Pop Confirm',
-      content: 'src/recipes/PopConfirm.md',
+      content: 'src/examples/PopConfirm.md',
       usageMode: 'expand',
       exampleMode: 'expand',
     },
