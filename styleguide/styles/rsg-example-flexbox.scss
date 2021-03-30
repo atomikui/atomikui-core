@@ -1,0 +1,5 @@
+[data-preview='Flexbox'] > * {
+  & > * + * {
+    margin-top: rem(16);
+  }
+}
