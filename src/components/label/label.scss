@@ -1,5 +1,3 @@
 .atomikui-label {
-  text-transform: none;
-  font-size: rem(15);
-  font-weight: $font-semibold;
+  @include label();
 }
