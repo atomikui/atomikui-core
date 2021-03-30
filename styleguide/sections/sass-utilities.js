@@ -16,8 +16,8 @@ module.exports = {
       content: './styleguide/docs/Typography.md',
     },
     {
-      name: 'Utilities',
-      content: './styleguide/docs/Utilities.md',
+      name: 'Display',
+      content: './styleguide/docs/Display.md',
     },
   ],
 };
