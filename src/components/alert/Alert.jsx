@@ -2,7 +2,6 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import shortid from 'shortid';
 import {
   faExclamationCircle,
   faInfoCircle,
@@ -49,7 +48,6 @@ const Alert = ({
         <Icon
           className="atomikui-alert__icon"
           data-test-id={`icon-${theme}`}
-          id={`icon-${shortid.generate()}`}
           icon={!theme ? icons.info : icons[theme]}
           size="lg"
         />

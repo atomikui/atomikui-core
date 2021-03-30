@@ -2,6 +2,8 @@ The ButtonGroup is a series of buttons together on a single line, representing s
 
 It is a stateless component, therefore the selected state must be managed externally.
 
+<br />
+
 ```jsx
 import { ButtonGroup, Button } from '@atomikui/core';
 
