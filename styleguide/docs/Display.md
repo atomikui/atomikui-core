@@ -1,5 +1,3 @@
-### Display Classes
-
 The following utility classes can be used to set the display proprty of an element.
 
 ```jsx noeditor
@@ -25,3 +23,7 @@ const displayOptions = [
   })}
 </>;
 ```
+
+### Responsive Extensions
+
+All display classes can be made responsive by appending `@small`, `@medium`, or `@large` to the end of the class name.
