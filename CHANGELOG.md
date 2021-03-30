@@ -1,5 +1,22 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v0.19.1](https://github.com/atomikui/atomikui-core/compare/v0.19.0...v0.19.1) - 2021-03-30
+
+#### Merged
+
+- Breadcrumb - Makes default title prop value "breadcrumb" [`#111`](https://github.com/atomikui/atomikui-core/pull/111)
+- Alert - removes unused id [`#110`](https://github.com/atomikui/atomikui-core/pull/110)
+- ButtonGroup - accessibility updates [`#109`](https://github.com/atomikui/atomikui-core/pull/109)
+- GitHub Issues Page [`#103`](https://github.com/atomikui/atomikui-core/pull/103)
+
+#### Commits
+
+- GitHub Issues Page - Adds error handling [`d5018d4`](https://github.com/atomikui/atomikui-core/commit/d5018d44686bbc14185e36f8d6b6bae684e6ef7c)
+- GitHub Issues Page - Adds loading spinner [`f9bf6f2`](https://github.com/atomikui/atomikui-core/commit/f9bf6f2e3986b685f33ef136cb89c5ca6d852aab)
+- Adds issue label font colors [`ceff968`](https://github.com/atomikui/atomikui-core/commit/ceff968e029aacd793b760f979786fa14238fa12)
+
+<hr />
+
 ### [v0.19.0](https://github.com/atomikui/atomikui-core/compare/v0.18.0...v0.19.0) - 2021-03-29
 
 #### Merged
