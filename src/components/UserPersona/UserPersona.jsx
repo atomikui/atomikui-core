@@ -12,11 +12,13 @@ const UserPersona = ({
   status,
   statusMessage,
   theme,
+  ...others
 }) => (
   <div
     className={classnames('atomikui-user-persona', {
       [`atomikui-user-persona--${size}`]: size,
     })}
+    {...others}
   >
     <div className="atomikui-user-persona__avatar">
       <Avatar size={size} theme={theme} src={avatar}>

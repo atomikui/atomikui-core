@@ -14,6 +14,7 @@ export { default as CartItem } from './components/cart-item';
 export { default as ChatWindow } from './components/chat-window';
 export { default as ChatMessage } from './components/chat-message';
 export { default as CheckOption } from './components/check-option';
+export { default as CheckOptionGroup } from './components/CheckOptionGroup';
 export { default as CheckList } from './components/CheckList';
 export { default as Collapse } from './components/collapse';
 export { default as Comment } from './components/comment';
