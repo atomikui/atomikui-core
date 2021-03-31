@@ -2,7 +2,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { mount, configure } from 'enzyme';
 import Accordion from './Accordion';
-import AccordionItem from '../accordion-item';
 
 configure({ adapter: new Adapter() });
 
@@ -12,21 +11,21 @@ describe('<Accordion />', () => {
   beforeEach(() => {
     accordion = mount(
       <Accordion>
-        <AccordionItem label="Accordion Heading 1">
+        <Accordion.Item label="Accordion Heading 1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
           diam justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse
           quis ultricies diam.
-        </AccordionItem>
-        <AccordionItem label="Accordion Heading 2">
+        </Accordion.Item>
+        <Accordion.Item label="Accordion Heading 2">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
           diam justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse
           quis ultricies diam.
-        </AccordionItem>
-        <AccordionItem label="Accordion Heading 3">
+        </Accordion.Item>
+        <Accordion.Item label="Accordion Heading 3">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
           diam justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse
           quis ultricies diam.
-        </AccordionItem>
+        </Accordion.Item>
       </Accordion>,
     );
   });

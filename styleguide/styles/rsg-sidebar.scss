@@ -66,4 +66,11 @@ div[class^='rsg--sidebar'] {
     font-weight: $font-bold;
     font-size: rem(17);
   }
+
+  [class^='rsg--root']
+    > *
+    > [class^='rsg--list']
+    > [class^='rsg--item']:last-of-type {
+    display: none;
+  }
 }

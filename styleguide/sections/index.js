@@ -14,6 +14,7 @@ const navigation = require('./navigation');
 const providers = require('./providers');
 const recipes = require('./recipes');
 const wallet = require('./wallet');
+const hiddenCompounds = require('./hidden-compounds');
 
 module.exports = [
   gettingStarted,
@@ -32,4 +33,5 @@ module.exports = [
   experimental,
   recipes,
   sassUtilities,
+  hiddenCompounds,
 ];

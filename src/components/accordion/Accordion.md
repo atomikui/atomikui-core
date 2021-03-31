@@ -83,3 +83,11 @@ import { Accordion } from '@atomikui/core';
   </Accordion.Item>
 </Accordion>;
 ```
+
+```jsx noeditor
+import IframeProps from '../../../styleguide/components/IframeProps';
+
+<IframeProps component="AccordionItem" />;
+```
+
+### Accordion
