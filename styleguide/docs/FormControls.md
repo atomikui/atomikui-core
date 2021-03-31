@@ -6,6 +6,7 @@ Form Controls are simple UI elements such as buttons and form fields. They are i
 - [Button](/styleguide/#/Form%20Controls/Button)
 - [ButtonGroup](/styleguide/#/Form%20Controls/ButtonGroup)
 - [CheckOption](/styleguide/#/Form%20Controls/CheckOption)
+- [CheckOptionGroup](/styleguide/#/Form%20Controls/CheckOptionGroup)
 - [DatePicker](/styleguide/#/Form%20Controls/DatePicker)
 - [Dropdown](/styleguide/#/Form%20Controls/Dropdown)
 - [FileUpload](/styleguide/#/Form%20Controls/FileUpload)

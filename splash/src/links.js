@@ -45,6 +45,7 @@ export default {
       'Button',
       'ButtonGroup',
       'CheckOption',
+      'CheckOptionGroup',
       'DatePicker',
       'Dropdown',
       'FileUpload',
