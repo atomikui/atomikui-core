@@ -1,4 +1,4 @@
-import generateAccessibilityTests from '../../../scripts/generateAccessibilityTests';
+import generateAccessibilityTests from '../../../../../scripts/generateAccessibilityTests';
 
 const component = 'AccordionItem';
 
