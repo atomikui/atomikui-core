@@ -25,7 +25,7 @@ const handleChange = (index) => {
 };
 
 <CheckOptionGroup
-  label="Select your favorite foods"
+  label="Select all of your favorite foods"
   onChange={(index) => handleChange(index)}
 >
   {options.map((props, index) => (
@@ -60,7 +60,7 @@ const handleChange = (index) => {
 };
 
 <CheckOptionGroup
-  label="Select your favorit food"
+  label="Select one favorite food"
   onChange={(index) => handleChange(index)}
 >
   {options.map((props, index) => (

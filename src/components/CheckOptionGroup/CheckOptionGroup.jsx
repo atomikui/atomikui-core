@@ -46,9 +46,13 @@ const CheckOptionGroup = ({
       </Grid>
       {(helpText || errorText) && (
         <div>
-          {helpText && <Hint id={inputHintId}>{helpText}</Hint>}
+          {helpText && (
+            <Hint data-test-id="help-hint" id={inputHintId}>
+              {helpText}
+            </Hint>
+          )}
           {hasError && (
-            <Hint id={inputErrorId} type="error">
+            <Hint data-test-id="error-hint" id={inputErrorId} type="error">
               {errorText}
             </Hint>
           )}
