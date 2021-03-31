@@ -1,16 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Box = ({ color }) => (
-  <div style={{ padding: '16px', background: color }} />
+const Box = () => (
+  <div
+    className="padding-16 text-align-center"
+    style={{ border: '3px solid #607d8b' }}
+  >
+    Item
+  </div>
 );
-
-Box.propTypes = {
-  color: PropTypes.string,
-};
-
-Box.defaultProps = {
-  color: '#000',
-};
 
 export default Box;

@@ -53,10 +53,10 @@ The `.flex--align-*` modifier classes can be used to vertically align items in a
 import Box from './Box';
 
 <>
-  <h4>Top Alignment</h4>
+  <h4 className="margin-bottom-4">Top Alignment</h4>
   <div
-    className="flex flex--align-top"
-    style={{ background: '#eceff1', padding: '16px', height: '100px' }}
+    className="flex flex--align-top margin-bottom-8"
+    style={{ background: '#eceff1', padding: '16px', height: '150px' }}
   >
     <Box color="#01579b" />
     <Box color="#0277bd" />
@@ -64,10 +64,10 @@ import Box from './Box';
     <Box color="#039be5" />
     <Box color="#03a9f4" />
   </div>
-  <h4>Middle Alignment</h4>
+  <h4 className="margin-bottom-4">Middle Alignment</h4>
   <div
-    className="flex flex--align-middle"
-    style={{ background: '#eceff1', padding: '16px', height: '100px' }}
+    className="flex flex--align-middle margin-bottom-8"
+    style={{ background: '#eceff1', padding: '16px', height: '150px' }}
   >
     <Box color="#01579b" />
     <Box color="#0277bd" />
@@ -75,10 +75,10 @@ import Box from './Box';
     <Box color="#039be5" />
     <Box color="#03a9f4" />
   </div>
-  <h4>Bottom Alignment</h4>
+  <h4 className="margin-bottom-4">Bottom Alignment</h4>
   <div
     className="flex flex--align-bottom"
-    style={{ background: '#eceff1', padding: '16px', height: '100px' }}
+    style={{ background: '#eceff1', padding: '16px', height: '150px' }}
   >
     <Box color="#01579b" />
     <Box color="#0277bd" />
@@ -103,9 +103,9 @@ The `.flex--justify-*` modifier classes can be used to horizontally align items 
 import Box from './Box';
 
 <>
-  <h4>Left Jusyify</h4>
+  <h4 className="margin-bottom-4">Left Justify</h4>
   <div
-    className="flex flex--justify-left"
+    className="flex flex--justify-left margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
     <Box color="#01579b" />
@@ -114,9 +114,9 @@ import Box from './Box';
     <Box color="#039be5" />
     <Box color="#03a9f4" />
   </div>
-  <h4>Center Jusyify</h4>
+  <h4 className="margin-bottom-4">Center Justify</h4>
   <div
-    className="flex flex--justify-center"
+    className="flex flex--justify-center margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
     <Box color="#01579b" />
@@ -125,9 +125,9 @@ import Box from './Box';
     <Box color="#039be5" />
     <Box color="#03a9f4" />
   </div>
-  <h4>Right Jusyify</h4>
+  <h4 className="margin-bottom-4">Right Justify</h4>
   <div
-    className="flex flex--justify-right"
+    className="flex flex--justify-right margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
     <Box color="#01579b" />
@@ -153,9 +153,9 @@ The `.flex--space-*` modifier classes can be used to define how the flex items a
 import Box from './Box';
 
 <>
-  <h4>Space Betwwen</h4>
+  <h4 className="margin-bottom-4">Space Betwwen</h4>
   <div
-    className="flex flex--space-between"
+    className="flex flex--space-between margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
     <Box color="#01579b" />
@@ -164,9 +164,9 @@ import Box from './Box';
     <Box color="#039be5" />
     <Box color="#03a9f4" />
   </div>
-  <h4>Space Around</h4>
+  <h4 className="margin-bottom-4">Space Around</h4>
   <div
-    className="flex flex--space-around"
+    className="flex flex--space-around margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
     <Box color="#01579b" />
