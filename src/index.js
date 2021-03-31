@@ -48,7 +48,6 @@ export { default as Search } from './components/search';
 export { default as Spinner } from './components/spinner';
 export { default as Statistic } from './components/statistic';
 export { default as Stepper } from './components/stepper';
-export { default as Step } from './components/step';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
 export { default as Table } from './components/table';

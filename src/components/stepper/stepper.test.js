@@ -2,7 +2,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { mount, configure } from 'enzyme';
 import Stepper from './Stepper';
-import Step from '../step';
 
 configure({ adapter: new Adapter() });
 
@@ -12,18 +11,22 @@ describe('<Stepper />', () => {
   beforeEach(() => {
     stepper = mount(
       <Stepper inline>
-        <Step label="Personal Info" href="/personal-info" isComplete={true}>
+        <Stepper.Step
+          label="Personal Info"
+          href="/personal-info"
+          isComplete={true}
+        >
           1
-        </Step>
-        <Step label="Contact Info" href="/contact-info" isActive={true}>
+        </Stepper.Step>
+        <Stepper.Step label="Contact Info" href="/contact-info" isActive={true}>
           2
-        </Step>
-        <Step label="Billing Info" href="/billing-info">
+        </Stepper.Step>
+        <Stepper.Step label="Billing Info" href="/billing-info">
           3
-        </Step>
-        <Step label="Summary" href="/summary">
+        </Stepper.Step>
+        <Stepper.Step label="Summary" href="/summary">
           4
-        </Step>
+        </Stepper.Step>
       </Stepper>,
     );
   });
@@ -35,10 +38,7 @@ describe('<Stepper />', () => {
   it('Should render children with top labels', () => {
     stepper.setProps({ topLabels: true });
     expect(
-      stepper
-        .find('[data-test-id="step"]')
-        .first()
-        .hasClass('atomikui-step--top-label'),
+      stepper.find('[data-test-id="step"]').first().hasClass('has-top-labels'),
     ).toBeTruthy();
   });
 
@@ -49,9 +49,7 @@ describe('<Stepper />', () => {
 
   it('Should render as inline', () => {
     expect(
-      stepper
-        .find('ul[data-test-id="stepper"]')
-        .hasClass('atomikui-stepper--inline'),
+      stepper.find('ul[data-test-id="stepper"]').hasClass('is-inline'),
     ).toBeTruthy();
   });
 });

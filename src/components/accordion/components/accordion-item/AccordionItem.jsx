@@ -44,18 +44,18 @@ const AccordionItem = ({
         id={headerId}
         aria-expanded={isExpanded}
         aria-controls={panelId}
-        className="atomikui-accordion-item__trigger"
-        data-test-id="accordion-item-trigger"
+        className="atomikui-accordion__item__trigger"
+        data-test-id="accordion__item-trigger"
         onClick={handleOnClick}
       >
         <span
-          className="atomikui-accordion-item__trigger__label"
-          data-test-id="accordion-item-trigger-label"
+          className="atomikui-accordion__item__trigger__label"
+          data-test-id="accordion__item-trigger-label"
         >
           {label}
         </span>
         <Icon
-          className="atomikui-accordion-item__trigger__icon"
+          className="atomikui-accordion__item__trigger__icon"
           icon={faAngleDown}
           size="lg"
         />
@@ -63,11 +63,11 @@ const AccordionItem = ({
       <section
         id={panelId}
         arial-labelledby={headerId}
-        className="atomikui-accordion-item__body"
+        className="atomikui-accordion__item__body"
         style={contentHeight}
       >
         <div
-          className="atomikui-accordion-item__body__content"
+          className="atomikui-accordion__item__body__content"
           ref={contentRef}
         >
           {children}

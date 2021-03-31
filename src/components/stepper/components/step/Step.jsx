@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import shortid from 'shortid';
-import Link from '../link';
-import ListItem from '../list-item';
+import Link from '../../../link';
+import ListItem from '../../../list-item';
 
 const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
   const StepNumber = isComplete && href ? Link : 'span';
@@ -15,15 +15,15 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
       key={shortid.generate()}
       aria-current={isActive}
       data-test-id="step"
-      className={classnames('atomikui-step', {
+      className={classnames('atomikui-stepper__step', {
         'is-complete': isComplete,
         'is-active': isActive,
-        'atomikui-step--top-label': topLabel,
+        'has-top-labels': topLabel,
       })}
     >
       <StepNumber
         data-test-id="step-number"
-        className="atomikui-step__number"
+        className="atomikui-stepper__step__number"
         href={isComplete ? href : null}
         aria-label={isComplete ? 'step complete' : children}
       >
@@ -31,7 +31,7 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
         {!isComplete && children}
       </StepNumber>
       {label && (
-        <div className="atomikui-step__label">
+        <div className="atomikui-stepper__step__label">
           <span aria-hidden="true">{label}</span>
         </div>
       )}

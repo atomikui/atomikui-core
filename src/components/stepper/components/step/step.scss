@@ -1,4 +1,4 @@
-.atomikui-step {
+.atomikui-stepper__step {
   align-items: center;
   display: flex;
   flex: 1;
@@ -48,10 +48,10 @@
     padding: rem(0 8);
   }
 
-  &--top-label {
+  &.has-top-labels {
     flex-direction: column-reverse;
 
-    .atomikui-step__number {
+    .atomikui-stepper__step__number {
       margin-bottom: 0;
       margin-top: rem(4);
     }
