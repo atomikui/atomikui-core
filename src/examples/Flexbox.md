@@ -5,12 +5,12 @@ The `.flex` utility class can be used for laying out items in rows or columns. I
 ```jsx noeditor
 import Box from './Box';
 
-<div className="flex">
-  <Box color="#01579b" />
-  <Box color="#0277bd" />
-  <Box color="#0288d1" />
-  <Box color="#039be5" />
-  <Box color="#03a9f4" />
+<div className="flex flex--hr-4">
+  <Box />
+  <Box />
+  <Box />
+  <Box />
+  <Box />
 </div>;
 ```
 
@@ -32,11 +32,11 @@ import Box from './Box';
 
 <>
   <div className="flex flex--hr-16">
-    <Box color="#01579b" />
-    <Box color="#0277bd" />
-    <Box color="#0288d1" />
-    <Box color="#039be5" />
-    <Box color="#03a9f4" />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </div>
 </>;
 ```
@@ -55,36 +55,36 @@ import Box from './Box';
 <>
   <h4 className="margin-bottom-4">Top Alignment</h4>
   <div
-    className="flex flex--align-top margin-bottom-8"
+    className="flex flex--hr-4 flex--align-top margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px', height: '150px' }}
   >
-    <Box color="#01579b" />
-    <Box color="#0277bd" />
-    <Box color="#0288d1" />
-    <Box color="#039be5" />
-    <Box color="#03a9f4" />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </div>
   <h4 className="margin-bottom-4">Middle Alignment</h4>
   <div
-    className="flex flex--align-middle margin-bottom-8"
+    className="flex flex--hr-4 flex--align-middle margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px', height: '150px' }}
   >
-    <Box color="#01579b" />
-    <Box color="#0277bd" />
-    <Box color="#0288d1" />
-    <Box color="#039be5" />
-    <Box color="#03a9f4" />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </div>
   <h4 className="margin-bottom-4">Bottom Alignment</h4>
   <div
-    className="flex flex--align-bottom"
+    className="flex flex--hr-4 flex--align-bottom"
     style={{ background: '#eceff1', padding: '16px', height: '150px' }}
   >
-    <Box color="#01579b" />
-    <Box color="#0277bd" />
-    <Box color="#0288d1" />
-    <Box color="#039be5" />
-    <Box color="#03a9f4" />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </div>
 </>;
 ```
@@ -105,36 +105,36 @@ import Box from './Box';
 <>
   <h4 className="margin-bottom-4">Left Justify</h4>
   <div
-    className="flex flex--justify-left margin-bottom-8"
+    className="flex flex--hr-4 flex--justify-left margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
-    <Box color="#01579b" />
-    <Box color="#0277bd" />
-    <Box color="#0288d1" />
-    <Box color="#039be5" />
-    <Box color="#03a9f4" />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </div>
   <h4 className="margin-bottom-4">Center Justify</h4>
   <div
-    className="flex flex--justify-center margin-bottom-8"
+    className="flex flex--hr-4 flex--justify-center margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
-    <Box color="#01579b" />
-    <Box color="#0277bd" />
-    <Box color="#0288d1" />
-    <Box color="#039be5" />
-    <Box color="#03a9f4" />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </div>
   <h4 className="margin-bottom-4">Right Justify</h4>
   <div
-    className="flex flex--justify-right margin-bottom-8"
+    className="flex flex--hr-4 flex--justify-right margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
-    <Box color="#01579b" />
-    <Box color="#0277bd" />
-    <Box color="#0288d1" />
-    <Box color="#039be5" />
-    <Box color="#03a9f4" />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </div>
 </>;
 ```
@@ -158,22 +158,22 @@ import Box from './Box';
     className="flex flex--space-between margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
-    <Box color="#01579b" />
-    <Box color="#0277bd" />
-    <Box color="#0288d1" />
-    <Box color="#039be5" />
-    <Box color="#03a9f4" />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </div>
   <h4 className="margin-bottom-4">Space Around</h4>
   <div
     className="flex flex--space-around margin-bottom-8"
     style={{ background: '#eceff1', padding: '16px' }}
   >
-    <Box color="#01579b" />
-    <Box color="#0277bd" />
-    <Box color="#0288d1" />
-    <Box color="#039be5" />
-    <Box color="#03a9f4" />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
+    <Box />
   </div>
 </>;
 ```
@@ -190,12 +190,12 @@ The `.flex--equalColumns` modifier can be used to define flex items of equal wid
 ```jsx noeditor
 import Box from './Box';
 
-<div className="flex flex--equalColumns">
-  <Box color="#01579b" />
-  <Box color="#0277bd" />
-  <Box color="#0288d1" />
-  <Box color="#039be5" />
-  <Box color="#03a9f4" />
+<div className="flex flex--hr-4 flex--equalColumns">
+  <Box />
+  <Box />
+  <Box />
+  <Box />
+  <Box />
 </div>;
 ```
 
@@ -214,12 +214,12 @@ In the example below, the items will be displayed flex on screen sizes medium an
 ```jsx noeditor
 import Box from './Box';
 
-<div class="flex@medium">
-  <Box color="#01579b" />
-  <Box color="#0277bd" />
-  <Box color="#0288d1" />
-  <Box color="#039be5" />
-  <Box color="#03a9f4" />
+<div class="flex@medium flex--hr-16">
+  <Box />
+  <Box />
+  <Box />
+  <Box />
+  <Box />
 </div>;
 ```
 
