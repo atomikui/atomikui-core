@@ -1,5 +1,21 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v0.20.0](https://github.com/atomikui/atomikui-core/compare/v0.19.1...v0.20.0) - 2021-03-31
+
+#### Merged
+
+- Check option group [`#116`](https://github.com/atomikui/atomikui-core/pull/116)
+- Flexbox documentation [`#115`](https://github.com/atomikui/atomikui-core/pull/115)
+- Display utility class updates [`#113`](https://github.com/atomikui/atomikui-core/pull/113)
+
+#### Commits
+
+- Flexbox documentation update [`dc01351`](https://github.com/atomikui/atomikui-core/commit/dc01351166a991510ba7edc6546fa321c4883f71)
+- Flexbox documentation updates [`6c0f1d6`](https://github.com/atomikui/atomikui-core/commit/6c0f1d68573efdae1340d4f5775398063c09873d)
+- Bumps version and update changelog [`ea79b8b`](https://github.com/atomikui/atomikui-core/commit/ea79b8b8bbcfe7304f3f47c171d0c4823ab8a389)
+
+<hr />
+
 ### [v0.19.1](https://github.com/atomikui/atomikui-core/compare/v0.19.0...v0.19.1) - 2021-03-30
 
 #### Merged
