@@ -1,4 +1,4 @@
-.atomikui-accordion-item {
+.atomikui-accordion__item {
   background: $background-light-gray;
   border-radius: rem($border-radius);
 
@@ -45,20 +45,20 @@
     }
 
     &[aria-expanded='true'] {
-      & ~ .atomikui-accordion-item__body {
-        & > .atomikui-accordion-item__body__content {
+      & ~ .atomikui-accordion__item__body {
+        & > .atomikui-accordion__item__body__content {
           opacity: 1;
         }
       }
 
-      & > .atomikui-accordion-item__trigger__icon {
+      & > .atomikui-accordion__item__trigger__icon {
         transform: rotate(180deg);
       }
     }
   }
 
   &.is-open {
-    .atomikui-accordion-item__trigger__icon {
+    .atomikui-accordion__item__trigger__icon {
       transform: rotate(180deg);
     }
   }

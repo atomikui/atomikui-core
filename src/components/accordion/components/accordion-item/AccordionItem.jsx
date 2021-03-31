@@ -38,24 +38,24 @@ const AccordionItem = ({
   }, [expanded]);
 
   return (
-    <div className="atomikui-accordion-item" {...others}>
+    <div className="atomikui-accordion__item" {...others}>
       <button
         type="button"
         id={headerId}
         aria-expanded={isExpanded}
         aria-controls={panelId}
-        className="atomikui-accordion-item__trigger"
+        className="atomikui-accordion__item__trigger"
         data-test-id="accordion-item-trigger"
         onClick={handleOnClick}
       >
         <span
-          className="atomikui-accordion-item__trigger__label"
+          className="atomikui-accordion__item__trigger__label"
           data-test-id="accordion-item-trigger-label"
         >
           {label}
         </span>
         <Icon
-          className="atomikui-accordion-item__trigger__icon"
+          className="atomikui-accordion__item__trigger__icon"
           icon={faAngleDown}
           size="lg"
         />
@@ -63,11 +63,11 @@ const AccordionItem = ({
       <section
         id={panelId}
         arial-labelledby={headerId}
-        className="atomikui-accordion-item__body"
+        className="atomikui-accordion__item__body"
         style={contentHeight}
       >
         <div
-          className="atomikui-accordion-item__body__content"
+          className="atomikui-accordion__item__body__content"
           ref={contentRef}
         >
           {children}

@@ -6,7 +6,6 @@ module.exports = {
   sectionDepth: 6,
   components: () => [
     'src/components/accordion/Accordion.jsx',
-    'src/components/accordion-item/AccordionItem.jsx',
     'src/components/avatar/Avatar.jsx',
     'src/components/badge/Badge.jsx',
     'src/components/comment/Comment.jsx',
