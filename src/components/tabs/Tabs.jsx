@@ -20,10 +20,16 @@ const Tabs = ({
     onChange(index);
   };
 
-  const tabButtons = children.filter(
-    (child) => child.type.name === 'TabButton',
-  );
-  const Panels = children.filter((child) => child.type.name === 'TabPanel');
+  const tabButtons = [];
+  const panels = [];
+
+  children.forEach((child) => {
+    if (child.props.label) {
+      tabButtons.push(child);
+    } else {
+      panels.push(child);
+    }
+  });
 
   return (
     <>
@@ -42,7 +48,7 @@ const Tabs = ({
           }),
         )}
       </div>
-      {Panels}
+      {panels}
     </>
   );
 };
