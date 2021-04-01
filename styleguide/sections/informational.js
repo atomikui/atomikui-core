@@ -7,7 +7,6 @@ module.exports = {
   components: () => [
     'src/components/alert/Alert.jsx',
     'src/components/badge/Badge.jsx',
-    'src/components/cart/Cart.jsx',
     'src/components/hint/Hint.jsx',
     'src/components/label/Label.jsx',
     'src/components/progress-bar/ProgressBar.jsx',

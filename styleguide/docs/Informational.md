@@ -4,7 +4,6 @@ Informational components are used to convey helpful information to the user.
 
 - [Alert](/styleguide/#/Informational/Alert)
 - [Badge](/styleguide/#/Informational/Badge)
-- [Cart](/styleguide/#/Informational/Cart)
 - [Hint](/styleguide/#/Informational/Hint)
 - [Label](/styleguide/#/Informational/Label)
 - [ProgressBar](/styleguide/#/Informational/ProgressBar)

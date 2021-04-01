@@ -63,7 +63,6 @@ export default {
     [
       'Alert',
       'Badge',
-      'Cart',
       'Hint',
       'Label',
       'ProgressBar',
@@ -83,9 +82,9 @@ export default {
     'Navigation components are used to provide a means to navigate throught an app or website, or provide a means to advance back and forth between content.',
     ['Breadcrumb', 'Link', 'Pagination', 'Stepper'],
   ],
-  'Payment Wallet': [
+  Payment: [
     "Here you'll find components that can be used to compose a payment wallet UI for your application.",
-    ['Wallet', 'WalletItem'],
+    ['Cart', 'Wallet', 'WalletItem'],
   ],
   Providers: [
     'Providers are HOCs (Higher Order Components) that wrap another component, providing it with access to additional functionality.',
