@@ -1,5 +1,18 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.0.0](https://github.com/atomikui/atomikui-core/compare/v0.20.0...v1.0.0) - 2021-04-01
+
+#### Merged
+
+- Issue 177/compount components [`#121`](https://github.com/atomikui/atomikui-core/pull/121)
+
+#### Commits
+
+- Bumps version and update changelog [`5e5d62c`](https://github.com/atomikui/atomikui-core/commit/5e5d62c541bf2157c035230c9dba38bbd8bb25b9)
+- Adds CheckOption group to splash and styleguide section overview [`d00a22a`](https://github.com/atomikui/atomikui-core/commit/d00a22a978255ee3a961edecf489691a228c9de5)
+
+<hr />
+
 ### [v0.20.0](https://github.com/atomikui/atomikui-core/compare/v0.19.1...v0.20.0) - 2021-03-31
 
 #### Merged
