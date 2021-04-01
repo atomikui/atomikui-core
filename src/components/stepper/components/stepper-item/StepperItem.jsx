@@ -32,7 +32,7 @@ const StepperItem = ({
         data-test-id="step-number"
         className="atomikui-stepper__step__number"
         href={isComplete ? href : null}
-        aria-label={isComplete ? 'step complete' : children}
+        aria-label={isComplete ? 'step complete' : `step ${children} ${label}`}
       >
         {isComplete && <Icon icon={faCheck} color="white" />}
         {!isComplete && children}
