@@ -2,9 +2,7 @@
 
 ### [v1.0.0](https://github.com/atomikui/atomikui-core/compare/v0.20.0...v1.0.0) - 2021-04-01
 
-#### Merged
-
-- Issue 177/compount components [`#121`](https://github.com/atomikui/atomikui-core/pull/121)
+- v1.0.0 Release
 
 #### Commits
 
