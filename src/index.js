@@ -50,8 +50,6 @@ export { default as Stepper } from './components/stepper';
 export { default as Switch } from './components/switch';
 export { default as SwitchPanel } from './components/switch-panel';
 export { default as Table } from './components/table';
-export { default as Tab } from './components/tab';
-export { default as TabPanel } from './components/tab-panel';
 export { default as Tabs } from './components/tabs';
 export { default as Tag } from './components/tag';
 export { default as TimePicker } from './components/time-picker';

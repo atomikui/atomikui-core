@@ -1,4 +1,4 @@
-.atomikui-tab {
+.atomikui-tabs__tab {
   position: relative;
   color: $default-control-text-color;
 
@@ -9,7 +9,7 @@
   }
 
   &:not(.is-active) {
-    .atomikui-tab__content {
+    .atomikui-tabs__tab__content {
       * {
         color: $default-control-text-color;
       }
@@ -49,7 +49,7 @@
     }
   }
 
-  &.atomikui-tab--comparison {
+  &.is-comparison {
     &.is-active {
       background: $blue-gray-900;
       color: $white;

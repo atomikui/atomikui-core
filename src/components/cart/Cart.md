@@ -39,7 +39,3 @@ const updateCart = (quantity, id) => {
   </Cart>
 </>;
 ```
-
-### Requires:
-
-[`<CartItem />`](/styleguide/#/Informational/CartItem)

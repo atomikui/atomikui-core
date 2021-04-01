@@ -1,6 +1,8 @@
 import React, { cloneElement, Children, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import TabButton from './components/tab-button';
+import TabPanel from './components/tab-panel';
 
 const Tabs = ({
   align,
@@ -18,21 +20,30 @@ const Tabs = ({
     onChange(index);
   };
 
+  const tabButtons = children.filter(
+    (child) => child.type.name === 'TabButton',
+  );
+  const Panels = children.filter((child) => child.type.name === 'TabPanel');
+
   return (
-    <div
-      className={classnames('atomikui-tabs', className, {
-        [`atomikui-tabs--align-${align}`]: align,
-      })}
-      {...others}
-    >
-      {Children.map(children, (child, index) =>
-        cloneElement(child, {
-          active: index === activeTab,
-          comparison,
-          onClick: () => handleChange(index),
-        }),
-      )}
-    </div>
+    <>
+      <div
+        className={classnames('atomikui-tabs', className, {
+          [`atomikui-tabs--align-${align}`]: align,
+        })}
+        {...others}
+      >
+        {tabButtons.map((tab, index) =>
+          cloneElement(tab, {
+            key: `tab-${index}`,
+            active: index === activeTab,
+            comparison,
+            onClick: () => handleChange(index),
+          }),
+        )}
+      </div>
+      {Panels}
+    </>
   );
 };
 
@@ -57,7 +68,10 @@ Tabs.defaultProps = {
   className: '',
   comparison: false,
   initialActiveTab: 0,
-  onChange() {},
+  onChange: null,
 };
+
+Tabs.Button = TabButton;
+Tabs.Panel = TabPanel;
 
 export default Tabs;

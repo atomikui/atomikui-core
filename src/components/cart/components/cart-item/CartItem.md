@@ -11,7 +11,3 @@ import { CartItem } from '@atomikui/core';
   price={6499.99}
 />;
 ```
-
-### Used With:
-
-[`<Cart />`](/styleguide/#/Informational/Cart)
