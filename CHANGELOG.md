@@ -1,8 +1,24 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.1.0](https://github.com/atomikui/atomikui-core/compare/v1.0.0...v1.1.0) - 2021-04-01
+
+#### Merged
+
+- Refactor/switch panel [`#122`](https://github.com/atomikui/atomikui-core/pull/122)
+
+#### Commits
+
+- Update Tabs.jsx [`e00d88d`](https://github.com/atomikui/atomikui-core/commit/e00d88d3634ba518d82a1b4fefef8ec70d6d6dc8)
+- Bumps version and update changelog [`fd7fda8`](https://github.com/atomikui/atomikui-core/commit/fd7fda852fd3beeb3707de7e7cc5081d02ebeac9)
+- Update IframeProps.jsx [`a71b663`](https://github.com/atomikui/atomikui-core/commit/a71b6637e25a02ec400d465ab629c8e2fe6b677a)
+
+<hr />
+
 ### [v1.0.0](https://github.com/atomikui/atomikui-core/compare/v0.20.0...v1.0.0) - 2021-04-01
 
-- v1.0.0 Release
+#### Merged
+
+- Issue 177/compount components [`#121`](https://github.com/atomikui/atomikui-core/pull/121)
 
 #### Commits
 
