@@ -1,6 +1,8 @@
 import React, { useCallback, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
+const prod = process.env.NODE_ENV === 'production';
+
 const IframeProps = ({ component }) => {
   const [iframeState, setIframeState] = useState();
   const [loading, setLoading] = useState(true);
@@ -38,7 +40,9 @@ const IframeProps = ({ component }) => {
             ref={iframe}
             title={title}
             onLoad={getPropsTable}
-            src={`/#/Hidden%20Compounds/${component}`}
+            src={`${
+              prod ? '/styleguide' : ''
+            }/#/Hidden%20Compounds/${component}`}
           />
         </>
       )}
