@@ -12,10 +12,10 @@ describe('<List />', () => {
   beforeEach(() => {
     list = shallow(
       <List>
-        <ListItem>Apple</ListItem>
-        <ListItem>Orange</ListItem>
-        <ListItem>Banana</ListItem>
-        <ListItem>Mango</ListItem>
+        <List.Item>Apple</List.Item>
+        <List.Item>Orange</List.Item>
+        <List.Item>Banana</List.Item>
+        <List.Item>Mango</List.Item>
       </List>,
     );
   });

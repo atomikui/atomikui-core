@@ -32,7 +32,6 @@ export { default as Jumbotron } from './components/jumbotron';
 export { default as Label } from './components/label';
 export { default as Link } from './components/link';
 export { default as List } from './components/list';
-export { default as ListItem } from './components/list-item';
 export { default as Media } from './components/media';
 export { default as Modal } from './components/modal';
 export { default as Overlay } from './components/overlay';

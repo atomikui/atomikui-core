@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import CartItem from './components/cart-item';
 import List from '../list';
-import ListItem from '../list-item';
 import cartSubTotal from '../../utilities/cartSubTotal';
 
 const Cart = ({ className, children, title, ...others }) => (
@@ -12,7 +11,7 @@ const Cart = ({ className, children, title, ...others }) => (
     <div className="atomikui-cart__bd">
       <List className="atomikui-cart__items">
         {Children.map(children, (child, index) => (
-          <ListItem key={`item-${index + 1}`}>{child}</ListItem>
+          <List.Item key={`item-${index + 1}`}>{child}</List.Item>
         ))}
       </List>
     </div>

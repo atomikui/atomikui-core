@@ -7,10 +7,10 @@ import { Collapse, List, ListItem } from '@atomikui/core';
 
 <Collapse toggleText="Car Brands">
   <List>
-    <ListItem>Chevrolet</ListItem>
-    <ListItem>Ford</ListItem>
-    <ListItem>GMC</ListItem>
-    <ListItem>Honda</ListItem>
+    <List.Item>Chevrolet</List.Item>
+    <List.Item>Ford</List.Item>
+    <List.Item>GMC</List.Item>
+    <List.Item>Honda</List.Item>
   </List>
 </Collapse>;
 ```
@@ -23,10 +23,10 @@ import { Collapse, List, ListItem } from '@atomikui/core';
 <>
   <Collapse className="margin-bottom-16" toggleText="Car Brands">
     <List>
-      <ListItem>Chevrolet</ListItem>
-      <ListItem>Ford</ListItem>
-      <ListItem>GMC</ListItem>
-      <ListItem>Honda</ListItem>
+      <List.Item>Chevrolet</List.Item>
+      <List.Item>Ford</List.Item>
+      <List.Item>GMC</List.Item>
+      <List.Item>Honda</List.Item>
     </List>
   </Collapse>
   <Collapse
@@ -35,10 +35,10 @@ import { Collapse, List, ListItem } from '@atomikui/core';
     rightAlignTriggerIcon
   >
     <List>
-      <ListItem>Chevrolet</ListItem>
-      <ListItem>Ford</ListItem>
-      <ListItem>GMC</ListItem>
-      <ListItem>Honda</ListItem>
+      <List.Item>Chevrolet</List.Item>
+      <List.Item>Ford</List.Item>
+      <List.Item>GMC</List.Item>
+      <List.Item>Honda</List.Item>
     </List>
   </Collapse>
   <Collapse
@@ -47,18 +47,18 @@ import { Collapse, List, ListItem } from '@atomikui/core';
     rightAlignTrigger
   >
     <List>
-      <ListItem>Chevrolet</ListItem>
-      <ListItem>Ford</ListItem>
-      <ListItem>GMC</ListItem>
-      <ListItem>Honda</ListItem>
+      <List.Item>Chevrolet</List.Item>
+      <List.Item>Ford</List.Item>
+      <List.Item>GMC</List.Item>
+      <List.Item>Honda</List.Item>
     </List>
   </Collapse>
   <Collapse toggleText="Car Brands" rightAlignTrigger rightAlignTriggerIcon>
     <List>
-      <ListItem>Chevrolet</ListItem>
-      <ListItem>Ford</ListItem>
-      <ListItem>GMC</ListItem>
-      <ListItem>Honda</ListItem>
+      <List.Item>Chevrolet</List.Item>
+      <List.Item>Ford</List.Item>
+      <List.Item>GMC</List.Item>
+      <List.Item>Honda</List.Item>
     </List>
   </Collapse>
 </>;
@@ -79,10 +79,10 @@ const [isOpen, setIsOpen] = useState(false);
 
   <Collapse isOpen={isOpen} noTrigger>
     <List>
-      <ListItem>Chevrolet</ListItem>
-      <ListItem>Ford</ListItem>
-      <ListItem>GMC</ListItem>
-      <ListItem>Honda</ListItem>
+      <List.Item>Chevrolet</List.Item>
+      <List.Item>Ford</List.Item>
+      <List.Item>GMC</List.Item>
+      <List.Item>Honda</List.Item>
     </List>
   </Collapse>
 </>;
@@ -96,10 +96,10 @@ import { Card, Collapse, List, ListItem } from '@atomikui/core';
 <Card title="Collapse Card">
   <Collapse toggleText="Car Brands">
     <List>
-      <ListItem>Chevrolet</ListItem>
-      <ListItem>Ford</ListItem>
-      <ListItem>GMC</ListItem>
-      <ListItem>Honda</ListItem>
+      <List.Item>Chevrolet</List.Item>
+      <List.Item>Ford</List.Item>
+      <List.Item>GMC</List.Item>
+      <List.Item>Honda</List.Item>
     </List>
   </Collapse>
 </Card>;

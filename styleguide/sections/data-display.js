@@ -7,7 +7,6 @@ module.exports = {
   components: () => [
     'src/components/CheckList/CheckList.jsx',
     'src/components/list/List.jsx',
-    'src/components/list-item/ListItem.jsx',
     'src/components/table/Table.jsx',
   ],
 };

@@ -13,16 +13,16 @@ import FocusTrap from 'focus-trap-react';
     <div className="text-align-center">
       <p className="margin-bottom-16">Are you sure you want to delete this?</p>
       <List type="horizontal">
-        <ListItem>
+        <List.Item>
           <Button size="md" theme="blue">
             Yes, I'm Sure
           </Button>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           <Button size="md" theme="white">
             Cancel
           </Button>
-        </ListItem>
+        </List.Item>
       </List>
     </div>
   </FocusTrap>

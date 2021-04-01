@@ -7,14 +7,7 @@ import shortid from 'shortid';
 import Link from '../../../link';
 import List from '../../../list';
 
-const StepperItem = ({
-  children,
-  isActive,
-  isComplete,
-  href,
-  label,
-  topLabel,
-}) => {
+const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
   const StepNumber = isComplete && href ? Link : 'span';
 
   return (
@@ -32,7 +25,7 @@ const StepperItem = ({
         data-test-id="step-number"
         className="atomikui-stepper__step__number"
         href={isComplete ? href : null}
-        aria-label={isComplete ? 'step complete' : `step ${children} ${label}`}
+        aria-label={isComplete ? 'step complete' : children}
       >
         {isComplete && <Icon icon={faCheck} color="white" />}
         {!isComplete && children}
@@ -46,7 +39,7 @@ const StepperItem = ({
   );
 };
 
-StepperItem.propTypes = {
+Step.propTypes = {
   /** Step content */
   children: PropTypes.node,
   /** Specifies if a step is currently active */
@@ -61,7 +54,7 @@ StepperItem.propTypes = {
   topLabel: PropTypes.bool,
 };
 
-StepperItem.defaultProps = {
+Step.defaultProps = {
   children: null,
   isActive: false,
   isComplete: false,
@@ -70,4 +63,4 @@ StepperItem.defaultProps = {
   topLabel: false,
 };
 
-export default StepperItem;
+export default Step;
