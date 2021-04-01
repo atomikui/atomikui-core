@@ -1,0 +1,11 @@
+.atomikui-switch-group {
+  &__list {
+    & > * {
+      padding-top: rem(8);
+    }
+
+    & > * + * {
+      border-top: rem(1) solid $blue-gray-100;
+    }
+  }
+}

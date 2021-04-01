@@ -2,30 +2,30 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import sinon from 'sinon';
 import { shallow, configure } from 'enzyme';
-import SwitchPanel from './SwitchPanel';
+import SwitchGroup from './SwitchGroup';
 import Switch from '../switch';
 
 configure({ adapter: new Adapter() });
 
-describe('<SwitchPanel />', () => {
-  let switchPanel;
+describe('<SwitchGroup />', () => {
+  let switchGroup;
   let onChangeSpy;
 
   beforeEach(() => {
     onChangeSpy = sinon.spy();
 
-    switchPanel = shallow(
-      <SwitchPanel>
+    switchGroup = shallow(
+      <SwitchGroup>
         <Switch label="Label" onChange={onChangeSpy} />
         <Switch label="Label" onChange={onChangeSpy} />
         <Switch label="Label" onChange={onChangeSpy} />
-      </SwitchPanel>,
+      </SwitchGroup>,
     );
   });
 
   it('Should render children', () => {
     expect(
-      switchPanel.find('[data-test-id="switch-panel-bd"]').children(),
+      switchGroup.find('[data-test-id="switch-group-list"]').children(),
     ).toHaveLength(3);
   });
 });

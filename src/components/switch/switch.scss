@@ -10,6 +10,10 @@
 
   &__label {
     flex: 1;
+
+    & > label {
+      font-weight: $font-normal;
+    }
   }
 
   &__toggle {

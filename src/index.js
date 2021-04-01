@@ -47,7 +47,7 @@ export { default as Spinner } from './components/spinner';
 export { default as Statistic } from './components/statistic';
 export { default as Stepper } from './components/stepper';
 export { default as Switch } from './components/switch';
-export { default as SwitchPanel } from './components/switch-panel';
+export { default as SwitchGroup } from './components/switch-group';
 export { default as Table } from './components/table';
 export { default as Tabs } from './components/tabs';
 export { default as Tag } from './components/tag';
