@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import List from '../list';
+import StepperItem from './components/stepper-item';
 
 const Stepper = ({
   children,
@@ -16,7 +17,7 @@ const Stepper = ({
     <List
       data-test-id="stepper"
       className={classnames('atomikui-stepper', className, {
-        'atomikui-stepper--inline': inline,
+        'is-inline': inline,
       })}
       {...others}
     >
@@ -49,5 +50,7 @@ Stepper.defaultProps = {
   topLabels: false,
   title: '',
 };
+
+Stepper.Item = StepperItem;
 
 export default Stepper;

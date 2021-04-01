@@ -4,7 +4,7 @@ Drawers are commonly referred to as a side nav. The Drawer component allows for 
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button, Link, List, ListItem } from '@atomikui/core';
+import { Drawer, Button, Link, List } from '@atomikui/core';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -14,21 +14,21 @@ const [isOpen, setIsOpen] = useState(false);
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
     <List type="menu">
-      <ListItem>
+      <List.Item>
         <Link href="/home">Home</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/about">About</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/services">Services</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/blocg">Blog</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/contact">Contact</Link>
-      </ListItem>
+      </List.Item>
     </List>
   </Drawer>
 </>;
@@ -38,7 +38,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button, Link, List, ListItem } from '@atomikui/core';
+import { Drawer, Button, Link, List } from '@atomikui/core';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -48,21 +48,21 @@ const [isOpen, setIsOpen] = useState(false);
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="right">
     <List type="menu">
-      <ListItem>
+      <List.Item>
         <Link href="/home">Home</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/about">About</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/services">Services</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/blocg">Blog</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/contact">Contact</Link>
-      </ListItem>
+      </List.Item>
     </List>
   </Drawer>
 </>;
@@ -72,7 +72,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button, Link, List, ListItem } from '@atomikui/core';
+import { Drawer, Button, Link, List } from '@atomikui/core';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -82,21 +82,21 @@ const [isOpen, setIsOpen] = useState(false);
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="top">
     <List type="menu">
-      <ListItem>
+      <List.Item>
         <Link href="/home">Home</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/about">About</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/services">Services</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/blocg">Blog</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/contact">Contact</Link>
-      </ListItem>
+      </List.Item>
     </List>
   </Drawer>
 </>;
@@ -106,7 +106,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button, Link, List, ListItem } from '@atomikui/core';
+import { Drawer, Button, Link, List } from '@atomikui/core';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -116,21 +116,21 @@ const [isOpen, setIsOpen] = useState(false);
   </Button>
   <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)} position="bottom">
     <List type="menu">
-      <ListItem>
+      <List.Item>
         <Link href="/home">Home</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/about">About</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/services">Services</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/blocg">Blog</Link>
-      </ListItem>
-      <ListItem>
+      </List.Item>
+      <List.Item>
         <Link href="/contact">Contact</Link>
-      </ListItem>
+      </List.Item>
     </List>
   </Drawer>
 </>;

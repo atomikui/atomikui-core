@@ -5,7 +5,6 @@ import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 import List from '../list';
-import ListItem from '../list-item';
 import Hint from '../hint/Hint';
 
 const FileUpload = forwardRef(
@@ -110,7 +109,7 @@ const FileUpload = forwardRef(
               <div className="margin-top-16" />
               <List className="atomikui-file-upload__file-list">
                 {files.map((file) => (
-                  <ListItem key={shortid.generate()}>{file}</ListItem>
+                  <List.Item key={shortid.generate()}>{file}</List.Item>
                 ))}
               </List>
             </>

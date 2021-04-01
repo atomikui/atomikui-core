@@ -28,15 +28,14 @@ const updateCart = (quantity, id) => {
 };
 
 <>
-  <Cart
-    title="Your Cart"
-    tax={0.08}
-    items={cartItems}
-    onCartItemUpdate={(newQuantity, id) => updateCart(newQuantity, id)}
-  />
+  <Cart title="Your Cart">
+    {cartItems.map((props) => (
+      <Cart.Item
+        key={props.id}
+        onQuantityChange={(newQuantity) => updateCart(newQuantity, props.id)}
+        {...props}
+      />
+    ))}
+  </Cart>
 </>;
 ```
-
-### Requires:
-
-[`<CartItem />`](/styleguide/#/Informational/CartItem)

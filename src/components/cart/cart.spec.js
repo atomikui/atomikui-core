@@ -3,6 +3,6 @@ import generateAccessibilityTests from '../../../scripts/generateAccessibilityTe
 const component = 'Cart';
 
 generateAccessibilityTests({
-  path: `Informational/${component}`,
+  path: `Payment/${component}`,
   component,
 });

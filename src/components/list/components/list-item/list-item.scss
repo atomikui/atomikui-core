@@ -1,0 +1,28 @@
+.atomikui-list__item {
+  &.is-menu-item {
+    & > * {
+      border: 0;
+      border-radius: 0;
+      color: $black;
+      display: flex;
+      font-size: inherit;
+      outline: 0;
+      padding: rem(8 16);
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: background 0.2s ease-in-out;
+      width: 100%;
+
+      &:hover {
+        background: $background-light-gray;
+      }
+
+      &:active,
+      &:focus {
+        background: $active-bg-color;
+        box-shadow: none;
+        color: $white;
+      }
+    }
+  }
+}

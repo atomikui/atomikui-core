@@ -1,6 +1,8 @@
 table[class^='rsg--table'] {
   thead {
     border-bottom: rem(2) solid darken($background-light-gray, 2%);
+    text-align: left;
+    font-size: rem(13);
   }
 
   th,

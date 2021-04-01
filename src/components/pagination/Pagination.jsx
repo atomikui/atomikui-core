@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import List from '../list';
-import ListItem from '../list-item';
 
 const Pagination = ({
   children,
@@ -21,14 +20,14 @@ const Pagination = ({
     {...others}
   >
     {Children.map(children, (child) => (
-      <ListItem
+      <List.Item
         className={classnames('atomikui-pagination__item', {
           'is-active': child.props.active,
         })}
         key={shortid.generate()}
       >
         {child}
-      </ListItem>
+      </List.Item>
     ))}
   </List>
 );

@@ -2,19 +2,19 @@ The Tabs component can be used to simplify switching between different views.
 
 ```jsx
 import { useState } from 'react';
-import { Tabs, Tab, TabPanel } from '@atomikui/core';
+import { Tabs } from '@atomikui/core';
 
 const [currentIndex, setCurrentIndex] = useState(0);
 
 <>
   <Tabs onChange={(index) => setCurrentIndex(index)}>
-    <Tab label="Tab One" />
-    <Tab label="Tab Two" />
-    <Tab label="Tab Three" />
+    <Tabs.Button label="Tab One" />
+    <Tabs.Button label="Tab Two" />
+    <Tabs.Button label="Tab Three" />
+    <Tabs.Panel state={[currentIndex, 0]}>Item One</Tabs.Panel>
+    <Tabs.Panel state={[currentIndex, 1]}>Item Two</Tabs.Panel>
+    <Tabs.Panel state={[currentIndex, 2]}>Item Three</Tabs.Panel>
   </Tabs>
-  <TabPanel state={[currentIndex, 0]}>Item One</TabPanel>
-  <TabPanel state={[currentIndex, 1]}>Item Two</TabPanel>
-  <TabPanel state={[currentIndex, 2]}>Item Three</TabPanel>
 </>;
 ```
 
@@ -24,7 +24,7 @@ Use the `initialActiveTab` prop to set an initial active tab.
 
 ```jsx
 import { useState } from 'react';
-import { Tabs, Tab, TabPanel } from '@atomikui/core';
+import { Tabs } from '@atomikui/core';
 
 const [currentIndex, setCurrentIndex] = useState(2);
 
@@ -33,13 +33,13 @@ const [currentIndex, setCurrentIndex] = useState(2);
     onChange={(index) => setCurrentIndex(index)}
     initialActiveTab={currentIndex}
   >
-    <Tab label="Tab One" />
-    <Tab label="Tab Two" />
-    <Tab label="Tab Three" />
+    <Tabs.Button label="Tab One" />
+    <Tabs.Button label="Tab Two" />
+    <Tabs.Button label="Tab Three" />
+    <Tabs.Panel state={[currentIndex, 0]}>Item One</Tabs.Panel>
+    <Tabs.Panel state={[currentIndex, 1]}>Item Two</Tabs.Panel>
+    <Tabs.Panel state={[currentIndex, 2]}>Item Three</Tabs.Panel>
   </Tabs>
-  <TabPanel state={[currentIndex, 0]}>Item One</TabPanel>
-  <TabPanel state={[currentIndex, 1]}>Item Two</TabPanel>
-  <TabPanel state={[currentIndex, 2]}>Item Three</TabPanel>
 </>;
 ```
 
@@ -48,31 +48,31 @@ const [currentIndex, setCurrentIndex] = useState(2);
 The Tabs children can be aligned with the `align` prop. It accepts a value of `center`, `right` or `stretch`.
 
 ```jsx
-import { Tabs, Tab } from '@atomikui/core';
+import { Tabs } from '@atomikui/core';
 
 <>
   <Tabs>
-    <Tab label="Tab One" />
-    <Tab label="Tab Two" />
-    <Tab label="Tab Three" />
+    <Tabs.Button label="Tab One" />
+    <Tabs.Button label="Tab Two" />
+    <Tabs.Button label="Tab Three" />
   </Tabs>
   <br />
   <Tabs align="center">
-    <Tab label="Tab One" />
-    <Tab label="Tab Two" />
-    <Tab label="Tab Three" />
+    <Tabs.Button label="Tab One" />
+    <Tabs.Button label="Tab Two" />
+    <Tabs.Button label="Tab Three" />
   </Tabs>
   <br />
   <Tabs align="right">
-    <Tab label="Tab One" />
-    <Tab label="Tab Two" />
-    <Tab label="Tab Three" />
+    <Tabs.Button label="Tab One" />
+    <Tabs.Button label="Tab Two" />
+    <Tabs.Button label="Tab Three" />
   </Tabs>
   <br />
   <Tabs align="stretch">
-    <Tab label="Tab One" />
-    <Tab label="Tab Two" />
-    <Tab label="Tab Three" />
+    <Tabs.Button label="Tab One" />
+    <Tabs.Button label="Tab Two" />
+    <Tabs.Button label="Tab Three" />
   </Tabs>
 </>;
 ```
@@ -81,7 +81,7 @@ import { Tabs, Tab } from '@atomikui/core';
 
 ```jsx
 import { useState } from 'react';
-import { Tabs, Tab, TabPanel, Price } from '@atomikui/core';
+import { Tabs, Price } from '@atomikui/core';
 
 const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -92,29 +92,38 @@ const [currentIndex, setCurrentIndex] = useState(0);
     initialActiveTab={1}
     comparison
   >
-    <Tab label="Silver">
+    <Tabs.Button label="Silver">
       <Price amount={49} label="/ year" size="lg" color="light-green" />
-    </Tab>
-    <Tab label="Gold">
+    </Tabs.Button>
+    <Tabs.Button label="Gold">
       <Price amount={69} label="/ year" size="lg" color="light-green" />
-    </Tab>
-    <Tab label="Paltinum">
+    </Tabs.Button>
+    <Tabs.Button label="Paltinum">
       <Price amount={99} label="/ year" size="lg" color="light-green" />
-    </Tab>
+    </Tabs.Button>
+    <Tabs.Panel state={[currentIndex, 0]}>
+      <h3 className="text-size-24">Silver Plan</h3>
+    </Tabs.Panel>
+    <Tabs.Panel state={[currentIndex, 1]}>
+      <h3 className="text-size-24">Gold Plan</h3>
+    </Tabs.Panel>
+    <Tabs.Panel state={[currentIndex, 2]}>
+      <h3 className="text-size-24">Platinum Plan</h3>
+    </Tabs.Panel>
   </Tabs>
-  <TabPanel state={[currentIndex, 0]}>
-    <h3 className="text-size-24">Silver Plan</h3>
-  </TabPanel>
-  <TabPanel state={[currentIndex, 1]}>
-    <h3 className="text-size-24">Gold Plan</h3>
-  </TabPanel>
-  <TabPanel state={[currentIndex, 2]}>
-    <h3 className="text-size-24">Platinum Plan</h3>
-  </TabPanel>
 </>;
 ```
 
-### Requires:
+```jsx noeditor
+import IframeProps from '../../../styleguide/components/IframeProps';
 
-[`<Tab />`](/styleguide/#/Content/Tab)<br />
-[`<TabPanel />`](/styleguide/#/Content/TabPanel)
+<IframeProps component="TabButton" />;
+```
+
+```jsx noeditor
+import IframeProps from '../../../styleguide/components/IframeProps';
+
+<IframeProps component="TabPanel" />;
+```
+
+### Tabs

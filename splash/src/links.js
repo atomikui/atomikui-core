@@ -15,16 +15,13 @@ export default {
     'Content components are used to control how content is formatted and displayed.',
     [
       'Accordion',
-      'AccordionItem',
       'Avatar',
       'Badge',
       'Gallery',
       'Quotation',
       'Comment',
       'Post',
-      'TabPanel',
       'Tabs',
-      'Tab',
       'Tag',
       'Truncate',
       'UserPersona',
@@ -32,7 +29,7 @@ export default {
   ],
   'Data Display': [
     'Data display components are used to format and display data in an organized format.',
-    ['CheckList', 'List', 'ListItem', 'Table'],
+    ['CheckList', 'List', 'Table'],
   ],
   DOM: [
     "DOM components are used to interact with elements on the page outside of the current component's scope.",
@@ -66,8 +63,6 @@ export default {
     [
       'Alert',
       'Badge',
-      'Cart',
-      'CartItem',
       'Hint',
       'Label',
       'ProgressBar',
@@ -85,11 +80,11 @@ export default {
   ],
   Navigation: [
     'Navigation components are used to provide a means to navigate throught an app or website, or provide a means to advance back and forth between content.',
-    ['Breadcrumb', 'Link', 'Pagination', 'Step', 'Stepper'],
+    ['Breadcrumb', 'Link', 'Pagination', 'Stepper'],
   ],
-  'Payment Wallet': [
+  Payment: [
     "Here you'll find components that can be used to compose a payment wallet UI for your application.",
-    ['Wallet', 'WalletItem'],
+    ['Cart', 'Wallet'],
   ],
   Providers: [
     'Providers are HOCs (Higher Order Components) that wrap another component, providing it with access to additional functionality.',

@@ -1,12 +1,12 @@
-The Accordion component is a collection of expandable AccordionItems. It allows the display of one or more content panel at a time.
+The Accordion component is a collection of expandable Accordion.Items. It allows the display of one or more content panel at a time.
 
 ### Accordion - Single Panel Open
 
 ```jsx
-import { Accordion, AccordionItem } from '@atomikui/core';
+import { Accordion } from '@atomikui/core';
 
 <Accordion>
-  <AccordionItem label="Accordion Heading 1">
+  <Accordion.Item label="Accordion Heading 1">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
     justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
     ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
@@ -16,8 +16,8 @@ import { Accordion, AccordionItem } from '@atomikui/core';
     neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
     turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
     pulvinar. Suspendisse potenti.
-  </AccordionItem>
-  <AccordionItem label="Accordion Heading 2">
+  </Accordion.Item>
+  <Accordion.Item label="Accordion Heading 2">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
     justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
     ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
@@ -27,8 +27,8 @@ import { Accordion, AccordionItem } from '@atomikui/core';
     neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
     turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
     pulvinar. Suspendisse potenti.
-  </AccordionItem>
-  <AccordionItem label="Accordion Heading 3">
+  </Accordion.Item>
+  <Accordion.Item label="Accordion Heading 3">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
     justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
     ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
@@ -38,17 +38,17 @@ import { Accordion, AccordionItem } from '@atomikui/core';
     neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
     turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
     pulvinar. Suspendisse potenti.
-  </AccordionItem>
+  </Accordion.Item>
 </Accordion>;
 ```
 
 ### Accordion - Multiple Panels Open
 
 ```jsx
-import { Accordion, AccordionItem } from '@atomikui/core';
+import { Accordion } from '@atomikui/core';
 
 <Accordion multipleOpen>
-  <AccordionItem label="Accordion Heading 1">
+  <Accordion.Item label="Accordion Heading 1">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
     justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
     ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
@@ -58,8 +58,8 @@ import { Accordion, AccordionItem } from '@atomikui/core';
     neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
     turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
     pulvinar. Suspendisse potenti.
-  </AccordionItem>
-  <AccordionItem label="Accordion Heading 2">
+  </Accordion.Item>
+  <Accordion.Item label="Accordion Heading 2">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
     justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
     ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
@@ -69,8 +69,8 @@ import { Accordion, AccordionItem } from '@atomikui/core';
     neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
     turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
     pulvinar. Suspendisse potenti.
-  </AccordionItem>
-  <AccordionItem label="Accordion Heading 3">
+  </Accordion.Item>
+  <Accordion.Item label="Accordion Heading 3">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam
     justo, luctus eu tincidunt at, commodo vitae arcu. Suspendisse quis
     ultricies diam. Phasellus velit metus, aliquet ac venenatis et, faucibus vel
@@ -80,10 +80,14 @@ import { Accordion, AccordionItem } from '@atomikui/core';
     neque sed nunc volutpat volutpat a consequat ante. Quisque sed felis vitae
     turpis molestie rhoncus. Sed vitae mauris quam. Nam efficitur venenatis
     pulvinar. Suspendisse potenti.
-  </AccordionItem>
+  </Accordion.Item>
 </Accordion>;
 ```
 
-### Requires:
+```jsx noeditor
+import IframeProps from '../../../styleguide/components/IframeProps';
 
-[`<AccordionItem />`](/styleguide/#/Content/AccordionItem)
+<IframeProps component="AccordionItem" />;
+```
+
+### Accordion

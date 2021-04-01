@@ -109,12 +109,12 @@ const GitBubIssues = () => {
                     >
                       {name}
                     </Tag>
-                  </ListItem>
+                  </List.Item>
                 ))}
               </List>
             </div>
             <div className="margin-top-16">{body}</div>
-          </ListItem>
+          </List.Item>
         ),
       )}
     </List>

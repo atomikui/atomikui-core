@@ -1,6 +1,7 @@
 import React, { useEffect, useState, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import AccordionItem from './components/accordion-item';
 
 const Accordion = ({
   className,
@@ -50,5 +51,7 @@ Accordion.defaultProps = {
   defaultOpen: null,
   multipleOpen: false,
 };
+
+Accordion.Item = AccordionItem;
 
 export default Accordion;

@@ -51,7 +51,6 @@ const ReactComponentRenderer = ({
       </div>
     )}
     {examples}
-    <h3 className="text-size-24 margin-bottom-16">API</h3>
     {tabButtons && (
       <div className={classes.tabs}>
         <div className={classes.tabButtons}>{tabButtons}</div>

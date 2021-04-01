@@ -3,30 +3,33 @@ The Wallet component is used to display saved payment options to the user.
 ### Default Stacked Layout
 
 ```jsx
-import { Wallet, WalletItem } from '@atomikui/core';
+import { Wallet } from '@atomikui/core';
 
 <Wallet>
-  <WalletItem
+  <Wallet.Item
     type="MasterCard"
     endsIn="5432"
     expiry="06/2021"
     onSelect={() => console.log('MasterCard Selected')}
     isSelected
   />
-  <WalletItem
+  <Wallet.Item
     type="Discover"
     endsIn="4444"
     expiry="05/2022"
     onSelect={() => console.log('MasterCard Selected')}
   />
-  <WalletItem
+  <Wallet.Item
     type="Visa"
     endsIn="1234"
     expiry="04/2025"
     onSelect={() => console.log('Visa Selected')}
   />
-  <WalletItem type="Google Pay" onSelect={() => console.log('Visa Selected')} />
-  <WalletItem
+  <Wallet.Item
+    type="Google Pay"
+    onSelect={() => console.log('Visa Selected')}
+  />
+  <Wallet.Item
     type="Bank"
     endsIn="4444"
     onSelect={() => console.log('Bank Selected')}
@@ -39,30 +42,33 @@ import { Wallet, WalletItem } from '@atomikui/core';
 Use the `isGrid` prop to set the layout in a grid format. The grid is responsive and will stack at screen sizes below 768px.
 
 ```jsx
-import { Wallet, WalletItem } from '@atomikui/core';
+import { Wallet } from '@atomikui/core';
 
 <Wallet isGrid>
-  <WalletItem
+  <Wallet.Item
     type="MasterCard"
     endsIn="5432"
     expiry="06/2021"
     onSelect={() => console.log('MasterCard Selected')}
     isSelected
   />
-  <WalletItem
+  <Wallet.Item
     type="Discover"
     endsIn="4444"
     expiry="05/2022"
     onSelect={() => console.log('MasterCard Selected')}
   />
-  <WalletItem
+  <Wallet.Item
     type="Visa"
     endsIn="1234"
     expiry="04/2025"
     onSelect={() => console.log('Visa Selected')}
   />
-  <WalletItem type="Google Pay" onSelect={() => console.log('Visa Selected')} />
-  <WalletItem
+  <Wallet.Item
+    type="Google Pay"
+    onSelect={() => console.log('Visa Selected')}
+  />
+  <Wallet.Item
     type="Bank"
     endsIn="4444"
     onSelect={() => console.log('Bank Selected')}
@@ -70,6 +76,10 @@ import { Wallet, WalletItem } from '@atomikui/core';
 </Wallet>;
 ```
 
-### Requires:
+```jsx noeditor
+import IframeProps from '../../../styleguide/components/IframeProps';
 
-[`<WalletItem />`](/styleguide/#/Payment%20Wallet/WalletItem)
+<IframeProps component="WalletItem" />;
+```
+
+### Wallet

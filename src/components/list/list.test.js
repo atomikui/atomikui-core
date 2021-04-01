@@ -2,7 +2,6 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import { shallow, configure } from 'enzyme';
 import List from './List';
-import ListItem from '../list-item/ListItem';
 
 configure({ adapter: new Adapter() });
 
@@ -12,10 +11,10 @@ describe('<List />', () => {
   beforeEach(() => {
     list = shallow(
       <List>
-        <ListItem>Apple</ListItem>
-        <ListItem>Orange</ListItem>
-        <ListItem>Banana</ListItem>
-        <ListItem>Mango</ListItem>
+        <List.Item>Apple</List.Item>
+        <List.Item>Orange</List.Item>
+        <List.Item>Banana</List.Item>
+        <List.Item>Mango</List.Item>
       </List>,
     );
   });

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import List from '../list';
-import ListItem from '../list-item';
 import Button from '../button';
 
 const CheckList = ({ items, onCheck, ...others }) => (
@@ -15,7 +14,7 @@ const CheckList = ({ items, onCheck, ...others }) => (
     {...others}
   >
     {items.map(({ id, description, isChecked }, index) => (
-      <ListItem key={`item-${index + 1}`}>
+      <List.Item key={`item-${index + 1}`}>
         <Button
           onClick={() => onCheck({ id, index, isChecked: !isChecked })}
           className={classnames('atomikui-checklist__item', {
@@ -25,7 +24,7 @@ const CheckList = ({ items, onCheck, ...others }) => (
           <Icon icon={faCheckCircle} size="lg" />
           <span>{description}</span>
         </Button>
-      </ListItem>
+      </List.Item>
     ))}
   </List>
 );

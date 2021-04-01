@@ -2,6 +2,7 @@ import React, { Fragment, Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
+import ListItem from './components/list-item';
 
 const List = ({
   align,
@@ -62,5 +63,7 @@ List.defaultProps = {
   title: null,
   type: null,
 };
+
+List.Item = ListItem;
 
 export default List;

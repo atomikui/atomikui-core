@@ -14,34 +14,30 @@ describe('<Cart />', () => {
     onCartItemUpdateSpy = sinon.spy();
 
     cart = mount(
-      <Cart
-        title="Your Cart"
-        tax={0.08}
-        items={[
-          {
-            id: 1,
-            imageUrl: 'product-les-paul.jpg',
-            description:
-              'Gibson 60th Anniversary 1960 Les Paul Standard - Deep Cherry Sunburst',
-            quantity: 1,
-            price: 6499.99,
-          },
-          {
-            id: 2,
-            imageUrl: 'gibson-honey-burst.jpg',
-            description: 'Gibson Les Paul Classic Electric Guitar - Honeyburst',
-            quantity: 1,
-            price: 1999.99,
-          },
-        ]}
-        onCartItemUpdate={onCartItemUpdateSpy}
-      />,
+      <Cart title="Your Cart">
+        <Cart.Item
+          id="1"
+          imageUrl="product-les-paul.jpg"
+          description="Gibson 60th Anniversary 1960 Les Paul Standard - Deep Cherry Sunburst"
+          quantity={1}
+          price={6499.99}
+          onQuantityChange={onCartItemUpdateSpy}
+        />
+        <Cart.Item
+          id="2"
+          imageUrl="gibson-honey-burst.jpg"
+          description="Gibson Les Paul Classic Electric Guitar - Honeyburst"
+          quantity={1}
+          price={1999.99}
+          onQuantityChange={onCartItemUpdateSpy}
+        />
+      </Cart>,
     );
   });
 
   it('Should calculate subtotal', () => {
-    expect(cart.find('[data-test-id="cart-total"]').text()).toBe(
-      'Total: $9,179.98',
+    expect(cart.find('[data-test-id="cart-subtotal"]').text()).toBe(
+      '$8,499.98',
     );
   });
 
@@ -50,12 +46,6 @@ describe('<Cart />', () => {
       .find('input')
       .first()
       .simulate('change', { target: { value: 2 } });
-
-    expect(onCartItemUpdateSpy.withArgs(2, 1).called).toBeTruthy();
-  });
-
-  it('Should conditionally render tax', () => {
-    cart.setProps({ tax: null });
-    expect(cart.find('[data-test-id="cart-tax"]')).toHaveLength(0);
+    expect(onCartItemUpdateSpy.withArgs(2).called).toBeTruthy();
   });
 });

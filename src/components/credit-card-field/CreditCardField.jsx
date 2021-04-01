@@ -6,7 +6,6 @@ import FormField from '../form-field';
 import creditCardIcons from './credit-card-icons';
 import Hint from '../hint';
 import List from '../list';
-import ListItem from '../list-item';
 
 const CreditCardField = ({
   className,
@@ -258,9 +257,9 @@ const CreditCardField = ({
         <div className="margin-top-2">
           <List>
             {errors.map((field, index) => (
-              <ListItem key={`list-item-${index + 1}`}>
+              <List.Item key={`list-item-${index + 1}`}>
                 <Hint type="error">{errorMessages[field]}</Hint>
-              </ListItem>
+              </List.Item>
             ))}
           </List>
         </div>

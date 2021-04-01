@@ -1,0 +1,10 @@
+.atomikui-tabs__panel {
+  background: $background-light-gray;
+  color: $black;
+  display: none;
+  padding: rem(16);
+
+  &.is-active {
+    display: block;
+  }
+}

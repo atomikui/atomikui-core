@@ -3,94 +3,98 @@ Lists are be used to organize information. They can be non-sequential or ordered
 ### Default List
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <List>
-  <ListItem>Apple</ListItem>
-  <ListItem>Orange</ListItem>
-  <ListItem>Banana</ListItem>
-  <ListItem>Mango</ListItem>
+  <List.Item>Apple</List.Item>
+  <List.Item>Orange</List.Item>
+  <List.Item>Banana</List.Item>
+  <List.Item>Mango</List.Item>
 </List>;
 ```
 
 ### Bulleted List
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <List type="bulleted">
-  <ListItem>Apple</ListItem>
-  <ListItem>Orange</ListItem>
-  <ListItem>Banana</ListItem>
-  <ListItem>Mango</ListItem>
+  <List.Item>Apple</List.Item>
+  <List.Item>Orange</List.Item>
+  <List.Item>Banana</List.Item>
+  <List.Item>Mango</List.Item>
 </List>;
 ```
 
 ### Ordered List
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <List type="ordered">
-  <ListItem>Apple</ListItem>
-  <ListItem>Orange</ListItem>
-  <ListItem>Banana</ListItem>
-  <ListItem>Mango</ListItem>
+  <List.Item>Apple</List.Item>
+  <List.Item>Orange</List.Item>
+  <List.Item>Banana</List.Item>
+  <List.Item>Mango</List.Item>
 </List>;
 ```
 
 ### Horizontal List
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <List type="horizontal">
-  <ListItem>Apple</ListItem>
-  <ListItem>Orange</ListItem>
-  <ListItem>Banana</ListItem>
-  <ListItem>Mango</ListItem>
+  <List.Item>Apple</List.Item>
+  <List.Item>Orange</List.Item>
+  <List.Item>Banana</List.Item>
+  <List.Item>Mango</List.Item>
 </List>;
 ```
 
 ### List Alignment
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <>
   <List type="horizontal">
-    <ListItem>Apple</ListItem>
-    <ListItem>Orange</ListItem>
-    <ListItem>Banana</ListItem>
-    <ListItem>Mango</ListItem>
+    <List.Item>Apple</List.Item>
+    <List.Item>Orange</List.Item>
+    <List.Item>Banana</List.Item>
+    <List.Item>Mango</List.Item>
   </List>
   <List align="center" type="horizontal">
-    <ListItem>Apple</ListItem>
-    <ListItem>Orange</ListItem>
-    <ListItem>Banana</ListItem>
-    <ListItem>Mango</ListItem>
+    <List.Item>Apple</List.Item>
+    <List.Item>Orange</List.Item>
+    <List.Item>Banana</List.Item>
+    <List.Item>Mango</List.Item>
   </List>
   <List align="right" type="horizontal">
-    <ListItem>Apple</ListItem>
-    <ListItem>Orange</ListItem>
-    <ListItem>Banana</ListItem>
-    <ListItem>Mango</ListItem>
+    <List.Item>Apple</List.Item>
+    <List.Item>Orange</List.Item>
+    <List.Item>Banana</List.Item>
+    <List.Item>Mango</List.Item>
   </List>
   <List align="center">
-    <ListItem>Apple</ListItem>
-    <ListItem>Orange</ListItem>
-    <ListItem>Banana</ListItem>
-    <ListItem>Mango</ListItem>
+    <List.Item>Apple</List.Item>
+    <List.Item>Orange</List.Item>
+    <List.Item>Banana</List.Item>
+    <List.Item>Mango</List.Item>
   </List>
   <List align="right">
-    <ListItem>Apple</ListItem>
-    <ListItem>Orange</ListItem>
-    <ListItem>Banana</ListItem>
-    <ListItem>Mango</ListItem>
+    <List.Item>Apple</List.Item>
+    <List.Item>Orange</List.Item>
+    <List.Item>Banana</List.Item>
+    <List.Item>Mango</List.Item>
   </List>
 </>;
 ```
 
-### Requires:
+```jsx noeditor
+import IframeProps from '../../../styleguide/components/IframeProps';
 
-[`<ListItem />`](/styleguide/#/Data%20Display/ListItem)
+<IframeProps component="ListItem" />;
+```
+
+### List
