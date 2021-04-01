@@ -15,7 +15,6 @@ export default {
     'Content components are used to control how content is formatted and displayed.',
     [
       'Accordion',
-      'AccordionItem',
       'Avatar',
       'Badge',
       'Gallery',
@@ -85,7 +84,7 @@ export default {
   ],
   Navigation: [
     'Navigation components are used to provide a means to navigate throught an app or website, or provide a means to advance back and forth between content.',
-    ['Breadcrumb', 'Link', 'Pagination', 'Step', 'Stepper'],
+    ['Breadcrumb', 'Link', 'Pagination', 'Stepper'],
   ],
   'Payment Wallet': [
     "Here you'll find components that can be used to compose a payment wallet UI for your application.",

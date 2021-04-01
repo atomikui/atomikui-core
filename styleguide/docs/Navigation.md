@@ -5,5 +5,4 @@ Navigation components are used to provide a means to navigate throught an app or
 - [Breadcrumb](/styleguide/#/Navigation/Breadcrumb)
 - [Link](/styleguide/#/Navigation/Link)
 - [Pagination](/styleguide/#/Navigation/Pagination)
-- [Step](/styleguide/#/Navigation/Step)
 - [Stepper](/styleguide/#/Navigation/Stepper)

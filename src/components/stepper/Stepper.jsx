@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import List from '../list';
-import Step from './components/step';
+import StepperItem from './components/stepper-item';
 
 const Stepper = ({
   children,
@@ -51,6 +51,6 @@ Stepper.defaultProps = {
   title: '',
 };
 
-Stepper.Step = Step;
+Stepper.Item = StepperItem;
 
 export default Stepper;

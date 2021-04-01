@@ -11,28 +11,28 @@ describe('<Stepper />', () => {
   beforeEach(() => {
     stepper = mount(
       <Stepper inline>
-        <Stepper.Step
+        <Stepper.Item
           label="Personal Info"
           href="/personal-info"
           isComplete={true}
         >
           1
-        </Stepper.Step>
-        <Stepper.Step label="Contact Info" href="/contact-info" isActive={true}>
+        </Stepper.Item>
+        <Stepper.Item label="Contact Info" href="/contact-info" isActive={true}>
           2
-        </Stepper.Step>
-        <Stepper.Step label="Billing Info" href="/billing-info">
+        </Stepper.Item>
+        <Stepper.Item label="Billing Info" href="/billing-info">
           3
-        </Stepper.Step>
-        <Stepper.Step label="Summary" href="/summary">
+        </Stepper.Item>
+        <Stepper.Item label="Summary" href="/summary">
           4
-        </Stepper.Step>
+        </Stepper.Item>
       </Stepper>,
     );
   });
 
   it('Should render 4 children', () => {
-    expect(stepper.find('Step').length).toBe(4);
+    expect(stepper.find('StepperItem').length).toBe(4);
   });
 
   it('Should render children with top labels', () => {

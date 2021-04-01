@@ -7,7 +7,14 @@ import shortid from 'shortid';
 import Link from '../../../link';
 import ListItem from '../../../list-item';
 
-const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
+const StepperItem = ({
+  children,
+  isActive,
+  isComplete,
+  href,
+  label,
+  topLabel,
+}) => {
   const StepNumber = isComplete && href ? Link : 'span';
 
   return (
@@ -39,7 +46,7 @@ const Step = ({ children, isActive, isComplete, href, label, topLabel }) => {
   );
 };
 
-Step.propTypes = {
+StepperItem.propTypes = {
   /** Step content */
   children: PropTypes.node,
   /** Specifies if a step is currently active */
@@ -54,7 +61,7 @@ Step.propTypes = {
   topLabel: PropTypes.bool,
 };
 
-Step.defaultProps = {
+StepperItem.defaultProps = {
   children: null,
   isActive: false,
   isComplete: false,
@@ -63,4 +70,4 @@ Step.defaultProps = {
   topLabel: false,
 };
 
-export default Step;
+export default StepperItem;

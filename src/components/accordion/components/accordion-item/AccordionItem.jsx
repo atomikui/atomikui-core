@@ -45,12 +45,12 @@ const AccordionItem = ({
         aria-expanded={isExpanded}
         aria-controls={panelId}
         className="atomikui-accordion__item__trigger"
-        data-test-id="accordion__item-trigger"
+        data-test-id="accordion-item-trigger"
         onClick={handleOnClick}
       >
         <span
           className="atomikui-accordion__item__trigger__label"
-          data-test-id="accordion__item-trigger-label"
+          data-test-id="accordion-item-trigger-label"
         >
           {label}
         </span>
