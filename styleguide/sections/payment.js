@@ -7,6 +7,5 @@ module.exports = {
   components: () => [
     'src/components/cart/Cart.jsx',
     'src/components/wallet/Wallet.jsx',
-    'src/components/wallet-item/WalletItem.jsx',
   ],
 };

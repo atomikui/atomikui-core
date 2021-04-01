@@ -1,6 +1,7 @@
 import React, { Children, cloneElement } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import WalletItem from './components/wallet-item';
 
 const Wallet = ({ children, className, isGrid, ...others }) => (
   <div
@@ -33,5 +34,7 @@ Wallet.defaultProps = {
   className: '',
   isGrid: false,
 };
+
+Wallet.Item = WalletItem;
 
 export default Wallet;

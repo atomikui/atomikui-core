@@ -57,4 +57,3 @@ export { default as Truncate } from './components/truncate';
 export { default as UserPersona } from './components/UserPersona';
 export { withToastProvider, useToast } from './components/toaster';
 export { default as Wallet } from './components/wallet';
-export { default as WalletItem } from './components/wallet-item';

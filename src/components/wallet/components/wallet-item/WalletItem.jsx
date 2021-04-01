@@ -59,7 +59,7 @@ const WalletItem = ({
       cardIcons[paymentType] || (
         <Icon
           data-test-id="wallet-item-icon"
-          className="atomikui-wallet-item__default-icon"
+          className="atomikui-wallet__item__default-icon"
           icon={faCreditCard}
           size="3x"
           color="#444444"
@@ -69,23 +69,23 @@ const WalletItem = ({
 
   return (
     <button
-      className={classnames('atomikui-wallet-item', className, {
+      className={classnames('atomikui-wallet__item', className, {
         'is-selected': isSelected,
       })}
       onClick={onSelect}
       {...others}
     >
-      <div className="atomikui-wallet-item__icon">
+      <div className="atomikui-wallet__item__icon">
         {isCustomType ? type.icon : icon}
       </div>
-      <div className="atomikui-wallet-item__label">
+      <div className="atomikui-wallet__item__label">
         <div
-          className="atomikui-wallet-item__label-text"
+          className="atomikui-wallet__item__label-text"
           data-test-id="wallet-item-label-text"
         >
           {paymentLabel}
         </div>
-        <div className="atomikui-wallet-item__info">
+        <div className="atomikui-wallet__item__info">
           {endsIn && (
             <>
               <span>**** **** ****</span> {endsIn}
@@ -101,7 +101,7 @@ const WalletItem = ({
       </div>
       {isSelected && (
         <Icon
-          className="atomikui-wallet-item__selected-icon"
+          className="atomikui-wallet__item__selected-icon"
           icon={faCheckCircle}
           size="lg"
           color="#027abf"

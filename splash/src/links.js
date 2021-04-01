@@ -84,7 +84,7 @@ export default {
   ],
   Payment: [
     "Here you'll find components that can be used to compose a payment wallet UI for your application.",
-    ['Cart', 'Wallet', 'WalletItem'],
+    ['Cart', 'Wallet'],
   ],
   Providers: [
     'Providers are HOCs (Higher Order Components) that wrap another component, providing it with access to additional functionality.',
