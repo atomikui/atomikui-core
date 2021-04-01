@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
-import FormField from '../form-field';
+import FormField from '../../../form-field';
 
 const CartItem = ({
   className,
@@ -28,25 +28,25 @@ const CartItem = ({
   }, [price, itemQuantity]);
 
   return (
-    <div className={classnames('atomikui-cart-item', className)} {...others}>
-      <div className="atomikui-cart-item__hd">
+    <div className={classnames('atomikui-cart__item', className)} {...others}>
+      <div className="atomikui-cart__item__hd">
         <img
-          className="atomikui-cart-item__image"
+          className="atomikui-cart__item__image"
           src={imageUrl}
           alt="cart item"
         />
       </div>
-      <div className="atomikui-cart-item__bd">
-        <div className="atomikui-cart-item__info">
-          <div className="atomikui-cart-item__description">{description}</div>
+      <div className="atomikui-cart__item__bd">
+        <div className="atomikui-cart__item__info">
+          <div className="atomikui-cart__item__description">{description}</div>
           <div>
-            <div id={quantityLabel} className="atomikui-cart-item__label">
+            <div id={quantityLabel} className="atomikui-cart__item__label">
               Qty:
             </div>
             <FormField
               data-test-id="cart-item-qty"
               type="number"
-              className="atomikui-cart-item__quantity"
+              className="atomikui-cart__item__quantity"
               value={String(itemQuantity)}
               placeholder="Qty"
               aria-labelledby={quantityLabel}
@@ -54,15 +54,15 @@ const CartItem = ({
             />
           </div>
           <div>
-            <div className="atomikui-cart-item__label">Price:</div>
-            <div className="atomikui-cart-item__value">{` $${price.toLocaleString(
+            <div className="atomikui-cart__item__label">Price:</div>
+            <div className="atomikui-cart__item__value">{` $${price.toLocaleString(
               'en',
               { minimumFractionDigits: 2 },
             )}`}</div>
           </div>
           <div>
-            <div className="atomikui-cart-item__label">Total:</div>
-            <div className="atomikui-cart-item__value">{` $${total.toLocaleString(
+            <div className="atomikui-cart__item__label">Total:</div>
+            <div className="atomikui-cart__item__value">{` $${total.toLocaleString(
               'en',
               { minimumFractionDigits: 2 },
             )}`}</div>

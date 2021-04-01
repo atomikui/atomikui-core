@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import CartItem from '../cart-item';
+import CartItem from './components/cart-item';
 import List from '../list';
 import ListItem from '../list-item';
 
