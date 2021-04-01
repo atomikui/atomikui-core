@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ListItem = ({ children, className, isMenu, ...others }) => (
   <li
-    className={classnames('atomikui-list-item', className, {
+    className={classnames('atomikui-list__item', className, {
       'is-menu-item': isMenu,
     })}
     {...others}

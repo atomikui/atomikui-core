@@ -9,7 +9,7 @@ describe('<ListItem />', () => {
   let listItem;
 
   beforeEach(() => {
-    listItem = shallow(<ListItem className="custom-class">Item 1</List.Item>);
+    listItem = shallow(<ListItem className="custom-class">Item 1</ListItem>);
   });
 
   it('Should render a <li /> element', () => {
