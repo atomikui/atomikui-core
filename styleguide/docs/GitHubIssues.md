@@ -1,15 +1,6 @@
 ```jsx noeditor
 import { useEffect, useState } from 'react';
-import {
-  List,
-  ListItem,
-  Link,
-  Badge,
-  Tag,
-  Avatar,
-  Spinner,
-  Alert,
-} from '@atomikui/core';
+import { List, Link, Badge, Tag, Avatar, Spinner, Alert } from '@atomikui/core';
 
 const setTagFontColor = (color) => {
   const colors = {
@@ -67,7 +58,7 @@ const GitBubIssues = () => {
     <List className="gh-issues-list">
       {issues.map(
         ({ id, html_url, title, body, state, labels, created_at, user }) => (
-          <ListItem key={`issue-${id}`}>
+          <List.Item key={`issue-${id}`}>
             <div
               className="flex flex--hr-16 flex--space-between"
               style={{ flexWrap: 'nowrap' }}
@@ -99,7 +90,7 @@ const GitBubIssues = () => {
             <div className="margin-top-16 margin-bottom-16">
               <List className="gh-issues-list__tags">
                 {labels.map(({ color, name, default: isDefault }) => (
-                  <ListItem key={`label-${id}`}>
+                  <List.Item key={`label-${id}`}>
                     <Tag
                       shape="pill"
                       style={{
