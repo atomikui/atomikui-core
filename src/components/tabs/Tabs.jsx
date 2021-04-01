@@ -1,4 +1,4 @@
-import React, { cloneElement, Children, useState } from 'react';
+import React, { cloneElement, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import TabButton from './components/tab-button';
