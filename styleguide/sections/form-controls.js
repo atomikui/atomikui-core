@@ -18,7 +18,7 @@ module.exports = {
     'src/components/range-slider/RangeSlider.jsx',
     'src/components/search/Search.jsx',
     'src/components/switch/Switch.jsx',
-    'src/components/switch-panel/SwitchPanel.jsx',
+    'src/components/switch-group/SwitchGroup.jsx',
     'src/components/time-picker/TimePicker.jsx',
   ],
 };

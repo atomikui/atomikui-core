@@ -51,7 +51,7 @@ export default {
       'RangeSlider',
       'Search',
       'Switch',
-      'SwitchPanel',
+      'SwitchGroup',
     ],
   ],
   Iconography: [

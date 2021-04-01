@@ -3,7 +3,7 @@ A switch panel is a grouped series of switches that represent related controls.
 ```jsx
 import { useState } from 'react';
 import shortid from 'shortid';
-import { SwitchPanel, Switch } from '@atomikui/core';
+import { SwitchGroup, Switch } from '@atomikui/core';
 
 const [switches, setSwitches] = useState([
   {
@@ -28,7 +28,7 @@ const handleChange = (index) => {
   );
 };
 
-<SwitchPanel label="Subscriber Settings">
+<SwitchGroup label="Subscriber Settings">
   {switches.map(({ label, checked, disabled }, index) => (
     <Switch
       key={shortid.generate()}
@@ -38,5 +38,5 @@ const handleChange = (index) => {
       disabled={disabled}
     />
   ))}
-</SwitchPanel>;
+</SwitchGroup>;
 ```
