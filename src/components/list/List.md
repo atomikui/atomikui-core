@@ -3,7 +3,7 @@ Lists are be used to organize information. They can be non-sequential or ordered
 ### Default List
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <List>
   <List.Item>Apple</List.Item>
@@ -16,7 +16,7 @@ import { List, ListItem } from '@atomikui/core';
 ### Bulleted List
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <List type="bulleted">
   <List.Item>Apple</List.Item>
@@ -29,7 +29,7 @@ import { List, ListItem } from '@atomikui/core';
 ### Ordered List
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <List type="ordered">
   <List.Item>Apple</List.Item>
@@ -42,7 +42,7 @@ import { List, ListItem } from '@atomikui/core';
 ### Horizontal List
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <List type="horizontal">
   <List.Item>Apple</List.Item>
@@ -55,7 +55,7 @@ import { List, ListItem } from '@atomikui/core';
 ### List Alignment
 
 ```jsx
-import { List, ListItem } from '@atomikui/core';
+import { List } from '@atomikui/core';
 
 <>
   <List type="horizontal">

@@ -3,7 +3,7 @@ The Collapse component allows for the toggling of content visibility.
 ### Basic Usage
 
 ```jsx
-import { Collapse, List, ListItem } from '@atomikui/core';
+import { Collapse, List } from '@atomikui/core';
 
 <Collapse toggleText="Car Brands">
   <List>
@@ -18,7 +18,7 @@ import { Collapse, List, ListItem } from '@atomikui/core';
 ### Trigger Text and Icon Alignment
 
 ```jsx
-import { Collapse, List, ListItem } from '@atomikui/core';
+import { Collapse, List } from '@atomikui/core';
 
 <>
   <Collapse className="margin-bottom-16" toggleText="Car Brands">
@@ -68,7 +68,7 @@ import { Collapse, List, ListItem } from '@atomikui/core';
 
 ```jsx
 import { useState } from 'react';
-import { Collapse, List, ListItem, Button } from '@atomikui/core';
+import { Collapse, List, Button } from '@atomikui/core';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -91,7 +91,7 @@ const [isOpen, setIsOpen] = useState(false);
 ### Collapse Wrapped in a Container
 
 ```jsx
-import { Card, Collapse, List, ListItem } from '@atomikui/core';
+import { Card, Collapse, List } from '@atomikui/core';
 
 <Card title="Collapse Card">
   <Collapse toggleText="Car Brands">

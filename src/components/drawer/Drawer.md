@@ -4,7 +4,7 @@ Drawers are commonly referred to as a side nav. The Drawer component allows for 
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button, Link, List, ListItem } from '@atomikui/core';
+import { Drawer, Button, Link, List } from '@atomikui/core';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -38,7 +38,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button, Link, List, ListItem } from '@atomikui/core';
+import { Drawer, Button, Link, List } from '@atomikui/core';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -72,7 +72,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button, Link, List, ListItem } from '@atomikui/core';
+import { Drawer, Button, Link, List } from '@atomikui/core';
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -106,7 +106,7 @@ const [isOpen, setIsOpen] = useState(false);
 
 ```jsx
 import { useState } from 'react';
-import { Drawer, Button, Link, List, ListItem } from '@atomikui/core';
+import { Drawer, Button, Link, List } from '@atomikui/core';
 
 const [isOpen, setIsOpen] = useState(false);
 

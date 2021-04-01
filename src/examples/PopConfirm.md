@@ -1,7 +1,7 @@
 The following example shows how to easily create a pop confirm.
 
 ```jsx
-import { Button, Tooltip, List, ListItem } from '@atomikui/core';
+import { Button, Tooltip, List } from '@atomikui/core';
 import FocusTrap from 'focus-trap-react';
 
 <Tooltip
