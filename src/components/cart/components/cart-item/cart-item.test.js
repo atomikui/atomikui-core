@@ -26,8 +26,15 @@ describe('<CartItem />', () => {
 
   it('Should trigger onQuantityChange when quantity is updated', () => {
     cartItem
-      .find('input[data-test-id="cart-item-qty"]')
+      .find('select[data-test-id="cart-item-dropdown"]')
       .simulate('change', { target: { value: 2 } });
     expect(onQuantityChangeSpy.withArgs(2).called).toBeTruthy();
+  });
+
+  it('Should trigger onQuantityChange when delete item button is clicked', () => {
+    cartItem
+      .find('button[data-test-id="cart-item-delete-button"]')
+      .simulate('click');
+    expect(onQuantityChangeSpy.withArgs(0).called).toBeTruthy();
   });
 });

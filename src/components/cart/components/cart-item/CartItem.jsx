@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import shortid from 'shortid';
-import FormField from '../../../form-field';
+import Dropdown from '../../../dropdown';
+import Button from '../../../button';
+
+export const getQuantityOptions = (limit) =>
+  [...Array(limit).keys()].map((i) => {
+    const numberStr = (i + 1).toString();
+    return { text: numberStr, value: numberStr };
+  });
 
 const CartItem = ({
   className,
@@ -10,22 +16,16 @@ const CartItem = ({
   imageUrl,
   onQuantityChange,
   quantity,
+  quantityLimit,
   price,
   ...others
 }) => {
-  const [total, setTotal] = useState(price * quantity);
   const [itemQuantity, setItemQuantity] = useState(quantity);
 
   const handleQuantityChange = (newQuantity) => {
     setItemQuantity(newQuantity);
     onQuantityChange(newQuantity);
   };
-
-  const quantityLabel = `qty-${shortid.generate()}`;
-
-  useEffect(() => {
-    setTotal(price * itemQuantity);
-  }, [price, itemQuantity]);
 
   return (
     <div className={classnames('atomikui-cart__item', className)} {...others}>
@@ -39,33 +39,30 @@ const CartItem = ({
       <div className="atomikui-cart__item__bd">
         <div className="atomikui-cart__item__info">
           <div className="atomikui-cart__item__description">{description}</div>
-          <div>
-            <div id={quantityLabel} className="atomikui-cart__item__label">
-              Qty:
-            </div>
-            <FormField
-              data-test-id="cart-item-qty"
-              type="number"
-              className="atomikui-cart__item__quantity"
-              value={String(itemQuantity)}
-              placeholder="Qty"
-              aria-labelledby={quantityLabel}
+          <div className="atomikui-cart__item__quantity">
+            <Dropdown
+              data-test-id="cart-item-dropdown"
+              className="atomikui-cart__item__dropdown"
+              label="Qty"
               onChange={(e) => handleQuantityChange(+e.target.value)}
+              value={String(itemQuantity)}
+              options={getQuantityOptions(quantityLimit)}
             />
+            <Button
+              data-test-id="cart-item-delete-button"
+              className="atomikui-cart__item__delete-btn"
+              theme="hollow"
+              onClick={() => handleQuantityChange(0)}
+            >
+              delete
+            </Button>
           </div>
-          <div>
-            <div className="atomikui-cart__item__label">Price:</div>
-            <div className="atomikui-cart__item__value">{` $${price.toLocaleString(
+          <div className="atomikui-cart__item__price text-align-right@medium">
+            <span className="atomikui-cart__item__label">Price:</span>{' '}
+            <span className="atomikui-cart__item__value">{` $${price.toLocaleString(
               'en',
               { minimumFractionDigits: 2 },
-            )}`}</div>
-          </div>
-          <div>
-            <div className="atomikui-cart__item__label">Total:</div>
-            <div className="atomikui-cart__item__value">{` $${total.toLocaleString(
-              'en',
-              { minimumFractionDigits: 2 },
-            )}`}</div>
+            )}`}</span>
           </div>
         </div>
       </div>
@@ -84,6 +81,8 @@ CartItem.propTypes = {
   onQuantityChange: PropTypes.func,
   /** Cart item quantity */
   quantity: PropTypes.number,
+  /** Quanity limit */
+  quantityLimit: PropTypes.number,
   /** The unit price of the cart item */
   price: PropTypes.number,
 };
@@ -94,6 +93,7 @@ CartItem.defaultProps = {
   imageUrl: 'image-placeholder.png',
   onQuantityChange: null,
   quantity: 0,
+  quantityLimit: 10,
   price: 0,
 };
 
