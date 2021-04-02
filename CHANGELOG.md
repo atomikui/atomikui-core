@@ -1,5 +1,19 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.3.0](https://github.com/atomikui/atomikui-core/compare/v1.2.0...v1.3.0) - 2021-04-02
+
+#### Merged
+
+- Cart - Cart and CartItem refactor [`#128`](https://github.com/atomikui/atomikui-core/pull/128)
+- Moves cart utility functions into Cart.jsx. Cart utility test coverage [`#127`](https://github.com/atomikui/atomikui-core/pull/127)
+- Stepper - Removes duplicate StepperItem [`#126`](https://github.com/atomikui/atomikui-core/pull/126)
+
+#### Commits
+
+- Bumps version and update changelog [`59491bf`](https://github.com/atomikui/atomikui-core/commit/59491bfc4cc4878e9cf77ac78f13b8f935070d85)
+
+<hr />
+
 ### [v1.2.0](https://github.com/atomikui/atomikui-core/compare/v1.1.0...v1.2.0) - 2021-04-01
 
 #### Merged
