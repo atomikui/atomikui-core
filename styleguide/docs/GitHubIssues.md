@@ -10,6 +10,8 @@ const setTagFontColor = (color) => {
     feature: 'white',
     maintenance: 'white',
     refactor: 'white',
+    design: 'white',
+    'test coverage': 'white',
   };
 
   return colors[color.toLowerCase()];
