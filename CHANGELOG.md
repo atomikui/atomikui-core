@@ -1,5 +1,18 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.2.0](https://github.com/atomikui/atomikui-core/compare/v1.1.0...v1.2.0) - 2021-04-01
+
+#### Merged
+
+- Tab panel refactor [`#125`](https://github.com/atomikui/atomikui-core/pull/125)
+
+#### Commits
+
+- Bumps version and update changelog [`173594b`](https://github.com/atomikui/atomikui-core/commit/173594bd869371566c74fd23f9f5ee7681a41d61)
+- Fixes issue with broken List [`752a4a9`](https://github.com/atomikui/atomikui-core/commit/752a4a96826ee71524227ff00c6d42fcd64a08cb)
+
+<hr />
+
 ### [v1.1.0](https://github.com/atomikui/atomikui-core/compare/v1.0.0...v1.1.0) - 2021-04-01
 
 #### Merged
