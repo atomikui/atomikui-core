@@ -15,21 +15,7 @@ const Tabs = ({
 }) => {
   const [activeTab, setActiveTab] = useState(initialActiveTab);
 
-  const handleChange = (index) => {
-    setActiveTab(index);
-    onChange(index);
-  };
-
-  const tabButtons = [];
   const panels = [];
-
-  children.forEach((child) => {
-    if (child.props.label) {
-      tabButtons.push(child);
-    } else {
-      panels.push(child);
-    }
-  });
 
   return (
     <>
@@ -39,14 +25,21 @@ const Tabs = ({
         })}
         {...others}
       >
-        {tabButtons.map((tab, index) =>
-          cloneElement(tab, {
+        {children.map((tab, index) => {
+          const { content, ...props } = tab.props;
+
+          panels.push(
+            <TabPanel isActive={index === activeTab}>{content}</TabPanel>,
+          );
+
+          return cloneElement(tab, {
+            ...props,
             key: `tab-${index}`,
             active: index === activeTab,
             comparison,
-            onClick: () => handleChange(index),
-          }),
-        )}
+            onClick: () => setActiveTab(index),
+          });
+        })}
       </div>
       {panels}
     </>

@@ -8,6 +8,7 @@ const TabButton = ({
   children,
   className,
   comparison,
+  content,
   label,
   onClick,
   ...others
@@ -38,6 +39,8 @@ TabButton.propTypes = {
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Tab panel content */
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Adds comparison tab styles */
   comparison: PropTypes.bool,
   /** Tab click event callback */
@@ -49,6 +52,7 @@ TabButton.propTypes = {
 TabButton.defaultProps = {
   active: false,
   children: null,
+  content: '',
   className: null,
   comparison: false,
   onClick: null,
