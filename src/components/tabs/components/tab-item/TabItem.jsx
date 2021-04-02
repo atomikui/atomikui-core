@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../../../button';
 
-const TabButton = ({
+const TabItem = ({
   active,
   children,
   className,
@@ -32,7 +32,7 @@ const TabButton = ({
   </Button>
 );
 
-TabButton.propTypes = {
+TabItem.propTypes = {
   /** Makes a Tab active */
   active: PropTypes.bool,
   /** Tab children */
@@ -49,7 +49,7 @@ TabButton.propTypes = {
   label: PropTypes.string,
 };
 
-TabButton.defaultProps = {
+TabItem.defaultProps = {
   active: false,
   children: null,
   content: '',
@@ -59,4 +59,4 @@ TabButton.defaultProps = {
   label: '',
 };
 
-export default TabButton;
+export default TabItem;
