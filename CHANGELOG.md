@@ -1,5 +1,14 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.3.1](https://github.com/atomikui/atomikui-core/compare/v1.3.0...v1.3.1) - 2021-04-02
+
+#### Commits
+
+- Dropdown - updates styles [`c5a954d`](https://github.com/atomikui/atomikui-core/commit/c5a954d4a1e77356c8ea696316e1498c0f8d173b)
+- Bumps version and update changelog [`1c4bd69`](https://github.com/atomikui/atomikui-core/commit/1c4bd69feb346af179543cee8136f883f050eeaa)
+
+<hr />
+
 ### [v1.3.0](https://github.com/atomikui/atomikui-core/compare/v1.2.0...v1.3.0) - 2021-04-02
 
 #### Merged
