@@ -1,7 +1,7 @@
 import React, { cloneElement, useState } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import TabButton from './components/tab-button';
+import TabItem from './components/tab-item';
 import TabPanel from './components/tab-panel';
 
 const Tabs = ({
@@ -10,26 +10,11 @@ const Tabs = ({
   className,
   comparison,
   initialActiveTab,
-  onChange,
   ...others
 }) => {
   const [activeTab, setActiveTab] = useState(initialActiveTab);
 
-  const handleChange = (index) => {
-    setActiveTab(index);
-    onChange(index);
-  };
-
-  const tabButtons = [];
   const panels = [];
-
-  children.forEach((child) => {
-    if (child.props.label) {
-      tabButtons.push(child);
-    } else {
-      panels.push(child);
-    }
-  });
 
   return (
     <>
@@ -39,14 +24,26 @@ const Tabs = ({
         })}
         {...others}
       >
-        {tabButtons.map((tab, index) =>
-          cloneElement(tab, {
+        {children.map((tab, index) => {
+          const { content, ...props } = tab.props;
+
+          panels.push(
+            <TabPanel
+              key={`tab-panel-${index + 1}`}
+              isActive={index === activeTab}
+            >
+              {content}
+            </TabPanel>,
+          );
+
+          return cloneElement(tab, {
+            ...props,
             key: `tab-${index}`,
             active: index === activeTab,
             comparison,
-            onClick: () => handleChange(index),
-          }),
-        )}
+            onClick: () => setActiveTab(index),
+          });
+        })}
       </div>
       {panels}
     </>
@@ -64,8 +61,6 @@ Tabs.propTypes = {
   comparison: PropTypes.bool,
   /** The inital active tab */
   initialActiveTab: PropTypes.number,
-  /** onChange callback */
-  onChange: PropTypes.func,
 };
 
 Tabs.defaultProps = {
@@ -74,10 +69,9 @@ Tabs.defaultProps = {
   className: '',
   comparison: false,
   initialActiveTab: 0,
-  onChange: null,
 };
 
-Tabs.Button = TabButton;
+Tabs.Item = TabItem;
 Tabs.Panel = TabPanel;
 
 export default Tabs;

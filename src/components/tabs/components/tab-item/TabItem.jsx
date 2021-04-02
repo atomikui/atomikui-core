@@ -3,11 +3,12 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Button from '../../../button';
 
-const TabButton = ({
+const TabItem = ({
   active,
   children,
   className,
   comparison,
+  content,
   label,
   onClick,
   ...others
@@ -31,13 +32,15 @@ const TabButton = ({
   </Button>
 );
 
-TabButton.propTypes = {
+TabItem.propTypes = {
   /** Makes a Tab active */
   active: PropTypes.bool,
   /** Tab children */
   children: PropTypes.node,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Tab panel content */
+  content: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   /** Adds comparison tab styles */
   comparison: PropTypes.bool,
   /** Tab click event callback */
@@ -46,13 +49,14 @@ TabButton.propTypes = {
   label: PropTypes.string,
 };
 
-TabButton.defaultProps = {
+TabItem.defaultProps = {
   active: false,
   children: null,
+  content: '',
   className: null,
   comparison: false,
   onClick: null,
   label: '',
 };
 
-export default TabButton;
+export default TabItem;

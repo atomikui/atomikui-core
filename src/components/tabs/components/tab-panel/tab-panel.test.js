@@ -10,7 +10,7 @@ describe('<TabPanel />', () => {
 
   beforeEach(() => {
     tabPanel = shallow(
-      <TabPanel state={[0, 0]}>
+      <TabPanel isActive={true}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sem
         elit, aliquam sit amet elit et, porta hendrerit turpis. Donec metus
         nulla, aliquam sagittis sagittis vel, maximus sit amet turpis. Curabitur
