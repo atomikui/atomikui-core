@@ -17,11 +17,20 @@ const Cart = ({ className, children, title, ...others }) => (
   <div className={classnames('atomikui-cart', className)} {...others}>
     <div className="atomikui-cart__hd">{title}</div>
     <div className="atomikui-cart__bd">
-      <List className="atomikui-cart__items">
-        {Children.map(children, (child, index) => (
-          <List.Item key={`item-${index + 1}`}>{child}</List.Item>
-        ))}
-      </List>
+      {children.length ? (
+        <List className="atomikui-cart__items">
+          {Children.map(children, (child, index) => (
+            <List.Item key={`item-${index + 1}`}>{child}</List.Item>
+          ))}
+        </List>
+      ) : (
+        <div
+          data-test-id="empty-cart"
+          className="padding-top-8 padding-bottom-8"
+        >
+          Your cart is empty
+        </div>
+      )}
     </div>
     <div className="atomikui-cart__ft">
       <div className="atomikui-cart__subtotal">

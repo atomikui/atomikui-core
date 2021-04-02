@@ -17,12 +17,8 @@
   }
 
   &__items {
-    & > * {
-      padding: rem(16 0);
-    }
-
     & > * + * {
-      border-top: rem(1) solid $gray-200;
+      border-top: rem(1) solid darken($gray-200, 3%);
     }
   }
 }

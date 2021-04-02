@@ -43,7 +43,7 @@ describe('<Cart />', () => {
 
   it('Should trigger onCartItemUpdate whencart item is updated', () => {
     cart
-      .find('input')
+      .find('select')
       .first()
       .simulate('change', { target: { value: 2 } });
     expect(onCartItemUpdateSpy.withArgs(2).called).toBeTruthy();
@@ -59,5 +59,10 @@ describe('<Cart />', () => {
       <Cart.Item quantity={1} price={3.75} />,
     ];
     expect(getCartSubTotal(items)).toEqual(9.3);
+  });
+
+  it('Should show empty cart message if no items', () => {
+    cart.setProps({ children: [] });
+    expect(cart.find('[data-test-id="empty-cart"]')).toHaveLength(1);
   });
 });

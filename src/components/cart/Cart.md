@@ -21,9 +21,18 @@ const [cartItems, setCartItems] = useState([
 ]);
 
 const updateCart = (quantity, id) => {
-  const updatedCart = cartItems.map((item) => {
-    return item.id === id ? { ...item, quantity } : item;
-  });
+  let updatedCart;
+
+  if (quantity === 0) {
+    updatedCart = cartItems.filter((item) => {
+      return item.id !== id;
+    });
+  } else {
+    updatedCart = cartItems.map((item) => {
+      return item.id === id ? { ...item, quantity } : item;
+    });
+  }
+
   setCartItems(updatedCart);
 };
 
