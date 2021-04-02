@@ -14,7 +14,6 @@
 
     &__trigger {
       align-items: center;
-      background-color: $active-bg-color;
       border-radius: rem(0 $border-radius $border-radius 0);
       bottom: rem(0);
       content: '';
@@ -28,7 +27,7 @@
 
       & > svg {
         & > path {
-          fill: $white;
+          fill: $blue-gray-900;
         }
       }
     }
@@ -44,7 +43,11 @@
 
   &.is-disabled {
     .atomikui-dropdown__select__trigger {
-      background-color: darken($disabled-background-gray, 5%);
+      & > svg {
+        & > path {
+          fill: $blue-gray-400;
+        }
+      }
     }
   }
 
@@ -55,36 +58,6 @@
   &.has-error &__select__menu {
     &:focus {
       @include focus-error-outline();
-    }
-  }
-
-  &.has-error &__select__trigger {
-    background-color: $error-red;
-  }
-
-  @each $name, $color in $background-dark-colors {
-    &--#{$name} {
-      .atomikui-dropdown__select__trigger {
-        background-color: $color;
-        border-color: $color;
-
-        @include altFontColor($name);
-      }
-    }
-  }
-
-  @each $name, $color in $background-light-colors {
-    &--#{$name}-light {
-      .atomikui-dropdown__select__trigger {
-        background-color: $color;
-        border-color: $color;
-
-        & > svg {
-          & > path {
-            fill: $black;
-          }
-        }
-      }
     }
   }
 }
