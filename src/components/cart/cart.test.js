@@ -2,7 +2,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
 import sinon from 'sinon';
 import { mount, configure } from 'enzyme';
-import Cart from './Cart';
+import Cart, { getCartQuantity, getCartSubTotal } from './Cart';
 
 configure({ adapter: new Adapter() });
 
@@ -47,5 +47,17 @@ describe('<Cart />', () => {
       .first()
       .simulate('change', { target: { value: 2 } });
     expect(onCartItemUpdateSpy.withArgs(2).called).toBeTruthy();
+  });
+
+  it('should calculate cart quanity', () => {
+    const items = [<Cart.Item quantity={2} />, <Cart.Item quantity={3} />];
+    expect(getCartQuantity(items)).toEqual(5);
+  });
+  it('should calculate cart quanity', () => {
+    const items = [
+      <Cart.Item quantity={1} price={5.55} />,
+      <Cart.Item quantity={1} price={3.75} />,
+    ];
+    expect(getCartSubTotal(items)).toEqual(9.3);
   });
 });

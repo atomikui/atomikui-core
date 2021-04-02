@@ -3,7 +3,15 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import CartItem from './components/cart-item';
 import List from '../list';
-import cartSubTotal from '../../utilities/cartSubTotal';
+
+export const getCartSubTotal = (items) =>
+  items.reduce(
+    (a, b) => (b.props.quantity > 0 ? b.props.price * b.props.quantity + a : a),
+    0,
+  );
+
+export const getCartQuantity = (items) =>
+  items.reduce((a, b) => b.props.quantity + a, 0);
 
 const Cart = ({ className, children, title, ...others }) => (
   <div className={classnames('atomikui-cart', className)} {...others}>
@@ -17,10 +25,10 @@ const Cart = ({ className, children, title, ...others }) => (
     </div>
     <div className="atomikui-cart__ft">
       <div className="atomikui-cart__subtotal">
-        Subtotal:{' '}
+        Subtotal ({getCartQuantity(children)} Items):{' '}
         <span data-test-id="cart-subtotal" className="text-weight-semibold">
           $
-          {cartSubTotal(children).toLocaleString('en', {
+          {getCartSubTotal(children).toLocaleString('en', {
             minimumFractionDigits: 2,
           })}
         </span>
