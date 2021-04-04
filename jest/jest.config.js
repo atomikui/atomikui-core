@@ -10,7 +10,6 @@ module.exports = {
     '!src/**/*.d.ts',
     '!src/index.js',
     '!**/index.js',
-    '!src/utilities/**/*.js',
     '!src/components/tests/**/*.js',
     '!src/components/toaster/toast-context.js',
     // Excluding experimental components

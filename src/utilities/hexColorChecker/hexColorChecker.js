@@ -6,6 +6,7 @@ const hexColorChecker = (color) => {
 
   let theColor = color;
 
+  /* istanbul ignore if */
   if (theColor.match(/^rgb/)) {
     theColor = color.match(
       /^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/,

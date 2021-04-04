@@ -9,7 +9,7 @@ import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import FormField from '../form-field';
 import Button from '../button';
 import Label from '../label';
-import validateDate from '../../utilities/validate-date';
+import validateDate from '../../utilities/validateDate';
 import Overlay from '../overlay';
 
 const DatePicker = forwardRef(
