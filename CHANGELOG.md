@@ -1,5 +1,18 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.3.2](https://github.com/atomikui/atomikui-core/compare/v1.3.1...v1.3.2) - 2021-04-04
+
+#### Merged
+
+- Adds test coverage for utility functions [`#131`](https://github.com/atomikui/atomikui-core/pull/131)
+- Dropdown - updates styles [`#130`](https://github.com/atomikui/atomikui-core/pull/130)
+
+#### Commits
+
+- Bumps version and update changelog [`eb8bd67`](https://github.com/atomikui/atomikui-core/commit/eb8bd67318fe77b91dceb7dcdb0e8b7221869db8)
+
+<hr />
+
 ### [v1.3.1](https://github.com/atomikui/atomikui-core/compare/v1.3.0...v1.3.1) - 2021-04-02
 
 #### Commits
