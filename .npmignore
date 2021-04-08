@@ -14,6 +14,8 @@ jest/
 sass-utilities/
 styleguide/
 splash/
+dist/recipes
+dist/examples
 
 styleguide.config.js
 webpack.config.js
