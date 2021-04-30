@@ -3,6 +3,8 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import CartItem from './components/cart-item';
 import List from '../list';
+import Statistic from '../statistic';
+import Button from '../button';
 
 export const getCartSubTotal = (items) =>
   items.reduce(
@@ -13,9 +15,27 @@ export const getCartSubTotal = (items) =>
 export const getCartQuantity = (items) =>
   items.reduce((a, b) => b.props.quantity + a, 0);
 
-const Cart = ({ className, children, title, ...others }) => (
+const Cart = ({
+  className,
+  children,
+  onProceedToCart,
+  onProceedToCartBtnColor,
+  title,
+  ...others
+}) => (
   <div className={classnames('atomikui-cart', className)} {...others}>
-    <div className="atomikui-cart__hd">{title}</div>
+    <div className="atomikui-cart__hd">
+      <span>{title}</span>
+      <Statistic
+        data-test-id="cart-subtotal"
+        value={`$${getCartSubTotal(children).toLocaleString('en', {
+          minimumFractionDigits: 2,
+        })}`}
+        label={`Subtotal (${getCartQuantity(children)} Items)`}
+        size="sm"
+        topLabel
+      />
+    </div>
     <div className="atomikui-cart__bd">
       {children.length ? (
         <List className="atomikui-cart__items">
@@ -33,15 +53,15 @@ const Cart = ({ className, children, title, ...others }) => (
       )}
     </div>
     <div className="atomikui-cart__ft">
-      <div className="atomikui-cart__subtotal">
-        Subtotal ({getCartQuantity(children)} Items):{' '}
-        <span data-test-id="cart-subtotal" className="text-weight-semibold">
-          $
-          {getCartSubTotal(children).toLocaleString('en', {
-            minimumFractionDigits: 2,
-          })}
-        </span>
-      </div>
+      <Button
+        data-test-id="proceed-to-cart"
+        onClick={onProceedToCart}
+        theme={onProceedToCartBtnColor}
+        shape="pill"
+        block
+      >
+        Proceed to Checkout
+      </Button>
     </div>
   </div>
 );
@@ -51,6 +71,36 @@ Cart.propTypes = {
   className: PropTypes.string,
   /** Cart items */
   children: PropTypes.node,
+  /** Callback triggered when "proceed to cart" button is clicked */
+  onProceedToCart: PropTypes.func,
+  /** "Proceed to cart" button color */
+  onProceedToCartBtnColor: PropTypes.oneOf([
+    'red',
+    'pink',
+    'purple',
+    'deep-purple',
+    'indigo',
+    'blue',
+    'sky-blue',
+    'cyan',
+    'teal',
+    'green',
+    'light-green',
+    'lime',
+    'yellow',
+    'light-orange',
+    'orange',
+    'deep-orange',
+    'amber',
+    'brown',
+    'gray',
+    'blue-gray',
+    'black',
+    'white',
+    'hollow',
+    'link',
+    'block',
+  ]),
   /** Cart title */
   title: PropTypes.string,
 };
@@ -58,6 +108,8 @@ Cart.propTypes = {
 Cart.defaultProps = {
   className: '',
   children: null,
+  onProceedToCart: null,
+  onProceedToCartBtnColor: 'blue',
   title: 'Shopping Cart',
 };
 

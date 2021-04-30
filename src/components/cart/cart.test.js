@@ -9,12 +9,14 @@ configure({ adapter: new Adapter() });
 describe('<Cart />', () => {
   let cart;
   let onCartItemUpdateSpy;
+  let onProceedToCartSpy;
 
   beforeEach(() => {
     onCartItemUpdateSpy = sinon.spy();
+    onProceedToCartSpy = sinon.spy();
 
     cart = mount(
-      <Cart title="Your Cart">
+      <Cart title="Your Cart" onProceedToCart={onProceedToCartSpy}>
         <Cart.Item
           id="1"
           imageUrl="product-les-paul.jpg"
@@ -36,9 +38,12 @@ describe('<Cart />', () => {
   });
 
   it('Should calculate subtotal', () => {
-    expect(cart.find('[data-test-id="cart-subtotal"]').text()).toBe(
-      '$8,499.98',
-    );
+    expect(
+      cart
+        .find('div[data-test-id="cart-subtotal"]')
+        .text()
+        .includes('$8,499.98'),
+    ).toBeTruthy();
   });
 
   it('Should trigger onCartItemUpdate whencart item is updated', () => {
@@ -53,7 +58,7 @@ describe('<Cart />', () => {
     const items = [<Cart.Item quantity={2} />, <Cart.Item quantity={3} />];
     expect(getCartQuantity(items)).toEqual(5);
   });
-  it('should calculate cart quanity', () => {
+  it('should calculate cart subtotal', () => {
     const items = [
       <Cart.Item quantity={1} price={5.55} />,
       <Cart.Item quantity={1} price={3.75} />,
@@ -64,5 +69,10 @@ describe('<Cart />', () => {
   it('Should show empty cart message if no items', () => {
     cart.setProps({ children: [] });
     expect(cart.find('[data-test-id="empty-cart"]')).toHaveLength(1);
+  });
+
+  it('Should call onProceedToCart', () => {
+    cart.find('button[data-test-id="proceed-to-cart"]').simulate('click');
+    expect(onProceedToCartSpy.called).toBeTruthy();
   });
 });
