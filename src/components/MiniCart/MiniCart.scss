@@ -1,0 +1,30 @@
+.atomikui-mini-cart {
+  background: $background-light-gray;
+  padding: rem(16);
+
+  &__bd {
+    margin: rem(0 -8);
+  }
+
+  &__items {
+    border-top: rem(1) solid $blue-gray-100;
+    border-bottom: rem(1) solid $blue-gray-100;
+    padding: rem(8 0);
+    margin: rem(8 0);
+
+    & > * + * {
+      margin-top: rem(4);
+    }
+  }
+
+  &__subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-weight: $font-bold;
+    padding: rem(8 0 16);
+
+    & > * + * {
+      margin-left: rem(16);
+    }
+  }
+}

@@ -20,6 +20,7 @@ const Cart = ({
   children,
   onProceedToCart,
   onProceedToCartBtnColor,
+  onProceedToCartBtnColorText,
   title,
   ...others
 }) => (
@@ -60,7 +61,7 @@ const Cart = ({
         shape="pill"
         block
       >
-        Proceed to Checkout
+        {onProceedToCartBtnColorText}
       </Button>
     </div>
   </div>
@@ -101,6 +102,8 @@ Cart.propTypes = {
     'link',
     'block',
   ]),
+  /** Cart button text */
+  onProceedToCartBtnColorText: PropTypes.string,
   /** Cart title */
   title: PropTypes.string,
 };
@@ -110,6 +113,7 @@ Cart.defaultProps = {
   children: null,
   onProceedToCart: null,
   onProceedToCartBtnColor: 'blue',
+  onProceedToCartBtnColorText: 'proceed to checkout',
   title: 'Shopping Cart',
 };
 
