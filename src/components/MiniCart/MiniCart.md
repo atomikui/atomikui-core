@@ -11,6 +11,44 @@ import { MiniCart } from '@atomikui/core';
 </MiniCart>;
 ```
 
+### Theming
+
+The MiniCart's `theme` and `onProceedToCartBtnColor` can be used to theme the cart's background and button colors.
+
+- Background themes include `light`, and `dark`. The default background is transparent.
+- Buttons themes include all of the available [Button](/styleguide/#/Form%20Controls/Button) colors.
+
+```jsx
+import { useState } from 'react';
+import { MiniCart } from '@atomikui/core';
+
+<>
+  <MiniCart onProceedToCart={() => console.log('proceed to checkout')}>
+    <MiniCart.Item title="Apples" quantity={6} price={0.89} />
+    <MiniCart.Item title="Oranges" quantity={8} price={0.99} />
+    <MiniCart.Item title="Peaches" quantity={12} price={0.79} />
+  </MiniCart>
+  <MiniCart
+    theme="light"
+    onProceedToCart={() => console.log('proceed to checkout')}
+    onProceedToCartBtnColor="teal"
+  >
+    <MiniCart.Item title="Apples" quantity={6} price={0.89} />
+    <MiniCart.Item title="Oranges" quantity={8} price={0.99} />
+    <MiniCart.Item title="Peaches" quantity={12} price={0.79} />
+  </MiniCart>
+  <MiniCart
+    theme="dark"
+    onProceedToCart={() => console.log('proceed to checkout')}
+    onProceedToCartBtnColor="lime"
+  >
+    <MiniCart.Item title="Apples" quantity={6} price={0.89} />
+    <MiniCart.Item title="Oranges" quantity={8} price={0.99} />
+    <MiniCart.Item title="Peaches" quantity={12} price={0.79} />
+  </MiniCart>
+</>;
+```
+
 ```jsx noeditor
 import IframeProps from '../../../styleguide/components/IframeProps';
 

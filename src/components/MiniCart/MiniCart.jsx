@@ -16,7 +16,7 @@ const MiniCart = ({
 }) => (
   <div
     className={classnames('atomikui-mini-cart', className, {
-      [`atomikui-mini-cart-${theme}`]: theme,
+      [`atomikui-mini-cart--${theme}`]: theme,
     })}
   >
     <div className="atomikui-mini-cart__bd">
@@ -100,7 +100,7 @@ MiniCart.propTypes = {
 
 MiniCart.defaultProps = {
   className: '',
-  theme: 'light',
+  theme: '',
   onProceedToCartBtnColorText: 'proceed to checkout',
   onProceedToCartBtnColor: 'blue',
 };

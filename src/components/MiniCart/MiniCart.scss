@@ -1,5 +1,5 @@
 .atomikui-mini-cart {
-  background: $background-light-gray;
+  background: transparent;
   padding: rem(16);
 
   &__bd {
@@ -25,6 +25,20 @@
 
     & > * + * {
       margin-left: rem(16);
+    }
+  }
+
+  &--light {
+    background: $background-light-gray;
+  }
+
+  &--dark {
+    background: $blue-gray-900;
+    color: $white;
+
+    .atomikui-mini-cart__items {
+      border-top: rem(1) solid $blue-gray-700;
+      border-bottom: rem(1) solid $blue-gray-700;
     }
   }
 }
