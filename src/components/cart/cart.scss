@@ -1,24 +1,35 @@
+$cartInnerBorder: rem(1) solid darken($gray-200, 3%);
+
 .atomikui-cart {
+  background-color: $white;
+  border: 1px solid $blue-gray-100;
+
   &__hd {
-    font-size: rem(20);
+    display: flex;
+    font-size: rem(18);
     font-weight: $font-bold;
-    padding-bottom: rem(4);
+    justify-content: space-between;
+    padding: rem(16);
+
+    & > * + * {
+      margin-left: rem(16);
+    }
   }
 
   &__bd {
-    border-bottom: rem(2) solid darken($gray-100, 7%);
-    border-top: rem(2) solid darken($gray-100, 7%);
-    padding: rem(4 0);
+    border-bottom: $cartInnerBorder;
+    border-top: $cartInnerBorder;
+    padding: rem(0 16);
   }
 
   &__ft {
-    margin-top: rem(16);
+    padding: rem(16);
     text-align: right;
   }
 
   &__items {
     & > * + * {
-      border-top: rem(1) solid darken($gray-200, 3%);
+      border-top: $cartInnerBorder;
     }
   }
 }

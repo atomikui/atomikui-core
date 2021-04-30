@@ -37,7 +37,10 @@ const updateCart = (quantity, id) => {
 };
 
 <>
-  <Cart title="Your Cart">
+  <Cart
+    title="Your Cart"
+    onProceedToCart={() => console.log('proceed to cart')}
+  >
     {cartItems.map((props) => (
       <Cart.Item
         key={props.id}
