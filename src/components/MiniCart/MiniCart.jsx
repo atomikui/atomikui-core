@@ -9,6 +9,8 @@ import { getCartSubTotal } from '../cart/Cart';
 const MiniCart = ({
   children,
   className,
+  customButton,
+  hideButton,
   onProceedToCart,
   onProceedToCartBtnColor,
   onProceedToCartBtnColorText,
@@ -45,15 +47,19 @@ const MiniCart = ({
         })}`}
       </div>
     </div>
-    <Button
-      block
-      shape="pill"
-      size="md"
-      theme={onProceedToCartBtnColor}
-      onClick={onProceedToCart}
-    >
-      {onProceedToCartBtnColorText}
-    </Button>
+    {hideButton
+      ? null
+      : customButton || (
+          <Button
+            block
+            shape="pill"
+            size="md"
+            theme={onProceedToCartBtnColor}
+            onClick={onProceedToCart}
+          >
+            {onProceedToCartBtnColorText}
+          </Button>
+        )}
   </div>
 );
 
@@ -62,6 +68,10 @@ MiniCart.propTypes = {
   children: PropTypes.node.isRequired,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
+  /** Renders a custom button in place of default button */
+  customButton: PropTypes.node,
+  /** Hides the mini cart button */
+  hideButton: PropTypes.bool,
   /** Callback triggered when "proceed to cart" button is clicked */
   onProceedToCart: PropTypes.func.isRequired,
   /** "Proceed to cart" button text */
@@ -100,6 +110,8 @@ MiniCart.propTypes = {
 
 MiniCart.defaultProps = {
   className: '',
+  customButton: null,
+  hideButton: false,
   theme: '',
   onProceedToCartBtnColorText: 'proceed to checkout',
   onProceedToCartBtnColor: 'blue',

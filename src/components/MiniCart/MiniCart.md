@@ -11,6 +11,28 @@ import { MiniCart } from '@atomikui/core';
 </MiniCart>;
 ```
 
+### Adding a Custom Button
+
+The `customButton` prop can be used to add a custom button in place of the default button.
+
+```jsx
+import { useState } from 'react';
+import { MiniCart } from '@atomikui/core';
+
+<MiniCart
+  onProceedToCart={() => console.log('proceed to checkout')}
+  customButton={
+    <a className="atomikui-btn atomikui-btn--block" href="/cart">
+      Go to my cart
+    </a>
+  }
+>
+  <MiniCart.Item title="Apples" quantity={6} price={0.89} />
+  <MiniCart.Item title="Oranges" quantity={8} price={0.99} />
+  <MiniCart.Item title="Peaches" quantity={12} price={0.79} />
+</MiniCart>;
+```
+
 ### Theming
 
 The MiniCart's `theme` and `onProceedToCartBtnColor` can be used to theme the cart's background and button colors.
