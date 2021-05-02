@@ -1,6 +1,6 @@
 import generateAccessibilityTests from '../../../scripts/generateAccessibilityTests';
 
-const component = 'MintCart';
+const component = 'MiniCart';
 
 generateAccessibilityTests({
   path: `Payment/${component}`,
