@@ -51,3 +51,11 @@ const updateCart = (quantity, id) => {
   </Cart>
 </>;
 ```
+
+```jsx noeditor
+import IframeProps from '../../../styleguide/components/IframeProps';
+
+<IframeProps component="CartItem" />;
+```
+
+### Cart

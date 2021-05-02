@@ -6,6 +6,7 @@ module.exports = {
   sectionDepth: 6,
   components: () => [
     'src/components/cart/Cart.jsx',
+    'src/components/MiniCart/MiniCart.jsx',
     'src/components/wallet/Wallet.jsx',
   ],
 };

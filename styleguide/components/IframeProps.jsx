@@ -27,7 +27,16 @@ const IframeProps = ({ component }) => {
     }
   };
 
-  const title = component.match(/[A-Z][a-z]+|[0-9]+/g).join('.');
+  let title;
+
+  // eslint-disable-next-line sonarjs/no-small-switch
+  switch (component) {
+    case 'MiniCartItem':
+      title = 'MiniCart.Item';
+      break;
+    default:
+      title = component.match(/[A-Z][a-z]+|[0-9]+/g).join('.');
+  }
 
   return (
     <>

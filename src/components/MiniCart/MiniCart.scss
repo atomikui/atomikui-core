@@ -1,0 +1,44 @@
+.atomikui-mini-cart {
+  background: transparent;
+  padding: rem(16);
+
+  &__bd {
+    margin: rem(0 -8);
+  }
+
+  &__items {
+    border-top: rem(1) solid $blue-gray-100;
+    border-bottom: rem(1) solid $blue-gray-100;
+    padding: rem(8 0);
+    margin: rem(8 0);
+
+    & > * + * {
+      margin-top: rem(4);
+    }
+  }
+
+  &__subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-weight: $font-bold;
+    padding: rem(8 0 16);
+
+    & > * + * {
+      margin-left: rem(16);
+    }
+  }
+
+  &--light {
+    background: $background-light-gray;
+  }
+
+  &--dark {
+    background: $blue-gray-900;
+    color: $white;
+
+    .atomikui-mini-cart__items {
+      border-top: rem(1) solid $blue-gray-700;
+      border-bottom: rem(1) solid $blue-gray-700;
+    }
+  }
+}
