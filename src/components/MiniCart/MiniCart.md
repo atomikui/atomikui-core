@@ -1,4 +1,4 @@
-The MiniCart is an abbreviated version of the Cart component and can be used to display a quick summary of a user's cart.
+The MiniCart is a condensed version of the Cart component and can be used to display a quick summary of a user's cart.
 
 ```jsx
 import { useState } from 'react';
@@ -35,7 +35,7 @@ import { MiniCart } from '@atomikui/core';
 
 ### Theming
 
-The MiniCart's `theme` and `onProceedToCartBtnColor` can be used to theme the cart's background and button colors.
+The MiniCart's `theme` and `onProceedToCartBtnColor` props can be used to set the cart's background and button colors.
 
 - Background themes include `light`, and `dark`. The default background is transparent.
 - Buttons themes include all of the available [Button](/styleguide/#/Form%20Controls/Button) colors.
