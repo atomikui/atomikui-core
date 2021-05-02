@@ -10,8 +10,6 @@ describe('<MiniCartItem />', () => {
   let miniCartItem;
 
   beforeEach(() => {
-    onProceedToCartSpy = sinon.spy();
-
     miniCartItem = mount(<MiniCartItem />);
   });
 
