@@ -1,5 +1,17 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.5.0](https://github.com/atomikui/atomikui-core/compare/v1.4.0...v1.5.0) - 2021-05-02
+
+#### Merged
+
+- Feature/mini cart [`#134`](https://github.com/atomikui/atomikui-core/pull/134)
+
+#### Commits
+
+- Bumps version and update changelog [`5971a2d`](https://github.com/atomikui/atomikui-core/commit/5971a2de377271290de7f945ffd331f9288fb58f)
+
+<hr />
+
 ### [v1.4.0](https://github.com/atomikui/atomikui-core/compare/v1.3.2...v1.4.0) - 2021-04-30
 
 #### Merged
