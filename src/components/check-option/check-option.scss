@@ -49,6 +49,11 @@
     @include focus-outline();
   }
 
+  &.has-error > input:checked + .atomikui-check-option__icon {
+    background: $error-red;
+    border-color: $error-red;
+  }
+
   &.has-error > input:focus + .atomikui-check-option__icon {
     @include focus-error-outline();
   }
