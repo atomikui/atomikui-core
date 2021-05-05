@@ -27,6 +27,10 @@ describe('<CheckOption />', () => {
     expect(checkOption.find('input').prop('type')).toBe('checkbox');
   });
 
+  it('Should set initial onChange default callback to undefined', () => {
+    expect(CheckOption.defaultProps.onChange()).toBe(undefined);
+  });
+
   it('Should render radio button', () => {
     checkOption.setProps({ type: 'radio' });
 
