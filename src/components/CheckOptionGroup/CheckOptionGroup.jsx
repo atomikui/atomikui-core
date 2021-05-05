@@ -24,7 +24,6 @@ const CheckOptionGroup = ({
 
   return (
     <fieldset
-      aria-describedby={ariaDescribedBy}
       className={classnames('atomikui-check-option-group', className)}
       {...others}
     >
@@ -38,6 +37,7 @@ const CheckOptionGroup = ({
               {cloneElement(child, {
                 key: `check-option-group-item-${index}`,
                 onChange: () => onChange(index),
+                ariaDescribedBy,
                 hasError,
               })}
             </Col>
@@ -88,7 +88,7 @@ CheckOptionGroup.propTypes = {
 
 CheckOptionGroup.defaultProps = {
   className: '',
-  cols: { xs: 12, sm: 6, md: 6, lg: 6 },
+  cols: { xs: 12, sm: 12, md: 12, lg: 12 },
   helpText: '',
   hasError: false,
   errorText: '',
