@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import FlexItem from './components/FlexItem';
 
 const Flex = ({
+  breakpoint,
   children,
   className,
   align,
@@ -17,13 +18,23 @@ const Flex = ({
   );
 
   return (
-    <div className={classnames('atomikui-flex', className)} {...others}>
+    <div
+      className={classnames('atomikui-flex', className, {
+        [`atomikui-flex--spacing-${spacing}`]: spacing,
+        [`atomikui-flex--align-${align}`]: align,
+        [`atomikui-flex--direction-${direction}`]: direction,
+        [`atomikui-flex--justify-${justify}`]: justify,
+      })}
+      {...others}
+    >
       {flexItems}
     </div>
   );
 };
 
 Flex.propTypes = {
+  /** Will make flex items flex: column at screen sizes below specified breakpoint */
+  breakpoint: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
   /** Flex.Item */
   children: PropTypes.node,
   /** Adds custom classes to flex parent container */
@@ -51,6 +62,7 @@ Flex.propTypes = {
 };
 
 Flex.defaultProps = {
+  breakpoint: null,
   children: <></>,
   className: '',
   align: 'start',

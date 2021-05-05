@@ -1,2 +1,34 @@
+$spacingUnits: 4 8 16 24 32 40 48 56;
+$alignmentRules: start center end stretch baseline;
+$directionRules: row row-reverse column column-reverse;
+$justificationRules: start center end between around evenly;
+
 .atomikui-flex {
+  display: flex;
+
+  @each $unit in $spacingUnits {
+    &--spacing-#{$unit} {
+      & > * + * {
+        margin: rem(0 0 0 $unit);
+      }
+    }
+  }
+
+  @each $rule in $alignmentRules {
+    &--align-#{$rule} {
+      align-items: $rule;
+    }
+  }
+
+  @each $rule in $directionRules {
+    &--direction-#{$rule} {
+      flex-direction: $rule;
+    }
+  }
+
+  @each $rule in $justificationRules {
+    &--justify-#{$rule} {
+      justify-content: $rule;
+    }
+  }
 }

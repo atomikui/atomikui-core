@@ -8,7 +8,9 @@ const FlexItem = ({ children, flexBasis }) => (
 );
 
 FlexItem.propTypes = {
+  /** Content to be rendered inside of the flex item */
   children: PropTypes.node,
+  /** Applies CSS flex property. E.g. flexBasis="0 0 50%" = flex: 0 0 50%; */
   flexBasis: PropTypes.string,
 };
 
