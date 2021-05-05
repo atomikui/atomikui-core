@@ -12,6 +12,8 @@ const types = ['checkbox', 'radio'];
 const CheckOption = forwardRef(
   (
     {
+      ariaDescribedBy,
+      ariaLabel,
       className,
       checked,
       defaultChecked,
@@ -58,7 +60,10 @@ const CheckOption = forwardRef(
             type={fieldType}
             name={inputName}
             disabled={disabled}
-            aria-describedby={`${inputHintId} ${inputErrorId}`}
+            aria-label={ariaLabel}
+            aria-describedby={
+              ariaDescribedBy || `${inputHintId} ${inputErrorId}`
+            }
             onChange={onChange}
             value={value}
             {...(checked && { checked })}
@@ -95,6 +100,10 @@ const CheckOption = forwardRef(
 );
 
 CheckOption.propTypes = {
+  /** Sets aria-describedby attribute */
+  ariaDescribedBy: PropTypes.string,
+  /** Sets aria-label attribute */
+  ariaLabel: PropTypes.string,
   /** Specifies custom component classes. */
   className: PropTypes.string,
   /** Specifies the form option checked state. */
@@ -153,6 +162,8 @@ CheckOption.propTypes = {
 };
 
 CheckOption.defaultProps = {
+  ariaDescribedBy: '',
+  ariaLabel: '',
   className: '',
   checked: false,
   defaultChecked: false,
