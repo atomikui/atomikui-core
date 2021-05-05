@@ -17,10 +17,10 @@ const CheckOptionGroup = ({
   ...others
 }) => {
   const uid = shortid.generate();
-  const legnedId = `legend_${uid}`;
+  const legendId = `legend_${uid}`;
   const inputHintId = `hint_${uid}`;
   const inputErrorId = `error_${uid}`;
-  const ariaDescribedBy = `${legnedId} ${inputHintId} ${inputErrorId}`;
+  const ariaDescribedBy = `${legendId} ${inputHintId} ${inputErrorId}`;
 
   return (
     <fieldset
@@ -28,7 +28,7 @@ const CheckOptionGroup = ({
       className={classnames('atomikui-check-option-group', className)}
       {...others}
     >
-      <legend id={legnedId} className="atomikui-label margin-bottom-16">
+      <legend id={legendId} className="atomikui-label margin-bottom-16">
         {label}
       </legend>
       <Grid>

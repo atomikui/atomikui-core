@@ -6,11 +6,17 @@ const MiniCartItem = ({ title, quantity, price }) => (
   <div className="atomikui-mini-cart-item">
     <Grid>
       <Row>
-        <Col xs={6} sm={6} md={10}>
+        <Col xs={8} sm={8} md={8}>
           {title}
         </Col>
-        <Col xs={6} sm={6} md={2} className="text-align-right">
+        <Col xs={2} sm={2} md={2} className="text-align-center">
           {quantity}
+        </Col>
+        <Col xs={2} sm={2} md={2} className="text-align-right">
+          $
+          {price.toLocaleString('en', {
+            minimumFractionDigits: 2,
+          })}
         </Col>
       </Row>
     </Grid>
