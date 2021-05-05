@@ -25,8 +25,6 @@ const handleChange = (index) => {
 };
 
 <CheckOptionGroup
-  hasError
-  errorText="This is a required field. Make a selection please."
   label="Select all of your favorite foods"
   onChange={(index) => handleChange(index)}
 >
