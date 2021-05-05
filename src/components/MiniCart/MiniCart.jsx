@@ -24,16 +24,24 @@ const MiniCart = ({
     <div className="atomikui-mini-cart__bd">
       <Grid>
         <Row>
-          <Col xs={6} sm={6} md={10} className="text-weight-bold">
+          <Col xs={8} sm={8} md={8} className="text-weight-bold">
             Item
           </Col>
           <Col
-            xs={6}
-            sm={6}
+            xs={2}
+            sm={2}
+            md={2}
+            className="text-align-center text-weight-bold"
+          >
+            Qty
+          </Col>
+          <Col
+            xs={2}
+            sm={2}
             md={2}
             className="text-align-right text-weight-bold"
           >
-            Qty
+            Price
           </Col>
         </Row>
       </Grid>
