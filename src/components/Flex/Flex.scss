@@ -58,10 +58,20 @@ $flexBreakpoints: small medium large extra-large;
       @media (max-width: map-get($breakpoints, $breakpoint)) {
         flex-direction: column;
 
+        &.atomikui-flex--direction-row-reverse {
+          flex-direction: column-reverse;
+        }
+
         @each $unit in $spacingUnits {
           &.atomikui-flex--spacing-#{$unit} {
             & > * + * {
               margin: rem($unit 0 0);
+            }
+          }
+
+          &.atomikui-flex--direction-row-reverse.atomikui-flex--spacing-#{$unit} {
+            & > * + * {
+              margin: rem(0 0 $unit);
             }
           }
         }
