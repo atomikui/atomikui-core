@@ -10,6 +10,7 @@ const Flex = ({
   className,
   align,
   direction,
+  wrap,
   justify,
   spacing,
   ...others
@@ -26,6 +27,7 @@ const Flex = ({
         [`atomikui-flex--direction-${direction}`]: direction,
         [`atomikui-flex--justify-${justify}`]: justify,
         [`atomikui-flex--breakpoint-${breakpoint}`]: breakpoint,
+        'atomikui-flex--wrap': wrap,
       })}
       {...others}
     >
@@ -43,6 +45,8 @@ Flex.propTypes = {
   className: PropTypes.string,
   /** Flex item alignment */
   align: PropTypes.oneOf(['flex-start', 'center', 'flex-end', 'stretch']),
+  /** Sets whether Flex items wrap */
+  wrap: PropTypes.bool,
   /** Flex direnction */
   direction: PropTypes.oneOf([
     'row',
@@ -69,6 +73,7 @@ Flex.defaultProps = {
   className: '',
   align: 'flex-start',
   direction: 'row',
+  wrap: true,
   justify: 'flex-start',
   spacing: null,
 };

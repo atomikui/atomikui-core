@@ -1,5 +1,9 @@
 The Flex component applies CSS flex box style rules to its child items.
 
+### Default Usage
+
+By default, the Flex component's items have no spacing and are flush with each other.
+
 ```jsx
 import { Flex } from '@atomikui/core';
 import Box from '../../examples/Box';

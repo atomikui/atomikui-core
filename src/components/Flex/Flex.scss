@@ -35,6 +35,10 @@ $flexBreakpoints: small medium large extra-large;
     }
   }
 
+  &--wrap {
+    flex-wrap: wrap;
+  }
+
   @each $rule in $alignmentRules {
     &--align-#{$rule} {
       align-items: $rule;
