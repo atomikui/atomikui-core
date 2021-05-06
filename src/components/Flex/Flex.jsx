@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -24,6 +25,7 @@ const Flex = ({
         [`atomikui-flex--align-${align}`]: align,
         [`atomikui-flex--direction-${direction}`]: direction,
         [`atomikui-flex--justify-${justify}`]: justify,
+        [`atomikui-flex--breakpoint-${breakpoint}`]: breakpoint,
       })}
       {...others}
     >
@@ -33,14 +35,14 @@ const Flex = ({
 };
 
 Flex.propTypes = {
-  /** Will make flex items flex: column at screen sizes below specified breakpoint */
-  breakpoint: PropTypes.oneOf(['xs', 'sm', 'md', 'lg']),
+  /** Will make flex items flex: column at screen sizes below the specified breakpoint */
+  breakpoint: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large']),
   /** Flex.Item */
   children: PropTypes.node,
   /** Adds custom classes to flex parent container */
   className: PropTypes.string,
   /** Flex item alignment */
-  align: PropTypes.oneOf(['start', 'center', 'end', 'stretch', 'baseline']),
+  align: PropTypes.oneOf(['flex-start', 'center', 'flex-end', 'stretch']),
   /** Flex direnction */
   direction: PropTypes.oneOf([
     'row',
@@ -50,12 +52,12 @@ Flex.propTypes = {
   ]),
   /** Flex Item justification */
   justify: PropTypes.oneOf([
-    'start',
+    'flex-start',
     'center',
-    'end',
-    'between',
-    'around',
-    'evenly',
+    'flex-end',
+    'space-between',
+    'space-around',
+    'space-evenly',
   ]),
   /** Flex item spacing */
   spacing: PropTypes.oneOf(['4', '8', '16', '24', '32', '40', '48', '56']),
@@ -65,9 +67,9 @@ Flex.defaultProps = {
   breakpoint: null,
   children: <></>,
   className: '',
-  align: 'start',
+  align: 'flex-start',
   direction: 'row',
-  justify: 'start',
+  justify: 'flex-start',
   spacing: null,
 };
 

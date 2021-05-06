@@ -1,15 +1,36 @@
 $spacingUnits: 4 8 16 24 32 40 48 56;
-$alignmentRules: start center end stretch baseline;
+$alignmentRules: flex-start center flex-end stretch;
 $directionRules: row row-reverse column column-reverse;
-$justificationRules: start center end between around evenly;
+$justificationRules: flex-start center flex-end space-between space-around
+  space-evenly;
+$flexBreakpoints: small medium large extra-large;
 
 .atomikui-flex {
   display: flex;
+  width: 100%;
 
   @each $unit in $spacingUnits {
     &--spacing-#{$unit} {
       & > * + * {
         margin: rem(0 0 0 $unit);
+      }
+
+      &.atomikui-flex--direction-row-reverse {
+        & > * + * {
+          margin: rem(0 $unit 0 0);
+        }
+      }
+
+      &.atomikui-flex--direction-column {
+        & > * + * {
+          margin: rem($unit 0 0);
+        }
+      }
+
+      &.atomikui-flex--direction-column-reverse {
+        & > * + * {
+          margin: rem(0 0 $unit);
+        }
       }
     }
   }
@@ -29,6 +50,22 @@ $justificationRules: start center end between around evenly;
   @each $rule in $justificationRules {
     &--justify-#{$rule} {
       justify-content: $rule;
+    }
+  }
+
+  @each $breakpoint in $flexBreakpoints {
+    &--breakpoint-#{$breakpoint} {
+      @media (max-width: map-get($breakpoints, $breakpoint)) {
+        flex-direction: column;
+
+        @each $unit in $spacingUnits {
+          &.atomikui-flex--spacing-#{$unit} {
+            & > * + * {
+              margin: rem($unit 0 0);
+            }
+          }
+        }
+      }
     }
   }
 }

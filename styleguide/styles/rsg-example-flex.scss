@@ -1,0 +1,5 @@
+[data-preview='Flex'] > * {
+  & > * + * {
+    margin: rem(16 0 0);
+  }
+}
