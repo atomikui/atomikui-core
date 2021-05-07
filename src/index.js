@@ -6,6 +6,7 @@ export { default as Badge } from './components/badge';
 export { default as Quotation } from './components/quotation';
 export { default as Breadcrumb } from './components/breadcrumb';
 export { default as Button } from './components/button';
+export { default as ButtonControls } from './components/ButtonControls';
 export { default as ButtonGroup } from './components/button-group';
 export { default as Card } from './components/card';
 export { default as Cart } from './components/cart';

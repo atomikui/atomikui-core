@@ -40,6 +40,7 @@ export default {
     [
       'AutoComplete',
       'Button',
+      'ButtonControls',
       'ButtonGroup',
       'CheckOption',
       'CheckOptionGroup',

@@ -1,0 +1,36 @@
+.atomikui-button-controls {
+  flex-direction: column;
+  display: flex;
+
+  & > * + * {
+    margin: rem(8 0 0);
+  }
+
+  &--align-left {
+    justify-content: flex-start;
+  }
+
+  &--align-center {
+    justify-content: center;
+  }
+
+  &--align-right {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    flex-direction: row;
+
+    & > * + * {
+      margin: rem(0 0 0 8);
+    }
+
+    &--block {
+      flex-direction: column;
+
+      & > * + * {
+        margin: rem(8 0 0);
+      }
+    }
+  }
+}

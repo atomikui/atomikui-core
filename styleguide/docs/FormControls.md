@@ -4,6 +4,7 @@ Form Controls are simple UI elements such as buttons and form fields. They are i
 
 - [AutoComplete](/styleguide/#/Form%20Controls/AutoComplete)
 - [Button](/styleguide/#/Form%20Controls/Button)
+- [ButtonControls](/styleguide/#/Form%20Controls/ButtonControls)
 - [ButtonGroup](/styleguide/#/Form%20Controls/ButtonGroup)
 - [CheckOption](/styleguide/#/Form%20Controls/CheckOption)
 - [CheckOptionGroup](/styleguide/#/Form%20Controls/CheckOptionGroup)

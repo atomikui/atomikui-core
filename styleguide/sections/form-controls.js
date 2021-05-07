@@ -7,6 +7,7 @@ module.exports = {
   components: () => [
     'src/components/auto-complete/AutoComplete.jsx',
     'src/components/button/Button.jsx',
+    'src/components/ButtonControls/ButtonControls.jsx',
     'src/components/button-group/ButtonGroup.jsx',
     'src/components/check-option/CheckOption.jsx',
     'src/components/CheckOptionGroup/CheckOptionGroup.jsx',
