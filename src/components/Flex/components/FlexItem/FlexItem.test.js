@@ -10,7 +10,7 @@ describe('<Component />', () => {
 
   beforeEach(() => {
     flexItem = mount(
-      <FlexItem flexBasis="1" flexShrink="1">
+      <FlexItem>
         <div />
       </FlexItem>,
     );
@@ -24,11 +24,13 @@ describe('<Component />', () => {
     expect(flexItem.children()).toHaveLength(1);
   });
 
-  it('Should render children with flexBasis', () => {
+  it('Should render children with flex CSS rule', () => {
+    flexItem.setProps({ flex: '1' });
     expect(flexItem.children().first().props().style.flex).toBe('1');
   });
 
-  it('Should render children with flexShrink', () => {
+  it('Should render children with flex-shrink CSS rule', () => {
+    flexItem.setProps({ shrink: '1' });
     expect(flexItem.children().first().props().style.flexShrink).toBe('1');
   });
 });

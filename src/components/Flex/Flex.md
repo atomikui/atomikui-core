@@ -249,7 +249,7 @@ import Box from '../../examples/Box';
 
 ### Flex Item Sizing
 
-Flex items can be sized by applying the `flexBasis` prop to the Flex.Item component.
+The `flex` CSS rule can be applied to Flex items with the `flex` prop.
 
 ```jsx
 import { Flex } from '@atomikui/core';
@@ -257,13 +257,36 @@ import Box from '../../examples/Box';
 
 <>
   <Flex spacing="16">
-    <Flex.Item flexBasis="50% 0 0">
+    <Flex.Item flex="50% 0 0">
       <Box />
     </Flex.Item>
-    <Flex.Item flexBasis="2">
+    <Flex.Item flex="2">
       <Box />
     </Flex.Item>
-    <Flex.Item flexBasis="1">
+    <Flex.Item flex="1">
+      <Box />
+    </Flex.Item>
+  </Flex>
+</>;
+```
+
+### Flex shrink
+
+The `flex-shrink` CSS rule can be applied to Flex items with the `shrink` prop.
+
+```jsx
+import { Flex } from '@atomikui/core';
+import Box from '../../examples/Box';
+
+<>
+  <Flex spacing="16" wrap={false}>
+    <Flex.Item flex="0 0 400px" shrink="1">
+      <Box />
+    </Flex.Item>
+    <Flex.Item flex="0 0 400px" shrink="2">
+      <Box />
+    </Flex.Item>
+    <Flex.Item flex="0 0 400px">
       <Box />
     </Flex.Item>
   </Flex>
@@ -279,16 +302,16 @@ import { Flex } from '@atomikui/core';
 import Box from '../../examples/Box';
 
 <Flex breakpoint="medium" spacing="16">
-  <Flex.Item flexBasis="1">
+  <Flex.Item flex="1">
     <Box />
   </Flex.Item>
-  <Flex.Item flexBasis="1">
+  <Flex.Item flex="1">
     <Box />
   </Flex.Item>
-  <Flex.Item flexBasis="1">
+  <Flex.Item flex="1">
     <Box />
   </Flex.Item>
-  <Flex.Item flexBasis="1">
+  <Flex.Item flex="1">
     <Box />
   </Flex.Item>
 </Flex>;
