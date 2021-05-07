@@ -8,10 +8,6 @@ module.exports = {
       content: './styleguide/docs/Colors.md',
     },
     {
-      name: 'Flexbox',
-      content: './src/examples/Flexbox.md',
-    },
-    {
       name: 'Spacing',
       content: './styleguide/docs/Spacing.md',
     },

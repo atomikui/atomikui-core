@@ -4,7 +4,8 @@ module.exports = {
   usageMode: 'expand',
   exampleMode: 'expand',
   sectionDepth: 6,
-  components: () => {
-    return ['src/components/media/Media.jsx'];
-  },
+  components: () => [
+    'src/components/Flex/Flex.jsx',
+    'src/components/media/Media.jsx',
+  ],
 };

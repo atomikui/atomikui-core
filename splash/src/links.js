@@ -76,7 +76,7 @@ export default {
   Landmarks: ['Landmarks are major sections on a page', ['Header', 'Footer']],
   Layout: [
     'Layout components are used to provide formatting for page content.',
-    ['Media'],
+    ['flex', 'Media'],
   ],
   Navigation: [
     'Navigation components are used to provide a means to navigate throught an app or website, or provide a means to advance back and forth between content.',
