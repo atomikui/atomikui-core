@@ -21,6 +21,7 @@ const Flex = ({
 
   return (
     <div
+      data-test-id="flex"
       className={classnames('atomikui-flex', className, {
         [`atomikui-flex--spacing-${spacing}`]: spacing,
         [`atomikui-flex--align-${align}`]: align,
