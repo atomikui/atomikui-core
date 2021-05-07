@@ -5,7 +5,7 @@ import Flex from './Flex';
 
 configure({ adapter: new Adapter() });
 
-describe('<Component />', () => {
+describe('<Flex />', () => {
   let flex;
 
   beforeEach(() => {
