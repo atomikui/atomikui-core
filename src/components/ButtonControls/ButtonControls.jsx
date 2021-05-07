@@ -4,6 +4,7 @@ import classnames from 'classnames';
 
 const ButtonControls = ({
   align,
+  breakpoint,
   children,
   className,
   isBlock,
@@ -13,6 +14,7 @@ const ButtonControls = ({
   <div
     className={classnames('atomikui-button-controls', className, {
       [`atomikui-button-controls--align-${align}`]: align,
+      [`atomikui-button-controls--${breakpoint}`]: breakpoint,
       'atomikui-button-controls--block': isBlock,
     })}
     {...others}
@@ -26,6 +28,8 @@ const ButtonControls = ({
 ButtonControls.propTypes = {
   /** Sets the horizontal alignment of the ButtonControls children */
   align: PropTypes.oneOf(['left', 'center', 'right']),
+  /** Sets the breakpoint at which all children stack */
+  breakpoint: PropTypes.oneOf(['small', 'medium', 'large', 'extra-large']),
   /** Child elements, Must be of type Button */
   children: PropTypes.node.isRequired,
   /** Applies custom CSS classes to the parent container */
@@ -38,6 +42,7 @@ ButtonControls.propTypes = {
 
 ButtonControls.defaultProps = {
   align: 'left',
+  breakpoint: 'medium',
   className: '',
   isBlock: false,
   isReverse: false,

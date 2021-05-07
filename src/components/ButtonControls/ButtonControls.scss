@@ -1,3 +1,5 @@
+$buttonControlsBreakpoints: small medium large extra-large;
+
 .atomikui-button-controls {
   flex-direction: column;
   display: flex;
@@ -18,18 +20,22 @@
     justify-content: flex-end;
   }
 
-  @media (min-width: $breakpoint-medium) {
-    flex-direction: row;
+  @each $breakpoint in $buttonControlsBreakpoints {
+    &--#{$breakpoint} {
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        flex-direction: row;
 
-    & > * + * {
-      margin: rem(0 0 0 8);
-    }
+        & > * + * {
+          margin: rem(0 0 0 8);
+        }
 
-    &--block {
-      flex-direction: column;
+        &.atomikui-button-controls--block {
+          flex-direction: column;
 
-      & > * + * {
-        margin: rem(8 0 0);
+          & > * + * {
+            margin: rem(8 0 0);
+          }
+        }
       }
     }
   }
