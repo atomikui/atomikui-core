@@ -1,5 +1,22 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.6.0](https://github.com/atomikui/atomikui-core/compare/v1.5.0...v1.6.0) - 2021-05-07
+
+#### Merged
+
+- Feature/flex component [`#141`](https://github.com/atomikui/atomikui-core/pull/141)
+- Accessibility/check option group [`#140`](https://github.com/atomikui/atomikui-core/pull/140)
+- Enhancement/mini cart [`#139`](https://github.com/atomikui/atomikui-core/pull/139)
+- CheckOption - Updates checked error state [`#137`](https://github.com/atomikui/atomikui-core/pull/137)
+
+#### Commits
+
+- Bumps version and update changelog [`fae09f1`](https://github.com/atomikui/atomikui-core/commit/fae09f12b12a5944becc004cddb9ef6b3af34927)
+- Renames legnedId [`55fe42b`](https://github.com/atomikui/atomikui-core/commit/55fe42bd91a455e2dda2e7dd3d6171e94b85e383)
+- Update CheckOptionGroup.md [`ffddaab`](https://github.com/atomikui/atomikui-core/commit/ffddaab7be23652b328abc2464ee1a0da527ea58)
+
+<hr />
+
 ### [v1.5.0](https://github.com/atomikui/atomikui-core/compare/v1.4.0...v1.5.0) - 2021-05-02
 
 #### Merged
