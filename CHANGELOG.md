@@ -1,5 +1,14 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.7.1](https://github.com/atomikui/atomikui-core/compare/v1.7.0...v1.7.1) - 2021-05-07
+
+#### Commits
+
+- ButtonControls - Removes filtering children by type. [`2461580`](https://github.com/atomikui/atomikui-core/commit/2461580184ac9aed6b0f5c247e752ca00c74f5e4)
+- Bumps version and update changelog [`5a8bb00`](https://github.com/atomikui/atomikui-core/commit/5a8bb008f15daf2602ca7917c33896ae11467e4d)
+
+<hr />
+
 ### [v1.7.0](https://github.com/atomikui/atomikui-core/compare/v1.6.0...v1.7.0) - 2021-05-07
 
 #### Commits
