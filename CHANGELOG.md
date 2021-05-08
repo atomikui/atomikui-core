@@ -1,5 +1,15 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.7.0](https://github.com/atomikui/atomikui-core/compare/v1.6.0...v1.7.0) - 2021-05-07
+
+#### Commits
+
+- ButtonControls component [`496c8df`](https://github.com/atomikui/atomikui-core/commit/496c8dfd235abcd3410f22879918541c94c60c3b)
+- ButtonControls - test coverage [`e56210e`](https://github.com/atomikui/atomikui-core/commit/e56210e07eb20e6b9e9e2772b3b046392789fb0f)
+- ButtonControls - Adds breakpoint prop [`e8b64f8`](https://github.com/atomikui/atomikui-core/commit/e8b64f8416539cc585ed8b0997fbcd0cbd7156cb)
+
+<hr />
+
 ### [v1.6.0](https://github.com/atomikui/atomikui-core/compare/v1.5.0...v1.6.0) - 2021-05-07
 
 #### Merged
