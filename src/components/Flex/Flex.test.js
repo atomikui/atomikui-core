@@ -1,6 +1,6 @@
 import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import { mount, configure } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import Flex from './Flex';
 
 configure({ adapter: new Adapter() });
@@ -9,7 +9,7 @@ describe('<Flex />', () => {
   let flex;
 
   beforeEach(() => {
-    flex = mount(
+    flex = shallow(
       <Flex>
         <Flex.Item>Item 1</Flex.Item>
         <Flex.Item>Item 1</Flex.Item>
@@ -35,9 +35,7 @@ describe('<Flex />', () => {
 
   it('Should set class to apply flex wrapping', () => {
     flex.setProps({ wrap: true });
-    expect(
-      flex.find('[data-test-id="flex"]').hasClass('atomikui-flex--wrap'),
-    ).toBeTruthy();
+    expect(flex.hasClass('atomikui-flex--wrap')).toBeTruthy();
   });
 
   test.each(['4', '8', '16', '24', '32', '40', '48', '56'])(

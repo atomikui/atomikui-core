@@ -21,7 +21,7 @@ $buttonControlsBreakpoints: small medium large extra-large;
   }
 
   @each $breakpoint in $buttonControlsBreakpoints {
-    &--#{$breakpoint} {
+    &--breakpoint-#{$breakpoint} {
       @media (min-width: map-get($breakpoints, $breakpoint)) {
         flex-direction: row;
 
@@ -29,7 +29,7 @@ $buttonControlsBreakpoints: small medium large extra-large;
           margin: rem(0 0 0 8);
         }
 
-        &.atomikui-button-controls--block {
+        &.is-block {
           flex-direction: column;
 
           & > * + * {

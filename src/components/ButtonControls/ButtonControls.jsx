@@ -14,8 +14,8 @@ const ButtonControls = ({
   <div
     className={classnames('atomikui-button-controls', className, {
       [`atomikui-button-controls--align-${align}`]: align,
-      [`atomikui-button-controls--${breakpoint}`]: breakpoint,
-      'atomikui-button-controls--block': isBlock,
+      [`atomikui-button-controls--breakpoint-${breakpoint}`]: breakpoint,
+      'is-block': isBlock,
     })}
     {...others}
   >
