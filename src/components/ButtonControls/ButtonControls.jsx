@@ -19,9 +19,7 @@ const ButtonControls = ({
     })}
     {...others}
   >
-    {(isReverse ? Children.toArray(children).reverse() : children).filter(
-      (child) => child.type.name === 'Button',
-    )}
+    {isReverse ? Children.toArray(children).reverse() : children}
   </div>
 );
 

@@ -26,16 +26,6 @@ describe('<ButtonControls />', () => {
     expect(buttonControls.children()).toHaveLength(2);
   });
 
-  it('Should only render Button components', () => {
-    const invalidButtonControls = shallow(
-      <ButtonControls>
-        <button>Chevrolet</button>
-        <button>Ford</button>
-      </ButtonControls>,
-    );
-    expect(invalidButtonControls.children()).not.toHaveLength(1);
-  });
-
   it('Should set items in reverse order', () => {
     buttonControls.setProps({ isReverse: true });
     expect(buttonControls.find(Button).first().children().text()).toBe('Ford');
