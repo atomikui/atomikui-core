@@ -11,6 +11,7 @@ import Button from '../button/Button';
 const FileUpload = forwardRef(
   (
     {
+      accept,
       className,
       dragAndDrop,
       errorText,
@@ -161,6 +162,8 @@ const FileUpload = forwardRef(
 );
 
 FileUpload.propTypes = {
+  /** Specifies one or more unique file type specifiers describing file types to allow */
+  accept: PropTypes.string,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
   /** Makes fiel upload drag and drop */
@@ -205,6 +208,7 @@ FileUpload.propTypes = {
 };
 
 FileUpload.defaultProps = {
+  accept: '',
   className: '',
   dragAndDrop: false,
   errorText: '',

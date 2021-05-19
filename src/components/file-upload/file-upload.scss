@@ -28,8 +28,8 @@
     }
 
     &--drag-and-drop {
-      background: $background-light-gray;
-      border: rem(2) dashed darken($background-light-gray, 7%);
+      background: transparent;
+      border: rem(2) dashed $blue-gray-200;
       border-radius: rem($border-radius);
       display: flex;
       flex-direction: column;
@@ -37,6 +37,11 @@
       text-align: center;
       transition: all 0.2s ease-in-out;
       width: 100%;
+
+      &:hover {
+        border-style: solid;
+        border-color: $focus-blue;
+      }
 
       & > .atomikui-file-upload__btn {
         background: transparent;
@@ -60,13 +65,12 @@
 
   &__file-list {
     & > * {
-      background: $white;
-      border: rem(1) solid $blue-gray-200;
+      background: $background-light-gray;
       border-radius: rem(4);
       display: inline-block;
       font-size: rem(15);
       margin-bottom: rem(8);
-      padding: rem(3 8);
+      padding: rem(4 8);
     }
 
     & > * + * {
@@ -81,7 +85,7 @@
     width: rem(28);
 
     &:hover {
-      background: $blue-gray-50;
+      background: $blue-gray-100;
     }
   }
 
