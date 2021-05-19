@@ -1,5 +1,17 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.8.0](https://github.com/atomikui/atomikui-core/compare/v1.7.1...v1.8.0) - 2021-05-19
+
+#### Merged
+
+- Enhancement/file upload [`#143`](https://github.com/atomikui/atomikui-core/pull/143)
+
+#### Commits
+
+- Bumps version and update changelog [`46ac497`](https://github.com/atomikui/atomikui-core/commit/46ac49771193ba951875b74ff9930e564149916b)
+
+<hr />
+
 ### [v1.7.1](https://github.com/atomikui/atomikui-core/compare/v1.7.0...v1.7.1) - 2021-05-07
 
 #### Commits
