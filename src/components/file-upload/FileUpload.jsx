@@ -1,4 +1,4 @@
-import React, { useEffect, useState, forwardRef } from 'react';
+import React, { useEffect, useState, forwardRef, useCallback } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
@@ -63,7 +63,7 @@ const FileUpload = forwardRef(
 
     useEffect(() => {
       onChange(files);
-    }, [onChange, files, removeFile]);
+    }, [files, removeFile]);
 
     return (
       <div
@@ -75,6 +75,7 @@ const FileUpload = forwardRef(
         <input
           ref={ref}
           id={id}
+          accept={accept}
           name="fileUpload"
           type="file"
           onChange={handleChange}

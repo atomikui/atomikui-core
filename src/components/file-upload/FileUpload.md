@@ -19,7 +19,6 @@ import { FileUpload } from '@atomikui/core';
 
 <FileUpload
   label="Select a file to upload or drag and drop in the box"
-  uploadBtnTheme="blue"
   onChange={(fileData) => console.log(fileData)}
   dragAndDrop
 />;
