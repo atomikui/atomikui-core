@@ -8,7 +8,7 @@ import { FileUpload } from '@atomikui/core';
 <FileUpload
   label="Upload file"
   uploadBtnTheme="blue"
-  onChange={(file) => console.log(file)}
+  onChange={(fileData) => console.log(fileData)}
 />;
 ```
 
@@ -19,8 +19,7 @@ import { FileUpload } from '@atomikui/core';
 
 <FileUpload
   label="Select a file to upload or drag and drop in the box"
-  uploadBtnTheme="blue"
-  onChange={(file) => console.log(file)}
+  onChange={(fileData) => console.log(fileData)}
   dragAndDrop
 />;
 ```

@@ -1,15 +1,17 @@
-import React, { useState, forwardRef } from 'react';
+import React, { useEffect, useState, forwardRef } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
-import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import { faCloudUploadAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 import List from '../list';
 import Hint from '../hint/Hint';
+import Button from '../button/Button';
 
 const FileUpload = forwardRef(
   (
     {
+      accept,
       className,
       dragAndDrop,
       errorText,
@@ -23,6 +25,7 @@ const FileUpload = forwardRef(
     },
     ref,
   ) => {
+    const [fileNames, setFileNames] = useState([]);
     const [files, setFiles] = useState([]);
 
     const id = shortid.generate();
@@ -30,29 +33,37 @@ const FileUpload = forwardRef(
     const inputHintId = `${inputName}_hint`;
     const inputErrorId = `${inputName}_error`;
 
-    const getFileNames = (fileList) => {
-      const fileArray = [];
-
-      for (let i = 0; i < fileList.length; i += 1) {
-        fileArray.push(fileList[i].name);
-      }
-
-      return fileArray;
-    };
+    const getFileNames = (fileList) =>
+      Array.from(fileList).reduce((arr, file) => [...arr, file.name], []);
 
     const handleChange = (e) => {
       e.preventDefault();
 
+      const formData = new FormData();
+
       const selectedFiles = e.target.files || e.dataTransfer.files;
 
-      setFiles(getFileNames(selectedFiles));
-      onChange(selectedFiles);
+      if (selectedFiles.length) {
+        setFileNames(getFileNames(selectedFiles));
+        selectedFiles.forEach((file) => formData.append(file.name, file));
+        setFiles(formData);
+      }
+    };
+
+    const removeFile = (selectedFile) => {
+      files.delete(selectedFile);
+      setFiles(files);
+      setFileNames(fileNames.filter((fileName) => fileName !== selectedFile));
     };
 
     const onDragOver = (e) => {
       e.stopPropagation();
       e.preventDefault();
     };
+
+    useEffect(() => {
+      onChange(files);
+    }, [files, removeFile]);
 
     return (
       <div
@@ -64,6 +75,7 @@ const FileUpload = forwardRef(
         <input
           ref={ref}
           id={id}
+          accept={accept}
           name="fileUpload"
           type="file"
           onChange={handleChange}
@@ -104,17 +116,38 @@ const FileUpload = forwardRef(
               label
             )}
           </span>
-          {dragAndDrop && files.length > 0 && (
+          {dragAndDrop && fileNames.length > 0 && (
             <>
               <div className="margin-top-16" />
               <List className="atomikui-file-upload__file-list">
-                {files.map((file) => (
-                  <List.Item key={shortid.generate()}>{file}</List.Item>
+                {fileNames.map((fileName) => (
+                  <List.Item
+                    data-test-id="file-item"
+                    key={shortid.generate()}
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    {fileName}
+                    <Button
+                      onClick={() => removeFile(fileName)}
+                      data-test-id="file-delete-button"
+                      className="atomikui-file-upload__delete-btn"
+                      theme="hollow"
+                      size="sm"
+                      condensed
+                    >
+                      <Icon
+                        size="lg"
+                        icon={faTimes}
+                        color="#546e7a"
+                        title={label}
+                      />
+                    </Button>
+                  </List.Item>
                 ))}
               </List>
             </>
           )}
-          {!dragAndDrop && <span>{files.join(', ')}</span>}
+          {!dragAndDrop && <span>{fileNames.join(', ')}</span>}
         </label>
         {(helpText || errorText) && (
           <div className="atomikui-formfield__hints">
@@ -132,6 +165,8 @@ const FileUpload = forwardRef(
 );
 
 FileUpload.propTypes = {
+  /** Specifies one or more unique file type specifiers describing file types to allow */
+  accept: PropTypes.string,
   /** Adds custom component CSS classes */
   className: PropTypes.string,
   /** Makes fiel upload drag and drop */
@@ -176,6 +211,7 @@ FileUpload.propTypes = {
 };
 
 FileUpload.defaultProps = {
+  accept: '',
   className: '',
   dragAndDrop: false,
   errorText: '',
