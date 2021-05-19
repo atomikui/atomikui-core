@@ -122,12 +122,14 @@ const FileUpload = forwardRef(
               <List className="atomikui-file-upload__file-list">
                 {fileNames.map((fileName) => (
                   <List.Item
+                    data-test-id="file-item"
                     key={shortid.generate()}
                     onClick={(e) => e.preventDefault()}
                   >
                     {fileName}
                     <Button
                       onClick={() => removeFile(fileName)}
+                      data-test-id="file-delete-button"
                       className="atomikui-file-upload__delete-btn"
                       theme="hollow"
                       size="sm"

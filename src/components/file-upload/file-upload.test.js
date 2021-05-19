@@ -37,7 +37,7 @@ describe('<FileUpload />', () => {
     fileUpload = mount(
       <FileUpload
         label="Upload file"
-        uploadBtnTheme="primary"
+        uploadBtnTheme="blue"
         onChange={onChangeSpy}
       />,
     );
@@ -76,6 +76,14 @@ describe('<FileUpload />', () => {
         .last()
         .text(),
     ).toBe(fileName);
+  });
+
+  it('Should remove a filename', () => {
+    fileUpload.setProps({ dragAndDrop: true });
+    fileUpload.find('input').simulate('change', onChangeEvent);
+    const btn = fileUpload.find('button[data-test-id="file-delete-button"]');
+    btn.simulate('click');
+    expect(fileUpload.find('[data-test-id="file-item"]')).toHaveLength(0);
   });
 
   it('Should render a list of files if `dragAndDrop` prop is `true`', () => {
