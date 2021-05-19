@@ -55,21 +55,33 @@
   }
 
   &__drag-drop-label {
-    font-weight: $font-bold;
+    font-weight: $font-semibold;
   }
 
   &__file-list {
     & > * {
       background: $white;
-      border: rem(1) solid darken($blue-100, 7%);
+      border: rem(1) solid $blue-gray-200;
       border-radius: rem(4);
       display: inline-block;
+      font-size: rem(15);
       margin-bottom: rem(8);
       padding: rem(3 8);
     }
 
     & > * + * {
       margin-left: rem(8);
+    }
+  }
+
+  &__delete-btn {
+    height: rem(28);
+    margin-left: rem(8);
+    padding: 0;
+    width: rem(28);
+
+    &:hover {
+      background: $blue-gray-50;
     }
   }
 
