@@ -45,7 +45,7 @@ const FileUpload = forwardRef(
 
       if (selectedFiles.length) {
         setFileNames(getFileNames(selectedFiles));
-        selectedFiles.forEach((file) => formData.append(file.name, file));
+        selectedFiles.forEach((file) => formData.append('file', file));
         setFiles(formData);
       }
     };
