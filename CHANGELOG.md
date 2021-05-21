@@ -1,5 +1,14 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.8.1](https://github.com/atomikui/atomikui-core/compare/v1.8.0...v1.8.1) - 2021-05-21
+
+#### Commits
+
+- Bumps version and update changelog [`2a22032`](https://github.com/atomikui/atomikui-core/commit/2a220329922f30028e8804920e2d19ede291b7b9)
+- updates FormData [`fc5ad23`](https://github.com/atomikui/atomikui-core/commit/fc5ad234d2358002eaf1b1336cca7e5232afa4c8)
+
+<hr />
+
 ### [v1.8.0](https://github.com/atomikui/atomikui-core/compare/v1.7.1...v1.8.0) - 2021-05-19
 
 #### Merged
