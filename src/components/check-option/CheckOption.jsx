@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import shortid from 'shortid';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import setTheme from '../../utilities/setTheme';
 import Hint from '../hint/Hint';
 import Label from '../label/Label';
 
@@ -49,9 +50,7 @@ const CheckOption = forwardRef(
             'has-error': hasError,
             'is-disabled': disabled,
             'atomikui-check-option--radio': type === 'radio',
-            [`atomikui-check-option--${theme}${
-              themeVariant ? `-${themeVariant}` : ''
-            }`]: theme,
+            [setTheme('atomikui-check-option', theme, themeVariant)]: theme,
           })}
         >
           <input
@@ -174,7 +173,7 @@ CheckOption.defaultProps = {
   id: null,
   label: '',
   name: '',
-  onChange() {},
+  onChange: () => {},
   required: false,
   theme: null,
   themeVariant: null,

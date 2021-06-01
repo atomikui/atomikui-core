@@ -24,8 +24,6 @@ const Dropdown = forwardRef(
       onChange,
       options,
       required,
-      theme,
-      themeVariant,
       value,
       ...others
     },
@@ -46,9 +44,6 @@ const Dropdown = forwardRef(
         className={classnames('atomikui-dropdown', className, {
           'has-error': hasError,
           'is-disabled': disabled,
-          [`atomikui-dropdown--${theme}${
-            themeVariant ? `-${themeVariant}` : ''
-          }`]: theme,
         })}
         {...others}
       >
@@ -145,33 +140,6 @@ Dropdown.propTypes = {
   ),
   /** Specifies if a field is required. */
   required: PropTypes.bool,
-  /** Specifies the color variation. */
-  theme: PropTypes.oneOf([
-    'red',
-    'pink',
-    'purple',
-    'deep-purple',
-    'indigo',
-    'blue',
-    'sky-blue',
-    'cyan',
-    'teal',
-    'green',
-    'light-green',
-    'lime',
-    'yellow',
-    'light-orange',
-    'orange',
-    'deep-orange',
-    'amber',
-    'brown',
-    'gray',
-    'blue-gray',
-    'black',
-    'white',
-  ]),
-  /** The theme color variant */
-  themeVariant: PropTypes.oneOf(['light']),
   /** Dropdown value. */
   value: PropTypes.string,
 };
@@ -188,11 +156,9 @@ Dropdown.defaultProps = {
   label: '',
   labelless: false,
   name: '',
-  onChange() {},
+  onChange: () => {},
   options: [],
   required: false,
-  theme: null,
-  themeVariant: null,
   value: '',
 };
 

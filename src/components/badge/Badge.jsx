@@ -1,13 +1,12 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import setTheme from '../../utilities/setTheme';
 
 const Badge = ({ className, label, value, theme, themeVariant, ...others }) => (
   <div
     className={classnames('atomikui-badge', className, {
-      [`atomikui-badge--${theme}${
-        themeVariant ? `-${themeVariant}` : ''
-      }`]: theme,
+      [setTheme('atomikui-badge', theme, themeVariant)]: theme,
     })}
     {...others}
   >

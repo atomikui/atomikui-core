@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import setTheme from '../../utilities/setTheme';
 
 const ProgressBar = ({
   animated,
@@ -19,9 +20,7 @@ const ProgressBar = ({
       className,
       [animated && 'animated', shape, thickness].map((prop) => ({
         [`atomikui-progress-bar--${prop}`]: prop,
-        [`atomikui-progress-bar--${theme}${
-          themeVariant ? `-${themeVariant}` : ''
-        }`]: theme,
+        [setTheme('atomikui-progress-bar', theme, themeVariant)]: theme,
       })),
     )}
     {...others}

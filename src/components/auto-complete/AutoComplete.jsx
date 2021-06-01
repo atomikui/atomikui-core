@@ -95,7 +95,7 @@ AutoComplete.propTypes = {
 AutoComplete.defaultProps = {
   className: '',
   items: [],
-  onChange() {},
+  onChange: () => {},
   value: '',
 };
 

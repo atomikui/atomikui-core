@@ -78,7 +78,7 @@ Comment.defaultProps = {
   children: null,
   className: '',
   metadata: '',
-  onReply() {},
+  onReply: () => {},
   replies: [],
 };
 

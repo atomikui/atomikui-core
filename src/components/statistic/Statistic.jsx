@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import setTheme from '../../utilities/setTheme';
 
 const Statistic = ({
   className,
@@ -26,9 +27,7 @@ const Statistic = ({
       className={classnames('atomikui-statistic', className, {
         'atomikui-statistic--top-label': topLabel && !horizontal,
         'atomikui-statistic--horizontal': horizontal,
-        [`atomikui-statistic--${theme}${
-          themeVariant ? `-${themeVariant}` : ''
-        }`]: theme,
+        [setTheme('atomikui-statistic', theme, themeVariant)]: theme,
       })}
       {...others}
     >

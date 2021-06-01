@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import numeral from 'numeral';
+import setTheme from '../../utilities/setTheme';
 
 const Price = ({
   amount,
@@ -16,9 +17,7 @@ const Price = ({
   <span
     className={classnames('atomikui-price', className, {
       [`atomikui-price--${size}`]: size,
-      [`atomikui-price--${theme}${
-        themeVariant ? `-${themeVariant}` : ''
-      }`]: theme,
+      [setTheme('atomikui-price', theme, themeVariant)]: theme,
     })}
     {...others}
   >

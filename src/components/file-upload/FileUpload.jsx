@@ -219,7 +219,7 @@ FileUpload.defaultProps = {
   helpText: '',
   label: 'Select a File',
   name: '',
-  onChange() {},
+  onChange: () => {},
   uploadBtnTheme: null,
 };
 

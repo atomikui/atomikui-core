@@ -1,14 +1,13 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import setTheme from '../../utilities/setTheme';
 
 const Spinner = ({ className, theme, themeVariant, size, ...others }) => (
   <div
     className={classnames('atomikui-spinner', className, {
       [`atomikui-spinner--${size}`]: size,
-      [`atomikui-spinner--${theme}${
-        themeVariant ? `-${themeVariant}` : ''
-      }`]: theme,
+      [setTheme('atomikui-spinner', theme, themeVariant)]: theme,
     })}
     {...others}
   >

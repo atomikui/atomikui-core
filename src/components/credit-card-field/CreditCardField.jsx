@@ -303,8 +303,8 @@ CreditCardField.defaultProps = {
   hideCvc: false,
   hideZip: false,
   label: '',
-  onCardNumberChange() {},
-  onChange() {},
+  onCardNumberChange: () => {},
+  onChange: () => {},
 };
 
 export default CreditCardField;

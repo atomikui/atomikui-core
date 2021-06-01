@@ -1,13 +1,12 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import setTheme from '../../utilities/setTheme';
 
 const Jumbotron = ({ children, className, theme, themeVariant, ...others }) => (
   <div
     className={classnames('atomikui-jumbotron', className, {
-      [`atomikui-jumbotron--${theme}${
-        themeVariant ? `-${themeVariant}` : ''
-      }`]: theme,
+      [setTheme('atomikui-jumbotron', theme, themeVariant)]: theme,
     })}
     data-test-id="jumbotron"
     {...others}

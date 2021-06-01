@@ -175,7 +175,7 @@ RangeSlider.defaultProps = {
   max: '',
   min: '',
   name: '',
-  onChange() {},
+  onChange: () => {},
   required: false,
   step: '',
   ticks: [],

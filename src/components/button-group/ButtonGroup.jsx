@@ -2,8 +2,8 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
-import Label from '../label';
 import Hint from '../hint';
+import setTheme from '../../utilities/setTheme';
 
 const ButtonGroup = ({
   children,
@@ -30,9 +30,7 @@ const ButtonGroup = ({
       )}
       <div
         className={classnames('atomikui-button-group', className, {
-          [`atomikui-button-group--${theme}${
-            themeVariant ? `-${themeVariant}` : ''
-          }`]: theme,
+          [setTheme('atomikui-button-group', theme, themeVariant)]: theme,
           [`atomikui-button-group--${size}`]: size,
           'atomikui-button-group--stretch': stretch,
           'has-error': hasError,

@@ -2,6 +2,7 @@ import React, { Children } from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import shortid from 'shortid';
+import setTheme from '../../utilities/setTheme';
 import List from '../list';
 
 const Pagination = ({
@@ -13,9 +14,7 @@ const Pagination = ({
 }) => (
   <List
     className={classnames('atomikui-pagination', {
-      [`atomikui-pagination--${theme}${
-        themeVariant ? `-${themeVariant}` : ''
-      }`]: theme,
+      [setTheme('atomikui-pagination', theme, themeVariant)]: theme,
     })}
     {...others}
   >

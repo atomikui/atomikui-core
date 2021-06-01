@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import setTheme from '../../utilities/setTheme';
 
 const Button = ({
   block,
@@ -17,9 +18,7 @@ const Button = ({
 }) => (
   <button
     className={classnames('atomikui-btn', className, {
-      [`atomikui-btn--${theme}${
-        themeVariant ? `-${themeVariant}` : ''
-      }`]: theme,
+      [setTheme('atomikui-btn', theme, themeVariant)]: theme,
       [`atomikui-btn--${shape}`]: shape,
       [`atomikui-btn--${size}`]: size,
       'atomikui-btn--condensed': condensed,

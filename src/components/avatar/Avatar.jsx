@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import setTheme from '../../utilities/setTheme';
 
 const Avatar = ({
   alt,
@@ -25,9 +26,7 @@ const Avatar = ({
   >
     <span
       className={classnames('atomikui-avatar__content', className, {
-        [`atomikui-avatar__content--${theme}${
-          themeVariant ? `-${themeVariant}` : ''
-        }`]: theme,
+        [setTheme('atomikui-avatar__content', theme, themeVariant)]: theme,
       })}
       data-test-id="avatar-content"
     >

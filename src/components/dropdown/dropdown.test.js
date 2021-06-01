@@ -55,20 +55,4 @@ describe('<Dropdown />', () => {
     expect(dropdown.find('Hint')).toBeTruthy();
     expect(dropdown.find('Hint').text()).toBe('Some helpful text');
   });
-
-  it('Should set color themes', () => {
-    expect(
-      dropdown
-        .find('[data-test-id="dropdown"]')
-        .hasClass('atomikui-dropdown--red'),
-    ).toBeTruthy();
-
-    dropdown.setProps({ themeVariant: 'light' });
-
-    expect(
-      dropdown
-        .find('[data-test-id="dropdown"]')
-        .hasClass('atomikui-dropdown--red-light'),
-    ).toBeTruthy();
-  });
 });

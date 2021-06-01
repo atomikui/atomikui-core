@@ -12,8 +12,6 @@ const Overlay = ({
   theme,
   ...others
 }) => {
-  // TODO: Needs test coverage
-  /* istanbul ignore next */
   useEffect(() => {
     if (!allowBodyScroll) {
       document.body.style.overflow = isActive ? 'hidden' : 'visible';

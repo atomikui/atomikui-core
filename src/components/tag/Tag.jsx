@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import setTheme from '../../utilities/setTheme';
 
 const Tag = ({
   children,
@@ -12,9 +13,7 @@ const Tag = ({
 }) => (
   <div
     className={classnames('atomikui-tag', className, {
-      [`atomikui-tag--${theme}${
-        themeVariant ? `-${themeVariant}` : ''
-      }`]: theme,
+      [setTheme('atomikui-tag', theme, themeVariant)]: theme,
       [`atomikui-tag--${shape}`]: shape,
     })}
     {...others}

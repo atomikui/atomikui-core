@@ -193,7 +193,7 @@ FormField.defaultProps = {
   labelProps: null,
   mask: '',
   name: '',
-  onChange() {},
+  onChange: () => {},
   placeholder: '',
   readOnly: false,
   required: false,
