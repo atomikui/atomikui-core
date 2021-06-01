@@ -1,5 +1,14 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.9.0](https://github.com/atomikui/atomikui-core/compare/v1.8.1...v1.9.0) - 2021-06-01
+
+#### Commits
+
+- Fixes code smells [`da9aaa8`](https://github.com/atomikui/atomikui-core/commit/da9aaa817e001bdbfef0993cb5f709befd86b668)
+- Bumps version and update changelog [`ab9f371`](https://github.com/atomikui/atomikui-core/commit/ab9f37111c91ca45d84378a3a6e0e51e49c30e2f)
+
+<hr />
+
 ### [v1.8.1](https://github.com/atomikui/atomikui-core/compare/v1.8.0...v1.8.1) - 2021-05-21
 
 #### Commits
