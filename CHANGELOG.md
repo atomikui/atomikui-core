@@ -1,5 +1,15 @@
 <div style="border-bottom: .125rem solid #e1e1e1; margin-bottom: 32px;"></div>
 
+### [v1.9.1](https://github.com/atomikui/atomikui-core/compare/v1.9.0...v1.9.1) - 2021-06-07
+
+#### Commits
+
+- fixes nav item onClick [`239065b`](https://github.com/atomikui/atomikui-core/commit/239065b2f77ba8c16c2f83e3c0218923b00843f3)
+- Bumps version and update changelog [`ab79f7c`](https://github.com/atomikui/atomikui-core/commit/ab79f7cd93b8497d970380ab4174de5151c53c3d)
+- reverts Header.md [`f11bae3`](https://github.com/atomikui/atomikui-core/commit/f11bae3df6c9131f09676e1ac055684a6b68761a)
+
+<hr />
+
 ### [v1.9.0](https://github.com/atomikui/atomikui-core/compare/v1.8.1...v1.9.0) - 2021-06-01
 
 #### Commits
