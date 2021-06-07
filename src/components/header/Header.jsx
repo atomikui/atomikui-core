@@ -70,7 +70,12 @@ const Header = ({
             {Children.map(children, (child, index) => (
               <li key={`nav-item-${index + 1}`}>
                 {cloneElement(child, {
-                  onClick: () => setIsOpen(!isOpen),
+                  onClick: () => {
+                    if (child.props.onClick) {
+                      child.props.onClick();
+                    }
+                    setIsOpen(false);
+                  },
                   style: {
                     color: linkColor,
                   },
