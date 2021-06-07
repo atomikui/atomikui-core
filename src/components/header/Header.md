@@ -29,7 +29,7 @@ const logo = (
 );
 
 <Header logo={logo} logoLink="/" logoText="Atomik UI">
-  <button onClick={() => alert('adfasdf')}>About</button>
+  <Link href="/about">About</Link>
   <Link href="/products">Products</Link>
   <Link href="/blog">Blog</Link>
   <Link href="/contact">Contact</Link>
